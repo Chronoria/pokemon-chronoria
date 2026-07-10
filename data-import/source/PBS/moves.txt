@@ -1893,7 +1893,7 @@ Flags = Contact,CanProtect,CanMirrorMove,HighCriticalHitRate
 Description = The user delivers a double chop with its forearms crossed. Critical hits land more easily.
 #-------------------------------
 [DYNAMICPUNCH]
-Name = Dynamic Punch
+Name = Wuchtschlag
 Type = FIGHTING
 Category = Physical
 Power = 100
@@ -3048,7 +3048,7 @@ Flags = Contact,CanProtect,CanMirrorMove
 Description = The target is struck with large, imposing wings spread wide to inflict damage.
 #-------------------------------
 [ACROBATICS]
-Name = Acrobatics
+Name = Akrobatik
 Type = FLYING
 Category = Physical
 Power = 55
@@ -3107,7 +3107,7 @@ Flags = CanProtect,CanMirrorMove
 Description = A strong wind blows away the foe's obstacles such as Light Screen. It also lowers their evasion.
 #-------------------------------
 [FEATHERDANCE]
-Name = Feather Dance
+Name = Daunenreigen
 Type = FLYING
 Category = Status
 Accuracy = 100
@@ -4624,7 +4624,7 @@ Flags = CanProtect,CanMirrorMove
 Description = The user explodes to inflict damage on those around it. The user faints upon using this move.
 #-------------------------------
 [SELFDESTRUCT]
-Name = Self-Destruct
+Name = Finale
 Type = NORMAL
 Category = Physical
 Power = 200
@@ -4866,7 +4866,7 @@ EffectChance = 30
 Description = The user drops onto the target with its full body weight. It may leave the target with paralysis.
 #-------------------------------
 [EXTREMESPEED]
-Name = Extreme Speed
+Name = Turbotempo
 Type = NORMAL
 Category = Physical
 Power = 80
@@ -5445,7 +5445,7 @@ Flags = Contact,CanProtect,CanMirrorMove
 Description = Things such as long bodies or tentacles are used to bind and squeeze the foe for four to five turns.
 #-------------------------------
 [DOUBLESLAP]
-Name = Double Slap
+Name = Duplexhieb
 Type = NORMAL
 Category = Physical
 Power = 15
@@ -5615,7 +5615,7 @@ Flags = Contact,CanProtect,CanMirrorMove
 Description = A full-power attack that grows more powerful the more the user likes its Trainer.
 #-------------------------------
 [SONICBOOM]
-Name = Sonic Boom
+Name = Ultraschall
 Type = NORMAL
 Category = Special
 Power = 1
@@ -6423,7 +6423,7 @@ FunctionCode = UseRandomUserMoveIfAsleep
 Description = While it is asleep, the user randomly uses one of the moves it knows.
 #-------------------------------
 [SMOKESCREEN]
-Name = Smokescreen
+Name = Rauchwolke
 Type = NORMAL
 Category = Status
 Accuracy = 100
@@ -6434,7 +6434,7 @@ Flags = CanProtect,CanMirrorMove
 Description = The user releases an obscuring cloud of smoke or ink. It reduces the target's accuracy.
 #-------------------------------
 [SOFTBOILED]
-Name = Soft-Boiled
+Name = Weichei
 Type = NORMAL
 Category = Status
 Accuracy = 0
@@ -6926,7 +6926,7 @@ Flags = CanProtect,CanMirrorMove
 Description = A cloud of poison gas is sprayed in the face of opposing Pokémon. It may poison those hit.
 #-------------------------------
 [POISONPOWDER]
-Name = Poison Powder
+Name = Giftpuder
 Type = POISON
 Category = Status
 Accuracy = 75
@@ -7803,7 +7803,7 @@ EffectChance = 30
 Description = Large boulders are hurled at the foes to inflict damage. It may also make the targets flinch.
 #-------------------------------
 [ANCIENTPOWER]
-Name = Ancient Power
+Name = Antik-Kraft
 Type = ROCK
 Category = Special
 Power = 60
@@ -8450,7 +8450,7 @@ EffectChance = 30
 Description = The user shoots boiling hot water at its target. It may also leave the target with a burn.
 #-------------------------------
 [SNIPESHOT]
-Name = Snipe Shot
+Name = Präzisionsschuss
 Type = WATER
 Category = Special
 Power = 80
@@ -8512,7 +8512,7 @@ Flags = CanProtect,CanMirrorMove
 Description = If the target's HP is down to about half, this attack will hit with double the power.
 #-------------------------------
 [BUBBLEBEAM]
-Name = Bubble Beam
+Name = Blubbstrahl
 Type = WATER
 Category = Special
 Power = 65
@@ -8576,7 +8576,7 @@ Flags = Contact,CanProtect,CanMirrorMove
 Description = The user lunges at the target at a speed that makes it almost invisible. It is sure to strike first.
 #-------------------------------
 [BUBBLE]
-Name = Bubble
+Name = Blubber
 Type = WATER
 Category = Special
 Power = 40
