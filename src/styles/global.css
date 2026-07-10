@@ -237,7 +237,12 @@ h2 {
    ========================================================================== */
 .card-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(160px, 1fr));
+  /* auto-fit (not auto-fill): with few cards (e.g. the 5-tile category grid on the homepage),
+     auto-fill still reserves empty 1fr tracks after the last card, leaving it looking
+     left-aligned with dead space on the right. auto-fit collapses unused tracks to 0 width, so
+     the existing 1fr cards expand to fill the row instead - for large lists (1000+ items) every
+     track is always populated anyway, so this changes nothing there. */
+  grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
   gap: 0.9rem;
 }
 
@@ -392,6 +397,30 @@ h2 {
 }
 
 /* ==========================================================================
+   Text inputs
+   ========================================================================== */
+.text-input {
+  display: block;
+  width: 100%;
+  font: inherit;
+  color: var(--text);
+  background: var(--bg-glass);
+  border: 1px solid var(--border-glass);
+  border-radius: var(--radius-sm);
+  padding: 0.65rem 1rem;
+  margin-bottom: 1rem;
+  transition: border-color var(--dur-fast) var(--ease-out), box-shadow var(--dur-fast) var(--ease-out);
+}
+.text-input::placeholder {
+  color: var(--text-muted);
+}
+.text-input:focus-visible {
+  outline: none;
+  border-color: var(--accent-light);
+  box-shadow: var(--glow-blue);
+}
+
+/* ==========================================================================
    Tables
    ========================================================================== */
 table {
@@ -420,6 +449,38 @@ tr:last-child td {
 }
 tr:hover td {
   background: var(--border-glass);
+}
+
+/* ==========================================================================
+   Trainer move list (type badge + name + power/accuracy/PP, stacked)
+   ========================================================================== */
+.move-list {
+  display: flex;
+  flex-direction: column;
+  gap: 0.4rem;
+  margin-top: 0.6rem;
+}
+.move-row {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  flex-wrap: wrap;
+  color: var(--text);
+  font-size: 0.85rem;
+  padding: 0.3rem 0;
+  border-bottom: 1px solid var(--border-glass);
+}
+.move-row:last-child {
+  border-bottom: none;
+}
+.move-row-name {
+  font-weight: 600;
+}
+.move-row-stats {
+  margin-left: auto;
+  color: var(--text-muted);
+  font-size: 0.78rem;
+  white-space: nowrap;
 }
 
 /* ==========================================================================

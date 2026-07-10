@@ -33,6 +33,8 @@ function itemName(id: string) {
 }
 
 const sortedLevelMoves = [...p.levelMoves].sort((a, b) => a.level - b.level);
+const sortedTutorMoves = [...p.tutorMoves].sort((a, b) => moveName(a).localeCompare(moveName(b), "de"));
+const sortedEggMoves = [...p.eggMoves].sort((a, b) => moveName(a).localeCompare(moveName(b), "de"));
 const locationsByPlace = Object.groupBy
   ? Object.groupBy(p.foundIn, (r: any) => r.locationName)
   : p.foundIn.reduce((acc: Record<string, any[]>, r: any) => {
@@ -136,7 +138,7 @@ const locationsByPlace = Object.groupBy
     <>
       <h2>Tutor-Attacken</h2>
       <div class="pill-list">
-        {p.tutorMoves.map((m: string) => <a class="card" href={href(`/attacken/${slugify(m)}/`)}>{moveName(m)}</a>)}
+        {sortedTutorMoves.map((m: string) => <a class="card" href={href(`/attacken/${slugify(m)}/`)}>{moveName(m)}</a>)}
       </div>
     </>
   )}
@@ -145,7 +147,7 @@ const locationsByPlace = Object.groupBy
     <>
       <h2>Ei-Attacken</h2>
       <div class="pill-list">
-        {p.eggMoves.map((m: string) => <a class="card" href={href(`/attacken/${slugify(m)}/`)}>{moveName(m)}</a>)}
+        {sortedEggMoves.map((m: string) => <a class="card" href={href(`/attacken/${slugify(m)}/`)}>{moveName(m)}</a>)}
       </div>
     </>
   )}

@@ -1,7 +1,7 @@
 ﻿# See the documentation on the wiki to learn how to edit this file.
 #-------------------------------
 [GROWLITHE,1]
-FormName = Hisuian
+FormName = Hisui
 Types = FIRE,ROCK
 BaseStats = 60,75,45,55,65,50
 HiddenAbilities = ROCKHEAD
@@ -17,7 +17,7 @@ Flags = InheritFormWithEverStone
 RaidRanks = 1,2,3
 #-------------------------------
 [ARCANINE,1]
-FormName = Hisuian
+FormName = Hisui
 Types = FIRE,ROCK
 BaseStats = 95,115,80,90,95,80
 HiddenAbilities = ROCKHEAD
@@ -31,7 +31,7 @@ Flags = InheritFormWithEverStone
 RaidRanks = 4,5
 #-------------------------------
 [VOLTORB,1]
-FormName = Hisuian
+FormName = Hisui
 Types = ELECTRIC,GRASS
 Moves = 1,TACKLE,1,CHARGE,4,THUNDERSHOCK,6,STUNSPORE,9,BULLETSEED,11,ROLLOUT,13,SCREECH,16,CHARGEBEAM,20,SWIFT,22,ELECTROBALL,26,SELFDESTRUCT,29,ENERGYBALL,34,DISCHARGE,34,SEEDBOMB,41,EXPLOSION,46,GYROBALL,50,GRASSYTERRAIN
 TutorMoves = AGILITY,BULLETSEED,CHARGE,CHARGEBEAM,DOUBLEEDGE,ELECTRICTERRAIN,ELECTROBALL,ELECTROWEB,ENDURE,ENERGYBALL,FACADE,FOULPLAY,GIGADRAIN,GRASSKNOT,GRASSYGLIDE,GRASSYTERRAIN,GYROBALL,LEAFSTORM,PROTECT,RAINDANCE,REFLECT,REST,SEEDBOMB,SLEEPTALK,SOLARBEAM,SUBSTITUTE,SWIFT,TAKEDOWN,TAUNT,THIEF,THUNDER,THUNDERBOLT,THUNDERWAVE,VOLTSWITCH,WILDCHARGE
@@ -46,7 +46,7 @@ Evolutions = ELECTRODE,Item,LEAFSTONE
 RaidRanks = 1,2
 #-------------------------------
 [ELECTRODE,1]
-FormName = Hisuian
+FormName = Hisui
 Types = ELECTRIC,GRASS
 Moves = 0,CHLOROBLAST,1,TACKLE,1,CHARGE,4,THUNDERSHOCK,6,STUNSPORE,9,BULLETSEED,11,ROLLOUT,13,SCREECH,16,CHARGEBEAM,20,SWIFT,22,ELECTROBALL,26,SELFDESTRUCT,29,ENERGYBALL,34,DISCHARGE,34,SEEDBOMB,41,EXPLOSION,46,GYROBALL,50,GRASSYTERRAIN
 TutorMoves = AGILITY,BULLETSEED,CHARGE,CHARGEBEAM,CURSE,DOUBLEEDGE,ELECTRICTERRAIN,ELECTROBALL,ELECTROWEB,ENDURE,ENERGYBALL,FACADE,FOULPLAY,GIGADRAIN,GIGAIMPACT,GRASSKNOT,GRASSYGLIDE,GRASSYTERRAIN,GYROBALL,HYPERBEAM,LEAFSTORM,PROTECT,RAINDANCE,REFLECT,REST,SCARYFACE,SEEDBOMB,SLEEPTALK,SOLARBEAM,SUBSTITUTE,SUPERCELLSLAM,SWIFT,TAKEDOWN,TAUNT,THIEF,THUNDER,THUNDERBOLT,THUNDERWAVE,VOLTSWITCH,WILDCHARGE
@@ -59,7 +59,7 @@ Flags = InheritFormWithEverStone
 RaidRanks = 3,4
 #-------------------------------
 [TAUROS,1]
-FormName = Paldean (Combat Breed)
+FormName = Paldea (Gefechtsvariante)
 Types = FIGHTING
 BaseStats = 75,110,105,100,30,70
 EVs = ATTACK,2
@@ -74,7 +74,7 @@ Flags = InheritFormWithEverStone
 RaidRanks = 4,5
 #-------------------------------
 [TAUROS,2]
-FormName = Paldean (Blaze Breed)
+FormName = Paldea (Flammenvariante)
 Types = FIGHTING,FIRE
 BaseStats = 75,110,105,100,30,70
 EVs = ATTACK,2
@@ -89,7 +89,7 @@ Flags = InheritFormWithEverStone
 RaidRanks = 4,5
 #-------------------------------
 [TAUROS,3]
-FormName = Paldean (Aqua Breed)
+FormName = Paldea (Flutenvariante)
 Types = FIGHTING,WATER
 BaseStats = 75,110,105,100,30,70
 EVs = ATTACK,2
@@ -189,7 +189,7 @@ Pokedex = Mega Tornupto bündelt extreme Hitze in seinem Körper und entfesselt 
 Generation = 9
 #-------------------------------
 [WOOPER,1]
-FormName = Paldean
+FormName = Paldea
 Types = POISON,GROUND
 Abilities = POISONPOINT,WATERABSORB
 Moves = 1,MUDSHOT,1,TAILWHIP,4,TACKLE,8,POISONTAIL,12,TOXICSPIKES,16,SLAM,21,YAWN,24,POISONJAB,28,SLUDGEWAVE,32,AMNESIA,36,TOXIC,40,EARTHQUAKE
@@ -206,7 +206,7 @@ SpeciesSOS = WOOPER,CLODSIRE
 RaidRanks = 1,2
 #-------------------------------
 [QWILFISH,1]
-FormName = Hisuian
+FormName = Hisui
 Types = DARK,POISON
 Moves = 1,POISONSTING,1,TACKLE,4,HARDEN,8,BITE,12,FELLSTINGER,16,MINIMIZE,20,SPIKES,24,BRINE,28,BARBBARRAGE,32,PINMISSILE,36,TOXICSPIKES,40,SPITUP,40,STOCKPILE,44,TOXIC,48,CRUNCH,52,ACUPRESSURE,56,DESTINYBOND
 TutorMoves = ACIDSPRAY,AGILITY,BLIZZARD,CHILLINGWATER,CRUNCH,CURSE,DARKPULSE,DOUBLEEDGE,ENDURE,FACADE,GIGAIMPACT,GUNKSHOT,GYROBALL,HAZE,HEX,HYDROPUMP,ICEBEAM,ICYWIND,LASHOUT,LIQUIDATION,MUDSHOT,PAINSPLIT,POISONJAB,POISONTAIL,PROTECT,RAINDANCE,REST,REVERSAL,SCALESHOT,SCARYFACE,SHADOWBALL,SLEEPTALK,SLUDGEBOMB,SPIKES,SPITE,SUBSTITUTE,SURF,SWIFT,SWORDSDANCE,TAKEDOWN,TAUNT,THROATCHOP,TOXIC,TOXICSPIKES,VENOSHOCK,WATERFALL,WATERPULSE
@@ -218,7 +218,7 @@ Evolutions = OVERQWIL,LevelUseMoveCount,BARBBARRAGE
 RaidRanks = 2,3
 #-------------------------------
 [SNEASEL,1]
-FormName = Hisuian
+FormName = Hisui
 Types = FIGHTING,POISON
 Moves = 1,SCRATCH,1,LEER,1,ROCKSMASH,6,TAUNT,12,QUICKATTACK,18,METALCLAW,24,POISONJAB,30,BRICKBREAK,36,HONECLAWS,42,SLASH,48,AGILITY,54,SCREECH,60,CLOSECOMBAT
 TutorMoves = ACIDSPRAY,AERIALACE,AGILITY,BRICKBREAK,BULKUP,CALMMIND,CLOSECOMBAT,COACHING,DIG,ENDURE,FACADE,FALSESWIPE,FLING,FOCUSBLAST,FOCUSPUNCH,GIGAIMPACT,GRASSKNOT,GUNKSHOT,LASHOUT,LOWKICK,LOWSWEEP,METALCLAW,NASTYPLOT,POISONJAB,POISONTAIL,PROTECT,RAINDANCE,REST,REVERSAL,SHADOWBALL,SHADOWCLAW,SLEEPTALK,SLUDGEBOMB,SLUDGEWAVE,SPITE,SUBSTITUTE,SUNNYDAY,SWIFT,SWORDSDANCE,TAKEDOWN,TAUNT,THIEF,THROATCHOP,TOXIC,TOXICSPIKES,TRAILBLAZE,VACUUMWAVE,VENOSHOCK,XSCISSOR
@@ -233,21 +233,21 @@ Evolutions = SNEASLER,DayHoldItem,RAZORCLAW
 RaidRanks = 2,3
 #-------------------------------
 [DIALGA,1]
-FormName = Origin Forme
+FormName = Origin Form
 BaseStats = 100,100,120,90,150,120
 Height = 7.0
 Weight = 848.7
 Pokedex = Radiant light caused Dialga to take on a form bearing a striking resemblance to the creator Pokémon. Dialga now wields such colossal strength that one must conclude this is its true form.
 #-------------------------------
 [PALKIA,1]
-FormName = Origin Forme
+FormName = Ur-Form
 BaseStats = 90,100,100,120,150,120
 Height = 6.3
 Weight = 659.0
 Pokedex = It soars across the sky in a form that greatly resembles the creator of all things. Perhaps this imitation of appearance is Palkia's strategy for gaining Arceus's powers.
 #-------------------------------
 [SAMUROTT,1]
-FormName = Hisuian
+FormName = Hisui
 Types = WATER,DARK
 BaseStats = 90,108,80,85,100,65
 EVs = ATTACK,3
@@ -260,7 +260,7 @@ Generation = 8
 RaidRanks = 3,4,5
 #-------------------------------
 [LILLIGANT,1]
-FormName = Hisuian
+FormName = Hisui
 Types = GRASS,FIGHTING
 BaseStats = 70,105,75,105,50,75
 EVs = ATTACK,1,SPEED,1
@@ -275,7 +275,7 @@ Generation = 8
 RaidRanks = 3,4
 #-------------------------------
 [BASCULIN,2]
-FormName = White-Striped
+FormName = Weißlinige Form
 Abilities = RATTLED,ADAPTABILITY
 Moves = 1,WATERGUN,1,TAILWHIP,4,TACKLE,8,FLAIL,12,AQUAJET,16,BITE,20,SCARYFACE,24,HEADBUTT,28,SOAK,32,CRUNCH,36,TAKEDOWN,40,UPROAR,44,WAVECRASH,48,THRASH,52,DOUBLEEDGE,56,HEADSMASH
 TutorMoves = AGILITY,BLIZZARD,CHILLINGWATER,CRUNCH,DOUBLEEDGE,ENDEAVOR,ENDURE,FACADE,FLIPTURN,HYDROPUMP,ICEBEAM,ICEFANG,ICYWIND,LIQUIDATION,MUDDYWATER,MUDSHOT,PROTECT,PSYCHICFANGS,RAINDANCE,REST,SCALESHOT,SCARYFACE,SLEEPTALK,SNOWSCAPE,SUBSTITUTE,SURF,SWIFT,TAKEDOWN,UPROAR,WATERFALL,WATERPULSE,WHIRLPOOL,ZENHEADBUTT
@@ -288,7 +288,7 @@ Evolutions = BASCULEGION,LevelRecoilDamage,294
 RaidRanks = 2,3
 #-------------------------------
 [ZORUA,1]
-FormName = Hisuian
+FormName = Hisui
 Types = NORMAL,GHOST
 BaseStats = 35,60,40,70,85,40
 Moves = 1,LEER,1,SCRATCH,4,TORMENT,8,HONECLAWS,12,SHADOWSNEAK,16,CURSE,20,TAUNT,24,KNOCKOFF,28,SPITE,32,AGILITY,36,SHADOWBALL,40,BITTERMALICE,44,NASTYPLOT,48,FOULPLAY
@@ -302,7 +302,7 @@ Flags = InheritFormWithEverStone
 RaidRanks = 1,2
 #-------------------------------
 [ZOROARK,1]
-FormName = Hisuian
+FormName = Hisui
 Types = NORMAL,GHOST
 BaseStats = 55,100,60,110,125,60
 Moves = 0,SHADOWCLAW,1,UTURN,1,HONECLAWS,1,SCRATCH,1,LEER,1,TORMENT,12,SHADOWSNEAK,16,CURSE,20,TAUNT,24,KNOCKOFF,28,SPITE,34,AGILITY,40,SHADOWBALL,46,BITTERMALICE,52,NASTYPLOT,58,FOULPLAY
@@ -315,7 +315,7 @@ Flags = InheritFormWithEverStone
 RaidRanks = 3,4,5
 #-------------------------------
 [BRAVIARY,1]
-FormName = Hisuian
+FormName = Hisui
 Types = PSYCHIC,FLYING
 BaseStats = 110,83,70,65,112,70
 EVs = SPECIAL_ATTACK,2
@@ -331,7 +331,7 @@ Generation = 8
 RaidRanks = 3,4,5
 #-------------------------------
 [SLIGGOO,1]
-FormName = Hisuian
+FormName = Hisui
 Types = STEEL,DRAGON
 BaseStats = 58,75,83,40,83,113
 Abilities = SAPSIPPER,SHELLARMOR
@@ -345,7 +345,7 @@ Generation = 8
 RaidRanks = 3,4
 #-------------------------------
 [GOODRA,1]
-FormName = Hisuian
+FormName = Hisui
 Types = STEEL,DRAGON
 BaseStats = 80,100,100,60,110,150
 Abilities = SAPSIPPER,SHELLARMOR
@@ -359,7 +359,7 @@ Generation = 8
 RaidRanks = 5
 #-------------------------------
 [AVALUGG,1]
-FormName = Hisuian
+FormName = Hisui
 Types = ICE,ROCK
 BaseStats = 95,127,184,38,34,36
 Abilities = STRONGJAW,ICEBODY
@@ -372,7 +372,7 @@ Generation = 8
 RaidRanks = 4,5
 #-------------------------------
 [DECIDUEYE,1]
-FormName = Hisuian
+FormName = Hisui
 Types = GRASS,FIGHTING
 BaseStats = 88,112,80,60,95,95
 HiddenAbilities = SCRAPPY
@@ -384,7 +384,7 @@ Generation = 8
 RaidRanks = 3,4,5
 #-------------------------------
 [URSALUNA,1]
-FormName = Bloodmoon Ursaluna
+FormName = Blutmond Ursaluna
 BaseStats = 113,70,120,52,135,65
 EVs = SPECIAL_ATTACK,3
 Abilities = MINDSEYE
@@ -400,7 +400,7 @@ FormName = Female
 BaseStats = 120,92,65,78,100,75
 #-------------------------------
 [ENAMORUS,1]
-FormName = Therian Form
+FormName = Tiergeistform
 BaseStats = 74,115,110,46,135,100
 Abilities = OVERCOAT
 Shape = Quadruped
@@ -415,7 +415,7 @@ Moves = 1,TAILWHIP,1,TACKLE,3,DISARMINGVOICE,6,ECHOEDVOICE,9,MUDSHOT,12,COVET,15
 Pokedex = This is a meticulous Pokémon that likes to keep things tidy. It shrouds itself in a floral aroma that soothes the Pokémon around it.
 #-------------------------------
 [DUDUNSPARCE,1]
-FormName = Three-Segment Form
+FormName = Drei-Segment Form
 Height = 4.5
 Weight = 47.4
 #-------------------------------
@@ -500,7 +500,7 @@ Pokedex = Its bond with its Trainer is the source of its power. It boasts speed 
 Generation = 6
 #-------------------------------
 [PALAFIN,1]
-FormName = Hero Form
+FormName = Heldenform
 BaseStats = 100,160,97,100,106,87
 BaseExp = 228
 Height = 1.8
@@ -509,7 +509,7 @@ Category = Hero
 RaidRanks = 5
 #-------------------------------
 [MAUSHOLD,1]
-FormName = Family of Three
+FormName = Dreierfamilie
 Weight = 2.3
 #-------------------------------
 [REVAVROOM,1]
@@ -538,34 +538,34 @@ Abilities = INTIMIDATE
 CallRateSOS = 0
 #-------------------------------
 [TATSUGIRI,1]
-FormName = Droopy Form
+FormName = Hängende Form
 Color = Red
 Pokedex = This species’ differing colors and patterns are apparently the result of Tatsugiri changing itself to suit the preferences of the prey it lures in.
 #-------------------------------
 [TATSUGIRI,2]
-FormName = Stretchy Form
+FormName = Gestreckte Form
 Color = Yellow
 Pokedex = Bird Pokémon are its main prey. This Pokémon knows it’s weak, so it hunts with a partner.
 #-------------------------------
 [SQUAWKABILLY,1]
-FormName = Blue Plumage
+FormName = Blaugefiedert
 Color = Blue
 Pokedex = Blue-feathered Squawkabilly view their green- feathered counterparts as rivals, since the latter make up the largest, most powerful groups.
 #-------------------------------
 [SQUAWKABILLY,2]
-FormName = Yellow Plumage
+FormName = Geldgefiedert
 HiddenAbilities = SHEERFORCE
 Color = Yellow
 Pokedex = The yellow Squawkabilly are especially fierce. They've even been known to drive other bird Pokémon out of town.
 #-------------------------------
 [SQUAWKABILLY,3]
-FormName = White Plumage
+FormName = Weißgefiedert
 HiddenAbilities = SHEERFORCE
 Color = White
 Pokedex = Though these Squawkabilly are the fewest in number, they have no trouble living in towns since they blend in with the white buildings.
 #-------------------------------
 [GIMMIGHOUL,1]
-FormName = Roaming Form
+FormName = Wanderform
 CatchRate = 0
 Abilities = RUNAWAY
 Height = 0.1
@@ -577,16 +577,16 @@ Pokedex = This Pokémon was born from passion that seeped into a coin. It wander
 Evolutions = GHOLDENGO,None,
 #-------------------------------
 [POLTCHAGEIST,1]
-FormName = Artisan Form
+FormName = Immitationsform
 Pokedex = It sprinkles some of its powdery body onto food and drains the life-force from those who so much as lick it.
 Evolutions = SINISTCHA,Item,MASTERPIECETEACUP
 #-------------------------------
 [SINISTCHA,1]
-FormName = Masterpiece Form
+FormName = Kostbarkeitsform
 Pokedex = It lives inside a superb teacup that was crafted by a potter of great renown. Collectors positively adore this Pokémon.
 #-------------------------------
 [OGERPON,1]
-FormName = Wellspring Mask
+FormName = Brunnenmaske
 Types = GRASS,WATER
 Abilities = WATERABSORB
 Color = Blue
@@ -594,7 +594,7 @@ Pokedex = This form excels in both attack and defense. It ceaselessly unleashes 
 Flags = Legendary,TeraType_WATER
 #-------------------------------
 [OGERPON,2]
-FormName = Hearthflame Mask
+FormName = Ofenmaske
 Types = GRASS,FIRE
 Abilities = MOLDBREAKER
 Color = Red
@@ -602,7 +602,7 @@ Pokedex = This form is the most aggressive, bombarding enemies with the intensit
 Flags = Legendary,TeraType_FIRE
 #-------------------------------
 [OGERPON,3]
-FormName = Cornerstone Mask
+FormName = Fundamentmaske
 Types = GRASS,ROCK
 Abilities = STURDY
 Color = Gray
@@ -613,7 +613,7 @@ Flags = Legendary,TeraType_ROCK
 PokedexForm = 0
 #-------------------------------
 [OGERPON,5]
-FormName = Wellspring Mask
+FormName = Brunnenmaske
 PokedexForm = 1
 Types = GRASS,WATER
 Abilities = WATERABSORB
@@ -621,7 +621,7 @@ Color = Blue
 Flags = Legendary,TeraType_WATER
 #-------------------------------
 [OGERPON,6]
-FormName = Hearthflame Mask
+FormName = Ofenmaske
 PokedexForm = 2
 Types = GRASS,FIRE
 Abilities = MOLDBREAKER
@@ -629,7 +629,7 @@ Color = Red
 Flags = Legendary,TeraType_FIRE
 #-------------------------------
 [OGERPON,7]
-FormName = Cornerstone Mask
+FormName = Fundamentmaske
 PokedexForm = 3
 Types = GRASS,ROCK
 Abilities = STURDY

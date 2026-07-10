@@ -236,7 +236,7 @@ Types = FIRE,FLYING
 
 [CHARIZARD,2]
 
-FormName = Mega Charizard X
+FormName = Mega Glurak X
 
 MegaStone = CHARIZARDITEX
 
@@ -264,7 +264,7 @@ UnmegaForm = 0
 
 [CHARIZARD,3]
 
-FormName = Mega Charizard Y
+FormName = Mega Glurak Y
 
 MegaStone = CHARIZARDITEY
 
@@ -288,7 +288,7 @@ UnmegaForm = 1
 
 [CHARIZARD,4]
 
-FormName = Mega Charizard Z
+FormName = Mega Glurak Z
 
 MegaStone = CHARIZARDITEZ
 
@@ -518,7 +518,7 @@ UnmegaForm = 1
 
 [BEEDRILL,1]
 
-FormName = Mega Beedrill
+FormName = Mega Bibor
 
 MegaStone = BEEDRILLITE
 
@@ -542,7 +542,7 @@ Generation = 6
 
 [PIDGEOT,1]
 
-FormName = Mega Pidgeot
+FormName = Mega Tauboss
 
 MegaStone = PIDGEOTITE
 
@@ -1012,7 +1012,7 @@ RaidRanks = 3,4
 
 [ALAKAZAM,1]
 
-FormName = Mega Alakazam
+FormName = Mega Simsala
 
 MegaStone = ALAKAZITE
 
@@ -1231,7 +1231,7 @@ RaidRanks = 3,4,5
 
 [SLOWBRO,2]
 
-FormName = Mega Slowbro
+FormName = Mega Lahmus
 
 MegaStone = SLOWBRONITE
 
@@ -1547,7 +1547,7 @@ RaidRanks = 3,4,5
 
 [KANGASKHAN,1]
 
-FormName = Mega Kangaskhan
+FormName = Mega Kangama
 
 MegaStone = KANGASKHANITE
 
@@ -1634,7 +1634,7 @@ Generation = 6
 
 [GYARADOS,1]
 
-FormName = Mega Gyarados
+FormName = Mega Garados
 
 MegaStone = GYARADOSITE
 
@@ -1773,7 +1773,7 @@ RaidRanks = 6
 
 [MEWTWO,1]
 
-FormName = Mega Mewtwo X
+FormName = Mega Mewtu X
 
 MegaStone = MEWTWONITEX
 
@@ -1799,7 +1799,7 @@ Generation = 6
 
 [MEWTWO,2]
 
-FormName = Mega Mewtwo Y
+FormName = Mega Mewtu Y
 
 MegaStone = MEWTWONITEY
 
@@ -2116,7 +2116,7 @@ UnmegaForm = 1
 
 [SCIZOR,1]
 
-FormName = Mega Scizor
+FormName = Mega Scherox
 
 MegaStone = SCIZORITE
 
@@ -2140,7 +2140,7 @@ Generation = 6
 
 [HERACROSS,1]
 
-FormName = Mega Heracross
+FormName = Mega Skaraborn
 
 MegaStone = HERACRONITE
 
@@ -2197,7 +2197,7 @@ RaidRanks = 2,3
 
 [HOUNDOOM,1]
 
-FormName = Mega Houndoom
+FormName = Mega Hundemon
 
 MegaStone = HOUNDOOMINITE
 
@@ -2221,7 +2221,7 @@ Generation = 6
 
 [TYRANITAR,1]
 
-FormName = Mega Tyranitar
+FormName = Mega Despotar
 
 MegaStone = TYRANITARITE
 
@@ -2243,7 +2243,7 @@ Generation = 6
 
 [SCEPTILE,1]
 
-FormName = Mega Sceptile
+FormName = Mega Gewaldro
 
 MegaStone = SCEPTILITE
 
@@ -2267,7 +2267,7 @@ Generation = 6
 
 [BLAZIKEN,1]
 
-FormName = Mega Blaziken
+FormName = Mega Lohgock
 
 MegaStone = BLAZIKENITE
 
@@ -2283,7 +2283,7 @@ Generation = 6
 
 [SWAMPERT,1]
 
-FormName = Mega Swampert
+FormName = Mega Sumpex
 
 MegaStone = SWAMPERTITE
 
@@ -2367,7 +2367,7 @@ Generation = 6
 
 [SABLEYE,1]
 
-FormName = Mega Sableye
+FormName = Mega Zobiris
 
 MegaStone = SABLENITE
 
@@ -2389,7 +2389,7 @@ Generation = 6
 
 [MAWILE,1]
 
-FormName = Mega Mawile
+FormName = Mega Flunkifer
 
 MegaStone = MAWILITE
 
@@ -2413,7 +2413,7 @@ Generation = 6
 
 [AGGRON,1]
 
-FormName = Mega Aggron
+FormName = Mega Stollos
 
 MegaStone = AGGRONITE
 
@@ -2435,7 +2435,7 @@ Generation = 6
 
 [MEDICHAM,1]
 
-FormName = Mega Medicham
+FormName = Mega Meditalis
 
 MegaStone = MEDICHAMITE
 
@@ -2451,7 +2451,7 @@ Generation = 6
 
 [MANECTRIC,1]
 
-FormName = Mega Manectric
+FormName = Mega Voltenso
 
 MegaStone = MANECTITE
 
@@ -2475,7 +2475,7 @@ Generation = 6
 
 [SHARPEDO,1]
 
-FormName = Mega Sharpedo
+FormName = Mega Tohaido
 
 MegaStone = SHARPEDONITE
 
@@ -2693,7 +2693,7 @@ Generation = 6
 
 [GLALIE,1]
 
-FormName = Mega Glalie
+FormName = Mega Firnontor
 
 MegaStone = GLALITITE
 
@@ -2717,7 +2717,7 @@ Generation = 6
 
 [SALAMENCE,1]
 
-FormName = Mega Salamence
+FormName = Mega Brutalanda
 
 MegaStone = SALAMENCITE
 
@@ -3004,7 +3004,7 @@ RaidRanks = 3,4,5
 
 [LOPUNNY,1]
 
-FormName = Mega Lopunny
+FormName = Mega Schlapor
 
 MegaStone = LOPUNNITE
 
@@ -3030,7 +3030,7 @@ Generation = 6
 
 [GARCHOMP,1]
 
-FormName = Mega Garchomp
+FormName = Mega Knackrack
 
 MegaStone = GARCHOMPITE
 
@@ -3074,7 +3074,7 @@ Generation = 6
 
 [ABOMASNOW,1]
 
-FormName = Mega Abomasnow
+FormName = Mega Rexblisar
 
 MegaStone = ABOMASITE
 
@@ -3094,7 +3094,7 @@ Generation = 6
 
 [GALLADE,2]
 
-FormName = Mega Gallade
+FormName = Mega Galagladi
 
 MegaStone = GALLADITE
 
@@ -3374,7 +3374,7 @@ Generation = 6
 
 [AUDINO,1]
 
-FormName = Mega Audino
+FormName = Mega Ohrdoch
 
 MegaStone = AUDINITE
 
@@ -5899,7 +5899,7 @@ Generation = 6
 
 [GALLADE,3]
 
-FormName = Mega Gallade
+FormName = Mega Galagladi
 
 MegaStone = GALLADITE2
 

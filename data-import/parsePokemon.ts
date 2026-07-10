@@ -83,20 +83,27 @@ function blockToPokemon(block: PbsBlock, ctx: TranslationContext, sprites: Map<s
   };
 }
 
-function blockToForm(block: PbsBlock, ctx: TranslationContext, sprites: Map<string, string>): PokemonForm {
+/**
+ * Form PBS blocks only redeclare fields that actually differ from the base species - e.g.
+ * Mega Charizard Y has no `Types` line at all (its type doesn't change), and no `Moves`/
+ * `TutorMoves`/`EggMoves` (Mega Evolutions can't level up or breed while mega-evolved). A
+ * field that's simply absent from the block must inherit the base species' value, not default
+ * to empty/zero - otherwise unchanged forms wrongly show 0/0/0/0/0/0 stats or no type badge.
+ */
+function blockToForm(block: PbsBlock, ctx: TranslationContext, sprites: Map<string, string>, base: Pokemon): PokemonForm {
   const r = blockToRecord(block);
   const [speciesId, formNumberRaw] = block.headerParts;
   const formNumber = Number(formNumberRaw ?? 0);
   return {
     formNumber,
     formName: r.FormName ? resolveText(ctx.formName, r.FormName) : null,
-    types: splitList(r.Types),
-    baseStats: parseBaseStats(r.BaseStats),
-    abilities: splitList(r.Abilities),
-    hiddenAbilities: splitList(r.HiddenAbilities),
-    levelMoves: parseLevelMoves(r.Moves),
-    tutorMoves: splitList(r.TutorMoves),
-    eggMoves: splitList(r.EggMoves),
+    types: r.Types !== undefined ? splitList(r.Types) : base.types,
+    baseStats: r.BaseStats !== undefined ? parseBaseStats(r.BaseStats) : base.baseStats,
+    abilities: r.Abilities !== undefined ? splitList(r.Abilities) : base.abilities,
+    hiddenAbilities: r.HiddenAbilities !== undefined ? splitList(r.HiddenAbilities) : base.hiddenAbilities,
+    levelMoves: r.Moves !== undefined ? parseLevelMoves(r.Moves) : base.levelMoves,
+    tutorMoves: r.TutorMoves !== undefined ? splitList(r.TutorMoves) : base.tutorMoves,
+    eggMoves: r.EggMoves !== undefined ? splitList(r.EggMoves) : base.eggMoves,
     sprite: sprites.get(`${speciesId}_${formNumber}`) ?? null,
     foundIn: [],
   };
@@ -129,7 +136,7 @@ export function parsePokemon(ctx: TranslationContext): Pokemon[] {
       console.warn(`[Pokémon] Form für unbekannte Spezies ${speciesId} übersprungen.`);
       continue;
     }
-    base.forms.push(blockToForm(block, ctx, sprites));
+    base.forms.push(blockToForm(block, ctx, sprites, base));
   }
 
   return [...pokemon.values()];

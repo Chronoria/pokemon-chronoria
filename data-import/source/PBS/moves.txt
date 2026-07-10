@@ -304,7 +304,7 @@ Flags = Powder
 Description = The user scatters irritating powder to draw attention to itself. Opponents aim only at the user.
 #-------------------------------
 [SPIDERWEB]
-Name = Spider Web
+Name = Spinnennetz
 Type = BUG
 Category = Status
 Accuracy = 0
@@ -315,7 +315,7 @@ Flags = CanMirrorMove
 Description = The user ensnares the target with thin, gooey silk so it can't flee from battle.
 #-------------------------------
 [STICKYWEB]
-Name = Sticky Web
+Name = Klebenetz
 Type = BUG
 Category = Status
 Accuracy = 0
@@ -325,7 +325,7 @@ FunctionCode = AddStickyWebToFoeSide
 Description = Weaves a sticky net around the opposing team, which lowers their Speed stats upon switching in.
 #-------------------------------
 [STRINGSHOT]
-Name = String Shot
+Name = Fadenschuss
 Type = BUG
 Category = Status
 Accuracy = 95
@@ -336,7 +336,7 @@ Flags = CanProtect,CanMirrorMove
 Description = The foe is bound with silk blown from the user's mouth. This silk reduces the target's Speed.
 #-------------------------------
 [TAILGLOW]
-Name = Tail Glow
+Name = Schweifglanz
 Type = BUG
 Category = Status
 Accuracy = 0
@@ -346,7 +346,7 @@ FunctionCode = RaiseUserSpAtk3
 Description = The user stares at flashing lights to focus its mind, drastically raising its Sp. Atk stat.
 #-------------------------------
 [HYPERSPACEFURY]
-Name = Hyperspace Fury
+Name = Dimensionswahn
 Type = DARK
 Category = Physical
 Power = 100
@@ -358,7 +358,7 @@ Flags = CanMirrorMove,CannotMetronome
 Description = Unleashes a barrage of multi-arm attacks, skipping protections. The user's Defense stat falls.
 #-------------------------------
 [FOULPLAY]
-Name = Foul Play
+Name = Schmarotzer
 Type = DARK
 Category = Physical
 Power = 95
@@ -370,7 +370,7 @@ Flags = Contact,CanProtect,CanMirrorMove
 Description = The user turns the foe's power against it. It does more damage the higher the target's Attack stat.
 #-------------------------------
 [FIERYWRATH]
-Name = Fiery Wrath
+Name = Brennender Zorn
 Type = DARK
 Category = Special
 Power = 90
@@ -383,7 +383,7 @@ EffectChance = 20
 Description = The user transforms its wrath into a fire-like aura to attack. This may also make foes flinch.
 #-------------------------------
 [DARKESTLARIAT]
-Name = Darkest Lariat
+Name = Dark Lariat
 Type = DARK
 Category = Physical
 Power = 85
@@ -395,7 +395,7 @@ Flags = Contact,CanProtect,CanMirrorMove
 Description = The user swings both arms and hits the target. Ignores the target's stat changes.
 #-------------------------------
 [NIGHTDAZE]
-Name = Night Daze
+Name = Nachtflut
 Type = DARK
 Category = Special
 Power = 85
@@ -408,7 +408,7 @@ EffectChance = 40
 Description = The user lets loose a pitch-black shock wave at its target. It may also lower the target's accuracy.
 #-------------------------------
 [CRUNCH]
-Name = Crunch
+Name = Knirscher
 Type = DARK
 Category = Physical
 Power = 80
@@ -421,7 +421,7 @@ EffectChance = 20
 Description = The user crunches up the target with sharp fangs. It may also lower the target's Defense stat.
 #-------------------------------
 [DARKPULSE]
-Name = Dark Pulse
+Name = Finsteraura
 Type = DARK
 Category = Special
 Power = 80
@@ -434,7 +434,7 @@ EffectChance = 20
 Description = The user releases a horrible aura imbued with dark thoughts. It may also make the target flinch.
 #-------------------------------
 [FALSESURRENDER]
-Name = False Surrender
+Name = Kniefalltrick
 Type = DARK
 Category = Physical
 Power = 80
@@ -446,7 +446,7 @@ Flags = Contact,CanProtect,CanMirrorMove,CannotMetronome
 Description = The user pretends to bow its head, but then it stabs the target with its disheveled hair. Never misses.
 #-------------------------------
 [JAWLOCK]
-Name = Jaw Lock
+Name = Fesselbiss
 Type = DARK
 Category = Physical
 Power = 80
@@ -458,7 +458,7 @@ Flags = Contact,CanProtect,CanMirrorMove
 Description = This move prevents the user and the target from switching out until either of them faints.
 #-------------------------------
 [THROATCHOP]
-Name = Throat Chop
+Name = Neck Strike
 Type = DARK
 Category = Physical
 Power = 80
@@ -471,7 +471,7 @@ EffectChance = 100
 Description = The user attacks the target's throat. The target cannot use sound-based moves for two turns.
 #-------------------------------
 [WICKEDBLOW]
-Name = Wicked Blow
+Name = Finstertreffer
 Type = DARK
 Category = Physical
 Power = 80
@@ -3867,7 +3867,7 @@ Flags = CanProtect,CanMirrorMove
 Description = The user puts a forest curse on the target. The target is now Grass type as well.
 #-------------------------------
 [GRASSWHISTLE]
-Name = Grass Whistle
+Name = Grasflöte
 Type = GRASS
 Category = Status
 Accuracy = 55
@@ -8589,7 +8589,7 @@ EffectChance = 10
 Description = A spray of countless bubbles is jetted at the opposing team. It may also lower the targets' Speed stats.
 #-------------------------------
 [WATERGUN]
-Name = Water Gun
+Name = Aquaknarre
 Type = WATER
 Category = Special
 Power = 40
@@ -8671,7 +8671,7 @@ Flags = CannotMetronome
 Description = The user scatters mysterious water around and restores the HP of itself and its allies.
 #-------------------------------
 [RAINDANCE]
-Name = Rain Dance
+Name = Regentanz
 Type = WATER
 Category = Status
 Accuracy = 0

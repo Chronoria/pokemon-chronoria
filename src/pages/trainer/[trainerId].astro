@@ -1,6 +1,7 @@
 ---
 import Layout from "../../layouts/Layout.astro";
 import EnBadge from "../../components/EnBadge.astro";
+import TypeBadge from "../../components/TypeBadge.astro";
 import { trainers, pokemonById, abilityById, itemById, moveById, slugify, trainerSlug } from "../../lib/data";
 import { href } from "../../lib/url";
 
@@ -44,12 +45,19 @@ function resolveAbility(species: string, abilityIndex: number | null): string | 
           {item && <div class="meta-note">Item: {item}</div>}
           {tp.gender && <div class="meta-note">Geschlecht: {tp.gender === "male" ? "männlich" : "weiblich"}</div>}
           {tp.moves.length > 0 && (
-            <div class="pill-list" style="margin-top:0.35rem">
-              {tp.moves.map((m) => (
-                <a href={href(`/attacken/${slugify(m)}/`)} class="badge" style="background:#888">
-                  {moveById.get(m)?.name ?? m}
-                </a>
-              ))}
+            <div class="move-list">
+              {tp.moves.map((m) => {
+                const move = moveById.get(m);
+                return (
+                  <a href={href(`/attacken/${slugify(m)}/`)} class="move-row">
+                    {move && <TypeBadge type={move.type} />}
+                    <span class="move-row-name">{move?.name ?? m}</span>
+                    <span class="move-row-stats">
+                      {move?.power ?? "–"} STR · {move?.accuracy ?? "–"}% · {move?.totalPP ?? "–"} AP
+                    </span>
+                  </a>
+                );
+              })}
             </div>
           )}
         </div>

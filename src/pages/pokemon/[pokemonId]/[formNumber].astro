@@ -26,6 +26,8 @@ function abilityName(id: string) {
 
 const formLabel = f.formName?.text || `Form ${f.formNumber}`;
 const sortedLevelMoves = [...f.levelMoves].sort((a: any, b: any) => a.level - b.level);
+const sortedTutorMoves = [...f.tutorMoves].sort((a, b) => moveName(a).localeCompare(moveName(b), "de"));
+const sortedEggMoves = [...f.eggMoves].sort((a, b) => moveName(a).localeCompare(moveName(b), "de"));
 const statTotal =
   f.baseStats.hp + f.baseStats.attack + f.baseStats.defense +
   f.baseStats.speed + f.baseStats.spAtk + f.baseStats.spDef;
@@ -85,7 +87,7 @@ const locationsByPlace = Object.groupBy
     <>
       <h2>Tutor-Attacken</h2>
       <div class="pill-list">
-        {f.tutorMoves.map((m: string) => <a class="card" href={href(`/attacken/${slugify(m)}/`)}>{moveName(m)}</a>)}
+        {sortedTutorMoves.map((m: string) => <a class="card" href={href(`/attacken/${slugify(m)}/`)}>{moveName(m)}</a>)}
       </div>
     </>
   )}
@@ -94,7 +96,7 @@ const locationsByPlace = Object.groupBy
     <>
       <h2>Ei-Attacken</h2>
       <div class="pill-list">
-        {f.eggMoves.map((m: string) => <a class="card" href={href(`/attacken/${slugify(m)}/`)}>{moveName(m)}</a>)}
+        {sortedEggMoves.map((m: string) => <a class="card" href={href(`/attacken/${slugify(m)}/`)}>{moveName(m)}</a>)}
       </div>
     </>
   )}
