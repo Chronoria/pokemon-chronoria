@@ -2012,7 +2012,7 @@ TotalPP = 10
 Target = NearOther
 FunctionCode = UseUserDefenseInsteadOfUserAttack
 Flags = Contact,CanProtect,CanMirrorMove,CannotMetronome
-Description = The user attacks by slamming its body into the target. Power increases the higher the user's Defense is.
+Description = Je höher die eigene Verteidigung, desto höher der Schaden.
 #-------------------------------
 [SUBMISSION]
 Name = Submission
@@ -4182,7 +4182,7 @@ EffectChance = 100
 Description = The user attacks by hurling a blob of mud at the target. It also reduces the target's Speed.
 #-------------------------------
 [BONEMERANG]
-Name = Bonemerang
+Name = Knochmerang
 Type = GROUND
 Category = Physical
 Power = 50
