@@ -25,7 +25,7 @@ if errorlevel 1 goto :error
 
 echo.
 echo Fertig! Die Wiki baut sich jetzt automatisch neu (ca. 30-60 Sekunden).
-echo Fortschritt: https://github.com/swientypatrick-hue/pokemon-chronoria/actions
+echo Fortschritt: https://github.com/Chronoria/pokemon-chronoria/actions
 goto :end
 
 :error
