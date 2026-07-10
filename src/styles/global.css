@@ -22,6 +22,17 @@
   }
 }
 
+/* Pagefind's Default UI ships its own light-theme :root variables (dark-gray text on white
+   background) - override with !important so they win no matter the <link> load order, since
+   pagefind-ui.css is loaded from a page template, not through this stylesheet's cascade. */
+:root {
+  --pagefind-ui-primary: var(--accent) !important;
+  --pagefind-ui-text: var(--text) !important;
+  --pagefind-ui-background: var(--bg-elevated) !important;
+  --pagefind-ui-border: var(--border) !important;
+  --pagefind-ui-tag: var(--border) !important;
+}
+
 * {
   box-sizing: border-box;
 }

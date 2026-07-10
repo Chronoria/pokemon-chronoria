@@ -1,0 +1,86 @@
+---
+import Layout from "../../../layouts/Layout.astro";
+import TypeBadge from "../../../components/TypeBadge.astro";
+import StatBar from "../../../components/StatBar.astro";
+import { pokemon, moveById, abilityById, slugify } from "../../../lib/data";
+import { href } from "../../../lib/url";
+
+export function getStaticPaths() {
+  return pokemon.flatMap((p) =>
+    p.forms.map((f) => ({
+      params: { pokemonId: slugify(p.id), formNumber: String(f.formNumber) },
+      props: { p, f },
+    }))
+  );
+}
+
+const { p, f } = Astro.props;
+
+function moveName(id: string) {
+  return moveById.get(id)?.name ?? id;
+}
+function abilityName(id: string) {
+  return abilityById.get(id)?.name ?? id;
+}
+
+const formLabel = f.formName?.text || `Form ${f.formNumber}`;
+const sortedLevelMoves = [...f.levelMoves].sort((a: any, b: any) => a.level - b.level);
+---
+
+<Layout title={`${p.name} (${formLabel})`}>
+  <p class="meta-note"><a href={href(`/pokemon/${slugify(p.id)}/`)}>← {p.name}</a></p>
+  <h1>{p.name} <span class="meta-note">— {formLabel}</span></h1>
+  {f.sprite && <img class="species-sprite" src={href(`/sprites/${f.sprite}`)} alt={`${p.name} (${formLabel})`} width="96" height="96" />}
+  <div class="pill-list">
+    {f.types.map((t: string) => <TypeBadge type={t} />)}
+  </div>
+  <p class="meta-note">
+    Diese Form von <a href={href(`/pokemon/${slugify(p.id)}/`)}>{p.name}</a> ändert Typ(en), Basiswerte,
+    Fähigkeiten und Attacken - Pokédex-Eintrag und Fundorte siehe Basisform.
+  </p>
+
+  <h2>Basiswerte</h2>
+  <StatBar label="KP" value={f.baseStats.hp} />
+  <StatBar label="Angriff" value={f.baseStats.attack} />
+  <StatBar label="Verteidigung" value={f.baseStats.defense} />
+  <StatBar label="Init." value={f.baseStats.speed} />
+  <StatBar label="Sp. Angriff" value={f.baseStats.spAtk} />
+  <StatBar label="Sp. Vert." value={f.baseStats.spDef} />
+
+  <h2>Fähigkeiten</h2>
+  <div class="pill-list">
+    {f.abilities.map((a: string) => <a class="card" href={href(`/faehigkeiten/${slugify(a)}/`)}>{abilityName(a)}</a>)}
+    {f.hiddenAbilities.map((a: string) => <a class="card" href={href(`/faehigkeiten/${slugify(a)}/`)}>{abilityName(a)} (versteckt)</a>)}
+  </div>
+
+  <h2>Attacken (durch Levelaufstieg)</h2>
+  {sortedLevelMoves.length > 0 ? (
+    <table>
+      <tr><th>Level</th><th>Attacke</th></tr>
+      {sortedLevelMoves.map((lm: any) => (
+        <tr>
+          <td>{lm.level === 0 ? "bei Entwicklung" : lm.level}</td>
+          <td><a href={href(`/attacken/${slugify(lm.move)}/`)}>{moveName(lm.move)}</a></td>
+        </tr>
+      ))}
+    </table>
+  ) : <p class="section-empty">Keine Level-Attacken bekannt.</p>}
+
+  {f.tutorMoves.length > 0 && (
+    <>
+      <h2>Tutor-Attacken</h2>
+      <div class="pill-list">
+        {f.tutorMoves.map((m: string) => <a class="card" href={href(`/attacken/${slugify(m)}/`)}>{moveName(m)}</a>)}
+      </div>
+    </>
+  )}
+
+  {f.eggMoves.length > 0 && (
+    <>
+      <h2>Ei-Attacken</h2>
+      <div class="pill-list">
+        {f.eggMoves.map((m: string) => <a class="card" href={href(`/attacken/${slugify(m)}/`)}>{moveName(m)}</a>)}
+      </div>
+    </>
+  )}
+</Layout>

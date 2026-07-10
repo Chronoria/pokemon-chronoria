@@ -1,11 +1,11 @@
 ---
-import Layout from "../../layouts/Layout.astro";
-import TypeBadge from "../../components/TypeBadge.astro";
-import StatBar from "../../components/StatBar.astro";
-import EnBadge from "../../components/EnBadge.astro";
-import { pokemon, pokemonById, moveById, abilityById, itemById, trainerById, slugify, trainerSlug } from "../../lib/data";
-import { formatEvolutionCondition } from "../../lib/evolutionMethods";
-import { href } from "../../lib/url";
+import Layout from "../../../layouts/Layout.astro";
+import TypeBadge from "../../../components/TypeBadge.astro";
+import StatBar from "../../../components/StatBar.astro";
+import EnBadge from "../../../components/EnBadge.astro";
+import { pokemon, pokemonById, moveById, abilityById, itemById, trainerById, slugify, trainerSlug } from "../../../lib/data";
+import { formatEvolutionCondition } from "../../../lib/evolutionMethods";
+import { href } from "../../../lib/url";
 
 export function getStaticPaths() {
   return pokemon.map((p) => ({ params: { pokemonId: slugify(p.id) }, props: { p } }));
@@ -95,8 +95,8 @@ const locationsByPlace = Object.groupBy
         <tr><th></th><th>Form</th><th>Typ(en)</th><th>KP/Ang/Vert/Init/SpA/SpV</th></tr>
         {p.forms.map((f: any) => (
           <tr>
-            <td>{f.sprite && <img class="form-sprite" src={href(`/sprites/${f.sprite}`)} alt="" width="40" height="40" />}</td>
-            <td>{f.formName?.text || `Form ${f.formNumber}`}</td>
+            <td><a href={href(`/pokemon/${slugify(p.id)}/${f.formNumber}/`)}>{f.sprite && <img class="form-sprite" src={href(`/sprites/${f.sprite}`)} alt="" width="40" height="40" />}</a></td>
+            <td><a href={href(`/pokemon/${slugify(p.id)}/${f.formNumber}/`)}>{f.formName?.text || `Form ${f.formNumber}`}</a></td>
             <td class="pill-list">{f.types.map((t: string) => <TypeBadge type={t} />)}</td>
             <td>{f.baseStats.hp}/{f.baseStats.attack}/{f.baseStats.defense}/{f.baseStats.speed}/{f.baseStats.spAtk}/{f.baseStats.spDef}</td>
           </tr>
