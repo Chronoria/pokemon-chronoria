@@ -512,31 +512,6 @@ RaidRanks = 5
 FormName = Dreierfamilie
 Weight = 2.3
 #-------------------------------
-[REVAVROOM,1]
-Types = FIRE
-Abilities = SPEEDBOOST
-CallRateSOS = 0
-#-------------------------------
-[REVAVROOM,2]
-Types = FAIRY
-Abilities = MISTYSURGE
-CallRateSOS = 0
-#-------------------------------
-[REVAVROOM,3]
-Types = FIGHTING
-Abilities = STAMINA
-CallRateSOS = 0
-#-------------------------------
-[REVAVROOM,4]
-Types = POISON
-Abilities = TOXICDEBRIS
-CallRateSOS = 0
-#-------------------------------
-[REVAVROOM,5]
-Types = DARK
-Abilities = INTIMIDATE
-CallRateSOS = 0
-#-------------------------------
 [TATSUGIRI,1]
 FormName = Hängende Form
 Color = Red
@@ -922,7 +897,7 @@ Weight = 93.3
 Pokedex = This Pokémon spews flames hotter than 18,000 degrees Fahrenheit. It swings around its grand, blazing mane as it protects its allies.
 Generation = 9
 #-------------------------------
-[GRENINJA,3]
+[GRENINJA,1]
 FormName = Mega Quajutsu
 MegaStone = GRENINJITE
 BaseStats = 72,125,77,142,133,81

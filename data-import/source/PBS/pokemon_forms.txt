@@ -3802,16 +3802,6 @@ FormName = Aquamodul
 
 #-------------------------------
 
-[GRENINJA,1]
-
-Abilities = BATTLEBOND
-
-HiddenAbilities = BATTLEBOND
-
-EggGroups = Undiscovered
-
-#-------------------------------
-
 [GRENINJA,2]
 
 FormName = Ash-Form
@@ -3825,6 +3815,16 @@ Abilities = BATTLEBOND
 HiddenAbilities = BATTLEBOND
 
 Generation = 7
+
+#-------------------------------
+
+[GRENINJA,3]
+
+Abilities = BATTLEBOND
+
+HiddenAbilities = BATTLEBOND
+
+EggGroups = Undiscovered
 
 #-------------------------------
 
