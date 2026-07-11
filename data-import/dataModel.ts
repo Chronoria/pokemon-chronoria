@@ -32,6 +32,10 @@ export interface PokemonForm {
   tutorMoves: string[];
   eggMoves: string[];
   evolutions: Evolution[];
+  /** PBS item id of the Mega Stone that triggers this form, or null if it's not a Mega Evolution */
+  megaStone: string | null;
+  /** form number this Mega Evolution reverts to after battle (0 = base species). Only meaningful when megaStone is set. */
+  unmegaForm: number;
   /** filename in public/sprites/, or null if no matching form sprite exists */
   sprite: string | null;
   // reverse index, filled in by buildData.ts

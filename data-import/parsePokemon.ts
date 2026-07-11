@@ -106,6 +106,8 @@ function blockToForm(block: PbsBlock, ctx: TranslationContext, sprites: Map<stri
     tutorMoves: r.TutorMoves !== undefined ? splitList(r.TutorMoves) : base.tutorMoves,
     eggMoves: r.EggMoves !== undefined ? splitList(r.EggMoves) : base.eggMoves,
     evolutions: r.Evolutions !== undefined ? parseEvolutions(r.Evolutions) : base.evolutions,
+    megaStone: r.MegaStone ?? null,
+    unmegaForm: r.UnmegaForm !== undefined ? Number(r.UnmegaForm) : 0,
     sprite: sprites.get(`${speciesId}_${formNumber}`) ?? null,
     foundIn: [],
   };

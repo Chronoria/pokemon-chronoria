@@ -30,19 +30,24 @@ function speciesName(id: string) {
 function itemName(id: string) {
   return itemById.get(id)?.name;
 }
-/** If the evolution target has a form with the same form number, this form line evolves into
- *  that specific form (e.g. Onix "Kristall" form 1 -> Steelix "Kristall" form 1) rather than
- *  the target's base form. */
-function evoTarget(targetId: string, formNumber: number) {
-  const targetForm = pokemonById.get(targetId)?.forms.find((tf: any) => tf.formNumber === formNumber);
-  if (targetForm) {
-    return {
-      url: href(`/pokemon/${slugify(targetId)}/${formNumber}/`),
-      label: `${speciesName(targetId)} (${targetForm.formName?.text || `Form ${formNumber}`})`,
-    };
+/** Link to a species page, or to one specific form of it if formNumber > 0 and that form
+ *  exists (e.g. Onix "Kristall" form 1 evolves into Steelix "Kristall" form 1, not Steelix's
+ *  base form; a Mega form's UnmegaForm may likewise point at a non-base form to revert to). */
+function pokemonFormLink(speciesId: string, formNumber: number) {
+  if (formNumber > 0) {
+    const targetForm = pokemonById.get(speciesId)?.forms.find((tf: any) => tf.formNumber === formNumber);
+    if (targetForm) {
+      return {
+        url: href(`/pokemon/${slugify(speciesId)}/${formNumber}/`),
+        label: `${speciesName(speciesId)} (${targetForm.formName?.text || `Form ${formNumber}`})`,
+      };
+    }
   }
-  return { url: href(`/pokemon/${slugify(targetId)}/`), label: speciesName(targetId) };
+  return { url: href(`/pokemon/${slugify(speciesId)}/`), label: speciesName(speciesId) };
 }
+
+const evolvesFromLink = p.evolvesFrom ? pokemonFormLink(p.evolvesFrom, f.formNumber) : null;
+const unmegaLink = f.megaStone ? pokemonFormLink(p.id, f.unmegaForm) : null;
 
 const formLabel = f.formName?.text || `Form ${f.formNumber}`;
 const sortedLevelMoves = [...f.levelMoves].sort((a: any, b: any) => a.level - b.level);
@@ -71,8 +76,14 @@ const locationsByPlace = Object.groupBy
     {f.types.map((t: string) => <TypeBadge type={t} />)}
   </div>
   <p class="meta-note">
-    Diese Form von <a href={href(`/pokemon/${slugify(p.id)}/`)}>{p.name}</a> ändert Typ(en), Basiswerte,
-    Fähigkeiten und Attacken - Pokédex-Eintrag siehe Basisform.
+    {unmegaLink ? (
+      <>Dies ist die Mega-Form von <a href={unmegaLink.url}>{unmegaLink.label}</a>.</>
+    ) : (
+      <>
+        Diese Form von <a href={href(`/pokemon/${slugify(p.id)}/`)}>{p.name}</a> ändert Typ(en), Basiswerte,
+        Fähigkeiten und Attacken - Pokédex-Eintrag siehe Basisform.
+      </>
+    )}
   </p>
 
   <h2>Basiswerte</h2>
@@ -95,13 +106,13 @@ const locationsByPlace = Object.groupBy
   </div>
 
   <h2>Entwicklung</h2>
-  {p.evolvesFrom && (
-    <p>Entwickelt sich aus <a href={href(`/pokemon/${slugify(p.evolvesFrom)}/`)}>{speciesName(p.evolvesFrom)}</a>.</p>
+  {evolvesFromLink && (
+    <p>Entwickelt sich aus <a href={evolvesFromLink.url}>{evolvesFromLink.label}</a>.</p>
   )}
   {f.evolutions.length > 0 ? (
     <ul>
       {f.evolutions.map((evo: any) => {
-        const target = evoTarget(evo.target, f.formNumber);
+        const target = pokemonFormLink(evo.target, f.formNumber);
         return (
           <li>
             <a href={target.url}>{target.label}</a>
