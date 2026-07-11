@@ -299,16 +299,16 @@ h2 {
   align-items: center;
   justify-content: center;
   margin: 0.75rem 0;
-  border-radius: var(--radius-lg);
-  box-shadow: var(--shadow-soft);
+  /* Fades to fully transparent well before the box edge, so the page's own background
+     (and its decorative gradients) show through underneath - no visible box outline in
+     either theme, since there's no solid edge color to clash with anything. */
   background: radial-gradient(
     circle at center,
     #ffffff 0%,
-    #ffffff 40%,
-    #eef0f4 54%,
-    #b9c0cf 70%,
-    #4b5468 86%,
-    #1a1e28 100%
+    #ffffff 32%,
+    rgba(255, 255, 255, 0.7) 48%,
+    rgba(255, 255, 255, 0.25) 62%,
+    rgba(255, 255, 255, 0) 76%
   );
 }
 .species-sprite-frame .species-sprite {
