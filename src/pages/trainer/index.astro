@@ -21,17 +21,53 @@ const sortedGroups = [...groups.entries()]
 
 <Layout title="Trainer">
   <h1>Trainer ({trainers.length})</h1>
-  {sortedGroups.map((group) => (
-    <>
-      <h2>{group.name} {group.fallback && <EnBadge />} <span class="meta-note">({group.trainers.length})</span></h2>
-      <div class="card-grid">
-        {group.trainers.map((t) => (
-          <a class="card" href={href(`/trainer/${trainerSlug(t.id)}/`)}>
-            <div class="card-name">{t.name}</div>
-            <div class="meta-note">{t.party.length} Pokémon</div>
-          </a>
-        ))}
+
+  <input
+    type="search"
+    id="name-search"
+    class="text-input"
+    placeholder="Nach Namen suchen…"
+    aria-label="Trainer nach Namen durchsuchen"
+  />
+
+  <p class="meta-note" id="result-count"></p>
+
+  <div id="trainer-groups">
+    {sortedGroups.map((group) => (
+      <div class="trainer-group">
+        <h2>{group.name} {group.fallback && <EnBadge />} <span class="meta-note">({group.trainers.length})</span></h2>
+        <div class="card-grid">
+          {group.trainers.map((t) => (
+            <a class="card" href={href(`/trainer/${trainerSlug(t.id)}/`)} data-name={t.name.toLowerCase()}>
+              <div class="card-name">{t.name}</div>
+              <div class="meta-note">{t.party.length} Pokémon</div>
+            </a>
+          ))}
+        </div>
       </div>
-    </>
-  ))}
+    ))}
+  </div>
 </Layout>
+
+<script>
+  const nameSearch = document.getElementById("name-search") as HTMLInputElement;
+  const resultCount = document.getElementById("result-count")!;
+  const groups = [...document.querySelectorAll<HTMLElement>(".trainer-group")];
+
+  nameSearch.addEventListener("input", () => {
+    const query = nameSearch.value.trim().toLowerCase();
+    let visible = 0;
+    for (const group of groups) {
+      const cards = [...group.querySelectorAll<HTMLElement>("[data-name]")];
+      let groupVisible = 0;
+      for (const card of cards) {
+        const show = query === "" || (card.dataset.name ?? "").includes(query);
+        card.style.display = show ? "" : "none";
+        if (show) groupVisible++;
+      }
+      group.style.display = groupVisible > 0 ? "" : "none";
+      visible += groupVisible;
+    }
+    resultCount.textContent = query ? `${visible} Treffer` : "";
+  });
+</script>

@@ -24,6 +24,7 @@ function resolveAbility(species: string, abilityIndex: number | null): string | 
 <Layout title={`${t.name} (${t.trainerTypeName.text})`}>
   <p class="meta-note"><a href={href("/trainer/")}>← Alle Trainer</a></p>
   <h1>{t.name}</h1>
+  {t.sprite && <img class="species-sprite" src={href(`/trainers/${t.sprite}`)} alt={t.name} width="96" height="96" />}
   <p class="meta-note">{t.trainerTypeName.text}{t.trainerTypeName.fallback && <EnBadge />}</p>
 
   <h2>Team</h2>

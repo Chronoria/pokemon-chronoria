@@ -8,12 +8,41 @@ const sortedAbilities = [...abilities].sort((a, b) => a.name.localeCompare(b.nam
 
 <Layout title="Fähigkeiten">
   <h1>Fähigkeiten ({abilities.length})</h1>
-  <div class="card-grid">
+
+  <input
+    type="search"
+    id="name-search"
+    class="text-input"
+    placeholder="Nach Namen suchen…"
+    aria-label="Fähigkeiten nach Namen durchsuchen"
+  />
+
+  <p class="meta-note" id="result-count"></p>
+
+  <div class="card-grid" id="ability-grid">
     {sortedAbilities.map((a) => (
-      <a class="card" href={href(`/faehigkeiten/${slugify(a.id)}/`)}>
+      <a class="card" href={href(`/faehigkeiten/${slugify(a.id)}/`)} data-name={a.name.toLowerCase()}>
         <div class="card-name">{a.name}</div>
         <div class="meta-note">{a.description}</div>
       </a>
     ))}
   </div>
 </Layout>
+
+<script>
+  const nameSearch = document.getElementById("name-search") as HTMLInputElement;
+  const resultCount = document.getElementById("result-count")!;
+  const grid = document.getElementById("ability-grid")!;
+  const cards = [...grid.querySelectorAll<HTMLElement>("[data-name]")];
+
+  nameSearch.addEventListener("input", () => {
+    const query = nameSearch.value.trim().toLowerCase();
+    let visible = 0;
+    for (const card of cards) {
+      const show = query === "" || (card.dataset.name ?? "").includes(query);
+      card.style.display = show ? "" : "none";
+      if (show) visible++;
+    }
+    resultCount.textContent = query ? `${visible} Treffer` : "";
+  });
+</script>

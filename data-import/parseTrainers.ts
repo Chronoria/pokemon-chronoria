@@ -1,13 +1,26 @@
-import { readFileSync } from "node:fs";
+import { readFileSync, readdirSync, existsSync } from "node:fs";
 import { join } from "node:path";
 import { parsePbsBlocks, blockToRecord, splitList, type PbsBlock } from "./parsePbs.ts";
 import type { TranslationContext } from "./translationContext.ts";
 import type { Trainer, TrainerPokemon } from "./dataModel.ts";
 
 const SOURCE_DIR = join(import.meta.dirname, "source", "PBS");
+const TRAINER_SPRITES_DIR = join(import.meta.dirname, "..", "public", "trainers");
 
 function load(file: string): string {
   return readFileSync(join(SOURCE_DIR, file), "utf-8");
+}
+
+/** Same idea as the Pokémon sprite index: build a lookup once so we pick up whichever exact
+ *  casing/extension the trainer graphic actually has on disk, keyed by the trainerType id. */
+function loadTrainerSpriteIndex(): Map<string, string> {
+  const index = new Map<string, string>();
+  if (!existsSync(TRAINER_SPRITES_DIR)) return index;
+  for (const name of readdirSync(TRAINER_SPRITES_DIR)) {
+    const withoutExt = name.replace(/\.png$/i, "");
+    index.set(withoutExt, name);
+  }
+  return index;
 }
 
 function parseTrainerTypeNames(): Map<string, string> {
@@ -19,7 +32,12 @@ function parseTrainerTypeNames(): Map<string, string> {
   return names;
 }
 
-function blockToTrainer(block: PbsBlock, typeEnglishNames: Map<string, string>, ctx: TranslationContext): Trainer {
+function blockToTrainer(
+  block: PbsBlock,
+  typeEnglishNames: Map<string, string>,
+  ctx: TranslationContext,
+  sprites: Map<string, string>
+): Trainer {
   const [trainerType, name, disambiguator] = block.headerParts;
   const id = [trainerType, name, disambiguator].filter(Boolean).join("-");
 
@@ -89,6 +107,7 @@ function blockToTrainer(block: PbsBlock, typeEnglishNames: Map<string, string>, 
     name,
     loseText,
     party,
+    sprite: sprites.get(trainerType) ?? null,
   };
 }
 
@@ -96,5 +115,6 @@ function blockToTrainer(block: PbsBlock, typeEnglishNames: Map<string, string>, 
 // data-import/source - they're huge generic rental pools, not meaningful wiki content.
 export function parseTrainers(ctx: TranslationContext): Trainer[] {
   const typeEnglishNames = parseTrainerTypeNames();
-  return parsePbsBlocks(load("trainers.txt")).map((block) => blockToTrainer(block, typeEnglishNames, ctx));
+  const sprites = loadTrainerSpriteIndex();
+  return parsePbsBlocks(load("trainers.txt")).map((block) => blockToTrainer(block, typeEnglishNames, ctx, sprites));
 }

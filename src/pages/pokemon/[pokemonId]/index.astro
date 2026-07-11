@@ -46,7 +46,11 @@ const locationsByPlace = Object.groupBy
 <Layout title={p.name}>
   <p class="meta-note"><a href={href("/pokemon/")}>← Alle Pokémon</a></p>
   <h1>{p.name}</h1>
-  {p.sprite && <img class="species-sprite" src={href(`/sprites/${p.sprite}`)} alt={p.name} width="96" height="96" />}
+  {p.sprite && (
+    <div class="species-sprite-frame">
+      <img class="species-sprite" src={href(`/sprites/${p.sprite}`)} alt={p.name} width="288" height="288" />
+    </div>
+  )}
   <div class="pill-list">
     {p.types.map((t: string) => <TypeBadge type={t} />)}
   </div>
@@ -70,7 +74,6 @@ const locationsByPlace = Object.groupBy
     {p.pokedex.fallback && p.pokedex.text && <EnBadge />}
   </p>
   <table>
-    <tr><th>Kategorie</th><td>{p.category.text || "–"} {p.category.fallback && p.category.text && <EnBadge />}</td></tr>
     <tr><th>Größe</th><td>{p.height} m</td></tr>
     <tr><th>Gewicht</th><td>{p.weight} kg</td></tr>
     <tr><th>Fangrate</th><td>{p.catchRate}</td></tr>
@@ -108,13 +111,22 @@ const locationsByPlace = Object.groupBy
     <>
       <h2>Formen</h2>
       <table>
-        <tr><th></th><th>Form</th><th>Typ(en)</th><th>LP/Ang/Vert/SpA/SpV/Init</th></tr>
+        <tr><th></th><th>Form</th><th>Typ(en)</th><th>Basiswerte</th></tr>
         {p.forms.map((f: any) => (
           <tr>
             <td><a href={href(`/pokemon/${slugify(p.id)}/${f.formNumber}/`)}>{f.sprite && <img class="form-sprite" src={href(`/sprites/${f.sprite}`)} alt="" width="40" height="40" />}</a></td>
             <td><a href={href(`/pokemon/${slugify(p.id)}/${f.formNumber}/`)}>{f.formName?.text || `Form ${f.formNumber}`}</a></td>
             <td><div class="pill-list">{f.types.map((t: string) => <TypeBadge type={t} />)}</div></td>
-            <td>{f.baseStats.hp}/{f.baseStats.attack}/{f.baseStats.defense}/{f.baseStats.spAtk}/{f.baseStats.spDef}/{f.baseStats.speed}</td>
+            <td>
+              <div class="form-stat-grid">
+                <span class="form-stat"><span class="form-stat-lbl">LP</span><span class="form-stat-val">{f.baseStats.hp}</span></span>
+                <span class="form-stat"><span class="form-stat-lbl">Ang</span><span class="form-stat-val">{f.baseStats.attack}</span></span>
+                <span class="form-stat"><span class="form-stat-lbl">Vert</span><span class="form-stat-val">{f.baseStats.defense}</span></span>
+                <span class="form-stat"><span class="form-stat-lbl">SpA</span><span class="form-stat-val">{f.baseStats.spAtk}</span></span>
+                <span class="form-stat"><span class="form-stat-lbl">SpV</span><span class="form-stat-val">{f.baseStats.spDef}</span></span>
+                <span class="form-stat"><span class="form-stat-lbl">Init</span><span class="form-stat-val">{f.baseStats.speed}</span></span>
+              </div>
+            </td>
           </tr>
         ))}
       </table>

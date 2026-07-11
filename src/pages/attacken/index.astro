@@ -11,6 +11,14 @@ const sortedMoves = [...moves].sort((a, b) => a.name.localeCompare(b.name, "de")
 <Layout title="Attacken">
   <h1>Attacken ({moves.length})</h1>
 
+  <input
+    type="search"
+    id="name-search"
+    class="text-input"
+    placeholder="Nach Namen suchen…"
+    aria-label="Attacken nach Namen durchsuchen"
+  />
+
   <div class="filter-bar" id="type-filter">
     <a href="#" data-type="ALL" aria-current="true">Alle</a>
     {types.filter((t) => t.id !== "QMARKS").map((t) => (
@@ -18,10 +26,12 @@ const sortedMoves = [...moves].sort((a, b) => a.name.localeCompare(b.name, "de")
     ))}
   </div>
 
+  <p class="meta-note" id="result-count"></p>
+
   <table id="move-table">
     <tr><th>Attacke</th><th>Typ</th><th>Kategorie</th><th>St.</th><th>Genau.</th><th>AP</th></tr>
     {sortedMoves.map((m) => (
-      <tr data-type={m.type}>
+      <tr data-type={m.type} data-name={m.name.toLowerCase()}>
         <td><a href={href(`/attacken/${slugify(m.id)}/`)}>{m.name}</a></td>
         <td><TypeBadge type={m.type} /></td>
         <td>{CATEGORY_LABEL[m.category] ?? m.category}</td>
@@ -35,19 +45,35 @@ const sortedMoves = [...moves].sort((a, b) => a.name.localeCompare(b.name, "de")
 
 <script>
   const filterBar = document.getElementById("type-filter")!;
+  const nameSearch = document.getElementById("name-search") as HTMLInputElement;
+  const resultCount = document.getElementById("result-count")!;
   const rows = [...document.querySelectorAll<HTMLElement>("#move-table [data-type]")];
+
+  let activeType = "ALL";
+
+  function applyFilters() {
+    const query = nameSearch.value.trim().toLowerCase();
+    let visible = 0;
+    for (const row of rows) {
+      const matchesType = activeType === "ALL" || row.dataset.type === activeType;
+      const matchesName = query === "" || (row.dataset.name ?? "").includes(query);
+      const show = matchesType && matchesName;
+      row.style.display = show ? "" : "none";
+      if (show) visible++;
+    }
+    resultCount.textContent = query || activeType !== "ALL" ? `${visible} Treffer` : "";
+  }
 
   filterBar.addEventListener("click", (e) => {
     const link = (e.target as HTMLElement).closest("a[data-type]");
     if (!link) return;
     e.preventDefault();
-    const type = link.getAttribute("data-type")!;
+    activeType = link.getAttribute("data-type")!;
 
     for (const a of filterBar.querySelectorAll("a")) a.removeAttribute("aria-current");
     link.setAttribute("aria-current", "true");
-
-    for (const row of rows) {
-      row.style.display = type === "ALL" || row.dataset.type === type ? "" : "none";
-    }
+    applyFilters();
   });
+
+  nameSearch.addEventListener("input", applyFilters);
 </script>

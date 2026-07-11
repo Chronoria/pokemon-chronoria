@@ -9,4 +9,4 @@ const { type } = Astro.props;
 const name = typeNameById.get(type) ?? type;
 ---
 
-<span class="badge" style={`background:${typeColor(type)}`}>{name}</span>
+<span class="badge badge-type" style={`background:${typeColor(type)}`}>{name}</span>

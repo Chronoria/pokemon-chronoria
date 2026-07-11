@@ -6,7 +6,7 @@
 // Usage: node data-import/syncData.ts [pfad-zum-spielprojekt]
 // Default game dir: E:/Test
 
-import { existsSync, mkdirSync, readdirSync, copyFileSync } from "node:fs";
+import { existsSync, mkdirSync, readdirSync, copyFileSync, unlinkSync } from "node:fs";
 import { join } from "node:path";
 
 const gameDir = process.argv[2] ?? "E:/Test";
@@ -22,11 +22,18 @@ function copyTxtFiles(srcDir: string, destDir: string, filter?: (name: string) =
   }
   mkdirSync(destDir, { recursive: true });
   let count = 0;
+  const valid = new Set<string>();
   for (const name of readdirSync(srcDir)) {
     if (!name.endsWith(".txt")) continue;
     if (filter && !filter(name)) continue;
     copyFileSync(join(srcDir, name), join(destDir, name));
+    valid.add(name);
     count++;
+  }
+  // Mirror the source: remove destination files that no longer exist (or are no longer
+  // included) in the source, so renamed/deleted content doesn't linger forever.
+  for (const name of readdirSync(destDir)) {
+    if (name.endsWith(".txt") && !valid.has(name)) unlinkSync(join(destDir, name));
   }
   return count;
 }
@@ -42,10 +49,17 @@ function copySprites(srcDir: string, destDir: string) {
   }
   mkdirSync(destDir, { recursive: true });
   let count = 0;
+  const valid = new Set<string>();
   for (const name of readdirSync(srcDir)) {
     if (!/\.png$/i.test(name)) continue;
     copyFileSync(join(srcDir, name), join(destDir, name));
+    valid.add(name);
     count++;
+  }
+  // Mirror the source: remove destination files that no longer exist in the source, so
+  // renamed/removed art (e.g. an old form's sprite) doesn't linger as an orphan forever.
+  for (const name of readdirSync(destDir)) {
+    if (/\.png$/i.test(name) && !valid.has(name)) unlinkSync(join(destDir, name));
   }
   return count;
 }
@@ -56,6 +70,7 @@ const enCoreCount = copyTxtFiles(join(gameDir, "Text_english_core"), join(outDir
 const enGameCount = copyTxtFiles(join(gameDir, "Text_english_game"), join(outDir, "Text_english_game"));
 const spriteCount = copySprites(join(gameDir, "Graphics", "Pokemon", "Front"), join(publicDir, "sprites"));
 const itemIconCount = copySprites(join(gameDir, "Graphics", "Items"), join(publicDir, "item-icons"));
+const trainerSpriteCount = copySprites(join(gameDir, "Graphics", "Trainers"), join(publicDir, "trainers"));
 
 console.log(`Sync abgeschlossen aus ${gameDir}:`);
 console.log(`  PBS: ${pbsCount} Dateien`);
@@ -64,3 +79,4 @@ console.log(`  Text_english_core: ${enCoreCount} Dateien`);
 console.log(`  Text_english_game: ${enGameCount} Dateien`);
 console.log(`  Sprites: ${spriteCount} Dateien`);
 console.log(`  Item-Icons: ${itemIconCount} Dateien`);
+console.log(`  Trainer-Sprites: ${trainerSpriteCount} Dateien`);

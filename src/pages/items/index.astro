@@ -8,9 +8,20 @@ const sortedItems = [...items].sort((a, b) => a.name.localeCompare(b.name, "de")
 
 <Layout title="Items">
   <h1>Items ({items.length})</h1>
-  <div class="card-grid">
+
+  <input
+    type="search"
+    id="name-search"
+    class="text-input"
+    placeholder="Nach Namen suchen…"
+    aria-label="Items nach Namen durchsuchen"
+  />
+
+  <p class="meta-note" id="result-count"></p>
+
+  <div class="card-grid" id="item-grid">
     {sortedItems.map((i) => (
-      <a class="card" href={href(`/items/${slugify(i.id)}/`)}>
+      <a class="card" href={href(`/items/${slugify(i.id)}/`)} data-name={i.name.toLowerCase()}>
         {i.icon && <img class="card-sprite" src={href(`/item-icons/${i.icon}`)} alt="" loading="lazy" width="48" height="48" />}
         <div class="card-name">{i.name}</div>
         <div class="meta-note">{i.price !== null ? `${i.price} ₽` : "nicht käuflich"}</div>
@@ -18,3 +29,21 @@ const sortedItems = [...items].sort((a, b) => a.name.localeCompare(b.name, "de")
     ))}
   </div>
 </Layout>
+
+<script>
+  const nameSearch = document.getElementById("name-search") as HTMLInputElement;
+  const resultCount = document.getElementById("result-count")!;
+  const grid = document.getElementById("item-grid")!;
+  const cards = [...grid.querySelectorAll<HTMLElement>("[data-name]")];
+
+  nameSearch.addEventListener("input", () => {
+    const query = nameSearch.value.trim().toLowerCase();
+    let visible = 0;
+    for (const card of cards) {
+      const show = query === "" || (card.dataset.name ?? "").includes(query);
+      card.style.display = show ? "" : "none";
+      if (show) visible++;
+    }
+    resultCount.textContent = query ? `${visible} Treffer` : "";
+  });
+</script>

@@ -135,6 +135,8 @@ export interface Trainer {
   name: string;
   loseText: string | null;
   party: TrainerPokemon[];
+  /** filename in public/trainers/, or null if no matching sprite exists */
+  sprite: string | null;
 }
 
 export interface EncounterSlot {

@@ -1,4 +1,5 @@
 import { readFileSync, readdirSync, existsSync } from "node:fs";
+import { createHash } from "node:crypto";
 import { join } from "node:path";
 import { parsePbsBlocks, blockToRecord, splitList, type PbsBlock } from "./parsePbs.ts";
 import { resolveText, resolveInlineName, type TranslationContext } from "./translationContext.ts";
@@ -109,6 +110,58 @@ function blockToForm(block: PbsBlock, ctx: TranslationContext, sprites: Map<stri
   };
 }
 
+function statsEqual(a: BaseStats, b: BaseStats): boolean {
+  return (
+    a.hp === b.hp &&
+    a.attack === b.attack &&
+    a.defense === b.defense &&
+    a.speed === b.speed &&
+    a.spAtk === b.spAtk &&
+    a.spDef === b.spDef
+  );
+}
+
+function typesEqual(a: string[], b: string[]): boolean {
+  return a.length === b.length && a.every((t, i) => t === b[i]);
+}
+
+const spriteHashCache = new Map<string, string>();
+function spriteHash(filename: string): string {
+  let hash = spriteHashCache.get(filename);
+  if (hash === undefined) {
+    hash = createHash("sha256").update(readFileSync(join(SPRITES_DIR, filename))).digest("hex");
+    spriteHashCache.set(filename, hash);
+  }
+  return hash;
+}
+
+/** A form with no sprite of its own isn't visually distinct from anything either way, so it
+ *  doesn't rule out "duplicate" - but a form whose sprite file is merely a byte-identical copy
+ *  of another entry's sprite (common for engine bookkeeping forms) also counts as the same
+ *  picture, not proof of a real distinct form. Only an actually different image counts. */
+function sameSprite(a: string | null, b: string | null): boolean {
+  if (a === null) return true;
+  if (b === null) return false;
+  return spriteHash(a) === spriteHash(b);
+}
+
+/**
+ * Some form blocks have no FormName and are visually identical (types + stats + sprite) to the
+ * base species or an already-kept form - e.g. Zygarde's "PokedexForm" shadow entries (whose
+ * sprite is literally a copy of another form's), or Rockruff's unnamed second block that has no
+ * sprite of its own. These are internal engine bookkeeping, not player-facing forms, so they'd
+ * just show up as a confusing duplicate row in the wiki's forms table. Forms like Alcremie's many
+ * unnamed flavor variants are NOT caught by this - they share stats/types but each has its own
+ * distinct artwork, so they're clearly real, separate forms worth showing.
+ */
+function isUnnamedDuplicate(form: PokemonForm, base: Pokemon): boolean {
+  if (form.formName !== null) return false;
+  const candidates = [base, ...base.forms];
+  return candidates.some(
+    (c) => typesEqual(form.types, c.types) && statsEqual(form.baseStats, c.baseStats) && sameSprite(form.sprite, c.sprite)
+  );
+}
+
 export function parsePokemon(ctx: TranslationContext): Pokemon[] {
   const sprites = loadSpriteIndex();
 
@@ -137,7 +190,9 @@ export function parsePokemon(ctx: TranslationContext): Pokemon[] {
       console.warn(`[Pokémon] Form für unbekannte Spezies ${speciesId} übersprungen.`);
       continue;
     }
-    base.forms.push(blockToForm(block, ctx, sprites, base));
+    const form = blockToForm(block, ctx, sprites, base);
+    if (isUnnamedDuplicate(form, base)) continue;
+    base.forms.push(form);
   }
 
   return [...pokemon.values()];
