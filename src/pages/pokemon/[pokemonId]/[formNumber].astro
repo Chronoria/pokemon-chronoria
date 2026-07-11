@@ -85,9 +85,9 @@ const locationsByPlace = Object.groupBy
   {p.evolvesFrom && (
     <p>Entwickelt sich aus <a href={href(`/pokemon/${slugify(p.evolvesFrom)}/`)}>{speciesName(p.evolvesFrom)}</a>.</p>
   )}
-  {p.evolutions.length > 0 ? (
+  {f.evolutions.length > 0 ? (
     <ul>
-      {p.evolutions.map((evo: any) => (
+      {f.evolutions.map((evo: any) => (
         <li>
           <a href={href(`/pokemon/${slugify(evo.target)}/`)}>{speciesName(evo.target)}</a>
           {" — "}{formatEvolutionCondition(evo.method, evo.param, itemName)}

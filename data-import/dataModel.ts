@@ -31,6 +31,7 @@ export interface PokemonForm {
   levelMoves: LevelMove[];
   tutorMoves: string[];
   eggMoves: string[];
+  evolutions: Evolution[];
   /** filename in public/sprites/, or null if no matching form sprite exists */
   sprite: string | null;
   // reverse index, filled in by buildData.ts
