@@ -292,23 +292,25 @@ h2 {
 }
 
 .species-sprite-frame {
-  width: 340px;
-  height: 340px;
+  width: 380px;
+  height: 380px;
   max-width: 100%;
   display: flex;
   align-items: center;
   justify-content: center;
   margin: 0.75rem 0;
-  /* Fades to fully transparent well before the box edge, so the page's own background
-     (and its decorative gradients) show through underneath - no visible box outline in
-     either theme, since there's no solid edge color to clash with anything. */
+  /* Fixed pixel radius (not a bare "circle", which defaults to farthest-corner sizing -
+     on a square box that finishes the fade later on the diagonals than at the top/bottom/
+     left/right edge midpoints, leaving a faint visible "shoulder" at each side's center).
+     160px fully fades out well inside the 190px half-width of this box in every direction
+     alike, so the page's own background shows through cleanly with no box outline. */
   background: radial-gradient(
-    circle at center,
+    circle 160px at center,
     #ffffff 0%,
-    #ffffff 32%,
-    rgba(255, 255, 255, 0.7) 48%,
-    rgba(255, 255, 255, 0.25) 62%,
-    rgba(255, 255, 255, 0) 76%
+    #ffffff 40%,
+    rgba(255, 255, 255, 0.7) 60%,
+    rgba(255, 255, 255, 0.25) 82%,
+    rgba(255, 255, 255, 0) 100%
   );
 }
 .species-sprite-frame .species-sprite {
