@@ -3244,7 +3244,7 @@ RaidRanks = 6
 #-------------------------------
 [OGERPON]
 Name = Ogerpon
-FormName = Teal Mask
+FormName = Türkisgrüne Maske
 Types = GRASS
 BaseStats = 80,120,84,110,60,96
 GenderRatio = AlwaysFemale

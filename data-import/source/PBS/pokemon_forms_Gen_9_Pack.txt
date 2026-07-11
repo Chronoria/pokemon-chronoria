@@ -585,6 +585,7 @@ Pokedex = This form has excellent defenses, absorbing impacts solidly like the c
 Flags = Legendary,TeraType_ROCK
 #-------------------------------
 [OGERPON,4]
+FormName = Türkisgrüne Maske
 PokedexForm = 0
 #-------------------------------
 [OGERPON,5]

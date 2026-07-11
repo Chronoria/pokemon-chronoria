@@ -4275,7 +4275,7 @@ FunctionCode = RaiseGroundedGrassBattlersAtkSpAtk1
 Description = The user tills the soil to encourage plant growth. This raises the Attack and Sp. Atk of Grass types.
 #-------------------------------
 [SANDATTACK]
-Name = Sand Attack
+Name = Sandwirbel
 Type = GROUND
 Category = Status
 Accuracy = 100
