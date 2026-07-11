@@ -7993,8 +7993,8 @@ Flags = KeyItem
 Description = Ein Geschenk einer Oma an ihr Enkelkind, welches in Lunafeld wohnt.
 #-------------------------------
 [GARDEVOIRITE2]
-Name = Guardevoirit2
-NamePlural = Gardevoirites
+Name = Guardevoirnit 2
+NamePlural = Guardevoirnite 2
 Pocket = 1
 Price = 10000
 BPPrice = 50
@@ -8002,8 +8002,8 @@ Flags = MegaStone,Fling_80
 Description = Dieser Stein ermöglicht Guardevoir eine Mega-Entwicklung.
 #-------------------------------
 [GALLADITE2]
-Name = Galladit2
-NamePlural = Galladites
+Name = Galagladinit 2
+NamePlural = Galagladinit 2
 Pocket = 1
 Price = 10000
 BPPrice = 50
