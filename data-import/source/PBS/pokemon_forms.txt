@@ -158,37 +158,11 @@ Generation = 1
 
 #-------------------------------
 
-[VENUSAUR,2]
-
-FormName = Mega Bisaflor
-
-MegaStone = VENUSAURITEX
-
-BaseStats = 80,100,123,80,122,120
-
-BaseExp = 313
-
-Abilities = THICKFAT
-
-HiddenAbilities = THICKFAT
-
-Height = 2.4
-
-Weight = 155.5
-
-Pokedex = In order to support its flower, which has grown larger due to Mega Evolution, its back and legs have become stronger.
-
-Generation = 1
-
-UnmegaForm = 1
-
-#-------------------------------
-
 [VENUSAUR,3]
 
-FormName = Mega Bisaflor
+FormName = Mega Bisaflor X
 
-MegaStone = VENUSAURITEY
+MegaStone = VENUSAURITEX
 
 BaseStats = 100,100,123,50,122,130
 
@@ -207,6 +181,32 @@ Pokedex = In order to support its flower, which has grown larger due to Mega Evo
 Generation = 1
 
 UnmegaForm = 0
+
+#-------------------------------
+
+[VENUSAUR,2]
+
+FormName = Mega Bisaflor Y
+
+MegaStone = VENUSAURITEY
+
+BaseStats = 80,100,123,80,122,120
+
+BaseExp = 313
+
+Abilities = THICKFAT
+
+HiddenAbilities = THICKFAT
+
+Height = 2.4
+
+Weight = 155.5
+
+Pokedex = In order to support its flower, which has grown larger due to Mega Evolution, its back and legs have become stronger.
+
+Generation = 1
+
+UnmegaForm = 1
 
 #-------------------------------
 [CHARMANDER,1]
