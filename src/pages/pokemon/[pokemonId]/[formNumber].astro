@@ -2,8 +2,9 @@
 import Layout from "../../../layouts/Layout.astro";
 import TypeBadge from "../../../components/TypeBadge.astro";
 import StatBar from "../../../components/StatBar.astro";
-import { pokemon, moveById, abilityById, slugify } from "../../../lib/data";
+import { pokemon, pokemonById, moveById, abilityById, itemById, slugify } from "../../../lib/data";
 import { encounterMethodLabel } from "../../../lib/encounterMethods";
+import { formatEvolutionCondition } from "../../../lib/evolutionMethods";
 import { href } from "../../../lib/url";
 
 export function getStaticPaths() {
@@ -22,6 +23,12 @@ function moveName(id: string) {
 }
 function abilityName(id: string) {
   return abilityById.get(id)?.name ?? id;
+}
+function speciesName(id: string) {
+  return pokemonById.get(id)?.name ?? id;
+}
+function itemName(id: string) {
+  return itemById.get(id)?.name;
 }
 
 const formLabel = f.formName?.text || `Form ${f.formNumber}`;
@@ -73,6 +80,23 @@ const locationsByPlace = Object.groupBy
     {f.abilities.map((a: string) => <a class="card" href={href(`/faehigkeiten/${slugify(a)}/`)}>{abilityName(a)}</a>)}
     {f.hiddenAbilities.map((a: string) => <a class="card" href={href(`/faehigkeiten/${slugify(a)}/`)}>{abilityName(a)} (versteckt)</a>)}
   </div>
+
+  <h2>Entwicklung</h2>
+  {p.evolvesFrom && (
+    <p>Entwickelt sich aus <a href={href(`/pokemon/${slugify(p.evolvesFrom)}/`)}>{speciesName(p.evolvesFrom)}</a>.</p>
+  )}
+  {p.evolutions.length > 0 ? (
+    <ul>
+      {p.evolutions.map((evo: any) => (
+        <li>
+          <a href={href(`/pokemon/${slugify(evo.target)}/`)}>{speciesName(evo.target)}</a>
+          {" — "}{formatEvolutionCondition(evo.method, evo.param, itemName)}
+        </li>
+      ))}
+    </ul>
+  ) : (
+    !p.evolvesFrom && <p class="section-empty">Entwickelt sich nicht weiter.</p>
+  )}
 
   <h2>Attacken (durch Levelaufstieg)</h2>
   {sortedLevelMoves.length > 0 ? (
