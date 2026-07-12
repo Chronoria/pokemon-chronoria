@@ -570,8 +570,17 @@ Flags = MegaStone,Fling_80
 Description = Dieser Stein ermöglicht Meganie eine Mega-Entwicklung.
 #-------------------------------
 [FERALIGITEX]
-Name = Impergatornit
-NamePlural = Impergatornite
+Name = Impergatornit X
+NamePlural = Impergatornite X
+Pocket = 6
+Price = 10000
+BPPrice = 50
+Flags = MegaStone,Fling_80
+Description = Dieser Stein ermöglicht Impergator eine Mega-Entwicklung.
+#-------------------------------
+[FERALIGITEY]
+Name = Impergatornit Y
+NamePlural = Impergatornite Y
 Pocket = 6
 Price = 10000
 BPPrice = 50
