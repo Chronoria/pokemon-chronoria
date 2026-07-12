@@ -9640,7 +9640,7 @@ Moves = 1,HEALBELL,1,CONFUSION,10,FEINTATTACK,20,ZENHEADBUTT,30,NIGHTSHADE,40,AE
 [BONSLY,1]
 
 
-Name = Mobai
+FormName = Chrono
 
 
 FormName = Wüstenform
@@ -9688,7 +9688,7 @@ SpeciesSOS = ONIX
 [SUDOWOODO,1]
 
 
-Name = Mogelbaum
+FormName = Chrono
 
 
 FormName = Wüstenform
@@ -9730,7 +9730,7 @@ SpeciesSOS = ONIX
 [PHANTUMP,1]
 
 
-Name = Paragoni
+FormName = Chrono
 
 
 FormName = Traumform
@@ -9820,7 +9820,7 @@ RaidRanks = 1,2
 [TREVENANT,1]
 
 
-Name = Trombork
+FormName = Chrono
 
 
 FormName = Traumform
@@ -9943,7 +9943,7 @@ Pokedex = While this Pokémon usually lives in the sea, it can survive on land, 
 [DUSKULL,1]
 
 
-Name = Zwirrlicht
+FormName = Chrono
 
 
 FormName = Traumform
@@ -9976,7 +9976,7 @@ Pokedex = A glare from its single scarlet eye makes even burly grown-ups freeze 
 [DUSCLOPS,1]
 
 
-Name = Zwirrklop
+FormName = Chrono
 
 
 FormName = Traumform
@@ -10009,7 +10009,7 @@ Pokedex = It is thought that its body is hollow with only a spectral ball of fir
 [DUSKNOIR,1]
 
 
-Name = Zwirrfinst
+FormName = Chrono
 
 
 FormName = Traumform
@@ -10042,7 +10042,7 @@ Pokedex = The antenna on its head captures radio waves from the world of spirits
 [NOCTOWL,1]
 
 
-Name = Noctuh
+FormName = Chrono
 
 
 Types = ICE,FLYING
@@ -10105,7 +10105,7 @@ Habitat = Forest
 [HOOTHOOT,1]
 
 
-Name = Hoothoot
+FormName = Chrono
 
 
 Types = ICE,FLYING
