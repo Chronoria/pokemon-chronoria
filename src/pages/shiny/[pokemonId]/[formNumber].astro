@@ -1,0 +1,49 @@
+---
+import Layout from "../../../layouts/Layout.astro";
+import TypeBadge from "../../../components/TypeBadge.astro";
+import { pokemon, slugify, pokemonDexNumber } from "../../../lib/data";
+import { href } from "../../../lib/url";
+
+export function getStaticPaths() {
+  return pokemon.flatMap((p) =>
+    p.forms
+      .filter((f: any) => f.shinySprite)
+      .map((f: any) => ({
+        params: { pokemonId: slugify(p.id), formNumber: String(f.formNumber) },
+        props: { p, f },
+      }))
+  );
+}
+
+const { p, f } = Astro.props;
+const formLabel = f.formName?.text || `Form ${f.formNumber}`;
+---
+
+<Layout title={`${p.name} (${formLabel}, Shiny)`}>
+  <div class="detail-hero">
+    <p class="meta-note"><a href={href(`/shiny/${slugify(p.id)}/`)}>← {p.name} (Shiny)</a></p>
+    <h1><span class="dex-number">#{String(pokemonDexNumber.get(p.id)).padStart(3, "0")}</span> {p.name} <span class="meta-note">— {formLabel} · ✨ Shiny</span></h1>
+    <div class="sprite-pair">
+      <figure>
+        <div class="species-sprite-frame">
+          <img class="species-sprite" src={href(`/sprites-shiny/${f.shinySprite}`)} alt={`${p.name} (${formLabel}, Shiny)`} width="288" height="288" />
+        </div>
+        {f.femaleShinySprite && <figcaption>♂ Männlich</figcaption>}
+      </figure>
+      {f.femaleShinySprite && (
+        <figure>
+          <div class="species-sprite-frame">
+            <img class="species-sprite" src={href(`/sprites-shiny/${f.femaleShinySprite}`)} alt={`${p.name} (${formLabel}, Shiny, weiblich)`} width="288" height="288" />
+          </div>
+          <figcaption>♀ Weiblich</figcaption>
+        </figure>
+      )}
+    </div>
+    <div class="pill-list">
+      {f.types.map((t: string) => <TypeBadge type={t} />)}
+    </div>
+    <p class="meta-note">
+      <a href={href(`/pokemon/${slugify(p.id)}/${f.formNumber}/`)}>→ Normale Ansicht (Basiswerte, Attacken, Entwicklung …)</a>
+    </p>
+  </div>
+</Layout>

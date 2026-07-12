@@ -77,6 +77,9 @@ const locationsByPlace = Object.groupBy
     <div class="pill-list">
       {p.types.map((t: string) => <TypeBadge type={t} />)}
     </div>
+    {p.shinySprite && (
+      <p class="meta-note"><a href={href(`/shiny/${slugify(p.id)}/`)}>✨ Shiny-Version ansehen</a></p>
+    )}
   </div>
 
   <h2>Basiswerte</h2>

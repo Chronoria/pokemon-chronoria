@@ -47,6 +47,10 @@ export interface PokemonForm {
   sprite: string | null;
   /** filename in public/sprites/ for the "_female" gender-difference variant, or null if none exists */
   femaleSprite: string | null;
+  /** filename in public/sprites-shiny/, or null if no matching shiny form sprite exists */
+  shinySprite: string | null;
+  /** filename in public/sprites-shiny/ for the "_female" gender-difference variant, or null if none exists */
+  femaleShinySprite: string | null;
   /** item ids a wild Pokémon of this form may be found holding - 50%/5%/1% chance per tier (100% if all three are the same single item) */
   wildItemCommon: string[];
   wildItemUncommon: string[];
@@ -64,6 +68,10 @@ export interface Pokemon {
   sprite: string | null;
   /** filename in public/sprites/ for the "_female" gender-difference variant, or null if none exists */
   femaleSprite: string | null;
+  /** filename in public/sprites-shiny/, or null if no matching shiny sprite exists */
+  shinySprite: string | null;
+  /** filename in public/sprites-shiny/ for the "_female" gender-difference variant, or null if none exists */
+  femaleShinySprite: string | null;
   types: string[];
   baseStats: BaseStats;
   abilities: string[];

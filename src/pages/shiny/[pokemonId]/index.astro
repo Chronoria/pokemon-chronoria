@@ -1,0 +1,58 @@
+---
+import Layout from "../../../layouts/Layout.astro";
+import TypeBadge from "../../../components/TypeBadge.astro";
+import { pokemon, slugify, pokemonDexNumber } from "../../../lib/data";
+import { href } from "../../../lib/url";
+
+export function getStaticPaths() {
+  return pokemon
+    .filter((p) => p.shinySprite)
+    .map((p) => ({ params: { pokemonId: slugify(p.id) }, props: { p } }));
+}
+
+const { p } = Astro.props;
+const shinyForms = p.forms.filter((f: any) => f.shinySprite);
+---
+
+<Layout title={`${p.name} (Shiny)`}>
+  <div class="detail-hero">
+    <p class="meta-note"><a href={href("/shiny/")}>← Alle Shiny</a></p>
+    <h1><span class="dex-number">#{String(pokemonDexNumber.get(p.id)).padStart(3, "0")}</span> {p.name} <span class="meta-note">✨ Shiny</span></h1>
+    <div class="sprite-pair">
+      <figure>
+        <div class="species-sprite-frame">
+          <img class="species-sprite" src={href(`/sprites-shiny/${p.shinySprite}`)} alt={`${p.name} (Shiny)`} width="288" height="288" />
+        </div>
+        {p.femaleShinySprite && <figcaption>♂ Männlich</figcaption>}
+      </figure>
+      {p.femaleShinySprite && (
+        <figure>
+          <div class="species-sprite-frame">
+            <img class="species-sprite" src={href(`/sprites-shiny/${p.femaleShinySprite}`)} alt={`${p.name} (Shiny, weiblich)`} width="288" height="288" />
+          </div>
+          <figcaption>♀ Weiblich</figcaption>
+        </figure>
+      )}
+    </div>
+    <div class="pill-list">
+      {p.types.map((t: string) => <TypeBadge type={t} />)}
+    </div>
+    <p class="meta-note">
+      <a href={href(`/pokemon/${slugify(p.id)}/`)}>→ Normale Ansicht (Basiswerte, Attacken, Entwicklung …)</a>
+    </p>
+  </div>
+
+  {shinyForms.length > 0 && (
+    <>
+      <h2>Formen</h2>
+      <div class="card-grid">
+        {shinyForms.map((f: any) => (
+          <a class="card" href={href(`/shiny/${slugify(p.id)}/${f.formNumber}/`)}>
+            <img class="card-sprite" src={href(`/sprites-shiny/${f.shinySprite}`)} alt="" loading="lazy" width="64" height="64" />
+            <div class="card-name">{f.formName?.text || `Form ${f.formNumber}`}</div>
+          </a>
+        ))}
+      </div>
+    </>
+  )}
+</Layout>

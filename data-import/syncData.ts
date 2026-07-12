@@ -69,6 +69,7 @@ const deCount = copyTxtFiles(join(gameDir, "Text_deutsch_core"), join(outDir, "T
 const enCoreCount = copyTxtFiles(join(gameDir, "Text_english_core"), join(outDir, "Text_english_core"));
 const enGameCount = copyTxtFiles(join(gameDir, "Text_english_game"), join(outDir, "Text_english_game"));
 const spriteCount = copySprites(join(gameDir, "Graphics", "Pokemon", "Front"), join(publicDir, "sprites"));
+const shinySpriteCount = copySprites(join(gameDir, "Graphics", "Pokemon", "Front shiny"), join(publicDir, "sprites-shiny"));
 const itemIconCount = copySprites(join(gameDir, "Graphics", "Items"), join(publicDir, "item-icons"));
 const trainerSpriteCount = copySprites(join(gameDir, "Graphics", "Trainers"), join(publicDir, "trainers"));
 
@@ -78,5 +79,6 @@ console.log(`  Text_deutsch_core: ${deCount} Dateien`);
 console.log(`  Text_english_core: ${enCoreCount} Dateien`);
 console.log(`  Text_english_game: ${enGameCount} Dateien`);
 console.log(`  Sprites: ${spriteCount} Dateien`);
+console.log(`  Shiny-Sprites: ${shinySpriteCount} Dateien`);
 console.log(`  Item-Icons: ${itemIconCount} Dateien`);
 console.log(`  Trainer-Sprites: ${trainerSpriteCount} Dateien`);

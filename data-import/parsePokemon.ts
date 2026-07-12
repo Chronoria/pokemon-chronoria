@@ -7,6 +7,7 @@ import type { BaseStats, LevelMove, Evolution, Pokemon, PokemonForm } from "./da
 
 const SOURCE_DIR = join(import.meta.dirname, "source", "PBS");
 const SPRITES_DIR = join(import.meta.dirname, "..", "public", "sprites");
+const SHINY_SPRITES_DIR = join(import.meta.dirname, "..", "public", "sprites-shiny");
 
 function load(file: string): string {
   return readFileSync(join(SOURCE_DIR, file), "utf-8");
@@ -15,11 +16,12 @@ function load(file: string): string {
 /** Sprite files are named exactly like the PBS internal id (case-sensitive, e.g.
  *  "NIDORANfE.png"), with "_1"/"_2" suffixes for alternate forms. Build a lookup once so we
  *  don't re-scan the directory per species, and so we pick up whichever exact
- *  casing/extension (.png vs .PNG) the file actually has on disk. */
-function loadSpriteIndex(): Map<string, string> {
+ *  casing/extension (.png vs .PNG) the file actually has on disk. Shared by the normal and
+ *  shiny sprite folders, which use the identical naming convention. */
+function loadSpriteIndex(dir: string): Map<string, string> {
   const index = new Map<string, string>();
-  if (!existsSync(SPRITES_DIR)) return index;
-  for (const name of readdirSync(SPRITES_DIR)) {
+  if (!existsSync(dir)) return index;
+  for (const name of readdirSync(dir)) {
     const withoutExt = name.replace(/\.png$/i, "");
     index.set(withoutExt, name);
   }
@@ -50,7 +52,12 @@ function parseEvolutions(value: string | undefined): Evolution[] {
   return evolutions;
 }
 
-function blockToPokemon(block: PbsBlock, ctx: TranslationContext, sprites: Map<string, string>): Pokemon {
+function blockToPokemon(
+  block: PbsBlock,
+  ctx: TranslationContext,
+  sprites: Map<string, string>,
+  shinySprites: Map<string, string>
+): Pokemon {
   const r = blockToRecord(block);
   const id = block.headerParts[0];
   const resolvedName = resolveInlineName(ctx.speciesName, id, r.Name ?? id);
@@ -60,6 +67,8 @@ function blockToPokemon(block: PbsBlock, ctx: TranslationContext, sprites: Map<s
     nameFallback: resolvedName.fallback,
     sprite: sprites.get(id) ?? null,
     femaleSprite: sprites.get(`${id}_female`) ?? null,
+    shinySprite: shinySprites.get(id) ?? null,
+    femaleShinySprite: shinySprites.get(`${id}_female`) ?? null,
     types: splitList(r.Types),
     baseStats: parseBaseStats(r.BaseStats),
     abilities: splitList(r.Abilities),
@@ -95,7 +104,13 @@ function blockToPokemon(block: PbsBlock, ctx: TranslationContext, sprites: Map<s
  * field that's simply absent from the block must inherit the base species' value, not default
  * to empty/zero - otherwise unchanged forms wrongly show 0/0/0/0/0/0 stats or no type badge.
  */
-function blockToForm(block: PbsBlock, ctx: TranslationContext, sprites: Map<string, string>, base: Pokemon): PokemonForm {
+function blockToForm(
+  block: PbsBlock,
+  ctx: TranslationContext,
+  sprites: Map<string, string>,
+  shinySprites: Map<string, string>,
+  base: Pokemon
+): PokemonForm {
   const r = blockToRecord(block);
   const [speciesId, formNumberRaw] = block.headerParts;
   const formNumber = Number(formNumberRaw ?? 0);
@@ -124,6 +139,8 @@ function blockToForm(block: PbsBlock, ctx: TranslationContext, sprites: Map<stri
     unmegaForm: r.UnmegaForm !== undefined ? Number(r.UnmegaForm) : 0,
     sprite: sprites.get(`${speciesId}_${formNumber}`) ?? null,
     femaleSprite: sprites.get(`${speciesId}_${formNumber}_female`) ?? null,
+    shinySprite: shinySprites.get(`${speciesId}_${formNumber}`) ?? null,
+    femaleShinySprite: shinySprites.get(`${speciesId}_${formNumber}_female`) ?? null,
     foundIn: [],
   };
 }
@@ -190,7 +207,8 @@ function isUnnamedDuplicate(form: PokemonForm, base: Pokemon): boolean {
 const FORMS_WITHOUT_ART = new Set(["SINISTEA:1", "POLTEAGEIST:1", "POLTCHAGEIST:1", "SINISTCHA:1"]);
 
 export function parsePokemon(ctx: TranslationContext): Pokemon[] {
-  const sprites = loadSpriteIndex();
+  const sprites = loadSpriteIndex(SPRITES_DIR);
+  const shinySprites = loadSpriteIndex(SHINY_SPRITES_DIR);
 
   const baseBlocks = [
     ...parsePbsBlocks(load("pokemon.txt")),
@@ -198,7 +216,7 @@ export function parsePokemon(ctx: TranslationContext): Pokemon[] {
   ];
   const pokemon = new Map<string, Pokemon>();
   for (const block of baseBlocks) {
-    const p = blockToPokemon(block, ctx, sprites);
+    const p = blockToPokemon(block, ctx, sprites, shinySprites);
     if (p.id === "MISSINGNO") continue; // glitch species, not a real Pokémon - keep it off the wiki
     if (pokemon.has(p.id)) {
       console.warn(`[Pokémon] Doppelter Eintrag für ${p.id}, überschreibe.`);
@@ -217,7 +235,7 @@ export function parsePokemon(ctx: TranslationContext): Pokemon[] {
       console.warn(`[Pokémon] Form für unbekannte Spezies ${speciesId} übersprungen.`);
       continue;
     }
-    const form = blockToForm(block, ctx, sprites, base);
+    const form = blockToForm(block, ctx, sprites, shinySprites, base);
     if (isUnnamedDuplicate(form, base)) continue;
     if (FORMS_WITHOUT_ART.has(`${speciesId}:${form.formNumber}`)) continue;
     base.forms.push(form);
