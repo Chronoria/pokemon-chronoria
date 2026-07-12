@@ -9658,9 +9658,6 @@ Moves = 1,HEALBELL,1,CONFUSION,10,FEINTATTACK,20,ZENHEADBUTT,30,NIGHTSHADE,40,AE
 FormName = Chrono
 
 
-FormName = Wüstenform
-
-
 Types = GROUND
 
 
@@ -9704,9 +9701,6 @@ SpeciesSOS = ONIX
 
 
 FormName = Chrono
-
-
-FormName = Wüstenform
 
 
 Types = GROUND
