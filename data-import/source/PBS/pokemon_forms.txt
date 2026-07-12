@@ -9409,7 +9409,7 @@ Generation = 8
 [SNORLAX,1]
 
 
-Name = Relaxo
+FormName = Chrono
 
 
 Types = ICE
