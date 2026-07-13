@@ -41,7 +41,7 @@ const pockets = [...new Set(items.map((i) => i.pocket).filter((p): p is number =
         {i.icon && <img class="card-sprite" src={href(`/item-icons/${i.icon}`)} alt="" loading="lazy" width="48" height="48" />}
         <div class="card-name">{i.move ? (moveById.get(i.move)?.name ?? i.name) : i.name}</div>
         {i.move && <div class="meta-note">{i.name}</div>}
-        <div class="meta-note">{i.price !== null ? `${i.price} ₽` : "nicht käuflich"}</div>
+        {i.pocket !== 8 && <div class="meta-note">{i.price !== null ? `${i.price} ₽` : "nicht käuflich"}</div>}
       </a>
     ))}
   </div>

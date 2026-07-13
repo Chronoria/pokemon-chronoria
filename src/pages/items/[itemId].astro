@@ -20,7 +20,7 @@ const displayName = i.move ? (moveById.get(i.move)?.name ?? i.name) : i.name;
 
   <table>
     {i.move && <tr><th>Name</th><td>{i.name}</td></tr>}
-    <tr><th>Preis</th><td>{i.price !== null ? `${i.price} ₽` : "nicht käuflich"}</td></tr>
+    {i.pocket !== 8 && <tr><th>Preis</th><td>{i.price !== null ? `${i.price} ₽` : "nicht käuflich"}</td></tr>}
     <tr><th>Tasche</th><td>{pocketName(i.pocket)}</td></tr>
   </table>
 </Layout>

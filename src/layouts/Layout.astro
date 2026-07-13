@@ -38,13 +38,19 @@ const currentPath = Astro.url.pathname;
     <header class="site-header">
       <div class="page">
         <a class="site-title" href={href("/")}>Chronoria-Wiki</a>
-        <nav class="site-nav" aria-label="Hauptnavigation">
-          {nav.map((item) => (
-            <a href={item.href} aria-current={(currentPath.startsWith(item.href) && item.href !== href("/")) || currentPath === item.href ? "page" : undefined}>
-              {item.label}
-            </a>
-          ))}
-        </nav>
+        <div class="nav-menu">
+          <button type="button" class="nav-toggle" id="nav-toggle" aria-expanded="false" aria-controls="nav-dropdown">
+            Menü
+            <svg width="10" height="6" viewBox="0 0 10 6" fill="none" aria-hidden="true"><path d="M1 1l4 4 4-4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          </button>
+          <nav class="site-nav nav-dropdown" id="nav-dropdown" aria-label="Hauptnavigation" hidden>
+            {nav.map((item) => (
+              <a href={item.href} aria-current={(currentPath.startsWith(item.href) && item.href !== href("/")) || currentPath === item.href ? "page" : undefined}>
+                {item.label}
+              </a>
+            ))}
+          </nav>
+        </div>
       </div>
     </header>
     <main class="page">
@@ -110,6 +116,37 @@ const currentPath = Astro.url.pathname;
           requestAnimationFrame(onScroll);
           ticking = true;
         }
+      });
+    </script>
+
+    <script>
+      // Nav dropdown: toggle on button click, close on outside click or Escape.
+      const navToggle = document.getElementById("nav-toggle")!;
+      const navDropdown = document.getElementById("nav-dropdown")!;
+
+      function closeNav() {
+        navDropdown.hidden = true;
+        navToggle.setAttribute("aria-expanded", "false");
+      }
+
+      navToggle.addEventListener("click", () => {
+        const isOpen = !navDropdown.hidden;
+        if (isOpen) {
+          closeNav();
+        } else {
+          navDropdown.hidden = false;
+          navToggle.setAttribute("aria-expanded", "true");
+        }
+      });
+
+      document.addEventListener("click", (e) => {
+        if (navDropdown.hidden) return;
+        const target = e.target as Node;
+        if (!navDropdown.contains(target) && !navToggle.contains(target)) closeNav();
+      });
+
+      document.addEventListener("keydown", (e) => {
+        if (e.key === "Escape" && !navDropdown.hidden) closeNav();
       });
     </script>
   </body>
