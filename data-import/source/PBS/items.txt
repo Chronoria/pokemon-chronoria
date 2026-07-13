@@ -8013,14 +8013,6 @@ Price = 0
 SellPrice = 0
 Description = Eine Dauerkarte für den Lift zwischen Solhaven und Route 6.
 #-------------------------------
-[LIFTTICKET]
-Name = Lift-Ticket
-NamePlural = Lift-Tickets
-Pocket = 8
-Price = 0
-SellPrice = 0
-Description = Eine Dauerkarte für den Lift zwischen Solhaven und Route 6.
-#-------------------------------
 [KEYCARD]
 Name = Schlüsselkarte
 NamePlural = Schlüsselkarten
