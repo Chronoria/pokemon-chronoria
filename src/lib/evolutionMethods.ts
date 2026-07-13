@@ -76,6 +76,12 @@ const LOCATION_FLAG_LABELS: Record<string, string> = {
 // startsWith("Item") shortcut below wouldn't catch them) and isn't otherwise a level number.
 const ITEM_PARAM_METHODS = new Set(["HoldItem", "NightHoldItem", "DayHoldItem", "LevelDefeatItsKindWithItem", "CollectItems"]);
 
+/** True when an evolution's param is an item ID, so callers can render it as a link to the
+ *  item's page instead of plain text (mirrors the same check inside formatEvolutionCondition). */
+export function isItemEvolutionMethod(method: string): boolean {
+  return method.startsWith("Item") || method === "TradeItem" || ITEM_PARAM_METHODS.has(method);
+}
+
 export function formatEvolutionCondition(
   method: string,
   param: string,

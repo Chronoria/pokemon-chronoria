@@ -4,7 +4,7 @@ import TypeBadge from "../../../components/TypeBadge.astro";
 import StatBar from "../../../components/StatBar.astro";
 import { pokemon, pokemonById, moveById, abilityById, itemById, slugify, pokemonDexNumber, typeNameById } from "../../../lib/data";
 import { encounterMethodLabel } from "../../../lib/encounterMethods";
-import { formatEvolutionCondition, evolutionMethodLabel } from "../../../lib/evolutionMethods";
+import { formatEvolutionCondition, evolutionMethodLabel, isItemEvolutionMethod } from "../../../lib/evolutionMethods";
 import { eggGroupLabel } from "../../../lib/eggGroups";
 import { wildItemRows } from "../../../lib/wildItems";
 import { href } from "../../../lib/url";
@@ -155,6 +155,8 @@ const locationsByPlace = Object.groupBy
             {" — "}
             {evo.method === "HasInParty" ? (
               <>{evolutionMethodLabel(evo.method)}: <a href={href(`/pokemon/${slugify(evo.param)}/`)}>{speciesName(evo.param)}</a></>
+            ) : isItemEvolutionMethod(evo.method) && evo.param ? (
+              <>{evolutionMethodLabel(evo.method)}: <a href={href(`/items/${slugify(evo.param)}/`)}>{itemName(evo.param) ?? evo.param}</a></>
             ) : (
               formatEvolutionCondition(evo.method, evo.param, itemName, moveName, typeName, speciesName)
             )}
