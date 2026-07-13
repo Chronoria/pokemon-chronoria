@@ -2623,15 +2623,6 @@ BPPrice = 50
 Flags = MegaStone,Fling_80
 Description = Dieser Stein ermöglicht Glurak eine Mega-Entwicklung.
 #-------------------------------
-[MEGASTONE]
-Name = Megastein
-NamePlural = Megasteine
-Pocket = 6
-Price = 10000
-BPPrice = 50
-Flags = MegaStone,Fling_80
-Description = One of a variety of mysterious Mega Stones. Have Pokémon hold it, and it will be able to Mega Evolve.
-#-------------------------------
 [BLASTOISINITEX]
 Name = Turtoknit X
 NamePlural = Turtoknite X
