@@ -15,7 +15,10 @@ import { parseEncounters } from "./parseEncounters.ts";
 import { parseTypes } from "./parseTypes.ts";
 import { parseMedals } from "./parseMedals.ts";
 import { parseMapLocations } from "./parseMapLocations.ts";
-import type { EncounterRef, Pokemon } from "./dataModel.ts";
+import { exportItemListXlsx } from "./exportItemList.ts";
+import { exportPokemonListXlsx } from "./exportPokemonList.ts";
+import { resolveEncounterTarget } from "./resolveEncounterTarget.ts";
+import type { EncounterRef } from "./dataModel.ts";
 
 const OUT_DIR = join(import.meta.dirname, "..", "src", "data");
 
@@ -24,26 +27,7 @@ function writeJson(name: string, data: unknown) {
   writeFileSync(join(OUT_DIR, `${name}.json`), JSON.stringify(data));
 }
 
-/** Encounter species entries sometimes carry a form suffix (e.g. "ZIGZAGOON_1") - encounters.txt
- *  deliberately distinguishes forms (a form can be rarer/only appear at certain times), so this
- *  resolves to the exact form rather than collapsing everything onto the base species. Falls
- *  back to the base species if the suffix doesn't match a real form (or there's no suffix). */
-function resolveEncounterTarget(
-  rawId: string,
-  pokemonById: Map<string, Pokemon>
-): { speciesId: string; formNumber: number | null } | null {
-  if (pokemonById.has(rawId)) return { speciesId: rawId, formNumber: null };
-  const match = rawId.match(/^(.+)_(\d+)$/);
-  if (!match) return null;
-  const [, base, formNumberRaw] = match;
-  const species = pokemonById.get(base);
-  if (!species) return null;
-  const formNumber = Number(formNumberRaw);
-  const formExists = species.forms.some((f) => f.formNumber === formNumber);
-  return { speciesId: base, formNumber: formExists ? formNumber : null };
-}
-
-function main() {
+async function main() {
   console.log("Lade Übersetzungen...");
   const ctx = loadTranslationContext();
 
@@ -162,8 +146,14 @@ function main() {
     },
   });
 
+  const xlsxResult = await exportItemListXlsx(items);
+  console.log(`Item-Uebersicht.xlsx aktualisiert: ${xlsxResult.available} erhältlich, ${xlsxResult.unavailable} noch nicht platziert.`);
+
+  const pokemonXlsxResult = await exportPokemonListXlsx(pokemon);
+  console.log(`Pokemon-Uebersicht.xlsx aktualisiert: ${pokemonXlsxResult.used} verwendet, ${pokemonXlsxResult.unused} noch nicht verwendet.`);
+
   console.log(`Fertig: ${pokemon.length} Pokémon, ${moves.length} Attacken, ${abilities.length} Fähigkeiten, ` +
     `${items.length} Items, ${trainers.length} Trainer, ${encounters.length} Orte, ${medals.length} Medaillen.`);
 }
 
-main();
+await main();

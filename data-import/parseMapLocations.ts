@@ -29,7 +29,7 @@ const MCR_RE = /pbMCR\("(\w+)"/; // rare "cinematic receive" key items
 // *within* the 001-075 demo block (ids 22, 32, 33, 42, 43, 48), and demo location names like
 // "Route 3"/"Route 4" are reused verbatim by real, later maps elsewhere (e.g. the real Route 3
 // is map 156) - both a range and a name filter would misclassify those.
-const EXCLUDED_MAP_IDS = new Set<number>([
+export const EXCLUDED_MAP_IDS = new Set<number>([
   // Default Essentials demo region (map 022, 032, 033, 042, 043, 048 are real Velmora maps
   // interspersed among these ids and are intentionally NOT included here).
   ...Array.from({ length: 75 }, (_, i) => i + 1).filter((id) => ![22, 32, 33, 42, 43, 48].includes(id)),
