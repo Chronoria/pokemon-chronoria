@@ -10,7 +10,7 @@ TotalPP = 10
 Target = NearOther
 FunctionCode = None
 Flags = Contact,CanProtect,CanMirrorMove
-Description = Using its tough and impressive horn, the user rams into the target with no letup.
+Description = Die Attacke schadet dem Gegner ohne zusätzliche Effekte.
 #-------------------------------
 [ATTACKORDER]
 Name = Schlagbefehl
@@ -22,7 +22,7 @@ TotalPP = 15
 Target = NearOther
 FunctionCode = None
 Flags = CanProtect,CanMirrorMove,HighCriticalHitRate
-Description = The user calls out its underlings to pummel the target. Critical hits land more easily.
+Description = Schädigt das Ziel und besitzt eine erhöhte Volltrefferquote.
 #-------------------------------
 [BUGBUZZ]
 Name = Käfergebrumm
@@ -35,7 +35,7 @@ Target = NearOther
 FunctionCode = LowerTargetSpDef1
 Flags = CanProtect,CanMirrorMove,Sound
 EffectChance = 10
-Description = The user vibrates its wings to generate a damaging sound wave. It may also lower the target's Sp. Def stat.
+Description = Schädigt das Ziel und senkt mit einer Chance von 10 % dessen Spezial-Vert.
 #-------------------------------
 [FIRSTIMPRESSION]
 Name = Überrumpler
@@ -48,7 +48,7 @@ Target = NearOther
 Priority = 2
 FunctionCode = FailsIfNotUserFirstTurn
 Flags = Contact,CanProtect,CanMirrorMove
-Description = Although this move has great power, it only works the first turn the user is in battle.
+Description = Richtet Schaden an und hat eine erhöhte Priorität von +2 (nur in der ersten Runde).
 #-------------------------------
 [POLLENPUFF]
 Name = Pollenknödel
@@ -60,7 +60,7 @@ TotalPP = 15
 Target = NearOther
 FunctionCode = HealAllyOrDamageFoe
 Flags = CanProtect,CanMirrorMove,Bomb
-Description = Fires an exploding pollen puff at enemies, or a HP-restoring one at allies.
+Description = Schadet dem Gegner und heilt einen Mitstreiter.
 #-------------------------------
 [LEECHLIFE]
 Name = Blutsauger
@@ -72,7 +72,7 @@ TotalPP = 10
 Target = NearOther
 FunctionCode = HealUserByHalfOfDamageDone
 Flags = Contact,CanProtect,CanMirrorMove
-Description = The user drains the target's blood. The user's HP is restored by half the damage taken by the target.
+Description = Richtet Schadena n und füllt die KP des Anwenders um 50 % des verursachten Schadens auf.
 #-------------------------------
 [LUNGE]
 Name = Anfallen
@@ -85,7 +85,7 @@ Target = NearOther
 FunctionCode = LowerTargetAttack1
 Flags = Contact,CanProtect,CanMirrorMove
 EffectChance = 100
-Description = The user makes a lunge at the target, attacking with full force. This lowers the target's Attack stat.
+Description = Richtet Schaden an und senkt den Angriff des Zieles um eine Stufe.
 #-------------------------------
 [XSCISSOR]
 Name = Kreuzschere
@@ -97,7 +97,7 @@ TotalPP = 15
 Target = NearOther
 FunctionCode = None
 Flags = Contact,CanProtect,CanMirrorMove
-Description = The user slashes at the foe by crossing its scythes or claws as if they were a pair of scissors.
+Description = Kreuzschere schädigt das Ziel ohne weitere Effekte.
 #-------------------------------
 [SIGNALBEAM]
 Name = Ampelleuchte
@@ -110,7 +110,7 @@ Target = NearOther
 FunctionCode = ConfuseTarget
 Flags = CanProtect,CanMirrorMove
 EffectChance = 10
-Description = The user attacks with a sinister beam of light. It may also confuse the target.
+Description = Fügt Schaden zu und verwirrt den Gegner mit einer Wahrscheinlichkeit von 10 %.
 #-------------------------------
 [SKITTERSMACK]
 Name = Krabbelkracher
@@ -123,7 +123,7 @@ Target = NearOther
 FunctionCode = LowerTargetSpAtk1
 Flags = Contact,CanProtect,CanMirrorMove
 EffectChance = 100
-Description = The user skitters behind the target to attack. This also lowers the target's Sp. Atk stat.
+Description = Diese Attacke fügt Schaden zu und senkt den Spezial-Angriff des Ziels um eine Stufe.
 #-------------------------------
 [UTURN]
 Name = Kehrtwende
@@ -135,7 +135,7 @@ TotalPP = 20
 Target = NearOther
 FunctionCode = SwitchOutUserDamagingMove
 Flags = Contact,CanProtect,CanMirrorMove
-Description = After making its attack, the user rushes back to switch places with a party Pokémon in waiting.
+Description = Kehrtwende fügt Schaden zu und wechselt danach den Anwender aus.
 #-------------------------------
 [STEAMROLLER]
 Name = Quetschwalze
@@ -148,7 +148,7 @@ Target = NearOther
 FunctionCode = FlinchTarget
 Flags = Contact,CanProtect,CanMirrorMove,TramplesMinimize
 EffectChance = 30
-Description = The user crushes its foes by rolling over them. This attack may make the target flinch.
+Description = Quetschwalze schädigt das Ziel und lässt es mit einer Chance von 30% zurückschrecken.
 #-------------------------------
 [BUGBITE]
 Name = Käferbiss
@@ -160,7 +160,7 @@ TotalPP = 20
 Target = NearOther
 FunctionCode = UserConsumeTargetBerry
 Flags = Contact,CanProtect,CanMirrorMove
-Description = The user bites the target. If the target is holding a Berry, the user eats it and gains its effect.
+Description = Richtet Schaden an und isst die Beere des Gegners, falls es eine hält.
 #-------------------------------
 [SILVERWIND]
 Name = Silberhauch
@@ -173,7 +173,7 @@ Target = NearOther
 FunctionCode = RaiseUserMainStats1
 Flags = CanProtect,CanMirrorMove
 EffectChance = 10
-Description = The foe is attacked with powdery scales blown by wind. It may also raise all the user's stats.
+Description = Richtet Schaden an und hat eine 10%-Chance, alle Statuswerte zu erhöhen.
 #-------------------------------
 [FELLSTINGER]
 Name = Stachelfinale
@@ -185,7 +185,7 @@ TotalPP = 25
 Target = NearOther
 FunctionCode = RaiseUserAttack3IfTargetFaints
 Flags = Contact,CanProtect,CanMirrorMove
-Description = When the user knocks out a target with this move, the user's Attack stat rises drastically.
+Description = Schaltest du ein Pokémon mit dieser Attacke aus, steigt der Angriff um 3 Stufen.
 #-------------------------------
 [STRUGGLEBUG]
 Name = Käfertrutz
@@ -198,7 +198,7 @@ Target = AllNearFoes
 FunctionCode = LowerTargetSpAtk1
 Flags = CanProtect,CanMirrorMove
 EffectChance = 100
-Description = While resisting, the user attacks the opposing Pokémon. The targets' Sp. Atk stat is reduced.
+Description = Schädigt das Ziel und senkt dessen Spezial-Angriff um eine Stufe.
 #-------------------------------
 [FURYCUTTER]
 Name = Zornklinge
@@ -210,7 +210,7 @@ TotalPP = 20
 Target = NearOther
 FunctionCode = PowerHigherWithConsecutiveUse
 Flags = Contact,CanProtect,CanMirrorMove
-Description = The target is slashed with scythes or claws. Its power increases if it hits in succession.
+Description = Die Stärke dieser Attacke verdoppelt sich nach jeder erfolgreichen Anwendung.
 #-------------------------------
 [PINMISSILE]
 Name = Nadelrakete
@@ -222,7 +222,7 @@ TotalPP = 20
 Target = NearOther
 FunctionCode = HitTwoToFiveTimes
 Flags = CanProtect,CanMirrorMove
-Description = Sharp spikes are shot at the target in rapid succession. They hit two to five times in a row.
+Description = Die Attacke fügt 2 bis 5 mal hintereinander Schaden zu.
 #-------------------------------
 [TWINEEDLE]
 Name = Duonadel
@@ -235,7 +235,7 @@ Target = NearOther
 FunctionCode = HitTwoTimesPoisonTarget
 Flags = CanProtect,CanMirrorMove
 EffectChance = 20
-Description = The foe is stabbed twice by a pair of stingers. It may also poison the target.
+Description = Die Attacke fügt zweimal Schaden zu und vergiftet das Ziel mit einer 20%-Chance.
 #-------------------------------
 [INFESTATION]
 Name = Plage
@@ -247,7 +247,7 @@ TotalPP = 20
 Target = NearOther
 FunctionCode = BindTarget
 Flags = Contact,CanProtect,CanMirrorMove
-Description = The target is infested and unable to flee for four to five turns.
+Description = Plage fügt dem Ziel Schaden zu und zieht ihm 4-5 Runden lang in jeder Runde 1/8 seiner LP ab.
 #-------------------------------
 [DEFENDORDER]
 Name = Blockbefehl
@@ -257,7 +257,7 @@ Accuracy = 0
 TotalPP = 10
 Target = User
 FunctionCode = RaiseUserDefSpDef1
-Description = The user calls out its underlings to shield its body, raising its Defense and Sp. Def stats.
+Description = Erhöht die Verteidigung und Spezial-Verteidigung des Anwenders um eine Stufe. 
 #-------------------------------
 [HEALORDER]
 Name = Heilbefehl
@@ -267,7 +267,7 @@ Accuracy = 0
 TotalPP = 10
 Target = User
 FunctionCode = HealUserHalfOfTotalHP
-Description = The user calls out its underlings to heal it. The user regains up to half of its max HP.
+Description = Heilbefehl heilt 50 % der maximalen LP des Anwenders.
 #-------------------------------
 [POWDER]
 Name = Pulverschleuder
@@ -278,7 +278,7 @@ TotalPP = 20
 Target = NearOther
 FunctionCode = TargetNextFireMoveDamagesTarget
 Flags = CanProtect,CanMirrorMove,Powder
-Description = The target is covered in a powder that explodes and damages it if it uses a Fire-type move.
+Description = Setzt der Gegner in der selben Runde eine Feuer-Attacke ein, schlägt diese fehl.
 #-------------------------------
 [QUIVERDANCE]
 Name = Falterreigen
@@ -289,7 +289,7 @@ TotalPP = 20
 Target = User
 FunctionCode = RaiseUserSpAtkSpDefSpd1
 Flags = Dance
-Description = The user performs a beautiful dance. It boosts the user's Sp. Atk, Sp. Def, and Speed stats.
+Description = Der Sp. Angriff, die Sp. Verteidigung und die Initiative des Anwenders werden um eine Stufe erhöht.
 #-------------------------------
 [RAGEPOWDER]
 Name = Wutpulver
@@ -301,7 +301,7 @@ Target = User
 Priority = 2
 FunctionCode = RedirectAllMovesToUser
 Flags = Powder
-Description = The user scatters irritating powder to draw attention to itself. Opponents aim only at the user.
+Description = Gegner haben nur noch dieses Pokémon als Ziel (Mehrfachkämpfe).
 #-------------------------------
 [SPIDERWEB]
 Name = Spinnennetz
@@ -312,7 +312,7 @@ TotalPP = 10
 Target = NearOther
 FunctionCode = TrapTargetInBattle
 Flags = CanMirrorMove
-Description = The user ensnares the target with thin, gooey silk so it can't flee from battle.
+Description = Spinnennetz verhindert den Austausch des Ziels.
 #-------------------------------
 [STICKYWEB]
 Name = Klebenetz
@@ -322,7 +322,7 @@ Accuracy = 0
 TotalPP = 20
 Target = FoeSide
 FunctionCode = AddStickyWebToFoeSide
-Description = Weaves a sticky net around the opposing team, which lowers their Speed stats upon switching in.
+Description = Klebenetz senkt die Initiative jedes vom Gegner eingewechselten Pokémon um eine Stufe.
 #-------------------------------
 [STRINGSHOT]
 Name = Fadenschuss
@@ -333,7 +333,7 @@ TotalPP = 40
 Target = AllNearFoes
 FunctionCode = LowerTargetSpeed2
 Flags = CanProtect,CanMirrorMove
-Description = The foe is bound with silk blown from the user's mouth. This silk reduces the target's Speed.
+Description = Senkt die Initiative der Gegner um 2 Stufen.
 #-------------------------------
 [TAILGLOW]
 Name = Schweifglanz
