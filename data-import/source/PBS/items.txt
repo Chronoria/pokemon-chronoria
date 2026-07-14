@@ -3909,35 +3909,6 @@ FieldUse = OnPokemon
 Flags = Fling_30
 Description = A candy that is packed with energy. It raises the level of a single Pokémon by one.
 #-------------------------------
-[MASTERBALL]
-Name = Meisterball
-NamePlural = Meisterbälle
-Pocket = 3
-Price = 0
-BattleUse = OnFoe
-Flags = PokeBall
-Description = The best Ball with the ultimate level of performance. It will catch any wild Pokémon without fail.
-#-------------------------------
-[ULTRABALL]
-Name = Hyperball
-NamePlural = Hyperbälle
-Pocket = 3
-Price = 800
-SellPrice = 200
-BattleUse = OnFoe
-Flags = PokeBall
-Description = An ultra-performance Ball that provides a higher Pokémon catch rate than a Great Ball.
-#-------------------------------
-[GREATBALL]
-Name = Superball
-NamePlural = Superbälle
-Pocket = 3
-Price = 600
-SellPrice = 150
-BattleUse = OnFoe
-Flags = PokeBall
-Description = A good, high-performance Ball that provides a higher Pokémon catch rate than a standard Poké Ball.
-#-------------------------------
 [SHADOWBALL]
 Name = Nullball
 NamePlural = Nullbälle
@@ -3946,7 +3917,7 @@ Price = 0
 SellPrice = 0
 BattleUse = OnFoe
 Flags = PokeBall
-Description = A good, high-performance Ball that provides a higher Pokémon catch rate than a standard Poké Ball.
+Description = Ein eigenartiger Ball, der scheinbar von Team 0 genutzt wird.
 #-------------------------------
 [POKEBALL]
 Name = Pokéball
@@ -3956,7 +3927,36 @@ Price = 200
 SellPrice = 50
 BattleUse = OnFoe
 Flags = PokeBall
-Description = A device for catching wild Pokémon. It is thrown like a ball at the target. It is designed as a capsule system.
+Description = Der Standard-Ball um Pokémon zu fangen. Geringe Fangrate.
+#-------------------------------
+[GREATBALL]
+Name = Superball
+NamePlural = Superbälle
+Pocket = 3
+Price = 600
+SellPrice = 150
+BattleUse = OnFoe
+Flags = PokeBall
+Description = Etwas besser als der normale Pokéball.
+#-------------------------------
+[ULTRABALL]
+Name = Hyperball
+NamePlural = Hyperbälle
+Pocket = 3
+Price = 800
+SellPrice = 200
+BattleUse = OnFoe
+Flags = PokeBall
+Description = Deutlich besser und effektiver als ein normaler Pokéball.
+#-------------------------------
+[MASTERBALL]
+Name = Meisterball
+NamePlural = Meisterbälle
+Pocket = 3
+Price = 0
+BattleUse = OnFoe
+Flags = PokeBall
+Description = Der beste Ball mit ultimativer Performance. Fanggarantie!
 #-------------------------------
 [SAFARIBALL]
 Name = Safariball
@@ -3965,7 +3965,7 @@ Pocket = 3
 Price = 0
 BattleUse = OnFoe
 Flags = PokeBall
-Description = A special Poké Ball that is used only in the Safari Zone. It is decorated in a camouflage pattern.
+Description = Auschließlich nutzbar in der Safari-Zone
 #-------------------------------
 [SPORTBALL]
 Name = Prüfungsball
@@ -3974,7 +3974,7 @@ Pocket = 3
 Price = 300
 BattleUse = OnFoe
 Flags = PokeBall
-Description = A special Poké Ball for the Bug-Catching Contest.
+Description = Ein besonderer Ball für den Käfersammler-Wettbewerb.
 #-------------------------------
 [LOCKBALL]
 Name = Sperrball
@@ -4087,7 +4087,7 @@ Price = 1000
 SellPrice = 250
 BattleUse = OnFoe
 Flags = PokeBall
-Description = A somewhat different Poké Ball that works especially well on Pokémon that live underwater.
+Description = Ein spezieller Ball, der auch unterwasser eingesetzt werden kann.
 #-------------------------------
 [NESTBALL]
 Name = Nestball
@@ -4097,7 +4097,7 @@ Price = 1000
 SellPrice = 250
 BattleUse = OnFoe
 Flags = PokeBall
-Description = A somewhat different Poké Ball that works especially well on weaker Pokémon in the wild.
+Description = Je niedriger das Level, desto Höher die Fangrate (Lvl. >30 = Pokéball).
 #-------------------------------
 [REPEATBALL]
 Name = Wiederball
@@ -4107,7 +4107,7 @@ Price = 1000
 SellPrice = 250
 BattleUse = OnFoe
 Flags = PokeBall
-Description = A somewhat different Poké Ball that works especially well on Pokémon species that were previously caught.
+Description = Damit lassen sich leichter Pokémon fangen, die du bereits besitzt.
 #-------------------------------
 [TIMERBALL]
 Name = Timerball
@@ -4117,7 +4117,7 @@ Price = 1000
 SellPrice = 250
 BattleUse = OnFoe
 Flags = PokeBall
-Description = A somewhat different Ball that becomes progressively better the more turns there are in a battle.
+Description = Je mehr Runden der Kampf andauert, desto besser dieser Ball.
 #-------------------------------
 [LUXURYBALL]
 Name = Luxusball
@@ -4127,7 +4127,7 @@ Price = 3000
 SellPrice = 750
 BattleUse = OnFoe
 Flags = PokeBall
-Description = A comfortable Poké Ball that makes a caught wild Pokémon quickly grow friendly.
+Description = Das Pokémon in diesem Ball erhält doppelt so viele Freundschaftspunkte, wie üblich.
 #-------------------------------
 [PREMIERBALL]
 Name = Premierball
@@ -4137,7 +4137,7 @@ Price = 200
 SellPrice = 5
 BattleUse = OnFoe
 Flags = PokeBall
-Description = A somewhat rare Poké Ball that has been specially made to commemorate an event of some sort.
+Description = Ein eher seltener Ball, der als Reminiszenz an irgendein Ereignis hergestellt wurde.
 #-------------------------------
 [DUSKBALL]
 Name = Düsterball
@@ -4147,7 +4147,7 @@ Price = 1000
 SellPrice = 250
 BattleUse = OnFoe
 Flags = PokeBall
-Description = A somewhat different Poké Ball that makes it easier to catch wild Pokémon at night or in dark places like caves.
+Description = Funktioniert besonders gut in dunklen Gebieten.
 #-------------------------------
 [HEALBALL]
 Name = Heilball
@@ -4157,7 +4157,7 @@ Price = 300
 SellPrice = 75
 BattleUse = OnFoe
 Flags = PokeBall
-Description = A remedial Poké Ball that restores the caught Pokémon's HP and eliminates any status problem.
+Description = Heilt das gefangene Pokémon vollständig.
 #-------------------------------
 [QUICKBALL]
 Name = Flottball
@@ -4167,7 +4167,7 @@ Price = 1000
 SellPrice = 250
 BattleUse = OnFoe
 Flags = PokeBall
-Description = A somewhat different Poké Ball that provides a better catch rate if used at the start of a wild encounter.
+Description = In der ersten Runde hat dieser Ball seine größte Fangchance.
 #-------------------------------
 [CHERISHBALL]
 Name = Jubelball
@@ -4176,7 +4176,7 @@ Pocket = 3
 Price = 0
 BattleUse = OnFoe
 Flags = PokeBall
-Description = A quite rare Poké Ball that has been specially crafted to commemorate an occasion of some sort.
+Description = Ein seltener Ball, der als Reminiszenz an irgendein Ereignis hergestellt wurde.
 #-------------------------------
 [FASTBALL]
 Name = Turboball
@@ -4203,7 +4203,7 @@ Pocket = 3
 Price = 300
 BattleUse = OnFoe
 Flags = PokeBall
-Description = A Poké Ball for catching Pokémon that are a lower level than your own.
+Description = Erhöhte Fangrate für Pokémon mit niedrigerem Level, als dein eigenes.
 #-------------------------------
 [LUREBALL]
 Name = Köderball
@@ -4212,7 +4212,7 @@ Pocket = 3
 Price = 300
 BattleUse = OnFoe
 Flags = PokeBall
-Description = A Poké Ball for catching Pokémon hooked by a Rod when fishing.
+Description = Ideal für Pokémon, die an einer Angel angebissen haben.
 #-------------------------------
 [HEAVYBALL]
 Name = Schwerball
@@ -4221,7 +4221,7 @@ Pocket = 3
 Price = 300
 BattleUse = OnFoe
 Flags = PokeBall
-Description = A Poké Ball for catching very heavy Pokémon.
+Description = Je schwerer das Pokémon, desto höher die Fangrate.
 #-------------------------------
 [LOVEBALL]
 Name = Sympaball
@@ -4230,7 +4230,7 @@ Pocket = 3
 Price = 300
 BattleUse = OnFoe
 Flags = PokeBall
-Description = A Poké Ball for catching Pokémon that are the opposite gender of your Pokémon.
+Description = Dieser Ball wurde speziell für Pokémon des anderen Geschlechts entwickelt.
 #-------------------------------
 [FRIENDBALL]
 Name = Freundesball
@@ -4239,7 +4239,7 @@ Pocket = 3
 Price = 300
 BattleUse = OnFoe
 Flags = PokeBall
-Description = A Poké Ball that makes caught Pokémon more friendly.
+Description = Erhöht die Freundschaft des gefangenen Pokémon sofort auf einen bestimmten Wert.
 #-------------------------------
 [MOONBALL]
 Name = Mondball
@@ -4248,7 +4248,7 @@ Pocket = 3
 Price = 300
 BattleUse = OnFoe
 Flags = PokeBall
-Description = A Poké Ball for catching Pokémon that evolve using the Moon Stone.
+Description = Erhähte Fangrate für Pokémon, die sich mit dem Mondsteine entwickeln lassen.
 #-------------------------------
 [DREAMBALL]
 Name = Traumball
@@ -4257,7 +4257,7 @@ Pocket = 3
 Price = 300
 BattleUse = OnFoe
 Flags = PokeBall
-Description = A somewhat different Poké Ball that makes it easier to catch wild Pokémon while they're asleep.
+Description = Bei schlafenden Pokémon ist die Fangrate deutlich erhöht.
 #-------------------------------
 [BEASTBALL]
 Name = Ultraball
@@ -4266,7 +4266,7 @@ Pocket = 3
 Price = 1000
 BattleUse = OnFoe
 Flags = PokeBall
-Description = A special Poké Ball designed to catch Ultra Beasts. It has a low success rate for catching others.
+Description = Bei Ultrabestien ist dieser Ball 5x so gut, wie ein Pokéball.
 #-------------------------------
 [TM01]
 Name = TM01
