@@ -51,6 +51,7 @@ function blockToTrainer(
       current = {
         species,
         level: Number(level ?? 0),
+        form: 0,
         moves: [],
         abilityIndex: null,
         item: null,
@@ -88,6 +89,9 @@ function blockToTrainer(
         break;
       case "AbilityIndex":
         current.abilityIndex = Number(line.value);
+        break;
+      case "Form":
+        current.form = Number(line.value);
         break;
     }
   }

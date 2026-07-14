@@ -169,6 +169,7 @@ export interface Medal {
 export interface TrainerPokemon {
   species: string;
   level: number;
+  form: number;
   moves: string[];
   // index into the species' Abilities+HiddenAbilities list (PBS AbilityIndex) - resolved to
   // a display name at render time, since it depends on the species' ability list.

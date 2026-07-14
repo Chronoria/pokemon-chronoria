@@ -10,9 +10,21 @@ export function getStaticPaths() {
 
 const { t } = Astro.props;
 
-function resolveAbility(species: string, abilityIndex: number | null): { id: string; name: string } | null {
-  if (abilityIndex === null) return null;
+/** Resolves a party Pokémon's form (PBS "Form = N") to its form-specific data, falling back
+ *  to the base species for form 0 or a form number that doesn't exist. */
+function resolveForm(species: string, formNumber: number) {
   const s = pokemonById.get(species);
+  if (!s) return null;
+  if (formNumber > 0) {
+    const f = s.forms.find((form: any) => form.formNumber === formNumber);
+    if (f) return { name: s.name, sprite: f.sprite, abilities: f.abilities, hiddenAbilities: f.hiddenAbilities, url: href(`/pokemon/${slugify(species)}/${formNumber}/`), label: f.formName?.text ? `${s.name} (${f.formName.text})` : s.name };
+  }
+  return { name: s.name, sprite: s.sprite, abilities: s.abilities, hiddenAbilities: s.hiddenAbilities, url: href(`/pokemon/${slugify(species)}/`), label: s.name };
+}
+
+function resolveAbility(species: string, formNumber: number, abilityIndex: number | null): { id: string; name: string } | null {
+  if (abilityIndex === null) return null;
+  const s = resolveForm(species, formNumber);
   if (!s) return null;
   const combined = [...s.abilities, ...s.hiddenAbilities];
   const id = combined[abilityIndex];
@@ -30,21 +42,22 @@ function resolveAbility(species: string, abilityIndex: number | null): { id: str
   <div class="card-grid">
     {t.party.map((tp) => {
       const species = pokemonById.get(tp.species);
-      const ability = resolveAbility(tp.species, tp.abilityIndex);
+      const form = resolveForm(tp.species, tp.form);
+      const ability = resolveAbility(tp.species, tp.form, tp.abilityIndex);
       const itemName = tp.item ? itemById.get(tp.item)?.name ?? tp.item : null;
       return (
         <div class="card">
-          {species?.sprite && <img class="card-sprite" src={href(`/sprites/${species.sprite}`)} alt="" loading="lazy" width="64" height="64" />}
+          {form?.sprite && <img class="card-sprite" src={href(`/sprites/${form.sprite}`)} alt="" loading="lazy" width="64" height="64" />}
           <div class="card-name">
-            <a href={href(`/pokemon/${slugify(tp.species)}/`)}>{species?.name ?? tp.species}</a>
+            <a href={form?.url ?? href(`/pokemon/${slugify(tp.species)}/`)}>{form?.label ?? species?.name ?? tp.species}</a>
             {" "}Lv. {tp.level}
           </div>
           {tp.shiny && <span class="meta-note">✨ Schillernd</span>}
           {tp.shadow && <span class="meta-note">🌑 Shadow-Pokémon</span>}
-          {tp.abilityIndex === null && species && species.abilities.length > 0 && (
+          {tp.abilityIndex === null && form && form.abilities.length > 0 && (
             <div class="meta-note">
               Mögliche Fähigkeiten:{" "}
-              {species.abilities.map((a: string, i: number) => (
+              {form.abilities.map((a: string, i: number) => (
                 <>
                   {i > 0 && ", "}
                   <a href={href(`/faehigkeiten/${slugify(a)}/`)}>{abilityById.get(a)?.name ?? a}</a>
@@ -54,7 +67,7 @@ function resolveAbility(species: string, abilityIndex: number | null): { id: str
           )}
           {ability && (
             <div class="meta-note">
-              Fähigkeit{species?.hiddenAbilities.includes(ability.id) ? " (versteckt)" : ""}:{" "}
+              Fähigkeit{form?.hiddenAbilities.includes(ability.id) ? " (versteckt)" : ""}:{" "}
               <a href={href(`/faehigkeiten/${slugify(ability.id)}/`)}>{ability.name}</a>
             </div>
           )}
