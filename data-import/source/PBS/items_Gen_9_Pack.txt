@@ -1470,7 +1470,7 @@ Description = Kann für bestimmte Rezepte verwendet werden.
 Name = Ultrabutter
 NamePlural = Ultrabutter
 Pocket = 5
-Price = 0
+Price = 2000
 Description = Kann für bestimmte Rezepte verwendet werden.
 #-------------------------------
 [SUPREMEBUTTER]
@@ -1491,7 +1491,7 @@ Description = Kann für bestimmte Rezepte verwendet werden.
 Name = Hoenn-Steinsalz
 NamePlural = Hoenn-Steinsalz
 Pocket = 5
-Price = 0
+Price = 2000
 Description = Kann für bestimmte Rezepte verwendet werden.
 #-------------------------------
 [EPICENOIRE]
