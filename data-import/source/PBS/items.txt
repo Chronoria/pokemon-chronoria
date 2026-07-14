@@ -2117,206 +2117,206 @@ Flags = Fling_60
 Description = Trägt Giratina dieses Item, werden seine Drachen- und Geist-Attacken um 20 % verstärkt.
 #-------------------------------
 [RUSTEDSWORD]
-Name = Rusted Sword
-NamePlural = Rusted Swords
+Name = Rostiges Schwert
+NamePlural = Rostige Schwerter
 Pocket = 1
 Price = 0
-Description = It is said that a hero used this sword to halt a disaster in ancient times. But it's grown rusty and worn.
+Description = Hält Zacian das Schwert im Kampf, wechselt es seine Form.
 #-------------------------------
 [RUSTEDSHIELD]
-Name = Rusted Shield
-NamePlural = Rusted Shields
+Name = Rostiger Schild
+NamePlural = Rostige Schilde
 Pocket = 1
 Price = 0
-Description = It is said that a hero used this shield to halt a disaster in ancient times. But it's grown rusty and worn.
+Description = Hält Zamazenta das Schild im Kampf, wechselt es seine Form.
 #-------------------------------
 [DOUSEDRIVE]
-Name = Douse Drive
-NamePlural = Douse Drives
+Name = Aquamodul
+NamePlural = Aquamodule
 Pocket = 1
 Price = 0
 Flags = Fling_70
-Description = A cassette to be held by Genesect. It changes Techno Blast to a Water-type move.
+Description = Es ändert den Typ von Techblaster in Wasser, wenn es von Genesect getragen wird. 
 #-------------------------------
 [SHOCKDRIVE]
-Name = Shock Drive
-NamePlural = Shock Drives
+Name = Blitzmodul
+NamePlural = Blitzmodule
 Pocket = 1
 Price = 0
 Flags = Fling_70
-Description = A cassette to be held by Genesect. It changes Techno Blast to an Electric-type move.
+Description = Es ändert den Typ von Techblaster in Elektro, wenn es von Genesect getragen wird. 
 #-------------------------------
 [BURNDRIVE]
-Name = Burn Drive
-NamePlural = Burn Drives
+Name = Flammenmodul
+NamePlural = Flammenmodule
 Pocket = 1
 Price = 0
 Flags = Fling_70
-Description = A cassette to be held by Genesect. It changes Techno Blast to a Fire-type move.
+Description = Es ändert den Typ von Techblaster in Feuer, wenn es von Genesect getragen wird. 
 #-------------------------------
 [CHILLDRIVE]
-Name = Chill Drive
-NamePlural = Chill Drives
+Name = Gefriermodul
+NamePlural = Gefriermodule
 Pocket = 1
 Price = 0
 Flags = Fling_70
-Description = A cassette to be held by Genesect. It changes Techno Blast to an Ice-type move.
+Description = Es ändert den Typ von Techblaster in Eis, wenn es von Genesect getragen wird. 
 #-------------------------------
 [FIREMEMORY]
-Name = Fire Memory
-NamePlural = Fire Memories
+Name = Feuer-Disc
+NamePlural = Feuer-Discs
 Pocket = 1
 Price = 1000
 Flags = Fling_50
-Description = A memory disc containing Fire-type data. It changes the holder's type if held by a certain Pokémon.
+Description = Ändert den Typen von Amigento und seine Attacke Multi-Angriff zu Feuer.
 #-------------------------------
 [WATERMEMORY]
-Name = Water Memory
-NamePlural = Water Memories
+Name = Wasser-Disc
+NamePlural = Wasser-Discs
 Pocket = 1
 Price = 1000
 Flags = Fling_50
-Description = A memory disc containing Water-type data. It changes the holder's type if held by a certain Pokémon.
+Description = Ändert den Typen von Amigento und seine Attacke Multi-Angriff zu Wasser.
 #-------------------------------
 [ELECTRICMEMORY]
-Name = Electric Memory
-NamePlural = Electric Memories
+Name = Elektro-Disc
+NamePlural = Elektro-Discs
 Pocket = 1
 Price = 1000
 Flags = Fling_50
-Description = A memory disc containing Electric-type data. It changes the holder's type if held by a certain Pokémon.
+Description = Ändert den Typen von Amigento und seine Attacke Multi-Angriff zu Elektro.
 #-------------------------------
 [GRASSMEMORY]
-Name = Grass Memory
-NamePlural = Grass Memories
+Name = Pflanzen-Disc
+NamePlural = Pflanzen-Discs
 Pocket = 1
 Price = 1000
 Flags = Fling_50
-Description = A memory disc containing Grass-type data. It changes the holder's type if held by a certain Pokémon.
+Description = Ändert den Typen von Amigento und seine Attacke Multi-Angriff zu Pflanze.
 #-------------------------------
 [ICEMEMORY]
-Name = Ice Memory
-NamePlural = Ice Memories
+Name = Eis-Disc
+NamePlural = Eis-Discs
 Pocket = 1
 Price = 1000
 Flags = Fling_50
-Description = A memory disc containing Ice-type data. It changes the holder's type if held by a certain Pokémon.
+Description = Ändert den Typen von Amigento und seine Attacke Multi-Angriff zu Eis.
 #-------------------------------
 [FIGHTINGMEMORY]
-Name = Fighting Memory
-NamePlural = Fighting Memories
+Name = Kampf-Disc
+NamePlural = Kampf-Discs
 Pocket = 1
 Price = 1000
 Flags = Fling_50
-Description = A memory disc containing Fighting-type data. It changes the holder's type if held by a certain Pokémon.
+Description = Ändert den Typen von Amigento und seine Attacke Multi-Angriff zu Kampf.
 #-------------------------------
 [POISONMEMORY]
-Name = Poison Memory
-NamePlural = Poison Memories
+Name = Gift-Disc
+NamePlural = Gift-Discs
 Pocket = 1
 Price = 1000
 Flags = Fling_50
-Description = A memory disc containing Poison-type data. It changes the holder's type if held by a certain Pokémon.
+Description = Ändert den Typen von Amigento und seine Attacke Multi-Angriff zu Gift.
 #-------------------------------
 [GROUNDMEMORY]
-Name = Ground Memory
-NamePlural = Ground Memories
+Name = Boden-Disc
+NamePlural = Boden-Discs
 Pocket = 1
 Price = 1000
 Flags = Fling_50
-Description = A memory disc containing Ground-type data. It changes the holder's type if held by a certain Pokémon.
+Description = Ändert den Typen von Amigento und seine Attacke Multi-Angriff zu Boden.
 #-------------------------------
 [FLYINGMEMORY]
-Name = Flying Memory
-NamePlural = Flying Memories
+Name = Wind-Disc
+NamePlural = Wind-Discs
 Pocket = 1
 Price = 1000
 Flags = Fling_50
-Description = A memory disc containing Flying-type data. It changes the holder's type if held by a certain Pokémon.
+Description = Ändert den Typen von Amigento und seine Attacke Multi-Angriff zu Wind.
 #-------------------------------
 [PSYCHICMEMORY]
-Name = Psychic Memory
-NamePlural = Psychic Memories
+Name = Psycho-Disc
+NamePlural = Psycho-Discs
 Pocket = 1
 Price = 1000
 Flags = Fling_50
-Description = A memory disc containing Psychic-type data. It changes the holder's type if held by a certain Pokémon.
+Description = Ändert den Typen von Amigento und seine Attacke Multi-Angriff zu Psycho.
 #-------------------------------
 [BUGMEMORY]
-Name = Bug Memory
-NamePlural = Bug Memories
+Name = Käfer-Disc
+NamePlural = Käfer-Disc
 Pocket = 1
 Price = 1000
 Flags = Fling_50
-Description = A memory disc containing Bug-type data. It changes the holder's type if held by a certain Pokémon.
+Description = Ändert den Typen von Amigento und seine Attacke Multi-Angriff zu Käfer.
 #-------------------------------
 [ROCKMEMORY]
-Name = Rock Memory
-NamePlural = Rock Memories
+Name = Gesteins-Disc
+NamePlural = Gesteins-Discs
 Pocket = 1
 Price = 1000
 Flags = Fling_50
-Description = A memory disc containing Rock-type data. It changes the holder's type if held by a certain Pokémon.
+Description = Ändert den Typen von Amigento und seine Attacke Multi-Angriff zu Gestein.
 #-------------------------------
 [GHOSTMEMORY]
-Name = Ghost Memory
-NamePlural = Ghost Memories
+Name = Geister-Disc
+NamePlural = Geister-Discs
 Pocket = 1
 Price = 1000
 Flags = Fling_50
-Description = A memory disc containing Ghost-type data. It changes the holder's type if held by a certain Pokémon.
+Description = Ändert den Typen von Amigento und seine Attacke Multi-Angriff zu Geist.
 #-------------------------------
 [DRAGONMEMORY]
-Name = Dragon Memory
-NamePlural = Dragon Memories
+Name = Drachen-Disc
+NamePlural = Drachen-Discs
 Pocket = 1
 Price = 1000
 Flags = Fling_50
-Description = A memory disc containing Dragon-type data. It changes the holder's type if held by a certain Pokémon.
+Description = Ändert den Typen von Amigento und seine Attacke Multi-Angriff zu Drache.
 #-------------------------------
 [DARKMEMORY]
-Name = Dark Memory
-NamePlural = Dark Memories
+Name = Unlicht-Disc
+NamePlural = Unlicht-Discs
 Pocket = 1
 Price = 1000
 Flags = Fling_50
-Description = A memory disc containing Dark-type data. It changes the holder's type if held by a certain Pokémon.
+Description = Ändert den Typen von Amigento und seine Attacke Multi-Angriff zu Unlicht.
 #-------------------------------
 [STEELMEMORY]
-Name = Steel Memory
-NamePlural = Steel Memories
+Name = Stahl-Disc
+NamePlural = Stahl-Discs
 Pocket = 1
 Price = 1000
 Flags = Fling_50
-Description = A memory disc containing Steel-type data. It changes the holder's type if held by a certain Pokémon.
+Description = Ändert den Typen von Amigento und seine Attacke Multi-Angriff zu Stahl.
 #-------------------------------
 [FAIRYMEMORY]
-Name = Fairy Memory
-NamePlural = Fairy Memories
+Name = Feen-Disc
+NamePlural = Feen-Discs
 Pocket = 1
 Price = 1000
 Flags = Fling_50
-Description = A memory disc containing Fairy-type data. It changes the holder's type if held by a certain Pokémon.
+Description = Ändert den Typen von Amigento und seine Attacke Multi-Angriff zu Fee.
 #-------------------------------
 [EVERSTONE]
-Name = Everstone
-NamePlural = Everstones
+Name = Ewigstein
+NamePlural = Ewigsteine
 Pocket = 1
 Price = 3000
 SellPrice = 750
 BPPrice = 5
 Flags = Fling_30
-Description = An item to be held by a Pokémon. The Pokémon holding this peculiar stone is prevented from evolving.
+Description = Ein Item zum Tragen. Es bewirkt einen Entwicklungsstopp.
 #-------------------------------
 [DRAGONSCALE]
-Name = Dragon Scale
-NamePlural = Dragon Scales
+Name = Drachenschuppe
+NamePlural = Drachenschuppen
 Pocket = 1
 Price = 3000
 SellPrice = 750
 BPPrice = 5
 Flags = Fling_30
-Description = A thick and tough scale. Dragon-type Pokémon may be holding this item when caught.
+Description = Damit lässt sich Seemon entwickeln.
 #-------------------------------
 [UPGRADE]
 Name = Upgrade
@@ -2326,102 +2326,98 @@ Price = 3000
 SellPrice = 750
 BPPrice = 5
 Flags = Fling_30
-Description = A transparent device filled with all sorts of data. It was produced by Silph Co.
+Description = Ein Upgrade für Porygon, damit es sich entwickeln kann.
 #-------------------------------
 [DUBIOUSDISC]
-Name = Dubious Disc
-NamePlural = Dubious Discs
+Name = Dubiosdisc
+NamePlural = Dubiosdiscs
 Pocket = 1
 Price = 3000
 SellPrice = 750
 BPPrice = 5
 Flags = Fling_50
-Description = A transparent device overflowing with dubious data.  Its producer is unknown.
+Description = Ein Upgrade für Porygon2, damit es sich entwickeln kann.
 #-------------------------------
 [PROTECTOR]
-Name = Protector
-NamePlural = Protectors
+Name = Schützer
+NamePlural = Schützer
 Pocket = 1
 Price = 3000
 SellPrice = 750
 BPPrice = 5
 Flags = Fling_80
-Description = A protective item of some sort. It is extremely stiff and heavy. It is loved by a certain Pokémon.
+Description = Damit lässt sich Rizeros entwickeln.
 #-------------------------------
 [ELECTIRIZER]
-Name = Electirizer
-NamePlural = Electirizers
+Name = Stromisierer
+NamePlural = Stromisierer
 Pocket = 1
 Price = 3000
 SellPrice = 750
 BPPrice = 5
 Flags = Fling_80
-Description = A box packed with a tremendous amount of electric energy. It is loved by a certain Pokémon.
+Description = Damit lässt sich Elektek entwickeln.
 #-------------------------------
 [MAGMARIZER]
-Name = Magmarizer
-NamePlural = Magmarizers
+Name = Magmaisierer
+NamePlural = Magmaisierer
 Pocket = 1
 Price = 3000
 SellPrice = 750
 BPPrice = 5
 Flags = Fling_80
-Description = A box packed with a tremendous amount of magma energy. It is loved by a certain Pokémon.
+Description = Damit lässt sich Magmar entwickeln.
 #-------------------------------
 [REAPERCLOTH]
 Name = Düsterumhang
 NamePlural = Düsterumhänge
-PortionName = Düsterumhang
-PortionNamePlural = Düsterumhänge
 Pocket = 1
 Price = 3000
 SellPrice = 750
 BPPrice = 5
 FieldUse = OnPokemon
 Flags = EvolutionStone,Fling_30
-Description = A cloth imbued with horrifyingly strong spiritual energy. It is loved by a certain Pokémon.
+Description = Damit lässt sich Zwirrklop entwickeln.
 #-------------------------------
 [PRISMSCALE]
-Name = Prism Scale
-NamePlural = Prism Scales
+Name = Schönschuppe
+NamePlural = Schönschuppen
 Pocket = 1
 Price = 3000
 SellPrice = 750
 BPPrice = 10
 Flags = Fling_30
-Description = A mysterious scale that evolves certain Pokémon. It shines in rainbow colors.
+Description = Damit lässt sich Barschwa entwickeln.
 #-------------------------------
 [OVALSTONE]
-Name = Oval Stone
-NamePlural = Oval Stones
+Name = Ovaler Stein
+NamePlural = Ovale Steine
 Pocket = 1
 Price = 3000
 SellPrice = 500
 BPPrice = 5
 Flags = Fling_80
-Description = A peculiar stone that makes certain species of Pokémon evolve. It is shaped like an egg.
+Description = Wonneira lässt sich tagsüber entwickeln, wenn es dieses Item trägt und ein Level steigt.
 #-------------------------------
 [WHIPPEDDREAM]
-Name = Whipped Dream
-NamePlural = Whipped Dreams
-PortionName = dollop of Whipped Dream
-PortionNamePlural = dollops of Whipped Dream
+Name = WSahnehäubchen
+NamePlural = Sahnehäubchen
 Pocket = 1
 Price = 3000
 SellPrice = 750
 BPPrice = 5
 Flags = Fling_80
-Description = A soft and sweet treat made of fluffy, puffy and whirled cream. It's loved by a certain Pokémon.
+Description = Damit lässt sich Flauschling entwickeln.
 #-------------------------------
 [SACHET]
-Name = Sachet
-NamePlural = Sachets
+Name = Duftbeutel
+NamePlural = Duftbeutel
 Pocket = 1
 Price = 3000
 SellPrice = 750
 BPPrice = 5
 Flags = Fling_80
-Description = A sachet filled with slightly overwhelming fragrant perfumes. Yet it's loved by a certain Pokémon.
+Description = Damit lässt sich Parfi entwickeln.
 #-------------------------------
 [STRAWBERRYSWEET]
 Name = Zucker-Erdbeere
@@ -2433,40 +2429,40 @@ Flags = Fling_10
 Description = Wird die Zucker-Erdbeere von einem Hokumil getragen, ist es möglich, dieses zu einem Pokusan zu entwickeln. 
 #-------------------------------
 [LOVESWEET]
-Name = Love Sweet
-NamePlural = Love Sweets
+Name = Zucker-Herz
+NamePlural = Zucker-Herzen
 Pocket = 1
 Price = 500
 BPPrice = 5
 Flags = Fling_10
-Description = A heart-shaped sweet. When a Milcery holds this, it spins around happily.
+Description = Wird das Zucker-Herz von einem Hokumil getragen, ist es möglich, dieses zu einem Pokusan zu entwickeln. 
 #-------------------------------
 [BERRYSWEET]
-Name = Berry Sweet
-NamePlural = Berry Sweets
+Name = Zucker-Beere
+NamePlural = Zucker-Beere
 Pocket = 1
 Price = 500
 BPPrice = 5
 Flags = Fling_10
-Description = A berry-shaped sweet. When a Milcery holds this, it spins around happily.
+Description = Wird die Zucker-Beere von einem Hokumil getragen, ist es möglich, dieses zu einem Pokusan zu entwickeln. 
 #-------------------------------
 [CLOVERSWEET]
-Name = Clover Sweet
-NamePlural = Clover Sweets
+Name = Zucker-Kleeblatt
+NamePlural = Zucker-Kleeblätter
 Pocket = 1
 Price = 500
 BPPrice = 5
 Flags = Fling_10
-Description = A clover-shaped sweet. When a Milcery holds this, it spins around happily.
+Description = Wird das Zucker-Kleeblatt von einem Hokumil getragen, ist es möglich, dieses zu einem Pokusan zu entwickeln. 
 #-------------------------------
 [FLOWERSWEET]
-Name = Flower Sweet
-NamePlural = Flower Sweets
+Name = Zucker-Blume
+NamePlural = Zucker-Blumen
 Pocket = 1
 Price = 500
 BPPrice = 5
 Flags = Fling_10
-Description = A flower-shaped sweet. When a Milcery holds this, it spins around happily.
+Description = Wird die Zucker-Blume von einem Hokumil getragen, ist es möglich, dieses zu einem Pokusan zu entwickeln. 
 #-------------------------------
 [STARSWEET]
 Name = Star Sweet
@@ -2475,16 +2471,16 @@ Pocket = 1
 Price = 500
 BPPrice = 5
 Flags = Fling_10
-Description = A star-shaped sweet. When a Milcery holds this, it spins around happily.
+Description = Wird die Zucker-Beere von einem Hokumil getragen, ist es möglich, dieses zu einem Pokusan zu entwickeln. 
 #-------------------------------
 [RIBBONSWEET]
-Name = Ribbon Sweet
-NamePlural = Ribbon Sweets
+Name = Zucker-Stern
+NamePlural = Zucker-Sterne
 Pocket = 1
 Price = 500
 BPPrice = 5
 Flags = Fling_10
-Description = A ribbon-shaped sweet. When a Milcery holds this, it spins around happily.
+Description = Wird der Zucker-Stern von einem Hokumil getragen, ist es möglich, dieses zu einem Pokusan zu entwickeln. 
 #-------------------------------
 [VENUSAURITEX]
 Name = Bisaflornit X
@@ -2982,59 +2978,59 @@ Flags = MegaStone,Fling_80
 Description = Dieser Stein ermöglicht Panferno eine Mega-Entwicklung.
 #-------------------------------
 [REDORB]
-Name = Red Orb
-NamePlural = Red Orbs
+Name = Roter Edelstein
+NamePlural = Rote Edelsteine
 Pocket = 1
 Price = 10000
 SellPrice = 0
 BPPrice = 50
-Description = A shiny red orb that is said to have a legend tied to it. It's known to be connected with the Hoenn region.
+Description = Wird der Rote Edelstein von Groudon getragen, führt dieses eine Protomorphose durch.
 #-------------------------------
 [BLUEORB]
-Name = Blue Orb
-NamePlural = Blue Orbs
+Name = Blauer Edelstein
+NamePlural = Blaue Edelsteine
 Pocket = 1
 Price = 10000
 SellPrice = 0
 BPPrice = 50
-Description = A shiny blue orb that is said to have a legend tied to it. It's known to be connected with the Hoenn region.
+Description = Wird der Blaue Edelstein von Kyogre getragen, führt dieses eine Protomorphose durch.
 #-------------------------------
 [POTION]
-Name = Potion
-NamePlural = Potions
+Name = Trank
+NamePlural = Tränke
 Pocket = 2
 Price = 200
 SellPrice = 50
 FieldUse = OnPokemon
 BattleUse = OnPokemon
 Flags = Fling_30
-Description = A spray-type medicine for treating wounds. It can be used to restore 20 HP to a single Pokémon.
+Description = Füllt 20 LP sofort wieder auf, ohne Nebeneffekte.
 #-------------------------------
 [SUPERPOTION]
-Name = Super Potion
-NamePlural = Super Potions
+Name = Supertrank
+NamePlural = Supertränke
 Pocket = 2
 Price = 700
 SellPrice = 175
 FieldUse = OnPokemon
 BattleUse = OnPokemon
 Flags = Fling_30
-Description = A spray-type medicine for treating wounds. It can be used to restore 60 HP to a single Pokémon.
+Description = Füllt 60 LP sofort wieder auf, ist aber etwas bitter.
 #-------------------------------
 [HYPERPOTION]
-Name = Hyper Potion
-NamePlural = Hyper Potions
+Name = Hypertrank
+NamePlural = Hypertränke
 Pocket = 2
 Price = 1500
 SellPrice = 375
 FieldUse = OnPokemon
 BattleUse = OnPokemon
 Flags = Fling_30
-Description = A spray-type medicine for treating wounds. It can be used to restore 120 HP to a single Pokémon.
+Description = Füllt 120 LP sofort wieder auf, ohne Nebeneffekte.
 #-------------------------------
 [MAXPOTION]
-Name = Max Potion
-NamePlural = Max Potions
+Name = Top-Trank
+NamePlural = Top-Tränke
 Pocket = 2
 Price = 2500
 SellPrice = 625
@@ -3042,489 +3038,453 @@ BPPrice = 2
 FieldUse = OnPokemon
 BattleUse = OnPokemon
 Flags = Fling_30
-Description = A spray-type medicine for treating wounds. It can completely restore the max HP of a single Pokémon.
+Description = Füllt die LP vollständig wieder auf.
 #-------------------------------
 [FULLRESTORE]
-Name = Full Restore
-NamePlural = Full Restores
+Name = Top-Genesung
+NamePlural = Top-Genesung
 Pocket = 2
 Price = 3000
 SellPrice = 750
 FieldUse = OnPokemon
 BattleUse = OnPokemon
 Flags = Fling_30
-Description = A medicine that fully restores the HP and heals any status problems of a single Pokémon.
+Description = Füllt die LP eines Pokémon vollständig auf und befreit es von sämtlichen Statusproblemen. 
 #-------------------------------
 [SACREDASH]
-Name = Sacred Ash
-NamePlural = Sacred Ashes
-PortionName = bag of Sacred Ash
-PortionNamePlural = bags of Sacred Ash
+Name = Zauberasche
+NamePlural = Zauberasche
 Pocket = 2
 Price = 50000
 FieldUse = Direct
 Flags = Fling_30
-Description = It revives all fainted Pokémon. In doing so, it also fully restores their HP.
+Description = Heilt das gesamt Team vollständig und wird dabei verbraucht.
 #-------------------------------
 [AWAKENING]
-Name = Awakening
-NamePlural = Awakenings
+Name = Aufwecker
+NamePlural = Aufwecker
 Pocket = 2
 Price = 200
 SellPrice = 50
 FieldUse = OnPokemon
 BattleUse = OnPokemon
 Flags = Fling_30
-Description = A spray-type medicine. It awakens a Pokémon from the clutches of sleep.
+Description = Kann unterwegs Pokémon aufwecken.
 #-------------------------------
 [ANTIDOTE]
-Name = Antidote
-NamePlural = Antidotes
+Name = Gegengift
+NamePlural = Gegengifte
 Pocket = 2
 Price = 200
 SellPrice = 50
 FieldUse = OnPokemon
 BattleUse = OnPokemon
 Flags = Fling_30
-Description = A spray-type medicine. It lifts the effect of poison from one Pokémon.
+Description = Kann unterwegs Pokémon von Vergiftung befreien.
 #-------------------------------
 [BURNHEAL]
-Name = Burn Heal
-NamePlural = Burn Heals
+Name = Feuerheiler
+NamePlural = Feuerheiler
 Pocket = 2
 Price = 200
 SellPrice = 50
 FieldUse = OnPokemon
 BattleUse = OnPokemon
 Flags = Fling_30
-Description = A spray-type medicine. It heals a single Pokémon that is suffering from a burn.
+Description = Kann unterwegs Pokémon von Verbrennung befreien.
 #-------------------------------
 [PARALYZEHEAL]
-Name = Paralyze Heal
-NamePlural = Paralyze Heals
+Name = Paraheiler
+NamePlural = Paraheiler
 Pocket = 2
 Price = 200
 SellPrice = 50
 FieldUse = OnPokemon
 BattleUse = OnPokemon
 Flags = Fling_30
-Description = A spray-type medicine. It eliminates paralysis from a single Pokémon.
+Description = Kann unterwegs Pokémon von Paralyse befreien.
 #-------------------------------
 [ICEHEAL]
-Name = Ice Heal
-NamePlural = Ice Heals
+Name = Eisheiler
+NamePlural = Eisheiler
 Pocket = 2
 Price = 200
 SellPrice = 50
 FieldUse = OnPokemon
 BattleUse = OnPokemon
 Flags = Fling_30
-Description = A spray-type medicine. It defrosts a Pokémon that has been frozen solid.
+Description = Kann unterwegs Pokémon auftauen.
 #-------------------------------
 [FULLHEAL]
-Name = Full Heal
-NamePlural = Full Heals
+Name = Hyperheiler
+NamePlural = Hyperheiler
 Pocket = 2
 Price = 400
 SellPrice = 100
 FieldUse = OnPokemon
 BattleUse = OnPokemon
 Flags = Fling_30
-Description = A spray-type medicine. It heals all the status problems of a single Pokémon.
+Description = Kann jedes Statusproblem eines Pokémon heilen.
 #-------------------------------
 [PEWTERCRUNCHIES]
-Name = Pewter Crunchies
-NamePlural = Pewter Crunchies
-PortionName = bag of Pewter Crunchies
-PortionNamePlural = bags of Pewter Crunchies
+Name = Marmoria-Kräcker
+NamePlural = Marmoria-Kräcker
 Pocket = 2
 Price = 250
 FieldUse = OnPokemon
 BattleUse = OnPokemon
 Flags = Fling_30
-Description = Pewter City's famous crunchy snack. They can be used to heal all status conditions of a single Pokémon.
+Description = Kann jedes Statusproblem eines Pokémon heilen.
 #-------------------------------
 [RAGECANDYBAR]
-Name = Rage Candy Bar
-NamePlural = Rage Candy Bars
+Name = Wutkeks
+NamePlural = Wutkekse
 Pocket = 2
 Price = 350
 FieldUse = OnPokemon
 BattleUse = OnPokemon
 Flags = Fling_30
-Description = Mahogany Town's famous candy. It can be used once to heal all the status conditions of a Pokémon.
+Description = Kann jedes Statusproblem eines Pokémon heilen.
 #-------------------------------
 [LAVACOOKIE]
-Name = Lava Cookie
-NamePlural = Lava Cookies
+Name = Lavakeks
+NamePlural = Lavakekse
 Pocket = 2
 Price = 350
 FieldUse = OnPokemon
 BattleUse = OnPokemon
 Flags = Fling_30
-Description = Lavaridge Town's local specialty. It heals all the status problems of one Pokémon.
+Description = Kann jedes Statusproblem eines Pokémon heilen.
 #-------------------------------
 [OLDGATEAU]
-Name = Old Gateau
-NamePlural = Old Gateaux
+Name = Spezialität
+NamePlural = Spezialitäten
 Pocket = 2
 Price = 350
 FieldUse = OnPokemon
 BattleUse = OnPokemon
 Flags = Fling_30
-Description = Old Chateau's hidden specialty. It heals all the status problems of a single Pokémon.
+Description = Kann jedes Statusproblem eines Pokémon heilen.
 #-------------------------------
 [CASTELIACONE]
-Name = Casteliacone
-NamePlural = Casteliacones
+Name = Stratos-Eis
+NamePlural = Stratos-Eis
 Pocket = 2
 Price = 350
 FieldUse = OnPokemon
 BattleUse = OnPokemon
 Flags = Fling_30
-Description = Castelia City's specialty, soft-serve ice cream. It heals all the status problems of a single Pokémon.
+Description = Kann jedes Statusproblem eines Pokémon heilen.
 #-------------------------------
 [LUMIOSEGALETTE]
-Name = Lumiose Galette
-NamePlural = Lumiose Galettes
+Name = Illumina-Galette
+NamePlural = Illumina-Galetten
 Pocket = 2
 Price = 174
 FieldUse = OnPokemon
 BattleUse = OnPokemon
 Flags = Fling_30
-Description = A popular treat in Lumiose City. It can be used once to heal all the status conditions of a Pokémon.
+Description = Kann jedes Statusproblem eines Pokémon heilen.
 #-------------------------------
 [SHALOURSABLE]
-Name = Shalour Sable
-NamePlural = Shalour Sables
+Name = Yantara-Sablé
+NamePlural = Yantara-Sablés
 Pocket = 2
 Price = 350
 FieldUse = OnPokemon
 BattleUse = OnPokemon
 Flags = Fling_30
-Description = Shalour City's famous shortbread. It can be used once to heal all the status conditions of a Pokémon.
+Description = Kann jedes Statusproblem eines Pokémon heilen.
 #-------------------------------
 [BIGMALASADA]
-Name = Big Malasada
-NamePlural = Big Malasadas
+Name = Maxi-Malasada
+NamePlural = Maxi-Malasadas
 Pocket = 2
 Price = 350
 FieldUse = OnPokemon
 BattleUse = OnPokemon
 Flags = Fling_30
-Description = The Alola region's specialty--fried bread. It can be used once to heal all the status conditions of a Pokémon.
+Description = Kann jedes Statusproblem eines Pokémon heilen.
 #-------------------------------
 [REVIVE]
-Name = Revive
-NamePlural = Revives
+Name = Beleber
+NamePlural = Beleber
 Pocket = 2
 Price = 2000
 SellPrice = 500
 FieldUse = OnPokemon
 BattleUse = OnPokemon
 Flags = Fling_30
-Description = A medicine that revives a fainted Pokémon. It restores half the Pokémon's maximum HP.
+Description = Ein besiegtes Pokémon erhält 50% der Gesamt-LP zurück.
 #-------------------------------
 [MAXREVIVE]
-Name = Max Revive
-NamePlural = Max Revives
+Name = Top-Beleber
+NamePlural = Top-Beleber
 Pocket = 2
 Price = 2000
 BPPrice = 20
 FieldUse = OnPokemon
 BattleUse = OnPokemon
 Flags = Fling_30
-Description = A medicine that revives a fainted Pokémon. It fully restores the Pokémon's HP.
+Description = Ein besiegtes Pokémon wird vollständig geheilt.
 #-------------------------------
 [BERRYJUICE]
 Name = Beerensaft
-NamePlural = Beerensaft
-PortionName = Becher Beerensaft
-PortionNamePlural = Becher Beerensaft
+NamePlural = Beerensäfte
 Pocket = 2
 Price = 100
 FieldUse = OnPokemon
 BattleUse = OnPokemon
 Flags = Fling_30
-Description = A 100% pure juice made of Berries. It restores the HP of one Pokémon by just 20 points.
+Description = Füllt 20 LP sofort wieder auf und kann im Kampf als getragenes Item genutzt werden.
 #-------------------------------
 [SWEETHEART]
-Name = Sweet Heart
-NamePlural = Sweet Hearts
+Name = Herzkonfekt
+NamePlural = Herzkonfekte
 Pocket = 2
 Price = 3000
 FieldUse = OnPokemon
 BattleUse = OnPokemon
 Flags = Fling_30
-Description = Very sweet chocolate. It restores the HP of one Pokémon by only 20 points.
+Description = Füllt die LP eines Pokémon um 20 auf.
 #-------------------------------
 [FRESHWATER]
 Name = Tafelwasser
 NamePlural = Tafelwasser
-PortionName = Flasche Tafelwasser
-PortionNamePlural = Flaschen Tafelwasser
 Pocket = 2
 Price = 200
 SellPrice = 50
 FieldUse = OnPokemon
 BattleUse = OnPokemon
 Flags = Fling_30
-Description = Water with high mineral content. It can be used to restore 30 HP to a single Pokémon.
+Description = Es füllt die LP eines Pokémon um 50 auf.
 #-------------------------------
 [SODAPOP]
-Name = Soda Pop
-NamePlural = Soda Pops
-PortionName = bottle of Soda Pop
-PortionNamePlural = bottles of Soda Pop
+Name = Sprudel
+NamePlural = Sprudel
 Pocket = 2
 Price = 300
 SellPrice = 75
 FieldUse = OnPokemon
 BattleUse = OnPokemon
 Flags = Fling_30
-Description = A highly carbonated soda drink. It can be used to restore 50 HP to a single Pokémon.
+Description = Es füllt die LP eines Pokémon um 60 auf.
 #-------------------------------
 [LEMONADE]
 Name = Limonade
-NamePlural = Limonade
-PortionName = Dose Limonade
-PortionNamePlural = Dosen Limonade
+NamePlural = Limonaden
 Pocket = 2
 Price = 350
 SellPrice = 100
 FieldUse = OnPokemon
 BattleUse = OnPokemon
 Flags = Fling_30
-Description = A very sweet and refreshing drink. It can be used to restore 70 HP to a single Pokémon.
+Description = Es füllt die LP eines Pokémon um 70 auf.
 #-------------------------------
 [MOOMOOMILK]
-Name = Moomoo Milk
-NamePlural = Moomoo Milks
-PortionName = bottle of Moomoo Milk
-PortionNamePlural = bottles of Moomoo Milk
+Name = Kuhmuh-Milch
+NamePlural = Kuhmuh-Milch
 Pocket = 2
 Price = 600
 SellPrice = 150
 FieldUse = OnPokemon
 BattleUse = OnPokemon
 Flags = Fling_30
-Description = Milk with a very high nutrition content. It restores the HP of one Pokémon by 100 points.
+Description = Es füllt die LP eines Pokémon um 100 auf.
 #-------------------------------
 [ENERGYPOWDER]
-Name = Energy Powder
-NamePlural = Energy Powders
-PortionName = dose of Energy Powder
-PortionNamePlural = doses of Energy Powder
+Name = Energiestaub
+NamePlural = Energiestaub
 Pocket = 2
 Price = 500
 SellPrice = 125
 FieldUse = OnPokemon
 BattleUse = OnPokemon
 Flags = Fling_30
-Description = A very bitter medicinal powder. It can be used to restore 60 HP to a single Pokémon.
+Description = Es füllt die LP eines Pokémon um 60 auf, senkt aber die Zuneigung des Pokémon.
 #-------------------------------
 [ENERGYROOT]
-Name = Energy Root
-NamePlural = Energy Roots
+Name = Kraftwurzel
+NamePlural = Kraftwurzeln
 Pocket = 2
 Price = 1200
 SellPrice = 300
 FieldUse = OnPokemon
 BattleUse = OnPokemon
 Flags = Fling_30
-Description = An extremely bitter medicinal root. It can be used to restore 120 HP to a single Pokémon.
+Description = Es füllt die LP eines Pokémon um 120 auf, senkt aber die Zuneigung des Pokémon.
 #-------------------------------
 [HEALPOWDER]
-Name = Heal Powder
-NamePlural = Heal Powders
-PortionName = dose of Heal Powder
-PortionNamePlural = doses of Heal Powder
+Name = Heilpuder
+NamePlural = Heilpuder
 Pocket = 2
 Price = 300
 SellPrice = 75
 FieldUse = OnPokemon
 BattleUse = OnPokemon
 Flags = Fling_30
-Description = A very bitter medicine powder. It heals all the status problems of a single Pokémon.
+Description = Kann jedes Statusproblem eines Pokémon heilen, senkt aber die Zuneigung des Pokémon.
 #-------------------------------
 [REVIVALHERB]
-Name = Revival Herb
-NamePlural = Revival Herbs
+Name = Vitalkraut
+NamePlural = Vitalkraut
 Pocket = 2
 Price = 2800
 SellPrice = 700
 FieldUse = OnPokemon
 BattleUse = OnPokemon
 Flags = Fling_30
-Description = A very bitter medicinal herb. It revives a fainted Pokémon, fully restoring its HP.
+Description = Ein besiegtes Pokémon wird vollständig geheilt, senkt aber die Zuneigung des Pokémon.
 #-------------------------------
 [MAXHONEY]
-Name = Max Honey
-NamePlural = Max Honeys
-PortionName = comb of Max Honey
-PortionNamePlural = combs of Max Honey
+Name = Mistral-Honig
+NamePlural = Mistral-Honig
 Pocket = 2
 Price = 8000
 FieldUse = OnPokemon
 BattleUse = OnPokemon
 Flags = Fling_30
-Description = Honey that Dynamax Vespiquen produces. It has the same effect as a Max Revive.
+Description = Ein besiegtes Pokémon wird vollständig geheilt.
 #-------------------------------
 [ETHER]
-Name = Ether
-NamePlural = Ethers
+Name = Äther
+NamePlural = Äther
 Pocket = 2
 Price = 600
 BPPrice = 4
 FieldUse = OnPokemon
 BattleUse = OnMove
 Flags = Fling_30
-Description = It restores the PP of a Pokémon's selected move by a maximum of 10 points.
+Description = Der Äther stellt 10 Angriffspunkte einer Attacke wieder her.
 #-------------------------------
 [MAXETHER]
-Name = Max Ether
-NamePlural = Max Ethers
+Name = Top-Äther
+NamePlural = Top-Äther
 Pocket = 2
 Price = 1000
 FieldUse = OnPokemon
 BattleUse = OnMove
 Flags = Fling_30
-Description = It fully restores the PP of a single selected move that has been learned by the target Pokémon.
+Description = Der Äther stellt alle Angriffspunkte einer Attacke wieder her.
 #-------------------------------
 [ELIXIR]
-Name = Elixir
-NamePlural = Elixirs
+Name = Elixier
+NamePlural = Elixiere
 Pocket = 2
 Price = 1500
 FieldUse = OnPokemon
 BattleUse = OnPokemon
 Flags = Fling_30
-Description = It restores the PP of all the moves learned by the targeted Pokémon by 10 points each.
+Description = Ein Elixier füllt die Angriffspunkte aller Attacken eines Pokémon um 10 auf.
 #-------------------------------
 [MAXELIXIR]
-Name = Max Elixir
-NamePlural = Max Elixirs
+Name = Top-Elixier
+NamePlural = Top-Elixiere
 Pocket = 2
 Price = 2250
 FieldUse = OnPokemon
 BattleUse = OnPokemon
 Flags = Fling_30
-Description = It fully restores the PP of all the moves learned by the targeted Pokémon.
+Description = Ein Elixier füllt die Angriffspunkte aller Attacken eines Pokémon vollständig auf.
 #-------------------------------
 [PPUP]
-Name = PP Up
-NamePlural = PP Ups
-PortionName = bottle of PP Up
-PortionNamePlural = bottles of PP Up
+Name = AP-Plus
+NamePlural = AP-Plus
 Pocket = 2
 Price = 10000
 SellPrice = 2500
 BPPrice = 10
 FieldUse = OnPokemon
 Flags = Fling_30
-Description = It slightly raises the maximum PP of a selected move that has been learned by the target Pokémon.
+Description = Es erhöht die Angriffspunkte einer Attacke um 20% des Ausgangswertes. 
 #-------------------------------
 [PPMAX]
-Name = PP Max
-NamePlural = PP Maxes
-PortionName = bottle of PP Max
-PortionNamePlural = bottles of PP Max
+Name = AP-Top
+NamePlural = AP-Top
 Pocket = 2
 Price = 10000
 SellPrice = 2500
 FieldUse = OnPokemon
 Flags = Fling_30
-Description = It maximally raises the top PP of a selected move that has been learned by the target Pokémon.
+Description = Erhöht die Angriffspunkte einer Attacke um 60% (max.) des Ausgangswertes. 
 #-------------------------------
 [HPUP]
-Name = HP Up
-NamePlural = HP Ups
-PortionName = bottle of HP Up
-PortionNamePlural = bottles of HP Up
+Name = LP-Plus
+NamePlural = LP-Plus
 Pocket = 2
 Price = 10000
 SellPrice = 2500
 FieldUse = OnPokemon
 Flags = Fling_30
-Description = A nutritious drink for Pokémon. It raises the base HP of a single Pokémon.
+Description = Erhäht die Basis-LP eines Pokémon leicht.
 #-------------------------------
 [PROTEIN]
 Name = Protein
-NamePlural = Proteins
-PortionName = bottle of Protein
-PortionNamePlural = bottles of Protein
+NamePlural = Protein
 Pocket = 2
 Price = 10000
 SellPrice = 2500
 FieldUse = OnPokemon
 Flags = Fling_30
-Description = A nutritious drink for Pokémon. It raises the base Attack stat of a single Pokémon.
+Description = Erhöht die Basispunkte eines Pokémon im Angriff um 10 Punkte.
 #-------------------------------
 [IRON]
-Name = Iron
-NamePlural = Irons
-PortionName = bottle of Iron
-PortionNamePlural = bottles of Iron
+Name = Eisen
+NamePlural = Eisen
 Pocket = 2
 Price = 10000
 SellPrice = 2500
 FieldUse = OnPokemon
 Flags = Fling_30
-Description = A nutritious drink for Pokémon. It raises the base Defense stat of a single Pokémon.
+Description = Erhöht die Basispunkte eines Pokémon in Verteidigung um 10 Punkte.
 #-------------------------------
 [CALCIUM]
-Name = Calcium
-NamePlural = Calciums
-PortionName = bottle of Calcium
-PortionNamePlural = bottles of Calcium
+Name = Kalzium
+NamePlural = Kalzium
 Pocket = 2
 Price = 10000
 SellPrice = 2500
 FieldUse = OnPokemon
 Flags = Fling_30
-Description = A nutritious drink for Pokémon. It raises the base Sp. Atk (Special Attack) stat of a single Pokémon.
+Description = Erhöht die Basispunkte eines Pokémon im Sp. Angriff um 10 Punkte.
 #-------------------------------
 [ZINC]
-Name = Zinc
-NamePlural = Zincs
-PortionName = bottle of Zinc
-PortionNamePlural = bottles of Zinc
+Name = Zink
+NamePlural = Zink
 Pocket = 2
 Price = 10000
 SellPrice = 2500
 FieldUse = OnPokemon
 Flags = Fling_30
-Description = A nutritious drink for Pokémon. It raises the base Sp. Def (Special Defense) stat of a single Pokémon.
+Description = Erhöht die Basispunkte eines Pokémon in Sp. Verteidigung um 10 Punkte.
 #-------------------------------
 [CARBOS]
-Name = Carbos
-NamePlural = Carbos
-PortionName = bottle of Carbos
-PortionNamePlural = bottles of Carbos
+Name = Carbon
+NamePlural = Carbon
 Pocket = 2
 Price = 10000
 SellPrice = 2500
 FieldUse = OnPokemon
 Flags = Fling_30
-Description = A nutritious drink for Pokémon. It raises the base Speed stat of a single Pokémon.
+Description = Erhöht die Basispunkte eines Pokémon in der Initiative um 10 Punkte.
 #-------------------------------
 [HEALTHFEATHER]
-Name = Health Feather
-NamePlural = Health Feathers
+Name = Heilfeder
+NamePlural = Heilfedern
 Pocket = 2
 Price = 150
 FieldUse = OnPokemon
 Flags = Fling_20
-Description = An item for use on a Pokémon. It slightly increases the base HP of a single Pokémon.
+Description = Erhöht die KP-Basispunkte um 1 und die Freundschaft um 3. 
 #-------------------------------
 [MUSCLEFEATHER]
-Name = Muscle Feather
-NamePlural = Muscle Feathers
+Name = Kraftfeder
+NamePlural = Kraftfedern
 Pocket = 2
 Price = 150
 FieldUse = OnPokemon
 Flags = Fling_20
-Description = An item for use on a Pokémon. It slightly increases the base Attack stat of a single Pokémon.
+Description = Erhöht die Angriffs-Basispunkte um 1 und die Freundschaft um 3. 
 #-------------------------------
 [RESISTFEATHER]
 Name = Abwehrfeder
@@ -3533,34 +3493,34 @@ Pocket = 2
 Price = 150
 FieldUse = OnPokemon
 Flags = Fling_20
-Description = Schenkt man einem Pokémon dieses Item, wird dessen Verteidigungs-Wert dauerhaft erhöht.
+Description = Erhöht die Verteidigungs-Basispunkte um 1 und die Freundschaft um 3. 
 #-------------------------------
 [GENIUSFEATHER]
-Name = Genius Feather
-NamePlural = Genius Feathers
+Name = Geniefeder
+NamePlural = Geniefedern
 Pocket = 2
 Price = 150
 FieldUse = OnPokemon
 Flags = Fling_20
-Description = An item for use on a Pokémon. It slightly increases the base Sp. Atk stat of a single Pokémon.
+Description = Erhöht die Sp. Angriffs-Basispunkte um 1 und die Freundschaft um 3. 
 #-------------------------------
 [CLEVERFEATHER]
-Name = Clever Feather
-NamePlural = Clever Feathers
+Name = Espritfeder
+NamePlural = Espritfedern
 Pocket = 2
 Price = 150
 FieldUse = OnPokemon
 Flags = Fling_20
-Description = An item for use on a Pokémon. It slightly increases the base Sp. Def stat of a single Pokémon.
+Description = Erhöht die Sp. Verteidigungs-Basispunkte um 1 und die Freundschaft um 3. 
 #-------------------------------
 [SWIFTFEATHER]
-Name = Swift Feather
-NamePlural = Swift Feathers
+Name = Flinkfeder
+NamePlural = Flinkfedern
 Pocket = 2
 Price = 150
 FieldUse = OnPokemon
 Flags = Fling_20
-Description = An item for use on a Pokémon. It slightly increases the base Speed stat of a single Pokémon.
+Description = Erhöht die Initiative-Basispunkte um 1 und die Freundschaft um 3. 
 #-------------------------------
 [LONELYMINT]
 Name = Lonely Mint
@@ -3837,77 +3797,77 @@ Description = When a Pokémon smells this mint, all of its stats will grow at an
 #-------------------------------
 [ABILITYCAPSULE]
 Name = Fähigkeiten-Kapsel
-NamePlural = Fähigkeiten-Kapsel
+NamePlural = Fähigkeiten-Kapseln
 Pocket = 2
 Price = 100000
 SellPrice = 25000
 BPPrice = 50
 FieldUse = OnPokemon
-Description = A capsule that allows a Pokémon with two Abilities to switch between these Abilities when it is used.
+Description = Verfügt das Pokémon über eine weitere (normale) Fähigkeit, kann es zu dieser wechseln.
 #-------------------------------
 [ABILITYPATCH]
-Name = Fähigkeiten-Plfaster
-NamePlural = Fähigkeiten-Plfaster
+Name = Fähigkeiten-Pflaster
+NamePlural = Fähigkeiten-Pflaster
 Pocket = 2
 Price = 250000
 BPPrice = 200
 FieldUse = OnPokemon
-Description = A patch that allows a Pokémon with a regular Ability to have a rare Ability.
+Description = Verfügt das Pokémon über eine versteckte Fähigkeit, kann es zu dieser wechseln.
 #-------------------------------
 [EXPCANDYXS]
-Name = Exp. Candy XS
-NamePlural = Exp. Candy XSs
+Name = EP-Bonbon XS
+NamePlural = EP-Bonbons XS
 Pocket = 2
 Price = 10
 FieldUse = OnPokemon
 Flags = Fling_30
-Description = A candy packed with energy. When consumed, it will grant a Pokémon a very small amount of Exp. Points.
+Description = Das Pokémon erhält beim Verzehr ein paar Erfahrungspunkte.
 #-------------------------------
 [EXPCANDYS]
-Name = Exp. Candy S
-NamePlural = Exp. Candy Ss
+Name = EP-Bonbon S
+NamePlural = EP-Bonbons S
 Pocket = 2
 Price = 120
 FieldUse = OnPokemon
 Flags = Fling_30
-Description = A candy packed with energy. When consumed, it will grant a Pokémon a small amount of Exp. Points.
+Description = Das Pokémon erhält beim Verzehr wenige Erfahrungspunkte.
 #-------------------------------
 [EXPCANDYM]
-Name = Exp. Candy M
-NamePlural = Exp. Candy Ms
+Name = EP-Bonbon M
+NamePlural = EP-Bonbons M
 Pocket = 2
 Price = 500
 FieldUse = OnPokemon
 Flags = Fling_30
-Description = A candy packed with energy. When consumed, it will grant a Pokémon a moderate amount of Exp. Points.
+Description = Das Pokémon erhält beim Verzehr viele Erfahrungspunkte.
 #-------------------------------
 [EXPCANDYL]
-Name = Exp. Candy L
-NamePlural = Exp. Candy Ls
+Name = EP-Bonbon L
+NamePlural = EP-Bonbons L
 Pocket = 2
 Price = 1500
 FieldUse = OnPokemon
 Flags = Fling_30
-Description = A candy packed with energy. When consumed, it will grant a Pokémon a large amount of Exp. Points.
+Description = Das Pokémon erhält beim Verzehr sehr viele Erfahrungspunkte.
 #-------------------------------
 [EXPCANDYXL]
-Name = Exp. Candy XL
-NamePlural = Exp. Candy XLs
+Name = EP-Bonbon XL
+NamePlural = EP-Bonbons XL
 Pocket = 2
 Price = 5000
 FieldUse = OnPokemon
 Flags = Fling_30
-Description = A candy packed with energy. When consumed, it will grant a Pokémon a very large amount of Exp. Points.
+Description = Das Pokémon erhält beim Verzehr etliche Erfahrungspunkte.
 #-------------------------------
 [RARECANDY]
-Name = Rare Candy
-NamePlural = Rare Candies
+Name = Sonderbonbon
+NamePlural = Sonderbonbons
 Pocket = 2
 Price = 5000
 BPPrice = 20
 FieldUse = OnPokemon
 Flags = Fling_30
-Description = A candy that is packed with energy. It raises the level of a single Pokémon by one.
+Description = Erhöht das Level des Pokémon um 1.
 #-------------------------------
 [SHADOWBALL]
 Name = Nullball
@@ -6583,7 +6543,7 @@ Price = 40
 FieldUse = OnPokemon
 BattleUse = OnPokemon
 Flags = Berry,Fling_10,NaturalGift_FIRE_80
-Description = Heilt Paralyse.
+Description = Heilt Paralyse im Kampf und auch außerhalb.
 #-------------------------------
 [CHESTOBERRY]
 Name = Maronbeere
@@ -6593,7 +6553,7 @@ Price = 40
 FieldUse = OnPokemon
 BattleUse = OnPokemon
 Flags = Berry,Fling_10,NaturalGift_WATER_80
-Description = Weckt ein Pokémon auf.
+Description = Weckt ein Pokémon auf, im Kampf und auch außerhalb.
 #-------------------------------
 [PECHABERRY]
 Name = Pirsifbeere
@@ -6603,7 +6563,7 @@ Price = 40
 FieldUse = OnPokemon
 BattleUse = OnPokemon
 Flags = Berry,Fling_10,NaturalGift_ELECTRIC_80
-Description = Heilt Vergiftungen.
+Description = Heilt Vergiftungen im Kampf und auch außerhalb.
 #-------------------------------
 [RAWSTBERRY]
 Name = Fragiabeere
@@ -6613,7 +6573,7 @@ Price = 40
 FieldUse = OnPokemon
 BattleUse = OnPokemon
 Flags = Berry,Fling_10,NaturalGift_GRASS_80
-Description = Heilt Verbrennungen.
+Description = Heilt Verbrennungen im Kampf und auch außerhalb.
 #-------------------------------
 [ASPEARBERRY]
 Name = Wilbirbeere
@@ -6623,7 +6583,7 @@ Price = 40
 FieldUse = OnPokemon
 BattleUse = OnPokemon
 Flags = Berry,Fling_10,NaturalGift_ICE_80
-Description = Taut gefrorene Pokémon wieder auf.
+Description = Taut gefrorene Pokémon wieder auf, im Kampf und auch außerhalb.
 #-------------------------------
 [LEPPABERRY]
 Name = Jonagobeere	
@@ -7516,6 +7476,60 @@ FieldUse = Direct
 Flags = KeyItem
 Description = Eine Angel für Meister-Angler, mit der man starke und seltene Pokémon angeln kann.
 #-------------------------------
+[GOLDROD]
+Name = Shiny-Angel
+NamePlural = Shiny-Angeln
+Pocket = 8
+Price = 0
+FieldUse = Direct
+Flags = KeyItem
+Description = Eine Angel angefertigt um Shiny Pokémon anzulocken.
+#-------------------------------
+[MEGAROD]
+Name = Mega-Angel
+NamePlural = Mega-Angeln
+Pocket = 8
+Price = 0
+FieldUse = Direct
+Flags = KeyItem
+Description = Lockt eher seltene Pokémon an, man muss jedoch geduldiger sein.
+#-------------------------------
+[POWERROD]
+Name = Fähigkeiten-Angel
+NamePlural = Fähigkeiten-Angeln
+Pocket = 8
+Price = 0
+FieldUse = Direct
+Flags = KeyItem
+Description = Lockt besonders Pokémon mit speziellen Fähigkeiten an, man muss jedoch geduldiger sein.
+#-------------------------------
+[TREASUREROD]
+Name = Schatz-Angel
+NamePlural = Schatz-Angeln
+Pocket = 8
+Price = 0
+FieldUse = Direct
+Flags = KeyItem
+Description = Eine Angel um versteckte Schätze zu finden.
+#-------------------------------
+[SLEEPROD]
+Name = Schlummer-Angel
+NamePlural = Schlummer-Angeln
+Pocket = 8
+Price = 0
+FieldUse = Direct
+Flags = KeyItem
+Description = Die Pokémon schlafen nach dem Anbeißen ein.
+#-------------------------------
+[DOUBLEROD]
+Name = Doppel-Angel
+NamePlural = Doppel-Angeln
+Pocket = 8
+Price = 0
+FieldUse = Direct
+Flags = KeyItem
+Description = Diese Angel kann zwei Pokémon gleichzeitig fangen.
+#-------------------------------
 [TOWNMAP]
 Name = Karte
 NamePlural = Karten
@@ -7942,60 +7956,6 @@ Price = 0
 Description = Ein Gerät, das vergangene Spuren sichtbar machen kann. Für temporale Rätsel geeignet.
 FieldUse = Direct
 Flags = KeyItem
-#-------------------------------
-[GOLDROD]
-Name = Shiny-Angel
-NamePlural = Shiny-Angeln
-Pocket = 8
-Price = 0
-FieldUse = Direct
-Flags = KeyItem
-Description = Eine Angel angefertigt um Shiny Pokémon anzulocken.
-#-------------------------------
-[MEGAROD]
-Name = Mega-Angel
-NamePlural = Mega-Angeln
-Pocket = 8
-Price = 0
-FieldUse = Direct
-Flags = KeyItem
-Description = Lockt eher seltene Pokémon an, man muss jedoch geduldiger sein.
-#-------------------------------
-[POWERROD]
-Name = Fähigkeiten-Angel
-NamePlural = Fähigkeiten-Angeln
-Pocket = 8
-Price = 0
-FieldUse = Direct
-Flags = KeyItem
-Description = Lockt besonders Pokémon mit speziellen Fähigkeiten an, man muss jedoch geduldiger sein.
-#-------------------------------
-[TREASUREROD]
-Name = Schatz-Angel
-NamePlural = Schatz-Angeln
-Pocket = 8
-Price = 0
-FieldUse = Direct
-Flags = KeyItem
-Description = Eine Angel um versteckte Schätze zu finden.
-#-------------------------------
-[SLEEPROD]
-Name = Schlummer-Angel
-NamePlural = Schlummer-Angeln
-Pocket = 8
-Price = 0
-FieldUse = Direct
-Flags = KeyItem
-Description = Die Pokémon schlafen nach dem Anbeißen ein.
-#-------------------------------
-[DOUBLEROD]
-Name = Doppel-Angel
-NamePlural = Doppel-Angeln
-Pocket = 8
-Price = 0
-FieldUse = Direct
-Flags = KeyItem
-Description = Diese Angel kann zwei Pokémon gleichzeitig fangen.
 #-------------------------------
 [BLUESTONE]
 Name = Blauer Stein
