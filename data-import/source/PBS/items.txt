@@ -7562,8 +7562,8 @@ Flags = KeyItem
 Description = Ein Gerät, welches unsichtbare Pokémon entlarvt.
 #-------------------------------
 [SQUIRTBOTTLE]
-Name = Squirt Bottle
-NamePlural = Squirt Bottles
+Name = Schiggykanne
+NamePlural = Schiggykannen
 Pocket = 8
 Price = 0
 Flags = KeyItem
