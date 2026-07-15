@@ -1202,7 +1202,7 @@ Pokemon = SEISMITOAD,39
     AbilityIndex = 1
     Item = JABOCABERRY
     Gender = male
-    Ball = DIVEBALL
+    Ball = NETBALL
 #-------------------------------
 [POKEMONBREEDER_F,Liselotte]
 LoseText = In Mistral gibt es eine Pension.
@@ -1562,7 +1562,7 @@ Pokemon = GASTRODON,41
     Moves = EARTHPOWER,MUDDYWATER,ICYWIND,RECOVER
     AbilityIndex = 1
     Gender = female
-    Ball = DIVEBALL
+    Ball = NETBALL
 #-------------------------------
 [ACETRAINER_F,Felizitas]
 LoseText = Deine Kraft hat mich überrascht!
@@ -1575,12 +1575,12 @@ Pokemon = MARACTUS,40
     Moves = GIGADRAIN,SPIKES,NEEDLEARM,SUCKERPUNCH
     AbilityIndex = 0
     Gender = female
-    Ball = NESTBALL
+    Ball = NETBALL
 Pokemon = WHISCASH,42
     Moves = EARTHQUAKE,WATERPULSE,MUDDYWATER,AMNESIA
     AbilityIndex = 0
     Gender = male
-    Ball = DIVEBALL
+    Ball = NETBALL
 #-------------------------------
 [GUITARIST,Rex]
 LoseText = Du hast die perfekte Balance gefunden.
@@ -1865,7 +1865,7 @@ Pokemon = LUCARIO,49
     AbilityIndex = 1
     Item = LIFEORB
     Gender = female
-    Ball = LEVELBALL
+    Ball = LOCKBALL
 Pokemon = DRAGALGE,50
     Moves = AQUATAIL,POISONTAIL,DRAGONPULSE,SPITE
     AbilityIndex = 0
@@ -2450,7 +2450,7 @@ Pokemon = ORBEETLE,47
 Pokemon = QUAXWELL,45
     Moves = LIQUIDATION,LOWSWEEP,ACROBATICS,WATERPULSE
     AbilityIndex = 0
-    Ball = DIVEBALL
+    Ball = NETBALL
 #-------------------------------
 [BLACKBELT2,Heico]
 LoseText = Genug trainiert für heute.

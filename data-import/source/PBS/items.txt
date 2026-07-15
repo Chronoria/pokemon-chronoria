@@ -3584,7 +3584,7 @@ Price = 600
 SellPrice = 150
 BattleUse = OnFoe
 Flags = PokeBall
-Description = Etwas besser als der normale Pokéball.
+Description = 1.5-Fache Fangrate gegenüber dem Pokéball.
 #-------------------------------Shop
 [ULTRABALL]
 Name = Hyperball
@@ -3594,7 +3594,7 @@ Price = 800
 SellPrice = 200
 BattleUse = OnFoe
 Flags = PokeBall
-Description = Deutlich besser und effektiver als ein normaler Pokéball.
+Description = 2-Fache Fangrate gegenüber dem Pokéball.
 #-------------------------------Wenige
 [MASTERBALL]
 Name = Meisterball
@@ -3620,7 +3620,7 @@ NamePlural = Prüfungsbälle
 Pocket = 3
 BattleUse = OnFoe
 Flags = PokeBall
-Description = Ein besonderer Ball für den Käfersammler-Wettbewerb.
+Description = Ein besonderer Ball für den Käfersammler-Wettbewerb, 1.5-Fache Fangrate.
 #-------------------------------Shop / Rezept
 [LOCKBALL]
 Name = Sperrball
@@ -3665,7 +3665,7 @@ Pocket = 3
 Price = 2500
 BattleUse = OnFoe
 Flags = PokeBall
-Description = Die Fangrate bei Shiny-Pokémon wird deutlich erhöht.
+Description = 3-Fache Fangrate gegenüber dem Pokéball bei Shiny Pokémon.
 #-------------------------------Shop / Rezept
 [LUCKBALL]
 Name = Glücksball
@@ -3684,7 +3684,7 @@ Price = 1000
 SellPrice = 250
 BattleUse = OnFoe
 Flags = PokeBall
-Description = Besonders effektiv bei Käfer und Wasser Pokémon.
+Description = 3-Fache Fangrate gegenüber dem Pokéball bei Käfer- und Wasser-Pokémon.
 #-------------------------------Shop / Rezept
 [MYSTICBALL]
 Name = Mystikball
@@ -3694,7 +3694,7 @@ Price = 1000
 SellPrice = 250
 BattleUse = OnFoe
 Flags = PokeBall
-Description = Besonders effektiv bei Psycho und Fee Pokémon.
+Description = 3.5-Fache Fangrate gegenüber dem Pokéball bei Psycho- und Fee-Pokémon.
 #-------------------------------Shop / Rezept
 [MAGMARBALL]
 Name = Lavaball
@@ -3704,7 +3704,7 @@ Price = 1000
 SellPrice = 250
 BattleUse = OnFoe
 Flags = PokeBall
-Description = Besonders effektiv bei Feuer Pokémon.
+Description = 3.5-Fache Fangrate gegenüber dem Pokéball bei Feuer Pokémon.
 #-------------------------------Shop / Rezept
 [ELECTRICBALL]
 Name = Stromball
@@ -3714,7 +3714,7 @@ Price = 1000
 SellPrice = 250
 BattleUse = OnFoe
 Flags = PokeBall
-Description = Besonders effektiv bei Elektro Pokémon.
+Description = 3.5-Fache Fangrate gegenüber dem Pokéball bei Elektro Pokémon.
 #-------------------------------Einzigartig
 [HOLYBALL]
 Name = Sakralball
@@ -3725,26 +3725,6 @@ BattleUse = OnFoe
 Flags = PokeBall
 Description = Damit kann Arceus garantiert gefangen werden.
 #-------------------------------Shop / Rezept
-[DIVEBALL]
-Name = Tauchball
-NamePlural = Tauchbälle
-Pocket = 3
-Price = 1000
-SellPrice = 250
-BattleUse = OnFoe
-Flags = PokeBall
-Description = Ein spezieller Ball, der auch unterwasser eingesetzt werden kann.
-#-------------------------------Shop / Rezept
-[NESTBALL]
-Name = Nestball
-NamePlural = Nestbälle
-Pocket = 3
-Price = 1000
-SellPrice = 250
-BattleUse = OnFoe
-Flags = PokeBall
-Description = Je niedriger das Level, desto Höher die Fangrate (Lvl. >30 = Pokéball).
-#-------------------------------Shop / Rezept
 [REPEATBALL]
 Name = Wiederball
 NamePlural = Wiederbälle
@@ -3753,7 +3733,7 @@ Price = 1000
 SellPrice = 250
 BattleUse = OnFoe
 Flags = PokeBall
-Description = Damit lassen sich leichter Pokémon fangen, die du bereits besitzt.
+Description = 3.5-Fache Fangrate gegenüber dem Pokéball bei Pokémon, die du bereits besitzt.
 #-------------------------------Shop / Rezept
 [TIMERBALL]
 Name = Timerball
@@ -3763,7 +3743,7 @@ Price = 1000
 SellPrice = 250
 BattleUse = OnFoe
 Flags = PokeBall
-Description = Je mehr Runden der Kampf andauert, desto besser dieser Ball.
+Description = Je mehr Runden der Kampf andauert, desto besser dieser Ball (max = 10).
 #-------------------------------Shop / Rezept
 [LUXURYBALL]
 Name = Luxusball
@@ -3791,7 +3771,7 @@ Price = 1000
 SellPrice = 250
 BattleUse = OnFoe
 Flags = PokeBall
-Description = Funktioniert besonders gut in dunklen Gebieten.
+Description = 3-Fache Fangrate gegenüber dem Pokéball in dunklen Gebieten.
 #-------------------------------Shop / Rezept
 [HEALBALL]
 Name = Heilball
@@ -3811,7 +3791,7 @@ Price = 1000
 SellPrice = 250
 BattleUse = OnFoe
 Flags = PokeBall
-Description = In der ersten Runde hat dieser Ball seine größte Fangchance.
+Description = 5-Fache Fangrate gegenüber dem Pokéball in der ersten Runde.
 #-------------------------------Besonders
 [CHERISHBALL]
 Name = Jubelball
@@ -3829,7 +3809,7 @@ Pocket = 3
 Price = 400
 BattleUse = OnFoe
 Flags = PokeBall
-Description = Ein Pokéball, mit dem man leichter schnelle Pokémon fangen kann.
+Description = 4-Fache Fangrate gegenüber dem Pokéball bei schnellen Pokémon (Init. >100).
 #-------------------------------Shop / Rezept
 [SLOWBALL]
 Name = Schleichball
@@ -3838,16 +3818,7 @@ Pocket = 3
 Price = 400
 BattleUse = OnFoe
 Flags = PokeBall
-Description = Ein Pokéball, mit dem man leichter langsame Pokémon fangen kann.
-#-------------------------------Shop / Rezept
-[LEVELBALL]
-Name = Levelball
-NamePlural = Levelbälle
-Pocket = 3
-Price = 300
-BattleUse = OnFoe
-Flags = PokeBall
-Description = Erhöhte Fangrate für Pokémon mit niedrigerem Level, als dein eigenes.
+Description = 4-Fache Fangrate gegenüber dem Pokéball bei langsamen Pokémon (Init. <100).
 #-------------------------------Shop / Rezept
 [LUREBALL]
 Name = Köderball
@@ -3856,7 +3827,7 @@ Pocket = 3
 Price = 400
 BattleUse = OnFoe
 Flags = PokeBall
-Description = Ideal für Pokémon, die an einer Angel angebissen haben.
+Description = 5-Fache Fangrate gegenüber dem Pokéball beim Angeln.
 #-------------------------------Shop / Rezept
 [HEAVYBALL]
 Name = Schwerball
@@ -3874,7 +3845,7 @@ Pocket = 3
 Price = 300
 BattleUse = OnFoe
 Flags = PokeBall
-Description = Dieser Ball wurde speziell für Pokémon des anderen Geschlechts entwickelt.
+Description = 8-Fache Fangrate gegenüber dem Pokéball bei Pokémon des anderen Geschlechts.
 #-------------------------------Shop / Rezept
 [FRIENDBALL]
 Name = Freundesball
@@ -3901,7 +3872,7 @@ Pocket = 3
 Price = 700
 BattleUse = OnFoe
 Flags = PokeBall
-Description = Bei schlafenden Pokémon ist die Fangrate deutlich erhöht.
+Description = 4-Fache Fangrate gegenüber dem Pokéball bei schlafenden Pokémon.
 #-------------------------------Shop / Rezept
 [BEASTBALL]
 Name = Ultraball
@@ -3910,7 +3881,7 @@ Pocket = 3
 Price = 5000
 BattleUse = OnFoe
 Flags = PokeBall
-Description = Bei Ultrabestien ist dieser Ball 5x so gut, wie ein Pokéball.
+Description = 5-Fache Fangrate gegenüber dem Pokéball bei Ultrabestien. Sonst 1/10 des Pokéballs.
 #-------------------------------Map / Shop
 [TM01]
 Name = TM01
