@@ -160,6 +160,33 @@ Pokemon = DEINO,15
     Gender = male
     Ball = LUXURYBALL
 #-------------------------------
+[FISHERMAN,Nicholas]
+LoseText = Weggefegt!
+Pokemon = MAGIKARP,5
+	Moves = SPLASH
+	AbilityIndex = 0
+	Nature = RELAXED
+Pokemon = MAGIKARP,5
+	Moves = SPLASH
+	AbilityIndex = 0
+	Nature = RELAXED
+Pokemon = MAGIKARP,5
+	Moves = SPLASH
+	AbilityIndex = 0
+	Nature = RELAXED
+Pokemon = MAGIKARP,5
+	Moves = SPLASH
+	AbilityIndex = 0
+	Nature = RELAXED
+Pokemon = MAGIKARP,5
+	Moves = SPLASH
+	AbilityIndex = 0
+	Nature = RELAXED
+Pokemon = MAGIKARP,5
+	Moves = SPLASH
+	AbilityIndex = 0
+	Nature = RELAXED	
+#-------------------------------
 [BUGCATCHER,Tom]
 LoseText = Ich sollte wohl noch ein bisschen trainieren...
 Pokemon = LEDYBA,4
@@ -299,6 +326,26 @@ Pokemon = SCRAGGY,11
 Pokemon = NICKIT,12
     Moves = HONECLAWS,QUICKATTACK,ENCORE
     AbilityIndex = 1
+#-------------------------------
+[HIKER,Daniel]
+LoseText = Du darfst passieren.
+Pokemon = GEODUDE,11
+	Moves = TACKLE,DEFENSECURL,ROCKPOLISH,ROLLOUT
+	AbilityIndex = 0
+	Nature = RELAXED
+Pokemon = MACHOP,11
+	Moves = LOWKICK,LEER,FOCUSENERGY,REVENGE
+	AbilityIndex = 1
+	Nature = RELAXED
+Pokemon = GEODUDE,11
+	Form = 1
+	Moves = TACKLE,DEFENSECURL,ROCKPOLISH,ROLLOUT
+	AbilityIndex = 0
+	Nature = RELAXED
+Pokemon = BIDOOF,11
+	Moves = TACKLE,GROWL,DEFENSECURL,ROLLOUT
+	AbilityIndex = 1
+	Nature = HARDY
 #-------------------------------
 [ADEPTA,Lena]
 LoseText = ...
