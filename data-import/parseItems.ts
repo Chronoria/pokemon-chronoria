@@ -40,6 +40,7 @@ function blockToItem(block: PbsBlock, ctx: TranslationContext, icons: Map<string
     description: r.Description ?? "",
     pocket: toNumberOrNull(r.Pocket),
     price: toNumberOrNull(r.Price),
+    sellPrice: toNumberOrNull(r.SellPrice),
     fieldUse: r.FieldUse ?? null,
     flags: splitList(r.Flags),
     icon: icons.get(id) ?? null,

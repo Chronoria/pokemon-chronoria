@@ -8,7 +8,9 @@ import ExcelJS from "exceljs";
 import { join } from "node:path";
 import { pocketName } from "../src/lib/itemPockets.ts";
 import { writeGroupedSection, TITLE_FONT, NOTE_FONT, type ColumnDef } from "./xlsxGroupedSection.ts";
-import type { Item } from "./dataModel.ts";
+import { naturalCompare } from "./naturalSort.ts";
+import { addPricesSheet } from "./exportItemPrices.ts";
+import type { Item, Pokemon } from "./dataModel.ts";
 
 const OUT_PATH = join(import.meta.dirname, "..", "Item-Uebersicht.xlsx");
 const POCKET_IDS = [1, 2, 3, 4, 5, 6, 7, 8];
@@ -31,23 +33,6 @@ const UNAVAILABLE_COLUMNS: ColumnDef<Row>[] = [
   { header: "Rezept", width: 9, get: (r) => r.recipeLabel },
 ];
 
-// Natural sort: splits into digit/non-digit runs and compares digit runs numerically, so
-// "TM2" < "TM10" < "TM102" (plain localeCompare would put "TM10" before "TM102" before "TM2",
-// since TM names aren't consistently zero-padded once there are 100+ of them).
-function naturalCompare(a: string, b: string): number {
-  const ax = a.match(/\d+|\D+/g) ?? [];
-  const bx = b.match(/\d+|\D+/g) ?? [];
-  const len = Math.max(ax.length, bx.length);
-  for (let i = 0; i < len; i++) {
-    const av = ax[i] ?? "";
-    const bv = bx[i] ?? "";
-    if (av === bv) continue;
-    if (/^\d+$/.test(av) && /^\d+$/.test(bv)) return Number(av) - Number(bv);
-    return av.localeCompare(bv, "de");
-  }
-  return 0;
-}
-
 function byName(a: Row, b: Row) {
   return naturalCompare(a.name, b.name);
 }
@@ -58,7 +43,7 @@ function isRecipeIngredient(description: string): boolean {
   return description.includes("Rezept");
 }
 
-export async function exportItemListXlsx(items: Item[]) {
+export async function exportItemListXlsx(items: Item[], pokemon: Pokemon[]) {
   const availableByPocket = new Map<string | number, Row[]>();
   const unavailableByPocket = new Map<string | number, Row[]>();
   for (const pocket of POCKET_IDS) {
@@ -134,6 +119,8 @@ export async function exportItemListXlsx(items: Item[]) {
     UNAVAILABLE_COLUMNS
   );
 
+  const pricesResult = addPricesSheet(wb, items, pokemon);
+
   await wb.xlsx.writeFile(OUT_PATH);
-  return { available: availableTotal, unavailable: unavailableTotal, path: OUT_PATH };
+  return { available: availableTotal, unavailable: unavailableTotal, prices: pricesResult.total, path: OUT_PATH };
 }

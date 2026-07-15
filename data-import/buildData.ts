@@ -146,8 +146,11 @@ async function main() {
     },
   });
 
-  const xlsxResult = await exportItemListXlsx(items);
-  console.log(`Item-Uebersicht.xlsx aktualisiert: ${xlsxResult.available} erhältlich, ${xlsxResult.unavailable} noch nicht platziert.`);
+  const xlsxResult = await exportItemListXlsx(items, pokemon);
+  console.log(
+    `Item-Uebersicht.xlsx aktualisiert: ${xlsxResult.available} erhältlich, ${xlsxResult.unavailable} noch nicht platziert, ` +
+      `${xlsxResult.prices} mit Preisvorschlag.`
+  );
 
   const pokemonXlsxResult = await exportPokemonListXlsx(pokemon);
   console.log(`Pokemon-Uebersicht.xlsx aktualisiert: ${pokemonXlsxResult.used} verwendet, ${pokemonXlsxResult.unused} noch nicht verwendet.`);

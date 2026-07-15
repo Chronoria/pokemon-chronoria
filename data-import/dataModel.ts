@@ -142,6 +142,11 @@ export interface Item {
   description: string; // already German inline in PBS
   pocket: number | null;
   price: number | null;
+  /** PBS "SellPrice" field, distinct from the derived default (Price / 4) Essentials uses when
+   *  this is absent - explicitly 0 marks an item as buyable but never sellable, the signal
+   *  priceRules.ts uses to detect one-off legendary form items (Adamant Crystal, Griseous
+   *  Core, ...). null means the PBS entry has no SellPrice line at all. */
+  sellPrice: number | null;
   fieldUse: string | null;
   flags: string[];
   /** filename in public/item-icons/, or null if no matching icon exists */

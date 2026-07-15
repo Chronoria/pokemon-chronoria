@@ -1,5 +1,5 @@
 ﻿# See the documentation on the wiki to learn how to edit this file.
-#-------------------------------
+#-------------------------------Shop
 [REPEL]
 Name = Schutz
 NamePlural = Schutz
@@ -8,7 +8,7 @@ Price = 400
 FieldUse = Direct
 Flags = Repel,Fling_30
 Description = Hält 100 Schritte lang schwache, wilde Pokémon ab. 
-#-------------------------------
+#-------------------------------Shop
 [SUPERREPEL]
 Name = Super Schutz
 NamePlural = Super Schutz
@@ -17,7 +17,7 @@ Price = 700
 FieldUse = Direct
 Flags = Repel,Fling_30
 Description = Hält 200 Schritte lang schwache, wilde Pokémon ab. 
-#-------------------------------
+#-------------------------------Shop
 [MAXREPEL]
 Name = Meister Schutz
 NamePlural = Meister Schutz
@@ -26,7 +26,7 @@ Price = 900
 FieldUse = Direct
 Flags = Repel,Fling_30
 Description = Hält 250 Schritte lang schwache, wilde Pokémon ab. 
-#-------------------------------
+#-------------------------------Besonderer Shop
 [BLACKFLUTE]
 Name = Schwarze Flöte
 NamePlural = Schwarze Flöten
@@ -36,7 +36,7 @@ FieldUse = Direct
 Flags = Fling_30
 Consumable = false
 Description = Eine schwarze, gläserne Flöte, die wilde Pokémon vom Angriff abhalten kann. 
-#-------------------------------
+#-------------------------------Besonderer Shop
 [WHITEFLUTE]
 Name = Weiße Flöte
 NamePlural = Weiße Flöten
@@ -46,7 +46,7 @@ FieldUse = Direct
 Flags = Fling_30
 Consumable = false
 Description = Eine durchsichtige, gläserne Flöte, die wilde Pokémon anziehen kann. 
-#-------------------------------
+#-------------------------------Shop
 [HONEY]
 Name = Honig
 NamePlural = Honig
@@ -63,7 +63,7 @@ Pocket = 1
 Price = 1000
 Flags = Fling_30
 Description = Eine rote Scherbe eines antiken Werkzeugs, das vor langer Zeit angefertigt wurde. 
-#-------------------------------
+#-------------------------------Besonderer Shop
 [YELLOWSHARD]
 Name = Yellow Shard
 NamePlural = Yellow Shards
@@ -71,7 +71,7 @@ Pocket = 1
 Price = 1000
 Flags = Fling_30
 Description = Eine gelbe Scherbe eines antiken Werkzeugs, das vor langer Zeit angefertigt wurde.
-#-------------------------------
+#-------------------------------Besonderer Shop
 [BLUESHARD]
 Name = Blue Shard
 NamePlural = Blue Shards
@@ -79,7 +79,7 @@ Pocket = 1
 Price = 1000
 Flags = Fling_30
 Description = Eine blaue Scherbe eines antiken Werkzeugs, das vor langer Zeit angefertigt wurde.
-#-------------------------------
+#-------------------------------Besonderer Shop
 [GREENSHARD]
 Name = Green Shard
 NamePlural = Green Shards
@@ -87,7 +87,7 @@ Pocket = 1
 Price = 1000
 Flags = Fling_30
 Description = Eine grüne Scherbe eines antiken Werkzeugs, das vor langer Zeit angefertigt wurde.
-#-------------------------------
+#-------------------------------Shop
 [FIRESTONE]
 Name = Feuerstein
 NamePlural = Feuersteine
@@ -98,7 +98,7 @@ BPPrice = 5
 FieldUse = OnPokemon
 Flags = EvolutionStone,Fling_30
 Description = Es lassen sich Vulpix, Fukano, Evoli, Grillmak und Chilingel entwickeln.
-#-------------------------------
+#-------------------------------Shop
 [THUNDERSTONE]
 Name = Donnerstein
 NamePlural = Donnersteine
@@ -109,7 +109,7 @@ BPPrice = 5
 FieldUse = OnPokemon
 Flags = EvolutionStone,Fling_30
 Description = Es lassen sich Magneton, Pikachu, Evoli, Nasgnet, Zapplalek, Wablu, Blipp und Akkup entwicklen.
-#-------------------------------
+#-------------------------------Shop
 [WATERSTONE]
 Name = Wasserstein
 NamePlural = Wassersteine
@@ -120,7 +120,7 @@ BPPrice = 5
 FieldUse = OnPokemon
 Flags = EvolutionStone,Fling_30
 Description = Es lassen sich Quaputzi, Muschas, Sterndu, Evoli, Lombrero und Sodamak entwickeln.
-#-------------------------------
+#-------------------------------Shop
 [LEAFSTONE]
 Name = Blattstein
 NamePlural = Blattsteine
@@ -131,7 +131,7 @@ BPPrice = 5
 FieldUse = OnPokemon
 Flags = EvolutionStone,Fling_30
 Description = Es lassen sich Duflor, Ultrigaria, Owei, Evoli, Blanas, Vegimak und Voltobal entwickeln.
-#-------------------------------
+#-------------------------------Shop
 [MOONSTONE]
 Name = Mondstein
 NamePlural = Mondsteine
@@ -142,7 +142,7 @@ BPPrice = 5
 FieldUse = OnPokemon
 Flags = EvolutionStone,Fling_30
 Description = Es lassen sich Nidorino, Nidorina, Piepi, Pummeluff, Eneco und Somniam entwickeln.
-#-------------------------------
+#-------------------------------Shop
 [SUNSTONE]
 Name = Sonnenstein
 NamePlural = Sonnensteine
@@ -153,7 +153,7 @@ BPPrice = 5
 FieldUse = OnPokemon
 Flags = EvolutionStone,Fling_30
 Description = Mit diesem Stein lassen sich Duflor, Sonnkern, Waumboll, Lilminip und Elezard entwickeln.
-#-------------------------------
+#-------------------------------Shop
 [DUSKSTONE]
 Name = Finsterstein
 NamePlural = Finstersteine
@@ -164,7 +164,7 @@ BPPrice = 5
 FieldUse = OnPokemon
 Flags = EvolutionStone,Fling_80
 Description = Es lassen sich Kramurx, Traunfugil, Laternecto und Duokles entwickeln.
-#-------------------------------
+#-------------------------------Shop
 [DAWNSTONE]
 Name = Funkelstein
 NamePlural = Funkelsteine
@@ -175,7 +175,7 @@ BPPrice = 5
 FieldUse = OnPokemon
 Flags = EvolutionStone,Fling_80
 Description = Es lassen sich Kirlia und Schneppke entwickeln.
-#-------------------------------
+#-------------------------------Shop
 [SHINYSTONE]
 Name = Leuchtstein
 NamePlural = Leuchtsteine
@@ -186,7 +186,7 @@ BPPrice = 5
 FieldUse = OnPokemon
 Flags = EvolutionStone,Fling_80
 Description = Es lassen sich Togetic, Roselia, Picochilla und Floette entwickeln.
-#-------------------------------
+#-------------------------------Shop
 [ICESTONE]
 Name = Eisstein
 NamePlural = Eissteine
@@ -197,7 +197,7 @@ BPPrice = 5
 FieldUse = OnPokemon
 Flags = EvolutionStone,Fling_30
 Description = Es lassen sich Krabbox, Flampion, Sandan, Vulpix, Flaniwal und Evoli entwicklen.
-#-------------------------------
+#-------------------------------Besonderer Shop
 [SWEETAPPLE]
 Name = Süßer Apfel
 NamePlural = Süße Äpfel
@@ -208,7 +208,7 @@ BPPrice = 5
 FieldUse = OnPokemon
 Flags = EvolutionStone,Fling_30
 Description = Damit lässt sich Knapfel entwicklen.
-#-------------------------------
+#-------------------------------Besonderer Shop
 [TARTAPPLE]
 Name = Saurer Apfel
 NamePlural = Saure Äpfel
@@ -219,7 +219,7 @@ BPPrice = 5
 FieldUse = OnPokemon
 Flags = EvolutionStone,Fling_30
 Description = Damit lässt sich Knapfel entwicklen.
-#-------------------------------
+#-------------------------------Besonderer Shop
 [CRACKEDPOT]
 Name = Rissige Kanne
 NamePlural = Rissige Kannen
@@ -230,7 +230,7 @@ BPPrice = 5
 FieldUse = OnPokemon
 Flags = EvolutionStone,Fling_80
 Description = Damit lässt sich Fatalitee entwicklen.
-#-------------------------------
+#-------------------------------Besonderer Shop
 [CHIPPEDPOT]
 Name = Löchrige Kanne
 NamePlural = Löchrige Kannen
@@ -241,7 +241,7 @@ BPPrice = 5
 FieldUse = OnPokemon
 Flags = EvolutionStone,Fling_80
 Description = Damit lässt sich Fatalitee entwicklen.
-#-------------------------------
+#-------------------------------Besonderer Shop
 [GALARICACUFF]
 Name = Reife Galarnuss
 NamePlural = Reife Galarnüsse
@@ -252,7 +252,7 @@ BPPrice = 5
 FieldUse = OnPokemon
 Flags = EvolutionStone,Fling_30
 Description = Damit lässt sich Galar-Flegmon entwickeln.
-#-------------------------------
+#-------------------------------Besonderer Shop
 [GALARICAWREATH]
 Name = Galarnusskranz
 NamePlural = Galarnusskränze
@@ -263,7 +263,7 @@ BPPrice = 5
 FieldUse = OnPokemon
 Flags = EvolutionStone,Fling_30
 Description = Damit lässt sich Galar-Flegmon entwickeln.
-#-------------------------------
+#-------------------------------Besonderer Shop
 [REDAPRICORN]
 Name = Rote Aprikoko
 NamePlural = Rote Aprikokos
@@ -271,7 +271,7 @@ Pocket = 1
 Price = 100
 Flags = Apricorn
 Description = Zum herstellen besonderer Pokébälle.
-#-------------------------------
+#-------------------------------Map
 [YELLOWAPRICORN]
 Name = Gelbe Aprikoko
 NamePlural = Gelbe Aprikokos
@@ -279,7 +279,7 @@ Pocket = 1
 Price = 100
 Flags = Apricorn
 Description = Zum herstellen besonderer Pokébälle.
-#-------------------------------
+#-------------------------------Map
 [BLUEAPRICORN]
 Name = Blaue Aprikoko
 NamePlural = Blaue Aprikokos
@@ -287,7 +287,7 @@ Pocket = 1
 Price = 100
 Flags = Apricorn
 Description = Zum herstellen besonderer Pokébälle.
-#-------------------------------
+#-------------------------------Map
 [GREENAPRICORN]
 Name = Grüne Aprikoko
 NamePlural = Grüne Aprikokos
@@ -295,7 +295,7 @@ Pocket = 1
 Price = 100
 Flags = Apricorn
 Description = Zum herstellen besonderer Pokébälle.
-#-------------------------------
+#-------------------------------Map
 [PINKAPRICORN]
 Name = Pinke Aprikoko
 NamePlural = Pinke Aprikokos
@@ -303,7 +303,7 @@ Pocket = 1
 Price = 100
 Flags = Apricorn
 Description = Zum herstellen besonderer Pokébälle.
-#-------------------------------
+#-------------------------------Map
 [WHITEAPRICORN]
 Name = Weiße Aprikoko
 NamePlural = Weiße Aprikokos
@@ -311,7 +311,7 @@ Pocket = 1
 Price = 100
 Flags = Apricorn
 Description = Zum herstellen besonderer Pokébälle.
-#-------------------------------
+#-------------------------------Map
 [BLACKAPRICORN]
 Name = Schwarze Aprikoko
 NamePlural = Schwarze Aprikokos
@@ -319,7 +319,7 @@ Pocket = 1
 Price = 100
 Flags = Apricorn
 Description = Zum herstellen besonderer Pokébälle.
-#-------------------------------
+#-------------------------------Map
 [HELIXFOSSIL]
 Name = Helixfossil
 NamePlural = Helixfossile
@@ -327,7 +327,7 @@ Pocket = 1
 Price = 7000
 Flags = Fossil,Fling_100
 Description = Ein Fossil eines Amonitas.
-#-------------------------------
+#-------------------------------Map
 [DOMEFOSSIL]
 Name = Domfossil
 NamePlural = Domfossile
@@ -335,7 +335,7 @@ Pocket = 1
 Price = 7000
 Flags = Fossil,Fling_100
 Description = Ein Fossil eines Kabuto
-#-------------------------------
+#-------------------------------Map
 [OLDAMBER]
 Name = Altbernstein
 NamePlural = Altbernsteine
@@ -343,7 +343,7 @@ Pocket = 1
 Price = 1000
 Flags = Fossil,Fling_100
 Description = Es kann zu einem Aerodactyl reanimiert werden.
-#-------------------------------
+#-------------------------------Map
 [ROOTFOSSIL]
 Name = Wurzelfossil
 NamePlural = Wurzelfossile
@@ -351,7 +351,7 @@ Pocket = 1
 Price = 7000
 Flags = Fossil,Fling_100
 Description = Ein Fossil eines Liliep.
-#-------------------------------
+#-------------------------------Map
 [CLAWFOSSIL]
 Name = Klauenfossil
 NamePlural = Klauenfossile
@@ -359,7 +359,7 @@ Pocket = 1
 Price = 7000
 Flags = Fossil,Fling_100
 Description = Ein Fossil eines Anorith.
-#-------------------------------
+#-------------------------------Map
 [SKULLFOSSIL]
 Name = Kopffossil
 NamePlural = Kopffossile
@@ -367,7 +367,7 @@ Pocket = 1
 Price = 7000
 Flags = Fossil,Fling_100
 Description = Ein Fossil eines Koknodon.
-#-------------------------------
+#-------------------------------Map
 [ARMORFOSSIL]
 Name = Panzerfossil
 NamePlural = Panzerfossile
@@ -375,7 +375,7 @@ Pocket = 1
 Price = 7000
 Flags = Fossil,Fling_100
 Description = Ein Fossil eines Schilterus.
-#-------------------------------
+#-------------------------------Map
 [COVERFOSSIL]
 Name = Schildfossil
 NamePlural = Schildfossile
@@ -383,7 +383,7 @@ Pocket = 1
 Price = 7000
 Flags = Fossil,Fling_100
 Description = Ein Fossil eines Galapaflos.
-#-------------------------------
+#-------------------------------Map
 [PLUMEFOSSIL]
 Name = Federfossil
 NamePlural = Federfossile
@@ -391,7 +391,7 @@ Pocket = 1
 Price = 7000
 Flags = Fossil,Fling_100
 Description = Ein Fossil eines Flapteryx.
-#-------------------------------
+#-------------------------------Map
 [JAWFOSSIL]
 Name = Kieferfossil
 NamePlural = Kieferfossile
@@ -399,7 +399,7 @@ Pocket = 1
 Price = 7000
 Flags = Fossil,Fling_100
 Description = Ein Fossil eines Balgoras.
-#-------------------------------
+#-------------------------------Map
 [SAILFOSSIL]
 Name = Flossenfossil
 NamePlural = Flossenfossile
@@ -407,7 +407,7 @@ Pocket = 1
 Price = 7000
 Flags = Fossil,Fling_100
 Description = Ein Fossil eines Amarino.
-#-------------------------------
+#-------------------------------Map
 [FOSSILIZEDBIRD]
 Name = Vogelfossil
 NamePlural = Vogelfossile
@@ -415,7 +415,7 @@ Pocket = 1
 Price = 5000
 Flags = Fling_100
 Description = Ein Fossil eines Pokémon.
-#-------------------------------
+#-------------------------------Map
 [FOSSILIZEDFISH]
 Name = Fischfossil
 NamePlural = Fischfossile
@@ -423,7 +423,7 @@ Pocket = 1
 Price = 5000
 Flags = Fling_100
 Description = Ein Fossil eines Pokémon.
-#-------------------------------
+#-------------------------------Map
 [FOSSILIZEDDRAKE]
 Name = Drachenfossil
 NamePlural = Drachenfossile
@@ -431,7 +431,7 @@ Pocket = 1
 Price = 5000
 Flags = Fling_100
 Description = Ein Fossil eines Pokémon.
-#-------------------------------
+#-------------------------------Map
 [FOSSILIZEDDINO]
 Name = Paddelfossil
 NamePlural = Paddelfossile
@@ -439,7 +439,7 @@ Pocket = 1
 Price = 5000
 Flags = Fling_100
 Description = Ein Fossil eines Pokémon.
-#-------------------------------
+#-------------------------------Verkauf
 [PRETTYFEATHER]
 Name = Prachtfeder
 NamePlural = Prachtfedern
@@ -447,7 +447,7 @@ Pocket = 1
 Price = 1000
 Flags = Fling_20
 Description = Eine ganz normale Feder, die rein gar nichts bewirkt. 
-#-------------------------------
+#-------------------------------Verkauf
 [TINYMUSHROOM]
 Name = Minipilz
 NamePlural = Minipilze
@@ -455,7 +455,7 @@ Pocket = 1
 Price = 500
 Flags = Fling_30
 Description = Ein kleiner Pilz, der verkauft werden kann.
-#-------------------------------
+#-------------------------------Verkauf
 [BIGMUSHROOM]
 Name = Riesenpilz
 NamePlural = Riesenpilze
@@ -463,7 +463,7 @@ Pocket = 1
 Price = 5000
 Flags = Fling_30
 Description = Ein großer Pilz, der verkauft werden kann.
-#-------------------------------
+#-------------------------------Verkauf
 [BALMMUSHROOM]
 Name = Duftpilz
 NamePlural = Duftpilze
@@ -471,7 +471,7 @@ Pocket = 1
 Price = 15000
 Flags = Fling_30
 Description = Ein duftender Pilz, der verkauft werden kann.
-#-------------------------------
+#-------------------------------Verkauf
 [PEARL]
 Name = Perle
 NamePlural = Perlen
@@ -479,7 +479,7 @@ Pocket = 1
 Price = 2000
 Flags = Fling_30
 Description = Eine Perle, die verkauft werden kann.
-#-------------------------------
+#-------------------------------Verkauf
 [BIGPEARL]
 Name = Riesenperle
 NamePlural = Riesenperlen
@@ -487,7 +487,7 @@ Pocket = 1
 Price = 8000
 Flags = Fling_30
 Description = Eine große Perle, die verkauft werden kann.
-#-------------------------------
+#-------------------------------Verkauf
 [PEARLSTRING]
 Name = Perlenkette
 NamePlural = Perlenkette
@@ -495,7 +495,7 @@ Pocket = 1
 Price = 20000
 Flags = Fling_30
 Description = Eine Perlenkette, die verkauft werden kann.
-#-------------------------------
+#-------------------------------Verkauf
 [STARDUST]
 Name = Sternenstaub
 NamePlural = Sternenstaub
@@ -503,7 +503,7 @@ Pocket = 1
 Price = 3000
 Flags = Fling_30
 Description = Als Wertgegenstand erfüllt der Sternenstaub keinen anderen Zweck als den Verkauf. 
-#-------------------------------
+#-------------------------------Verkauf
 [STARPIECE]
 Name = Sternenstück
 NamePlural = Sternenstücke
@@ -511,7 +511,7 @@ Pocket = 1
 Price = 12000
 Flags = Fling_30
 Description = Als Wertgegenstand erfüllt das Sternenstück keinen anderen Zweck als den Verkauf.
-#-------------------------------
+#-------------------------------Verkauf
 [COMETSHARD]
 Name = Kometstück
 NamePlural = Kometstücke
@@ -519,7 +519,7 @@ Pocket = 1
 Price = 25000
 Flags = Fling_30
 Description = Als Wertgegenstand erfüllt das Kometstück keinen anderen Zweck als den Verkauf.
-#-------------------------------
+#-------------------------------Verkauf
 [NUGGET]
 Name = Nugget
 NamePlural = Nuggets
@@ -527,7 +527,7 @@ Pocket = 1
 Price = 10000
 Flags = Fling_30
 Description = Es zählt zu den wertvollsten Items überhaupt. 
-#-------------------------------
+#-------------------------------Verkauf
 [BIGNUGGET]
 Name = Riesenugget
 NamePlural = Riesennuggets
@@ -535,7 +535,7 @@ Pocket = 1
 Price = 40000
 Flags = Fling_130
 Description = Es zählt zu den wertvollsten Items überhaupt. 
-#-------------------------------
+#-------------------------------Rezept / Shop / Tausch
 [HEARTSCALE]
 Name = Herzschuppe
 NamePlural = Herzschuppen
@@ -543,14 +543,14 @@ Pocket = 1
 Price = 100
 Flags = Fling_30
 Description = Hübsche Schuppe, höchst begehrt bei Sammlern. 
-#-------------------------------
+#-------------------------------Verkauf
 [SLOWPOKETAIL]
 Name = Flegmon-Rute
 NamePlural = Flegmon-Ruten
 Pocket = 1
 Price = 10000
-Description = A very tasty tail of something. It can be sold at a high price to shops.
-#-------------------------------
+Description = Als Wertgegenstand erfüllt der Steinknochen keinen anderen Zweck als den Verkauf. 
+#-------------------------------Verkauf
 [RAREBONE]
 Name = Steinknochen
 NamePlural = Steinknochen
@@ -558,13 +558,13 @@ Pocket = 1
 Price = 5000
 Flags = Fling_100
 Description = Als Wertgegenstand erfüllt der Steinknochen keinen anderen Zweck als den Verkauf. 
-#-------------------------------
+#-------------------------------Traumwelt
 [MONDSICHEL]
 Name = Mondsichel
 NamePlural = Mondsicheln
 Pocket = 8
 Description = Eine Sichel die Cresselia ähnelt.
-#-------------------------------
+#-------------------------------Verkauf
 [RELICCOPPER]
 Name = Alte Kupfer-Münze
 NamePlural = Alte Kupfer-Münzen
@@ -572,7 +572,7 @@ Pocket = 1
 Price = 1000
 Flags = Fling_30
 Description = Eine antike Münze aus Kupfer.
-#-------------------------------
+#-------------------------------Verkauf
 [RELICSILVER]
 Name = Alte Silber-Münze
 NamePlural = Alte Silber-Münzen
@@ -580,7 +580,7 @@ Pocket = 1
 Price = 5000
 Flags = Fling_30
 Description = Eine antike Münze aus Silber.
-#-------------------------------
+#-------------------------------Verkauf
 [RELICGOLD]
 Name = Alte Gold-Münze
 NamePlural = Alte Gold-Münzen
@@ -588,7 +588,7 @@ Pocket = 1
 Price = 10000
 Flags = Fling_30
 Description = Eine antike Münze aus Gold.
-#-------------------------------
+#-------------------------------Verkauf
 [RELICVASE]
 Name = Antike Vase
 NamePlural = Antike Vasen
@@ -596,7 +596,7 @@ Pocket = 1
 Price = 50000
 Flags = Fling_30
 Description = Eine antike Vase.
-#-------------------------------
+#-------------------------------Verkauf
 [RELICBAND]
 Name = Antiker Armreif
 NamePlural = Anrtike Armreife
@@ -604,7 +604,7 @@ Pocket = 1
 Price = 100000
 Flags = Fling_30
 Description = Einen antiker Armreif.
-#-------------------------------
+#-------------------------------Verkauf
 [RELICSTATUE]
 Name = Antike Statue
 NamePlural = Antike Statuen
@@ -612,7 +612,7 @@ Pocket = 1
 Price = 200000
 Flags = Fling_30
 Description = Eine antike Statue.
-#-------------------------------
+#-------------------------------Verkauf
 [RELICCROWN]
 Name = Antike Krone
 NamePlural = Antike Kronen
@@ -628,7 +628,7 @@ Description = Eine antike Krone.
 #Price = 200
 #Flags = Mulch,Fling_30
 #Description = A fertilizer to be spread on soft soil in regions where Berries are grown. A maniac will buy it for a high price.
-#-------------------------------
+#-------------------------------Verkauf
 [SHOALSALT]
 Name = Küstensalz
 NamePlural = Küstensalz
@@ -636,7 +636,7 @@ Pocket = 1
 Price = 20
 Flags = Fling_30
 Description = Dafür erhält man sicherlich einen guten Preis.
-#-------------------------------
+#-------------------------------Verkauf
 [SHOALSHELL]
 Name = Küstenschale
 NamePlural = Küstenschalen
@@ -644,7 +644,7 @@ Pocket = 1
 Price = 20
 Flags = Fling_30
 Description = Dafür erhält man sicherlich einen guten Preis.
-#-------------------------------
+#-------------------------------Kryppukk Einzigartig
 [ODDKEYSTONE]
 Name = Spiritkern
 NamePlural = Spiritkerne
@@ -652,7 +652,7 @@ Pocket = 1
 Price = 1050
 Flags = Fling_80
 Description = Manchmal erscheinen Stimmen aus dem Spiritkern.
-#-------------------------------
+#-------------------------------Shop
 [REDNECTAR]
 Name = Roter Nektar
 NamePlural = Roter Nektar
@@ -662,7 +662,7 @@ SellPrice = 75
 FieldUse = OnPokemon
 Flags = Fling_10
 Description = Wird der Rote Nektar auf ein Choreogel angewandt, so ändert sich dessen Stil zum Flamenco-Stil. 
-#-------------------------------
+#-------------------------------Shop
 [YELLOWNECTAR]
 Name = Gelber Nektar
 NamePlural = Gelber Nektar
@@ -672,7 +672,7 @@ SellPrice = 75
 FieldUse = OnPokemon
 Flags = Fling_10
 Description = Wird der gelbe Nektar auf ein Choreogel angewandt so, ändert sich dessen Stil zum Cheerleading-Stil. 
-#-------------------------------
+#-------------------------------Shop
 [PINKNECTAR]
 Name = Rosa Nektar
 NamePlural = Rosa Nektar
@@ -682,7 +682,7 @@ SellPrice = 75
 FieldUse = OnPokemon
 Flags = Fling_10
 Description = Wird der rosa Nektar auf ein Choreogel angewandt, so ändert sich dessen Stil zum Hula-Stil. 
-#-------------------------------
+#-------------------------------Shop
 [PURPLENECTAR]
 Name = Purpurner Nektar
 NamePlural = Purpurner Nektar
@@ -692,7 +692,7 @@ SellPrice = 75
 FieldUse = OnPokemon
 Flags = Fling_10
 Description = Wird der purpurne Nektar auf ein Choreogel angewandt, so ändert sich dessen Stil zum Buyo-Stil. 
-#-------------------------------
+#-------------------------------Shop
 [AIRBALLOON]
 Name = Luftballon
 NamePlural = Luftballons
@@ -702,7 +702,7 @@ SellPrice = 3750
 BPPrice = 15
 Flags = Fling_10
 Description = Träger ist immun gegen Bodenattacken sowie Stachler, Klebenetz und Giftspitzen bis der Träger getroffen wurde.
-#-------------------------------
+#-------------------------------Shop
 [BRIGHTPOWDER]
 Name = Blendpuder
 NamePlural = Blendpuder
@@ -712,7 +712,7 @@ SellPrice = 7500
 BPPrice = 48
 Flags = Fling_10
 Description = Senkt die Genauigkeit aller Attacken, die den Träger zum Ziel haben, um 10%.
-#-------------------------------
+#-------------------------------Einzigartig
 [EVIOLITE]
 Name = Evolith
 NamePlural = Evolithe
@@ -722,7 +722,7 @@ SellPrice = 12500
 BPPrice = 25
 Flags = Fling_40
 Description = Der Evolith erhöht Verteidigung und Spezial-Verteidigung eines Pokémon, das sich im jeweiligen Spiel noch entwickeln kann.
-#-------------------------------
+#-------------------------------Einzigartig
 [FLOATSTONE]
 Name = Leichtstein
 NamePlural = Leichsteine
@@ -732,7 +732,7 @@ SellPrice = 2500
 BPPrice = 10
 Flags = Fling_30
 Description = Der Leichtstein halbiert das Gewicht des Trägers.
-#-------------------------------
+#-------------------------------Einzigartig
 [DESTINYKNOT]
 Name = Fatumknoten
 NamePlural = Fatumknoten
@@ -742,7 +742,7 @@ SellPrice = 5000
 BPPrice = 10
 Flags = Fling_10
 Description = Projeziert den Status "Verliebt" auf den Gegner.
-#-------------------------------
+#-------------------------------Einzigartig
 [ROCKYHELMET]
 Name = Beulenhelm
 NamePlural = Beulenhelme
@@ -752,7 +752,7 @@ SellPrice = 12500
 BPPrice = 25
 Flags = Fling_60
 Description = Falls der Träger mit einer Kontaktattacke getroffen wird, wird dem Gegner 1/6 der maximalen KP abgezogen.
-#-------------------------------
+#-------------------------------Einzigartig
 [ASSAULTVEST]
 Name = Offensivweste
 NamePlural = Offensivwesten
@@ -762,7 +762,7 @@ SellPrice = 12500
 BPPrice = 25
 Flags = Fling_80
 Description = Erhöht die Sp. Verteidigung um 50% verhindert aber den Einsatz von Status-Attacken.
-#-------------------------------
+#-------------------------------Einzigartig
 [SAFETYGOGGLES]
 Name = Schutzbrille
 NamePlural = Schutzbrillen
@@ -772,7 +772,7 @@ SellPrice = 5000
 BPPrice = 25
 Flags = Fling_80
 Description = Schützt den Träger vor wetterbedingtem Schaden. Zusätzlich ist der Träger gegen Puder-Attacken immun. 
-#-------------------------------
+#-------------------------------Einzigartig
 [PROTECTIVEPADS]
 Name = Schutzpolster
 NamePlural = Schutzpolster
@@ -782,7 +782,7 @@ SellPrice = 3750
 BPPrice = 25
 Flags = Fling_30
 Description = Schützt vor allen Effekten, die durch Kontakt hervorgerufen werden. 
-#-------------------------------
+#-------------------------------Einzigartig
 [HEAVYDUTYBOOTS]
 Name = Plateauschuhe
 NamePlural = Plateauschuhe
@@ -792,7 +792,7 @@ SellPrice = 5000
 BPPrice = 25
 Flags = Fling_80
 Description = Diese Schuhe schützen vor Tarnsteinen, Giftspitzen, usw...
-#-------------------------------
+#-------------------------------Einzigartig
 [UTILITYUMBRELLA]
 Name = Allzweckschirm
 NamePlural = Allzweckschirme
@@ -802,7 +802,7 @@ SellPrice = 3750
 BPPrice = 25
 Flags = Fling_60
 Description = Attacken der Typen Feuer und Wasser gegen den Träger werden nicht vom Wetter verstärkt oder geschwächt.
-#-------------------------------
+#-------------------------------Einzigartig
 [EJECTBUTTON]
 Name = Fluchtknopf
 NamePlural = Fluchtknöpfe
@@ -812,7 +812,7 @@ SellPrice = 7500
 BPPrice = 20
 Flags = Fling_30
 Description = Wenn der Träger von einer Attacke Schaden nimmt, wird es ausgewechselt.
-#-------------------------------
+#-------------------------------Einzigartig
 [EJECTPACK]
 Name = Fluchttasche
 NamePlural = Fluchttaschen
@@ -822,7 +822,7 @@ SellPrice = 7500
 BPPrice = 20
 Flags = Fling_50
 Description = Wird ein Statuswert des Trägers verringert, wird das Pokémon ausgewechselt.
-#-------------------------------
+#-------------------------------Shop
 [REDCARD]
 Name = Rote Karte
 NamePlural = Rote Karten
@@ -832,7 +832,7 @@ SellPrice = 7500
 BPPrice = 20
 Flags = Fling_10
 Description = Nimmt der Träger Schaden, wird der Gegner ausgewechselt und das Item verbraucht.
-#-------------------------------
+#-------------------------------Einzigartig
 [SHEDSHELL]
 Name = Wechselhülle
 NamePlural = Wechselhüllen
@@ -841,7 +841,7 @@ Price = 20000
 SellPrice = 5000
 Flags = Fling_10
 Description = Mit diesem Item kann der Träger immer aus- und eingetauscht werden.
-#-------------------------------
+#-------------------------------Einzigartig
 [SMOKEBALL]
 Name = Rauchball
 NamePlural = Rauchbälle
@@ -850,7 +850,7 @@ Price = 15000
 SellPrice = 3750
 Flags = Fling_30
 Description = Mit diesem Item kann der Träger immer fliehen.
-#-------------------------------
+#-------------------------------Einzigartig
 [LUCKYEGG]
 Name = Glücks-Ei
 NamePlural = Glücks-Eier
@@ -859,7 +859,7 @@ Price = 5000
 BPPrice = 77
 Flags = Fling_30
 Description = Die Erfahrungspunkte des Trägers werden um 50% erhöht.
-#-------------------------------
+#-------------------------------Einzigartig
 [EXPALL]
 Name = EP-Teiler
 NamePlural = EP-Teiler
@@ -868,7 +868,7 @@ Price = 0
 FieldUse = Direct
 Flags = KeyItem
 Description = Der EP-Teiler ist eingeschaltet. Alle deine Pokémon im Team erhalten EP nach dem Kampf.
-#-------------------------------
+#-------------------------------Einzigartig
 [EXPALLOFF]
 Name = EP-Solo
 NamePlural = EP-Solos
@@ -877,7 +877,7 @@ Price = 0
 FieldUse = Direct
 Flags = KeyItem
 Description = Der EP-Teiler ist ausgeschaltet.
-#-------------------------------
+#-------------------------------Einzigartig
 [AMULETCOIN]
 Name = Münzamulett
 NamePlural = Münzamulette
@@ -885,7 +885,7 @@ Pocket = 1
 Price = 15000
 Flags = Fling_30
 Description = Hat der Träger im Kampf mitgewirkt, erhält der Trainer doppelt so viel Preisgeld.
-#-------------------------------
+#-------------------------------Einzigartig
 [SOOTHEBELL]
 Name = Sanftglocke
 NamePlural = Sanftglocken
@@ -895,7 +895,7 @@ SellPrice = 1250
 BPPrice = 15
 Flags = Fling_10
 Description = Beim Tragen erhöht sich die Freundschaft eines Pokémon um 50 % schneller. 
-#-------------------------------
+#-------------------------------Einzigartig
 [CLEANSETAG]
 Name = Schutzsticker
 NamePlural = Schutzsticker
@@ -903,7 +903,7 @@ Pocket = 1
 Price = 2500
 Flags = Fling_30
 Description = Verringert die Wahrscheinlichkeit auf wilde Pokémon zu stoßen, wenn der Träger an 1. Stelle im Team ist.
-#-------------------------------
+#-------------------------------Einzigartig
 [CHOICEBAND]
 Name = Wahlband
 NamePlural = Wahlbänder
@@ -913,7 +913,7 @@ SellPrice = 25000
 BPPrice = 25
 Flags = Fling_10
 Description = Der Angriff des Trägers wird um 50% erhöht, erlaubt aber nur den Einsatz einer Attacke.
-#-------------------------------
+#-------------------------------Einzigartig
 [CHOICESPECS]
 Name = Wahlbrille
 NamePlural = Wahlbrillen
@@ -923,7 +923,7 @@ SellPrice = 25000
 BPPrice = 25
 Flags = Fling_10
 Description = Der Sp. Angriff des Trägers wird um 50% erhöht, erlaubt aber nur den Einsatz einer Attacke.
-#-------------------------------
+#-------------------------------Einzigartig
 [CHOICESCARF]
 Name = Wahlschal
 NamePlural = Wahlschals
@@ -933,7 +933,7 @@ SellPrice = 25000
 BPPrice = 25
 Flags = Fling_10
 Description = Die Initiative des Trägers wird um 50% erhöht, erlaubt aber nur den Einsatz einer Attacke.
-#-------------------------------
+#-------------------------------Einzigartig
 [HEATROCK]
 Name = Heißbrocken
 NamePlural = Heißbrocken
@@ -943,7 +943,7 @@ SellPrice = 2000
 BPPrice = 15
 Flags = Fling_60
 Description = Verlängert die Wirkung von Sonnentag von 5 auf 8 Runden.
-#-------------------------------
+#-------------------------------Einzigartig
 [DAMPROCK]
 Name = Nassbrocken
 NamePlural = Nassbrocken
@@ -953,7 +953,7 @@ SellPrice = 2000
 BPPrice = 15
 Flags = Fling_60
 Description = Verlängert die Wirkung von Regentanz von 5 auf 8 Runden.
-#-------------------------------
+#-------------------------------Einzigartig
 [SMOOTHROCK]
 Name = Glattbrocken
 NamePlural = Glattbrocken
@@ -963,7 +963,7 @@ SellPrice = 2000
 BPPrice = 15
 Flags = Fling_10
 Description = Verlängert die Wirkung von Sandsturm von 5 auf 8 Runden.
-#-------------------------------
+#-------------------------------Einzigartig
 [ICYROCK]
 Name = Eisbrocken
 NamePlural = Eisbrocken
@@ -973,7 +973,7 @@ SellPrice = 2000
 BPPrice = 15
 Flags = Fling_40
 Description = Verlängert die Wirkung von Hagelsturm von 5 auf 8 Runden.
-#-------------------------------
+#-------------------------------Einzigartig
 [TERRAINEXTENDER]
 Name = Feldbeschichtung
 NamePlural = Feldbeschichtungen
@@ -983,7 +983,7 @@ SellPrice = 3750
 BPPrice = 15
 Flags = Fling_60
 Description = Verlängert die Wirkung von Feld-Attacken und Feld-Fähigkeiten.
-#-------------------------------
+#-------------------------------Einzigartig
 [LIGHTCLAY]
 Name = Lichtlehm
 NamePlural = Lichtlehm
@@ -993,7 +993,7 @@ SellPrice = 5000
 BPPrice = 15
 Flags = Fling_30
 Description = Verlängert die Dauer von Auroraschleier, Lichtschild und Reflektor.
-#-------------------------------
+#-------------------------------Einzigartig
 [GRIPCLAW]
 Name = Griffklaue
 NamePlural = Griffklauen
@@ -1003,7 +1003,7 @@ SellPrice = 2500
 BPPrice = 15
 Flags = Fling_90
 Description = Verlängert die Dauer von Griff-Attacken auf 7.
-#-------------------------------
+#-------------------------------Einzigartig
 [BINDINGBAND]
 Name = Klammerband
 NamePlural = Klammerbänder
@@ -1013,7 +1013,7 @@ SellPrice = 5000
 BPPrice = 15
 Flags = Fling_30
 Description = Der Zusatzeffekt von Klammerattacken verursacht hiermit 1/6 der Gesamt-LP als Schaden.
-#-------------------------------
+#-------------------------------Einzigartig
 [BIGROOT]
 Name = Großwurzel
 NamePlural = Großwurzeln
@@ -1023,7 +1023,7 @@ SellPrice = 2500
 BPPrice = 15
 Flags = Fling_10
 Description = Erhöht die Regeneration von Absorber-Attacken um 30%.
-#-------------------------------
+#-------------------------------Einzigartig
 [BLACKSLUDGE]
 Name = Giftschleim
 NamePlural = Giftschleime
@@ -1033,7 +1033,7 @@ SellPrice = 2500
 BPPrice = 25
 Flags = Fling_30
 Description = Von einem Gift-Pokémon getragen, stellt es 1/16 der Gesamt-LP am Ende einer Runde wieder her.
-#-------------------------------
+#-------------------------------Einzigartig
 [LEFTOVERS]
 Name = Überreste
 NamePlural = Überreste
@@ -1043,7 +1043,7 @@ SellPrice = 5000
 BPPrice = 25
 Flags = Fling_10
 Description = Von einem Pokémon getragen, stellt es 1/16 der Gesamt-LP am Ende einer Runde wieder her.
-#-------------------------------
+#-------------------------------Einzigartig
 [SHELLBELL]
 Name = Muschelglocke
 NamePlural = Muschelglocken
@@ -1053,7 +1053,7 @@ SellPrice = 5000
 BPPrice = 25
 Flags = Fling_30
 Description = Nach einem erfolgreichem Angriff erhält der Träger 1/8 des verursachten Schadens als KP zurück.
-#-------------------------------
+#-------------------------------Shop
 [MENTALHERB]
 Name = Mentalkraut
 NamePlural = Mentalkräuter
@@ -1063,7 +1063,7 @@ SellPrice = 2500
 BPPrice = 15
 Flags = Fling_10
 Description = Erlöst den Träger von dem Aussetzen einer Attacke durch "Blockiert" oder "Zugabe" usw...
-#-------------------------------
+#-------------------------------Shop
 [WHITEHERB]
 Name = Schlohkraut
 NamePlural = Schlohkräuter
@@ -1073,7 +1073,7 @@ SellPrice = 5000
 BPPrice = 15
 Flags = Fling_10
 Description = Stellt alle Wertänderungen im Kampf zurück. Kann nur ein Mal eingesetzt werden.
-#-------------------------------
+#-------------------------------Shop
 [POWERHERB]
 Name = Energiekraut
 NamePlural = Energiekräuter
@@ -1083,7 +1083,7 @@ SellPrice = 7500
 BPPrice = 15
 Flags = Fling_10
 Description = Erlaubt den Angreifer nach Verbrauch des Items zuerst anzugreifen.
-#-------------------------------
+#-------------------------------Shop
 [ABSORBBULB]
 Name = Knolle
 NamePlural = Knollen
@@ -1093,7 +1093,7 @@ SellPrice = 1250
 BPPrice = 10
 Flags = Fling_30
 Description = Der Sp. Angriff wird erhöht, wenn man durch eine Wasser-Attacke Schaden nimmt. Das Item wird Verbraucht.
-#-------------------------------
+#-------------------------------Shop
 [CELLBATTERY]
 Name = Akku
 NamePlural = Akkus
@@ -1103,7 +1103,7 @@ SellPrice = 1250
 BPPrice = 10
 Flags = Fling_30
 Description = Der Angriff wird erhöht, wenn man durch eine Elektro-Attacke Schaden nimmt. Das Item wird Verbraucht.
-#-------------------------------
+#-------------------------------Shop
 [LUMINOUSMOSS]
 Name = Leuchtmoos
 NamePlural = Leuchtmoose
@@ -1113,7 +1113,7 @@ SellPrice = 1250
 BPPrice = 10
 Flags = Fling_30
 Description = Die Sp. Vert. wird erhöht, wenn man durch eine Wasser-Attacke Schaden nimmt. Das Item wird Verbraucht.
-#-------------------------------
+#-------------------------------Shop
 [SNOWBALL]
 Name = Schneeball
 NamePlural = Schneebälle
@@ -1123,7 +1123,7 @@ SellPrice = 1250
 BPPrice = 10
 Flags = Fling_30
 Description = Der Angriff wird erhöht, wenn man durch eine Eis-Attacke Schaden nimmt. Das Item wird Verbraucht.
-#-------------------------------
+#-------------------------------Shop
 [WEAKNESSPOLICY]
 Name = Schwächenschutz
 NamePlural = Schwächenschutze
@@ -1133,7 +1133,7 @@ SellPrice = 12500
 BPPrice = 20
 Flags = Fling_80
 Description = Der Angriff und Sp. Angr. wird stark erhöht, wenn man durch eine sehr effektive Attacke Schaden nimmt. Das Item wird Verbraucht.
-#-------------------------------
+#-------------------------------Einzigartig
 [BLUNDERPOLICY]
 Name = Fehlschlagschutz
 NamePlural = Fehlschlagschutze
@@ -1143,7 +1143,7 @@ SellPrice = 7500
 BPPrice = 20
 Flags = Fling_80
 Description = Wenn eine Attacke aufgrund niedriger Genauigkeit verfehlt, wird die Initiative erhöht.
-#-------------------------------
+#-------------------------------Einzigartig
 [THROATSPRAY]
 Name = Halsspray
 NamePlural = Halsspray
@@ -1153,7 +1153,7 @@ SellPrice = 5000
 BPPrice = 10
 Flags = Fling_30
 Description = Der Sp. Angr. wird erhöht, wenn eine Lärmattacke eingesetzt wird.
-#-------------------------------
+#-------------------------------Einzigartig
 [ADRENALINEORB]
 Name = Zitter-Orb
 NamePlural = Zitter-Orbs
@@ -1164,7 +1164,7 @@ BPPrice = 10
 Flags = Fling_30
 Description = Erhöht die Initiative, wenn es von der Fähigkeit Bedroher getroffen wird.
 BattleUse = Direct
-#-------------------------------
+#-------------------------------Einzigartig
 [ROOMSERVICE]
 Name = Bizarroservice
 NamePlural = Bizarroservices
@@ -1174,7 +1174,7 @@ SellPrice = 5000
 BPPrice = 15
 Flags = Fling_100
 Description = Senkt die Initiative während Bizarroraum aktiv ist.
-#-------------------------------
+#-------------------------------Shop
 [ELECTRICSEED]
 Name = Elektro-Samen
 NamePlural = Elektro-Samen
@@ -1183,7 +1183,7 @@ Price = 20000
 SellPrice = 5000
 Flags = Fling_10
 Description = Erhöht die Verteidigung auf dem Elektro-Terrain. Das Item wird Verbraucht.
-#-------------------------------
+#-------------------------------Shop
 [GRASSYSEED]
 Name = Gras-Samen
 NamePlural = Gras-Samen
@@ -1192,7 +1192,7 @@ Price = 20000
 SellPrice = 5000
 Flags = Fling_10
 Description = Erhöht die Verteidigung auf dem Gras-Terrain. Das Item wird Verbraucht.
-#-------------------------------
+#-------------------------------Shop
 [MISTYSEED]
 Name = Nebel-Samen
 NamePlural = Nebel-Samen
@@ -1201,7 +1201,7 @@ Price = 20000
 SellPrice = 5000
 Flags = Fling_10
 Description = Erhöht die Sp. Verteidigung bei Nebel. Das Item wird Verbraucht.
-#-------------------------------
+#-------------------------------Shop
 [PSYCHICSEED]
 Name = Psycho-Samen
 NamePlural = Psycho-Samen
@@ -1210,7 +1210,7 @@ Price = 20000
 SellPrice = 5000
 Flags = Fling_10
 Description = Erhöht die Sp. Verteidigung auf dem Psycho-Terrain. Das Item wird Verbraucht.
-#-------------------------------
+#-------------------------------Einzigartig
 [LIFEORB]
 Name = Leben-Orb
 NamePlural = Leben-Orbs
@@ -1220,7 +1220,7 @@ SellPrice = 12500
 BPPrice = 25
 Flags = Fling_30
 Description = Verstärkt Attacken um 30%, der Träger erhält 10% Schaden bei jedem Angriff.
-#-------------------------------
+#-------------------------------Einzigartig
 [EXPERTBELT]
 Name = Expertengurt
 NamePlural = Expertengurte
@@ -1230,7 +1230,7 @@ SellPrice = 7500
 BPPrice = 25
 Flags = Fling_10
 Description = Sehr effektive Attacken werden um 20% verstärkt.
-#-------------------------------
+#-------------------------------Einzigartig
 [METRONOME]
 Name = Metronom
 NamePlural = Metronome
@@ -1240,7 +1240,7 @@ SellPrice = 3750
 BPPrice = 25
 Flags = Fling_30
 Description = Verstärkt eine Attacke je öfter sie hintereinander eingesetzt wird (max. 100%).
-#-------------------------------
+#-------------------------------Einzigartig
 [MUSCLEBAND]
 Name = Muskelband
 NamePlural = Muskelbänder
@@ -1250,7 +1250,7 @@ SellPrice = 2000
 BPPrice = 48
 Flags = Fling_10
 Description = Verstärkt physische Attacken um 10%.
-#-------------------------------
+#-------------------------------Einzigartig
 [WISEGLASSES]
 Name = Schlaubrille
 NamePlural = Schlaubrillen
@@ -1260,7 +1260,7 @@ SellPrice = 2000
 BPPrice = 48
 Flags = Fling_10
 Description = Verstärkt spezielle Attacken um 10%.
-#-------------------------------
+#-------------------------------Einzigartig
 [RAZORCLAW]
 Name = Scharfklaue
 NamePlural = Scharfklauen
@@ -1270,7 +1270,7 @@ SellPrice = 3750
 BPPrice = 5
 Flags = Fling_80
 Description = Erhöht die Vollstrefferquote um eine Stufe.
-#-------------------------------
+#-------------------------------Einzigartig
 [SCOPELENS]
 Name = Scope-Linse
 NamePlural = Scope-Linsen
@@ -1280,7 +1280,7 @@ SellPrice = 3750
 BPPrice = 48
 Flags = Fling_30
 Description = Erhöht die Vollstrefferquote um eine Stufe.
-#-------------------------------
+#-------------------------------Einzigartig
 [WIDELENS]
 Name = Großlinse
 NamePlural = Großlinsen
@@ -1290,7 +1290,7 @@ SellPrice = 5000
 BPPrice = 48
 Flags = Fling_10
 Description = Erhöht die Genauigkeit von Attacken um 10%.
-#-------------------------------
+#-------------------------------Einzigartig
 [ZOOMLENS]
 Name = Zoomlinse
 NamePlural = Zoomlinsen
@@ -1300,7 +1300,7 @@ SellPrice = 2500
 BPPrice = 48
 Flags = Fling_10
 Description = Erhöht die Genauigkeit von Attacken um 20%, wenn der Träger nach dem Gegner angreift.
-#-------------------------------
+#-------------------------------Einzigartig (Entwicklung?)
 [KINGSROCK]
 Name = King-Stein
 NamePlural = King-Steine
@@ -1310,7 +1310,7 @@ SellPrice = 2500
 BPPrice = 5
 Flags = Fling_30
 Description = Wenn der Träger Schaden verursacht, könnte der Gegner zurückschrecken.
-#-------------------------------
+#-------------------------------Einzigartig
 [RAZORFANG]
 Name = Scharfzahn
 NamePlural = Razor Fangs
@@ -1320,7 +1320,7 @@ SellPrice = 3750
 BPPrice = 5
 Flags = Fling_30
 Description = Wenn der Träger Schaden verursacht, könnte der Gegner zurückschrecken.
-#-------------------------------
+#-------------------------------Einzigartig
 [LAGGINGTAIL]
 Name = Schwerschweif
 NamePlural = Schwerschweife
@@ -1330,7 +1330,7 @@ SellPrice = 5000
 BPPrice = 25
 Flags = Fling_10
 Description = Reduziert die Priorität aller Attacken um 0,5.
-#-------------------------------
+#-------------------------------Einzigartig
 [QUICKCLAW]
 Name = Flinkklaue
 NamePlural = Flinkklauen
@@ -1340,7 +1340,7 @@ SellPrice = 2000
 BPPrice = 25
 Flags = Fling_80
 Description = Lässt den Träger gelegentlich als erstes Angreifen.
-#-------------------------------
+#-------------------------------Einzigartig
 [FOCUSBAND]
 Name = Fokusband
 NamePlural = Fokusbänder
@@ -1350,7 +1350,7 @@ SellPrice = 2500
 BPPrice = 48
 Flags = Fling_10
 Description = Wenn der Träger einen Treffer erleidet, den es besiegen würde, könnte es zu 10% doch mit 1 LP überleben.
-#-------------------------------
+#-------------------------------Einzigartig
 [FOCUSSASH]
 Name = Fokusgurt
 NamePlural = Fokusgurt
@@ -1360,7 +1360,7 @@ SellPrice = 12500
 BPPrice = 15
 Flags = Fling_10
 Description = Wenn der Träger einen Treffer bei vollen LP erleidet, den es besiegen würde, könnte es zu 10% doch mit 1 LP überleben.
-#-------------------------------
+#-------------------------------Einzigartig
 [FLAMEORB]
 Name = Heiß-Orb
 NamePlural = Heiß-Orbs
@@ -1370,7 +1370,7 @@ SellPrice = 3750
 BPPrice = 16
 Flags = Fling_30
 Description = Setzt den Träger am Ende der Runde in Brand.
-#-------------------------------
+#-------------------------------Einzigartig
 [TOXICORB]
 Name = Toxik-Orb
 NamePlural = Toxik-Orbs
@@ -1380,7 +1380,7 @@ SellPrice = 3750
 BPPrice = 16
 Flags = Fling_30
 Description = Vergiftet den Träger am Ender der Runde schwer.
-#-------------------------------
+#-------------------------------Einzigartig
 [STICKYBARB]
 Name = Klettdorn
 NamePlural = Klettdornen
@@ -1390,7 +1390,7 @@ SellPrice = 2500
 BPPrice = 16
 Flags = Fling_80
 Description = Der Träger erleidet jede Runde Schaden. Wird bei Kontakt auf Gegner übertragen.
-#-------------------------------
+#-------------------------------Einzigartig
 [IRONBALL]
 Name = Eisenkugel
 NamePlural = Eisenkugeln
@@ -1400,7 +1400,7 @@ SellPrice = 5000
 BPPrice = 10
 Flags = Fling_130
 Description = Reduziert die Initiative um 50%. Macht Wind- und Schwebe-Pokémon anfällig für Boden-Attacken usw...
-#-------------------------------
+#-------------------------------Einzigartig
 [RINGTARGET]
 Name = Zielscheibe
 NamePlural = Zielscheiben
@@ -1410,7 +1410,7 @@ SellPrice = 2500
 BPPrice = 10
 Flags = Fling_10
 Description = Der Träger kann von Attacken getroffen werden, die eigentlich keine Wirkung auf ihn haben.
-#-------------------------------
+#-------------------------------Einzigartig
 [MACHOBRACE]
 Name = Machoschiene
 NamePlural = Machoschienen
@@ -1419,7 +1419,7 @@ Price = 3000
 BPPrice = 10
 Flags = Fling_60
 Description = Träger erhält mehr EP, aber seine Initiative wird gesenkt.
-#-------------------------------
+#-------------------------------Einzigartig
 [POWERWEIGHT]
 Name = Kraftgewicht
 NamePlural = Power Weights
@@ -1429,7 +1429,7 @@ SellPrice = 2500
 BPPrice = 10
 Flags = Fling_70
 Description = Träger erhält beim Level-Up mehr LP zurück, aber seine Initiative wird gesenkt.
-#-------------------------------
+#-------------------------------Einzigartig
 [POWERBRACER]
 Name = Kraftreif
 NamePlural = Power Bracers
@@ -1439,7 +1439,7 @@ SellPrice = 2500
 BPPrice = 10
 Flags = Fling_70
 Description = Träger erhält beim Level-Up mehr Attacken-Werte, aber seine Initiative wird gesenkt.
-#-------------------------------
+#-------------------------------Einzigartig
 [POWERBELT]
 Name = Power Belt
 NamePlural = Power Belts
@@ -1449,7 +1449,7 @@ SellPrice = 2500
 BPPrice = 10
 Flags = Fling_70
 Description = Träger erhält beim Level-Up mehr Vert.-Werte, aber seine Initiative wird gesenkt.
-#-------------------------------
+#-------------------------------Einzigartig
 [POWERLENS]
 Name = Power Lens
 NamePlural = Power Lenses
@@ -1459,7 +1459,7 @@ SellPrice = 2500
 BPPrice = 10
 Flags = Fling_70
 Description = Träger erhält beim Level-Up mehr Sp.Ang.-Werte, aber seine Initiative wird gesenkt.
-#-------------------------------
+#-------------------------------Einzigartig
 [POWERBAND]
 Name = Power Band
 NamePlural = Power Bands
@@ -1469,7 +1469,7 @@ SellPrice = 2500
 BPPrice = 10
 Flags = Fling_70
 Description = Träger erhält beim Level-Up mehr Sp.Vert.-Werte, aber seine Initiative wird gesenkt.
-#-------------------------------
+#-------------------------------Einzigartig
 [POWERANKLET]
 Name = Power Anklet
 NamePlural = Power Anklets
@@ -1479,7 +1479,7 @@ SellPrice = 2500
 BPPrice = 10
 Flags = Fling_70
 Description = Träger erhält beim Level-Up mehr Initiative-Werte, aber seine Initiative wird gesenkt.
-#-------------------------------
+#-------------------------------Einzigartig
 [LAXINCENSE]
 Name = Laxrauch
 NamePlural = Laxrauch
@@ -1487,7 +1487,7 @@ Pocket = 1
 Price = 5000
 Flags = Fling_10
 Description = Die Genauigkeit des Gegners sinkt.
-#-------------------------------
+#-------------------------------Einzigartig
 [FULLINCENSE]
 Name = Lahmrauch
 NamePlural = Lahmrauch
@@ -1495,7 +1495,7 @@ Pocket = 1
 Price = 5000
 Flags = Fling_10
 Description = Der Träger wird träge und langsam.
-#-------------------------------
+#-------------------------------Einzigartig
 [LUCKINCENSE]
 Name = Glücksrauch
 NamePlural = Glücksrauch
@@ -1503,7 +1503,7 @@ Pocket = 1
 Price = 11000
 Flags = Fling_10
 Description = Das Preisgeld nach dem Kampf wird verdoppelt, wenn der Träger gekämpft hat.
-#-------------------------------
+#-------------------------------Einzigartig
 [PUREINCENSE]
 Name = Scheuchrauch
 NamePlural = Scheuchrauch
@@ -1511,7 +1511,7 @@ Pocket = 1
 Price = 6000
 Flags = Fling_10
 Description = Wenn der Träger an erster Stelle im Team ist, erscheinen keine wilden Pokémon mehr.
-#-------------------------------
+#-------------------------------Einzigartig
 [SEAINCENSE]
 Name = Seerauch
 NamePlural = Seerauch
@@ -1519,7 +1519,7 @@ Pocket = 1
 Price = 2000
 Flags = Fling_10
 Description = Verstärkt Wasser-Attacken des Trägers.
-#-------------------------------
+#-------------------------------Einzigartig
 [WAVEINCENSE]
 Name = Wellenrauch
 NamePlural = Wellenrauch
@@ -1527,7 +1527,7 @@ Pocket = 1
 Price = 2000
 Flags = Fling_10
 Description = An item to be held by a Pokémon. It has a curious aroma that boosts the power of Water-type moves.
-#-------------------------------
+#-------------------------------Einzigartig
 [ROSEINCENSE]
 Name = Rosenrauch
 NamePlural = Rosenrauch
@@ -1535,7 +1535,7 @@ Pocket = 1
 Price = 2000
 Flags = Fling_10
 Description = Verstärkt Pflanzen-Attacken des Trägers um 20%.
-#-------------------------------
+#-------------------------------Einzigartig
 [ODDINCENSE]
 Name = Schrägrauch
 NamePlural = Schrägrauch
@@ -1543,7 +1543,7 @@ Pocket = 1
 Price = 2000
 Flags = Fling_10
 Description = Verstärkt Psycho-Attacken des Trägers um 20%.
-#-------------------------------
+#-------------------------------Einzigartig
 [ROCKINCENSE]
 Name = Steinrauch
 NamePlural = Steinrauch
@@ -1551,7 +1551,7 @@ Pocket = 1
 Price = 2000
 Flags = Fling_10
 Description = Verstärkt Gestein-Attacken des Trägers um 20%.
-#-------------------------------
+#-------------------------------Einzigartig
 [CHARCOAL]
 Name = Holzkohle
 NamePlural = Holzkohle
@@ -1560,7 +1560,7 @@ Price = 3000
 SellPrice = 750
 Flags = Fling_30
 Description = Verstärkt Feuer-Attacken des Trägers um 20%.
-#-------------------------------
+#-------------------------------Einzigartig
 [MYSTICWATER]
 Name = Zauberwasser
 NamePlural = Zauberwasser
@@ -1569,7 +1569,7 @@ Price = 3000
 SellPrice = 750
 Flags = Fling_30
 Description = Verstärkt Wasser-Attacken des Trägers um 20%.
-#-------------------------------
+#-------------------------------Einzigartig
 [MAGNET]
 Name = Magnet
 NamePlural = Magneten
@@ -1578,7 +1578,7 @@ Price = 3000
 SellPrice = 750
 Flags = Fling_30
 Description = Verstärkt Elektro-Attacken des Trägers um 20%.
-#-------------------------------
+#-------------------------------Einzigartig
 [MIRACLESEED]
 Name = Wundersaat
 NamePlural = Wundersaat
@@ -1587,7 +1587,7 @@ Price = 3000
 SellPrice = 750
 Flags = Fling_30
 Description = Verstärkt Pflanzen-Attacken des Trägers um 20%.
-#-------------------------------
+#-------------------------------Einzigartig
 [NEVERMELTICE]
 Name = Ewiges Eis
 NamePlural = Ewiges Eis
@@ -1596,7 +1596,7 @@ Price = 3000
 SellPrice = 750
 Flags = Fling_30
 Description = Verstärkt Eis-Attacken des Trägers um 20%.
-#-------------------------------
+#-------------------------------Einzigartig
 [BLACKBELT]
 Name = Schwarzgurt
 NamePlural = Schwarzgurte
@@ -1605,7 +1605,7 @@ Price = 3000
 SellPrice = 750
 Flags = Fling_30
 Description = Verstärkt Kampf-Attacken des Trägers um 20%.
-#-------------------------------
+#-------------------------------Einzigartig
 [POISONBARB]
 Name = Giftstich
 NamePlural = Giftstiche
@@ -1614,7 +1614,7 @@ Price = 3000
 SellPrice = 750
 Flags = Fling_70
 Description = Verstärkt Gift-Attacken des Trägers um 20%.
-#-------------------------------
+#-------------------------------Einzigartig
 [SOFTSAND]
 Name = Pudersand
 NamePlural = Pudersand
@@ -1623,7 +1623,7 @@ Price = 3000
 SellPrice = 750
 Flags = Fling_10
 Description = Verstärkt Boden-Attacken des Trägers um 20%.
-#-------------------------------
+#-------------------------------Einzigartig
 [SHARPBEAK]
 Name = Spitzer Schnabel
 NamePlural = Spitze Schnäbel
@@ -1632,7 +1632,7 @@ Price = 3000
 SellPrice = 750
 Flags = Fling_50
 Description = Verstärkt Flug-Attacken des Trägers um 20%.
-#-------------------------------
+#-------------------------------Einzigartig
 [TWISTEDSPOON]
 Name = Krummlöffel
 NamePlural = Krummlöffel
@@ -1641,7 +1641,7 @@ Price = 3000
 SellPrice = 750
 Flags = Fling_30
 Description = Verstärkt Psycho-Attacken des Trägers um 20%.
-#-------------------------------
+#-------------------------------Einzigartig
 [SILVERPOWDER]
 Name = Silberstaub
 NamePlural = Silberstaub
@@ -1650,7 +1650,7 @@ Price = 3000
 SellPrice = 750
 Flags = Fling_10
 Description = Verstärkt Käfer-Attacken des Trägers um 20%.
-#-------------------------------
+#-------------------------------Einzigartig
 [HARDSTONE]
 Name = Granitstein
 NamePlural = Granitsteine
@@ -1659,7 +1659,7 @@ Price = 3000
 SellPrice = 750
 Flags = Fling_100
 Description = Verstärkt Gestein-Attacken des Trägers um 20%.
-#-------------------------------
+#-------------------------------Einzigartig
 [SPELLTAG]
 Name = Bannsticker
 NamePlural = Bannsticker
@@ -1668,7 +1668,7 @@ Price = 3000
 SellPrice = 750
 Flags = Fling_30
 Description = Verstärkt Geist-Attacken des Trägers um 20%.
-#-------------------------------
+#-------------------------------Einzigartig
 [DRAGONFANG]
 Name = Drachenzahn
 NamePlural = Drachenzähne
@@ -1677,7 +1677,7 @@ Price = 3000
 SellPrice = 750
 Flags = Fling_70
 Description = Verstärkt Drachen-Attacken des Trägers um 20%.
-#-------------------------------
+#-------------------------------Einzigartig
 [BLACKGLASSES]
 Name = Schattenbrille
 NamePlural = Schattenbrillen
@@ -1686,7 +1686,7 @@ Price = 3000
 SellPrice = 750
 Flags = Fling_30
 Description = Verstärkt Unlicht-Attacken des Trägers um 20%.
-#-------------------------------
+#-------------------------------Einzigartig
 [METALCOAT]
 Name = Metallmantel
 NamePlural = Metallmäntel
@@ -1696,7 +1696,7 @@ SellPrice = 750
 FieldUse = OnPokemon
 Flags = EvolutionStone,Fling_30
 Description = Verstärkt Stahl-Attacken des Trägers um 20%.
-#-------------------------------
+#-------------------------------Einzigartig
 [SILKSCARF]
 Name = Seidenschal
 NamePlural = Seidenschals
@@ -1705,7 +1705,7 @@ Price = 3000
 SellPrice = 750
 Flags = Fling_10
 Description = Verstärkt Normal-Attacken des Trägers um 20%.
-#-------------------------------
+#-------------------------------Einzigartig
 [FLAMEPLATE]
 Name = Feuertafel
 NamePlural = Feuertafeln
@@ -1714,7 +1714,7 @@ Price = 10000
 SellPrice = 500
 Flags = Fling_90
 Description = Verstärkt Feuer-Attacken des Trägers um 20%.
-#-------------------------------
+#-------------------------------Einzigartig
 [SPLASHPLATE]
 Name = Wassertafel
 NamePlural = Wassertafeln
@@ -1723,7 +1723,7 @@ Price = 10000
 SellPrice = 500
 Flags = Fling_90
 Description = Verstärkt Wasser-Attacken des Trägers um 20%.
-#-------------------------------
+#-------------------------------Einzigartig
 [ZAPPLATE]
 Name = Blitztafel
 NamePlural = Blitztafeln
@@ -1732,7 +1732,7 @@ Price = 10000
 SellPrice = 500
 Flags = Fling_90
 Description = Verstärkt Elektro-Attacken des Trägers um 20%.
-#-------------------------------
+#-------------------------------Einzigartig
 [MEADOWPLATE]
 Name = Wiesentafel
 NamePlural = Wiesentafeln
@@ -1741,7 +1741,7 @@ Price = 10000
 SellPrice = 500
 Flags = Fling_90
 Description = Verstärkt Pflanzen-Attacken des Trägers um 20%.
-#-------------------------------
+#-------------------------------Einzigartig
 [ICICLEPLATE]
 Name = Frosttafel
 NamePlural = Frosttafeln
@@ -1750,7 +1750,7 @@ Price = 10000
 SellPrice = 500
 Flags = Fling_90
 Description = Verstärkt Eis-Attacken des Trägers um 20%.
-#-------------------------------
+#-------------------------------Einzigartig
 [FISTPLATE]
 Name = Fausttafel
 NamePlural = Fausttafeln
@@ -1759,7 +1759,7 @@ Price = 10000
 SellPrice = 500
 Flags = Fling_90
 Description = Verstärkt Kampf-Attacken des Trägers um 20%.
-#-------------------------------
+#-------------------------------Einzigartig
 [TOXICPLATE]
 Name = Gifttafel
 NamePlural = Gifttafeln
@@ -1768,7 +1768,7 @@ Price = 10000
 SellPrice = 500
 Flags = Fling_90
 Description = Verstärkt Gift-Attacken des Trägers um 20%.
-#-------------------------------
+#-------------------------------Einzigartig
 [EARTHPLATE]
 Name = Erdtafel
 NamePlural = Erdtafeln
@@ -1777,7 +1777,7 @@ Price = 10000
 SellPrice = 500
 Flags = Fling_90
 Description = Verstärkt Boden-Attacken des Trägers um 20%.
-#-------------------------------
+#-------------------------------Einzigartig
 [SKYPLATE]
 Name = Wolkentafel
 NamePlural = Wolkentafeln
@@ -1786,7 +1786,7 @@ Price = 10000
 SellPrice = 500
 Flags = Fling_90
 Description = Verstärkt Flug-Attacken des Trägers um 20%.
-#-------------------------------
+#-------------------------------Einzigartig
 [MINDPLATE]
 Name = Hirntafel
 NamePlural = Hirntafeln
@@ -1795,7 +1795,7 @@ Price = 10000
 SellPrice = 500
 Flags = Fling_90
 Description = Verstärkt Psycho-Attacken des Trägers um 20%.
-#-------------------------------
+#-------------------------------Einzigartig
 [INSECTPLATE]
 Name = Käfertafel
 NamePlural = Käfertafeln
@@ -1804,7 +1804,7 @@ Price = 10000
 SellPrice = 500
 Flags = Fling_90
 Description = Verstärkt Käfer-Attacken des Trägers um 20%.
-#-------------------------------
+#-------------------------------Einzigartig
 [STONEPLATE]
 Name = Steintafel
 NamePlural = Steintafeln
@@ -1813,7 +1813,7 @@ Price = 10000
 SellPrice = 500
 Flags = Fling_90
 Description = Verstärkt Gestein-Attacken des Trägers um 20%.
-#-------------------------------
+#-------------------------------Einzigartig
 [SPOOKYPLATE]
 Name = Spuktafel
 NamePlural = Spuktafeln
@@ -1822,7 +1822,7 @@ Price = 10000
 SellPrice = 500
 Flags = Fling_90
 Description = Verstärkt Geist-Attacken des Trägers um 20%.
-#-------------------------------
+#-------------------------------Einzigartig
 [DRACOPLATE]
 Name = Dracotafel
 NamePlural = Dracotafeln
@@ -1831,7 +1831,7 @@ Price = 10000
 SellPrice = 500
 Flags = Fling_90
 Description = Verstärkt Drachen-Attacken des Trägers um 20%.
-#-------------------------------
+#-------------------------------Einzigartig
 [DREADPLATE]
 Name = Furchttafel
 NamePlural = Furchttafeln
@@ -1840,7 +1840,7 @@ Price = 10000
 SellPrice = 500
 Flags = Fling_90
 Description = Verstärkt Unlicht-Attacken des Trägers um 20%.
-#-------------------------------
+#-------------------------------Einzigartig
 [IRONPLATE]
 Name = Eisentafel
 NamePlural = Eisentafeln
@@ -1849,7 +1849,7 @@ Price = 10000
 SellPrice = 500
 Flags = Fling_90
 Description = Verstärkt Stahl-Attacken des Trägers um 20%.
-#-------------------------------
+#-------------------------------Einzigartig
 [PIXIEPLATE]
 Name = Feentafel
 NamePlural = Feentafeln
@@ -1858,7 +1858,7 @@ Price = 10000
 SellPrice = 500
 Flags = Fling_90
 Description = Verstärkt Fee-Attacken des Trägers um 20%.
-#-------------------------------
+#-------------------------------Shop
 [FIREGEM]
 Name = Feuerjuwel
 NamePlural = Feuerjuwelen
@@ -1866,7 +1866,7 @@ Pocket = 1
 Price = 4000
 Flags = TypeGem
 Description = Verstärkt einmalig eine Attacke vom Typ Feuer und wird dabei verbraucht.
-#-------------------------------
+#-------------------------------Shop
 [WATERGEM]
 Name = Wasserjuwel
 NamePlural = Wasserjuwelen
@@ -1874,7 +1874,7 @@ Pocket = 1
 Price = 4000
 Flags = TypeGem
 Description = Verstärkt einmalig eine Attacke vom Typ Wasser und wird dabei verbraucht.
-#-------------------------------
+#-------------------------------Shop
 [ELECTRICGEM]
 Name = Elektrojuwel
 NamePlural = Elektrojuwelen
@@ -1882,7 +1882,7 @@ Pocket = 1
 Price = 4000
 Flags = TypeGem
 Description = Verstärkt einmalig eine Attacke vom Typ Elektro und wird dabei verbraucht.
-#-------------------------------
+#-------------------------------Shop
 [GRASSGEM]
 Name = Pflanzenjuwel
 NamePlural = Pflanzenjuwelen
@@ -1890,7 +1890,7 @@ Pocket = 1
 Price = 4000
 Flags = TypeGem
 Description = Verstärkt einmalig eine Attacke vom Typ Pflanze und wird dabei verbraucht.
-#-------------------------------
+#-------------------------------Shop
 [ICEGEM]
 Name = Eisjuwel
 NamePlural = Eisjuwelen
@@ -1898,7 +1898,7 @@ Pocket = 1
 Price = 4000
 Flags = TypeGem
 Description = Verstärkt einmalig eine Attacke vom Typ Eis und wird dabei verbraucht.
-#-------------------------------
+#-------------------------------Shop
 [FIGHTINGGEM]
 Name = Kampfjuwel
 NamePlural = Kampfjuwelen
@@ -1906,7 +1906,7 @@ Pocket = 1
 Price = 4000
 Flags = TypeGem
 Description = Verstärkt einmalig eine Attacke vom Typ Kampf und wird dabei verbraucht.
-#-------------------------------
+#-------------------------------Shop
 [POISONGEM]
 Name = Giftjuwel
 NamePlural = Giftjuwelen
@@ -1914,7 +1914,7 @@ Pocket = 1
 Price = 4000
 Flags = TypeGem
 Description = Verstärkt einmalig eine Attacke vom Typ Gift und wird dabei verbraucht.
-#-------------------------------
+#-------------------------------Shop
 [GROUNDGEM]
 Name = Bodenjuwel
 NamePlural = Bodenjuwelen
@@ -1922,7 +1922,7 @@ Pocket = 1
 Price = 4000
 Flags = TypeGem
 Description = Verstärkt einmalig eine Attacke vom Typ Boden und wird dabei verbraucht.
-#-------------------------------
+#-------------------------------Shop
 [FLYINGGEM]
 Name = Flugjuwel
 NamePlural = Flugjuwelen
@@ -1930,7 +1930,7 @@ Pocket = 1
 Price = 4000
 Flags = TypeGem
 Description = Verstärkt einmalig eine Attacke vom Typ Wind und wird dabei verbraucht.
-#-------------------------------
+#-------------------------------Shop
 [PSYCHICGEM]
 Name = Psychojuwel
 NamePlural = Psychojuwelen
@@ -1938,7 +1938,7 @@ Pocket = 1
 Price = 4000
 Flags = TypeGem
 Description = Verstärkt einmalig eine Attacke vom Typ Psycho und wird dabei verbraucht.
-#-------------------------------
+#-------------------------------Shop
 [BUGGEM]
 Name = Käferjuwel
 NamePlural = Käferjuwelen
@@ -1946,7 +1946,7 @@ Pocket = 1
 Price = 4000
 Flags = TypeGem
 Description = Verstärkt einmalig eine Attacke vom Typ Käfer und wird dabei verbraucht.
-#-------------------------------
+#-------------------------------Shop
 [ROCKGEM]
 Name = Gesteinsjuwel
 NamePlural = Gesteinsjuwelen
@@ -1954,7 +1954,7 @@ Pocket = 1
 Price = 4000
 Flags = TypeGem
 Description = Verstärkt einmalig eine Attacke vom Typ Gestein und wird dabei verbraucht.
-#-------------------------------
+#-------------------------------Shop
 [GHOSTGEM]
 Name = Geisterjuwel
 NamePlural = Geisterjuwelen
@@ -1962,7 +1962,7 @@ Pocket = 1
 Price = 4000
 Flags = TypeGem
 Description = Verstärkt einmalig eine Attacke vom Typ Geist und wird dabei verbraucht.
-#-------------------------------
+#-------------------------------Shop
 [DRAGONGEM]
 Name = Drakojuwel
 NamePlural = Drakojuwelen
@@ -1970,7 +1970,7 @@ Pocket = 1
 Price = 4000
 Flags = TypeGem
 Description = Verstärkt einmalig eine Attacke vom Typ Drache und wird dabei verbraucht.
-#-------------------------------
+#-------------------------------Shop
 [DARKGEM]
 Name = Unlichtjuwel
 NamePlural = Unlichtjuwelen
@@ -1978,7 +1978,7 @@ Pocket = 1
 Price = 4000
 Flags = TypeGem
 Description = Verstärkt einmalig eine Attacke vom Typ Unlicht und wird dabei verbraucht.
-#-------------------------------
+#-------------------------------Shop
 [STEELGEM]
 Name = Stahljuwel
 NamePlural = Stahljuwelen
@@ -1986,7 +1986,7 @@ Pocket = 1
 Price = 4000
 Flags = TypeGem
 Description = Verstärkt einmalig eine Attacke vom Typ Stahl und wird dabei verbraucht.
-#-------------------------------
+#-------------------------------Shop
 [FAIRYGEM]
 Name = Feenjuwel
 NamePlural = Feenjuwelen
@@ -1994,7 +1994,7 @@ Pocket = 1
 Price = 4000
 Flags = TypeGem
 Description = Verstärkt einmalig eine Attacke vom Typ Fee und wird dabei verbraucht.
-#-------------------------------
+#-------------------------------Shop
 [NORMALGEM]
 Name = Normaljuwel
 NamePlural = Normaljuwelen
@@ -2003,7 +2003,7 @@ Price = 15000
 SellPrice = 3750
 Flags = TypeGem
 Description = Verstärkt einmalig eine Attacke vom Typ Normal und wird dabei verbraucht.
-#-------------------------------
+#-------------------------------Einzigartig
 [LIGHTBALL]
 Name = Light Ball
 NamePlural = Light Balls
@@ -2011,7 +2011,7 @@ Pocket = 1
 Price = 500
 Flags = Fling_30
 Description = Erhöht den Angriff und Sp. Angriff bei Pikachu.
-#-------------------------------
+#-------------------------------Einzigartig
 [LUCKYPUNCH]
 Name = Lucky Punch
 NamePlural = Lucky Punches
@@ -2020,7 +2020,7 @@ Price = 1000
 BPPrice = 7
 Flags = Fling_40
 Description = Erhöht die Wahrscheinlichkeit, dass Chaneira einen Volltreffer landet um zwei Stufen. 
-#-------------------------------
+#-------------------------------Einzigartig
 [METALPOWDER]
 Name = Metallstaub
 NamePlural = Metallstaub
@@ -2028,7 +2028,7 @@ Pocket = 1
 Price = 1000
 Flags = Fling_10
 Description = Erhöht die Verteidigung und die Spezial-Verteidigung von Ditto um jeweils 50%.
-#-------------------------------
+#-------------------------------Einzigartig
 [QUICKPOWDER]
 Name = Flottstaub
 NamePlural = Flottstaub
@@ -2036,7 +2036,7 @@ Pocket = 1
 Price = 1000
 Flags = Fling_10
 Description = Verdoppelt die Initiative von Ditto. Es wird rückgängig gemacht, sobald es sich verwandelt.
-#-------------------------------
+#-------------------------------Einzigartig
 [THICKCLUB]
 Name = Kampfknochen
 NamePlural = Kampfknochen
@@ -2044,7 +2044,7 @@ Pocket = 1
 Price = 1000
 Flags = Fling_90
 Description = Verdoppelt den Angriff von Tragosso und Knogga solange er getragen wird.
-#-------------------------------
+#-------------------------------Einzigartig
 [LEEK]
 Name = Lauchstange
 NamePlural = Lauchstangen
@@ -2052,7 +2052,7 @@ Pocket = 1
 Price = 1000
 Flags = Fling_60
 Description = Erhöht die Wahrscheinlichkeit, dass Porenta und Lauchzelot einen Volltreffer landen, um zwei Stufen. 
-#-------------------------------
+#-------------------------------Einzigartig
 [SOULDEW]
 Name = Seelentau
 NamePlural = Seelentauen
@@ -2060,7 +2060,7 @@ Pocket = 1
 Price = 0
 Flags = Fling_30
 Description = Hebt Spezial-Angriff und Spezial-Verteidigung von Latios und Latias um 50%.
-#-------------------------------
+#-------------------------------Shop
 [DEEPSEATOOTH]
 Name = Abysszahn
 NamePlural = Abysszähne
@@ -2069,7 +2069,7 @@ Price = 2000
 BPPrice = 5
 Flags = Fling_90
 Description = Damit kann Perlu sich entwickeln.
-#-------------------------------
+#-------------------------------Shop
 [DEEPSEASCALE]
 Name = Abyssschuppe
 NamePlural = Abyssschuppen
@@ -2078,216 +2078,187 @@ Price = 2000
 BPPrice = 5
 Flags = Fling_30
 Description = Damit kann Perlu sich entwickeln.
-#-------------------------------
+#-------------------------------Einzigartig
 [ADAMANTORB]
 Name = Adamant-Orb
 NamePlural = Adamant-Orbs
 Pocket = 1
-Price = 10000
-SellPrice = 0
 Flags = Fling_60
 Description = Trägt Dialga dieses Item, werden seine Stahl- und Drachen-Attacken um 20 % verstärkt.
-#-------------------------------
+#-------------------------------Einzigartig
 [LUSTROUSORB]
 Name = Weiß-Orb
 NamePlural = Weiß-Orbs
 Pocket = 1
-Price = 10000
-SellPrice = 0
 Flags = Fling_60
 Description = Trägt Palkia dieses Item, werden seine Wasser- und Drachen-Attacken um 20 % verstärkt.
-#-------------------------------
+#-------------------------------Einzigartig
 [GRISEOUSORB]
 Name = Platinum-Orb
 NamePlural = Platinum-Orbs
 Pocket = 1
-Price = 10000
-SellPrice = 0
 Flags = Fling_60
 Description = Trägt Giratina dieses Item, werden seine Drachen- und Geist-Attacken um 20 % verstärkt.
-#-------------------------------
+#-------------------------------Einzigartig
 [RUSTEDSWORD]
 Name = Rostiges Schwert
 NamePlural = Rostige Schwerter
 Pocket = 1
-Price = 0
 Description = Hält Zacian das Schwert im Kampf, wechselt es seine Form.
-#-------------------------------
+#-------------------------------Einzigartig
 [RUSTEDSHIELD]
 Name = Rostiger Schild
 NamePlural = Rostige Schilde
 Pocket = 1
-Price = 0
 Description = Hält Zamazenta das Schild im Kampf, wechselt es seine Form.
-#-------------------------------
+#-------------------------------Einzigartig
 [DOUSEDRIVE]
 Name = Aquamodul
 NamePlural = Aquamodule
 Pocket = 1
-Price = 0
 Flags = Fling_70
 Description = Es ändert den Typ von Techblaster in Wasser, wenn es von Genesect getragen wird. 
-#-------------------------------
+#-------------------------------Einzigartig
 [SHOCKDRIVE]
 Name = Blitzmodul
 NamePlural = Blitzmodule
 Pocket = 1
-Price = 0
 Flags = Fling_70
 Description = Es ändert den Typ von Techblaster in Elektro, wenn es von Genesect getragen wird. 
-#-------------------------------
+#-------------------------------Einzigartig
 [BURNDRIVE]
 Name = Flammenmodul
 NamePlural = Flammenmodule
 Pocket = 1
-Price = 0
 Flags = Fling_70
 Description = Es ändert den Typ von Techblaster in Feuer, wenn es von Genesect getragen wird. 
-#-------------------------------
+#-------------------------------Einzigartig
 [CHILLDRIVE]
 Name = Gefriermodul
 NamePlural = Gefriermodule
 Pocket = 1
-Price = 0
 Flags = Fling_70
 Description = Es ändert den Typ von Techblaster in Eis, wenn es von Genesect getragen wird. 
-#-------------------------------
+#-------------------------------Einzigartig
 [FIREMEMORY]
 Name = Feuer-Disc
 NamePlural = Feuer-Discs
 Pocket = 1
-Price = 1000
 Flags = Fling_50
 Description = Ändert den Typen von Amigento und seine Attacke Multi-Angriff zu Feuer.
-#-------------------------------
+#-------------------------------Einzigartig
 [WATERMEMORY]
 Name = Wasser-Disc
 NamePlural = Wasser-Discs
 Pocket = 1
-Price = 1000
 Flags = Fling_50
 Description = Ändert den Typen von Amigento und seine Attacke Multi-Angriff zu Wasser.
-#-------------------------------
+#-------------------------------Einzigartig
 [ELECTRICMEMORY]
 Name = Elektro-Disc
 NamePlural = Elektro-Discs
 Pocket = 1
-Price = 1000
 Flags = Fling_50
 Description = Ändert den Typen von Amigento und seine Attacke Multi-Angriff zu Elektro.
-#-------------------------------
+#-------------------------------Einzigartig
 [GRASSMEMORY]
 Name = Pflanzen-Disc
 NamePlural = Pflanzen-Discs
 Pocket = 1
-Price = 1000
 Flags = Fling_50
 Description = Ändert den Typen von Amigento und seine Attacke Multi-Angriff zu Pflanze.
-#-------------------------------
+#-------------------------------Einzigartig
 [ICEMEMORY]
 Name = Eis-Disc
 NamePlural = Eis-Discs
 Pocket = 1
-Price = 1000
 Flags = Fling_50
 Description = Ändert den Typen von Amigento und seine Attacke Multi-Angriff zu Eis.
-#-------------------------------
+#-------------------------------Einzigartig
 [FIGHTINGMEMORY]
 Name = Kampf-Disc
 NamePlural = Kampf-Discs
 Pocket = 1
-Price = 1000
 Flags = Fling_50
 Description = Ändert den Typen von Amigento und seine Attacke Multi-Angriff zu Kampf.
-#-------------------------------
+#-------------------------------Einzigartig
 [POISONMEMORY]
 Name = Gift-Disc
 NamePlural = Gift-Discs
 Pocket = 1
-Price = 1000
 Flags = Fling_50
 Description = Ändert den Typen von Amigento und seine Attacke Multi-Angriff zu Gift.
-#-------------------------------
+#-------------------------------Einzigartig
 [GROUNDMEMORY]
 Name = Boden-Disc
 NamePlural = Boden-Discs
 Pocket = 1
-Price = 1000
 Flags = Fling_50
 Description = Ändert den Typen von Amigento und seine Attacke Multi-Angriff zu Boden.
-#-------------------------------
+#-------------------------------Einzigartig
 [FLYINGMEMORY]
 Name = Wind-Disc
 NamePlural = Wind-Discs
 Pocket = 1
-Price = 1000
 Flags = Fling_50
 Description = Ändert den Typen von Amigento und seine Attacke Multi-Angriff zu Wind.
-#-------------------------------
+#-------------------------------Einzigartig
 [PSYCHICMEMORY]
 Name = Psycho-Disc
 NamePlural = Psycho-Discs
 Pocket = 1
-Price = 1000
 Flags = Fling_50
 Description = Ändert den Typen von Amigento und seine Attacke Multi-Angriff zu Psycho.
-#-------------------------------
+#-------------------------------Einzigartig
 [BUGMEMORY]
 Name = Käfer-Disc
 NamePlural = Käfer-Disc
 Pocket = 1
-Price = 1000
 Flags = Fling_50
 Description = Ändert den Typen von Amigento und seine Attacke Multi-Angriff zu Käfer.
-#-------------------------------
+#-------------------------------Einzigartig
 [ROCKMEMORY]
 Name = Gesteins-Disc
 NamePlural = Gesteins-Discs
 Pocket = 1
-Price = 1000
 Flags = Fling_50
 Description = Ändert den Typen von Amigento und seine Attacke Multi-Angriff zu Gestein.
-#-------------------------------
+#-------------------------------Einzigartig
 [GHOSTMEMORY]
 Name = Geister-Disc
 NamePlural = Geister-Discs
 Pocket = 1
-Price = 1000
 Flags = Fling_50
 Description = Ändert den Typen von Amigento und seine Attacke Multi-Angriff zu Geist.
-#-------------------------------
+#-------------------------------Einzigartig
 [DRAGONMEMORY]
 Name = Drachen-Disc
 NamePlural = Drachen-Discs
 Pocket = 1
-Price = 1000
 Flags = Fling_50
 Description = Ändert den Typen von Amigento und seine Attacke Multi-Angriff zu Drache.
-#-------------------------------
+#-------------------------------Einzigartig
 [DARKMEMORY]
 Name = Unlicht-Disc
 NamePlural = Unlicht-Discs
 Pocket = 1
-Price = 1000
 Flags = Fling_50
 Description = Ändert den Typen von Amigento und seine Attacke Multi-Angriff zu Unlicht.
-#-------------------------------
+#-------------------------------Einzigartig
 [STEELMEMORY]
 Name = Stahl-Disc
 NamePlural = Stahl-Discs
 Pocket = 1
-Price = 1000
 Flags = Fling_50
 Description = Ändert den Typen von Amigento und seine Attacke Multi-Angriff zu Stahl.
-#-------------------------------
+#-------------------------------Einzigartig
 [FAIRYMEMORY]
 Name = Feen-Disc
 NamePlural = Feen-Discs
 Pocket = 1
-Price = 1000
 Flags = Fling_50
 Description = Ändert den Typen von Amigento und seine Attacke Multi-Angriff zu Fee.
-#-------------------------------
+#-------------------------------Shop
 [EVERSTONE]
 Name = Ewigstein
 NamePlural = Ewigsteine
@@ -2297,7 +2268,7 @@ SellPrice = 750
 BPPrice = 5
 Flags = Fling_30
 Description = Ein Item zum Tragen. Es bewirkt einen Entwicklungsstopp.
-#-------------------------------
+#-------------------------------Shop (spät)
 [DRAGONSCALE]
 Name = Drachenschuppe
 NamePlural = Drachenschuppen
@@ -2307,7 +2278,7 @@ SellPrice = 750
 BPPrice = 5
 Flags = Fling_30
 Description = Damit lässt sich Seemon entwickeln.
-#-------------------------------
+#-------------------------------Shop (spät)
 [UPGRADE]
 Name = Upgrade
 NamePlural = Upgrades
@@ -2317,7 +2288,7 @@ SellPrice = 750
 BPPrice = 5
 Flags = Fling_30
 Description = Ein Upgrade für Porygon, damit es sich entwickeln kann.
-#-------------------------------
+#-------------------------------Shop (spät)
 [DUBIOUSDISC]
 Name = Dubiosdisc
 NamePlural = Dubiosdiscs
@@ -2327,7 +2298,7 @@ SellPrice = 750
 BPPrice = 5
 Flags = Fling_50
 Description = Ein Upgrade für Porygon2, damit es sich entwickeln kann.
-#-------------------------------
+#-------------------------------Shop (spät)
 [PROTECTOR]
 Name = Schützer
 NamePlural = Schützer
@@ -2337,7 +2308,7 @@ SellPrice = 750
 BPPrice = 5
 Flags = Fling_80
 Description = Damit lässt sich Rizeros entwickeln.
-#-------------------------------
+#-------------------------------Shop (spät)
 [ELECTIRIZER]
 Name = Stromisierer
 NamePlural = Stromisierer
@@ -2347,7 +2318,7 @@ SellPrice = 750
 BPPrice = 5
 Flags = Fling_80
 Description = Damit lässt sich Elektek entwickeln.
-#-------------------------------
+#-------------------------------Shop (spät)
 [MAGMARIZER]
 Name = Magmaisierer
 NamePlural = Magmaisierer
@@ -2357,7 +2328,7 @@ SellPrice = 750
 BPPrice = 5
 Flags = Fling_80
 Description = Damit lässt sich Magmar entwickeln.
-#-------------------------------
+#-------------------------------Shop (spät)
 [REAPERCLOTH]
 Name = Düsterumhang
 NamePlural = Düsterumhänge
@@ -2368,7 +2339,7 @@ BPPrice = 5
 FieldUse = OnPokemon
 Flags = EvolutionStone,Fling_30
 Description = Damit lässt sich Zwirrklop entwickeln.
-#-------------------------------
+#-------------------------------Shop (spät)
 [PRISMSCALE]
 Name = Schönschuppe
 NamePlural = Schönschuppen
@@ -2378,7 +2349,7 @@ SellPrice = 750
 BPPrice = 10
 Flags = Fling_30
 Description = Damit lässt sich Barschwa entwickeln.
-#-------------------------------
+#-------------------------------Shop (spät)
 [OVALSTONE]
 Name = Ovaler Stein
 NamePlural = Ovale Steine
@@ -2388,7 +2359,7 @@ SellPrice = 500
 BPPrice = 5
 Flags = Fling_80
 Description = Wonneira lässt sich tagsüber entwickeln, wenn es dieses Item trägt und ein Level steigt.
-#-------------------------------
+#-------------------------------Shop
 [WHIPPEDDREAM]
 Name = WSahnehäubchen
 NamePlural = Sahnehäubchen
@@ -2398,7 +2369,7 @@ SellPrice = 750
 BPPrice = 5
 Flags = Fling_80
 Description = Damit lässt sich Flauschling entwickeln.
-#-------------------------------
+#-------------------------------Shop
 [SACHET]
 Name = Duftbeutel
 NamePlural = Duftbeutel
@@ -2408,7 +2379,7 @@ SellPrice = 750
 BPPrice = 5
 Flags = Fling_80
 Description = Damit lässt sich Parfi entwickeln.
-#-------------------------------
+#-------------------------------Shop
 [STRAWBERRYSWEET]
 Name = Zucker-Erdbeere
 NamePlural = Zucker-Erdbeeren
@@ -2417,7 +2388,7 @@ Price = 500
 BPPrice = 5
 Flags = Fling_10
 Description = Wird die Zucker-Erdbeere von einem Hokumil getragen, ist es möglich, dieses zu einem Pokusan zu entwickeln. 
-#-------------------------------
+#-------------------------------Shop
 [LOVESWEET]
 Name = Zucker-Herz
 NamePlural = Zucker-Herzen
@@ -2426,7 +2397,7 @@ Price = 500
 BPPrice = 5
 Flags = Fling_10
 Description = Wird das Zucker-Herz von einem Hokumil getragen, ist es möglich, dieses zu einem Pokusan zu entwickeln. 
-#-------------------------------
+#-------------------------------Shop
 [BERRYSWEET]
 Name = Zucker-Beere
 NamePlural = Zucker-Beere
@@ -2435,7 +2406,7 @@ Price = 500
 BPPrice = 5
 Flags = Fling_10
 Description = Wird die Zucker-Beere von einem Hokumil getragen, ist es möglich, dieses zu einem Pokusan zu entwickeln. 
-#-------------------------------
+#-------------------------------Shop
 [CLOVERSWEET]
 Name = Zucker-Kleeblatt
 NamePlural = Zucker-Kleeblätter
@@ -2444,7 +2415,7 @@ Price = 500
 BPPrice = 5
 Flags = Fling_10
 Description = Wird das Zucker-Kleeblatt von einem Hokumil getragen, ist es möglich, dieses zu einem Pokusan zu entwickeln. 
-#-------------------------------
+#-------------------------------Shop
 [FLOWERSWEET]
 Name = Zucker-Blume
 NamePlural = Zucker-Blumen
@@ -2453,7 +2424,7 @@ Price = 500
 BPPrice = 5
 Flags = Fling_10
 Description = Wird die Zucker-Blume von einem Hokumil getragen, ist es möglich, dieses zu einem Pokusan zu entwickeln. 
-#-------------------------------
+#-------------------------------Shop
 [STARSWEET]
 Name = Star Sweet
 NamePlural = Star Sweets
@@ -2462,7 +2433,7 @@ Price = 500
 BPPrice = 5
 Flags = Fling_10
 Description = Wird die Zucker-Beere von einem Hokumil getragen, ist es möglich, dieses zu einem Pokusan zu entwickeln. 
-#-------------------------------
+#-------------------------------Shop
 [RIBBONSWEET]
 Name = Zucker-Stern
 NamePlural = Zucker-Sterne
@@ -2471,7 +2442,7 @@ Price = 500
 BPPrice = 5
 Flags = Fling_10
 Description = Wird der Zucker-Stern von einem Hokumil getragen, ist es möglich, dieses zu einem Pokusan zu entwickeln. 
-#-------------------------------
+#-------------------------------Einzigartig
 [VENUSAURITEX]
 Name = Bisaflornit X
 NamePlural = Bisaflornite X
@@ -2480,7 +2451,7 @@ Price = 10000
 BPPrice = 50
 Flags = MegaStone,Fling_80
 Description = Dieser Stein ermöglicht Bisaflor eine Mega-Entwicklung.
-#-------------------------------
+#-------------------------------Einzigartig
 [VENUSAURITEY]
 Name = Bisaflornit Y
 NamePlural = Bisaflornite Y
@@ -2489,7 +2460,7 @@ Price = 10000
 BPPrice = 50
 Flags = MegaStone,Fling_80
 Description = Dieser Stein ermöglicht Bisaflor eine Mega-Entwicklung.
-#-------------------------------
+#-------------------------------Einzigartig
 [CHARIZARDITEX]
 Name = Gluraknit X
 NamePlural = Gluraknite X
@@ -2498,7 +2469,7 @@ Price = 10000
 BPPrice = 50
 Flags = MegaStone,Fling_80
 Description = Dieser Stein ermöglicht Glurak eine Mega-Entwicklung.
-#-------------------------------
+#-------------------------------Einzigartig
 [CHARIZARDITEY]
 Name = Gluraknit Y
 NamePlural = Gluraknite Y
@@ -2507,7 +2478,7 @@ Price = 10000
 BPPrice = 50
 Flags = MegaStone,Fling_80
 Description = Dieser Stein ermöglicht Glurak eine Mega-Entwicklung.
-#-------------------------------
+#-------------------------------Einzigartig
 [CHARIZARDITEZ]
 Name = Gluraknit Z
 NamePlural = Gluraknite Z
@@ -2516,7 +2487,7 @@ Price = 10000
 BPPrice = 50
 Flags = MegaStone,Fling_80
 Description = Dieser Stein ermöglicht Glurak eine Mega-Entwicklung.
-#-------------------------------
+#-------------------------------Einzigartig
 [BLASTOISINITEX]
 Name = Turtoknit X
 NamePlural = Turtoknite X
@@ -2525,7 +2496,7 @@ Price = 10000
 BPPrice = 50
 Flags = MegaStone,Fling_80
 Description = Dieser Stein ermöglicht Turtok eine Mega-Entwicklung.
-#-------------------------------
+#-------------------------------Einzigartig
 [BLASTOISINITEY]
 Name = Turtoknit Y
 NamePlural = Turtoknite Y
@@ -2534,7 +2505,7 @@ Price = 10000
 BPPrice = 50
 Flags = MegaStone,Fling_80
 Description = Dieser Stein ermöglicht Turtok eine Mega-Entwicklung.
-#-------------------------------
+#-------------------------------Einzigartig
 [BEEDRILLITE]
 Name = Bibornit
 NamePlural = Bibornite
@@ -2543,7 +2514,7 @@ Price = 10000
 BPPrice = 50
 Flags = MegaStone,Fling_80
 Description = Dieser Stein ermöglicht Bibor eine Mega-Entwicklung.
-#-------------------------------
+#-------------------------------Einzigartig
 [PIDGEOTITE]
 Name = Taubossnit
 NamePlural = Taubossnite
@@ -2552,7 +2523,7 @@ Price = 10000
 BPPrice = 50
 Flags = MegaStone,Fling_80
 Description = Dieser Stein ermöglicht Tauboss eine Mega-Entwicklung.
-#-------------------------------
+#-------------------------------Einzigartig
 [ALAKAZITE]
 Name = Simsalanit
 NamePlural = Simsalanite
@@ -2561,7 +2532,7 @@ Price = 10000
 BPPrice = 50
 Flags = MegaStone,Fling_80
 Description = Dieser Stein ermöglicht Simsala eine Mega-Entwicklung.
-#-------------------------------
+#-------------------------------Einzigartig
 [SLOWBRONITE]
 Name = Lahmusnit
 NamePlural = Lahmusnite
@@ -2570,7 +2541,7 @@ Price = 10000
 BPPrice = 50
 Flags = MegaStone,Fling_80
 Description = Dieser Stein ermöglicht Lahmus eine Mega-Entwicklung.
-#-------------------------------
+#-------------------------------Einzigartig
 [GENGARITE]
 Name = Gengarnit
 NamePlural = Gengarnite
@@ -2579,7 +2550,7 @@ Price = 10000
 BPPrice = 50
 Flags = MegaStone,Fling_80
 Description = Dieser Stein ermöglicht Gengar eine Mega-Entwicklung.
-#-------------------------------
+#-------------------------------Einzigartig
 [KANGASKHANITE]
 Name = Kangamanit
 NamePlural = Kangamanite
@@ -2588,7 +2559,7 @@ Price = 10000
 BPPrice = 50
 Flags = MegaStone,Fling_80
 Description = Dieser Stein ermöglicht Kangama eine Mega-Entwicklung.
-#-------------------------------
+#-------------------------------Einzigartig
 [PINSIRITE]
 Name = Pinsirnit
 NamePlural = Pinsirnite
@@ -2597,7 +2568,7 @@ Price = 10000
 BPPrice = 50
 Flags = MegaStone,Fling_80
 Description = Dieser Stein ermöglicht Pinsir eine Mega-Entwicklung.
-#-------------------------------
+#-------------------------------Einzigartig
 [GYARADOSITE]
 Name = Garadosnit
 NamePlural = Garadosnite
@@ -2606,7 +2577,7 @@ Price = 10000
 BPPrice = 50
 Flags = MegaStone,Fling_80
 Description = Dieser Stein ermöglicht Garados eine Mega-Entwicklung.
-#-------------------------------
+#-------------------------------Einzigartig
 [TORNUPTONITX]
 Name = Tornuptonit X
 NamePlural = Tornuptonite X
@@ -2615,7 +2586,7 @@ Price = 10000
 BPPrice = 50
 Flags = MegaStone,Fling_80
 Description = Dieser Stein ermöglicht Tornupto eine Mega-Entwicklung.
-#-------------------------------
+#-------------------------------Einzigartig
 [AERODACTYLITE]
 Name = Aerodactylonit
 NamePlural = Aerodactylonite
@@ -2624,7 +2595,7 @@ Price = 10000
 BPPrice = 50
 Flags = MegaStone,Fling_80
 Description = Dieser Stein ermöglicht Aerodactyl eine Mega-Entwicklung.
-#-------------------------------
+#-------------------------------Einzigartig
 [MEWTWONITEX]
 Name = Mewtunit X
 NamePlural = Mewtunite X
@@ -2633,7 +2604,7 @@ Price = 10000
 BPPrice = 50
 Flags = MegaStone,Fling_80
 Description = Dieser Stein ermöglicht Mewtu eine Mega-Entwicklung.
-#-------------------------------
+#-------------------------------Einzigartig
 [MEWTWONITEY]
 Name = Mewtunit Y
 NamePlural = Mewtunite Y
@@ -2642,7 +2613,7 @@ Price = 10000
 BPPrice = 50
 Flags = MegaStone,Fling_80
 Description = Dieser Stein ermöglicht Mewtu eine Mega-Entwicklung.
-#-------------------------------
+#-------------------------------Einzigartig
 [AMPHAROSITE]
 Name = Ampharosnit
 NamePlural = Ampharosnite
@@ -2651,7 +2622,7 @@ Price = 10000
 BPPrice = 50
 Flags = MegaStone,Fling_80
 Description = Dieser Stein ermöglicht Ampharos eine Mega-Entwicklung.
-#-------------------------------
+#-------------------------------Einzigartig
 [STEELIXITEX]
 Name = Stahlosnit X
 NamePlural = Stahlosnite X
@@ -2660,7 +2631,7 @@ Price = 10000
 BPPrice = 50
 Flags = MegaStone,Fling_80
 Description = Dieser Stein ermöglicht Stahlos eine Mega-Entwicklung.
-#-------------------------------
+#-------------------------------Einzigartig
 [STEELIXITEY]
 Name = Stahlosnit Y
 NamePlural = Stahlosnite Y
@@ -2669,7 +2640,7 @@ Price = 10000
 BPPrice = 50
 Flags = MegaStone,Fling_80
 Description = Dieser Stein ermöglicht Stahlos eine Mega-Entwicklung.
-#-------------------------------
+#-------------------------------Einzigartig
 [SCIZORITE]
 Name = Scheroxnit
 NamePlural = Scheroxnite
@@ -2678,7 +2649,7 @@ Price = 10000
 BPPrice = 50
 Flags = MegaStone,Fling_80
 Description = Dieser Stein ermöglicht Scherox eine Mega-Entwicklung.
-#-------------------------------
+#-------------------------------Einzigartig
 [HERACRONITE]
 Name = Skarabornit
 NamePlural = Skarabornite
@@ -2687,7 +2658,7 @@ Price = 10000
 BPPrice = 50
 Flags = MegaStone,Fling_80
 Description = Dieser Stein ermöglicht Skaraborn eine Mega-Entwicklung.
-#-------------------------------
+#-------------------------------Einzigartig
 [HOUNDOOMINITE]
 Name = Hundemonit
 NamePlural = Hundemonite
@@ -2696,7 +2667,7 @@ Price = 10000
 BPPrice = 50
 Flags = MegaStone,Fling_80
 Description = Dieser Stein ermöglicht Hundemon eine Mega-Entwicklung.
-#-------------------------------
+#-------------------------------Einzigartig
 [TYRANITARITE]
 Name = Despotarnit
 NamePlural = Despotarnite
@@ -2705,7 +2676,7 @@ Price = 10000
 BPPrice = 50
 Flags = MegaStone,Fling_80
 Description = Dieser Stein ermöglicht Despotar eine Mega-Entwicklung.
-#-------------------------------
+#-------------------------------Einzigartig
 [SCEPTILITE]
 Name = Gewaldronit
 NamePlural = Gewaldronite
@@ -2714,7 +2685,7 @@ Price = 10000
 BPPrice = 50
 Flags = MegaStone,Fling_80
 Description = Dieser Stein ermöglicht Gewaldro eine Mega-Entwicklung.
-#-------------------------------
+#-------------------------------Einzigartig
 [BLAZIKENITE]
 Name = Lohgocknit
 NamePlural = Lohgocknite
@@ -2723,7 +2694,7 @@ Price = 10000
 BPPrice = 50
 Flags = MegaStone,Fling_80
 Description = Dieser Stein ermöglicht Lohgock eine Mega-Entwicklung.
-#-------------------------------
+#-------------------------------Einzigartig
 [SWAMPERTITE]
 Name = Sumpexnit
 NamePlural = Sumpexnite
@@ -2732,7 +2703,7 @@ Price = 10000
 BPPrice = 50
 Flags = MegaStone,Fling_80
 Description = Dieser Stein ermöglicht Sumpex eine Mega-Entwicklung.
-#-------------------------------
+#-------------------------------Einzigartig
 [GARDEVOIRITE]
 Name = Guardevoirnit
 NamePlural = Guardevoirnite
@@ -2741,7 +2712,7 @@ Price = 10000
 BPPrice = 50
 Flags = MegaStone,Fling_80
 Description = Dieser Stein ermöglicht Guardevoir eine Mega-Entwicklung.
-#-------------------------------
+#-------------------------------Einzigartig
 [SABLENITE]
 Name = Zobirisnit
 NamePlural = Zobirisnite
@@ -2750,7 +2721,7 @@ Price = 10000
 BPPrice = 50
 Flags = MegaStone,Fling_80
 Description = Dieser Stein ermöglicht Zobiris eine Mega-Entwicklung.
-#-------------------------------
+#-------------------------------Einzigartig
 [MAWILITE]
 Name = Flunkifernit
 NamePlural = Flunkifernite
@@ -2759,7 +2730,7 @@ Price = 10000
 BPPrice = 50
 Flags = MegaStone,Fling_80
 Description = Dieser Stein ermöglicht Flunkifer eine Mega-Entwicklung.
-#-------------------------------
+#-------------------------------Einzigartig
 [AGGRONITE]
 Name = Stollossnit
 NamePlural = Stollossnite
@@ -2768,7 +2739,7 @@ Price = 10000
 BPPrice = 50
 Flags = MegaStone,Fling_80
 Description = Dieser Stein ermöglicht Stollos eine Mega-Entwicklung.
-#-------------------------------
+#-------------------------------Einzigartig
 [MEDICHAMITE]
 Name = Meditalisnit
 NamePlural = Meditalisnite
@@ -2777,7 +2748,7 @@ Price = 10000
 BPPrice = 50
 Flags = MegaStone,Fling_80
 Description = Dieser Stein ermöglicht Meditalis eine Mega-Entwicklung.
-#-------------------------------
+#-------------------------------Einzigartig
 [MANECTITE]
 Name = Voltensonit
 NamePlural = Voltensonite
@@ -2786,7 +2757,7 @@ Price = 10000
 BPPrice = 50
 Flags = MegaStone,Fling_80
 Description = Dieser Stein ermöglicht Voltenso eine Mega-Entwicklung.
-#-------------------------------
+#-------------------------------Einzigartig
 [SHARPEDONITE]
 Name = Tohaidonit
 NamePlural = Tohaidonite
@@ -2795,7 +2766,7 @@ Price = 10000
 BPPrice = 50
 Flags = MegaStone,Fling_80
 Description = Dieser Stein ermöglicht Tohaido eine Mega-Entwicklung.
-#-------------------------------
+#-------------------------------Einzigartig
 [CAMERUPTITE]
 Name = Cameruptnit
 NamePlural = Cameruptnite
@@ -2804,7 +2775,7 @@ Price = 10000
 BPPrice = 50
 Flags = MegaStone,Fling_80
 Description = Dieser Stein ermöglicht Camerupt eine Mega-Entwicklung.
-#-------------------------------
+#-------------------------------Einzigartig
 [ALTARIANITE]
 Name = Altarianit X
 NamePlural = Altarianite X
@@ -2813,7 +2784,7 @@ Price = 10000
 BPPrice = 50
 Flags = MegaStone,Fling_80
 Description = Dieser Stein ermöglicht Altaria eine Mega-Entwicklung.
-#-------------------------------
+#-------------------------------Einzigartig
 [ALTARIANITE2]
 Name = Altarianit Y
 NamePlural = Altarianite Y
@@ -2822,7 +2793,7 @@ Price = 10000
 BPPrice = 50
 Flags = MegaStone,Fling_80
 Description = Dieser Stein ermöglicht Altaria eine Mega-Entwicklung.
-#-------------------------------
+#-------------------------------Einzigartig
 [BANETTITE]
 Name = Banettenit
 NamePlural = Banettenite
@@ -2831,7 +2802,7 @@ Price = 10000
 BPPrice = 50
 Flags = MegaStone,Fling_80
 Description = Dieser Stein ermöglicht Banette eine Mega-Entwicklung.
-#-------------------------------
+#-------------------------------Einzigartig
 [ABSOLITE]
 Name = Absolnit
 NamePlural = Absolnite
@@ -2840,7 +2811,7 @@ Price = 10000
 BPPrice = 50
 Flags = MegaStone,Fling_80
 Description = Dieser Stein ermöglicht Absol eine Mega-Entwicklung.
-#-------------------------------
+#-------------------------------Einzigartig
 [GLALITITE]
 Name = Firnontornit
 NamePlural = Firnontornite
@@ -2849,7 +2820,7 @@ Price = 10000
 BPPrice = 50
 Flags = MegaStone,Fling_80
 Description = Dieser Stein ermöglicht Firnontor eine Mega-Entwicklung.
-#-------------------------------
+#-------------------------------Einzigartig
 [SALAMENCITE]
 Name = Brutalandanit
 NamePlural = Brutalandanite
@@ -2858,7 +2829,7 @@ Price = 10000
 BPPrice = 50
 Flags = MegaStone,Fling_80
 Description = Dieser Stein ermöglicht Brutalanda eine Mega-Entwicklung.
-#-------------------------------
+#-------------------------------Einzigartig
 [METAGROSSITE]
 Name = Metagrossnit
 NamePlural = Metagrossnite
@@ -2867,7 +2838,7 @@ Price = 10000
 BPPrice = 50
 Flags = MegaStone,Fling_80
 Description = Dieser Stein ermöglicht Metagross eine Mega-Entwicklung.
-#-------------------------------
+#-------------------------------Einzigartig
 [METAGROSSITE2]
 Name = Metagrossnit2
 NamePlural = Metagrossnite2
@@ -2876,7 +2847,7 @@ Price = 10000
 BPPrice = 50
 Flags = MegaStone,Fling_80
 Description = Dieser Stein ermöglicht Metagross eine Mega-Entwicklung.
-#-------------------------------
+#-------------------------------Einzigartig
 [LATIASITE]
 Name = Latiasnit
 NamePlural = Latiasnite
@@ -2885,7 +2856,7 @@ Price = 10000
 BPPrice = 50
 Flags = MegaStone,Fling_80
 Description = Dieser Stein ermöglicht Latias eine Mega-Entwicklung.
-#-------------------------------
+#-------------------------------Einzigartig
 [LATIOSITE]
 Name = Latiosnit
 NamePlural = Latiosnite
@@ -2894,7 +2865,7 @@ Price = 10000
 BPPrice = 50
 Flags = MegaStone,Fling_80
 Description = Dieser Stein ermöglicht Latios eine Mega-Entwicklung.
-#-------------------------------
+#-------------------------------Einzigartig
 [LOPUNNITE]
 Name = Schlapornit
 NamePlural = Schlapornite
@@ -2903,7 +2874,7 @@ Price = 10000
 BPPrice = 50
 Flags = MegaStone,Fling_80
 Description = Dieser Stein ermöglicht Schlapor eine Mega-Entwicklung.
-#-------------------------------
+#-------------------------------Einzigartig
 [GARCHOMPITE]
 Name = Knakracknit
 NamePlural = Knakracknite
@@ -2912,7 +2883,7 @@ Price = 10000
 BPPrice = 50
 Flags = MegaStone,Fling_80
 Description = Dieser Stein ermöglicht Knakrack eine Mega-Entwicklung.
-#-------------------------------
+#-------------------------------Einzigartig
 [LUCARIONITE]
 Name = Lucarionit
 NamePlural = Lucarionite
@@ -2921,7 +2892,7 @@ Price = 10000
 BPPrice = 50
 Flags = MegaStone,Fling_80
 Description = Dieser Stein ermöglicht Lucario eine Mega-Entwicklung.
-#-------------------------------
+#-------------------------------Einzigartig
 [ABOMASITE]
 Name = Rexblisarnit
 NamePlural = Rexblisarnite
@@ -2930,7 +2901,7 @@ Price = 10000
 BPPrice = 50
 Flags = MegaStone,Fling_80
 Description = Dieser Stein ermöglicht Rexblisar eine Mega-Entwicklung.
-#-------------------------------
+#-------------------------------Einzigartig
 [GALLADITE]
 Name = Galagladinit
 NamePlural = Galagladinite
@@ -2939,7 +2910,7 @@ Price = 10000
 BPPrice = 50
 Flags = MegaStone,Fling_80
 Description = Dieser Stein ermöglicht Galagladi eine Mega-Entwicklung.
-#-------------------------------
+#-------------------------------Einzigartig
 [AUDINITE]
 Name = Ohrdochnit
 NamePlural = Ohrdochnite
@@ -2948,7 +2919,7 @@ Price = 10000
 BPPrice = 50
 Flags = MegaStone,Fling_80
 Description = Dieser Stein ermöglicht Ohrdoch eine Mega-Entwicklung.
-#-------------------------------
+#-------------------------------Einzigartig
 [DIANCITE]
 Name = Diancienit
 NamePlural = Diancienite
@@ -2957,7 +2928,7 @@ Price = 10000
 BPPrice = 50
 Flags = MegaStone,Fling_80
 Description = Dieser Stein ermöglicht Diancie eine Mega-Entwicklung.
-#-------------------------------
+#-------------------------------Einzigartig
 [INFERNAPENITE]
 Name = Panfernonit
 NamePlural = Panfernonite
@@ -2966,7 +2937,7 @@ Price = 10000
 BPPrice = 50
 Flags = MegaStone,Fling_80
 Description = Dieser Stein ermöglicht Panferno eine Mega-Entwicklung.
-#-------------------------------
+#-------------------------------Einzigartig
 [REDORB]
 Name = Roter Edelstein
 NamePlural = Rote Edelsteine
@@ -2975,7 +2946,7 @@ Price = 10000
 SellPrice = 0
 BPPrice = 50
 Description = Wird der Rote Edelstein von Groudon getragen, führt dieses eine Protomorphose durch.
-#-------------------------------
+#-------------------------------Einzigartig
 [BLUEORB]
 Name = Blauer Edelstein
 NamePlural = Blaue Edelsteine
@@ -2984,7 +2955,7 @@ Price = 10000
 SellPrice = 0
 BPPrice = 50
 Description = Wird der Blaue Edelstein von Kyogre getragen, führt dieses eine Protomorphose durch.
-#-------------------------------
+#-------------------------------Shop
 [POTION]
 Name = Trank
 NamePlural = Tränke
@@ -2995,7 +2966,7 @@ FieldUse = OnPokemon
 BattleUse = OnPokemon
 Flags = Fling_30
 Description = Füllt 20 LP sofort wieder auf, ohne Nebeneffekte.
-#-------------------------------
+#-------------------------------Shop
 [SUPERPOTION]
 Name = Supertrank
 NamePlural = Supertränke
@@ -3006,7 +2977,7 @@ FieldUse = OnPokemon
 BattleUse = OnPokemon
 Flags = Fling_30
 Description = Füllt 60 LP sofort wieder auf, ist aber etwas bitter.
-#-------------------------------
+#-------------------------------Shop
 [HYPERPOTION]
 Name = Hypertrank
 NamePlural = Hypertränke
@@ -3017,7 +2988,7 @@ FieldUse = OnPokemon
 BattleUse = OnPokemon
 Flags = Fling_30
 Description = Füllt 120 LP sofort wieder auf, ohne Nebeneffekte.
-#-------------------------------
+#-------------------------------Shop
 [MAXPOTION]
 Name = Top-Trank
 NamePlural = Top-Tränke
@@ -3029,7 +3000,7 @@ FieldUse = OnPokemon
 BattleUse = OnPokemon
 Flags = Fling_30
 Description = Füllt die LP vollständig wieder auf.
-#-------------------------------
+#-------------------------------Shop
 [FULLRESTORE]
 Name = Top-Genesung
 NamePlural = Top-Genesung
@@ -3040,7 +3011,7 @@ FieldUse = OnPokemon
 BattleUse = OnPokemon
 Flags = Fling_30
 Description = Füllt die LP eines Pokémon vollständig auf und befreit es von sämtlichen Statusproblemen. 
-#-------------------------------
+#-------------------------------Einzigartig / Wenig
 [SACREDASH]
 Name = Zauberasche
 NamePlural = Zauberasche
@@ -3049,7 +3020,7 @@ Price = 50000
 FieldUse = Direct
 Flags = Fling_30
 Description = Heilt das gesamt Team vollständig und wird dabei verbraucht.
-#-------------------------------
+#-------------------------------Shop
 [AWAKENING]
 Name = Aufwecker
 NamePlural = Aufwecker
@@ -3060,7 +3031,7 @@ FieldUse = OnPokemon
 BattleUse = OnPokemon
 Flags = Fling_30
 Description = Kann unterwegs Pokémon aufwecken.
-#-------------------------------
+#-------------------------------Shop
 [ANTIDOTE]
 Name = Gegengift
 NamePlural = Gegengifte
@@ -3071,7 +3042,7 @@ FieldUse = OnPokemon
 BattleUse = OnPokemon
 Flags = Fling_30
 Description = Kann unterwegs Pokémon von Vergiftung befreien.
-#-------------------------------
+#-------------------------------Shop
 [BURNHEAL]
 Name = Feuerheiler
 NamePlural = Feuerheiler
@@ -3082,7 +3053,7 @@ FieldUse = OnPokemon
 BattleUse = OnPokemon
 Flags = Fling_30
 Description = Kann unterwegs Pokémon von Verbrennung befreien.
-#-------------------------------
+#-------------------------------Shop
 [PARALYZEHEAL]
 Name = Paraheiler
 NamePlural = Paraheiler
@@ -3093,7 +3064,7 @@ FieldUse = OnPokemon
 BattleUse = OnPokemon
 Flags = Fling_30
 Description = Kann unterwegs Pokémon von Paralyse befreien.
-#-------------------------------
+#-------------------------------Shop
 [ICEHEAL]
 Name = Eisheiler
 NamePlural = Eisheiler
@@ -3104,7 +3075,7 @@ FieldUse = OnPokemon
 BattleUse = OnPokemon
 Flags = Fling_30
 Description = Kann unterwegs Pokémon auftauen.
-#-------------------------------
+#-------------------------------Shop
 [FULLHEAL]
 Name = Hyperheiler
 NamePlural = Hyperheiler
@@ -3115,7 +3086,7 @@ FieldUse = OnPokemon
 BattleUse = OnPokemon
 Flags = Fling_30
 Description = Kann jedes Statusproblem eines Pokémon heilen.
-#-------------------------------
+#-------------------------------Besonderer Shop
 [PEWTERCRUNCHIES]
 Name = Marmoria-Kräcker
 NamePlural = Marmoria-Kräcker
@@ -3125,7 +3096,7 @@ FieldUse = OnPokemon
 BattleUse = OnPokemon
 Flags = Fling_30
 Description = Kann jedes Statusproblem eines Pokémon heilen.
-#-------------------------------
+#-------------------------------Besonderer Shop
 [RAGECANDYBAR]
 Name = Wutkeks
 NamePlural = Wutkekse
@@ -3135,7 +3106,7 @@ FieldUse = OnPokemon
 BattleUse = OnPokemon
 Flags = Fling_30
 Description = Kann jedes Statusproblem eines Pokémon heilen.
-#-------------------------------
+#-------------------------------Besonderer Shop
 [LAVACOOKIE]
 Name = Lavakeks
 NamePlural = Lavakekse
@@ -3145,7 +3116,7 @@ FieldUse = OnPokemon
 BattleUse = OnPokemon
 Flags = Fling_30
 Description = Kann jedes Statusproblem eines Pokémon heilen.
-#-------------------------------
+#-------------------------------Besonderer Shop
 [OLDGATEAU]
 Name = Spezialität
 NamePlural = Spezialitäten
@@ -3155,7 +3126,7 @@ FieldUse = OnPokemon
 BattleUse = OnPokemon
 Flags = Fling_30
 Description = Kann jedes Statusproblem eines Pokémon heilen.
-#-------------------------------
+#-------------------------------Besonderer Shop
 [CASTELIACONE]
 Name = Stratos-Eis
 NamePlural = Stratos-Eis
@@ -3165,7 +3136,7 @@ FieldUse = OnPokemon
 BattleUse = OnPokemon
 Flags = Fling_30
 Description = Kann jedes Statusproblem eines Pokémon heilen.
-#-------------------------------
+#-------------------------------Besonderer Shop
 [LUMIOSEGALETTE]
 Name = Illumina-Galette
 NamePlural = Illumina-Galetten
@@ -3175,7 +3146,7 @@ FieldUse = OnPokemon
 BattleUse = OnPokemon
 Flags = Fling_30
 Description = Kann jedes Statusproblem eines Pokémon heilen.
-#-------------------------------
+#-------------------------------Besonderer Shop
 [SHALOURSABLE]
 Name = Yantara-Sablé
 NamePlural = Yantara-Sablés
@@ -3185,7 +3156,7 @@ FieldUse = OnPokemon
 BattleUse = OnPokemon
 Flags = Fling_30
 Description = Kann jedes Statusproblem eines Pokémon heilen.
-#-------------------------------
+#-------------------------------Besonderer Shop
 [BIGDA]
 Name = Maxi-Malasada
 NamePlural = Maxi-Malasadas
@@ -3195,7 +3166,7 @@ FieldUse = OnPokemon
 BattleUse = OnPokemon
 Flags = Fling_30
 Description = Kann jedes Statusproblem eines Pokémon heilen.
-#-------------------------------
+#-------------------------------Shop
 [REVIVE]
 Name = Beleber
 NamePlural = Beleber
@@ -3206,7 +3177,7 @@ FieldUse = OnPokemon
 BattleUse = OnPokemon
 Flags = Fling_30
 Description = Ein besiegtes Pokémon erhält 50% der Gesamt-LP zurück.
-#-------------------------------
+#-------------------------------Map
 [MAXREVIVE]
 Name = Top-Beleber
 NamePlural = Top-Beleber
@@ -3217,7 +3188,7 @@ FieldUse = OnPokemon
 BattleUse = OnPokemon
 Flags = Fling_30
 Description = Ein besiegtes Pokémon wird vollständig geheilt.
-#-------------------------------
+#-------------------------------Shop
 [BERRYJUICE]
 Name = Beerensaft
 NamePlural = Beerensäfte
@@ -3227,7 +3198,7 @@ FieldUse = OnPokemon
 BattleUse = OnPokemon
 Flags = Fling_30
 Description = Füllt 20 LP sofort wieder auf und kann im Kampf als getragenes Item genutzt werden.
-#-------------------------------
+#-------------------------------Shop
 [SWEETHEART]
 Name = Herzkonfekt
 NamePlural = Herzkonfekte
@@ -3237,7 +3208,7 @@ FieldUse = OnPokemon
 BattleUse = OnPokemon
 Flags = Fling_30
 Description = Füllt die LP eines Pokémon um 20 auf.
-#-------------------------------
+#-------------------------------Automat
 [FRESHWATER]
 Name = Tafelwasser
 NamePlural = Tafelwasser
@@ -3248,7 +3219,7 @@ FieldUse = OnPokemon
 BattleUse = OnPokemon
 Flags = Fling_30
 Description = Es füllt die LP eines Pokémon um 50 auf.
-#-------------------------------
+#-------------------------------Automat
 [SODAPOP]
 Name = Sprudel
 NamePlural = Sprudel
@@ -3259,7 +3230,7 @@ FieldUse = OnPokemon
 BattleUse = OnPokemon
 Flags = Fling_30
 Description = Es füllt die LP eines Pokémon um 60 auf.
-#-------------------------------
+#-------------------------------Automat
 [LEMONADE]
 Name = Limonade
 NamePlural = Limonaden
@@ -3270,7 +3241,7 @@ FieldUse = OnPokemon
 BattleUse = OnPokemon
 Flags = Fling_30
 Description = Es füllt die LP eines Pokémon um 70 auf.
-#-------------------------------
+#-------------------------------Besonderer Shop
 [MOOMOOMILK]
 Name = Kuhmuh-Milch
 NamePlural = Kuhmuh-Milch
@@ -3281,7 +3252,7 @@ FieldUse = OnPokemon
 BattleUse = OnPokemon
 Flags = Fling_30
 Description = Es füllt die LP eines Pokémon um 100 auf.
-#-------------------------------
+#-------------------------------Besonderer Shop
 [ENERGYPOWDER]
 Name = Energiestaub
 NamePlural = Energiestaub
@@ -3292,7 +3263,7 @@ FieldUse = OnPokemon
 BattleUse = OnPokemon
 Flags = Fling_30
 Description = Es füllt die LP eines Pokémon um 60 auf, senkt aber die Zuneigung des Pokémon.
-#-------------------------------
+#-------------------------------Besonderer Shop
 [ENERGYROOT]
 Name = Kraftwurzel
 NamePlural = Kraftwurzeln
@@ -3303,7 +3274,7 @@ FieldUse = OnPokemon
 BattleUse = OnPokemon
 Flags = Fling_30
 Description = Es füllt die LP eines Pokémon um 120 auf, senkt aber die Zuneigung des Pokémon.
-#-------------------------------
+#-------------------------------Besonderer Shop
 [HEALPOWDER]
 Name = Heilpuder
 NamePlural = Heilpuder
@@ -3314,7 +3285,7 @@ FieldUse = OnPokemon
 BattleUse = OnPokemon
 Flags = Fling_30
 Description = Kann jedes Statusproblem eines Pokémon heilen, senkt aber die Zuneigung des Pokémon.
-#-------------------------------
+#-------------------------------Besonderer Shop
 [REVIVALHERB]
 Name = Vitalkraut
 NamePlural = Vitalkraut
@@ -3325,7 +3296,7 @@ FieldUse = OnPokemon
 BattleUse = OnPokemon
 Flags = Fling_30
 Description = Ein besiegtes Pokémon wird vollständig geheilt, senkt aber die Zuneigung des Pokémon.
-#-------------------------------
+#-------------------------------Labore
 [MAXHONEY]
 Name = Mistral-Honig
 NamePlural = Mistral-Honig
@@ -3335,7 +3306,7 @@ FieldUse = OnPokemon
 BattleUse = OnPokemon
 Flags = Fling_30
 Description = Ein besiegtes Pokémon wird vollständig geheilt.
-#-------------------------------
+#-------------------------------Shop
 [ETHER]
 Name = Äther
 NamePlural = Äther
@@ -3346,7 +3317,7 @@ FieldUse = OnPokemon
 BattleUse = OnMove
 Flags = Fling_30
 Description = Der Äther stellt 10 Angriffspunkte einer Attacke wieder her.
-#-------------------------------
+#-------------------------------Shop
 [MAXETHER]
 Name = Top-Äther
 NamePlural = Top-Äther
@@ -3356,7 +3327,7 @@ FieldUse = OnPokemon
 BattleUse = OnMove
 Flags = Fling_30
 Description = Der Äther stellt alle Angriffspunkte einer Attacke wieder her.
-#-------------------------------
+#-------------------------------Map
 [ELIXIR]
 Name = Elixier
 NamePlural = Elixiere
@@ -3366,7 +3337,7 @@ FieldUse = OnPokemon
 BattleUse = OnPokemon
 Flags = Fling_30
 Description = Ein Elixier füllt die Angriffspunkte aller Attacken eines Pokémon um 10 auf.
-#-------------------------------
+#-------------------------------Map
 [MAXELIXIR]
 Name = Top-Elixier
 NamePlural = Top-Elixiere
@@ -3376,7 +3347,7 @@ FieldUse = OnPokemon
 BattleUse = OnPokemon
 Flags = Fling_30
 Description = Ein Elixier füllt die Angriffspunkte aller Attacken eines Pokémon vollständig auf.
-#-------------------------------
+#-------------------------------Shop
 [PPUP]
 Name = AP-Plus
 NamePlural = AP-Plus
@@ -3387,7 +3358,7 @@ BPPrice = 10
 FieldUse = OnPokemon
 Flags = Fling_30
 Description = Es erhöht die Angriffspunkte einer Attacke um 20% des Ausgangswertes. 
-#-------------------------------
+#-------------------------------Map
 [PPMAX]
 Name = AP-Top
 NamePlural = AP-Top
@@ -3397,7 +3368,7 @@ SellPrice = 2500
 FieldUse = OnPokemon
 Flags = Fling_30
 Description = Erhöht die Angriffspunkte einer Attacke um 60% (max.) des Ausgangswertes. 
-#-------------------------------
+#-------------------------------Shop
 [HPUP]
 Name = LP-Plus
 NamePlural = LP-Plus
@@ -3407,7 +3378,7 @@ SellPrice = 2500
 FieldUse = OnPokemon
 Flags = Fling_30
 Description = Erhäht die Basis-LP eines Pokémon leicht.
-#-------------------------------
+#-------------------------------Shop + Rezept
 [PROTEIN]
 Name = Protein
 NamePlural = Protein
@@ -3417,7 +3388,7 @@ SellPrice = 2500
 FieldUse = OnPokemon
 Flags = Fling_30
 Description = Erhöht die Basispunkte eines Pokémon im Angriff um 10 Punkte.
-#-------------------------------
+#-------------------------------Shop + Rezept
 [IRON]
 Name = Eisen
 NamePlural = Eisen
@@ -3427,7 +3398,7 @@ SellPrice = 2500
 FieldUse = OnPokemon
 Flags = Fling_30
 Description = Erhöht die Basispunkte eines Pokémon in Verteidigung um 10 Punkte.
-#-------------------------------
+#-------------------------------Shop + Rezept
 [CALCIUM]
 Name = Kalzium
 NamePlural = Kalzium
@@ -3437,7 +3408,7 @@ SellPrice = 2500
 FieldUse = OnPokemon
 Flags = Fling_30
 Description = Erhöht die Basispunkte eines Pokémon im Sp. Angriff um 10 Punkte.
-#-------------------------------
+#-------------------------------Shop + Rezept
 [ZINC]
 Name = Zink
 NamePlural = Zink
@@ -3447,7 +3418,7 @@ SellPrice = 2500
 FieldUse = OnPokemon
 Flags = Fling_30
 Description = Erhöht die Basispunkte eines Pokémon in Sp. Verteidigung um 10 Punkte.
-#-------------------------------
+#-------------------------------Shop + Rezept
 [CARBOS]
 Name = Carbon
 NamePlural = Carbon
@@ -3457,7 +3428,7 @@ SellPrice = 2500
 FieldUse = OnPokemon
 Flags = Fling_30
 Description = Erhöht die Basispunkte eines Pokémon in der Initiative um 10 Punkte.
-#-------------------------------
+#-------------------------------Besonderer Shop
 [HEALTHFEATHER]
 Name = Heilfeder
 NamePlural = Heilfedern
@@ -3466,7 +3437,7 @@ Price = 150
 FieldUse = OnPokemon
 Flags = Fling_20
 Description = Erhöht die KP-Basispunkte um 1 und die Freundschaft um 3. 
-#-------------------------------
+#-------------------------------Besonderer Shop
 [MUSCLEFEATHER]
 Name = Kraftfeder
 NamePlural = Kraftfedern
@@ -3475,7 +3446,7 @@ Price = 150
 FieldUse = OnPokemon
 Flags = Fling_20
 Description = Erhöht die Angriffs-Basispunkte um 1 und die Freundschaft um 3. 
-#-------------------------------
+#-------------------------------Besonderer Shop
 [RESISTFEATHER]
 Name = Abwehrfeder
 NamePlural = Abwehrfedern
@@ -3484,7 +3455,7 @@ Price = 150
 FieldUse = OnPokemon
 Flags = Fling_20
 Description = Erhöht die Verteidigungs-Basispunkte um 1 und die Freundschaft um 3. 
-#-------------------------------
+#-------------------------------Besonderer Shop
 [GENIUSFEATHER]
 Name = Geniefeder
 NamePlural = Geniefedern
@@ -3493,7 +3464,7 @@ Price = 150
 FieldUse = OnPokemon
 Flags = Fling_20
 Description = Erhöht die Sp. Angriffs-Basispunkte um 1 und die Freundschaft um 3. 
-#-------------------------------
+#-------------------------------Besonderer Shop
 [CLEVERFEATHER]
 Name = Espritfeder
 NamePlural = Espritfedern
@@ -3502,7 +3473,7 @@ Price = 150
 FieldUse = OnPokemon
 Flags = Fling_20
 Description = Erhöht die Sp. Verteidigungs-Basispunkte um 1 und die Freundschaft um 3. 
-#-------------------------------
+#-------------------------------Besonderer Shop
 [SWIFTFEATHER]
 Name = Flinkfeder
 NamePlural = Flinkfedern
@@ -3511,7 +3482,7 @@ Price = 150
 FieldUse = OnPokemon
 Flags = Fling_20
 Description = Erhöht die Initiative-Basispunkte um 1 und die Freundschaft um 3. 
-#-------------------------------
+#-------------------------------Besonderer Shop / Rezept
 [ABILITYCAPSULE]
 Name = Fähigkeiten-Kapsel
 NamePlural = Fähigkeiten-Kapseln
@@ -3521,7 +3492,7 @@ SellPrice = 25000
 BPPrice = 50
 FieldUse = OnPokemon
 Description = Verfügt das Pokémon über eine weitere (normale) Fähigkeit, kann es zu dieser wechseln.
-#-------------------------------
+#-------------------------------Besonderer Shop / Rezept
 [ABILITYPATCH]
 Name = Fähigkeiten-Pflaster
 NamePlural = Fähigkeiten-Pflaster
@@ -3530,7 +3501,7 @@ Price = 250000
 BPPrice = 200
 FieldUse = OnPokemon
 Description = Verfügt das Pokémon über eine versteckte Fähigkeit, kann es zu dieser wechseln.
-#-------------------------------
+#-------------------------------Rezept
 [EXPCANDYXS]
 Name = EP-Bonbon XS
 NamePlural = EP-Bonbons XS
@@ -3539,7 +3510,7 @@ Price = 10
 FieldUse = OnPokemon
 Flags = Fling_30
 Description = Das Pokémon erhält beim Verzehr ein paar Erfahrungspunkte.
-#-------------------------------
+#-------------------------------Rezept
 [EXPCANDYS]
 Name = EP-Bonbon S
 NamePlural = EP-Bonbons S
@@ -3548,7 +3519,7 @@ Price = 120
 FieldUse = OnPokemon
 Flags = Fling_30
 Description = Das Pokémon erhält beim Verzehr wenige Erfahrungspunkte.
-#-------------------------------
+#-------------------------------Rezept
 [EXPCANDYM]
 Name = EP-Bonbon M
 NamePlural = EP-Bonbons M
@@ -3557,7 +3528,7 @@ Price = 500
 FieldUse = OnPokemon
 Flags = Fling_30
 Description = Das Pokémon erhält beim Verzehr viele Erfahrungspunkte.
-#-------------------------------
+#-------------------------------Rezept
 [EXPCANDYL]
 Name = EP-Bonbon L
 NamePlural = EP-Bonbons L
@@ -3566,7 +3537,7 @@ Price = 1500
 FieldUse = OnPokemon
 Flags = Fling_30
 Description = Das Pokémon erhält beim Verzehr sehr viele Erfahrungspunkte.
-#-------------------------------
+#-------------------------------Rezept
 [EXPCANDYXL]
 Name = EP-Bonbon XL
 NamePlural = EP-Bonbons XL
@@ -3575,7 +3546,7 @@ Price = 5000
 FieldUse = OnPokemon
 Flags = Fling_30
 Description = Das Pokémon erhält beim Verzehr etliche Erfahrungspunkte.
-#-------------------------------
+#-------------------------------Map
 [RARECANDY]
 Name = Sonderbonbon
 NamePlural = Sonderbonbons
@@ -3585,7 +3556,7 @@ BPPrice = 20
 FieldUse = OnPokemon
 Flags = Fling_30
 Description = Erhöht das Level des Pokémon um 1.
-#-------------------------------
+#-------------------------------Team 0
 [SHADOWBALL]
 Name = Nullball
 NamePlural = Nullbälle
@@ -3595,7 +3566,7 @@ SellPrice = 0
 BattleUse = OnFoe
 Flags = PokeBall
 Description = Ein eigenartiger Ball, der scheinbar von Team 0 genutzt wird.
-#-------------------------------
+#-------------------------------Shop
 [POKEBALL]
 Name = Pokéball
 NamePlural = Pokébälle
@@ -3605,7 +3576,7 @@ SellPrice = 50
 BattleUse = OnFoe
 Flags = PokeBall
 Description = Der Standard-Ball um Pokémon zu fangen. Geringe Fangrate.
-#-------------------------------
+#-------------------------------Shop
 [GREATBALL]
 Name = Superball
 NamePlural = Superbälle
@@ -3615,7 +3586,7 @@ SellPrice = 150
 BattleUse = OnFoe
 Flags = PokeBall
 Description = Etwas besser als der normale Pokéball.
-#-------------------------------
+#-------------------------------Shop
 [ULTRABALL]
 Name = Hyperball
 NamePlural = Hyperbälle
@@ -3625,7 +3596,7 @@ SellPrice = 200
 BattleUse = OnFoe
 Flags = PokeBall
 Description = Deutlich besser und effektiver als ein normaler Pokéball.
-#-------------------------------
+#-------------------------------Wenige
 [MASTERBALL]
 Name = Meisterball
 NamePlural = Meisterbälle
@@ -3634,7 +3605,7 @@ Price = 0
 BattleUse = OnFoe
 Flags = PokeBall
 Description = Der beste Ball mit ultimativer Performance. Fanggarantie!
-#-------------------------------
+#-------------------------------Safari-Zone
 [SAFARIBALL]
 Name = Safariball
 NamePlural = Safaribälle
@@ -3643,7 +3614,7 @@ Price = 0
 BattleUse = OnFoe
 Flags = PokeBall
 Description = Auschließlich nutzbar in der Safari-Zone
-#-------------------------------
+#-------------------------------Käfersammler-Contest
 [SPORTBALL]
 Name = Prüfungsball
 NamePlural = Prüfungsbälle
@@ -3652,7 +3623,7 @@ Price = 300
 BattleUse = OnFoe
 Flags = PokeBall
 Description = Ein besonderer Ball für den Käfersammler-Wettbewerb.
-#-------------------------------
+#-------------------------------Shop / Rezept
 [LOCKBALL]
 Name = Sperrball
 NamePlural = Sperbälle
@@ -3661,7 +3632,7 @@ Price = 1000
 BattleUse = OnFoe
 Flags = PokeBall
 Description = Hindert das Pokémon am Fliehen, wenn es nicht gefangen wurde.
-#-------------------------------
+#-------------------------------Shop / Rezept
 [PENALTYBALL]
 Name = Strafball
 NamePlural = Strafbälle
@@ -3670,7 +3641,7 @@ Price = 1000
 BattleUse = OnFoe
 Flags = PokeBall
 Description = Wenn der Fang scheitert, wird die zuletzt eingesetzte Attacke des Gegners für kurze Zeit blockiert.
-#-------------------------------
+#-------------------------------Shop / Rezept
 [MINUSBALL]
 Name = Minusball
 NamePlural = Minusbälle
@@ -3679,7 +3650,7 @@ Price = 1000
 BattleUse = OnFoe
 Flags = PokeBall
 Description = Je weniger Minusbälle du bei dir trägst, desto effektiver wird er. Effekt sinkt mit Vorrat.
-#-------------------------------
+#-------------------------------Shop / Rezept
 [VALUEBALL]
 Name = IV-Ball
 NamePlural = IV-Bälle
@@ -3688,7 +3659,7 @@ Price = 1000
 BattleUse = OnFoe
 Flags = PokeBall
 Description = Stellt beim Fang sicher, dass drei zufällige Statuswerte perfekte IV-Werte besitzen.
-#-------------------------------
+#-------------------------------Shop / Rezept
 [SHINYBALL]
 Name = Schillerball
 NamePlural = Schillerbälle
@@ -3697,7 +3668,7 @@ Price = 2000
 BattleUse = OnFoe
 Flags = PokeBall
 Description = Die Fangrate bei Shiny-Pokémon wird deutlich erhöht.
-#-------------------------------
+#-------------------------------Shop / Rezept
 [LUCKBALL]
 Name = Glücksball
 NamePlural = Glücksbälle
@@ -3706,7 +3677,7 @@ Price = 1000
 BattleUse = OnFoe
 Flags = PokeBall
 Description = Glücksspiele! Völlig zufällige Fangrate mit jedem Wurf.
-#-------------------------------
+#-------------------------------Shop / Rezept
 [NETBALL]
 Name = Netzball
 NamePlural = Netzbälle
@@ -3716,7 +3687,7 @@ SellPrice = 250
 BattleUse = OnFoe
 Flags = PokeBall
 Description = Besonders effektiv bei Käfer und Wasser Pokémon.
-#-------------------------------
+#-------------------------------Shop / Rezept
 [MYSTICBALL]
 Name = Mystikball
 NamePlural = Mystikbälle
@@ -3726,7 +3697,7 @@ SellPrice = 250
 BattleUse = OnFoe
 Flags = PokeBall
 Description = Besonders effektiv bei Psycho und Fee Pokémon.
-#-------------------------------
+#-------------------------------Shop / Rezept
 [MAGMARBALL]
 Name = Lavaball
 NamePlural = Lavabälle
@@ -3736,7 +3707,7 @@ SellPrice = 250
 BattleUse = OnFoe
 Flags = PokeBall
 Description = Besonders effektiv bei Feuer Pokémon.
-#-------------------------------
+#-------------------------------Shop / Rezept
 [ELECTRICBALL]
 Name = Stromball
 NamePlural = Strombälle
@@ -3746,7 +3717,7 @@ SellPrice = 250
 BattleUse = OnFoe
 Flags = PokeBall
 Description = Besonders effektiv bei Elektro Pokémon.
-#-------------------------------
+#-------------------------------Einzigartig
 [HOLYBALL]
 Name = Sakralball
 NamePlural = Sakralbälle
@@ -3755,7 +3726,7 @@ Price = 0
 BattleUse = OnFoe
 Flags = PokeBall
 Description = Damit kann Arceus garantiert gefangen werden.
-#-------------------------------
+#-------------------------------Shop / Rezept
 [DIVEBALL]
 Name = Tauchball
 NamePlural = Tauchbälle
@@ -3765,7 +3736,7 @@ SellPrice = 250
 BattleUse = OnFoe
 Flags = PokeBall
 Description = Ein spezieller Ball, der auch unterwasser eingesetzt werden kann.
-#-------------------------------
+#-------------------------------Shop / Rezept
 [NESTBALL]
 Name = Nestball
 NamePlural = Nestbälle
@@ -3775,7 +3746,7 @@ SellPrice = 250
 BattleUse = OnFoe
 Flags = PokeBall
 Description = Je niedriger das Level, desto Höher die Fangrate (Lvl. >30 = Pokéball).
-#-------------------------------
+#-------------------------------Shop / Rezept
 [REPEATBALL]
 Name = Wiederball
 NamePlural = Wiederbälle
@@ -3785,7 +3756,7 @@ SellPrice = 250
 BattleUse = OnFoe
 Flags = PokeBall
 Description = Damit lassen sich leichter Pokémon fangen, die du bereits besitzt.
-#-------------------------------
+#-------------------------------Shop / Rezept
 [TIMERBALL]
 Name = Timerball
 NamePlural = Timerbälle
@@ -3795,7 +3766,7 @@ SellPrice = 250
 BattleUse = OnFoe
 Flags = PokeBall
 Description = Je mehr Runden der Kampf andauert, desto besser dieser Ball.
-#-------------------------------
+#-------------------------------Shop / Rezept
 [LUXURYBALL]
 Name = Luxusball
 NamePlural = Luxusbälle
@@ -3805,7 +3776,7 @@ SellPrice = 750
 BattleUse = OnFoe
 Flags = PokeBall
 Description = Das Pokémon in diesem Ball erhält doppelt so viele Freundschaftspunkte, wie üblich.
-#-------------------------------
+#-------------------------------Bei 10 gekauften Bällen
 [PREMIERBALL]
 Name = Premierball
 NamePlural = Premierbälle
@@ -3815,7 +3786,7 @@ SellPrice = 5
 BattleUse = OnFoe
 Flags = PokeBall
 Description = Ein eher seltener Ball, der als Reminiszenz an irgendein Ereignis hergestellt wurde.
-#-------------------------------
+#-------------------------------Shop / Rezept
 [DUSKBALL]
 Name = Düsterball
 NamePlural = Düsterbälle
@@ -3825,7 +3796,7 @@ SellPrice = 250
 BattleUse = OnFoe
 Flags = PokeBall
 Description = Funktioniert besonders gut in dunklen Gebieten.
-#-------------------------------
+#-------------------------------Shop / Rezept
 [HEALBALL]
 Name = Heilball
 NamePlural = Heilbälle
@@ -3835,7 +3806,7 @@ SellPrice = 75
 BattleUse = OnFoe
 Flags = PokeBall
 Description = Heilt das gefangene Pokémon vollständig.
-#-------------------------------
+#-------------------------------Shop / Rezept
 [QUICKBALL]
 Name = Flottball
 NamePlural = Flottbälle
@@ -3845,7 +3816,7 @@ SellPrice = 250
 BattleUse = OnFoe
 Flags = PokeBall
 Description = In der ersten Runde hat dieser Ball seine größte Fangchance.
-#-------------------------------
+#-------------------------------Besonders
 [CHERISHBALL]
 Name = Jubelball
 NamePlural = Jubelbälle
@@ -3854,7 +3825,7 @@ Price = 0
 BattleUse = OnFoe
 Flags = PokeBall
 Description = Ein seltener Ball, der als Reminiszenz an irgendein Ereignis hergestellt wurde.
-#-------------------------------
+#-------------------------------Shop / Rezept
 [FASTBALL]
 Name = Turboball
 NamePlural = Turbobälle
@@ -3863,7 +3834,7 @@ Price = 300
 BattleUse = OnFoe
 Flags = PokeBall
 Description = Ein Pokéball, mit dem man leichter schnelle Pokémon fangen kann.
-#-------------------------------
+#-------------------------------Shop / Rezept
 [SLOWBALL]
 Name = Schleichball
 NamePlural = Schleichbälle
@@ -3872,7 +3843,7 @@ Price = 300
 BattleUse = OnFoe
 Flags = PokeBall
 Description = Ein Pokéball, mit dem man leichter langsame Pokémon fangen kann.
-#-------------------------------
+#-------------------------------Shop / Rezept
 [LEVELBALL]
 Name = Levelball
 NamePlural = Levelbälle
@@ -3881,7 +3852,7 @@ Price = 300
 BattleUse = OnFoe
 Flags = PokeBall
 Description = Erhöhte Fangrate für Pokémon mit niedrigerem Level, als dein eigenes.
-#-------------------------------
+#-------------------------------Shop / Rezept
 [LUREBALL]
 Name = Köderball
 NamePlural = Köderbälle
@@ -3890,7 +3861,7 @@ Price = 300
 BattleUse = OnFoe
 Flags = PokeBall
 Description = Ideal für Pokémon, die an einer Angel angebissen haben.
-#-------------------------------
+#-------------------------------Shop / Rezept
 [HEAVYBALL]
 Name = Schwerball
 NamePlural = Schwerbälle
@@ -3899,7 +3870,7 @@ Price = 300
 BattleUse = OnFoe
 Flags = PokeBall
 Description = Je schwerer das Pokémon, desto höher die Fangrate.
-#-------------------------------
+#-------------------------------Shop / Rezept
 [LOVEBALL]
 Name = Sympaball
 NamePlural = Sympabälle
@@ -3908,7 +3879,7 @@ Price = 300
 BattleUse = OnFoe
 Flags = PokeBall
 Description = Dieser Ball wurde speziell für Pokémon des anderen Geschlechts entwickelt.
-#-------------------------------
+#-------------------------------Shop / Rezept
 [FRIENDBALL]
 Name = Freundesball
 NamePlural = Freundesbälle
@@ -3917,7 +3888,7 @@ Price = 300
 BattleUse = OnFoe
 Flags = PokeBall
 Description = Erhöht die Freundschaft des gefangenen Pokémon sofort auf einen bestimmten Wert.
-#-------------------------------
+#-------------------------------Shop / Rezept
 [MOONBALL]
 Name = Mondball
 NamePlural = Mondbälle
@@ -3926,7 +3897,7 @@ Price = 300
 BattleUse = OnFoe
 Flags = PokeBall
 Description = Erhähte Fangrate für Pokémon, die sich mit dem Mondsteine entwickeln lassen.
-#-------------------------------
+#-------------------------------Shop / Rezept
 [DREAMBALL]
 Name = Traumball
 NamePlural = Traumbälle
@@ -3935,7 +3906,7 @@ Price = 300
 BattleUse = OnFoe
 Flags = PokeBall
 Description = Bei schlafenden Pokémon ist die Fangrate deutlich erhöht.
-#-------------------------------
+#-------------------------------Shop / Rezept
 [BEASTBALL]
 Name = Ultraball
 NamePlural = Ultrabälle
@@ -3944,7 +3915,7 @@ Price = 1000
 BattleUse = OnFoe
 Flags = PokeBall
 Description = Bei Ultrabestien ist dieser Ball 5x so gut, wie ein Pokéball.
-#-------------------------------
+#-------------------------------Map / Shop
 [TM01]
 Name = TM01
 NamePlural = TM01s
@@ -3954,7 +3925,7 @@ FieldUse = TM
 Move = TAKEDOWN
 Flags = Fling_90
 Description = Bodycheck schadet dem Ziel. Der Anwender erleidet selbst 25% des angerichteten Schadens durch Rückstoß.
-#-------------------------------
+#-------------------------------Map / Shop
 [TM02]
 Name = TM02
 NamePlural = TM02s
@@ -3964,7 +3935,7 @@ FieldUse = TM
 Move = CHARM
 Flags = Fling_10
 Description = Senkt den Angriff des Gegners um zwei Stufen. 
-#-------------------------------
+#-------------------------------Map / Shop
 [TM03]
 Name = TM03
 NamePlural = TM03s
@@ -3974,7 +3945,7 @@ FieldUse = TM
 Move = FAKETEARS
 Flags = Fling_10
 Description = Die Spezial-Verteidigung des Ziels sinkt um zwei Stufen. 
-#-------------------------------
+#-------------------------------Map / Shop
 [TM04]
 Name = TM04
 NamePlural = TM04s
@@ -3984,7 +3955,7 @@ FieldUse = TM
 Move = AGILITY
 Flags = Fling_10
 Description = Agilität erhöht die Initiative des Anwenders um zwei Stufen. 
-#-------------------------------
+#-------------------------------Map / Shop
 [TM05]
 Name = TM05
 NamePlural = TM05s
@@ -3994,7 +3965,7 @@ FieldUse = TM
 Move = MUDSLAP
 Flags = Fling_20
 Description = Lehmschelle schadet dem Ziel und senkt dessen Genauigkeitswert um eine Stufe. 
-#-------------------------------
+#-------------------------------Map / Shop
 [TM06]
 Name = TM06
 NamePlural = TM06s
@@ -4004,7 +3975,7 @@ FieldUse = TM
 Move = SCARYFACE
 Flags = Fling_10
 Description = Grimasse senkt die Initiative des Ziels um zwei Stufen. Wenn dieser Statuswert bereits die Stufe -6 erreicht hat, schlägt die Attacke fehl. 
-#-------------------------------
+#-------------------------------Map / Shop
 [TM07]
 Name = TM07
 NamePlural = TM07s
@@ -4014,7 +3985,7 @@ FieldUse = TM
 Move = PROTECT
 Flags = Fling_10
 Description = Schützt den Anwender vor Schaden und Effekten von Attacken, die in derselben Runde gegen ihn eingesetzt werden.
-#-------------------------------
+#-------------------------------Map / Shop
 [TM08]
 Name = TM08
 NamePlural = TM08s
@@ -4024,7 +3995,7 @@ FieldUse = TM
 Move = FIREFANG
 Flags = Fling_65
 Description = Verursacht Schaden und verbrennt das Ziel mit einer Wahrscheinlichkeit von 10 %. Gegner schreckt evtl. zurück.
-#-------------------------------
+#-------------------------------Map / Shop
 [TM09]
 Name = TM09
 NamePlural = TM09s
@@ -4034,7 +4005,7 @@ FieldUse = TM
 Move = THUNDERFANG
 Flags = Fling_65
 Description = Verursacht Schaden und paralysiert das Ziel mit einer Wahrscheinlichkeit von 10%. Gegner schreckt evtl. zurück.
-#-------------------------------
+#-------------------------------Map / Shop
 [TM10]
 Name = TM10
 NamePlural = TM10s
@@ -4044,7 +4015,7 @@ FieldUse = TM
 Move = ICEFANG
 Flags = Fling_65
 Description = Verursacht Schaden und gefriert das Ziel mit einer Wahrscheinlichkeit von 10 %. Gegner schreckt evtl. zurück.
-#-------------------------------
+#-------------------------------Map / Shop
 [TM11]
 Name = TM11
 NamePlural = TM11s
@@ -4054,7 +4025,7 @@ FieldUse = TM
 Move = WATERPULSE
 Flags = Fling_60
 Description = Verursacht Schaden und verwirrt den Gegner mit einer Wahrscheinlichkeit von 20%. 
-#-------------------------------
+#-------------------------------Map / Shop
 [TM12]
 Name = TM12
 NamePlural = TM12s
@@ -4064,7 +4035,7 @@ FieldUse = TM
 Move = LOWKICK
 Flags = Fling_10
 Description = Der Schaden wird an dem Gewicht des Gegners kalkuliert. Je schwerer der Gegner, desto stärker ist die Attacke.
-#-------------------------------
+#-------------------------------Map / Shop
 [TM13]
 Name = TM13
 NamePlural = TM13s
@@ -4074,7 +4045,7 @@ FieldUse = TM
 Move = ACIDSPRAY
 Flags = Fling_40
 Description = Schädigt das Ziel und senkt seine Spezial-Verteidigung um 2 Stufen.
-#-------------------------------
+#-------------------------------Map / Shop
 [TM14]
 Name = TM14
 NamePlural = TM14s
@@ -4084,7 +4055,7 @@ FieldUse = TM
 Move = ACROBATICS
 Flags = Fling_55
 Description = Die Basisstärke der Attacke wird verdoppelt, wenn der Anwender kein Item hält; mit getragenem Flugjuwel sogar verdreifacht.
-#-------------------------------
+#-------------------------------Map / Shop
 [TM15]
 Name = TM15
 NamePlural = TM15s
@@ -6242,7 +6213,7 @@ Price = 0
 FieldUse = TM
 Move = CUT
 Description = Zerschneider schadet dem Ziel ohne Zusatzeffekte. 
-#-------------------------------
+#-------------------------------Map / Shop
 [TM231]
 Name = TM231
 NamePlural = TM231s
@@ -6251,7 +6222,7 @@ Price = 0
 FieldUse = TM
 Move = STRENGTH
 Description = Verursacht Schaden ohne Zusatzeffekte. 
-#-------------------------------
+#-------------------------------Map / Shop
 [CHERIBERRY]
 Name = Amrenabeere
 NamePlural = Amrenabeeren
@@ -6261,7 +6232,7 @@ FieldUse = OnPokemon
 BattleUse = OnPokemon
 Flags = Berry,Fling_10,NaturalGift_FIRE_80
 Description = Heilt Paralyse.
-#-------------------------------
+#-------------------------------Map / Shop
 [CHESTOBERRY]
 Name = Maronbeere
 NamePlural = Maronbeeren
@@ -6271,7 +6242,7 @@ FieldUse = OnPokemon
 BattleUse = OnPokemon
 Flags = Berry,Fling_10,NaturalGift_WATER_80
 Description = Weckt ein Pokémon auf.
-#-------------------------------
+#-------------------------------Map / Shop
 [PECHABERRY]
 Name = Pirsifbeere
 NamePlural = Pirsifbeeren
@@ -6804,7 +6775,7 @@ Pocket = 5
 Price = 40
 Flags = Berry,Fling_10,NaturalGift_FAIRY_100
 Description = Erhöht die Verteidigung des Trägers, wenn dieser von physischen Attacken getroffen wird.
-#-------------------------------
+#-------------------------------Map / Shop
 [MARANGABERRY]
 Name = Tarabeere
 NamePlural = Tarabeeren
@@ -6812,7 +6783,7 @@ Pocket = 5
 Price = 40
 Flags = Berry,Fling_10,NaturalGift_DARK_100
 Description = Erhöht die Sp. Verteidigung des Trägers, wenn dieser von speziellen Attacken getroffen wird.
-#-------------------------------
+#-------------------------------Rezept / Shop
 [XATTACK]
 Name = X-Angriff
 NamePlural = X-Angriff
@@ -6822,7 +6793,7 @@ SellPrice = 250
 BattleUse = OnBattler
 Flags = Fling_30
 Description = Es erhöht den Angriff eines Pokémon um 1 Stufe, bis es ausgwechselt wird.
-#-------------------------------
+#-------------------------------Rezept
 [XATTACK2]
 Name = X-Angriff 2
 NamePlural = X-Angriff 2s
@@ -6831,7 +6802,7 @@ Price = 0
 BattleUse = OnBattler
 Flags = Fling_30
 Description = Es erhöht den Angriff eines Pokémon um 2 Stufen, bis es ausgwechselt wird.
-#-------------------------------
+#-------------------------------Rezept
 [XATTACK3]
 Name = X-Angriff 3
 NamePlural = X-Angriff 3s
@@ -6840,7 +6811,7 @@ Price = 0
 BattleUse = OnBattler
 Flags = Fling_30
 Description = Es erhöht den Angriff eines Pokémon um 3 Stufen, bis es ausgwechselt wird.
-#-------------------------------
+#-------------------------------Rezept
 [XATTACK6]
 Name = X-Angriff 6
 NamePlural = X-Angriff 6s
@@ -6849,7 +6820,7 @@ Price = 0
 BattleUse = OnBattler
 Flags = Fling_30
 Description = Es erhöht den Angriff eines Pokémon um 6 Stufen, bis es ausgwechselt wird.
-#-------------------------------
+#-------------------------------Rezept / Shop
 [XDEFENSE]
 Name = X-Verteidigung
 NamePlural = X-Verteidigung
@@ -6859,7 +6830,7 @@ SellPrice = 250
 BattleUse = OnBattler
 Flags = Fling_30
 Description = Es erhöht die Vert. eines Pokémon um 1 Stufe, bis es ausgwechselt wird.
-#-------------------------------
+#-------------------------------Rezept
 [XDEFENSE2]
 Name = X-Verteidigung 2
 NamePlural = X-Verteidigung 2
@@ -6868,7 +6839,7 @@ Price = 0
 BattleUse = OnBattler
 Flags = Fling_30
 Description = Es erhöht die Vert. eines Pokémon um 2 Stufen, bis es ausgwechselt wird.
-#-------------------------------
+#-------------------------------Rezept
 [XDEFENSE3]
 Name = X-Verteidigung 3
 NamePlural = X-Verteidigung 3
@@ -6877,7 +6848,7 @@ Price = 0
 BattleUse = OnBattler
 Flags = Fling_30
 Description = Es erhöht die Vert. eines Pokémon um 3 Stufen, bis es ausgwechselt wird.
-#-------------------------------
+#-------------------------------Rezept
 [XDEFENSE6]
 Name = X-Verteidigung 6
 NamePlural = X-Verteidigung 6
@@ -6886,7 +6857,7 @@ Price = 0
 BattleUse = OnBattler
 Flags = Fling_30
 Description = Es erhöht die Vert. eines Pokémon um 6 Stufen, bis es ausgwechselt wird.
-#-------------------------------
+#-------------------------------Rezept / Shop
 [XSPATK]
 Name = X-Sp.-Angr.
 NamePlural = X-Sp.-Angr.
@@ -6896,7 +6867,7 @@ SellPrice = 250
 BattleUse = OnBattler
 Flags = Fling_30
 Description = Es erhöht den Spezial-Angr. eines Pokémon um 1 Stufe, bis es ausgwechselt wird.
-#-------------------------------
+#-------------------------------Rezept
 [XSPATK2]
 Name = X-Sp.-Angr. 2
 NamePlural = X-Sp.-Angr. 2
@@ -6905,7 +6876,7 @@ Price = 0
 BattleUse = OnBattler
 Flags = Fling_30
 Description = Es erhöht den Spezial-Angr. eines Pokémon um 2 Stufen, bis es ausgwechselt wird.
-#-------------------------------
+#-------------------------------Rezept
 [XSPATK3]
 Name = X-Sp.-Angr. 3
 NamePlural = X-Sp.-Angr. 3
@@ -6914,7 +6885,7 @@ Price = 0
 BattleUse = OnBattler
 Flags = Fling_30
 Description = Es erhöht den Spezial-Angr. eines Pokémon um 3 Stufen, bis es ausgwechselt wird.
-#-------------------------------
+#-------------------------------Rezept
 [XSPATK6]
 Name = X-Sp.-Angr. 6
 NamePlural = X-Sp.-Angr. 6
@@ -6923,7 +6894,7 @@ Price = 0
 BattleUse = OnBattler
 Flags = Fling_30
 Description = Es erhöht den Spezial-Angr. eines Pokémon um 6 Stufen, bis es ausgwechselt wird.
-#-------------------------------
+#-------------------------------Rezept / Shop
 [XSPDEF]
 Name = X-Sp.-Vert.
 NamePlural = X-Sp.-Vert.
@@ -6933,7 +6904,7 @@ SellPrice = 250
 BattleUse = OnBattler
 Flags = Fling_30
 Description = Es erhöht die Spezial-Vert. eines Pokémon um 1 Stufen, bis es ausgwechselt wird.
-#-------------------------------
+#-------------------------------Rezept
 [XSPDEF2]
 Name = X-Sp.-Vert. 2
 NamePlural = X-Sp.-Vert. 2
@@ -6942,7 +6913,7 @@ Price = 0
 BattleUse = OnBattler
 Flags = Fling_30
 Description = Es erhöht die Spezial-Vert. eines Pokémon um 2 Stufen, bis es ausgwechselt wird.
-#-------------------------------
+#-------------------------------Rezept
 [XSPDEF3]
 Name = X-Sp.-Vert. 3
 NamePlural = X-Sp.-Vert. 3
@@ -6951,7 +6922,7 @@ Price = 0
 BattleUse = OnBattler
 Flags = Fling_30
 Description = Es erhöht die Spezial-Vert. eines Pokémon um 3 Stufen, bis es ausgwechselt wird.
-#-------------------------------
+#-------------------------------Rezept
 [XSPDEF6]
 Name = X-Sp.-Vert. 6
 NamePlural = X-Sp.-Vert. 6
@@ -6960,7 +6931,7 @@ Price = 0
 BattleUse = OnBattler
 Flags = Fling_30
 Description = Es erhöht die Spezial-Vert. eines Pokémon um 6 Stufen, bis es ausgwechselt wird.
-#-------------------------------
+#-------------------------------Rezept / Shop
 [XSPEED]
 Name = X-Initiative
 NamePlural = X-Initiative
@@ -6970,7 +6941,7 @@ SellPrice = 250
 BattleUse = OnBattler
 Flags = Fling_30
 Description = Es erhöht die Initiative eines Pokémon um 1 Stufe, bis es ausgwechselt wird.
-#-------------------------------
+#-------------------------------Rezept
 [XSPEED2]
 Name = X-Initiative 2
 NamePlural = X-Initiative 2
@@ -6979,7 +6950,7 @@ Price = 0
 BattleUse = OnBattler
 Flags = Fling_30
 Description = Es erhöht die Initiative eines Pokémon um 2 Stufen, bis es ausgwechselt wird.
-#-------------------------------
+#-------------------------------Rezept
 [XSPEED3]
 Name = X-Initiative 3
 NamePlural = X-Initiative 3
@@ -6988,7 +6959,7 @@ Price = 0
 BattleUse = OnBattler
 Flags = Fling_30
 Description = Es erhöht die Initiative eines Pokémon um 3 Stufen, bis es ausgwechselt wird.
-#-------------------------------
+#-------------------------------Rezept
 [XSPEED6]
 Name = X-Initiative 6
 NamePlural = X-Initiative 6
@@ -6997,7 +6968,7 @@ Price = 0
 BattleUse = OnBattler
 Flags = Fling_30
 Description = Es erhöht die Initiative eines Pokémon um 6 Stufen, bis es ausgwechselt wird.
-#-------------------------------
+#-------------------------------Rezept / Shop
 [XACCURACY]
 Name = X-Genauigkeit
 NamePlural = X-Genauigkeit
@@ -7007,7 +6978,7 @@ SellPrice = 250
 BattleUse = OnBattler
 Flags = Fling_30
 Description = Description = Es erhöht die Genauigkeit eines Pokémon um 1 Stufe, bis es ausgwechselt wird.
-#-------------------------------
+#-------------------------------Rezept
 [XACCURACY2]
 Name = X-Genauigkeit 2
 NamePlural = X-Genauigkeit 2
@@ -7016,7 +6987,7 @@ Price = 0
 BattleUse = OnBattler
 Flags = Fling_30
 Description = Es erhöht die Genauigkeit eines Pokémon um 2 Stufen, bis es ausgwechselt wird.
-#-------------------------------
+#-------------------------------Rezept
 [XACCURACY3]
 Name = X-Genauigkeit 3
 NamePlural = X-Genauigkeit 3
@@ -7025,7 +6996,7 @@ Price = 0
 BattleUse = OnBattler
 Flags = Fling_30
 Description = Es erhöht die Genauigkeit eines Pokémon um 3 Stufen, bis es ausgwechselt wird.
-#-------------------------------
+#-------------------------------Rezept
 [XACCURACY6]
 Name = X-Genauigkeit 6
 NamePlural = X-Genauigkeit 6
@@ -7034,7 +7005,7 @@ Price = 0
 BattleUse = OnBattler
 Flags = Fling_30
 Description = Es erhöht die Genauigkeit eines Pokémon um 6 Stufen, bis es ausgwechselt wird.
-#-------------------------------
+#-------------------------------Rezept / Shop
 [DIREHIT]
 Name = X-Volltreffer
 NamePlural = X-Volltreffer
@@ -7044,7 +7015,7 @@ SellPrice = 250
 BattleUse = OnBattler
 Flags = Fling_30
 Description = Es erhöht die Volltrefferquote eines Pokémon um 1 Stufe, bis es ausgwechselt wird.
-#-------------------------------
+#-------------------------------Rezept
 [DIREHIT2]
 Name = X-Volltreffer 2
 NamePlural = X-Volltreffer 2
@@ -7053,7 +7024,7 @@ Price = 0
 BattleUse = OnBattler
 Flags = Fling_30
 Description = Es erhöht die Volltrefferquote eines Pokémon um 2 Stufen, bis es ausgwechselt wird.
-#-------------------------------
+#-------------------------------Rezept
 [DIREHIT3]
 Name = X-Volltreffer 3
 NamePlural = X-Volltreffer 3
@@ -7062,7 +7033,7 @@ Price = 0
 BattleUse = OnBattler
 Flags = Fling_30
 Description = Es erhöht die Volltrefferquote eines Pokémon um 3 Stufen, bis es ausgwechselt wird.
-#-------------------------------
+#-------------------------------Shop
 [GUARDSPEC]
 Name = Megablock
 NamePlural = Megablöcke
@@ -7072,7 +7043,7 @@ SellPrice = 375
 BattleUse = Direct
 Flags = Fling_30
 Description = Eine mögliche Statusveränderung der Pokémon im Team wird für fünf Runden verhindert.
-#-------------------------------
+#-------------------------------Shop
 [RESETURGE]
 Name = Umkehrappell
 NamePlural = Umkehrappelle
@@ -7080,7 +7051,7 @@ Pocket = 7
 Price = 0
 Flags = Fling_30
 Description = Hebt bei Gebrauch Statusveränderungen deines Mitstreiters auf.
-#-------------------------------
+#-------------------------------Shop
 [ABILITYURGE]
 Name = Fähigkeiten-Appell
 NamePlural = Fähigkeiten-Appelle
@@ -7088,7 +7059,7 @@ Pocket = 7
 Price = 0
 Flags = Fling_30
 Description = Es aktiviert eine Fähigkeit des Teamkollegen, falls es eine Möglichkeit zum einsetzen gibt.
-#-------------------------------
+#-------------------------------Shop
 [ITEMURGE]
 Name = Itemappell
 NamePlural = Itemappelle
@@ -7096,7 +7067,7 @@ Pocket = 7
 Price = 0
 Flags = Fling_30
 Description = Alle Items der Teamkollegen werden aktiviert, falls es eine Möglichkeit zum einsetzen gibt.
-#-------------------------------
+#-------------------------------Shop
 [ITEMDROP]
 Name = Itemabwurf
 NamePlural = Itemabwürfe
@@ -7104,7 +7075,7 @@ Pocket = 7
 Price = 0
 Flags = Fling_30
 Description = Nach dem Einsatz verlieren Teamkollegen ihre Items, falls es eine Möglichkeit zum verlieren gibt.
-#-------------------------------
+#-------------------------------Besonderer Shop
 [BLUEFLUTE]
 Name = Blaue Flöte
 NamePlural = Blaue Flöten
@@ -7115,7 +7086,7 @@ BattleUse = OnPokemon
 Flags = Fling_30
 Consumable = false
 Description = Die Blaue Flöte weckt schlafende Pokémon.
-#-------------------------------
+#-------------------------------Besonderer Shop
 [YELLOWFLUTE]
 Name = Gelbe Flöte
 NamePlural = Gelbe Flöten
@@ -7125,7 +7096,7 @@ BattleUse = OnBattler
 Flags = Fling_30
 Consumable = false
 Description = Die Gelbe Flöte heilt Pokémon von Verwirrung.
-#-------------------------------
+#-------------------------------Besonderer Shop
 [REDFLUTE]
 Name = Rote Flöte
 NamePlural = Rote Flöten
@@ -7135,7 +7106,7 @@ BattleUse = OnBattler
 Flags = Fling_30
 Consumable = false
 Description = Die Rote Flöte heilt Pokémon von Anziehung.
-#-------------------------------
+#-------------------------------Besonderer Shop
 [POKEDOLL]
 Name = Poképuppe
 NamePlural = Poképuppen
@@ -7145,7 +7116,7 @@ SellPrice = 75
 BattleUse = Direct
 Flags = Fling_30
 Description = Ermöglicht die garantierte Flucht aus einem Kampf mit wilden Pokémon.
-#-------------------------------
+#-------------------------------Besonderer Shop
 [FLUFFYTAIL]
 Name = Eneco-Rute
 NamePlural = Eneco-Ruten
@@ -7155,7 +7126,7 @@ SellPrice = 75
 BattleUse = Direct
 Flags = Fling_30
 Description = Ermöglicht die garantierte Flucht aus einem Kampf mit wilden Pokémon.
-#-------------------------------
+#-------------------------------Besonderer Shop
 [POKETOY]
 Name = Pokéwedel
 NamePlural = Pokéwedel
@@ -7165,7 +7136,7 @@ SellPrice = 75
 BattleUse = Direct
 Flags = Fling_30
 Description = Ermöglicht die garantierte Flucht aus einem Kampf mit wilden Pokémon.
-#-------------------------------
+#-------------------------------Einzigartig
 [OLDROD]
 Name = Angel
 NamePlural = Angeln
@@ -7174,7 +7145,7 @@ Price = 0
 FieldUse = Direct
 Flags = KeyItem
 Description = Eine einfache Angel, mit der man schwache Pokémon angeln kann.
-#-------------------------------
+#-------------------------------Einzigartig
 [GOODROD]
 Name = Profi-Angel
 NamePlural = Profi-Angeln
@@ -7183,7 +7154,7 @@ Price = 0
 FieldUse = Direct
 Flags = KeyItem
 Description = Eine Angel für Profi-Angler, mit der man bessere Pokémon angeln kann.
-#-------------------------------
+#-------------------------------Einzigartig
 [SUPERROD]
 Name = Meister-Angel
 NamePlural = Meister-Angeln
@@ -7192,7 +7163,7 @@ Price = 0
 FieldUse = Direct
 Flags = KeyItem
 Description = Eine Angel für Meister-Angler, mit der man starke und seltene Pokémon angeln kann.
-#-------------------------------
+#-------------------------------Einzigartig
 [GOLDROD]
 Name = Shiny-Angel
 NamePlural = Shiny-Angeln
@@ -7201,7 +7172,7 @@ Price = 0
 FieldUse = Direct
 Flags = KeyItem
 Description = Eine Angel angefertigt um Shiny Pokémon anzulocken.
-#-------------------------------
+#-------------------------------Einzigartig
 [MEGAROD]
 Name = Mega-Angel
 NamePlural = Mega-Angeln
@@ -7210,7 +7181,7 @@ Price = 0
 FieldUse = Direct
 Flags = KeyItem
 Description = Lockt eher seltene Pokémon an, man muss jedoch geduldiger sein.
-#-------------------------------
+#-------------------------------Einzigartig
 [POWERROD]
 Name = Fähigkeiten-Angel
 NamePlural = Fähigkeiten-Angeln
@@ -7219,7 +7190,7 @@ Price = 0
 FieldUse = Direct
 Flags = KeyItem
 Description = Lockt besonders Pokémon mit speziellen Fähigkeiten an, man muss jedoch geduldiger sein.
-#-------------------------------
+#-------------------------------Einzigartig
 [TREASUREROD]
 Name = Schatz-Angel
 NamePlural = Schatz-Angeln
@@ -7228,7 +7199,7 @@ Price = 0
 FieldUse = Direct
 Flags = KeyItem
 Description = Eine Angel um versteckte Schätze zu finden.
-#-------------------------------
+#-------------------------------Einzigartig
 [SLEEPROD]
 Name = Schlummer-Angel
 NamePlural = Schlummer-Angeln
@@ -7237,7 +7208,7 @@ Price = 0
 FieldUse = Direct
 Flags = KeyItem
 Description = Die Pokémon schlafen nach dem Anbeißen ein.
-#-------------------------------
+#-------------------------------Einzigartig
 [DOUBLEROD]
 Name = Doppel-Angel
 NamePlural = Doppel-Angeln
@@ -7246,7 +7217,7 @@ Price = 0
 FieldUse = Direct
 Flags = KeyItem
 Description = Diese Angel kann zwei Pokémon gleichzeitig fangen.
-#-------------------------------
+#-------------------------------Einzigartig
 [TOWNMAP]
 Name = Karte
 NamePlural = Karten
@@ -7255,7 +7226,7 @@ Price = 0
 FieldUse = Direct
 Flags = KeyItem
 Description = Eine sehr nützliche Karte von Chronoria, die dir deinen Standort anzeigt.
-#-------------------------------
+#-------------------------------Einzigartig
 [ESCAPEROPE]
 Name = Fluchtseil
 NamePlural = Fluchtseile
@@ -7264,7 +7235,7 @@ Price = 0
 FieldUse = Direct
 Flags = KeyItem
 Description = Dieses Item ermöglicht die Flucht aus einer Höhle und teleportiert den Spieler zum Eingang.
-#-------------------------------
+#-------------------------------Einzigartig
 [COINCASE]
 Name = Münzkorb
 NamePlural = Münzkörbe
@@ -7273,7 +7244,7 @@ Price = 0
 FieldUse = Direct
 Flags = KeyItem
 Description = Der Münzkorb ermöglicht das Spielen in der Spielhalle und kann 99.999 Münzen aufbewahren.
-#-------------------------------
+#-------------------------------Einzigartig
 [POKEFLUTE]
 Name = Pokéflöte
 NamePlural = Pokéflöten
@@ -7283,7 +7254,7 @@ FieldUse = OnPokemon
 BattleUse = Direct
 Flags = KeyItem
 Description = Eine seltsame Flöte, die schlafende Pokémon aufwecken kann.
-#-------------------------------
+#-------------------------------Einzigartig
 [DEVONSCOPE]
 Name = Scouter
 NamePlural = Scouter
@@ -7291,7 +7262,7 @@ Pocket = 8
 Price = 0
 Flags = KeyItem
 Description = Ein Gerät, welches unsichtbare Pokémon entlarvt.
-#-------------------------------
+#-------------------------------Einzigartig
 [SQUIRTBOTTLE]
 Name = Schiggykanne
 NamePlural = Schiggykannen
@@ -7299,7 +7270,7 @@ Pocket = 8
 Price = 0
 Flags = KeyItem
 Description = Eine Gießkanne,geformt wie ein Schiggy.
-#-------------------------------
+#-------------------------------Einzigartig
 [SPRINKLOTAD]
 Name = Loturzelkanne
 NamePlural = Loturzelkannen
@@ -7307,7 +7278,7 @@ Pocket = 8
 Price = 0
 Flags = KeyItem
 Description = Mit der Loturzelkanne ist es möglich Beerensträucher zu bewässern. 
-#-------------------------------
+#-------------------------------Einzigartig
 [GRACIDEA]
 Name = Gracidea
 NamePlural = Gracideas
@@ -7316,7 +7287,7 @@ Price = 0
 FieldUse = OnPokemon
 Flags = KeyItem
 Description = Die Gracidea verwandelt Shaymin in seine Zenitform.
-#-------------------------------
+#-------------------------------Einzigartig
 [REVEALGLASS]
 Name = Wahrspiegel
 NamePlural = Wahrspiegel
@@ -7325,7 +7296,7 @@ Price = 0
 FieldUse = OnPokemon
 Flags = KeyItem
 Description = Ermöglicht Boreos, Voltolos, Demeteros und Cupidos den Wechsel zwischen Inkarnations- und Tiergeistform. 
-#-------------------------------
+#-------------------------------Einzigartig
 [PRISONBOTTLE]
 Name = Banngefäß
 NamePlural = Banngefäße
@@ -7334,7 +7305,7 @@ Price = 0
 FieldUse = OnPokemon
 Flags = KeyItem
 Description = Der Einsatz des Banngefäßes ermöglicht Hoopa einen Formenwechsel zur entfesselten Form.
-#-------------------------------
+#-------------------------------Einzigartig
 [ZYGARDECUBE]
 Name = Zygarde-Würfel
 NamePlural = Zygarde-Würfel
@@ -7343,7 +7314,7 @@ Price = 0
 FieldUse = OnPokemon
 Flags = KeyItem
 Description = Im Zygarde-Würfel werden sämtliche gefundenen Kerne und Zellen von Zygarde gesammelt und es kann Zygardes Form ändern.
-#-------------------------------
+#-------------------------------Einzigartig
 [DNASPLICERS]
 Name = DNS-Keil
 NamePlural = DNS-Keile
@@ -7352,7 +7323,7 @@ Price = 0
 FieldUse = OnPokemon
 Flags = KeyItem
 Description = Der DNS-Keil wird benötigt, um Kyurem mit Reshiram oder Zekrom zu fusionieren.
-#-------------------------------
+#-------------------------------Einzigartig
 [DNASPLICERSUSED]
 Name = DNS-Keil
 NamePlural = DNS-Keile
@@ -7361,7 +7332,7 @@ Price = 0
 FieldUse = OnPokemon
 Flags = KeyItem
 Description = Der DNS-Keil wird benötigt, um Kyurem und Reshiram oder Zekrom wieder zu trennen.
-#-------------------------------
+#-------------------------------Einzigartig
 [NSOLARIZER]
 Name = Necrosol
 NamePlural = Necrosole
@@ -7370,7 +7341,7 @@ Price = 0
 FieldUse = OnPokemon
 Flags = KeyItem
 Description = Das Necrosol wird dazu verwendet, um Necrozma mit Solgaleo zu fusionieren.
-#-------------------------------
+#-------------------------------Einzigartig
 [NSOLARIZERUSED]
 Name = Necrosol
 NamePlural = Necrosole
@@ -7379,7 +7350,7 @@ Price = 0
 FieldUse = OnPokemon
 Flags = KeyItem
 Description = Das Necrosol wird dazu verwendet, um Necrozma und Solgaleo wieder zu trennen.
-#-------------------------------
+#-------------------------------Einzigartig
 [NLUNARIZER]
 Name = Necrolun
 NamePlural = Necrolune
@@ -7388,7 +7359,7 @@ Price = 0
 FieldUse = OnPokemon
 Flags = KeyItem
 Description = Das Necrolun wird benutzt, um Necrozma mit Lunala zu fusionieren.
-#-------------------------------
+#-------------------------------Einzigartig
 [NLUNARIZERUSED]
 Name = Necrolun
 NamePlural = Necrolune
@@ -7397,7 +7368,7 @@ Price = 0
 FieldUse = OnPokemon
 Flags = KeyItem
 Description = Das Necrolun wird benutzt, um Necrozma und Lunala wieder zu trennen.
-#-------------------------------
+#-------------------------------Einzigartig
 [REINSOFUNITY]
 Name = Zügel des Bundes
 NamePlural = Zügel des Bundes
@@ -7406,7 +7377,7 @@ Price = 0
 FieldUse = OnPokemon
 Flags = KeyItem
 Description = Es kann Coronospa mit Polaross oder Phantoross fusionieren.
-#-------------------------------
+#-------------------------------Einzigartig
 [REINSOFUNITYUSED]
 Name = Zügel des Bundes
 NamePlural = Zügel des Bundes
@@ -7415,7 +7386,7 @@ Price = 0
 FieldUse = OnPokemon
 Flags = KeyItem
 Description = Es kann Coronospa mit Polaross oder Phantoross defusionieren.
-#-------------------------------
+#-------------------------------Einzigartig
 [OVALCHARM]
 Name = Ovalpin
 NamePlural = Ovalpins
@@ -7423,7 +7394,7 @@ Pocket = 8
 Price = 0
 Flags = KeyItem
 Description = Er erhöht die Wahrscheinlichkeit, ein Ei in der Pension zu erhalten.
-#-------------------------------
+#-------------------------------Einzigartig
 [SHINYCHARM]
 Name = Schillerpin
 NamePlural = Schillerpins
@@ -7431,7 +7402,7 @@ Pocket = 8
 Price = 0
 Flags = KeyItem
 Description = Erhöht die Wahrscheinlichkeit ein Shiny Pokémon zu finden.
-#-------------------------------
+#-------------------------------Einzigartig
 [CATCHINGCHARM]
 Name = Superfangpin
 NamePlural = Superfangpins
@@ -7439,7 +7410,7 @@ Pocket = 8
 Price = 0
 Flags = KeyItem
 Description = Mit dem Superfangpin erhöht sich die Wahrscheinlichkeit, einen Superfang zu erzielen.
-#-------------------------------
+#-------------------------------Einzigartig
 [EXPCHARM]
 Name = EP-Pin
 NamePlural = EP-Pins
@@ -7447,7 +7418,7 @@ Pocket = 8
 Price = 0
 Flags = KeyItem
 Description = Der EP-Pin erhöht die erhaltene Erfahrung nach einem Pokémon-Kampf um 50 %.
-#-------------------------------
+#-------------------------------Einzigartig
 [MEGARING]
 Name = Mega Armband
 NamePlural = Mega Armbänder
@@ -7455,7 +7426,7 @@ Pocket = 8
 Price = 0
 Flags = KeyItem,MegaRing
 Description = Ein Armband, welches deinen Pokémon im Kampf die Mega-Entwicklung ermöglicht.
-#-------------------------------
+#-------------------------------Einzigartig
 [POKEMONBOXLINK]
 Name = Pokémon Box Link
 NamePlural = Pokémon Box Links
@@ -7466,7 +7437,7 @@ Description = Dieses Gerät ermöglicht dir (fast) überall die Nutzung der Pok�
 #===============================================================================
 #   HM ITEMS // Example Items
 #===============================================================================
-#-------------------------------
+#-------------------------------Einzigartig
 [STOUTLANDRIDE]
 Name = Bissbark-Ride
 NamePlural = Bissbark-Rides
@@ -7475,7 +7446,7 @@ Price = 0
 FieldUse = Direct
 Flags = KeyItem
 Description = Ruft Bissbark als PokéRide herbei.
-#-------------------------------------------------------------------------------
+#-------------------------------------------------------------------------------Einzigartig
 [ROCKSMASHITEM]
 Name = Spitzaxt
 NamePlural = Spitzäxte
@@ -7484,7 +7455,7 @@ Price = 0
 FieldUse = Direct
 Flags = KeyItem
 Description = Nutze diese, um Felsen zu zertrümmern.
-#-------------------------------------------------------------------------------
+#-------------------------------------------------------------------------------Einzigartig
 [CUTITEM]
 Name = Beil
 NamePlural = Beile
@@ -7493,7 +7464,7 @@ Price = 0
 FieldUse = Direct
 Flags = KeyItem
 Description = Damit kann man kleine Bäume fällen.
-#-------------------------------------------------------------------------------
+#-------------------------------------------------------------------------------Einzigartig
 [STRENGTHITEM]
 Name = Krafthandschuhe
 NamePlural = Krafthandschuhe
@@ -7502,7 +7473,7 @@ Price = 0
 FieldUse = Direct
 Flags = KeyItem
 Description = Damit können große Felsen verschoben werden.
-#-------------------------------------------------------------------------------
+#-------------------------------------------------------------------------------Einzigartig
 [SURFITEM]
 Name = Tohaido-Mobil
 NamePlural = Tohaido-Mobile
@@ -7511,7 +7482,7 @@ Price = 0
 FieldUse = Direct
 Flags = KeyItem
 Description = Damit kannst du über Wasser schwimmen.
-#-------------------------------------------------------------------------------
+#-------------------------------------------------------------------------------Einzigartig
 [FLYITEM]
 Name = Fliegen
 NamePlural = Fliegen
@@ -7520,7 +7491,7 @@ Price = 0
 FieldUse = Direct
 Flags = KeyItem
 Description = Ein Modul, mit dem du bereits besuchte Orte anfliegen kannst.
-#-------------------------------------------------------------------------------
+#-------------------------------------------------------------------------------Einzigartig
 [HEADBUTTITEM]
 Name = Premium-Futter
 NamePlural = Premium-Futter
@@ -7529,7 +7500,7 @@ Price = 0
 FieldUse = Direct
 Flags = KeyItem
 Description = Locke Pokémon aus Bäumen hervor.
-#-------------------------------------------------------------------------------
+#-------------------------------------------------------------------------------Einzigartig
 [FLASHITEM]
 Name = Laterne
 NamePlural = Laternen
@@ -7538,7 +7509,7 @@ Price = 0
 FieldUse = Direct
 Flags = KeyItem
 Description = Erhellt dunkle Gebiete.
-#-------------------------------------------------------------------------------
+#-------------------------------------------------------------------------------Einzigartig
 [DIVEITEM]
 Name = Tohaido-Tauchmodul
 NamePlural = Tohaido-Tauchmodule
@@ -7547,7 +7518,7 @@ Price = 0
 FieldUse = Direct
 Flags = KeyItem
 Description = Erlaubt es dir unter Wasser zu tauchen.
-#-------------------------------------------------------------------------------
+#-------------------------------------------------------------------------------Einzigartig
 [TELEPORTITEM]
 Name = Disc der Rückkehr
 NamePlural = Discs der Rückkehr
@@ -7556,7 +7527,7 @@ Price = 0
 FieldUse = Direct
 Flags = KeyItem
 Description = Zum letzten Pokécenter zurückkehren.
-#-------------------------------------------------------------------------------
+#-------------------------------------------------------------------------------Einzigartig
 [WATERFALLITEM]
 Name = Kaskadeausrüstung
 NamePlural = Kaskadeausrüstungen
@@ -7565,7 +7536,7 @@ Price = 0
 FieldUse = Direct
 Flags = KeyItem
 Description = Einzigartige Ausrüstung, welche den Spieler Wasserfälle erklimmen lässt.
-#-------------------------------------------------------------------------------
+#-------------------------------------------------------------------------------Einzigartig
 [WHIRLPOOLITEM]
 Name = Handpaddel
 NamePlural = Handpaddel
@@ -7574,7 +7545,7 @@ Price = 0
 FieldUse = Direct
 Flags = KeyItem
 Description = Einzigartige Paddel. Damit kannst du Strudel überwinden.
-#-------------------------------------------------------------------------------
+#-------------------------------------------------------------------------------Einzigartig
 [ROCKCLIMBITEM]
 Name = Kletterausrüstung
 NamePlural = Kletterausrüstungen
@@ -7583,7 +7554,7 @@ Price = 0
 FieldUse = Direct
 Flags = KeyItem
 Description = Damit kann man Felswände erklimmen.
-#-------------------------------------------------------------------------------
+#-------------------------------------------------------------------------------Einzigartig
 [LENSOFTRUTH]
 Name = Temporalscanner
 NamePlural = Temporalscanner
@@ -7592,7 +7563,7 @@ Price = 0
 FieldUse = Direct
 Flags = KeyItem
 Description = Ein Zeitenscanner, der verborgene Wege enthüllen kann.
-#-------------------------------------------------------------------------------
+#-------------------------------------------------------------------------------Einzigartig
 [ICEBARRIEREITEM]
 Name = Eispickel
 NamePlural = Eispickel
@@ -7601,7 +7572,7 @@ Price = 0
 FieldUse = Direct
 Flags = KeyItem
 Description = Damit zerberchen gefrorene Felsen mit Leichtigkeit.
-#-------------------------------------------------------------------------------
+#-------------------------------------------------------------------------------Einzigartig
 [EXPLORERKIT]
 Name = Erkundungs-Set
 NamePlural = Erkundungs-Sets
@@ -7609,7 +7580,7 @@ Pocket = 8
 Price = 0
 Flags = KeyItem
 Description = Das volle Repertoire, um brüchige Felswände aufzuschlagen.
-#-------------------------------------------------------------------------------
+#-------------------------------------------------------------------------------Löschen
 [KAEFERSAMMLERITEM]
 Name = Käfersammleritem
 NamePlural = Erkundungs-Sets
@@ -7617,7 +7588,7 @@ Pocket = 8
 Price = 0
 Flags = KeyItem
 Description = Das volle Repertoire, um brüchige Felswände aufzuschlagen.
-#-------------------------------------------------------------------------------
+#-------------------------------------------------------------------------------Löschen
 [PROFIANGLERITEM]
 Name = Käfersammleritem
 NamePlural = Erkundungs-Sets
@@ -7625,7 +7596,7 @@ Pocket = 8
 Price = 0
 Flags = KeyItem
 Description = Das volle Repertoire, um brüchige Felswände aufzuschlagen.
-#-------------------------------------------------------------------------------
+#-------------------------------------------------------------------------------Einzigartig
 [ENKELGESCHENK]
 Name = Geschenk für Enkel
 NamePlural = Geschenke für Enkel
@@ -7633,7 +7604,7 @@ Pocket = 8
 Price = 0
 Flags = KeyItem
 Description = Ein Geschenk einer Oma an ihr Enkelkind, welches in Lunafeld wohnt.
-#-------------------------------
+#-------------------------------Einzigartig
 [DUDUNSPARCEDITEA]
 Name = Dummimiselnit-A
 NamePlural = Dummimiselniten-A
@@ -7642,7 +7613,7 @@ Price = 10000
 BPPrice = 50
 Flags = MegaStone,Fling_80
 Description = Dieser Stein ermöglicht Dummimisel eine Mega-Entwicklung.
-#-------------------------------
+#-------------------------------Einzigartig
 [DUDUNSPARCEDITEB]
 Name = Dummimiselnit-B
 NamePlural = Dummimiselniten-B
@@ -7651,7 +7622,7 @@ Price = 10000
 BPPrice = 50
 Flags = MegaStone,Fling_80
 Description = Dieser Stein ermöglicht Dummimisel eine Mega-Entwicklung.
-#-------------------------------------------------------------------------------
+#-------------------------------------------------------------------------------Einzigartig
 [NATURECHANGER]
 Name = Seelenspiegel
 NamePlural = Seelenspiegel
@@ -7660,16 +7631,7 @@ Price = 0
 FieldUse = Direct
 Flags = KeyItem
 Description = Tauscht das Wesen eines Pokémon.
-#-------------------------------------------------------------------------------
-[TEMPORALSCANNER]
-Name = Temporalscanner
-NamePlural = Temporalscanner
-Pocket = 8
-Price = 0
-Description = Ein Gerät, das vergangene Spuren sichtbar machen kann. Für temporale Rätsel geeignet.
-FieldUse = Direct
-Flags = KeyItem
-#-------------------------------
+#-------------------------------Einzigartig
 [BLUESTONE]
 Name = Blauer Stein
 NamePlural = Blaue Steine
@@ -7677,7 +7639,7 @@ Pocket = 8
 Price = 0
 SellPrice = 0
 Description = Ein seltsamer blauer Stein.
-#-------------------------------
+#-------------------------------Einzigartig
 [CABLECARTICKET]
 Name = Lift-Ticket
 NamePlural = Lift-Tickets
@@ -7685,7 +7647,7 @@ Pocket = 8
 Price = 0
 SellPrice = 0
 Description = Eine Dauerkarte für den Lift zwischen Solhaven und Route 6.
-#-------------------------------
+#-------------------------------Einzigartig
 [KEYCARD]
 Name = Schlüsselkarte
 NamePlural = Schlüsselkarten
@@ -7693,7 +7655,7 @@ Pocket = 8
 Price = 0
 SellPrice = 0
 Description = Eine Schlüsselkarte für eine unbekannte Tür.
-#-------------------------------
+#-------------------------------Einzigartig
 [KEYCARD2]
 Name = Schlüsselkarte
 NamePlural = Schlüsselkarten
@@ -7701,7 +7663,7 @@ Pocket = 8
 Price = 0
 SellPrice = 0
 Description = Eine Schlüsselkarte für eine unbekannte Tür.
-#-------------------------------
+#-------------------------------Einzigartig
 [SNORLAXITE]
 Name = Relaxonit
 NamePlural = Relaxonite
@@ -7710,7 +7672,7 @@ Price = 10000
 BPPrice = 50
 Flags = MegaStone,Fling_80
 Description = Dieser Stein ermöglicht Relaxo eine Mega-Entwicklung.
-#-------------------------------
+#-------------------------------Einzigartig
 [MELMETALNITE]
 Name = Melmetalnit
 NamePlural = Melmetalnite
@@ -7719,7 +7681,7 @@ Price = 10000
 BPPrice = 50
 Flags = MegaStone,Fling_80
 Description = Dieser Stein ermöglicht Melmetal eine Mega-Entwicklung.
-#-------------------------------
+#-------------------------------Einzigartig
 [TERRANOXORB]
 Name = Terranox-Orb
 NamePlural = Terranox-Orbs
@@ -7727,7 +7689,7 @@ Pocket = 8
 Price = 0
 SellPrice = 0
 Description = Ein massiver, erdener Stein, der Wärme ausstrahlt. Sein Inneres scheint aus geschmolzener Erde zu bestehen.
-#-------------------------------
+#-------------------------------Einzigartig
 [AURANITORB]
 Name = Auranit-Orb
 NamePlural = Auranit-Orbs
@@ -7735,7 +7697,7 @@ Pocket = 8
 Price = 0
 SellPrice = 0
 Description = Ein klar schimmernder Kristall, der den unbeugsamen Willen eines Pokémon verkörpert.
-#-------------------------------
+#-------------------------------Einzigartig
 [VERDANITHORB]
 Name = Verdanith-Orb
 NamePlural = Verdanith-Orbs
@@ -7743,7 +7705,7 @@ Pocket = 8
 Price = 0
 SellPrice = 0
 Description = Dieser zarte Kristall duftet nach frischem Gras.
-#-------------------------------
+#-------------------------------Einzigartig
 [VIAL]
 Name = Pokévial
 NamePlural = Pokévials
@@ -7752,7 +7714,7 @@ Price = 0
 FieldUse = Direct
 Flags = KeyItem
 Description = Hiermit kannst du einmalig deine Pokémon heilen. Kann im Pokécenter aufgefüllt werden.
-#-------------------------------
+#-------------------------------Einzigartig
 [EMPTYVIAL]
 Name = Pokévial
 NamePlural = Pokévials
@@ -7761,7 +7723,7 @@ Price = 0
 FieldUse = Direct
 Flags = KeyItem
 Description = Hiermit kannst du einmalig deine Pokémon heilen. Kann im Pokécenter aufgefüllt werden.
-#-------------------------------
+#-------------------------------Einzigartig
 [MEDIKAMENT]
 Name = Medizin
 NamePlural = Medizin
@@ -7770,7 +7732,7 @@ Price = 0
 FieldUse = Direct
 Flags = KeyItem
 Description = Eine besondere Medizin gegen spezielle Vergiftungen.
-#-------------------------------
+#-------------------------------Einzigartig
 [FELSORB]
 Name = Fels-Orb
 NamePlural = Fels-Orbs
@@ -7778,7 +7740,7 @@ Pocket = 8
 Price = 0
 SellPrice = 0
 Description = Ein massiver, felserner Stein. Er sieht so aus, als würde er in eine Vorrichtung passen.
-#-------------------------------
+#-------------------------------Einzigartig
 [FROSTORB]
 Name = Frost-Orb
 NamePlural = Frost-Orbs
@@ -7786,7 +7748,7 @@ Pocket = 8
 Price = 0
 SellPrice = 0
 Description = Ein massiver, gefrorener Stein. Er sieht so aus, als würde er in eine Vorrichtung passen.
-#-------------------------------
+#-------------------------------Einzigartig
 [METALLORB]
 Name = Metall-Orb
 NamePlural = Metall-Orbs
@@ -7794,7 +7756,7 @@ Pocket = 8
 Price = 0
 SellPrice = 0
 Description = Ein massiver, metallharter Stein. Er sieht so aus, als würde er in eine Vorrichtung passen.
-#-------------------------------
+#-------------------------------Einzigartig
 [SPANNUNGSORB]
 Name = Spannungs-Orb
 NamePlural = Spannungs-Orbs
@@ -7802,7 +7764,7 @@ Pocket = 8
 Price = 0
 SellPrice = 0
 Description = Ein massiver, geladener Stein. Er sieht so aus, als würde er in eine Vorrichtung passen.
-#-------------------------------
+#-------------------------------Einzigartig
 [DRACOORB]
 Name = Draco-Orb
 NamePlural = Draco-Orbs
@@ -7810,7 +7772,7 @@ Pocket = 8
 Price = 0
 SellPrice = 0
 Description = Ein massiver, schuppiger Stein. Er sieht so aus, als würde er in eine Vorrichtung passen.
-#-------------------------------
+#-------------------------------Wenige
 [SHINYSPRAY]
 Name = Shinybeere
 NamePlural = Shinybeeren
