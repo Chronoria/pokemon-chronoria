@@ -1,16 +1,16 @@
 // Best-effort German labels for Essentials wild-encounter method codes (encounters.txt).
 // Unknown/custom codes just fall back to the raw code - same pattern as evolutionMethods.ts.
 const METHOD_LABELS: Record<string, string> = {
-  Land: "Gras",
-  LandMorning: "Gras (morgens)",
-  LandDay: "Gras (tagsüber)",
-  LandNight: "Gras (nachts)",
+  Land: "Hohes Gras",
+  LandMorning: "Hohes Gras (morgens)",
+  LandDay: "Hohes Gras (tagsüber)",
+  LandNight: "Hohes Gras (nachts)",
   Cave: "Höhle",
   CaveMorning: "Höhle (morgens)",
   CaveDay: "Höhle (tagsüber)",
   CaveNight: "Höhle (nachts)",
-  Water: "Wasser (Oberfläche)",
-  RockSmash: "Zerschlagener Fels",
+  Water: "Surfer",
+  RockSmash: "Zertrümmerer",
   // Names match the actual in-game fishing rod items (items.txt: OLDROD/GOODROD/SUPERROD/
   // GOLDROD/MEGAROD/POWERROD/TREASUREROD/SLEEPROD/DOUBLEROD), not a generic translation.
   OldRod: "Angel",

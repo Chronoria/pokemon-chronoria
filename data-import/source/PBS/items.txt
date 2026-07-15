@@ -57,37 +57,37 @@ Flags = Fling_30
 Description = Der Duft dieses Honigs lockt wilde Pokémon an. Verwende ihn in hohem Gras oder an besonderen Bäumen. 
 #-------------------------------
 [REDSHARD]
-Name = Rote Scherbe
-NamePlural = Rote Scherben
+Name = Purpurstück
+NamePlural = Purpurstücke
 Pocket = 1
 Price = 1000
 Flags = Fling_30
 Description = Eine rote Scherbe eines antiken Werkzeugs, das vor langer Zeit angefertigt wurde. 
 #-------------------------------Besonderer Shop
 [YELLOWSHARD]
-Name = Yellow Shard
-NamePlural = Yellow Shards
+Name = Gelbstück
+NamePlural = Gelbstücke
 Pocket = 1
 Price = 1000
 Flags = Fling_30
 Description = Eine gelbe Scherbe eines antiken Werkzeugs, das vor langer Zeit angefertigt wurde.
 #-------------------------------Besonderer Shop
 [BLUESHARD]
-Name = Blue Shard
-NamePlural = Blue Shards
+Name = Indigostück
+NamePlural = Indigostücke
 Pocket = 1
 Price = 1000
 Flags = Fling_30
 Description = Eine blaue Scherbe eines antiken Werkzeugs, das vor langer Zeit angefertigt wurde.
 #-------------------------------Besonderer Shop
 [GREENSHARD]
-Name = Green Shard
-NamePlural = Green Shards
+Name = Grünstück
+NamePlural = Grünstücke
 Pocket = 1
 Price = 1000
 Flags = Fling_30
 Description = Eine grüne Scherbe eines antiken Werkzeugs, das vor langer Zeit angefertigt wurde.
-#-------------------------------Shop
+#-------------------------------Shop  / Mining
 [FIRESTONE]
 Name = Feuerstein
 NamePlural = Feuersteine
@@ -98,7 +98,7 @@ BPPrice = 5
 FieldUse = OnPokemon
 Flags = EvolutionStone,Fling_30
 Description = Es lassen sich Vulpix, Fukano, Evoli, Grillmak und Chilingel entwickeln.
-#-------------------------------Shop
+#-------------------------------Shop / Mining
 [THUNDERSTONE]
 Name = Donnerstein
 NamePlural = Donnersteine
@@ -109,7 +109,7 @@ BPPrice = 5
 FieldUse = OnPokemon
 Flags = EvolutionStone,Fling_30
 Description = Es lassen sich Magneton, Pikachu, Evoli, Nasgnet, Zapplalek, Wablu, Blipp und Akkup entwicklen.
-#-------------------------------Shop
+#-------------------------------Shop / Mining
 [WATERSTONE]
 Name = Wasserstein
 NamePlural = Wassersteine
@@ -120,7 +120,7 @@ BPPrice = 5
 FieldUse = OnPokemon
 Flags = EvolutionStone,Fling_30
 Description = Es lassen sich Quaputzi, Muschas, Sterndu, Evoli, Lombrero und Sodamak entwickeln.
-#-------------------------------Shop
+#-------------------------------Shop / Mining
 [LEAFSTONE]
 Name = Blattstein
 NamePlural = Blattsteine
@@ -131,7 +131,7 @@ BPPrice = 5
 FieldUse = OnPokemon
 Flags = EvolutionStone,Fling_30
 Description = Es lassen sich Duflor, Ultrigaria, Owei, Evoli, Blanas, Vegimak und Voltobal entwickeln.
-#-------------------------------Shop
+#-------------------------------Shop / Mining
 [MOONSTONE]
 Name = Mondstein
 NamePlural = Mondsteine
@@ -142,7 +142,7 @@ BPPrice = 5
 FieldUse = OnPokemon
 Flags = EvolutionStone,Fling_30
 Description = Es lassen sich Nidorino, Nidorina, Piepi, Pummeluff, Eneco und Somniam entwickeln.
-#-------------------------------Shop
+#-------------------------------Shop / Mining
 [SUNSTONE]
 Name = Sonnenstein
 NamePlural = Sonnensteine
@@ -319,7 +319,7 @@ Pocket = 1
 Price = 100
 Flags = Apricorn
 Description = Zum herstellen besonderer Pokébälle.
-#-------------------------------Map
+#-------------------------------Map / Mining
 [HELIXFOSSIL]
 Name = Helixfossil
 NamePlural = Helixfossile
@@ -327,7 +327,7 @@ Pocket = 1
 Price = 7000
 Flags = Fossil,Fling_100
 Description = Ein Fossil eines Amonitas.
-#-------------------------------Map
+#-------------------------------Map / Mining
 [DOMEFOSSIL]
 Name = Domfossil
 NamePlural = Domfossile
@@ -335,7 +335,7 @@ Pocket = 1
 Price = 7000
 Flags = Fossil,Fling_100
 Description = Ein Fossil eines Kabuto
-#-------------------------------Map
+#-------------------------------Map / Mining
 [OLDAMBER]
 Name = Altbernstein
 NamePlural = Altbernsteine
@@ -343,7 +343,7 @@ Pocket = 1
 Price = 1000
 Flags = Fossil,Fling_100
 Description = Es kann zu einem Aerodactyl reanimiert werden.
-#-------------------------------Map
+#-------------------------------Map / Mining
 [ROOTFOSSIL]
 Name = Wurzelfossil
 NamePlural = Wurzelfossile
@@ -351,7 +351,7 @@ Pocket = 1
 Price = 7000
 Flags = Fossil,Fling_100
 Description = Ein Fossil eines Liliep.
-#-------------------------------Map
+#-------------------------------Map / Mining
 [CLAWFOSSIL]
 Name = Klauenfossil
 NamePlural = Klauenfossile
@@ -359,7 +359,7 @@ Pocket = 1
 Price = 7000
 Flags = Fossil,Fling_100
 Description = Ein Fossil eines Anorith.
-#-------------------------------Map
+#-------------------------------Map / Mining
 [SKULLFOSSIL]
 Name = Kopffossil
 NamePlural = Kopffossile
@@ -367,7 +367,7 @@ Pocket = 1
 Price = 7000
 Flags = Fossil,Fling_100
 Description = Ein Fossil eines Koknodon.
-#-------------------------------Map
+#-------------------------------Map / Mining
 [ARMORFOSSIL]
 Name = Panzerfossil
 NamePlural = Panzerfossile
@@ -503,7 +503,7 @@ Pocket = 1
 Price = 3000
 Flags = Fling_30
 Description = Als Wertgegenstand erfüllt der Sternenstaub keinen anderen Zweck als den Verkauf. 
-#-------------------------------Verkauf
+#-------------------------------Verkauf / Mining
 [STARPIECE]
 Name = Sternenstück
 NamePlural = Sternenstücke
@@ -535,7 +535,7 @@ Pocket = 1
 Price = 40000
 Flags = Fling_130
 Description = Es zählt zu den wertvollsten Items überhaupt. 
-#-------------------------------Rezept / Shop / Tausch
+#-------------------------------Rezept / Shop / Tausch / Mining
 [HEARTSCALE]
 Name = Herzschuppe
 NamePlural = Herzschuppen
@@ -550,7 +550,7 @@ NamePlural = Flegmon-Ruten
 Pocket = 1
 Price = 10000
 Description = Als Wertgegenstand erfüllt der Steinknochen keinen anderen Zweck als den Verkauf. 
-#-------------------------------Verkauf
+#-------------------------------Verkauf / Mining
 [RAREBONE]
 Name = Steinknochen
 NamePlural = Steinknochen
@@ -644,7 +644,7 @@ Pocket = 1
 Price = 20
 Flags = Fling_30
 Description = Dafür erhält man sicherlich einen guten Preis.
-#-------------------------------Kryppukk Einzigartig
+#-------------------------------Mining
 [ODDKEYSTONE]
 Name = Spiritkern
 NamePlural = Spiritkerne
@@ -933,7 +933,7 @@ SellPrice = 25000
 BPPrice = 25
 Flags = Fling_10
 Description = Die Initiative des Trägers wird um 50% erhöht, erlaubt aber nur den Einsatz einer Attacke.
-#-------------------------------Einzigartig
+#-------------------------------Mining
 [HEATROCK]
 Name = Heißbrocken
 NamePlural = Heißbrocken
@@ -943,7 +943,7 @@ SellPrice = 2000
 BPPrice = 15
 Flags = Fling_60
 Description = Verlängert die Wirkung von Sonnentag von 5 auf 8 Runden.
-#-------------------------------Einzigartig
+#-------------------------------Mining
 [DAMPROCK]
 Name = Nassbrocken
 NamePlural = Nassbrocken
@@ -953,7 +953,7 @@ SellPrice = 2000
 BPPrice = 15
 Flags = Fling_60
 Description = Verlängert die Wirkung von Regentanz von 5 auf 8 Runden.
-#-------------------------------Einzigartig
+#-------------------------------Mining
 [SMOOTHROCK]
 Name = Glattbrocken
 NamePlural = Glattbrocken
@@ -963,7 +963,7 @@ SellPrice = 2000
 BPPrice = 15
 Flags = Fling_10
 Description = Verlängert die Wirkung von Sandsturm von 5 auf 8 Runden.
-#-------------------------------Einzigartig
+#-------------------------------Mining
 [ICYROCK]
 Name = Eisbrocken
 NamePlural = Eisbrocken
@@ -983,7 +983,7 @@ SellPrice = 3750
 BPPrice = 15
 Flags = Fling_60
 Description = Verlängert die Wirkung von Feld-Attacken und Feld-Fähigkeiten.
-#-------------------------------Einzigartig
+#-------------------------------Mining
 [LIGHTCLAY]
 Name = Lichtlehm
 NamePlural = Lichtlehm
@@ -1390,7 +1390,7 @@ SellPrice = 2500
 BPPrice = 16
 Flags = Fling_80
 Description = Der Träger erleidet jede Runde Schaden. Wird bei Kontakt auf Gegner übertragen.
-#-------------------------------Einzigartig
+#-------------------------------Mining
 [IRONBALL]
 Name = Eisenkugel
 NamePlural = Eisenkugeln
@@ -1650,7 +1650,7 @@ Price = 3000
 SellPrice = 750
 Flags = Fling_10
 Description = Verstärkt Käfer-Attacken des Trägers um 20%.
-#-------------------------------Einzigartig
+#-------------------------------Mining
 [HARDSTONE]
 Name = Granitstein
 NamePlural = Granitsteine
@@ -1705,7 +1705,7 @@ Price = 3000
 SellPrice = 750
 Flags = Fling_10
 Description = Verstärkt Normal-Attacken des Trägers um 20%.
-#-------------------------------Einzigartig
+#-------------------------------Mining
 [FLAMEPLATE]
 Name = Feuertafel
 NamePlural = Feuertafeln
@@ -1714,7 +1714,7 @@ Price = 10000
 SellPrice = 500
 Flags = Fling_90
 Description = Verstärkt Feuer-Attacken des Trägers um 20%.
-#-------------------------------Einzigartig
+#-------------------------------Mining
 [SPLASHPLATE]
 Name = Wassertafel
 NamePlural = Wassertafeln
@@ -1723,7 +1723,7 @@ Price = 10000
 SellPrice = 500
 Flags = Fling_90
 Description = Verstärkt Wasser-Attacken des Trägers um 20%.
-#-------------------------------Einzigartig
+#-------------------------------Mining
 [ZAPPLATE]
 Name = Blitztafel
 NamePlural = Blitztafeln
@@ -1732,7 +1732,7 @@ Price = 10000
 SellPrice = 500
 Flags = Fling_90
 Description = Verstärkt Elektro-Attacken des Trägers um 20%.
-#-------------------------------Einzigartig
+#-------------------------------Mining
 [MEADOWPLATE]
 Name = Wiesentafel
 NamePlural = Wiesentafeln
@@ -1741,7 +1741,7 @@ Price = 10000
 SellPrice = 500
 Flags = Fling_90
 Description = Verstärkt Pflanzen-Attacken des Trägers um 20%.
-#-------------------------------Einzigartig
+#-------------------------------Mining
 [ICICLEPLATE]
 Name = Frosttafel
 NamePlural = Frosttafeln
@@ -1750,7 +1750,7 @@ Price = 10000
 SellPrice = 500
 Flags = Fling_90
 Description = Verstärkt Eis-Attacken des Trägers um 20%.
-#-------------------------------Einzigartig
+#-------------------------------Mining
 [FISTPLATE]
 Name = Fausttafel
 NamePlural = Fausttafeln
@@ -1759,7 +1759,7 @@ Price = 10000
 SellPrice = 500
 Flags = Fling_90
 Description = Verstärkt Kampf-Attacken des Trägers um 20%.
-#-------------------------------Einzigartig
+#-------------------------------Mining
 [TOXICPLATE]
 Name = Gifttafel
 NamePlural = Gifttafeln
@@ -1768,7 +1768,7 @@ Price = 10000
 SellPrice = 500
 Flags = Fling_90
 Description = Verstärkt Gift-Attacken des Trägers um 20%.
-#-------------------------------Einzigartig
+#-------------------------------Mining
 [EARTHPLATE]
 Name = Erdtafel
 NamePlural = Erdtafeln
@@ -1777,7 +1777,7 @@ Price = 10000
 SellPrice = 500
 Flags = Fling_90
 Description = Verstärkt Boden-Attacken des Trägers um 20%.
-#-------------------------------Einzigartig
+#-------------------------------Mining
 [SKYPLATE]
 Name = Wolkentafel
 NamePlural = Wolkentafeln
@@ -1786,7 +1786,7 @@ Price = 10000
 SellPrice = 500
 Flags = Fling_90
 Description = Verstärkt Flug-Attacken des Trägers um 20%.
-#-------------------------------Einzigartig
+#-------------------------------Mining
 [MINDPLATE]
 Name = Hirntafel
 NamePlural = Hirntafeln
@@ -1795,7 +1795,7 @@ Price = 10000
 SellPrice = 500
 Flags = Fling_90
 Description = Verstärkt Psycho-Attacken des Trägers um 20%.
-#-------------------------------Einzigartig
+#-------------------------------Mining
 [INSECTPLATE]
 Name = Käfertafel
 NamePlural = Käfertafeln
@@ -1804,7 +1804,7 @@ Price = 10000
 SellPrice = 500
 Flags = Fling_90
 Description = Verstärkt Käfer-Attacken des Trägers um 20%.
-#-------------------------------Einzigartig
+#-------------------------------Mining
 [STONEPLATE]
 Name = Steintafel
 NamePlural = Steintafeln
@@ -1813,7 +1813,7 @@ Price = 10000
 SellPrice = 500
 Flags = Fling_90
 Description = Verstärkt Gestein-Attacken des Trägers um 20%.
-#-------------------------------Einzigartig
+#-------------------------------Mining
 [SPOOKYPLATE]
 Name = Spuktafel
 NamePlural = Spuktafeln
@@ -1822,7 +1822,7 @@ Price = 10000
 SellPrice = 500
 Flags = Fling_90
 Description = Verstärkt Geist-Attacken des Trägers um 20%.
-#-------------------------------Einzigartig
+#-------------------------------Mining
 [DRACOPLATE]
 Name = Dracotafel
 NamePlural = Dracotafeln
@@ -1831,7 +1831,7 @@ Price = 10000
 SellPrice = 500
 Flags = Fling_90
 Description = Verstärkt Drachen-Attacken des Trägers um 20%.
-#-------------------------------Einzigartig
+#-------------------------------Mining
 [DREADPLATE]
 Name = Furchttafel
 NamePlural = Furchttafeln
@@ -1840,7 +1840,7 @@ Price = 10000
 SellPrice = 500
 Flags = Fling_90
 Description = Verstärkt Unlicht-Attacken des Trägers um 20%.
-#-------------------------------Einzigartig
+#-------------------------------Mining
 [IRONPLATE]
 Name = Eisentafel
 NamePlural = Eisentafeln
@@ -1849,7 +1849,7 @@ Price = 10000
 SellPrice = 500
 Flags = Fling_90
 Description = Verstärkt Stahl-Attacken des Trägers um 20%.
-#-------------------------------Einzigartig
+#-------------------------------Mining
 [PIXIEPLATE]
 Name = Feentafel
 NamePlural = Feentafeln
@@ -2258,7 +2258,7 @@ NamePlural = Feen-Discs
 Pocket = 1
 Flags = Fling_50
 Description = Ändert den Typen von Amigento und seine Attacke Multi-Angriff zu Fee.
-#-------------------------------Shop
+#-------------------------------Mining
 [EVERSTONE]
 Name = Ewigstein
 NamePlural = Ewigsteine
@@ -2349,7 +2349,7 @@ SellPrice = 750
 BPPrice = 10
 Flags = Fling_30
 Description = Damit lässt sich Barschwa entwickeln.
-#-------------------------------Shop (spät)
+#-------------------------------Mining
 [OVALSTONE]
 Name = Ovaler Stein
 NamePlural = Ovale Steine
@@ -3175,7 +3175,7 @@ FieldUse = OnPokemon
 BattleUse = OnPokemon
 Flags = Fling_30
 Description = Kann jedes Statusproblem eines Pokémon heilen.
-#-------------------------------Shop
+#-------------------------------Shop / Mining
 [REVIVE]
 Name = Beleber
 NamePlural = Beleber
@@ -3186,7 +3186,7 @@ FieldUse = OnPokemon
 BattleUse = OnPokemon
 Flags = Fling_30
 Description = Ein besiegtes Pokémon erhält 50% der Gesamt-LP zurück.
-#-------------------------------Map
+#-------------------------------Map / Mining
 [MAXREVIVE]
 Name = Top-Beleber
 NamePlural = Top-Beleber
