@@ -2979,7 +2979,7 @@ BattleUse = OnPokemon
 Flags = Fling_30
 Description = Kann jedes Statusproblem eines Pokémon heilen.
 #-------------------------------Besonderer Shop
-[BIGDA]
+[BIGMALASADA]
 Name = Maxi-Malasada
 NamePlural = Maxi-Malasadas
 Pocket = 2
