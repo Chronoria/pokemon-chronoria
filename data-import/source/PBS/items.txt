@@ -65,7 +65,7 @@ FieldUse = OnPokemon
 BattleUse = OnPokemon
 Flags = Fling_30
 Description = Ein besiegtes Pokémon wird vollständig geheilt.
-#-------------------------------
+#-------------------------------Mining / Tausch
 [REDSHARD]
 Name = Purpurstück
 NamePlural = Purpurstücke
@@ -73,7 +73,7 @@ Pocket = 1
 Price = 1000
 Flags = Fling_30
 Description = Eine rote Scherbe eines antiken Werkzeugs, das vor langer Zeit angefertigt wurde. 
-#-------------------------------Besonderer Shop
+#-------------------------------Mining / Tausch
 [YELLOWSHARD]
 Name = Gelbstück
 NamePlural = Gelbstücke
@@ -81,7 +81,7 @@ Pocket = 1
 Price = 1000
 Flags = Fling_30
 Description = Eine gelbe Scherbe eines antiken Werkzeugs, das vor langer Zeit angefertigt wurde.
-#-------------------------------Besonderer Shop
+#-------------------------------Mining / Tausch
 [BLUESHARD]
 Name = Indigostück
 NamePlural = Indigostücke
@@ -89,7 +89,7 @@ Pocket = 1
 Price = 1000
 Flags = Fling_30
 Description = Eine blaue Scherbe eines antiken Werkzeugs, das vor langer Zeit angefertigt wurde.
-#-------------------------------Besonderer Shop
+#-------------------------------Mining / Tausch
 [GREENSHARD]
 Name = Grünstück
 NamePlural = Grünstücke
@@ -979,46 +979,6 @@ Price = 1050
 Flags = Fling_80
 Description = Manchmal erscheinen Stimmen aus dem Spiritkern.
 #-------------------------------Shop
-[REDNECTAR]
-Name = Roter Nektar
-NamePlural = Roter Nektar
-Pocket = 1
-Price = 300
-SellPrice = 75
-FieldUse = OnPokemon
-Flags = Fling_10
-Description = Wird der Rote Nektar auf ein Choreogel angewandt, so ändert sich dessen Stil zum Flamenco-Stil. 
-#-------------------------------Shop
-[YELLOWNECTAR]
-Name = Gelber Nektar
-NamePlural = Gelber Nektar
-Pocket = 1
-Price = 300
-SellPrice = 75
-FieldUse = OnPokemon
-Flags = Fling_10
-Description = Wird der gelbe Nektar auf ein Choreogel angewandt so, ändert sich dessen Stil zum Cheerleading-Stil. 
-#-------------------------------Shop
-[PINKNECTAR]
-Name = Rosa Nektar
-NamePlural = Rosa Nektar
-Pocket = 1
-Price = 300
-SellPrice = 75
-FieldUse = OnPokemon
-Flags = Fling_10
-Description = Wird der rosa Nektar auf ein Choreogel angewandt, so ändert sich dessen Stil zum Hula-Stil. 
-#-------------------------------Shop
-[PURPLENECTAR]
-Name = Purpurner Nektar
-NamePlural = Purpurner Nektar
-Pocket = 1
-Price = 300
-SellPrice = 75
-FieldUse = OnPokemon
-Flags = Fling_10
-Description = Wird der purpurne Nektar auf ein Choreogel angewandt, so ändert sich dessen Stil zum Buyo-Stil. 
-#-------------------------------Shop
 [AIRBALLOON]
 Name = Luftballon
 NamePlural = Luftballons
@@ -1519,26 +1479,6 @@ SellPrice = 5000
 Flags = Fling_10
 Description = Erhöht die Sp. Verteidigung auf dem Psycho-Terrain. Das Item wird Verbraucht.
 #-------------------------------Einzigartig
-[LIFEORB]
-Name = Leben-Orb
-NamePlural = Leben-Orbs
-Pocket = 1
-Price = 50000
-SellPrice = 12500
-BPPrice = 25
-Flags = Fling_30
-Description = Verstärkt Attacken um 30%, der Träger erhält 10% Schaden bei jedem Angriff.
-#-------------------------------Einzigartig
-[EXPERTBELT]
-Name = Expertengurt
-NamePlural = Expertengurte
-Pocket = 1
-Price = 30000
-SellPrice = 7500
-BPPrice = 25
-Flags = Fling_10
-Description = Sehr effektive Attacken werden um 20% verstärkt.
-#-------------------------------Einzigartig
 [METRONOME]
 Name = Metronom
 NamePlural = Metronome
@@ -1719,6 +1659,95 @@ BPPrice = 10
 Flags = Fling_10
 Description = Der Träger kann von Attacken getroffen werden, die eigentlich keine Wirkung auf ihn haben.
 #-------------------------------Einzigartig
+[LIGHTBALL]
+Name = Light Ball
+NamePlural = Light Balls
+Pocket = 1
+Price = 500
+Flags = Fling_30
+Description = Erhöht den Angriff und Sp. Angriff bei Pikachu.
+#-------------------------------Einzigartig
+[LUCKYPUNCH]
+Name = Lucky Punch
+NamePlural = Lucky Punches
+Pocket = 1
+Price = 1000
+BPPrice = 7
+Flags = Fling_40
+Description = Erhöht die Wahrscheinlichkeit, dass Chaneira einen Volltreffer landet um zwei Stufen. 
+#-------------------------------Einzigartig
+[METALPOWDER]
+Name = Metallstaub
+NamePlural = Metallstaub
+Pocket = 1
+Price = 1000
+Flags = Fling_10
+Description = Erhöht die Verteidigung und die Spezial-Verteidigung von Ditto um jeweils 50%.
+#-------------------------------Einzigartig
+[QUICKPOWDER]
+Name = Flottstaub
+NamePlural = Flottstaub
+Pocket = 1
+Price = 1000
+Flags = Fling_10
+Description = Verdoppelt die Initiative von Ditto. Es wird rückgängig gemacht, sobald es sich verwandelt.
+#-------------------------------Einzigartig
+[THICKCLUB]
+Name = Kampfknochen
+NamePlural = Kampfknochen
+Pocket = 1
+Price = 1000
+Flags = Fling_90
+Description = Verdoppelt den Angriff von Tragosso und Knogga solange er getragen wird.
+#-------------------------------Einzigartig
+[LEEK]
+Name = Lauchstange
+NamePlural = Lauchstangen
+Pocket = 1
+Price = 1000
+Flags = Fling_60
+Description = Erhöht die Wahrscheinlichkeit, dass Porenta und Lauchzelot einen Volltreffer landen, um zwei Stufen. 
+#-------------------------------Einzigartig
+[CLEARAMULET]
+Name = Neutralschmuck
+NamePlural = Neutralschmuck
+Pocket = 1
+Price = 30000
+Flags = Fling_30
+Description = Verhindert, dass die eigenen Satuswerte gesenkt werden.
+#-------------------------------Einzigartig
+[MIRRORHERB]
+Name = Kopierkraut
+NamePlural = Kopierkräuter
+Pocket = 1
+Price = 30000
+Flags = Fling_30
+Description = Kopiert Statuswerterhöhungen des Gegners. Erhält beim Züchten Zuchtattacken des Partners.
+#-------------------------------Einzigartig
+[PUNCHINGGLOVE]
+Name = Boxhandschuh
+NamePlural = Boxhandschuhe
+Pocket = 1
+Price = 15000
+Flags = Fling_30
+Description = Der Boxhandschuh erhöht die Stärke von Box-Attacken und verhindert, dass diese Attacken Kontakt herstellen.
+#-------------------------------Einzigartig
+[COVERTCLOAK]
+Name = Tarnumhang
+NamePlural = Tarnumhänge
+Pocket = 1
+Price = 20000
+Flags = Fling_30
+Description = Der Tarnumhang schützt ein Pokémon vor Zusatzeffekten von gegnerischen Attacken. 
+#-------------------------------Einzigartig
+[LOADEDDICE]
+Name = Gezinkter Würfel
+NamePlural = Gezinkte Würfel
+Pocket = 1
+Price = 20000
+Flags = Fling_30
+Description = Serien-Attacken treffen mindestens vier Mal.
+#-------------------------------Einzigartig
 [MACHOBRACE]
 Name = Machoschiene
 NamePlural = Machoschienen
@@ -1826,7 +1855,7 @@ NamePlural = Seerauch
 Pocket = 1
 Price = 2000
 Flags = Fling_10
-Description = Verstärkt Wasser-Attacken des Trägers.
+Description = Verstärkt Wasser-Attacken des Trägers um 20%. Bei Zucht erhält man ein Azurill.
 #-------------------------------Einzigartig
 [WAVEINCENSE]
 Name = Wellenrauch
@@ -1834,7 +1863,7 @@ NamePlural = Wellenrauch
 Pocket = 1
 Price = 2000
 Flags = Fling_10
-Description = An item to be held by a Pokémon. It has a curious aroma that boosts the power of Water-type moves.
+Description = Verstärkt Wasser-Attacken des Trägers um 20%. Bei Zucht erhält man ein Mantirps.
 #-------------------------------Einzigartig
 [ROSEINCENSE]
 Name = Rosenrauch
@@ -1842,7 +1871,7 @@ NamePlural = Rosenrauch
 Pocket = 1
 Price = 2000
 Flags = Fling_10
-Description = Verstärkt Pflanzen-Attacken des Trägers um 20%.
+Description = Verstärkt Pflanzen-Attacken des Trägers um 20%. Bei Zucht erhält man ein Knospi.
 #-------------------------------Einzigartig
 [ODDINCENSE]
 Name = Schrägrauch
@@ -1850,7 +1879,7 @@ NamePlural = Schrägrauch
 Pocket = 1
 Price = 2000
 Flags = Fling_10
-Description = Verstärkt Psycho-Attacken des Trägers um 20%.
+Description = Verstärkt Psycho-Attacken des Trägers um 20%. Bei Zucht erhält man ein Pantimimi.
 #-------------------------------Einzigartig
 [ROCKINCENSE]
 Name = Steinrauch
@@ -1858,7 +1887,7 @@ NamePlural = Steinrauch
 Pocket = 1
 Price = 2000
 Flags = Fling_10
-Description = Verstärkt Gestein-Attacken des Trägers um 20%.
+Description = Verstärkt Gestein-Attacken des Trägers um 20%. Bei Zucht erhält man ein Mobai.
 #-------------------------------Einzigartig
 [CHARCOAL]
 Name = Holzkohle
@@ -2023,54 +2052,15 @@ SellPrice = 750
 Flags = Fling_20
 Description = Verstärkt Attacken vom Typ Fee um 20%.
 #-------------------------------Einzigartig
-[LIGHTBALL]
-Name = Light Ball
-NamePlural = Light Balls
+[EXPERTBELT]
+Name = Expertengurt
+NamePlural = Expertengurte
 Pocket = 1
-Price = 500
-Flags = Fling_30
-Description = Erhöht den Angriff und Sp. Angriff bei Pikachu.
-#-------------------------------Einzigartig
-[LUCKYPUNCH]
-Name = Lucky Punch
-NamePlural = Lucky Punches
-Pocket = 1
-Price = 1000
-BPPrice = 7
-Flags = Fling_40
-Description = Erhöht die Wahrscheinlichkeit, dass Chaneira einen Volltreffer landet um zwei Stufen. 
-#-------------------------------Einzigartig
-[METALPOWDER]
-Name = Metallstaub
-NamePlural = Metallstaub
-Pocket = 1
-Price = 1000
+Price = 30000
+SellPrice = 7500
+BPPrice = 25
 Flags = Fling_10
-Description = Erhöht die Verteidigung und die Spezial-Verteidigung von Ditto um jeweils 50%.
-#-------------------------------Einzigartig
-[QUICKPOWDER]
-Name = Flottstaub
-NamePlural = Flottstaub
-Pocket = 1
-Price = 1000
-Flags = Fling_10
-Description = Verdoppelt die Initiative von Ditto. Es wird rückgängig gemacht, sobald es sich verwandelt.
-#-------------------------------Einzigartig
-[THICKCLUB]
-Name = Kampfknochen
-NamePlural = Kampfknochen
-Pocket = 1
-Price = 1000
-Flags = Fling_90
-Description = Verdoppelt den Angriff von Tragosso und Knogga solange er getragen wird.
-#-------------------------------Einzigartig
-[LEEK]
-Name = Lauchstange
-NamePlural = Lauchstangen
-Pocket = 1
-Price = 1000
-Flags = Fling_60
-Description = Erhöht die Wahrscheinlichkeit, dass Porenta und Lauchzelot einen Volltreffer landen, um zwei Stufen. 
+Description = Sehr effektive Attacken werden um 20% verstärkt.
 #-------------------------------Einzigartig
 [SOULDEW]
 Name = Seelentau
@@ -2085,21 +2075,21 @@ Name = Adamant-Orb
 NamePlural = Adamant-Orbs
 Pocket = 1
 Flags = Fling_60
-Description = Trägt Dialga dieses Item, werden seine Stahl- und Drachen-Attacken um 20 % verstärkt.
+Description = Trägt Dialga dieses Item, werden seine Stahl- und Drachen-Attacken um 20% verstärkt.
 #-------------------------------Einzigartig
 [LUSTROUSORB]
 Name = Weiß-Orb
 NamePlural = Weiß-Orbs
 Pocket = 1
 Flags = Fling_60
-Description = Trägt Palkia dieses Item, werden seine Wasser- und Drachen-Attacken um 20 % verstärkt.
+Description = Trägt Palkia dieses Item, werden seine Wasser- und Drachen-Attacken um 20% verstärkt.
 #-------------------------------Einzigartig
 [GRISEOUSORB]
 Name = Platinum-Orb
 NamePlural = Platinum-Orbs
 Pocket = 1
 Flags = Fling_60
-Description = Trägt Giratina dieses Item, werden seine Drachen- und Geist-Attacken um 20 % verstärkt.
+Description = Trägt Giratina dieses Item, werden seine Drachen- und Geist-Attacken um 20% verstärkt.
 #-------------------------------Mining
 [EVERSTONE]
 Name = Ewigstein
@@ -2133,46 +2123,54 @@ Pocket = 1
 Price = 20000
 Flags = Fling_30
 Description = Verhindert jegliche Änderung der eigenen Fähigkeit durch Gegner.
-#-------------------------------Einzigartig
-[CLEARAMULET]
-Name = Neutralschmuck
-NamePlural = Neutralschmuck
+#-------------------------------Besonderer Shop
+[GACHATICKET]
+Name = Gacha Ticket
+NamePlural = Gacha Ticket
 Pocket = 1
-Price = 30000
+Price = 5000
 Flags = Fling_30
-Description = Verhindert, dass die eigenen Satuswerte gesenkt werden.
-#-------------------------------Einzigartig
-[MIRRORHERB]
-Name = Kopierkraut
-NamePlural = Kopierkräuter
+Description = Versuche dein Glück und ergattere wertvolle Preise.
+#-------------------------------Shop
+[REDNECTAR]
+Name = Roter Nektar
+NamePlural = Roter Nektar
 Pocket = 1
-Price = 30000
-Flags = Fling_30
-Description = Kopiert Statuswerterhöhungen des Gegners. Erhält beim Züchten Zuchtattacken des Partners.
-#-------------------------------Einzigartig
-[PUNCHINGGLOVE]
-Name = Boxhandschuh
-NamePlural = Boxhandschuhe
+Price = 300
+SellPrice = 75
+FieldUse = OnPokemon
+Flags = Fling_10
+Description = Wird der Rote Nektar auf ein Choreogel angewandt, so ändert sich dessen Stil zum Flamenco-Stil. 
+#-------------------------------Shop
+[YELLOWNECTAR]
+Name = Gelber Nektar
+NamePlural = Gelber Nektar
 Pocket = 1
-Price = 15000
-Flags = Fling_30
-Description = Der Boxhandschuh erhöht die Stärke von Box-Attacken und verhindert, dass diese Attacken Kontakt herstellen.
-#-------------------------------Einzigartig
-[COVERTCLOAK]
-Name = Tarnumhang
-NamePlural = Tarnumhänge
+Price = 300
+SellPrice = 75
+FieldUse = OnPokemon
+Flags = Fling_10
+Description = Wird der gelbe Nektar auf ein Choreogel angewandt so, ändert sich dessen Stil zum Cheerleading-Stil. 
+#-------------------------------Shop
+[PINKNECTAR]
+Name = Rosa Nektar
+NamePlural = Rosa Nektar
 Pocket = 1
-Price = 20000
-Flags = Fling_30
-Description = Der Tarnumhang schützt ein Pokémon vor Zusatzeffekten von gegnerischen Attacken. 
-#-------------------------------Einzigartig
-[LOADEDDICE]
-Name = Gezinkter Würfel
-NamePlural = Gezinkte Würfel
+Price = 300
+SellPrice = 75
+FieldUse = OnPokemon
+Flags = Fling_10
+Description = Wird der rosa Nektar auf ein Choreogel angewandt, so ändert sich dessen Stil zum Hula-Stil. 
+#-------------------------------Shop
+[PURPLENECTAR]
+Name = Purpurner Nektar
+NamePlural = Purpurner Nektar
 Pocket = 1
-Price = 20000
-Flags = Fling_30
-Description = Serien-Attacken treffen mindestens vier Mal.
+Price = 300
+SellPrice = 75
+FieldUse = OnPokemon
+Flags = Fling_10
+Description = Wird der purpurne Nektar auf ein Choreogel angewandt, so ändert sich dessen Stil zum Buyo-Stil. 
 #-------------------------------Einzigartig
 [REDORB]
 Name = Roter Edelstein
@@ -2191,14 +2189,6 @@ Price = 10000
 SellPrice = 0
 BPPrice = 50
 Description = Wird der Blaue Edelstein von Kyogre getragen, führt dieses eine Protomorphose durch.
-#-------------------------------Besonderer Shop
-[GACHATICKET]
-Name = Gacha Ticket
-NamePlural = Gacha Ticket
-Pocket = 1
-Price = 5000
-Flags = Fling_30
-Description = Versuche dein Glück und ergattere wertvolle Preise.
 #-------------------------------Einzigartig
 [ADAMANTCRYSTAL]
 Name = Adamantkristall
@@ -2555,7 +2545,17 @@ Pocket = 1
 Price = 10000
 SellPrice = 500
 Flags = Fling_90,Plate
-Description = Verstärkt Normal-Attacken bei Arceus.
+Description = Verstärkt Normal-Attacken des Trägers um 20%.
+#-------------------------------Einzigartig
+[LIFEORB]
+Name = Leben-Orb
+NamePlural = Leben-Orbs
+Pocket = 1
+Price = 50000
+SellPrice = 12500
+BPPrice = 25
+Flags = Fling_30
+Description = Verstärkt Attacken um 30%, der Träger erhält 10% Schaden bei jedem Angriff.
 #-------------------------------Shop
 [FIREGEM]
 Name = Feuerjuwel
@@ -2744,6 +2744,16 @@ FieldUse = OnPokemon
 BattleUse = OnPokemon
 Flags = Fling_30
 Description = Füllt die LP eines Pokémon um 20 auf.
+#-------------------------------Shop
+[BERRYJUICE]
+Name = Beerensaft
+NamePlural = Beerensäfte
+Pocket = 2
+Price = 100
+FieldUse = OnPokemon
+BattleUse = OnPokemon
+Flags = Fling_30
+Description = Füllt 20 LP sofort wieder auf und kann im Kampf als getragenes Item genutzt werden.
 #-------------------------------Automat
 [FRESHWATER]
 Name = Tafelwasser
@@ -3010,16 +3020,6 @@ FieldUse = OnPokemon
 BattleUse = OnPokemon
 Flags = Fling_30
 Description = Ein besiegtes Pokémon wird vollständig geheilt.
-#-------------------------------Shop
-[BERRYJUICE]
-Name = Beerensaft
-NamePlural = Beerensäfte
-Pocket = 2
-Price = 100
-FieldUse = OnPokemon
-BattleUse = OnPokemon
-Flags = Fling_30
-Description = Füllt 20 LP sofort wieder auf und kann im Kampf als getragenes Item genutzt werden.
 #-------------------------------Besonderer Shop
 [HEALPOWDER]
 Name = Heilpuder
@@ -4222,7 +4222,7 @@ Price = 5000
 FieldUse = TM
 Move = ZENHEADBUTT
 Flags = Fling_80
-Description = Schädigt das Ziel und lässt es mit einer Chance von 20 % zurückschrecken. 
+Description = Schädigt das Ziel und lässt es mit einer Chance von 20% zurückschrecken. 
 #-------------------------------
 [TM60]
 Name = TM60
@@ -4402,7 +4402,7 @@ Price = 8000
 FieldUse = TM
 Move = WATERFALL
 Flags = Fling_80
-Description = Schädigt das Ziel und lässt es mit einer Chance von 20 % zurückschrecken. 
+Description = Schädigt das Ziel und lässt es mit einer Chance von 20% zurückschrecken. 
 #-------------------------------
 [TM78]
 Name = TM78
@@ -4572,7 +4572,7 @@ Price = 8000
 FieldUse = TM
 Move = DARKPULSE
 Flags = Fling_80
-Description = Finsteraura richtet Schaden an und bewirkt mit einer Wahrscheinlichkeit von 20 %, dass das Ziel zurückschreckt. 
+Description = Finsteraura richtet Schaden an und bewirkt mit einer Wahrscheinlichkeit von 20%, dass das Ziel zurückschreckt. 
 #-------------------------------
 [TM95]
 Name = TM95
@@ -4712,7 +4712,7 @@ Price = 8000
 FieldUse = TM
 Move = CRUNCH
 Flags = Fling_80
-Description = Die Verteidigung des Ziels wird mit einer Wahrscheinlichkeit von 20 % um eine Stufe gesenkt. 
+Description = Die Verteidigung des Ziels wird mit einer Wahrscheinlichkeit von 20% um eine Stufe gesenkt. 
 #-------------------------------
 [TM109]
 Name = TM109
@@ -4772,7 +4772,7 @@ Price = 5000
 FieldUse = TM
 Move = SHADOWBALL
 Flags = Fling_80
-Description = Spukball schädigt das Ziel und senkt mit einer Chance von 20 % dessen Spezial-Verteidigung. 
+Description = Spukball schädigt das Ziel und senkt mit einer Chance von 20% dessen Spezial-Verteidigung. 
 #-------------------------------
 [TM115]
 Name = TM115
@@ -5940,567 +5940,6 @@ Price = 5000
 FieldUse = TM
 Move = STRENGTH
 Description = Verursacht Schaden ohne Zusatzeffekte. 
-#-------------------------------Map / Shop
-[CHERIBERRY]
-Name = Amrenabeere
-NamePlural = Amrenabeeren
-Pocket = 5
-Price = 40
-FieldUse = OnPokemon
-BattleUse = OnPokemon
-Flags = Berry,Fling_10,NaturalGift_FIRE_80
-Description = Heilt Paralyse.
-#-------------------------------Map / Shop
-[CHESTOBERRY]
-Name = Maronbeere
-NamePlural = Maronbeeren
-Pocket = 5
-Price = 40
-FieldUse = OnPokemon
-BattleUse = OnPokemon
-Flags = Berry,Fling_10,NaturalGift_WATER_80
-Description = Weckt ein Pokémon auf.
-#-------------------------------Map / Shop
-[PECHABERRY]
-Name = Pirsifbeere
-NamePlural = Pirsifbeeren
-Pocket = 5
-Price = 40
-FieldUse = OnPokemon
-BattleUse = OnPokemon
-Flags = Berry,Fling_10,NaturalGift_ELECTRIC_80
-Description = Heilt Vergiftungen.
-#-------------------------------
-[RAWSTBERRY]
-Name = Fragiabeere
-NamePlural = Fragiabeeren
-Pocket = 5
-Price = 40
-FieldUse = OnPokemon
-BattleUse = OnPokemon
-Flags = Berry,Fling_10,NaturalGift_GRASS_80
-Description = Heilt Verbrennungen.
-#-------------------------------
-[ASPEARBERRY]
-Name = Wilbirbeere
-NamePlural = Wilbirbeeren
-Pocket = 5
-Price = 40
-FieldUse = OnPokemon
-BattleUse = OnPokemon
-Flags = Berry,Fling_10,NaturalGift_ICE_80
-Description = Taut gefrorene Pokémon wieder auf.
-#-------------------------------
-[LEPPABERRY]
-Name = Jonagobeere	
-NamePlural = Jonagobeeren
-Pocket = 5
-Price = 40
-FieldUse = OnPokemon
-BattleUse = OnMove
-Flags = Berry,Fling_10,NaturalGift_FIGHTING_80
-Description = Stellt 10 AP einer Attacke wieder her.
-#-------------------------------
-[ORANBERRY]
-Name = Sinelbeere
-NamePlural = Sinelbeeren
-Pocket = 5
-Price = 40
-FieldUse = OnPokemon
-BattleUse = OnPokemon
-Flags = Berry,Fling_10,NaturalGift_POISON_80
-Description = Heilt das Pokémon um 10 LP.
-#-------------------------------
-[PERSIMBERRY]
-Name = Persimbeere
-NamePlural = Persimbeeren
-Pocket = 5
-Price = 40
-BattleUse = OnBattler
-Flags = Berry,Fling_10,NaturalGift_GROUND_80
-Description = Heilt Verwirrung.
-#-------------------------------
-[LUMBERRY]
-Name = Prunusbeere
-NamePlural = Prunusbeeren
-Pocket = 5
-Price = 40
-FieldUse = OnPokemon
-BattleUse = OnPokemon
-Flags = Berry,Fling_10,NaturalGift_FLYING_80
-Description = Kann jedes Statusproblem eines Pokémon heilen.
-#-------------------------------
-[SITRUSBERRY]
-Name = Tsitrubeere
-NamePlural = Tsitrubeeren
-Pocket = 5
-Price = 40
-FieldUse = OnPokemon
-BattleUse = OnPokemon
-Flags = Berry,Fling_10,NaturalGift_PSYCHIC_80
-Description = Heilt 25 % der KP. 
-#-------------------------------
-[FIGYBERRY]
-Name = Giefebeere
-NamePlural = Giefebeeren
-Pocket = 5
-Price = 40
-Flags = Berry,Fling_10,NaturalGift_BUG_80
-Description = Heilt 33 % der KP wenn diese unter 25 % fallen, aber verwirrt Pokémon, die ein Angr. (-) Wesen haben.
-#-------------------------------
-[WIKIBERRY]
-Name = Wikibeere
-NamePlural = Wikibeeren
-Pocket = 5
-Price = 40
-Flags = Berry,Fling_10,NaturalGift_ROCK_80
-Description = Heilt 33 % der KP wenn diese unter 25 % fallen, aber verwirrt Pokémon, die ein Sp. Angr. (-) Wesen haben.
-#-------------------------------
-[MAGOBERRY]
-Name = Magobeere
-NamePlural = Magobeeren
-Pocket = 5
-Price = 40
-Flags = Berry,Fling_10,NaturalGift_GHOST_80
-Description = Heilt 33 % der KP wenn diese unter 25 % fallen, aber verwirrt Pokémon, die ein Init. (-) Wesen haben.
-#-------------------------------
-[AGUAVBERRY]
-Name = Gauvebeere
-NamePlural = Gauvebeeren
-Pocket = 5
-Price = 40
-Flags = Berry,Fling_10,NaturalGift_DRAGON_80
-Description = Heilt 33 % der KP wenn diese unter 25 % fallen, aber verwirrt Pokémon, die ein Sp. Vert.. (-) Wesen haben.
-#-------------------------------
-[IAPAPABERRY]
-Name = Yapabeere
-NamePlural = Yapabeeren
-Pocket = 5
-Price = 40
-Flags = Berry,Fling_10,NaturalGift_DARK_80
-Description = Heilt 33 % der KP wenn diese unter 25 % fallen, aber verwirrt Pokémon, die ein Vert. (-) Wesen haben.
-#-------------------------------
-[RAZZBERRY]
-Name = Himmihbeere
-NamePlural = Himmihbeeren
-Pocket = 5
-Price = 20
-Flags = Berry,Fling_10,NaturalGift_STEEL_80
-Description = Eine Zutat für bestimmte Rezepte.
-#-------------------------------
-[BLUKBERRY]
-Name = Morbbeere
-NamePlural = Morbbeeren
-Pocket = 5
-Price = 20
-Flags = Berry,Fling_10,NaturalGift_FIRE_90
-Description = Eine Zutat für bestimmte Rezepte.
-#-------------------------------
-[NANABBERRY]
-Name = Nanabbeere
-NamePlural = Nanabbeeren
-Pocket = 5
-Price = 20
-Flags = Berry,Fling_10,NaturalGift_WATER_90
-Description = Eine Zutat für bestimmte Rezepte.
-#-------------------------------
-[WEPEARBERRY]
-Name = Nirbebeere
-NamePlural = Nirbebeeren
-Pocket = 5
-Price = 20
-Flags = Berry,Fling_10,NaturalGift_ELECTRIC_90
-Description = Eine Zutat für bestimmte Rezepte.
-#-------------------------------
-[PINAPBERRY]
-Name = Sananabeere
-NamePlural = Sananabeere
-Pocket = 5
-Price = 20
-Flags = Berry,Fling_10,NaturalGift_GRASS_90
-Description = Eine Zutat für bestimmte Rezepte.
-#-------------------------------
-[POMEGBERRY]
-Name = Granabeere
-NamePlural = Granabeeren
-Pocket = 5
-Price = 40
-FieldUse = OnPokemon
-Flags = Berry,Fling_10,NaturalGift_ICE_90
-Description = Senkt die Basis-LP um 10 und erhöht die Freundschaft um 10.
-#-------------------------------
-[KELPSYBERRY]
-Name = Setangbeere
-NamePlural = Setangbeeren
-Pocket = 5
-Price = 40
-FieldUse = OnPokemon
-Flags = Berry,Fling_10,NaturalGift_FIGHTING_90
-Description = Senkt d Basis-Angriff um 10 und erhöht die Freundschaft um 10.
-#-------------------------------
-[QUALOTBERRY]
-Name = Qualotbeere
-NamePlural = Qualotbeeren
-Pocket = 5
-Price = 40
-FieldUse = OnPokemon
-Flags = Berry,Fling_10,NaturalGift_POISON_90
-Description = Senkt die Basis-Verteidigung um 10 und erhöht die Freundschaft um 10.
-#-------------------------------
-[HONDEWBERRY]
-Name = Honmelbeere
-NamePlural = Honmelbeeren
-Pocket = 5
-Price = 40
-FieldUse = OnPokemon
-Flags = Berry,Fling_10,NaturalGift_GROUND_90
-Description = Senkt den Basis-Sp. Angriff um 10 und erhöht die Freundschaft um 10.
-#-------------------------------
-[GREPABERRY]
-Name = Labrusbeere
-NamePlural = Labrusbeeren
-Pocket = 5
-Price = 40
-FieldUse = OnPokemon
-Flags = Berry,Fling_10,NaturalGift_FLYING_90
-Description = Senkt die Basis-Sp. Verteidigung um 10 und erhöht die Freundschaft um 10.
-#-------------------------------
-[TAMATOBERRY]
-Name = Tamotbeere
-NamePlural = Tamotbeere
-Pocket = 5
-Price = 20
-FieldUse = OnPokemon
-Flags = Berry,Fling_10,NaturalGift_PSYCHIC_90
-Description = Senkt die Basis-Initiative um 10 und erhöht die Freundschaft um 10.
-#-------------------------------
-[CORNNBERRY]
-Name = Saimbeere
-NamePlural = Saimbeeren
-Pocket = 5
-Price = 20
-Flags = Berry,Fling_10,NaturalGift_BUG_90
-Description = Eine Zutat für bestimmte Rezepte.
-#-------------------------------
-[MAGOSTBERRY]
-Name = Magostbeere
-NamePlural = Magostbeeren
-Pocket = 5
-Price = 20
-Flags = Berry,Fling_10,NaturalGift_ROCK_90
-Description = Eine Zutat für bestimmte Rezepte.
-#-------------------------------
-[RABUTABERRY]
-Name = Rabutabeere
-NamePlural = Rabutabeeren
-Pocket = 5
-Price = 20
-Flags = Berry,Fling_10,NaturalGift_GHOST_90
-Description = Eine Zutat für bestimmte Rezepte.
-#-------------------------------
-[NOMELBERRY]
-Name = Tronzibeere
-NamePlural = Tronzibeeren
-Pocket = 5
-Price = 20
-Flags = Berry,Fling_10,NaturalGift_DRAGON_90
-Description = Eine Zutat für bestimmte Rezepte.
-#-------------------------------
-[SPELONBERRY]
-Name = Kiwanbeere
-NamePlural = Kiwanbeeren
-Pocket = 5
-Price = 20
-Flags = Berry,Fling_10,NaturalGift_DARK_90
-Description = Eine Zutat für bestimmte Rezepte.
-#-------------------------------
-[PAMTREBERRY]
-Name = Pallmbeere
-NamePlural = Pallmbeeren
-Pocket = 5
-Price = 20
-Flags = Berry,Fling_10,NaturalGift_STEEL_90
-Description = Eine Zutat für bestimmte Rezepte.
-#-------------------------------
-[WATMELBERRY]
-Name = Wasmelbeere
-NamePlural = Wasmelbeeren
-Pocket = 5
-Price = 20
-Flags = Berry,Fling_10,NaturalGift_FIRE_100
-Description = Eine Zutat für bestimmte Rezepte.
-#-------------------------------
-[DURINBERRY]
-Name = Durinbeere
-NamePlural = Durinbeeren
-Pocket = 5
-Price = 20
-Flags = Berry,Fling_10,NaturalGift_WATER_100
-Description = Eine Zutat für bestimmte Rezepte.
-#-------------------------------
-[BELUEBERRY]
-Name = Myrtilbeere
-NamePlural = Myrtilbeeren
-Pocket = 5
-Price = 20
-Flags = Berry,Fling_10,NaturalGift_ELECTRIC_100
-Description = Eine Zutat für bestimmte Rezepte.
-#-------------------------------
-[OCCABERRY]
-Name = Koakobeere
-NamePlural = Koakobeeren
-Pocket = 5
-Price = 40
-Flags = Berry,Fling_10,NaturalGift_FIRE_80
-Description = Schwächt eine sehr effektive Feuer-Attacke des Gegners ab.
-#-------------------------------
-[PASSHOBERRY]
-Name = Foepasbeere
-NamePlural = Foepasbeeren
-Pocket = 5
-Price = 40
-Flags = Berry,Fling_10,NaturalGift_WATER_80
-Description = Schwächt eine sehr effektive Wasser-Attacke des Gegners ab.
-#-------------------------------
-[WACANBERRY]
-Name = Kerzalbeere
-NamePlural = Kerzalbeeren
-Pocket = 5
-Price = 40
-Flags = Berry,Fling_10,NaturalGift_ELECTRIC_80
-Description = Schwächt eine sehr effektive Elektro-Attacke des Gegners ab.
-#-------------------------------
-[RINDOBERRY]
-Name = Grindobeere
-NamePlural = Grindobeeren
-Pocket = 5
-Price = 40
-Flags = Berry,Fling_10,NaturalGift_GRASS_80
-Description = Schwächt eine sehr effektive Pflanzen-Attacke des Gegners ab
-#-------------------------------
-[YACHEBERRY]
-Name = Kiroyabeere
-NamePlural = YKiroyabeeren
-Pocket = 5
-Price = 40
-Flags = Berry,Fling_10,NaturalGift_ICE_80
-Description = Schwächt eine sehr effektive Eis-Attacke des Gegners ab.
-#-------------------------------
-[CHOPLEBERRY]
-Name = Rospelbeere
-NamePlural = Rospelbeeren
-Pocket = 5
-Price = 40
-Flags = Berry,Fling_10,NaturalGift_FIGHTING_80
-Description = Schwächt eine sehr effektive Kampf-Attacke des Gegners ab.
-#-------------------------------
-[KEBIABERRY]
-Name = Grarzbeere
-NamePlural = Grarzbeeren
-Pocket = 5
-Price = 40
-Flags = Berry,Fling_10,NaturalGift_POISON_80
-Description = Schwächt eine sehr effektive Gift-Attacke des Gegners ab.
-#-------------------------------
-[SHUCABERRY]
-Name = Schukebeere
-NamePlural = Schukebeeren
-Pocket = 5
-Price = 40
-Flags = Berry,Fling_10,NaturalGift_GROUND_80
-Description = Schwächt eine sehr effektive Boden-Attacke des Gegners ab.
-#-------------------------------
-[COBABERRY]
-Name = Kobabeere
-NamePlural = Kobabeeren
-Pocket = 5
-Price = 40
-Flags = Berry,Fling_10,NaturalGift_FLYING_80
-Description = Schwächt eine sehr effektive Wind-Attacke des Gegners ab.
-#-------------------------------
-[PAYAPABERRY]
-Name = Pyapabeere
-NamePlural = Pyapabeeren
-Pocket = 5
-Price = 40
-Flags = Berry,Fling_10,NaturalGift_PSYCHIC_80
-Description = Schwächt eine sehr effektive Psycho-Attacke des Gegners ab.
-#-------------------------------
-[TANGABERRY]
-Name = Tanigabeere
-NamePlural = Tanigabeeren
-Pocket = 5
-Price = 40
-Flags = Berry,Fling_10,NaturalGift_BUG_80
-Description = Schwächt eine sehr effektive Käfer-Attacke des Gegners ab.
-#-------------------------------
-[CHARTIBERRY]
-Name = Chiaribeere
-NamePlural = Chiaribeeren
-Pocket = 5
-Price = 40
-Flags = Berry,Fling_10,NaturalGift_ROCK_80
-Description = Schwächt eine sehr effektive Gestein-Attacke des Gegners ab.
-#-------------------------------
-[KASIBBERRY]
-Name = Zitarzbeere
-NamePlural = Zitarzbeeren
-Pocket = 5
-Price = 40
-Flags = Berry,Fling_10,NaturalGift_GHOST_80
-Description = Schwächt eine sehr effektive Geist-Attacke des Gegners ab.
-#-------------------------------
-[HABANBERRY]
-Name = Terirobeere
-NamePlural = Terirobeeren
-Pocket = 5
-Price = 40
-Flags = Berry,Fling_10,NaturalGift_DRAGON_80
-Description = Schwächt eine sehr effektive Drachen-Attacke des Gegners ab.
-#-------------------------------
-[COLBURBERRY]
-Name = Burleobeere
-NamePlural = Burleobeeren
-Pocket = 5
-Price = 40
-Flags = Berry,Fling_10,NaturalGift_DARK_80
-Description = Schwächt eine sehr effektive Unlicht-Attacke des Gegners ab.
-#-------------------------------
-[BABIRIBERRY]
-Name = Babiribeere
-NamePlural = Babiribeeren
-Pocket = 5
-Price = 40
-Flags = Berry,Fling_10,NaturalGift_STEEL_80
-Description = Schwächt eine sehr effektive Stahl-Attacke des Gegners ab.
-#-------------------------------
-[ROSELIBERRY]
-Name = Hibisbeere
-NamePlural = Hibisbeeren
-Pocket = 5
-Price = 40
-Flags = Berry,Fling_10,NaturalGift_FAIRY_80
-Description = Schwächt eine sehr effektive Feen-Attacke des Gegners ab.
-#-------------------------------
-[CHILANBERRY]
-Name = Chilanbeere
-NamePlural = Chilanbeeren
-Pocket = 5
-Price = 40
-Flags = Berry,Fling_10,NaturalGift_NORMAL_80
-Description = Schwächt eine Normal-Attacke des Gegners ab.
-#-------------------------------
-[LIECHIBERRY]
-Name = Lydzibeere
-NamePlural = Lydzibeeren
-Pocket = 5
-Price = 40
-Flags = Berry,Fling_10,NaturalGift_GRASS_100
-Description = Erhöht den Angriff, wenn die KP unter 25 % fallen.
-#-------------------------------
-[GANLONBERRY]
-Name = Linganbeere
-NamePlural = Linganbeeren
-Pocket = 5
-Price = 40
-Flags = Berry,Fling_10,NaturalGift_ICE_100
-Description = Erhöht die Verteidigung, wenn die KP unter 25 % fallen.
-#-------------------------------
-[SALACBERRY]
-Name = Salkabeere
-NamePlural = Salkabeeren
-Pocket = 5
-Price = 40
-Flags = Berry,Fling_10,NaturalGift_FIGHTING_100
-Description = Erhöht die Initiative, wenn die KP unter 25 % fallen.
-#-------------------------------
-[PETAYABERRY]
-Name = Tahaybeere
-NamePlural = Tahaybeeren
-Pocket = 5
-Price = 40
-Flags = Berry,Fling_10,NaturalGift_POISON_100
-Description = Erhöht den Spezial-Angriff, wenn die KP unter 25 % fallen.
-#-------------------------------
-[APICOTBERRY]
-Name = Apikobeere
-NamePlural = Apikobeeren
-Pocket = 5
-Price = 40
-Flags = Berry,Fling_10,NaturalGift_GROUND_100
-Description = Erhöht die Spezial-Verteidigung, wenn die KP unter 25 % fallen.
-#-------------------------------
-[LANSATBERRY]
-Name = Lansatbeere
-NamePlural = Lansatbeeren
-Pocket = 5
-Price = 40
-Flags = Berry,Fling_10,NaturalGift_FLYING_100
-Description =  	Erhöht die Volltrefferquote, wenn die KP unter 25 % fallen.
-#-------------------------------
-[STARFBERRY]
-Name = Krambobeere
-NamePlural = Krambobeeren
-Pocket = 5
-Price = 40
-Flags = Berry,Fling_10,NaturalGift_PSYCHIC_100
-Description = Erhöht einen zufälligen Statuswert stark, wenn die KP unter 25 % fallen.
-#-------------------------------
-[ENIGMABERRY]
-Name = Enigmabeere
-NamePlural = Enigmabeeren
-Pocket = 5
-Price = 40
-Flags = Berry,Fling_10,NaturalGift_BUG_100
-Description = Heilt die KP um 25 %, wenn von einer sehr effektiven Attacke getroffen.
-#-------------------------------
-[MICLEBERRY]
-Name = Wunfrubeere
-NamePlural = Wunfrubeeren
-Pocket = 5
-Price = 40
-Flags = Berry,Fling_10,NaturalGift_ROCK_100
-Description = Steigert die Genauigkeit des nächsten Angriffs um 20 %.
-#-------------------------------
-[CUSTAPBERRY]
-Name = Eipfelbeere
-NamePlural = Eipfelbeeren
-Pocket = 5
-Price = 40
-Flags = Berry,Fling_10,NaturalGift_GHOST_100
-Description = Die nächste Attacke wird garantiert zuerst eingesetzt, wenn die KP unter 25 % fallen.
-#-------------------------------
-[JABOCABERRY]
-Name = Jabocabeere
-NamePlural = Jabocabeeren
-Pocket = 5
-Price = 40
-Flags = Berry,Fling_10,NaturalGift_DRAGON_100
-Description = Fügt dem Gegner Schaden zu, wenn von einer physischen Attacke getroffen.
-#-------------------------------
-[ROWAPBERRY]
-Name = Roselbeere
-NamePlural = Roselbeeren
-Pocket = 5
-Price = 40
-Flags = Berry,Fling_10,NaturalGift_DARK_100
-Description = Fügt dem Gegner Schaden zu, wenn von einer speziellen Attacke getroffen.
-#-------------------------------
-[KEEBERRY]
-Name = Akibeere
-NamePlural = Akibeeren
-Pocket = 5
-Price = 40
-Flags = Berry,Fling_10,NaturalGift_FAIRY_100
-Description = Erhöht die Verteidigung des Trägers, wenn dieser von physischen Attacken getroffen wird.
-#-------------------------------Map / Shop
-[MARANGABERRY]
-Name = Tarabeere
-NamePlural = Tarabeeren
-Pocket = 5
-Price = 40
-Flags = Berry,Fling_10,NaturalGift_DARK_100
-Description = Erhöht die Sp. Verteidigung des Trägers, wenn dieser von speziellen Attacken getroffen wird.
 #-------------------------------Rezept / Shop
 [XATTACK]
 Name = X-Angriff
@@ -8042,14 +7481,6 @@ Price = 10000
 BPPrice = 50
 Flags = MegaStone,Fling_80
 Description = Dieser Stein ermöglicht Melmetal eine Mega-Entwicklung.
-#-------------------------------Map / Shop
-[HOPOBERRY]
-Name = Pfohbeere
-NamePlural = Pfohbeeren
-Pocket = 5
-Price = 20
-Flags = Berry,Fling_10,NaturalGift_FIGHTING_80
-Description = Frischt die Angriffspunkte eines Pokémon auf.
 #-------------------------------
 #[HISUIANPOKEBALL]
 #Name = Poké Ball
@@ -8226,6 +7657,575 @@ Description = Der Neuanfangs-Mochi setzt alle Basispunkte eines Pokémon zurück
 #Price = 0
 #Flags = KeyItem
 #Description = A proof copy of the exploration notes, along with Briar's thoughts covering the Area Zero Underdepths.
+#-------------------------------Map / Shop
+[CHERIBERRY]
+Name = Amrenabeere
+NamePlural = Amrenabeeren
+Pocket = 5
+Price = 40
+FieldUse = OnPokemon
+BattleUse = OnPokemon
+Flags = Berry,Fling_10,NaturalGift_FIRE_80
+Description = Heilt Paralyse.
+#-------------------------------Map / Shop
+[CHESTOBERRY]
+Name = Maronbeere
+NamePlural = Maronbeeren
+Pocket = 5
+Price = 40
+FieldUse = OnPokemon
+BattleUse = OnPokemon
+Flags = Berry,Fling_10,NaturalGift_WATER_80
+Description = Weckt ein Pokémon auf.
+#-------------------------------Map / Shop
+[PECHABERRY]
+Name = Pirsifbeere
+NamePlural = Pirsifbeeren
+Pocket = 5
+Price = 40
+FieldUse = OnPokemon
+BattleUse = OnPokemon
+Flags = Berry,Fling_10,NaturalGift_ELECTRIC_80
+Description = Heilt Vergiftungen.
+#-------------------------------
+[RAWSTBERRY]
+Name = Fragiabeere
+NamePlural = Fragiabeeren
+Pocket = 5
+Price = 40
+FieldUse = OnPokemon
+BattleUse = OnPokemon
+Flags = Berry,Fling_10,NaturalGift_GRASS_80
+Description = Heilt Verbrennungen.
+#-------------------------------
+[ASPEARBERRY]
+Name = Wilbirbeere
+NamePlural = Wilbirbeeren
+Pocket = 5
+Price = 40
+FieldUse = OnPokemon
+BattleUse = OnPokemon
+Flags = Berry,Fling_10,NaturalGift_ICE_80
+Description = Taut gefrorene Pokémon wieder auf.
+#-------------------------------
+[LEPPABERRY]
+Name = Jonagobeere	
+NamePlural = Jonagobeeren
+Pocket = 5
+Price = 40
+FieldUse = OnPokemon
+BattleUse = OnMove
+Flags = Berry,Fling_10,NaturalGift_FIGHTING_80
+Description = Stellt 10 AP einer Attacke wieder her.
+#-------------------------------
+[ORANBERRY]
+Name = Sinelbeere
+NamePlural = Sinelbeeren
+Pocket = 5
+Price = 40
+FieldUse = OnPokemon
+BattleUse = OnPokemon
+Flags = Berry,Fling_10,NaturalGift_POISON_80
+Description = Heilt das Pokémon um 10 LP.
+#-------------------------------
+[PERSIMBERRY]
+Name = Persimbeere
+NamePlural = Persimbeeren
+Pocket = 5
+Price = 40
+BattleUse = OnBattler
+Flags = Berry,Fling_10,NaturalGift_GROUND_80
+Description = Heilt Verwirrung.
+#-------------------------------
+[LUMBERRY]
+Name = Prunusbeere
+NamePlural = Prunusbeeren
+Pocket = 5
+Price = 40
+FieldUse = OnPokemon
+BattleUse = OnPokemon
+Flags = Berry,Fling_10,NaturalGift_FLYING_80
+Description = Kann jedes Statusproblem eines Pokémon heilen.
+#-------------------------------
+[SITRUSBERRY]
+Name = Tsitrubeere
+NamePlural = Tsitrubeeren
+Pocket = 5
+Price = 40
+FieldUse = OnPokemon
+BattleUse = OnPokemon
+Flags = Berry,Fling_10,NaturalGift_PSYCHIC_80
+Description = Heilt 25 % der KP. 
+#-------------------------------
+[FIGYBERRY]
+Name = Giefebeere
+NamePlural = Giefebeeren
+Pocket = 5
+Price = 40
+Flags = Berry,Fling_10,NaturalGift_BUG_80
+Description = Heilt 33 % der KP wenn diese unter 25 % fallen, aber verwirrt Pokémon, die ein Angr. (-) Wesen haben.
+#-------------------------------
+[WIKIBERRY]
+Name = Wikibeere
+NamePlural = Wikibeeren
+Pocket = 5
+Price = 40
+Flags = Berry,Fling_10,NaturalGift_ROCK_80
+Description = Heilt 33 % der KP wenn diese unter 25 % fallen, aber verwirrt Pokémon, die ein Sp. Angr. (-) Wesen haben.
+#-------------------------------
+[MAGOBERRY]
+Name = Magobeere
+NamePlural = Magobeeren
+Pocket = 5
+Price = 40
+Flags = Berry,Fling_10,NaturalGift_GHOST_80
+Description = Heilt 33 % der KP wenn diese unter 25 % fallen, aber verwirrt Pokémon, die ein Init. (-) Wesen haben.
+#-------------------------------
+[AGUAVBERRY]
+Name = Gauvebeere
+NamePlural = Gauvebeeren
+Pocket = 5
+Price = 40
+Flags = Berry,Fling_10,NaturalGift_DRAGON_80
+Description = Heilt 33 % der KP wenn diese unter 25 % fallen, aber verwirrt Pokémon, die ein Sp. Vert.. (-) Wesen haben.
+#-------------------------------
+[IAPAPABERRY]
+Name = Yapabeere
+NamePlural = Yapabeeren
+Pocket = 5
+Price = 40
+Flags = Berry,Fling_10,NaturalGift_DARK_80
+Description = Heilt 33 % der KP wenn diese unter 25 % fallen, aber verwirrt Pokémon, die ein Vert. (-) Wesen haben.
+#-------------------------------
+[RAZZBERRY]
+Name = Himmihbeere
+NamePlural = Himmihbeeren
+Pocket = 5
+Price = 20
+Flags = Berry,Fling_10,NaturalGift_STEEL_80
+Description = Eine Zutat für bestimmte Rezepte.
+#-------------------------------
+[BLUKBERRY]
+Name = Morbbeere
+NamePlural = Morbbeeren
+Pocket = 5
+Price = 20
+Flags = Berry,Fling_10,NaturalGift_FIRE_90
+Description = Eine Zutat für bestimmte Rezepte.
+#-------------------------------
+[NANABBERRY]
+Name = Nanabbeere
+NamePlural = Nanabbeeren
+Pocket = 5
+Price = 20
+Flags = Berry,Fling_10,NaturalGift_WATER_90
+Description = Eine Zutat für bestimmte Rezepte.
+#-------------------------------
+[WEPEARBERRY]
+Name = Nirbebeere
+NamePlural = Nirbebeeren
+Pocket = 5
+Price = 20
+Flags = Berry,Fling_10,NaturalGift_ELECTRIC_90
+Description = Eine Zutat für bestimmte Rezepte.
+#-------------------------------
+[PINAPBERRY]
+Name = Sananabeere
+NamePlural = Sananabeere
+Pocket = 5
+Price = 20
+Flags = Berry,Fling_10,NaturalGift_GRASS_90
+Description = Eine Zutat für bestimmte Rezepte.
+#-------------------------------
+[POMEGBERRY]
+Name = Granabeere
+NamePlural = Granabeeren
+Pocket = 5
+Price = 40
+FieldUse = OnPokemon
+Flags = Berry,Fling_10,NaturalGift_ICE_90
+Description = Senkt die Basis-LP um 10 und erhöht die Freundschaft um 10.
+#-------------------------------
+[KELPSYBERRY]
+Name = Setangbeere
+NamePlural = Setangbeeren
+Pocket = 5
+Price = 40
+FieldUse = OnPokemon
+Flags = Berry,Fling_10,NaturalGift_FIGHTING_90
+Description = Senkt d Basis-Angriff um 10 und erhöht die Freundschaft um 10.
+#-------------------------------
+[QUALOTBERRY]
+Name = Qualotbeere
+NamePlural = Qualotbeeren
+Pocket = 5
+Price = 40
+FieldUse = OnPokemon
+Flags = Berry,Fling_10,NaturalGift_POISON_90
+Description = Senkt die Basis-Verteidigung um 10 und erhöht die Freundschaft um 10.
+#-------------------------------
+[HONDEWBERRY]
+Name = Honmelbeere
+NamePlural = Honmelbeeren
+Pocket = 5
+Price = 40
+FieldUse = OnPokemon
+Flags = Berry,Fling_10,NaturalGift_GROUND_90
+Description = Senkt den Basis-Sp. Angriff um 10 und erhöht die Freundschaft um 10.
+#-------------------------------
+[GREPABERRY]
+Name = Labrusbeere
+NamePlural = Labrusbeeren
+Pocket = 5
+Price = 40
+FieldUse = OnPokemon
+Flags = Berry,Fling_10,NaturalGift_FLYING_90
+Description = Senkt die Basis-Sp. Verteidigung um 10 und erhöht die Freundschaft um 10.
+#-------------------------------
+[TAMATOBERRY]
+Name = Tamotbeere
+NamePlural = Tamotbeere
+Pocket = 5
+Price = 20
+FieldUse = OnPokemon
+Flags = Berry,Fling_10,NaturalGift_PSYCHIC_90
+Description = Senkt die Basis-Initiative um 10 und erhöht die Freundschaft um 10.
+#-------------------------------
+[CORNNBERRY]
+Name = Saimbeere
+NamePlural = Saimbeeren
+Pocket = 5
+Price = 20
+Flags = Berry,Fling_10,NaturalGift_BUG_90
+Description = Eine Zutat für bestimmte Rezepte.
+#-------------------------------
+[MAGOSTBERRY]
+Name = Magostbeere
+NamePlural = Magostbeeren
+Pocket = 5
+Price = 20
+Flags = Berry,Fling_10,NaturalGift_ROCK_90
+Description = Eine Zutat für bestimmte Rezepte.
+#-------------------------------
+[RABUTABERRY]
+Name = Rabutabeere
+NamePlural = Rabutabeeren
+Pocket = 5
+Price = 20
+Flags = Berry,Fling_10,NaturalGift_GHOST_90
+Description = Eine Zutat für bestimmte Rezepte.
+#-------------------------------
+[NOMELBERRY]
+Name = Tronzibeere
+NamePlural = Tronzibeeren
+Pocket = 5
+Price = 20
+Flags = Berry,Fling_10,NaturalGift_DRAGON_90
+Description = Eine Zutat für bestimmte Rezepte.
+#-------------------------------
+[SPELONBERRY]
+Name = Kiwanbeere
+NamePlural = Kiwanbeeren
+Pocket = 5
+Price = 20
+Flags = Berry,Fling_10,NaturalGift_DARK_90
+Description = Eine Zutat für bestimmte Rezepte.
+#-------------------------------
+[PAMTREBERRY]
+Name = Pallmbeere
+NamePlural = Pallmbeeren
+Pocket = 5
+Price = 20
+Flags = Berry,Fling_10,NaturalGift_STEEL_90
+Description = Eine Zutat für bestimmte Rezepte.
+#-------------------------------
+[WATMELBERRY]
+Name = Wasmelbeere
+NamePlural = Wasmelbeeren
+Pocket = 5
+Price = 20
+Flags = Berry,Fling_10,NaturalGift_FIRE_100
+Description = Eine Zutat für bestimmte Rezepte.
+#-------------------------------
+[DURINBERRY]
+Name = Durinbeere
+NamePlural = Durinbeeren
+Pocket = 5
+Price = 20
+Flags = Berry,Fling_10,NaturalGift_WATER_100
+Description = Eine Zutat für bestimmte Rezepte.
+#-------------------------------
+[BELUEBERRY]
+Name = Myrtilbeere
+NamePlural = Myrtilbeeren
+Pocket = 5
+Price = 20
+Flags = Berry,Fling_10,NaturalGift_ELECTRIC_100
+Description = Eine Zutat für bestimmte Rezepte.
+#-------------------------------
+[OCCABERRY]
+Name = Koakobeere
+NamePlural = Koakobeeren
+Pocket = 5
+Price = 40
+Flags = Berry,Fling_10,NaturalGift_FIRE_80
+Description = Schwächt eine sehr effektive Feuer-Attacke des Gegners ab.
+#-------------------------------
+[PASSHOBERRY]
+Name = Foepasbeere
+NamePlural = Foepasbeeren
+Pocket = 5
+Price = 40
+Flags = Berry,Fling_10,NaturalGift_WATER_80
+Description = Schwächt eine sehr effektive Wasser-Attacke des Gegners ab.
+#-------------------------------
+[WACANBERRY]
+Name = Kerzalbeere
+NamePlural = Kerzalbeeren
+Pocket = 5
+Price = 40
+Flags = Berry,Fling_10,NaturalGift_ELECTRIC_80
+Description = Schwächt eine sehr effektive Elektro-Attacke des Gegners ab.
+#-------------------------------
+[RINDOBERRY]
+Name = Grindobeere
+NamePlural = Grindobeeren
+Pocket = 5
+Price = 40
+Flags = Berry,Fling_10,NaturalGift_GRASS_80
+Description = Schwächt eine sehr effektive Pflanzen-Attacke des Gegners ab
+#-------------------------------
+[YACHEBERRY]
+Name = Kiroyabeere
+NamePlural = YKiroyabeeren
+Pocket = 5
+Price = 40
+Flags = Berry,Fling_10,NaturalGift_ICE_80
+Description = Schwächt eine sehr effektive Eis-Attacke des Gegners ab.
+#-------------------------------
+[CHOPLEBERRY]
+Name = Rospelbeere
+NamePlural = Rospelbeeren
+Pocket = 5
+Price = 40
+Flags = Berry,Fling_10,NaturalGift_FIGHTING_80
+Description = Schwächt eine sehr effektive Kampf-Attacke des Gegners ab.
+#-------------------------------
+[KEBIABERRY]
+Name = Grarzbeere
+NamePlural = Grarzbeeren
+Pocket = 5
+Price = 40
+Flags = Berry,Fling_10,NaturalGift_POISON_80
+Description = Schwächt eine sehr effektive Gift-Attacke des Gegners ab.
+#-------------------------------
+[SHUCABERRY]
+Name = Schukebeere
+NamePlural = Schukebeeren
+Pocket = 5
+Price = 40
+Flags = Berry,Fling_10,NaturalGift_GROUND_80
+Description = Schwächt eine sehr effektive Boden-Attacke des Gegners ab.
+#-------------------------------
+[COBABERRY]
+Name = Kobabeere
+NamePlural = Kobabeeren
+Pocket = 5
+Price = 40
+Flags = Berry,Fling_10,NaturalGift_FLYING_80
+Description = Schwächt eine sehr effektive Wind-Attacke des Gegners ab.
+#-------------------------------
+[PAYAPABERRY]
+Name = Pyapabeere
+NamePlural = Pyapabeeren
+Pocket = 5
+Price = 40
+Flags = Berry,Fling_10,NaturalGift_PSYCHIC_80
+Description = Schwächt eine sehr effektive Psycho-Attacke des Gegners ab.
+#-------------------------------
+[TANGABERRY]
+Name = Tanigabeere
+NamePlural = Tanigabeeren
+Pocket = 5
+Price = 40
+Flags = Berry,Fling_10,NaturalGift_BUG_80
+Description = Schwächt eine sehr effektive Käfer-Attacke des Gegners ab.
+#-------------------------------
+[CHARTIBERRY]
+Name = Chiaribeere
+NamePlural = Chiaribeeren
+Pocket = 5
+Price = 40
+Flags = Berry,Fling_10,NaturalGift_ROCK_80
+Description = Schwächt eine sehr effektive Gestein-Attacke des Gegners ab.
+#-------------------------------
+[KASIBBERRY]
+Name = Zitarzbeere
+NamePlural = Zitarzbeeren
+Pocket = 5
+Price = 40
+Flags = Berry,Fling_10,NaturalGift_GHOST_80
+Description = Schwächt eine sehr effektive Geist-Attacke des Gegners ab.
+#-------------------------------
+[HABANBERRY]
+Name = Terirobeere
+NamePlural = Terirobeeren
+Pocket = 5
+Price = 40
+Flags = Berry,Fling_10,NaturalGift_DRAGON_80
+Description = Schwächt eine sehr effektive Drachen-Attacke des Gegners ab.
+#-------------------------------
+[COLBURBERRY]
+Name = Burleobeere
+NamePlural = Burleobeeren
+Pocket = 5
+Price = 40
+Flags = Berry,Fling_10,NaturalGift_DARK_80
+Description = Schwächt eine sehr effektive Unlicht-Attacke des Gegners ab.
+#-------------------------------
+[BABIRIBERRY]
+Name = Babiribeere
+NamePlural = Babiribeeren
+Pocket = 5
+Price = 40
+Flags = Berry,Fling_10,NaturalGift_STEEL_80
+Description = Schwächt eine sehr effektive Stahl-Attacke des Gegners ab.
+#-------------------------------
+[ROSELIBERRY]
+Name = Hibisbeere
+NamePlural = Hibisbeeren
+Pocket = 5
+Price = 40
+Flags = Berry,Fling_10,NaturalGift_FAIRY_80
+Description = Schwächt eine sehr effektive Feen-Attacke des Gegners ab.
+#-------------------------------
+[CHILANBERRY]
+Name = Chilanbeere
+NamePlural = Chilanbeeren
+Pocket = 5
+Price = 40
+Flags = Berry,Fling_10,NaturalGift_NORMAL_80
+Description = Schwächt eine Normal-Attacke des Gegners ab.
+#-------------------------------
+[LIECHIBERRY]
+Name = Lydzibeere
+NamePlural = Lydzibeeren
+Pocket = 5
+Price = 40
+Flags = Berry,Fling_10,NaturalGift_GRASS_100
+Description = Erhöht den Angriff, wenn die KP unter 25 % fallen.
+#-------------------------------
+[GANLONBERRY]
+Name = Linganbeere
+NamePlural = Linganbeeren
+Pocket = 5
+Price = 40
+Flags = Berry,Fling_10,NaturalGift_ICE_100
+Description = Erhöht die Verteidigung, wenn die KP unter 25 % fallen.
+#-------------------------------
+[SALACBERRY]
+Name = Salkabeere
+NamePlural = Salkabeeren
+Pocket = 5
+Price = 40
+Flags = Berry,Fling_10,NaturalGift_FIGHTING_100
+Description = Erhöht die Initiative, wenn die KP unter 25 % fallen.
+#-------------------------------
+[PETAYABERRY]
+Name = Tahaybeere
+NamePlural = Tahaybeeren
+Pocket = 5
+Price = 40
+Flags = Berry,Fling_10,NaturalGift_POISON_100
+Description = Erhöht den Spezial-Angriff, wenn die KP unter 25 % fallen.
+#-------------------------------
+[APICOTBERRY]
+Name = Apikobeere
+NamePlural = Apikobeeren
+Pocket = 5
+Price = 40
+Flags = Berry,Fling_10,NaturalGift_GROUND_100
+Description = Erhöht die Spezial-Verteidigung, wenn die KP unter 25 % fallen.
+#-------------------------------
+[LANSATBERRY]
+Name = Lansatbeere
+NamePlural = Lansatbeeren
+Pocket = 5
+Price = 40
+Flags = Berry,Fling_10,NaturalGift_FLYING_100
+Description =  	Erhöht die Volltrefferquote, wenn die KP unter 25 % fallen.
+#-------------------------------
+[STARFBERRY]
+Name = Krambobeere
+NamePlural = Krambobeeren
+Pocket = 5
+Price = 40
+Flags = Berry,Fling_10,NaturalGift_PSYCHIC_100
+Description = Erhöht einen zufälligen Statuswert stark, wenn die KP unter 25 % fallen.
+#-------------------------------
+[ENIGMABERRY]
+Name = Enigmabeere
+NamePlural = Enigmabeeren
+Pocket = 5
+Price = 40
+Flags = Berry,Fling_10,NaturalGift_BUG_100
+Description = Heilt die KP um 25 %, wenn von einer sehr effektiven Attacke getroffen.
+#-------------------------------
+[MICLEBERRY]
+Name = Wunfrubeere
+NamePlural = Wunfrubeeren
+Pocket = 5
+Price = 40
+Flags = Berry,Fling_10,NaturalGift_ROCK_100
+Description = Steigert die Genauigkeit des nächsten Angriffs um 20%.
+#-------------------------------
+[CUSTAPBERRY]
+Name = Eipfelbeere
+NamePlural = Eipfelbeeren
+Pocket = 5
+Price = 40
+Flags = Berry,Fling_10,NaturalGift_GHOST_100
+Description = Die nächste Attacke wird garantiert zuerst eingesetzt, wenn die KP unter 25 % fallen.
+#-------------------------------
+[JABOCABERRY]
+Name = Jabocabeere
+NamePlural = Jabocabeeren
+Pocket = 5
+Price = 40
+Flags = Berry,Fling_10,NaturalGift_DRAGON_100
+Description = Fügt dem Gegner Schaden zu, wenn von einer physischen Attacke getroffen.
+#-------------------------------
+[ROWAPBERRY]
+Name = Roselbeere
+NamePlural = Roselbeeren
+Pocket = 5
+Price = 40
+Flags = Berry,Fling_10,NaturalGift_DARK_100
+Description = Fügt dem Gegner Schaden zu, wenn von einer speziellen Attacke getroffen.
+#-------------------------------
+[KEEBERRY]
+Name = Akibeere
+NamePlural = Akibeeren
+Pocket = 5
+Price = 40
+Flags = Berry,Fling_10,NaturalGift_FAIRY_100
+Description = Erhöht die Verteidigung des Trägers, wenn dieser von physischen Attacken getroffen wird.
+#-------------------------------Map / Shop
+[MARANGABERRY]
+Name = Tarabeere
+NamePlural = Tarabeeren
+Pocket = 5
+Price = 40
+Flags = Berry,Fling_10,NaturalGift_DARK_100
+Description = Erhöht die Sp. Verteidigung des Trägers, wenn dieser von speziellen Attacken getroffen wird.
+#-------------------------------Map / Shop
+[HOPOBERRY]
+Name = Pfohbeere
+NamePlural = Pfohbeeren
+Pocket = 5
+Price = 20
+Flags = Berry,Fling_10,NaturalGift_FIGHTING_80
+Description = Frischt die Angriffspunkte eines Pokémon auf.
 #-------------------------------Rezept
 [HYPERCHERIBERRY]
 Name = Dimensions-Amrenabeere

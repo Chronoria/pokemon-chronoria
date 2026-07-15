@@ -23620,6 +23620,9 @@ Category = Apple Nectar
 Pokedex = Its body is covered in sweet nectar, and the skin on its back is especially yummy. Children used to have it as a snack.
 Generation = 8
 RaidRanks = 3,4
+WildItemCommon = DURINBERRY
+WildItemUncommon = DURINBERRY
+WildItemRare = DURINBERRY
 #-------------------------------
 [SILICOBRA]
 Name = Salanga

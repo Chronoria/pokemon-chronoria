@@ -3104,6 +3104,9 @@ Generation = 9
 Evolutions = HYDRAPPLE,HasMove,DRAGONCHEER
 CallRateSOS = 6
 RaidRanks = 2,3
+WildItemCommon = DURINBERRY
+WildItemUncommon = DURINBERRY
+WildItemRare = DURINBERRY
 #-------------------------------
 [POLTCHAGEIST]
 Name = Mortcha
@@ -3321,6 +3324,9 @@ Category = Apple Hydra
 Pokedex = Seven syrpents live inside an apple made of syrup. The syrpent in the center is the commander.
 Generation = 9
 RaidRanks = 4,5
+WildItemCommon = HYPERLUMBERRY
+WildItemUncommon = HYPERORANBERRY
+WildItemRare = HYPERSITRUSBERRY
 #-------------------------------
 [GOUGINGFIRE]
 Name = Keilflamme
