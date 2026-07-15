@@ -54,7 +54,17 @@ Pocket = 1
 Price = 450
 FieldUse = Direct
 Flags = Fling_30
-Description = Der Duft dieses Honigs lockt wilde Pokémon an. Verwende ihn in hohem Gras oder an besonderen Bäumen. 
+Description = Der Duft dieses Honigs lockt wilde Pokémon an. Verwende ihn in hohem Gras oder an besonderen Bäumen.
+#-------------------------------Labore
+[MAXHONEY]
+Name = Mistral-Honig
+NamePlural = Mistral-Honig
+Pocket = 2
+Price = 8000
+FieldUse = OnPokemon
+BattleUse = OnPokemon
+Flags = Fling_30
+Description = Ein besiegtes Pokémon wird vollständig geheilt.
 #-------------------------------
 [REDSHARD]
 Name = Purpurstück
@@ -108,7 +118,7 @@ SellPrice = 750
 BPPrice = 5
 FieldUse = OnPokemon
 Flags = EvolutionStone,Fling_30
-Description = Es lassen sich Magneton, Pikachu, Evoli, Nasgnet, Zapplalek, Wablu, Blipp und Akkup entwicklen.
+Description = Es lassen sich Magneton, Pikachu, Evoli, Nasgnet, Zapplalek, Wablu, Blipp und Akkup entwickeln.
 #-------------------------------Shop / Mining
 [WATERSTONE]
 Name = Wasserstein
@@ -196,7 +206,17 @@ SellPrice = 750
 BPPrice = 5
 FieldUse = OnPokemon
 Flags = EvolutionStone,Fling_30
-Description = Es lassen sich Krabbox, Flampion, Sandan, Vulpix, Flaniwal und Evoli entwicklen.
+Description = Es lassen sich Krabbox, Flampion, Sandan, Vulpix, Flaniwal und Evoli entwickeln.
+#-------------------------------Mining
+[OVALSTONE]
+Name = Ovaler Stein
+NamePlural = Ovale Steine
+Pocket = 1
+Price = 3000
+SellPrice = 500
+BPPrice = 5
+Flags = Fling_80
+Description = Wonneira lässt sich tagsüber entwickeln, wenn es dieses Item trägt und ein Level steigt.
 #-------------------------------Besonderer Shop
 [SWEETAPPLE]
 Name = Süßer Apfel
@@ -207,7 +227,7 @@ SellPrice = 550
 BPPrice = 5
 FieldUse = OnPokemon
 Flags = EvolutionStone,Fling_30
-Description = Damit lässt sich Knapfel entwicklen.
+Description = Damit lässt sich Knapfel entwickeln.
 #-------------------------------Besonderer Shop
 [TARTAPPLE]
 Name = Saurer Apfel
@@ -218,29 +238,18 @@ SellPrice = 550
 BPPrice = 5
 FieldUse = OnPokemon
 Flags = EvolutionStone,Fling_30
-Description = Damit lässt sich Knapfel entwicklen.
-#-------------------------------Besonderer Shop
-[CRACKEDPOT]
-Name = Rissige Kanne
-NamePlural = Rissige Kannen
+Description = Damit lässt sich Knapfel entwickeln.
+#-------------------------------Shop
+[SYRUPYAPPLE]
+Name = Saftiger Apfel
+NamePlural = Saftige Äpfel
 Pocket = 1
-Price = 1500
-SellPrice = 400
+Price = 2200
+SellPrice = 550
 BPPrice = 5
 FieldUse = OnPokemon
-Flags = EvolutionStone,Fling_80
-Description = Damit lässt sich Fatalitee entwicklen.
-#-------------------------------Besonderer Shop
-[CHIPPEDPOT]
-Name = Löchrige Kanne
-NamePlural = Löchrige Kannen
-Pocket = 1
-Price = 1500
-SellPrice = 9500
-BPPrice = 5
-FieldUse = OnPokemon
-Flags = EvolutionStone,Fling_80
-Description = Damit lässt sich Fatalitee entwicklen.
+Flags = EvolutionStone,Fling_30
+Description = Damit lässt sich Knapfel entwickeln.
 #-------------------------------Besonderer Shop
 [GALARICACUFF]
 Name = Reife Galarnuss
@@ -263,6 +272,330 @@ BPPrice = 5
 FieldUse = OnPokemon
 Flags = EvolutionStone,Fling_30
 Description = Damit lässt sich Galar-Flegmon entwickeln.
+#-------------------------------Shop
+[BLACKAUGURITE]
+Name = Schwarzaugit
+NamePlural = Schwarzaugite
+Pocket = 1
+Price = 2100
+FieldUse = OnPokemon
+Flags = Fling_30,EvolutionStone
+Description = Es ist möglich, ein Sichlor damit zu entwickeln.
+#-------------------------------Shop
+[PEATBLOCK]
+Name = Torfblock
+NamePlural = Torfblöcke
+Pocket = 1
+Price = 2100
+FieldUse = OnPokemon
+Flags = Fling_30,EvolutionStone
+Description = Ursaring kann sich nachts mit dem Torfblock entwickeln.
+#-------------------------------Shop
+[LINKINGCORD]
+Name = Verbindungsschnur
+NamePlural = Verbindungsschnüre
+Pocket = 1
+Price = 2100
+FieldUse = OnPokemon
+Flags = Fling_30,EvolutionStone
+Description = Es lassen sich Alpollo, Kadabra, Georok, Sedimantur, Strepoli, Paragonis, Irrbis und Maschok entwickeln.
+#-------------------------------Shop
+[DEEPSEATOOTH]
+Name = Abysszahn
+NamePlural = Abysszähne
+Pocket = 1
+Price = 2000
+BPPrice = 5
+Flags = Fling_90
+Description = Damit kann Perlu sich entwickeln.
+#-------------------------------Shop
+[DEEPSEASCALE]
+Name = Abyssschuppe
+NamePlural = Abyssschuppen
+Pocket = 1
+Price = 2000
+BPPrice = 5
+Flags = Fling_30
+Description = Damit kann Perlu sich entwickeln.
+#-------------------------------Shop (spät)
+[DRAGONSCALE]
+Name = Drachenschuppe
+NamePlural = Drachenschuppen
+Pocket = 1
+Price = 3000
+SellPrice = 750
+BPPrice = 5
+Flags = Fling_30
+Description = Damit lässt sich Seemon entwickeln.
+#-------------------------------Shop (spät)
+[UPGRADE]
+Name = Upgrade
+NamePlural = Upgrades
+Pocket = 1
+Price = 3000
+SellPrice = 750
+BPPrice = 5
+Flags = Fling_30
+Description = Ein Upgrade für Porygon, damit es sich entwickeln kann.
+#-------------------------------Shop (spät)
+[DUBIOUSDISC]
+Name = Dubiosdisc
+NamePlural = Dubiosdiscs
+Pocket = 1
+Price = 3000
+SellPrice = 750
+BPPrice = 5
+Flags = Fling_50
+Description = Ein Upgrade für Porygon2, damit es sich entwickeln kann.
+#-------------------------------Shop (spät)
+[PROTECTOR]
+Name = Schützer
+NamePlural = Schützer
+Pocket = 1
+Price = 3000
+SellPrice = 750
+BPPrice = 5
+Flags = Fling_80
+Description = Damit lässt sich Rizeros entwickeln.
+#-------------------------------Shop (spät)
+[ELECTIRIZER]
+Name = Stromisierer
+NamePlural = Stromisierer
+Pocket = 1
+Price = 3000
+SellPrice = 750
+BPPrice = 5
+Flags = Fling_80
+Description = Damit lässt sich Elektek entwickeln.
+#-------------------------------Shop (spät)
+[MAGMARIZER]
+Name = Magmaisierer
+NamePlural = Magmaisierer
+Pocket = 1
+Price = 3000
+SellPrice = 750
+BPPrice = 5
+Flags = Fling_80
+Description = Damit lässt sich Magmar entwickeln.
+#-------------------------------Shop (spät)
+[REAPERCLOTH]
+Name = Düsterumhang
+NamePlural = Düsterumhänge
+Pocket = 1
+Price = 3000
+SellPrice = 750
+BPPrice = 5
+FieldUse = OnPokemon
+Flags = EvolutionStone,Fling_30
+Description = Damit lässt sich Zwirrklop entwickeln.
+#-------------------------------Shop (spät)
+[PRISMSCALE]
+Name = Schönschuppe
+NamePlural = Schönschuppen
+Pocket = 1
+Price = 3000
+SellPrice = 750
+BPPrice = 10
+Flags = Fling_30
+Description = Damit lässt sich Barschwa entwickeln.
+#-------------------------------Shop
+[WHIPPEDDREAM]
+Name = WSahnehäubchen
+NamePlural = Sahnehäubchen
+Pocket = 1
+Price = 3000
+SellPrice = 750
+BPPrice = 5
+Flags = Fling_80
+Description = Damit lässt sich Flauschling entwickeln.
+#-------------------------------Shop
+[SACHET]
+Name = Duftbeutel
+NamePlural = Duftbeutel
+Pocket = 1
+Price = 3000
+SellPrice = 750
+BPPrice = 5
+Flags = Fling_80
+Description = Damit lässt sich Parfi entwickeln.
+#-------------------------------Shop
+[STRAWBERRYSWEET]
+Name = Zucker-Erdbeere
+NamePlural = Zucker-Erdbeeren
+Pocket = 1
+Price = 500
+BPPrice = 5
+Flags = Fling_10
+Description = Wird die Zucker-Erdbeere von einem Hokumil getragen, ist es möglich, dieses zu einem Pokusan zu entwickeln.
+#-------------------------------Shop
+[LOVESWEET]
+Name = Zucker-Herz
+NamePlural = Zucker-Herzen
+Pocket = 1
+Price = 500
+BPPrice = 5
+Flags = Fling_10
+Description = Wird das Zucker-Herz von einem Hokumil getragen, ist es möglich, dieses zu einem Pokusan zu entwickeln.
+#-------------------------------Shop
+[BERRYSWEET]
+Name = Zucker-Beere
+NamePlural = Zucker-Beere
+Pocket = 1
+Price = 500
+BPPrice = 5
+Flags = Fling_10
+Description = Wird die Zucker-Beere von einem Hokumil getragen, ist es möglich, dieses zu einem Pokusan zu entwickeln.
+#-------------------------------Shop
+[CLOVERSWEET]
+Name = Zucker-Kleeblatt
+NamePlural = Zucker-Kleeblätter
+Pocket = 1
+Price = 500
+BPPrice = 5
+Flags = Fling_10
+Description = Wird das Zucker-Kleeblatt von einem Hokumil getragen, ist es möglich, dieses zu einem Pokusan zu entwickeln.
+#-------------------------------Shop
+[FLOWERSWEET]
+Name = Zucker-Blume
+NamePlural = Zucker-Blumen
+Pocket = 1
+Price = 500
+BPPrice = 5
+Flags = Fling_10
+Description = Wird die Zucker-Blume von einem Hokumil getragen, ist es möglich, dieses zu einem Pokusan zu entwickeln.
+#-------------------------------Shop
+[STARSWEET]
+Name = Star Sweet
+NamePlural = Star Sweets
+Pocket = 1
+Price = 500
+BPPrice = 5
+Flags = Fling_10
+Description = Wird die Zucker-Beere von einem Hokumil getragen, ist es möglich, dieses zu einem Pokusan zu entwickeln.
+#-------------------------------Shop
+[RIBBONSWEET]
+Name = Zucker-Stern
+NamePlural = Zucker-Sterne
+Pocket = 1
+Price = 500
+BPPrice = 5
+Flags = Fling_10
+Description = Wird der Zucker-Stern von einem Hokumil getragen, ist es möglich, dieses zu einem Pokusan zu entwickeln.
+#-------------------------------Shop
+[AUSPICIOUSARMOR]
+Name = Glorienrüstung
+NamePlural = Glorienrüstungen
+Pocket = 1
+Price = 3000
+FieldUse = OnPokemon
+Flags = EvolutionStone,Fling_30
+Description = Damit kann Knarbon entwickelt werden.
+#-------------------------------Shop
+[MALICIOUSARMOR]
+Name = Fluchrüstung
+NamePlural = Fluchrüstungen
+Pocket = 1
+Price = 3000
+FieldUse = OnPokemon
+Flags = EvolutionStone,Fling_30
+Description = Damit kann Knarbon entwickelt werden.
+#-------------------------------Einzigartig
+[SCROLLOFDARKNESS]
+Name = Unlicht-Schriftrolle
+NamePlural = Unlicht-Schriftrollen
+Pocket = 1
+Price = 0
+FieldUse = OnPokemon
+Flags = EvolutionStone,Fling_30
+Description = Damit kann Dakuma entwickelt werden (Unlicht / Kampf).
+#-------------------------------Einzigartig
+[SCROLLOFWATERS]
+Name = Wasser-Schriftrolle
+NamePlural = Wasser-Schriftrollen
+Pocket = 1
+Price = 0
+FieldUse = OnPokemon
+Flags = EvolutionStone,Fling_30
+Description = Damit kann Dakuma entwickelt werden (Kampf / Wasser).
+#-------------------------------Pokémon
+[LEADERSCREST]
+Name = Anführersymbol
+NamePlural = Anführersymbole
+Pocket = 1
+Price = 3000
+Flags = Fling_30
+Description = Wenn Caesurio dieses Item trägt und drei andere Caesurio besiegt, entwickelt es sich ab Level 52.
+#-------------------------------Einzigartig
+[BOOSTERENERGY]
+Name = Energiekapsel
+NamePlural = Energiekapseln
+Pocket = 1
+Price = 0
+Flags = Fling_30
+Description = Das Tragen einer Energiekapsel löst die Fähigkeiten Paläosynthese bzw. Quantenantrieb aus.
+#-------------------------------Pokémon
+[GIMMIGHOULCOIN]
+Name = Gierspenst-Münze
+NamePlural = Gierspenst-Münzen
+Pocket = 1
+Price = 0
+Flags = Fling_10
+Description = Es werden einige benötigt, um Gierspenst zu Monetigo zu entwickeln.
+#-------------------------------Besonderer Shop
+[CRACKEDPOT]
+Name = Rissige Kanne
+NamePlural = Rissige Kannen
+Pocket = 1
+Price = 1500
+SellPrice = 400
+BPPrice = 5
+FieldUse = OnPokemon
+Flags = EvolutionStone,Fling_80
+Description = Damit lässt sich Fatalitee entwickeln.
+#-------------------------------Besonderer Shop
+[CHIPPEDPOT]
+Name = Löchrige Kanne
+NamePlural = Löchrige Kannen
+Pocket = 1
+Price = 1500
+SellPrice = 9500
+BPPrice = 5
+FieldUse = OnPokemon
+Flags = EvolutionStone,Fling_80
+Description = Damit lässt sich Fatalitee entwickeln.
+#-------------------------------Einzigartig
+[UNREMARKABLETEACUP]
+Name = Simple Teeschale
+NamePlural = Simple Teeschalen
+Pocket = 1
+Price = 1500
+SellPrice = 400
+BPPrice = 5
+FieldUse = OnPokemon
+Flags = EvolutionStone,Fling_80
+Description = Damit ist es möglich Mortcha (Imitationsform) zu entwickeln.
+#-------------------------------Einzigartig
+[MASTERPIECETEACUP]
+Name = Edle Teeschale
+NamePlural = Edle Teeschalen
+Pocket = 1
+Price = 1500
+SellPrice = 9500
+BPPrice = 5
+FieldUse = OnPokemon
+Flags = EvolutionStone,Fling_80
+Description = Damit ist es möglich Mortcha (Konstbarkeitsform) zu entwickeln.
+#-------------------------------Shop
+[METALALLOY]
+Name = Legierungsmetall
+NamePlural = Legierungsmetalle
+Pocket = 1
+Price = 3000
+SellPrice = 1500
+BPPrice = 8
+FieldUse = OnPokemon
+Flags = EvolutionStone,Fling_30
+Description = Das Item ermöglicht es dir Duraludon zu entwickeln.
 #-------------------------------Besonderer Shop
 [REDAPRICORN]
 Name = Rote Aprikoko
@@ -439,6 +772,13 @@ Pocket = 1
 Price = 5000
 Flags = Fling_100
 Description = Ein Fossil eines Pokémon.
+#-------------------------------Verkauf / Rezept
+[MEGASHARD]
+Name = Mega Splitter
+NamePlural = Mega Splitter
+Pocket = 1
+Price = 10000
+Description = Für manche von hohem Wert.
 #-------------------------------Verkauf
 [PRETTYFEATHER]
 Name = Prachtfeder
@@ -535,14 +875,6 @@ Pocket = 1
 Price = 40000
 Flags = Fling_130
 Description = Es zählt zu den wertvollsten Items überhaupt. 
-#-------------------------------Rezept / Shop / Tausch / Mining
-[HEARTSCALE]
-Name = Herzschuppe
-NamePlural = Herzschuppen
-Pocket = 1
-Price = 100
-Flags = Fling_30
-Description = Hübsche Schuppe, höchst begehrt bei Sammlern. 
 #-------------------------------Verkauf
 [SLOWPOKETAIL]
 Name = Flegmon-Rute
@@ -558,12 +890,6 @@ Pocket = 1
 Price = 5000
 Flags = Fling_100
 Description = Als Wertgegenstand erfüllt der Steinknochen keinen anderen Zweck als den Verkauf. 
-#-------------------------------Traumwelt
-[MONDSICHEL]
-Name = Mondsichel
-NamePlural = Mondsicheln
-Pocket = 8
-Description = Eine Sichel die Cresselia ähnelt.
 #-------------------------------Verkauf
 [RELICCOPPER]
 Name = Alte Kupfer-Münze
@@ -859,24 +1185,6 @@ Price = 5000
 BPPrice = 77
 Flags = Fling_30
 Description = Die Erfahrungspunkte des Trägers werden um 50% erhöht.
-#-------------------------------Einzigartig
-[EXPALL]
-Name = EP-Teiler
-NamePlural = EP-Teiler
-Pocket = 8
-Price = 0
-FieldUse = Direct
-Flags = KeyItem
-Description = Der EP-Teiler ist eingeschaltet. Alle deine Pokémon im Team erhalten EP nach dem Kampf.
-#-------------------------------Einzigartig
-[EXPALLOFF]
-Name = EP-Solo
-NamePlural = EP-Solos
-Pocket = 8
-Price = 0
-FieldUse = Direct
-Flags = KeyItem
-Description = Der EP-Teiler ist ausgeschaltet.
 #-------------------------------Einzigartig
 [AMULETCOIN]
 Name = Münzamulett
@@ -1705,304 +2013,15 @@ Price = 3000
 SellPrice = 750
 Flags = Fling_10
 Description = Verstärkt Normal-Attacken des Trägers um 20%.
-#-------------------------------Mining
-[FLAMEPLATE]
-Name = Feuertafel
-NamePlural = Feuertafeln
+#-------------------------------Einzigartig
+[FAIRYFEATHER]
+Name = Feendaune
+NamePlural = Feendaunen
 Pocket = 1
-Price = 10000
-SellPrice = 500
-Flags = Fling_90
-Description = Verstärkt Feuer-Attacken des Trägers um 20%.
-#-------------------------------Mining
-[SPLASHPLATE]
-Name = Wassertafel
-NamePlural = Wassertafeln
-Pocket = 1
-Price = 10000
-SellPrice = 500
-Flags = Fling_90
-Description = Verstärkt Wasser-Attacken des Trägers um 20%.
-#-------------------------------Mining
-[ZAPPLATE]
-Name = Blitztafel
-NamePlural = Blitztafeln
-Pocket = 1
-Price = 10000
-SellPrice = 500
-Flags = Fling_90
-Description = Verstärkt Elektro-Attacken des Trägers um 20%.
-#-------------------------------Mining
-[MEADOWPLATE]
-Name = Wiesentafel
-NamePlural = Wiesentafeln
-Pocket = 1
-Price = 10000
-SellPrice = 500
-Flags = Fling_90
-Description = Verstärkt Pflanzen-Attacken des Trägers um 20%.
-#-------------------------------Mining
-[ICICLEPLATE]
-Name = Frosttafel
-NamePlural = Frosttafeln
-Pocket = 1
-Price = 10000
-SellPrice = 500
-Flags = Fling_90
-Description = Verstärkt Eis-Attacken des Trägers um 20%.
-#-------------------------------Mining
-[FISTPLATE]
-Name = Fausttafel
-NamePlural = Fausttafeln
-Pocket = 1
-Price = 10000
-SellPrice = 500
-Flags = Fling_90
-Description = Verstärkt Kampf-Attacken des Trägers um 20%.
-#-------------------------------Mining
-[TOXICPLATE]
-Name = Gifttafel
-NamePlural = Gifttafeln
-Pocket = 1
-Price = 10000
-SellPrice = 500
-Flags = Fling_90
-Description = Verstärkt Gift-Attacken des Trägers um 20%.
-#-------------------------------Mining
-[EARTHPLATE]
-Name = Erdtafel
-NamePlural = Erdtafeln
-Pocket = 1
-Price = 10000
-SellPrice = 500
-Flags = Fling_90
-Description = Verstärkt Boden-Attacken des Trägers um 20%.
-#-------------------------------Mining
-[SKYPLATE]
-Name = Wolkentafel
-NamePlural = Wolkentafeln
-Pocket = 1
-Price = 10000
-SellPrice = 500
-Flags = Fling_90
-Description = Verstärkt Flug-Attacken des Trägers um 20%.
-#-------------------------------Mining
-[MINDPLATE]
-Name = Hirntafel
-NamePlural = Hirntafeln
-Pocket = 1
-Price = 10000
-SellPrice = 500
-Flags = Fling_90
-Description = Verstärkt Psycho-Attacken des Trägers um 20%.
-#-------------------------------Mining
-[INSECTPLATE]
-Name = Käfertafel
-NamePlural = Käfertafeln
-Pocket = 1
-Price = 10000
-SellPrice = 500
-Flags = Fling_90
-Description = Verstärkt Käfer-Attacken des Trägers um 20%.
-#-------------------------------Mining
-[STONEPLATE]
-Name = Steintafel
-NamePlural = Steintafeln
-Pocket = 1
-Price = 10000
-SellPrice = 500
-Flags = Fling_90
-Description = Verstärkt Gestein-Attacken des Trägers um 20%.
-#-------------------------------Mining
-[SPOOKYPLATE]
-Name = Spuktafel
-NamePlural = Spuktafeln
-Pocket = 1
-Price = 10000
-SellPrice = 500
-Flags = Fling_90
-Description = Verstärkt Geist-Attacken des Trägers um 20%.
-#-------------------------------Mining
-[DRACOPLATE]
-Name = Dracotafel
-NamePlural = Dracotafeln
-Pocket = 1
-Price = 10000
-SellPrice = 500
-Flags = Fling_90
-Description = Verstärkt Drachen-Attacken des Trägers um 20%.
-#-------------------------------Mining
-[DREADPLATE]
-Name = Furchttafel
-NamePlural = Furchttafeln
-Pocket = 1
-Price = 10000
-SellPrice = 500
-Flags = Fling_90
-Description = Verstärkt Unlicht-Attacken des Trägers um 20%.
-#-------------------------------Mining
-[IRONPLATE]
-Name = Eisentafel
-NamePlural = Eisentafeln
-Pocket = 1
-Price = 10000
-SellPrice = 500
-Flags = Fling_90
-Description = Verstärkt Stahl-Attacken des Trägers um 20%.
-#-------------------------------Mining
-[PIXIEPLATE]
-Name = Feentafel
-NamePlural = Feentafeln
-Pocket = 1
-Price = 10000
-SellPrice = 500
-Flags = Fling_90
-Description = Verstärkt Fee-Attacken des Trägers um 20%.
-#-------------------------------Shop
-[FIREGEM]
-Name = Feuerjuwel
-NamePlural = Feuerjuwelen
-Pocket = 1
-Price = 4000
-Flags = TypeGem
-Description = Verstärkt einmalig eine Attacke vom Typ Feuer und wird dabei verbraucht.
-#-------------------------------Shop
-[WATERGEM]
-Name = Wasserjuwel
-NamePlural = Wasserjuwelen
-Pocket = 1
-Price = 4000
-Flags = TypeGem
-Description = Verstärkt einmalig eine Attacke vom Typ Wasser und wird dabei verbraucht.
-#-------------------------------Shop
-[ELECTRICGEM]
-Name = Elektrojuwel
-NamePlural = Elektrojuwelen
-Pocket = 1
-Price = 4000
-Flags = TypeGem
-Description = Verstärkt einmalig eine Attacke vom Typ Elektro und wird dabei verbraucht.
-#-------------------------------Shop
-[GRASSGEM]
-Name = Pflanzenjuwel
-NamePlural = Pflanzenjuwelen
-Pocket = 1
-Price = 4000
-Flags = TypeGem
-Description = Verstärkt einmalig eine Attacke vom Typ Pflanze und wird dabei verbraucht.
-#-------------------------------Shop
-[ICEGEM]
-Name = Eisjuwel
-NamePlural = Eisjuwelen
-Pocket = 1
-Price = 4000
-Flags = TypeGem
-Description = Verstärkt einmalig eine Attacke vom Typ Eis und wird dabei verbraucht.
-#-------------------------------Shop
-[FIGHTINGGEM]
-Name = Kampfjuwel
-NamePlural = Kampfjuwelen
-Pocket = 1
-Price = 4000
-Flags = TypeGem
-Description = Verstärkt einmalig eine Attacke vom Typ Kampf und wird dabei verbraucht.
-#-------------------------------Shop
-[POISONGEM]
-Name = Giftjuwel
-NamePlural = Giftjuwelen
-Pocket = 1
-Price = 4000
-Flags = TypeGem
-Description = Verstärkt einmalig eine Attacke vom Typ Gift und wird dabei verbraucht.
-#-------------------------------Shop
-[GROUNDGEM]
-Name = Bodenjuwel
-NamePlural = Bodenjuwelen
-Pocket = 1
-Price = 4000
-Flags = TypeGem
-Description = Verstärkt einmalig eine Attacke vom Typ Boden und wird dabei verbraucht.
-#-------------------------------Shop
-[FLYINGGEM]
-Name = Flugjuwel
-NamePlural = Flugjuwelen
-Pocket = 1
-Price = 4000
-Flags = TypeGem
-Description = Verstärkt einmalig eine Attacke vom Typ Wind und wird dabei verbraucht.
-#-------------------------------Shop
-[PSYCHICGEM]
-Name = Psychojuwel
-NamePlural = Psychojuwelen
-Pocket = 1
-Price = 4000
-Flags = TypeGem
-Description = Verstärkt einmalig eine Attacke vom Typ Psycho und wird dabei verbraucht.
-#-------------------------------Shop
-[BUGGEM]
-Name = Käferjuwel
-NamePlural = Käferjuwelen
-Pocket = 1
-Price = 4000
-Flags = TypeGem
-Description = Verstärkt einmalig eine Attacke vom Typ Käfer und wird dabei verbraucht.
-#-------------------------------Shop
-[ROCKGEM]
-Name = Gesteinsjuwel
-NamePlural = Gesteinsjuwelen
-Pocket = 1
-Price = 4000
-Flags = TypeGem
-Description = Verstärkt einmalig eine Attacke vom Typ Gestein und wird dabei verbraucht.
-#-------------------------------Shop
-[GHOSTGEM]
-Name = Geisterjuwel
-NamePlural = Geisterjuwelen
-Pocket = 1
-Price = 4000
-Flags = TypeGem
-Description = Verstärkt einmalig eine Attacke vom Typ Geist und wird dabei verbraucht.
-#-------------------------------Shop
-[DRAGONGEM]
-Name = Drakojuwel
-NamePlural = Drakojuwelen
-Pocket = 1
-Price = 4000
-Flags = TypeGem
-Description = Verstärkt einmalig eine Attacke vom Typ Drache und wird dabei verbraucht.
-#-------------------------------Shop
-[DARKGEM]
-Name = Unlichtjuwel
-NamePlural = Unlichtjuwelen
-Pocket = 1
-Price = 4000
-Flags = TypeGem
-Description = Verstärkt einmalig eine Attacke vom Typ Unlicht und wird dabei verbraucht.
-#-------------------------------Shop
-[STEELGEM]
-Name = Stahljuwel
-NamePlural = Stahljuwelen
-Pocket = 1
-Price = 4000
-Flags = TypeGem
-Description = Verstärkt einmalig eine Attacke vom Typ Stahl und wird dabei verbraucht.
-#-------------------------------Shop
-[FAIRYGEM]
-Name = Feenjuwel
-NamePlural = Feenjuwelen
-Pocket = 1
-Price = 4000
-Flags = TypeGem
-Description = Verstärkt einmalig eine Attacke vom Typ Fee und wird dabei verbraucht.
-#-------------------------------Shop
-[NORMALGEM]
-Name = Normaljuwel
-NamePlural = Normaljuwelen
-Pocket = 1
-Price = 15000
-SellPrice = 3750
-Flags = TypeGem
-Description = Verstärkt einmalig eine Attacke vom Typ Normal und wird dabei verbraucht.
+Price = 3000
+SellPrice = 750
+Flags = Fling_20
+Description = Verstärkt Attacken vom Typ Fee um 20%.
 #-------------------------------Einzigartig
 [LIGHTBALL]
 Name = Light Ball
@@ -2060,24 +2079,6 @@ Pocket = 1
 Price = 0
 Flags = Fling_30
 Description = Hebt Spezial-Angriff und Spezial-Verteidigung von Latios und Latias um 50%.
-#-------------------------------Shop
-[DEEPSEATOOTH]
-Name = Abysszahn
-NamePlural = Abysszähne
-Pocket = 1
-Price = 2000
-BPPrice = 5
-Flags = Fling_90
-Description = Damit kann Perlu sich entwickeln.
-#-------------------------------Shop
-[DEEPSEASCALE]
-Name = Abyssschuppe
-NamePlural = Abyssschuppen
-Pocket = 1
-Price = 2000
-BPPrice = 5
-Flags = Fling_30
-Description = Damit kann Perlu sich entwickeln.
 #-------------------------------Einzigartig
 [ADAMANTORB]
 Name = Adamant-Orb
@@ -2099,6 +2100,132 @@ NamePlural = Platinum-Orbs
 Pocket = 1
 Flags = Fling_60
 Description = Trägt Giratina dieses Item, werden seine Drachen- und Geist-Attacken um 20 % verstärkt.
+#-------------------------------Mining
+[EVERSTONE]
+Name = Ewigstein
+NamePlural = Ewigsteine
+Pocket = 1
+Price = 3000
+SellPrice = 750
+BPPrice = 5
+Flags = Fling_30
+Description = Ein Item zum Tragen. Es bewirkt einen Entwicklungsstopp.
+#-------------------------------Wenige
+[SHINYSPRAY]
+Name = Shinybeere
+NamePlural = Shinybeeren
+Pocket = 1
+FieldUse = OnPokemon
+Description = Eine extrem seltene Beere, das ein Pokémon dauerhaft schillernd macht.
+#-------------------------------Rezept / Shop / Tausch / Mining
+[HEARTSCALE]
+Name = Herzschuppe
+NamePlural = Herzschuppen
+Pocket = 1
+Price = 100
+Flags = Fling_30
+Description = Hübsche Schuppe, höchst begehrt bei Sammlern. 
+#-------------------------------Einzigartig
+[ABILITYSHIELD]
+Name = Fähigkeitenschild
+NamePlural = Fähigkeitenschilde
+Pocket = 1
+Price = 20000
+Flags = Fling_30
+Description = Verhindert jegliche Änderung der eigenen Fähigkeit durch Gegner.
+#-------------------------------Einzigartig
+[CLEARAMULET]
+Name = Neutralschmuck
+NamePlural = Neutralschmuck
+Pocket = 1
+Price = 30000
+Flags = Fling_30
+Description = Verhindert, dass die eigenen Satuswerte gesenkt werden.
+#-------------------------------Einzigartig
+[MIRRORHERB]
+Name = Kopierkraut
+NamePlural = Kopierkräuter
+Pocket = 1
+Price = 30000
+Flags = Fling_30
+Description = Kopiert Statuswerterhöhungen des Gegners. Erhält beim Züchten Zuchtattacken des Partners.
+#-------------------------------Einzigartig
+[PUNCHINGGLOVE]
+Name = Boxhandschuh
+NamePlural = Boxhandschuhe
+Pocket = 1
+Price = 15000
+Flags = Fling_30
+Description = Der Boxhandschuh erhöht die Stärke von Box-Attacken und verhindert, dass diese Attacken Kontakt herstellen.
+#-------------------------------Einzigartig
+[COVERTCLOAK]
+Name = Tarnumhang
+NamePlural = Tarnumhänge
+Pocket = 1
+Price = 20000
+Flags = Fling_30
+Description = Der Tarnumhang schützt ein Pokémon vor Zusatzeffekten von gegnerischen Attacken. 
+#-------------------------------Einzigartig
+[LOADEDDICE]
+Name = Gezinkter Würfel
+NamePlural = Gezinkte Würfel
+Pocket = 1
+Price = 20000
+Flags = Fling_30
+Description = Serien-Attacken treffen mindestens vier Mal.
+#-------------------------------Einzigartig
+[REDORB]
+Name = Roter Edelstein
+NamePlural = Rote Edelsteine
+Pocket = 1
+Price = 10000
+SellPrice = 0
+BPPrice = 50
+Description = Wird der Rote Edelstein von Groudon getragen, führt dieses eine Protomorphose durch.
+#-------------------------------Einzigartig
+[BLUEORB]
+Name = Blauer Edelstein
+NamePlural = Blaue Edelsteine
+Pocket = 1
+Price = 10000
+SellPrice = 0
+BPPrice = 50
+Description = Wird der Blaue Edelstein von Kyogre getragen, führt dieses eine Protomorphose durch.
+#-------------------------------Besonderer Shop
+[GACHATICKET]
+Name = Gacha Ticket
+NamePlural = Gacha Ticket
+Pocket = 1
+Price = 5000
+Flags = Fling_30
+Description = Versuche dein Glück und ergattere wertvolle Preise.
+#-------------------------------Einzigartig
+[ADAMANTCRYSTAL]
+Name = Adamantkristall
+NamePlural = Adamantkristalle
+Pocket = 1
+Price = 20000
+SellPrice = 0
+Flags = Fling_60
+Description = Auf Dialga angewandt, wird es von Kraft erfüllt und nimmt eine andere Form an.
+#-------------------------------Einzigartig
+[LUSTROUSGLOBE]
+Name = Weißkristall
+NamePlural = Weißkristalle
+Pocket = 1
+Price = 20000
+SellPrice = 0
+Flags = Fling_60
+Description = Wenn das Item von Dialga getragen wird, ändert das Pokémon seine Form.
+#-------------------------------Einzigartig
+[GRISEOUSCORE]
+Name = Platinumkristall
+NamePlural = Platinumkristalle
+Pocket = 1
+Price = 20000
+SellPrice = 0
+Flags = Fling_60
+Description = Gib das Item Giratina zum tragen, damit es seine Urform annimmt.
 #-------------------------------Einzigartig
 [RUSTEDSWORD]
 Name = Rostiges Schwert
@@ -2259,711 +2386,321 @@ Pocket = 1
 Flags = Fling_50
 Description = Ändert den Typen von Amigento und seine Attacke Multi-Angriff zu Fee.
 #-------------------------------Mining
-[EVERSTONE]
-Name = Ewigstein
-NamePlural = Ewigsteine
+[FLAMEPLATE]
+Name = Feuertafel
+NamePlural = Feuertafeln
 Pocket = 1
-Price = 3000
-SellPrice = 750
-BPPrice = 5
-Flags = Fling_30
-Description = Ein Item zum Tragen. Es bewirkt einen Entwicklungsstopp.
-#-------------------------------Shop (spät)
-[DRAGONSCALE]
-Name = Drachenschuppe
-NamePlural = Drachenschuppen
-Pocket = 1
-Price = 3000
-SellPrice = 750
-BPPrice = 5
-Flags = Fling_30
-Description = Damit lässt sich Seemon entwickeln.
-#-------------------------------Shop (spät)
-[UPGRADE]
-Name = Upgrade
-NamePlural = Upgrades
-Pocket = 1
-Price = 3000
-SellPrice = 750
-BPPrice = 5
-Flags = Fling_30
-Description = Ein Upgrade für Porygon, damit es sich entwickeln kann.
-#-------------------------------Shop (spät)
-[DUBIOUSDISC]
-Name = Dubiosdisc
-NamePlural = Dubiosdiscs
-Pocket = 1
-Price = 3000
-SellPrice = 750
-BPPrice = 5
-Flags = Fling_50
-Description = Ein Upgrade für Porygon2, damit es sich entwickeln kann.
-#-------------------------------Shop (spät)
-[PROTECTOR]
-Name = Schützer
-NamePlural = Schützer
-Pocket = 1
-Price = 3000
-SellPrice = 750
-BPPrice = 5
-Flags = Fling_80
-Description = Damit lässt sich Rizeros entwickeln.
-#-------------------------------Shop (spät)
-[ELECTIRIZER]
-Name = Stromisierer
-NamePlural = Stromisierer
-Pocket = 1
-Price = 3000
-SellPrice = 750
-BPPrice = 5
-Flags = Fling_80
-Description = Damit lässt sich Elektek entwickeln.
-#-------------------------------Shop (spät)
-[MAGMARIZER]
-Name = Magmaisierer
-NamePlural = Magmaisierer
-Pocket = 1
-Price = 3000
-SellPrice = 750
-BPPrice = 5
-Flags = Fling_80
-Description = Damit lässt sich Magmar entwickeln.
-#-------------------------------Shop (spät)
-[REAPERCLOTH]
-Name = Düsterumhang
-NamePlural = Düsterumhänge
-Pocket = 1
-Price = 3000
-SellPrice = 750
-BPPrice = 5
-FieldUse = OnPokemon
-Flags = EvolutionStone,Fling_30
-Description = Damit lässt sich Zwirrklop entwickeln.
-#-------------------------------Shop (spät)
-[PRISMSCALE]
-Name = Schönschuppe
-NamePlural = Schönschuppen
-Pocket = 1
-Price = 3000
-SellPrice = 750
-BPPrice = 10
-Flags = Fling_30
-Description = Damit lässt sich Barschwa entwickeln.
-#-------------------------------Mining
-[OVALSTONE]
-Name = Ovaler Stein
-NamePlural = Ovale Steine
-Pocket = 1
-Price = 3000
+Price = 10000
 SellPrice = 500
-BPPrice = 5
-Flags = Fling_80
-Description = Wonneira lässt sich tagsüber entwickeln, wenn es dieses Item trägt und ein Level steigt.
-#-------------------------------Shop
-[WHIPPEDDREAM]
-Name = WSahnehäubchen
-NamePlural = Sahnehäubchen
-Pocket = 1
-Price = 3000
-SellPrice = 750
-BPPrice = 5
-Flags = Fling_80
-Description = Damit lässt sich Flauschling entwickeln.
-#-------------------------------Shop
-[SACHET]
-Name = Duftbeutel
-NamePlural = Duftbeutel
-Pocket = 1
-Price = 3000
-SellPrice = 750
-BPPrice = 5
-Flags = Fling_80
-Description = Damit lässt sich Parfi entwickeln.
-#-------------------------------Shop
-[STRAWBERRYSWEET]
-Name = Zucker-Erdbeere
-NamePlural = Zucker-Erdbeeren
-Pocket = 1
-Price = 500
-BPPrice = 5
-Flags = Fling_10
-Description = Wird die Zucker-Erdbeere von einem Hokumil getragen, ist es möglich, dieses zu einem Pokusan zu entwickeln. 
-#-------------------------------Shop
-[LOVESWEET]
-Name = Zucker-Herz
-NamePlural = Zucker-Herzen
-Pocket = 1
-Price = 500
-BPPrice = 5
-Flags = Fling_10
-Description = Wird das Zucker-Herz von einem Hokumil getragen, ist es möglich, dieses zu einem Pokusan zu entwickeln. 
-#-------------------------------Shop
-[BERRYSWEET]
-Name = Zucker-Beere
-NamePlural = Zucker-Beere
-Pocket = 1
-Price = 500
-BPPrice = 5
-Flags = Fling_10
-Description = Wird die Zucker-Beere von einem Hokumil getragen, ist es möglich, dieses zu einem Pokusan zu entwickeln. 
-#-------------------------------Shop
-[CLOVERSWEET]
-Name = Zucker-Kleeblatt
-NamePlural = Zucker-Kleeblätter
-Pocket = 1
-Price = 500
-BPPrice = 5
-Flags = Fling_10
-Description = Wird das Zucker-Kleeblatt von einem Hokumil getragen, ist es möglich, dieses zu einem Pokusan zu entwickeln. 
-#-------------------------------Shop
-[FLOWERSWEET]
-Name = Zucker-Blume
-NamePlural = Zucker-Blumen
-Pocket = 1
-Price = 500
-BPPrice = 5
-Flags = Fling_10
-Description = Wird die Zucker-Blume von einem Hokumil getragen, ist es möglich, dieses zu einem Pokusan zu entwickeln. 
-#-------------------------------Shop
-[STARSWEET]
-Name = Star Sweet
-NamePlural = Star Sweets
-Pocket = 1
-Price = 500
-BPPrice = 5
-Flags = Fling_10
-Description = Wird die Zucker-Beere von einem Hokumil getragen, ist es möglich, dieses zu einem Pokusan zu entwickeln. 
-#-------------------------------Shop
-[RIBBONSWEET]
-Name = Zucker-Stern
-NamePlural = Zucker-Sterne
-Pocket = 1
-Price = 500
-BPPrice = 5
-Flags = Fling_10
-Description = Wird der Zucker-Stern von einem Hokumil getragen, ist es möglich, dieses zu einem Pokusan zu entwickeln. 
-#-------------------------------Einzigartig
-[VENUSAURITEX]
-Name = Bisaflornit X
-NamePlural = Bisaflornite X
-Pocket = 6
-Price = 10000
-BPPrice = 50
-Flags = MegaStone,Fling_80
-Description = Dieser Stein ermöglicht Bisaflor eine Mega-Entwicklung.
-#-------------------------------Einzigartig
-[VENUSAURITEY]
-Name = Bisaflornit Y
-NamePlural = Bisaflornite Y
-Pocket = 6
-Price = 10000
-BPPrice = 50
-Flags = MegaStone,Fling_80
-Description = Dieser Stein ermöglicht Bisaflor eine Mega-Entwicklung.
-#-------------------------------Einzigartig
-[CHARIZARDITEX]
-Name = Gluraknit X
-NamePlural = Gluraknite X
-Pocket = 6
-Price = 10000
-BPPrice = 50
-Flags = MegaStone,Fling_80
-Description = Dieser Stein ermöglicht Glurak eine Mega-Entwicklung.
-#-------------------------------Einzigartig
-[CHARIZARDITEY]
-Name = Gluraknit Y
-NamePlural = Gluraknite Y
-Pocket = 6
-Price = 10000
-BPPrice = 50
-Flags = MegaStone,Fling_80
-Description = Dieser Stein ermöglicht Glurak eine Mega-Entwicklung.
-#-------------------------------Einzigartig
-[CHARIZARDITEZ]
-Name = Gluraknit Z
-NamePlural = Gluraknite Z
-Pocket = 6
-Price = 10000
-BPPrice = 50
-Flags = MegaStone,Fling_80
-Description = Dieser Stein ermöglicht Glurak eine Mega-Entwicklung.
-#-------------------------------Einzigartig
-[BLASTOISINITEX]
-Name = Turtoknit X
-NamePlural = Turtoknite X
-Pocket = 6
-Price = 10000
-BPPrice = 50
-Flags = MegaStone,Fling_80
-Description = Dieser Stein ermöglicht Turtok eine Mega-Entwicklung.
-#-------------------------------Einzigartig
-[BLASTOISINITEY]
-Name = Turtoknit Y
-NamePlural = Turtoknite Y
-Pocket = 6
-Price = 10000
-BPPrice = 50
-Flags = MegaStone,Fling_80
-Description = Dieser Stein ermöglicht Turtok eine Mega-Entwicklung.
-#-------------------------------Einzigartig
-[BEEDRILLITE]
-Name = Bibornit
-NamePlural = Bibornite
-Pocket = 6
-Price = 10000
-BPPrice = 50
-Flags = MegaStone,Fling_80
-Description = Dieser Stein ermöglicht Bibor eine Mega-Entwicklung.
-#-------------------------------Einzigartig
-[PIDGEOTITEX]
-Name = Taubossnit X
-NamePlural = Taubossnite X
-Pocket = 6
-Price = 10000
-BPPrice = 50
-Flags = MegaStone,Fling_80
-Description = Dieser Stein ermöglicht Tauboss eine Mega-Entwicklung.
-#-------------------------------Einzigartig
-[PIDGEOTITEY]
-Name = Taubossnit Y
-NamePlural = Taubossnite Y
-Pocket = 6
-Price = 10000
-BPPrice = 50
-Flags = MegaStone,Fling_80
-Description = Dieser Stein ermöglicht Tauboss eine Mega-Entwicklung.
-#-------------------------------Einzigartig
-[ALAKAZITE]
-Name = Simsalanit
-NamePlural = Simsalanite
-Pocket = 6
-Price = 10000
-BPPrice = 50
-Flags = MegaStone,Fling_80
-Description = Dieser Stein ermöglicht Simsala eine Mega-Entwicklung.
-#-------------------------------Einzigartig
-[SLOWBRONITE]
-Name = Lahmusnit
-NamePlural = Lahmusnite
-Pocket = 6
-Price = 10000
-BPPrice = 50
-Flags = MegaStone,Fling_80
-Description = Dieser Stein ermöglicht Lahmus eine Mega-Entwicklung.
-#-------------------------------Einzigartig
-[GENGARITE]
-Name = Gengarnit
-NamePlural = Gengarnite
-Pocket = 6
-Price = 10000
-BPPrice = 50
-Flags = MegaStone,Fling_80
-Description = Dieser Stein ermöglicht Gengar eine Mega-Entwicklung.
-#-------------------------------Einzigartig
-[KANGASKHANITE]
-Name = Kangamanit
-NamePlural = Kangamanite
-Pocket = 6
-Price = 10000
-BPPrice = 50
-Flags = MegaStone,Fling_80
-Description = Dieser Stein ermöglicht Kangama eine Mega-Entwicklung.
-#-------------------------------Einzigartig
-[PINSIRITE]
-Name = Pinsirnit
-NamePlural = Pinsirnite
-Pocket = 6
-Price = 10000
-BPPrice = 50
-Flags = MegaStone,Fling_80
-Description = Dieser Stein ermöglicht Pinsir eine Mega-Entwicklung.
-#-------------------------------Einzigartig
-[GYARADOSITE]
-Name = Garadosnit
-NamePlural = Garadosnite
-Pocket = 6
-Price = 10000
-BPPrice = 50
-Flags = MegaStone,Fling_80
-Description = Dieser Stein ermöglicht Garados eine Mega-Entwicklung.
-#-------------------------------Einzigartig
-[TORNUPTONITX]
-Name = Tornuptonit X
-NamePlural = Tornuptonite X
-Pocket = 6
-Price = 10000
-BPPrice = 50
-Flags = MegaStone,Fling_80
-Description = Dieser Stein ermöglicht Tornupto eine Mega-Entwicklung.
-#-------------------------------Einzigartig
-[AERODACTYLITE]
-Name = Aerodactylonit
-NamePlural = Aerodactylonite
-Pocket = 6
-Price = 10000
-BPPrice = 50
-Flags = MegaStone,Fling_80
-Description = Dieser Stein ermöglicht Aerodactyl eine Mega-Entwicklung.
-#-------------------------------Einzigartig
-[MEWTWONITEX]
-Name = Mewtunit X
-NamePlural = Mewtunite X
-Pocket = 6
-Price = 10000
-BPPrice = 50
-Flags = MegaStone,Fling_80
-Description = Dieser Stein ermöglicht Mewtu eine Mega-Entwicklung.
-#-------------------------------Einzigartig
-[MEWTWONITEY]
-Name = Mewtunit Y
-NamePlural = Mewtunite Y
-Pocket = 6
-Price = 10000
-BPPrice = 50
-Flags = MegaStone,Fling_80
-Description = Dieser Stein ermöglicht Mewtu eine Mega-Entwicklung.
-#-------------------------------Einzigartig
-[AMPHAROSITE]
-Name = Ampharosnit
-NamePlural = Ampharosnite
-Pocket = 6
-Price = 10000
-BPPrice = 50
-Flags = MegaStone,Fling_80
-Description = Dieser Stein ermöglicht Ampharos eine Mega-Entwicklung.
-#-------------------------------Einzigartig
-[STEELIXITEX]
-Name = Stahlosnit X
-NamePlural = Stahlosnite X
-Pocket = 6
-Price = 10000
-BPPrice = 50
-Flags = MegaStone,Fling_80
-Description = Dieser Stein ermöglicht Stahlos eine Mega-Entwicklung.
-#-------------------------------Einzigartig
-[STEELIXITEY]
-Name = Stahlosnit Y
-NamePlural = Stahlosnite Y
-Pocket = 6
-Price = 10000
-BPPrice = 50
-Flags = MegaStone,Fling_80
-Description = Dieser Stein ermöglicht Stahlos eine Mega-Entwicklung.
-#-------------------------------Einzigartig
-[SCIZORITE]
-Name = Scheroxnit
-NamePlural = Scheroxnite
-Pocket = 6
-Price = 10000
-BPPrice = 50
-Flags = MegaStone,Fling_80
-Description = Dieser Stein ermöglicht Scherox eine Mega-Entwicklung.
-#-------------------------------Einzigartig
-[HERACRONITE]
-Name = Skarabornit
-NamePlural = Skarabornite
-Pocket = 6
-Price = 10000
-BPPrice = 50
-Flags = MegaStone,Fling_80
-Description = Dieser Stein ermöglicht Skaraborn eine Mega-Entwicklung.
-#-------------------------------Einzigartig
-[HOUNDOOMINITE]
-Name = Hundemonit
-NamePlural = Hundemonite
-Pocket = 6
-Price = 10000
-BPPrice = 50
-Flags = MegaStone,Fling_80
-Description = Dieser Stein ermöglicht Hundemon eine Mega-Entwicklung.
-#-------------------------------Einzigartig
-[TYRANITARITE]
-Name = Despotarnit
-NamePlural = Despotarnite
-Pocket = 6
-Price = 10000
-BPPrice = 50
-Flags = MegaStone,Fling_80
-Description = Dieser Stein ermöglicht Despotar eine Mega-Entwicklung.
-#-------------------------------Einzigartig
-[SCEPTILITE]
-Name = Gewaldronit
-NamePlural = Gewaldronite
-Pocket = 6
-Price = 10000
-BPPrice = 50
-Flags = MegaStone,Fling_80
-Description = Dieser Stein ermöglicht Gewaldro eine Mega-Entwicklung.
-#-------------------------------Einzigartig
-[BLAZIKENITE]
-Name = Lohgocknit
-NamePlural = Lohgocknite
-Pocket = 6
-Price = 10000
-BPPrice = 50
-Flags = MegaStone,Fling_80
-Description = Dieser Stein ermöglicht Lohgock eine Mega-Entwicklung.
-#-------------------------------Einzigartig
-[SWAMPERTITE]
-Name = Sumpexnit
-NamePlural = Sumpexnite
-Pocket = 6
-Price = 10000
-BPPrice = 50
-Flags = MegaStone,Fling_80
-Description = Dieser Stein ermöglicht Sumpex eine Mega-Entwicklung.
-#-------------------------------Einzigartig
-[GARDEVOIRITE]
-Name = Guardevoirnit
-NamePlural = Guardevoirnite
-Pocket = 6
-Price = 10000
-BPPrice = 50
-Flags = MegaStone,Fling_80
-Description = Dieser Stein ermöglicht Guardevoir eine Mega-Entwicklung.
-#-------------------------------Einzigartig
-[SABLENITE]
-Name = Zobirisnit
-NamePlural = Zobirisnite
-Pocket = 6
-Price = 10000
-BPPrice = 50
-Flags = MegaStone,Fling_80
-Description = Dieser Stein ermöglicht Zobiris eine Mega-Entwicklung.
-#-------------------------------Einzigartig
-[MAWILITE]
-Name = Flunkifernit
-NamePlural = Flunkifernite
-Pocket = 6
-Price = 10000
-BPPrice = 50
-Flags = MegaStone,Fling_80
-Description = Dieser Stein ermöglicht Flunkifer eine Mega-Entwicklung.
-#-------------------------------Einzigartig
-[AGGRONITE]
-Name = Stollossnit
-NamePlural = Stollossnite
-Pocket = 6
-Price = 10000
-BPPrice = 50
-Flags = MegaStone,Fling_80
-Description = Dieser Stein ermöglicht Stollos eine Mega-Entwicklung.
-#-------------------------------Einzigartig
-[MEDICHAMITE]
-Name = Meditalisnit
-NamePlural = Meditalisnite
-Pocket = 6
-Price = 10000
-BPPrice = 50
-Flags = MegaStone,Fling_80
-Description = Dieser Stein ermöglicht Meditalis eine Mega-Entwicklung.
-#-------------------------------Einzigartig
-[MANECTITE]
-Name = Voltensonit
-NamePlural = Voltensonite
-Pocket = 6
-Price = 10000
-BPPrice = 50
-Flags = MegaStone,Fling_80
-Description = Dieser Stein ermöglicht Voltenso eine Mega-Entwicklung.
-#-------------------------------Einzigartig
-[SHARPEDONITE]
-Name = Tohaidonit
-NamePlural = Tohaidonite
-Pocket = 6
-Price = 10000
-BPPrice = 50
-Flags = MegaStone,Fling_80
-Description = Dieser Stein ermöglicht Tohaido eine Mega-Entwicklung.
-#-------------------------------Einzigartig
-[CAMERUPTITE]
-Name = Cameruptnit
-NamePlural = Cameruptnite
-Pocket = 6
-Price = 10000
-BPPrice = 50
-Flags = MegaStone,Fling_80
-Description = Dieser Stein ermöglicht Camerupt eine Mega-Entwicklung.
-#-------------------------------Einzigartig
-[ALTARIANITE]
-Name = Altarianit X
-NamePlural = Altarianite X
-Pocket = 6
-Price = 10000
-BPPrice = 50
-Flags = MegaStone,Fling_80
-Description = Dieser Stein ermöglicht Altaria eine Mega-Entwicklung.
-#-------------------------------Einzigartig
-[ALTARIANITE2]
-Name = Altarianit Y
-NamePlural = Altarianite Y
-Pocket = 6
-Price = 10000
-BPPrice = 50
-Flags = MegaStone,Fling_80
-Description = Dieser Stein ermöglicht Altaria eine Mega-Entwicklung.
-#-------------------------------Einzigartig
-[BANETTITE]
-Name = Banettenit
-NamePlural = Banettenite
-Pocket = 6
-Price = 10000
-BPPrice = 50
-Flags = MegaStone,Fling_80
-Description = Dieser Stein ermöglicht Banette eine Mega-Entwicklung.
-#-------------------------------Einzigartig
-[ABSOLITE]
-Name = Absolnit
-NamePlural = Absolnite
-Pocket = 6
-Price = 10000
-BPPrice = 50
-Flags = MegaStone,Fling_80
-Description = Dieser Stein ermöglicht Absol eine Mega-Entwicklung.
-#-------------------------------Einzigartig
-[GLALITITE]
-Name = Firnontornit
-NamePlural = Firnontornite
-Pocket = 6
-Price = 10000
-BPPrice = 50
-Flags = MegaStone,Fling_80
-Description = Dieser Stein ermöglicht Firnontor eine Mega-Entwicklung.
-#-------------------------------Einzigartig
-[SALAMENCITE]
-Name = Brutalandanit
-NamePlural = Brutalandanite
-Pocket = 6
-Price = 10000
-BPPrice = 50
-Flags = MegaStone,Fling_80
-Description = Dieser Stein ermöglicht Brutalanda eine Mega-Entwicklung.
-#-------------------------------Einzigartig
-[METAGROSSITE]
-Name = Metagrossnit
-NamePlural = Metagrossnite
-Pocket = 6
-Price = 10000
-BPPrice = 50
-Flags = MegaStone,Fling_80
-Description = Dieser Stein ermöglicht Metagross eine Mega-Entwicklung.
-#-------------------------------Einzigartig
-[METAGROSSITE2]
-Name = Metagrossnit2
-NamePlural = Metagrossnite2
-Pocket = 6
-Price = 10000
-BPPrice = 50
-Flags = MegaStone,Fling_80
-Description = Dieser Stein ermöglicht Metagross eine Mega-Entwicklung.
-#-------------------------------Einzigartig
-[LATIASITE]
-Name = Latiasnit
-NamePlural = Latiasnite
-Pocket = 6
-Price = 10000
-BPPrice = 50
-Flags = MegaStone,Fling_80
-Description = Dieser Stein ermöglicht Latias eine Mega-Entwicklung.
-#-------------------------------Einzigartig
-[LATIOSITE]
-Name = Latiosnit
-NamePlural = Latiosnite
-Pocket = 6
-Price = 10000
-BPPrice = 50
-Flags = MegaStone,Fling_80
-Description = Dieser Stein ermöglicht Latios eine Mega-Entwicklung.
-#-------------------------------Einzigartig
-[LOPUNNITE]
-Name = Schlapornit
-NamePlural = Schlapornite
-Pocket = 6
-Price = 10000
-BPPrice = 50
-Flags = MegaStone,Fling_80
-Description = Dieser Stein ermöglicht Schlapor eine Mega-Entwicklung.
-#-------------------------------Einzigartig
-[GARCHOMPITE]
-Name = Knakracknit
-NamePlural = Knakracknite
-Pocket = 6
-Price = 10000
-BPPrice = 50
-Flags = MegaStone,Fling_80
-Description = Dieser Stein ermöglicht Knakrack eine Mega-Entwicklung.
-#-------------------------------Einzigartig
-[LUCARIONITE]
-Name = Lucarionit
-NamePlural = Lucarionite
-Pocket = 6
-Price = 10000
-BPPrice = 50
-Flags = MegaStone,Fling_80
-Description = Dieser Stein ermöglicht Lucario eine Mega-Entwicklung.
-#-------------------------------Einzigartig
-[ABOMASITE]
-Name = Rexblisarnit
-NamePlural = Rexblisarnite
-Pocket = 6
-Price = 10000
-BPPrice = 50
-Flags = MegaStone,Fling_80
-Description = Dieser Stein ermöglicht Rexblisar eine Mega-Entwicklung.
-#-------------------------------Einzigartig
-[GALLADITE]
-Name = Galagladinit
-NamePlural = Galagladinite
-Pocket = 6
-Price = 10000
-BPPrice = 50
-Flags = MegaStone,Fling_80
-Description = Dieser Stein ermöglicht Galagladi eine Mega-Entwicklung.
-#-------------------------------Einzigartig
-[AUDINITE]
-Name = Ohrdochnit
-NamePlural = Ohrdochnite
-Pocket = 6
-Price = 10000
-BPPrice = 50
-Flags = MegaStone,Fling_80
-Description = Dieser Stein ermöglicht Ohrdoch eine Mega-Entwicklung.
-#-------------------------------Einzigartig
-[DIANCITE]
-Name = Diancienit
-NamePlural = Diancienite
-Pocket = 6
-Price = 10000
-BPPrice = 50
-Flags = MegaStone,Fling_80
-Description = Dieser Stein ermöglicht Diancie eine Mega-Entwicklung.
-#-------------------------------Einzigartig
-[INFERNAPENITE]
-Name = Panfernonit
-NamePlural = Panfernonite
-Pocket = 6
-Price = 10000
-BPPrice = 50
-Flags = MegaStone,Fling_80
-Description = Dieser Stein ermöglicht Panferno eine Mega-Entwicklung.
-#-------------------------------Einzigartig
-[REDORB]
-Name = Roter Edelstein
-NamePlural = Rote Edelsteine
+Flags = Fling_90
+Description = Verstärkt Feuer-Attacken des Trägers um 20%.
+#-------------------------------Mining
+[SPLASHPLATE]
+Name = Wassertafel
+NamePlural = Wassertafeln
 Pocket = 1
 Price = 10000
+SellPrice = 500
+Flags = Fling_90
+Description = Verstärkt Wasser-Attacken des Trägers um 20%.
+#-------------------------------Mining
+[ZAPPLATE]
+Name = Blitztafel
+NamePlural = Blitztafeln
+Pocket = 1
+Price = 10000
+SellPrice = 500
+Flags = Fling_90
+Description = Verstärkt Elektro-Attacken des Trägers um 20%.
+#-------------------------------Mining
+[MEADOWPLATE]
+Name = Wiesentafel
+NamePlural = Wiesentafeln
+Pocket = 1
+Price = 10000
+SellPrice = 500
+Flags = Fling_90
+Description = Verstärkt Pflanzen-Attacken des Trägers um 20%.
+#-------------------------------Mining
+[ICICLEPLATE]
+Name = Frosttafel
+NamePlural = Frosttafeln
+Pocket = 1
+Price = 10000
+SellPrice = 500
+Flags = Fling_90
+Description = Verstärkt Eis-Attacken des Trägers um 20%.
+#-------------------------------Mining
+[FISTPLATE]
+Name = Fausttafel
+NamePlural = Fausttafeln
+Pocket = 1
+Price = 10000
+SellPrice = 500
+Flags = Fling_90
+Description = Verstärkt Kampf-Attacken des Trägers um 20%.
+#-------------------------------Mining
+[TOXICPLATE]
+Name = Gifttafel
+NamePlural = Gifttafeln
+Pocket = 1
+Price = 10000
+SellPrice = 500
+Flags = Fling_90
+Description = Verstärkt Gift-Attacken des Trägers um 20%.
+#-------------------------------Mining
+[EARTHPLATE]
+Name = Erdtafel
+NamePlural = Erdtafeln
+Pocket = 1
+Price = 10000
+SellPrice = 500
+Flags = Fling_90
+Description = Verstärkt Boden-Attacken des Trägers um 20%.
+#-------------------------------Mining
+[SKYPLATE]
+Name = Wolkentafel
+NamePlural = Wolkentafeln
+Pocket = 1
+Price = 10000
+SellPrice = 500
+Flags = Fling_90
+Description = Verstärkt Flug-Attacken des Trägers um 20%.
+#-------------------------------Mining
+[MINDPLATE]
+Name = Hirntafel
+NamePlural = Hirntafeln
+Pocket = 1
+Price = 10000
+SellPrice = 500
+Flags = Fling_90
+Description = Verstärkt Psycho-Attacken des Trägers um 20%.
+#-------------------------------Mining
+[INSECTPLATE]
+Name = Käfertafel
+NamePlural = Käfertafeln
+Pocket = 1
+Price = 10000
+SellPrice = 500
+Flags = Fling_90
+Description = Verstärkt Käfer-Attacken des Trägers um 20%.
+#-------------------------------Mining
+[STONEPLATE]
+Name = Steintafel
+NamePlural = Steintafeln
+Pocket = 1
+Price = 10000
+SellPrice = 500
+Flags = Fling_90
+Description = Verstärkt Gestein-Attacken des Trägers um 20%.
+#-------------------------------Mining
+[SPOOKYPLATE]
+Name = Spuktafel
+NamePlural = Spuktafeln
+Pocket = 1
+Price = 10000
+SellPrice = 500
+Flags = Fling_90
+Description = Verstärkt Geist-Attacken des Trägers um 20%.
+#-------------------------------Mining
+[DRACOPLATE]
+Name = Dracotafel
+NamePlural = Dracotafeln
+Pocket = 1
+Price = 10000
+SellPrice = 500
+Flags = Fling_90
+Description = Verstärkt Drachen-Attacken des Trägers um 20%.
+#-------------------------------Mining
+[DREADPLATE]
+Name = Furchttafel
+NamePlural = Furchttafeln
+Pocket = 1
+Price = 10000
+SellPrice = 500
+Flags = Fling_90
+Description = Verstärkt Unlicht-Attacken des Trägers um 20%.
+#-------------------------------Mining
+[IRONPLATE]
+Name = Eisentafel
+NamePlural = Eisentafeln
+Pocket = 1
+Price = 10000
+SellPrice = 500
+Flags = Fling_90
+Description = Verstärkt Stahl-Attacken des Trägers um 20%.
+#-------------------------------Mining
+[PIXIEPLATE]
+Name = Feentafel
+NamePlural = Feentafeln
+Pocket = 1
+Price = 10000
+SellPrice = 500
+Flags = Fling_90
+Description = Verstärkt Fee-Attacken des Trägers um 20%.
+#-------------------------------Einzigartig
+[LEGENDPLATE]
+Name = Legendentafel
+NamePlural = Legendentafeln
+Pocket = 1
+Price = 20000
 SellPrice = 0
-BPPrice = 50
-Description = Wird der Rote Edelstein von Groudon getragen, führt dieses eine Protomorphose durch.
+Flags = Fling_90,Plate
+Description = Von Arceus getragen sorgt das Item dafür, dass die Attacke Urteilskraft immer sehr effektiv ist.
 #-------------------------------Einzigartig
-[BLUEORB]
-Name = Blauer Edelstein
-NamePlural = Blaue Edelsteine
+[BLANKPLATE]
+Name = Neutraltafel
+NamePlural = Neutraltafeln
 Pocket = 1
 Price = 10000
-SellPrice = 0
-BPPrice = 50
-Description = Wird der Blaue Edelstein von Kyogre getragen, führt dieses eine Protomorphose durch.
+SellPrice = 500
+Flags = Fling_90,Plate
+Description = Verstärkt Normal-Attacken bei Arceus.
+#-------------------------------Shop
+[FIREGEM]
+Name = Feuerjuwel
+NamePlural = Feuerjuwelen
+Pocket = 1
+Price = 4000
+Flags = TypeGem
+Description = Verstärkt einmalig eine Attacke vom Typ Feuer und wird dabei verbraucht.
+#-------------------------------Shop
+[WATERGEM]
+Name = Wasserjuwel
+NamePlural = Wasserjuwelen
+Pocket = 1
+Price = 4000
+Flags = TypeGem
+Description = Verstärkt einmalig eine Attacke vom Typ Wasser und wird dabei verbraucht.
+#-------------------------------Shop
+[ELECTRICGEM]
+Name = Elektrojuwel
+NamePlural = Elektrojuwelen
+Pocket = 1
+Price = 4000
+Flags = TypeGem
+Description = Verstärkt einmalig eine Attacke vom Typ Elektro und wird dabei verbraucht.
+#-------------------------------Shop
+[GRASSGEM]
+Name = Pflanzenjuwel
+NamePlural = Pflanzenjuwelen
+Pocket = 1
+Price = 4000
+Flags = TypeGem
+Description = Verstärkt einmalig eine Attacke vom Typ Pflanze und wird dabei verbraucht.
+#-------------------------------Shop
+[ICEGEM]
+Name = Eisjuwel
+NamePlural = Eisjuwelen
+Pocket = 1
+Price = 4000
+Flags = TypeGem
+Description = Verstärkt einmalig eine Attacke vom Typ Eis und wird dabei verbraucht.
+#-------------------------------Shop
+[FIGHTINGGEM]
+Name = Kampfjuwel
+NamePlural = Kampfjuwelen
+Pocket = 1
+Price = 4000
+Flags = TypeGem
+Description = Verstärkt einmalig eine Attacke vom Typ Kampf und wird dabei verbraucht.
+#-------------------------------Shop
+[POISONGEM]
+Name = Giftjuwel
+NamePlural = Giftjuwelen
+Pocket = 1
+Price = 4000
+Flags = TypeGem
+Description = Verstärkt einmalig eine Attacke vom Typ Gift und wird dabei verbraucht.
+#-------------------------------Shop
+[GROUNDGEM]
+Name = Bodenjuwel
+NamePlural = Bodenjuwelen
+Pocket = 1
+Price = 4000
+Flags = TypeGem
+Description = Verstärkt einmalig eine Attacke vom Typ Boden und wird dabei verbraucht.
+#-------------------------------Shop
+[FLYINGGEM]
+Name = Flugjuwel
+NamePlural = Flugjuwelen
+Pocket = 1
+Price = 4000
+Flags = TypeGem
+Description = Verstärkt einmalig eine Attacke vom Typ Wind und wird dabei verbraucht.
+#-------------------------------Shop
+[PSYCHICGEM]
+Name = Psychojuwel
+NamePlural = Psychojuwelen
+Pocket = 1
+Price = 4000
+Flags = TypeGem
+Description = Verstärkt einmalig eine Attacke vom Typ Psycho und wird dabei verbraucht.
+#-------------------------------Shop
+[BUGGEM]
+Name = Käferjuwel
+NamePlural = Käferjuwelen
+Pocket = 1
+Price = 4000
+Flags = TypeGem
+Description = Verstärkt einmalig eine Attacke vom Typ Käfer und wird dabei verbraucht.
+#-------------------------------Shop
+[ROCKGEM]
+Name = Gesteinsjuwel
+NamePlural = Gesteinsjuwelen
+Pocket = 1
+Price = 4000
+Flags = TypeGem
+Description = Verstärkt einmalig eine Attacke vom Typ Gestein und wird dabei verbraucht.
+#-------------------------------Shop
+[GHOSTGEM]
+Name = Geisterjuwel
+NamePlural = Geisterjuwelen
+Pocket = 1
+Price = 4000
+Flags = TypeGem
+Description = Verstärkt einmalig eine Attacke vom Typ Geist und wird dabei verbraucht.
+#-------------------------------Shop
+[DRAGONGEM]
+Name = Drakojuwel
+NamePlural = Drakojuwelen
+Pocket = 1
+Price = 4000
+Flags = TypeGem
+Description = Verstärkt einmalig eine Attacke vom Typ Drache und wird dabei verbraucht.
+#-------------------------------Shop
+[DARKGEM]
+Name = Unlichtjuwel
+NamePlural = Unlichtjuwelen
+Pocket = 1
+Price = 4000
+Flags = TypeGem
+Description = Verstärkt einmalig eine Attacke vom Typ Unlicht und wird dabei verbraucht.
+#-------------------------------Shop
+[STEELGEM]
+Name = Stahljuwel
+NamePlural = Stahljuwelen
+Pocket = 1
+Price = 4000
+Flags = TypeGem
+Description = Verstärkt einmalig eine Attacke vom Typ Stahl und wird dabei verbraucht.
+#-------------------------------Shop
+[FAIRYGEM]
+Name = Feenjuwel
+NamePlural = Feenjuwelen
+Pocket = 1
+Price = 4000
+Flags = TypeGem
+Description = Verstärkt einmalig eine Attacke vom Typ Fee und wird dabei verbraucht.
+#-------------------------------Shop
+[NORMALGEM]
+Name = Normaljuwel
+NamePlural = Normaljuwelen
+Pocket = 1
+Price = 15000
+SellPrice = 3750
+Flags = TypeGem
+Description = Verstärkt einmalig eine Attacke vom Typ Normal und wird dabei verbraucht.
 #-------------------------------Shop
 [POTION]
 Name = Trank
@@ -2997,6 +2734,82 @@ FieldUse = OnPokemon
 BattleUse = OnPokemon
 Flags = Fling_30
 Description = Füllt 120 LP sofort wieder auf, ohne Nebeneffekte.
+#-------------------------------Shop
+[SWEETHEART]
+Name = Herzkonfekt
+NamePlural = Herzkonfekte
+Pocket = 2
+Price = 3000
+FieldUse = OnPokemon
+BattleUse = OnPokemon
+Flags = Fling_30
+Description = Füllt die LP eines Pokémon um 20 auf.
+#-------------------------------Automat
+[FRESHWATER]
+Name = Tafelwasser
+NamePlural = Tafelwasser
+Pocket = 2
+Price = 200
+SellPrice = 50
+FieldUse = OnPokemon
+BattleUse = OnPokemon
+Flags = Fling_30
+Description = Es füllt die LP eines Pokémon um 50 auf.
+#-------------------------------Automat
+[SODAPOP]
+Name = Sprudel
+NamePlural = Sprudel
+Pocket = 2
+Price = 300
+SellPrice = 75
+FieldUse = OnPokemon
+BattleUse = OnPokemon
+Flags = Fling_30
+Description = Es füllt die LP eines Pokémon um 60 auf.
+#-------------------------------Automat
+[LEMONADE]
+Name = Limonade
+NamePlural = Limonaden
+Pocket = 2
+Price = 350
+SellPrice = 100
+FieldUse = OnPokemon
+BattleUse = OnPokemon
+Flags = Fling_30
+Description = Es füllt die LP eines Pokémon um 70 auf.
+#-------------------------------Besonderer Shop
+[MOOMOOMILK]
+Name = Kuhmuh-Milch
+NamePlural = Kuhmuh-Milch
+Pocket = 2
+Price = 600
+SellPrice = 150
+FieldUse = OnPokemon
+BattleUse = OnPokemon
+Flags = Fling_30
+Description = Es füllt die LP eines Pokémon um 100 auf.
+#-------------------------------Besonderer Shop
+[ENERGYPOWDER]
+Name = Energiestaub
+NamePlural = Energiestaub
+Pocket = 2
+Price = 500
+SellPrice = 125
+FieldUse = OnPokemon
+BattleUse = OnPokemon
+Flags = Fling_30
+Description = Es füllt die LP eines Pokémon um 60 auf, senkt aber die Zuneigung des Pokémon.
+#-------------------------------Besonderer Shop
+[ENERGYROOT]
+Name = Kraftwurzel
+NamePlural = Kraftwurzeln
+Pocket = 2
+Price = 1200
+SellPrice = 300
+FieldUse = OnPokemon
+BattleUse = OnPokemon
+Flags = Fling_30
+Description = Es füllt die LP eines Pokémon um 120 auf, senkt aber die Zuneigung des Pokémon.
 #-------------------------------Shop
 [MAXPOTION]
 Name = Top-Trank
@@ -3207,82 +3020,6 @@ FieldUse = OnPokemon
 BattleUse = OnPokemon
 Flags = Fling_30
 Description = Füllt 20 LP sofort wieder auf und kann im Kampf als getragenes Item genutzt werden.
-#-------------------------------Shop
-[SWEETHEART]
-Name = Herzkonfekt
-NamePlural = Herzkonfekte
-Pocket = 2
-Price = 3000
-FieldUse = OnPokemon
-BattleUse = OnPokemon
-Flags = Fling_30
-Description = Füllt die LP eines Pokémon um 20 auf.
-#-------------------------------Automat
-[FRESHWATER]
-Name = Tafelwasser
-NamePlural = Tafelwasser
-Pocket = 2
-Price = 200
-SellPrice = 50
-FieldUse = OnPokemon
-BattleUse = OnPokemon
-Flags = Fling_30
-Description = Es füllt die LP eines Pokémon um 50 auf.
-#-------------------------------Automat
-[SODAPOP]
-Name = Sprudel
-NamePlural = Sprudel
-Pocket = 2
-Price = 300
-SellPrice = 75
-FieldUse = OnPokemon
-BattleUse = OnPokemon
-Flags = Fling_30
-Description = Es füllt die LP eines Pokémon um 60 auf.
-#-------------------------------Automat
-[LEMONADE]
-Name = Limonade
-NamePlural = Limonaden
-Pocket = 2
-Price = 350
-SellPrice = 100
-FieldUse = OnPokemon
-BattleUse = OnPokemon
-Flags = Fling_30
-Description = Es füllt die LP eines Pokémon um 70 auf.
-#-------------------------------Besonderer Shop
-[MOOMOOMILK]
-Name = Kuhmuh-Milch
-NamePlural = Kuhmuh-Milch
-Pocket = 2
-Price = 600
-SellPrice = 150
-FieldUse = OnPokemon
-BattleUse = OnPokemon
-Flags = Fling_30
-Description = Es füllt die LP eines Pokémon um 100 auf.
-#-------------------------------Besonderer Shop
-[ENERGYPOWDER]
-Name = Energiestaub
-NamePlural = Energiestaub
-Pocket = 2
-Price = 500
-SellPrice = 125
-FieldUse = OnPokemon
-BattleUse = OnPokemon
-Flags = Fling_30
-Description = Es füllt die LP eines Pokémon um 60 auf, senkt aber die Zuneigung des Pokémon.
-#-------------------------------Besonderer Shop
-[ENERGYROOT]
-Name = Kraftwurzel
-NamePlural = Kraftwurzeln
-Pocket = 2
-Price = 1200
-SellPrice = 300
-FieldUse = OnPokemon
-BattleUse = OnPokemon
-Flags = Fling_30
-Description = Es füllt die LP eines Pokémon um 120 auf, senkt aber die Zuneigung des Pokémon.
 #-------------------------------Besonderer Shop
 [HEALPOWDER]
 Name = Heilpuder
@@ -3305,16 +3042,6 @@ FieldUse = OnPokemon
 BattleUse = OnPokemon
 Flags = Fling_30
 Description = Ein besiegtes Pokémon wird vollständig geheilt, senkt aber die Zuneigung des Pokémon.
-#-------------------------------Labore
-[MAXHONEY]
-Name = Mistral-Honig
-NamePlural = Mistral-Honig
-Pocket = 2
-Price = 8000
-FieldUse = OnPokemon
-BattleUse = OnPokemon
-Flags = Fling_30
-Description = Ein besiegtes Pokémon wird vollständig geheilt.
 #-------------------------------Shop
 [ETHER]
 Name = Äther
@@ -3491,25 +3218,22 @@ Price = 150
 FieldUse = OnPokemon
 Flags = Fling_20
 Description = Erhöht die Initiative-Basispunkte um 1 und die Freundschaft um 3. 
-#-------------------------------Besonderer Shop / Rezept / Quest
-[ABILITYCAPSULE]
-Name = Fähigkeiten-Kapsel
-NamePlural = Fähigkeiten-Kapseln
-Pocket = 2
-Price = 100000
-SellPrice = 25000
-BPPrice = 50
-FieldUse = OnPokemon
-Description = Verfügt das Pokémon über eine weitere (normale) Fähigkeit, kann es zu dieser wechseln.
-#-------------------------------Besonderer Shop / Rezept / Quest
-[ABILITYPATCH]
-Name = Fähigkeiten-Pflaster
-NamePlural = Fähigkeiten-Pflaster
-Pocket = 2
-Price = 250000
-BPPrice = 200
-FieldUse = OnPokemon
-Description = Verfügt das Pokémon über eine versteckte Fähigkeit, kann es zu dieser wechseln.
+#-------------------------------Besonderer Shop / Rezept
+[TINYBAMBOOSHOOT]
+Name = Minibambusspross
+NamePlural = Minibambussprossen
+Pocket = 1
+Price = 1500
+Flags = Fling_30
+Description = Für manche von hohem Wert.
+#-------------------------------Besonderer Shop / Rezept
+[BIGBAMBOOSHOOT]
+Name = Riesenbambusspross
+NamePlural = Riesenbambussprossen
+Pocket = 1
+Price = 6000
+Flags = Fling_30
+Description = Für manche von hohem Wert.
 #-------------------------------Rezept
 [EXPCANDYXS]
 Name = EP-Bonbon XS
@@ -3565,6 +3289,25 @@ BPPrice = 20
 FieldUse = OnPokemon
 Flags = Fling_30
 Description = Erhöht das Level des Pokémon um 1.
+#-------------------------------Besonderer Shop / Rezept / Quest
+[ABILITYCAPSULE]
+Name = Fähigkeiten-Kapsel
+NamePlural = Fähigkeiten-Kapseln
+Pocket = 2
+Price = 100000
+SellPrice = 25000
+BPPrice = 50
+FieldUse = OnPokemon
+Description = Verfügt das Pokémon über eine weitere (normale) Fähigkeit, kann es zu dieser wechseln.
+#-------------------------------Besonderer Shop / Rezept / Quest
+[ABILITYPATCH]
+Name = Fähigkeiten-Pflaster
+NamePlural = Fähigkeiten-Pflaster
+Pocket = 2
+Price = 250000
+BPPrice = 200
+FieldUse = OnPokemon
+Description = Verfügt das Pokémon über eine versteckte Fähigkeit, kann es zu dieser wechseln.
 #-------------------------------Team 0
 [SHADOWBALL]
 Name = Nullball
@@ -3724,15 +3467,6 @@ SellPrice = 250
 BattleUse = OnFoe
 Flags = PokeBall
 Description = 3.5-Fache Fangrate gegenüber dem Pokéball bei Elektro Pokémon.
-#-------------------------------Einzigartig
-[HOLYBALL]
-Name = Sakralball
-NamePlural = Sakralbälle
-Pocket = 3
-Price = 0
-BattleUse = OnFoe
-Flags = PokeBall
-Description = Damit kann Arceus garantiert gefangen werden.
 #-------------------------------Shop / Rezept
 [REPEATBALL]
 Name = Wiederball
@@ -3791,15 +3525,6 @@ SellPrice = 250
 BattleUse = OnFoe
 Flags = PokeBall
 Description = 5-Fache Fangrate gegenüber dem Pokéball in der ersten Runde.
-#-------------------------------Besonders
-[CHERISHBALL]
-Name = Jubelball
-NamePlural = Jubelbälle
-Pocket = 3
-Price = 0
-BattleUse = OnFoe
-Flags = PokeBall
-Description = Ein seltener Ball, der als Reminiszenz an irgendein Ereignis hergestellt wurde.
 #-------------------------------Shop / Rezept
 [FASTBALL]
 Name = Turboball
@@ -3872,6 +3597,42 @@ Price = 5000
 BattleUse = OnFoe
 Flags = PokeBall
 Description = 5-Fache Fangrate gegenüber dem Pokéball bei Ultrabestien. Sonst 1/10 des Pokéballs.
+#-------------------------------Shop / Einzigartig
+[STRANGEBALL]
+Name = Rätselball
+NamePlural = Rätselbälle
+Pocket = 3
+Price = 0
+BattleUse = OnFoe
+Flags = PokeBall
+Description = Dieser Ball besitzt die gleiche Fangrate wie der Pokéball.
+#-------------------------------Besonders
+[CHERISHBALL]
+Name = Jubelball
+NamePlural = Jubelbälle
+Pocket = 3
+Price = 0
+BattleUse = OnFoe
+Flags = PokeBall
+Description = Ein seltener Ball, der als Reminiszenz an irgendein Ereignis hergestellt wurde.
+#-------------------------------Einzigartig
+[ORIGINBALL]
+Name = Urball
+NamePlural = Urbälle
+Pocket = 3
+Price = 0
+BattleUse = OnFoe
+Flags = PokeBall
+Description = Damit kann Palkia, Dialga oder Giratina garantiert gefangen werden.
+#-------------------------------Einzigartig
+[HOLYBALL]
+Name = Sakralball
+NamePlural = Sakralbälle
+Pocket = 3
+Price = 0
+BattleUse = OnFoe
+Flags = PokeBall
+Description = Damit kann Arceus garantiert gefangen werden.
 #-------------------------------Map / Shop
 [TM01]
 Name = TM01
@@ -7094,6 +6855,1751 @@ BattleUse = Direct
 Flags = Fling_30
 Description = Ermöglicht die garantierte Flucht aus einem Kampf mit wilden Pokémon.
 #-------------------------------Einzigartig
+[VENUSAURITEX]
+Name = Bisaflornit X
+NamePlural = Bisaflornite X
+Pocket = 6
+Price = 10000
+BPPrice = 50
+Flags = MegaStone,Fling_80
+Description = Dieser Stein ermöglicht Bisaflor eine Mega-Entwicklung.
+#-------------------------------Einzigartig
+[VENUSAURITEY]
+Name = Bisaflornit Y
+NamePlural = Bisaflornite Y
+Pocket = 6
+Price = 10000
+BPPrice = 50
+Flags = MegaStone,Fling_80
+Description = Dieser Stein ermöglicht Bisaflor eine Mega-Entwicklung.
+#-------------------------------Einzigartig
+[CHARIZARDITEX]
+Name = Gluraknit X
+NamePlural = Gluraknite X
+Pocket = 6
+Price = 10000
+BPPrice = 50
+Flags = MegaStone,Fling_80
+Description = Dieser Stein ermöglicht Glurak eine Mega-Entwicklung.
+#-------------------------------Einzigartig
+[CHARIZARDITEY]
+Name = Gluraknit Y
+NamePlural = Gluraknite Y
+Pocket = 6
+Price = 10000
+BPPrice = 50
+Flags = MegaStone,Fling_80
+Description = Dieser Stein ermöglicht Glurak eine Mega-Entwicklung.
+#-------------------------------Einzigartig
+[CHARIZARDITEZ]
+Name = Gluraknit Z
+NamePlural = Gluraknite Z
+Pocket = 6
+Price = 10000
+BPPrice = 50
+Flags = MegaStone,Fling_80
+Description = Dieser Stein ermöglicht Glurak eine Mega-Entwicklung.
+#-------------------------------Einzigartig
+[BLASTOISINITEX]
+Name = Turtoknit X
+NamePlural = Turtoknite X
+Pocket = 6
+Price = 10000
+BPPrice = 50
+Flags = MegaStone,Fling_80
+Description = Dieser Stein ermöglicht Turtok eine Mega-Entwicklung.
+#-------------------------------Einzigartig
+[BLASTOISINITEY]
+Name = Turtoknit Y
+NamePlural = Turtoknite Y
+Pocket = 6
+Price = 10000
+BPPrice = 50
+Flags = MegaStone,Fling_80
+Description = Dieser Stein ermöglicht Turtok eine Mega-Entwicklung.
+#-------------------------------Einzigartig
+[BEEDRILLITE]
+Name = Bibornit
+NamePlural = Bibornite
+Pocket = 6
+Price = 10000
+BPPrice = 50
+Flags = MegaStone,Fling_80
+Description = Dieser Stein ermöglicht Bibor eine Mega-Entwicklung.
+#-------------------------------Einzigartig
+[PIDGEOTITEX]
+Name = Taubossnit X
+NamePlural = Taubossnite X
+Pocket = 6
+Price = 10000
+BPPrice = 50
+Flags = MegaStone,Fling_80
+Description = Dieser Stein ermöglicht Tauboss eine Mega-Entwicklung.
+#-------------------------------Einzigartig
+[PIDGEOTITEY]
+Name = Taubossnit Y
+NamePlural = Taubossnite Y
+Pocket = 6
+Price = 10000
+BPPrice = 50
+Flags = MegaStone,Fling_80
+Description = Dieser Stein ermöglicht Tauboss eine Mega-Entwicklung.
+#-------------------------------Einzigartig
+[ALAKAZITE]
+Name = Simsalanit
+NamePlural = Simsalanite
+Pocket = 6
+Price = 10000
+BPPrice = 50
+Flags = MegaStone,Fling_80
+Description = Dieser Stein ermöglicht Simsala eine Mega-Entwicklung.
+#-------------------------------Einzigartig
+[SLOWBRONITE]
+Name = Lahmusnit
+NamePlural = Lahmusnite
+Pocket = 6
+Price = 10000
+BPPrice = 50
+Flags = MegaStone,Fling_80
+Description = Dieser Stein ermöglicht Lahmus eine Mega-Entwicklung.
+#-------------------------------Einzigartig
+[GENGARITE]
+Name = Gengarnit
+NamePlural = Gengarnite
+Pocket = 6
+Price = 10000
+BPPrice = 50
+Flags = MegaStone,Fling_80
+Description = Dieser Stein ermöglicht Gengar eine Mega-Entwicklung.
+#-------------------------------Einzigartig
+[KANGASKHANITE]
+Name = Kangamanit
+NamePlural = Kangamanite
+Pocket = 6
+Price = 10000
+BPPrice = 50
+Flags = MegaStone,Fling_80
+Description = Dieser Stein ermöglicht Kangama eine Mega-Entwicklung.
+#-------------------------------Einzigartig
+[PINSIRITE]
+Name = Pinsirnit
+NamePlural = Pinsirnite
+Pocket = 6
+Price = 10000
+BPPrice = 50
+Flags = MegaStone,Fling_80
+Description = Dieser Stein ermöglicht Pinsir eine Mega-Entwicklung.
+#-------------------------------Einzigartig
+[GYARADOSITE]
+Name = Garadosnit
+NamePlural = Garadosnite
+Pocket = 6
+Price = 10000
+BPPrice = 50
+Flags = MegaStone,Fling_80
+Description = Dieser Stein ermöglicht Garados eine Mega-Entwicklung.
+#-------------------------------Einzigartig
+[TORNUPTONITX]
+Name = Tornuptonit X
+NamePlural = Tornuptonite X
+Pocket = 6
+Price = 10000
+BPPrice = 50
+Flags = MegaStone,Fling_80
+Description = Dieser Stein ermöglicht Tornupto eine Mega-Entwicklung.
+#-------------------------------Einzigartig
+[AERODACTYLITE]
+Name = Aerodactylonit
+NamePlural = Aerodactylonite
+Pocket = 6
+Price = 10000
+BPPrice = 50
+Flags = MegaStone,Fling_80
+Description = Dieser Stein ermöglicht Aerodactyl eine Mega-Entwicklung.
+#-------------------------------Einzigartig
+[MEWTWONITEX]
+Name = Mewtunit X
+NamePlural = Mewtunite X
+Pocket = 6
+Price = 10000
+BPPrice = 50
+Flags = MegaStone,Fling_80
+Description = Dieser Stein ermöglicht Mewtu eine Mega-Entwicklung.
+#-------------------------------Einzigartig
+[MEWTWONITEY]
+Name = Mewtunit Y
+NamePlural = Mewtunite Y
+Pocket = 6
+Price = 10000
+BPPrice = 50
+Flags = MegaStone,Fling_80
+Description = Dieser Stein ermöglicht Mewtu eine Mega-Entwicklung.
+#-------------------------------Einzigartig
+[AMPHAROSITE]
+Name = Ampharosnit
+NamePlural = Ampharosnite
+Pocket = 6
+Price = 10000
+BPPrice = 50
+Flags = MegaStone,Fling_80
+Description = Dieser Stein ermöglicht Ampharos eine Mega-Entwicklung.
+#-------------------------------Einzigartig
+[STEELIXITEX]
+Name = Stahlosnit X
+NamePlural = Stahlosnite X
+Pocket = 6
+Price = 10000
+BPPrice = 50
+Flags = MegaStone,Fling_80
+Description = Dieser Stein ermöglicht Stahlos eine Mega-Entwicklung.
+#-------------------------------Einzigartig
+[STEELIXITEY]
+Name = Stahlosnit Y
+NamePlural = Stahlosnite Y
+Pocket = 6
+Price = 10000
+BPPrice = 50
+Flags = MegaStone,Fling_80
+Description = Dieser Stein ermöglicht Stahlos eine Mega-Entwicklung.
+#-------------------------------Einzigartig
+[SCIZORITE]
+Name = Scheroxnit
+NamePlural = Scheroxnite
+Pocket = 6
+Price = 10000
+BPPrice = 50
+Flags = MegaStone,Fling_80
+Description = Dieser Stein ermöglicht Scherox eine Mega-Entwicklung.
+#-------------------------------Einzigartig
+[HERACRONITE]
+Name = Skarabornit
+NamePlural = Skarabornite
+Pocket = 6
+Price = 10000
+BPPrice = 50
+Flags = MegaStone,Fling_80
+Description = Dieser Stein ermöglicht Skaraborn eine Mega-Entwicklung.
+#-------------------------------Einzigartig
+[HOUNDOOMINITE]
+Name = Hundemonit
+NamePlural = Hundemonite
+Pocket = 6
+Price = 10000
+BPPrice = 50
+Flags = MegaStone,Fling_80
+Description = Dieser Stein ermöglicht Hundemon eine Mega-Entwicklung.
+#-------------------------------Einzigartig
+[TYRANITARITE]
+Name = Despotarnit
+NamePlural = Despotarnite
+Pocket = 6
+Price = 10000
+BPPrice = 50
+Flags = MegaStone,Fling_80
+Description = Dieser Stein ermöglicht Despotar eine Mega-Entwicklung.
+#-------------------------------Einzigartig
+[SCEPTILITE]
+Name = Gewaldronit
+NamePlural = Gewaldronite
+Pocket = 6
+Price = 10000
+BPPrice = 50
+Flags = MegaStone,Fling_80
+Description = Dieser Stein ermöglicht Gewaldro eine Mega-Entwicklung.
+#-------------------------------Einzigartig
+[BLAZIKENITE]
+Name = Lohgocknit
+NamePlural = Lohgocknite
+Pocket = 6
+Price = 10000
+BPPrice = 50
+Flags = MegaStone,Fling_80
+Description = Dieser Stein ermöglicht Lohgock eine Mega-Entwicklung.
+#-------------------------------Einzigartig
+[SWAMPERTITE]
+Name = Sumpexnit
+NamePlural = Sumpexnite
+Pocket = 6
+Price = 10000
+BPPrice = 50
+Flags = MegaStone,Fling_80
+Description = Dieser Stein ermöglicht Sumpex eine Mega-Entwicklung.
+#-------------------------------Einzigartig
+[GARDEVOIRITE]
+Name = Guardevoirnit
+NamePlural = Guardevoirnite
+Pocket = 6
+Price = 10000
+BPPrice = 50
+Flags = MegaStone,Fling_80
+Description = Dieser Stein ermöglicht Guardevoir eine Mega-Entwicklung.
+#-------------------------------Einzigartig
+[SABLENITE]
+Name = Zobirisnit
+NamePlural = Zobirisnite
+Pocket = 6
+Price = 10000
+BPPrice = 50
+Flags = MegaStone,Fling_80
+Description = Dieser Stein ermöglicht Zobiris eine Mega-Entwicklung.
+#-------------------------------Einzigartig
+[MAWILITE]
+Name = Flunkifernit
+NamePlural = Flunkifernite
+Pocket = 6
+Price = 10000
+BPPrice = 50
+Flags = MegaStone,Fling_80
+Description = Dieser Stein ermöglicht Flunkifer eine Mega-Entwicklung.
+#-------------------------------Einzigartig
+[AGGRONITE]
+Name = Stollossnit
+NamePlural = Stollossnite
+Pocket = 6
+Price = 10000
+BPPrice = 50
+Flags = MegaStone,Fling_80
+Description = Dieser Stein ermöglicht Stollos eine Mega-Entwicklung.
+#-------------------------------Einzigartig
+[MEDICHAMITE]
+Name = Meditalisnit
+NamePlural = Meditalisnite
+Pocket = 6
+Price = 10000
+BPPrice = 50
+Flags = MegaStone,Fling_80
+Description = Dieser Stein ermöglicht Meditalis eine Mega-Entwicklung.
+#-------------------------------Einzigartig
+[MANECTITE]
+Name = Voltensonit
+NamePlural = Voltensonite
+Pocket = 6
+Price = 10000
+BPPrice = 50
+Flags = MegaStone,Fling_80
+Description = Dieser Stein ermöglicht Voltenso eine Mega-Entwicklung.
+#-------------------------------Einzigartig
+[SHARPEDONITE]
+Name = Tohaidonit
+NamePlural = Tohaidonite
+Pocket = 6
+Price = 10000
+BPPrice = 50
+Flags = MegaStone,Fling_80
+Description = Dieser Stein ermöglicht Tohaido eine Mega-Entwicklung.
+#-------------------------------Einzigartig
+[CAMERUPTITE]
+Name = Cameruptnit
+NamePlural = Cameruptnite
+Pocket = 6
+Price = 10000
+BPPrice = 50
+Flags = MegaStone,Fling_80
+Description = Dieser Stein ermöglicht Camerupt eine Mega-Entwicklung.
+#-------------------------------Einzigartig
+[ALTARIANITE]
+Name = Altarianit X
+NamePlural = Altarianite X
+Pocket = 6
+Price = 10000
+BPPrice = 50
+Flags = MegaStone,Fling_80
+Description = Dieser Stein ermöglicht Altaria eine Mega-Entwicklung.
+#-------------------------------Einzigartig
+[ALTARIANITE2]
+Name = Altarianit Y
+NamePlural = Altarianite Y
+Pocket = 6
+Price = 10000
+BPPrice = 50
+Flags = MegaStone,Fling_80
+Description = Dieser Stein ermöglicht Altaria eine Mega-Entwicklung.
+#-------------------------------Einzigartig
+[BANETTITE]
+Name = Banettenit
+NamePlural = Banettenite
+Pocket = 6
+Price = 10000
+BPPrice = 50
+Flags = MegaStone,Fling_80
+Description = Dieser Stein ermöglicht Banette eine Mega-Entwicklung.
+#-------------------------------Einzigartig
+[ABSOLITE]
+Name = Absolnit
+NamePlural = Absolnite
+Pocket = 6
+Price = 10000
+BPPrice = 50
+Flags = MegaStone,Fling_80
+Description = Dieser Stein ermöglicht Absol eine Mega-Entwicklung.
+#-------------------------------Einzigartig
+[GLALITITE]
+Name = Firnontornit
+NamePlural = Firnontornite
+Pocket = 6
+Price = 10000
+BPPrice = 50
+Flags = MegaStone,Fling_80
+Description = Dieser Stein ermöglicht Firnontor eine Mega-Entwicklung.
+#-------------------------------Einzigartig
+[SALAMENCITE]
+Name = Brutalandanit
+NamePlural = Brutalandanite
+Pocket = 6
+Price = 10000
+BPPrice = 50
+Flags = MegaStone,Fling_80
+Description = Dieser Stein ermöglicht Brutalanda eine Mega-Entwicklung.
+#-------------------------------Einzigartig
+[METAGROSSITE]
+Name = Metagrossnit
+NamePlural = Metagrossnite
+Pocket = 6
+Price = 10000
+BPPrice = 50
+Flags = MegaStone,Fling_80
+Description = Dieser Stein ermöglicht Metagross eine Mega-Entwicklung.
+#-------------------------------Einzigartig
+[METAGROSSITE2]
+Name = Metagrossnit2
+NamePlural = Metagrossnite2
+Pocket = 6
+Price = 10000
+BPPrice = 50
+Flags = MegaStone,Fling_80
+Description = Dieser Stein ermöglicht Metagross eine Mega-Entwicklung.
+#-------------------------------Einzigartig
+[LATIASITE]
+Name = Latiasnit
+NamePlural = Latiasnite
+Pocket = 6
+Price = 10000
+BPPrice = 50
+Flags = MegaStone,Fling_80
+Description = Dieser Stein ermöglicht Latias eine Mega-Entwicklung.
+#-------------------------------Einzigartig
+[LATIOSITE]
+Name = Latiosnit
+NamePlural = Latiosnite
+Pocket = 6
+Price = 10000
+BPPrice = 50
+Flags = MegaStone,Fling_80
+Description = Dieser Stein ermöglicht Latios eine Mega-Entwicklung.
+#-------------------------------Einzigartig
+[LOPUNNITE]
+Name = Schlapornit
+NamePlural = Schlapornite
+Pocket = 6
+Price = 10000
+BPPrice = 50
+Flags = MegaStone,Fling_80
+Description = Dieser Stein ermöglicht Schlapor eine Mega-Entwicklung.
+#-------------------------------Einzigartig
+[GARCHOMPITE]
+Name = Knakracknit
+NamePlural = Knakracknite
+Pocket = 6
+Price = 10000
+BPPrice = 50
+Flags = MegaStone,Fling_80
+Description = Dieser Stein ermöglicht Knakrack eine Mega-Entwicklung.
+#-------------------------------Einzigartig
+[LUCARIONITE]
+Name = Lucarionit
+NamePlural = Lucarionite
+Pocket = 6
+Price = 10000
+BPPrice = 50
+Flags = MegaStone,Fling_80
+Description = Dieser Stein ermöglicht Lucario eine Mega-Entwicklung.
+#-------------------------------Einzigartig
+[ABOMASITE]
+Name = Rexblisarnit
+NamePlural = Rexblisarnite
+Pocket = 6
+Price = 10000
+BPPrice = 50
+Flags = MegaStone,Fling_80
+Description = Dieser Stein ermöglicht Rexblisar eine Mega-Entwicklung.
+#-------------------------------Einzigartig
+[GALLADITE]
+Name = Galagladinit
+NamePlural = Galagladinite
+Pocket = 6
+Price = 10000
+BPPrice = 50
+Flags = MegaStone,Fling_80
+Description = Dieser Stein ermöglicht Galagladi eine Mega-Entwicklung.
+#-------------------------------Einzigartig
+[AUDINITE]
+Name = Ohrdochnit
+NamePlural = Ohrdochnite
+Pocket = 6
+Price = 10000
+BPPrice = 50
+Flags = MegaStone,Fling_80
+Description = Dieser Stein ermöglicht Ohrdoch eine Mega-Entwicklung.
+#-------------------------------Einzigartig
+[DIANCITE]
+Name = Diancienit
+NamePlural = Diancienite
+Pocket = 6
+Price = 10000
+BPPrice = 50
+Flags = MegaStone,Fling_80
+Description = Dieser Stein ermöglicht Diancie eine Mega-Entwicklung.
+#-------------------------------Einzigartig
+[INFERNAPENITE]
+Name = Panfernonit
+NamePlural = Panfernonite
+Pocket = 6
+Price = 10000
+BPPrice = 50
+Flags = MegaStone,Fling_80
+Description = Dieser Stein ermöglicht Panferno eine Mega-Entwicklung.
+#-------------------------------Einzigartig
+[CLEFABLITE]
+Name = Pixinit
+NamePlural = Pixinite
+Pocket = 6
+Price = 0
+BPPrice = 50
+Flags = MegaStone,Fling_80
+Description = Dieser Stein ermöglicht Pixi eine Mega-Entwicklung.
+#-------------------------------Einzigartig
+[VICTREEBELITE]
+Name = Sarzenianit
+NamePlural = Sarzenianite
+Pocket = 6
+Price = 0
+BPPrice = 50
+Flags = MegaStone,Fling_80
+Description = Dieser Stein ermöglicht Sarzenia eine Mega-Entwicklung.
+#-------------------------------Einzigartig
+[STARMINITE]
+Name = Starmienit
+NamePlural = Starmienite
+Pocket = 6
+Price = 10000
+BPPrice = 50
+Flags = MegaStone,Fling_80
+Description = Dieser Stein ermöglicht Starmie eine Mega-Entwicklung.
+#-------------------------------Einzigartig
+[DRAGONINITE]
+Name = Dragoranit
+NamePlural = Dragoranite
+Pocket = 6
+Price = 10000
+BPPrice = 50
+Flags = MegaStone,Fling_80
+Description = Dieser Stein ermöglicht Dragoran eine Mega-Entwicklung.
+#-------------------------------Einzigartig
+[MEGANIUMITEX]
+Name = Meganienit X
+NamePlural = Meganienite X
+Pocket = 6
+Price = 10000
+BPPrice = 50
+Flags = MegaStone,Fling_80
+Description = Dieser Stein ermöglicht Meganie eine Mega-Entwicklung.
+#-------------------------------Einzigartig
+[MEGANIUMITEY]
+Name = Meganienit Y
+NamePlural = Meganienite Y
+Pocket = 6
+Price = 10000
+BPPrice = 50
+Flags = MegaStone,Fling_80
+Description = Dieser Stein ermöglicht Meganie eine Mega-Entwicklung.
+#-------------------------------Einzigartig
+[FERALIGITEX]
+Name = Impergatornit X
+NamePlural = Impergatornite X
+Pocket = 6
+Price = 10000
+BPPrice = 50
+Flags = MegaStone,Fling_80
+Description = Dieser Stein ermöglicht Impergator eine Mega-Entwicklung.
+#-------------------------------Einzigartig
+[FERALIGITEY]
+Name = Impergatornit Y
+NamePlural = Impergatornite Y
+Pocket = 6
+Price = 10000
+BPPrice = 50
+Flags = MegaStone,Fling_80
+Description = Dieser Stein ermöglicht Impergator eine Mega-Entwicklung.
+#-------------------------------Einzigartig
+[SKARMORITE]
+Name = Panzaeronit
+NamePlural = Panzaeronite
+Pocket = 6
+Price = 10000
+BPPrice = 50
+Flags = MegaStone,Fling_80
+Description = Dieser Stein ermöglicht Panzaeron eine Mega-Entwicklung.
+#-------------------------------Einzigartig
+[FROSLASSITE]
+Name = Frosdedjenit
+NamePlural = Frosdedjenite
+Pocket = 6
+Price = 10000
+BPPrice = 50
+Flags = MegaStone,Fling_80
+Description = Dieser Stein ermöglicht Frosdedje eine Mega-Entwicklung.
+#-------------------------------Einzigartig
+[EMBOARITE]
+Name = Flambirexonit
+NamePlural = Flambirexonite
+Pocket = 6
+Price = 10000
+BPPrice = 50
+Flags = MegaStone,Fling_80
+Description = Dieser Stein ermöglicht Flambirex eine Mega-Entwicklung.
+#-------------------------------Einzigartig
+[EXCADRITE]
+Name = Stalobornit
+NamePlural = Stalobornite
+Pocket = 6
+Price = 10000
+BPPrice = 50
+Flags = MegaStone,Fling_80
+Description = Dieser Stein ermöglicht Stalobor eine Mega-Entwicklung.
+#-------------------------------Einzigartig
+[SCOLIPITE]
+Name = Cerapendranit
+NamePlural = Cerapendranite
+Pocket = 6
+Price = 10000
+BPPrice = 50
+Flags = MegaStone,Fling_80
+Description = Dieser Stein ermöglicht Cerapendra eine Mega-Entwicklung.
+#-------------------------------Einzigartig
+[SCRAFTINITE]
+Name = Irokexonit
+NamePlural = Irokexonite
+Pocket = 6
+Price = 10000
+BPPrice = 50
+Flags = MegaStone,Fling_80
+Description = Dieser Stein ermöglicht Irokex eine Mega-Entwicklung.
+#-------------------------------Einzigartig
+[EELEKTROSSITE]
+Name = Zapplarangonit
+NamePlural = Zapplarangonite
+Pocket = 6
+Price = 10000
+BPPrice = 50
+Flags = MegaStone,Fling_80
+Description = Dieser Stein ermöglicht Zapplarang eine Mega-Entwicklung.
+#-------------------------------Einzigartig
+[CHANDELURITE]
+Name = Skelabranit
+NamePlural = Skelabranite
+Pocket = 6
+Price = 10000
+BPPrice = 50
+Flags = MegaStone,Fling_80
+Description = Dieser Stein ermöglicht Skelebra eine Mega-Entwicklung.
+#-------------------------------Einzigartig
+[CHESNAUGHTITE]
+Name = Brigaronit
+NamePlural = Brigaronite
+Pocket = 6
+Price = 10000
+BPPrice = 50
+Flags = MegaStone,Fling_80
+Description = Dieser Stein ermöglicht Brigaron eine Mega-Entwicklung.
+#-------------------------------Einzigartig
+[DELPHOXITE]
+Name = Fennexisnit
+NamePlural = Fennexisnite
+Pocket = 6
+Price = 10000
+BPPrice = 50
+Flags = MegaStone,Fling_80
+Description = Dieser Stein ermöglicht Fennexis eine Mega-Entwicklung.
+#-------------------------------Einzigartig
+[GRENINJITE]
+Name = Quajutsunit
+NamePlural = Quajutsunite
+Pocket = 6
+Price = 10000
+BPPrice = 50
+Flags = MegaStone,Fling_80
+Description = Dieser Stein ermöglicht Quajutsu eine Mega-Entwicklung.
+#-------------------------------Einzigartig
+[PYROARITE]
+Name = Pyroleonit
+NamePlural = Pyroleonite
+Pocket = 6
+Price = 10000
+BPPrice = 50
+Flags = MegaStone,Fling_80
+Description = Dieser Stein ermöglicht Pyroleo eine Mega-Entwicklung.
+#-------------------------------Einzigartig
+[FLOETTITE]
+Name = Floetteonit
+NamePlural = Floetteonite
+Pocket = 6
+Price = 10000
+BPPrice = 50
+Flags = MegaStone,Fling_80
+Description = Dieser Stein ermöglicht Floette eine Mega-Entwicklung.
+#-------------------------------Einzigartig
+[MALAMARITE]
+Name = Calamaneronit
+NamePlural = Calamaneronite
+Pocket = 6
+Price = 10000
+BPPrice = 50
+Flags = MegaStone,Fling_80
+Description = Dieser Stein ermöglicht Calamanero eine Mega-Entwicklung.
+#-------------------------------Einzigartig
+[BARBARACITE]
+Name = Thanathoranit
+NamePlural = Thanathoranite
+Pocket = 6
+Price = 10000
+BPPrice = 50
+Flags = MegaStone,Fling_80
+Description = Dieser Stein ermöglicht Thanathora eine Mega-Entwicklung.
+#-------------------------------Einzigartig
+[DRAGALGITE]
+Name = Tandraknit
+NamePlural = Tandraknite
+Pocket = 6
+Price = 10000
+BPPrice = 50
+Flags = MegaStone,Fling_80
+Description = Dieser Stein ermöglicht Tandrak eine Mega-Entwicklung.
+#-------------------------------Einzigartig
+[HAWLUCHANITE]
+Name = Resladeronit
+NamePlural = Resladeronite
+Pocket = 6
+Price = 10000
+BPPrice = 50
+Flags = MegaStone,Fling_80
+Description = Dieser Stein ermöglicht Resladero eine Mega-Entwicklung.
+#-------------------------------Einzigartig
+[ZYGARDITE]
+Name = Zygardenit
+NamePlural = Zygardenite
+Pocket = 6
+Price = 10000
+BPPrice = 50
+Flags = MegaStone,Fling_80
+Description = Dieser Stein ermöglicht Zygarde eine Mega-Entwicklung.
+#-------------------------------Einzigartig
+[DRAMPANITE]
+Name = Sen-Longnit
+NamePlural = Sen-Longnite
+Pocket = 6
+Price = 10000
+BPPrice = 50
+Flags = MegaStone,Fling_80
+Description = Dieser Stein ermöglicht Sen-Long eine Mega-Entwicklung.
+#-------------------------------Einzigartig
+[FALINKSITE]
+Name = Legiosnit
+NamePlural = Legiosnite
+Pocket = 6
+Price = 10000
+BPPrice = 50
+Flags = MegaStone,Fling_80
+Description = Dieser Stein ermöglicht Legios eine Mega-Entwicklung.
+#-------------------------------Einzigartig
+[HEATRANITE]
+Name = Heatranit
+NamePlural = Heatranite
+Pocket = 6
+Price = 10000
+BPPrice = 50
+Flags = MegaStone,Fling_80
+Description = Dieser Stein ermöglicht Heatran eine Mega-Entwicklung.
+#-------------------------------Einzigartig
+[DARKRANITE]
+Name = Darkranit
+NamePlural = Darkranite
+Pocket = 6
+Price = 10000
+BPPrice = 50
+Flags = MegaStone,Fling_80
+Description = Dieser Stein ermöglicht Drakrai eine Mega-Entwicklung.
+#-------------------------------Einzigartig
+[ZERAORITE]
+Name = Zeraorit
+NamePlural = Zeraorite
+Pocket = 6
+Price = 10000
+BPPrice = 50
+Flags = MegaStone,Fling_80
+Description = Dieser Stein ermöglicht Zeraora eine Mega-Entwicklung.
+#-------------------------------Einzigartig
+[RAICHUNITEX]
+Name = Raichunit X
+NamePlural = Raichunite X
+Pocket = 6
+Price = 10000
+BPPrice = 50
+Flags = MegaStone,Fling_80
+Description = Dieser Stein ermöglicht Raichu eine Mega-Entwicklung.
+#-------------------------------Einzigartig
+[RAICHUNITEY]
+Name = Raichunit Y
+NamePlural = Raichunite Y
+Pocket = 6
+Price = 10000
+BPPrice = 50
+Flags = MegaStone,Fling_80
+Description = Dieser Stein ermöglicht Raichu eine Mega-Entwicklung.
+#-------------------------------Einzigartig
+[CHIMECHITE]
+Name = Palimpalimonit
+NamePlural = Palimpalimonite
+Pocket = 6
+Price = 10000
+BPPrice = 50
+Flags = MegaStone,Fling_80
+Description = Dieser Stein ermöglicht Palimpalim eine Mega-Entwicklung.
+#-------------------------------Einzigartig
+[ABSOLITEZ]
+Name = Absolnit Z
+NamePlural = Absolnite Z
+Pocket = 6
+Price = 10000
+BPPrice = 50
+Flags = MegaStone,Fling_80
+Description = Dieser Stein ermöglicht Absol eine Mega-Entwicklung.
+#-------------------------------Einzigartig
+[STARAPTITE]
+Name = Staraptornit
+NamePlural = Staraptornite
+Pocket = 6
+Price = 10000
+BPPrice = 50
+Flags = MegaStone,Fling_80
+Description = Dieser Stein ermöglicht Staraptor eine Mega-Entwicklung.
+#-------------------------------Einzigartig
+[GARCHOMPITEZ]
+Name = Knakracknit Z
+NamePlural = Knakracknite Z
+Pocket = 6
+Price = 10000
+BPPrice = 50
+Flags = MegaStone,Fling_80
+Description = Dieser Stein ermöglicht Knakrack eine Mega-Entwicklung.
+#-------------------------------Einzigartig
+[LUCARIONITEZ]
+Name = Lucarionit Z
+NamePlural = Lucarionite Z
+Pocket = 6
+Price = 10000
+BPPrice = 50
+Flags = MegaStone,Fling_80
+Description = Dieser Stein ermöglicht Lucario eine Mega-Entwicklung.
+#-------------------------------Einzigartig
+[GOLURKITE]
+Name = Golgantesnit
+NamePlural = Golgantesnite
+Pocket = 6
+Price = 10000
+BPPrice = 50
+Flags = MegaStone,Fling_80
+Description = Dieser Stein ermöglicht Golgantes eine Mega-Entwicklung.
+#-------------------------------Einzigartig
+[MEOWSTICITE]
+Name = Psiaugonit
+NamePlural = Psiaugonite
+Pocket = 6
+Price = 10000
+BPPrice = 50
+Flags = MegaStone,Fling_80
+Description = Dieser Stein ermöglicht Psiaugon eine Mega-Entwicklung.
+#-------------------------------Einzigartig
+[CRABOMINITE]
+Name = Krawellonit
+NamePlural = Krawellonite
+Pocket = 6
+Price = 10000
+BPPrice = 50
+Flags = MegaStone,Fling_80
+Description = Dieser Stein ermöglicht Krawell eine Mega-Entwicklung.
+#-------------------------------Einzigartig
+[GOLISOPITE]
+Name = Tectassnit
+NamePlural = Tectassnite
+Pocket = 6
+Price = 10000
+BPPrice = 50
+Flags = MegaStone,Fling_80
+Description = Dieser Stein ermöglicht Tectass eine Mega-Entwicklung.
+#-------------------------------Einzigartig
+[MAGEARNITE]
+Name = Magearnit
+NamePlural = Magearnite
+Pocket = 6
+Price = 10000
+BPPrice = 50
+Flags = MegaStone,Fling_80
+Description = Dieser Stein ermöglicht Magearna eine Mega-Entwicklung.
+#-------------------------------Einzigartig
+[SCOVILLAINITE]
+Name = Halupenjonit
+NamePlural = Halupenjonite
+Pocket = 6
+Price = 10000
+BPPrice = 50
+Flags = MegaStone,Fling_80
+Description = Dieser Stein ermöglicht Halupenjo eine Mega-Entwicklung.
+#-------------------------------Einzigartig
+[BAXCALIBRITE]
+Name = Espinodonit
+NamePlural = Espinodonite
+Pocket = 6
+Price = 10000
+BPPrice = 50
+Flags = MegaStone,Fling_80
+Description = Dieser Stein ermöglicht Espinodon eine Mega-Entwicklung.
+#-------------------------------Einzigartig
+[TATSUGIRINITE]
+Name = Nigiraginit
+NamePlural = Nigiraginite
+Pocket = 6
+Price = 10000
+BPPrice = 50
+Flags = MegaStone,Fling_80
+Description = Dieser Stein ermöglicht Nigiragi eine Mega-Entwicklung.
+#-------------------------------Einzigartig
+[GLIMMORANITE]
+Name = Lumifloranit
+NamePlural = Lumifloranite
+Pocket = 6
+Price = 10000
+BPPrice = 50
+Flags = MegaStone,Fling_80
+Description = Dieser Stein ermöglicht Lumiflora eine Mega-Entwicklung.
+#-------------------------------Einzigartig
+[URSHIFUITEX]
+Name = Wulaosunit Y
+NamePlural = Wulaosunite Y
+Pocket = 6
+Price = 10000
+BPPrice = 50
+Flags = MegaStone,Fling_80
+Description = Dieser Stein ermöglicht Wulaosu eine Mega-Entwicklung.
+#-------------------------------Einzigartig
+[URSHIFUITEY]
+Name = Wulaosunit X
+NamePlural = Wulaosunite X
+Pocket = 6
+Price = 10000
+BPPrice = 50
+Flags = MegaStone,Fling_80
+Description = Dieser Stein ermöglicht Wulaosu eine Mega-Entwicklung.
+#-------------------------------Einzigartig
+[DURALUDONITE]
+Name = Duraludonit
+NamePlural = Duraludonite
+Pocket = 6
+Price = 10000
+BPPrice = 50
+Flags = MegaStone,Fling_80
+Description = Dieser Stein ermöglicht Duraludon eine Mega-Entwicklung.
+#-------------------------------Einzigartig
+[COPPERAJAHITE]
+Name = Patinarajanit
+NamePlural = Patinarajanite
+Pocket = 6
+Price = 10000
+BPPrice = 50
+Flags = MegaStone,Fling_80
+Description = Dieser Stein ermöglicht Patinaraja eine Mega-Entwicklung.
+#-------------------------------Einzigartig
+[ALCREMIEITE]
+Name = Pokusanit
+NamePlural = Pokusanite
+Pocket = 6
+Price = 10000
+BPPrice = 50
+Flags = MegaStone,Fling_80
+Description = Dieser Stein ermöglicht Pokusan eine Mega-Entwicklung.
+#-------------------------------Einzigartig
+[GRIMMSNARLITE]
+Name = Olangaarnit
+NamePlural = Olangaarnite
+Pocket = 6
+Price = 10000
+BPPrice = 50
+Flags = MegaStone,Fling_80
+Description = Dieser Stein ermöglicht Olangaar eine Mega-Entwicklung.
+#-------------------------------Einzigartig
+[HATTERENEITE]
+Name = Silembrimnit
+NamePlural = Silembrimnite
+Pocket = 6
+Price = 10000
+BPPrice = 50
+Flags = MegaStone,Fling_80
+Description = Dieser Stein ermöglicht Silembrim eine Mega-Entwicklung.
+#-------------------------------Einzigartig
+[CENTISKORCHITE]
+Name = Infernopodnit
+NamePlural = Infernopodnite
+Pocket = 6
+Price = 10000
+BPPrice = 50
+Flags = MegaStone,Fling_80
+Description = Dieser Stein ermöglicht Infernopod eine Mega-Entwicklung.
+#-------------------------------Einzigartig
+[TOXTRICITYITEY]
+Name = Riffexnit Y
+NamePlural = Riffexnite Y
+Pocket = 6
+Price = 10000
+BPPrice = 50
+Flags = MegaStone,Fling_80
+Description = Dieser Stein ermöglicht Riffex eine Mega-Entwicklung.
+#-------------------------------Einzigartig
+[TOXTRICITYITEX]
+Name = Riffexnit X
+NamePlural = Riffexnite X
+Pocket = 6
+Price = 10000
+BPPrice = 50
+Flags = MegaStone,Fling_80
+Description = Dieser Stein ermöglicht Riffex eine Mega-Entwicklung.
+#-------------------------------Einzigartig
+[SANDACONDAITE]
+Name = Sanacondanit
+NamePlural = Sanacondanite
+Pocket = 6
+Price = 10000
+BPPrice = 50
+Flags = MegaStone,Fling_80
+Description = Dieser Stein ermöglicht Sanaconda eine Mega-Entwicklung.
+#-------------------------------Einzigartig
+[APLLETUNITE]
+Name = Schlapfelnit
+NamePlural = Schlapfelnite
+Pocket = 6
+Price = 10000
+BPPrice = 50
+Flags = MegaStone,Fling_80
+Description = Dieser Stein ermöglicht Schlapfel eine Mega-Entwicklung.
+#-------------------------------Einzigartig
+[FLAPPLEITE]
+Name = Drapfelnit
+NamePlural = Drapfelnite
+Pocket = 6
+Price = 10000
+BPPrice = 50
+Flags = MegaStone,Fling_80
+Description = Dieser Stein ermöglicht Drapfel eine Mega-Entwicklung.
+#-------------------------------Einzigartig
+[DREDNAWITE]
+Name = Kamalmnit
+NamePlural = Kamalmnite
+Pocket = 6
+Price = 10000
+BPPrice = 50
+Flags = MegaStone,Fling_80
+Description = Dieser Stein ermöglicht Kamalm eine Mega-Entwicklung.
+#-------------------------------Einzigartig
+[ORBEETLEITE]
+Name = Maritellitnit
+NamePlural = Maritellitnite
+Pocket = 6
+Price = 10000
+BPPrice = 50
+Flags = MegaStone,Fling_80
+Description = Dieser Stein ermöglicht Maritellit eine Mega-Entwicklung.
+#-------------------------------Einzigartig
+[CORVIKNIGHTITE]
+Name = Krarmornit
+NamePlural = Krarmornit
+Pocket = 6
+Price = 10000
+BPPrice = 50
+Flags = MegaStone,Fling_80
+Description = Dieser Stein ermöglicht Krarmor eine Mega-Entwicklung.
+#-------------------------------Einzigartig
+[INTELEONITE]
+Name = Intelleonit
+NamePlural = Intelleonite
+Pocket = 6
+Price = 10000
+BPPrice = 50
+Flags = MegaStone,Fling_80
+Description = Dieser Stein ermöglicht Intelleon eine Mega-Entwicklung.
+#-------------------------------Einzigartig
+[CINDERACEITE]
+Name = Liberlonit
+NamePlural = Liberlonite
+Pocket = 6
+Price = 10000
+BPPrice = 50
+Flags = MegaStone,Fling_80
+Description = Dieser Stein ermöglicht Liberlo eine Mega-Entwicklung.
+#-------------------------------Einzigartig
+[RILLABOOMITE]
+Name = Gortromnit
+NamePlural = Gortromnite
+Pocket = 6
+Price = 10000
+BPPrice = 50
+Flags = MegaStone,Fling_80
+Description = Dieser Stein ermöglicht Gortrom eine Mega-Entwicklung.
+#-------------------------------Einzigartig
+[GARBODORITE]
+Name = Deponitoxnit
+NamePlural = Deponitoxnite
+Pocket = 6
+Price = 10000
+BPPrice = 50
+Flags = MegaStone,Fling_80
+Description = Dieser Stein ermöglicht Deponitox eine Mega-Entwicklung.
+#-------------------------------Einzigartig
+[LAPRASITE]
+Name = Laprasnit
+NamePlural = Laprasnite
+Pocket = 6
+Price = 10000
+BPPrice = 50
+Flags = MegaStone,Fling_80
+Description = Dieser Stein ermöglicht Lapras eine Mega-Entwicklung.
+#-------------------------------Einzigartig
+[KINGLERITE]
+Name = Kinglernit
+NamePlural = Kinglernite
+Pocket = 6
+Price = 10000
+BPPrice = 50
+Flags = MegaStone,Fling_80
+Description = Dieser Stein ermöglicht Kingler eine Mega-Entwicklung.
+#-------------------------------Einzigartig
+[MACHAMPITE]
+Name = Machomeinit
+NamePlural = Machomeinite
+Pocket = 6
+Price = 10000
+BPPrice = 50
+Flags = MegaStone,Fling_80
+Description = Dieser Stein ermöglicht Machomei eine Mega-Entwicklung.
+#-------------------------------Einzigartig
+[VENOMOTHITE]
+Name = Omotnit
+NamePlural = Omotnite
+Pocket = 6
+Price = 10000
+BPPrice = 50
+Flags = MegaStone,Fling_80
+Description = Dieser Stein ermöglicht Omot eine Mega-Entwicklung.
+#-------------------------------Einzigartig
+[COLOASSALITE]
+Name = Montecarbonit
+NamePlural = Montecarbonite
+Pocket = 6
+Price = 10000
+BPPrice = 50
+Flags = MegaStone,Fling_80
+Description = Dieser Stein ermöglicht Montecarbo eine Mega-Entwicklung.
+#-------------------------------Einzigartig
+[DUDUNSPARCEDITEA]
+Name = Dummimiselnit-A
+NamePlural = Dummimiselniten-A
+Pocket = 6
+Price = 10000
+BPPrice = 50
+Flags = MegaStone,Fling_80
+Description = Dieser Stein ermöglicht Dummimisel eine Mega-Entwicklung.
+#-------------------------------Einzigartig
+[DUDUNSPARCEDITEB]
+Name = Dummimiselnit-B
+NamePlural = Dummimiselniten-B
+Pocket = 6
+Price = 10000
+BPPrice = 50
+Flags = MegaStone,Fling_80
+Description = Dieser Stein ermöglicht Dummimisel eine Mega-Entwicklung.
+#-------------------------------Einzigartig
+[SNORLAXITE]
+Name = Relaxonit
+NamePlural = Relaxonite
+Pocket = 6
+Price = 10000
+BPPrice = 50
+Flags = MegaStone,Fling_80
+Description = Dieser Stein ermöglicht Relaxo eine Mega-Entwicklung.
+#-------------------------------Einzigartig
+[MELMETALNITE]
+Name = Melmetalnit
+NamePlural = Melmetalnite
+Pocket = 6
+Price = 10000
+BPPrice = 50
+Flags = MegaStone,Fling_80
+Description = Dieser Stein ermöglicht Melmetal eine Mega-Entwicklung.
+#-------------------------------Map / Shop
+[HOPOBERRY]
+Name = Pfohbeere
+NamePlural = Pfohbeeren
+Pocket = 5
+Price = 20
+Flags = Berry,Fling_10,NaturalGift_FIGHTING_80
+Description = Frischt die Angriffspunkte eines Pokémon auf.
+#-------------------------------
+#[HISUIANPOKEBALL]
+#Name = Poké Ball
+#NamePlural = Poké Balls
+#Pocket = 3
+#Price = 500
+#BattleUse = OnFoe
+#Flags = PokeBall
+#Description = A mysterious ball that can be thrown at wild Pokémon in order to catch them.
+##-------------------------------
+#[HISUIANGREATBALL]
+#Name = Great Ball
+#NamePlural = Great Balls
+#Pocket = 3
+#Price = 900
+#BattleUse = OnFoe
+#Flags = PokeBall
+#Description = A mysterious ball that provides a higher success catch rate than a standard Poké Ball.
+##-------------------------------
+#[HISUIANULTRABALL]
+#Name = Ultra Ball
+#NamePlural = Ultra Balls
+#Pocket = 3
+#Price = 1500
+#BattleUse = OnFoe
+#Flags = PokeBall
+#Description = A mysterious ball that provides an even higher success catch rate than a Great Ball does.
+##-------------------------------
+#[FEATHERBALL]
+#Name = Federball
+#NamePlural = Federbälle
+#Pocket = 3
+#Price = 700
+#BattleUse = OnFoe
+#Flags = PokeBall
+#Description = Erhöhte Fangrate bei hoch fliegenden Pokémon.
+##-------------------------------
+#[WINGBALL]
+#Name = Flügelball
+#NamePlural = Flügelbälle
+#Pocket = 3
+#Price = 1000
+#BattleUse = OnFoe
+#Flags = PokeBall
+#Description = Eine verbesserte Version des Federballs mit einer höheren Fangrate.
+##-------------------------------
+#[JETBALL]
+#Name = Düsenball
+#NamePlural = Düsenbälle
+#Pocket = 3
+#Price = 1500
+#BattleUse = OnFoe
+#Flags = PokeBall
+#Description = Die beste Version des Federballs mit einer noch höheren Fangrate als der Flügelball.
+##-------------------------------
+#[HISUIANHEAVYBALL]
+#Name = Heavy Ball
+#NamePlural = Heavy Balls
+#Pocket = 3
+#Price = 700
+#BattleUse = OnFoe
+#Flags = PokeBall
+#Description = A ball that is too heavy to throw, but it is highly effective to an unsuspecting Pokémon.
+##-------------------------------
+#[LEADENBALL]
+#Name = Zentnerball
+#NamePlural = Zentnerbälle
+#Pocket = 3
+#Price = 1000
+#BattleUse = OnFoe
+#Flags = PokeBall
+#Description = Eine verbesserte Version des Schwerballs mit einer höheren Fangrate.
+##-------------------------------
+#[GIGATONBALL]
+#Name = Tonnenball
+#NamePlural = Tonnenbälle
+#Pocket = 3
+#Price = 1500
+#BattleUse = OnFoe
+#Flags = PokeBall
+#Description = Die beste Version des Schwerballs mit einer noch höheren Fangrate als der Zentnerball.
+#-------------------------------
+#[ROTOMPHONE]
+#Name = Rotom Phone
+#NamePlural = Rotom Phones
+#Pocket = 8
+#Price = 0
+#Flags = KeyItem
+#Description = The latest model of smartphone. A Rotom lives within it, and it can be used to run all sorts of handy apps.
+#-------------------------------
+#[SCARLETBOOK]
+#Name = Scarlet Book
+#NamePlural = Scarlet Books
+#Pocket = 8
+#Price = 0
+#Flags = KeyItem
+#Description = A record of the Heath's expedition on the Great Crater of Paldea. It has the name "Sada" written on it.
+##-------------------------------
+#[VIOLETBOOK]
+#Name = Violet Book
+#NamePlural = Violet Books
+#Pocket = 8
+#Price = 0
+#Flags = KeyItem
+#Description = A record of the Heath's expedition on the Great Crater of Paldea. It has the name "Turo" written on it.
+#-------------------------------Besonderer Shop
+[HEALTHMOCHI]
+Name = Heil-Mochi
+NamePlural = Health Mochi
+Pocket = 2
+Price = 250
+FieldUse = OnPokemon
+Flags = Fling_20
+Description = Der Heil-Mochi erhöht die LP-Basispunkte eines Pokémon um 10. 
+#-------------------------------Besonderer Shop
+[MUSCLEMOCHI]
+Name = Kraft-Mochi
+NamePlural = Muscle Mochi
+Pocket = 2
+Price = 250
+FieldUse = OnPokemon
+Flags = Fling_20
+Description = Der Kraft-Mochi erhöht die Angriffs-Basispunkte eines Pokémon um 10. 
+#-------------------------------Besonderer Shop
+[RESISTMOCHI]
+Name = Abwehr-Mochi
+NamePlural = Resist Mochi
+Pocket = 2
+Price = 250
+FieldUse = OnPokemon
+Flags = Fling_20
+Description = Der Abwehr-Mochi erhöht die Verteidigungs-Basispunkte eines Pokémon um 10. 
+#-------------------------------Besonderer Shop
+[GENIUSMOCHI]
+Name = Genie-Mochi
+NamePlural = Genius Mochi
+Pocket = 2
+Price = 250
+FieldUse = OnPokemon
+Flags = Fling_20
+Description = Der Genie-Mochi erhöht die Spezial-Angriffs-Basispunkte eines Pokémon um 10. 
+#-------------------------------Besonderer Shop
+[CLEVERMOCHI]
+Name = Esprit-Mochi
+NamePlural = Clever Mochi
+Pocket = 2
+Price = 250
+FieldUse = OnPokemon
+Flags = Fling_20
+Description = Der Esprit-Mochi erhöht die Spezial-Verteidigungs-Basispunkte eines Pokémon um 10. 
+#-------------------------------Besonderer Shop
+[SWIFTMOCHI]
+Name = Flink-Mochi
+NamePlural = Swift Mochi
+Pocket = 2
+Price = 250
+FieldUse = OnPokemon
+Flags = Fling_20
+Description = Der Flink-Mochi erhöht die Initiative-Basispunkte eines Pokémon um 10. 
+#-------------------------------Besonderer Shop
+[FRESHSTARTMOCHI]
+Name = Neuanfangs-Mochi
+NamePlural = Fresh-Start Mochi
+Pocket = 2
+Price = 250
+FieldUse = OnPokemon
+Flags = Fling_20
+Description = Der Neuanfangs-Mochi setzt alle Basispunkte eines Pokémon zurück. 
+#-------------------------------
+#[BRIARSBOOK]
+#Name = Briar's Book
+#NamePlural = Briar's Books
+#Pocket = 8
+#Price = 0
+#Flags = KeyItem
+#Description = A proof copy of the exploration notes, along with Briar's thoughts covering the Area Zero Underdepths.
+#-------------------------------Rezept
+[HYPERCHERIBERRY]
+Name = Dimensions-Amrenabeere
+NamePlural = Dimensions-Amrenabeeren
+Pocket = 5
+Price = 0
+Flags = Berry
+Description = Kann für bestimmte Rezepte verwendet werden.
+#-------------------------------Rezept
+[HYPERCHESTOBERRY]
+Name = Dimensions-Maronbeere
+NamePlural = Dimensions-Maronbeeren
+Pocket = 5
+Price = 0
+Flags = Berry
+Description = Kann für bestimmte Rezepte verwendet werden.
+#-------------------------------
+[HYPERPECHABERRY]
+Name = Dimensions-Pirsifbeere
+NamePlural = Dimensions-Pirsifbeeren
+Pocket = 5
+Price = 0
+Flags = Berry
+Description = Kann für bestimmte Rezepte verwendet werden.
+#-------------------------------Rezept
+[HYPERRAWSTBERRY]
+Name = Dimensions-Fragiabeere
+NamePlural = Dimensions-Fragiabeeren
+Pocket = 5
+Price = 0
+Flags = Berry
+Description = Kann für bestimmte Rezepte verwendet werden.
+#-------------------------------Rezept
+[HYPERASPEARBERRY]
+Name = Dimensions-Wilbirbeere
+NamePlural = Dimensions-Wilbirbeeren
+Pocket = 5
+Price = 0
+Flags = Berry
+Description = Kann für bestimmte Rezepte verwendet werden.
+#-------------------------------Rezept
+[HYPERORANBERRY]
+Name = Dimensions-Sinelbeere
+NamePlural = Dimensions-Sinelbeeren
+Pocket = 5
+Price = 0
+Flags = Berry
+Description = Kann für bestimmte Rezepte verwendet werden.
+#-------------------------------Rezept
+[HYPERPERSIMBERRY]
+Name = Dimensions-Persimbeere
+NamePlural = Dimensions-Persimbeeren
+Pocket = 5
+Price = 0
+Flags = Berry
+Description = Kann für bestimmte Rezepte verwendet werden.
+#-------------------------------Rezept
+[HYPERLUMBERRY]
+Name = Dimensions-Prunusbeere
+NamePlural = Dimensions-Prunusbeeren
+Pocket = 5
+Price = 0
+Flags = Berry
+Description = Kann für bestimmte Rezepte verwendet werden.
+#-------------------------------Rezept
+[HYPERSITRUSBERRY]
+Name = Dimensions-Tsitrubeere
+NamePlural = Dimensions-Tsitrubeeren
+Pocket = 5
+Price = 0
+Flags = Berry
+Description = Kann für bestimmte Rezepte verwendet werden.
+#-------------------------------Rezept
+[HYPERPOMEGBERRY]
+Name = Dimensions-Granabeere
+NamePlural = Dimensions-Granabeeren
+Pocket = 5
+Price = 0
+Flags = Berry
+Description = Kann für bestimmte Rezepte verwendet werden.
+#-------------------------------Rezept
+[HYPERKELPSYBERRY]
+Name = Dimensions-Setangbeere
+NamePlural = Dimensions-Setangbeeren
+Pocket = 5
+Price = 0
+Flags = Berry
+Description = Kann für bestimmte Rezepte verwendet werden.
+#-------------------------------Rezept
+[HYPERQUALOTBERRY]
+Name = Dimensions-Qualotbeere
+NamePlural = Dimensions-Qualotbeeren
+Pocket = 5
+Price = 0
+Flags = Berry
+Description = Kann für bestimmte Rezepte verwendet werden.
+#-------------------------------Rezept
+[HYPERHONDEWBERRY]
+Name = Dimensions-Honmelbeere
+NamePlural = Dimensions-Honmelbeeren
+Pocket = 5
+Price = 0
+Flags = Berry
+Description = Kann für bestimmte Rezepte verwendet werden.
+#-------------------------------Rezept
+[HYPERGREPABERRY]
+Name = Dimensions-Labrusbeere
+NamePlural = Dimensions-Labrusbeeren
+Pocket = 5
+Price = 0
+Flags = Berry
+Description = Kann für bestimmte Rezepte verwendet werden.
+#-------------------------------Rezept
+[HYPERTAMATOBERRY]
+Name = Dimensions-Tamotbeere
+NamePlural = Dimensions-Tamotbeeren
+Pocket = 5
+Price = 0
+Flags = Berry
+Description = Kann für bestimmte Rezepte verwendet werden.
+#-------------------------------Rezept
+[HYPEROCCABERRY]
+Name = Dimensions-Koakobeere
+NamePlural = Dimensions-Koakobeeren
+Pocket = 5
+Price = 0
+Flags = Berry
+Description = Kann für bestimmte Rezepte verwendet werden.
+#-------------------------------Rezept
+[HYPERPASSHOBERRY]
+Name = Dimensions-Foepasbeere
+NamePlural = Dimensions-Foepasbeeren
+Pocket = 5
+Price = 0
+Flags = Berry
+Description = Kann für bestimmte Rezepte verwendet werden.
+#-------------------------------Rezept
+[HYPERWACANBERRY]
+Name = Dimensions-Kerzalbeere
+NamePlural = Dimensions-Kerzalbeeren
+Pocket = 5
+Price = 0
+Flags = Berry
+Description = Kann für bestimmte Rezepte verwendet werden.
+#-------------------------------Rezept
+[HYPERRINDOBERRY]
+Name = Dimensions-Grindobeere
+NamePlural = Dimensions-Grindobeeren
+Pocket = 5
+Price = 0
+Flags = Berry
+Description = Kann für bestimmte Rezepte verwendet werden.
+#-------------------------------Rezept
+[HYPERYACHEBERRY]
+Name = Dimensions-Kiroyabeere
+NamePlural = Dimensions-Kiroyabeeren
+Pocket = 5
+Price = 0
+Flags = Berry
+Description = Kann für bestimmte Rezepte verwendet werden.
+#-------------------------------Rezept
+[HYPERCHOPLEBERRY]
+Name = Dimensions-Rospelbeere
+NamePlural = Dimensions-Rospelbeeren
+Pocket = 5
+Price = 0
+Flags = Berry
+Description = Kann für bestimmte Rezepte verwendet werden.
+#-------------------------------Rezept
+[HYPERKEBIABERRY]
+Name = Dimensions-Grarzbeere
+NamePlural = Dimensions-Grarzbeeren
+Pocket = 5
+Price = 0
+Flags = Berry
+Description = Kann für bestimmte Rezepte verwendet werden.
+#-------------------------------Rezept
+[HYPERSHUCABERRY]
+Name = Dimensions-Schukebeere
+NamePlural = Dimensions-Schukebeeren
+Pocket = 5
+Price = 0
+Flags = Berry
+Description = Kann für bestimmte Rezepte verwendet werden.
+#-------------------------------Rezept
+[HYPERCOBABERRY]
+Name = Dimensions-Kobabeere
+NamePlural = Dimensions-Kobabeeren
+Pocket = 5
+Price = 0
+Flags = Berry
+Description = Kann für bestimmte Rezepte verwendet werden.
+#-------------------------------Rezept
+[HYPERPAYAPABERRY]
+Name = Dimensions-Pyapabeere
+NamePlural = Dimensions-Pyapabeeren
+Pocket = 5
+Price = 0
+Flags = Berry
+Description = Kann für bestimmte Rezepte verwendet werden.
+#-------------------------------Rezept
+[HYPERTANGABERRY]
+Name = Dimensions-Tanigabeere
+NamePlural = Dimensions-Tanigabeeren
+Pocket = 5
+Price = 0
+Flags = Berry
+Description = Kann für bestimmte Rezepte verwendet werden.
+#-------------------------------Rezept
+[HYPERCHARTIBERRY]
+Name = Dimensions-Chiaribeere
+NamePlural = Dimensions-Chiaribeeren
+Pocket = 5
+Price = 0
+Flags = Berry
+Description = Kann für bestimmte Rezepte verwendet werden.
+#-------------------------------Rezept
+[HYPERKASIBBERRY]
+Name = Dimensions-Zitarzbeere
+NamePlural = Dimensions-Zitarzbeeren
+Pocket = 5
+Price = 0
+Flags = Berry
+Description = Kann für bestimmte Rezepte verwendet werden.
+#-------------------------------Rezept
+[HYPERHABANBERRY]
+Name = Dimensions-Terirobeere
+NamePlural = Dimensions-Terirobeeren
+Pocket = 5
+Price = 0
+Flags = Berry
+Description = Kann für bestimmte Rezepte verwendet werden.
+#-------------------------------Rezept
+[HYPERCOLBURBERRY]
+Name = Dimensions-Burleobeere
+NamePlural = Dimensions-Burleobeeren
+Pocket = 5
+Price = 0
+Flags = Berry
+Description = Kann für bestimmte Rezepte verwendet werden.
+#-------------------------------Rezept
+[HYPERBABIRIBERRY]
+Name = Dimensions-Babiribeere
+NamePlural = Dimensions-Babiribeeren
+Pocket = 5
+Price = 0
+Flags = Berry
+Description = Kann für bestimmte Rezepte verwendet werden.
+#-------------------------------Rezept
+[HYPERCHILANBERRY]
+Name = Dimensions-Chilanbeere
+NamePlural = Dimensions-Chilanbeeren
+Pocket = 5
+Price = 0
+Flags = Berry
+Description = Kann für bestimmte Rezepte verwendet werden.
+#-------------------------------Rezept
+[HYPERROSELIBERRY]
+Name = Dimensions-Hibisbeere
+NamePlural = Dimensions-Hibisbeeren
+Pocket = 5
+Price = 0
+Flags = Berry
+Description = Kann für bestimmte Rezepte verwendet werden.
+#-------------------------------Rezept
+[CANARIBREAD]
+Name = Canary-Brot
+NamePlural = Canary-Brote
+Pocket = 5
+Price = 0
+FieldUse = OnPokemon
+BattleUse = OnPokemon
+Flags = Fling_30
+Description = Das Canary-Brot füllt die KP eines Pokémon um 100 Punkte auf oder nutze es für Rezepte.
+#-------------------------------Rezept
+[LUMIOSIANBUTTER]
+Name = Illumina-Butter
+NamePlural = Illumina-Butter
+Pocket = 5
+Price = 10
+Description = Kann für bestimmte Rezepte verwendet werden.
+#-------------------------------Rezept
+[NICEBUTTER]
+Name = Superbutter
+NamePlural = Superbutter
+Pocket = 5
+Price = 50
+Description = Kann für bestimmte Rezepte verwendet werden.
+#-------------------------------Rezept
+[GREATBUTTER]
+Name = Hyperbutter
+NamePlural = Hyperbutter
+Pocket = 5
+Price = 100
+Description = Kann für bestimmte Rezepte verwendet werden.
+#-------------------------------Rezept
+[AMAZINGBUTTER]
+Name = Ultrabutter
+NamePlural = Ultrabutter
+Pocket = 5
+Price = 200
+Description = Kann für bestimmte Rezepte verwendet werden.
+#-------------------------------Rezept
+[SUPREMEBUTTER]
+Name = Meisterbutter
+NamePlural = Meisterbutter
+Pocket = 5
+Price = 500
+Description = Kann für bestimmte Rezepte verwendet werden.
+#-------------------------------Rezept
+[HYPERSPACEBUTTER]
+Name = Dimensionsbutter
+NamePlural = Dimensionsbutter
+Pocket = 5
+Price = 1000
+Description = Kann für bestimmte Rezepte verwendet werden.
+#-------------------------------Rezept
+[HOENNIANSALT]
+Name = Hoenn-Steinsalz
+NamePlural = Hoenn-Steinsalz
+Pocket = 5
+Price = 200
+Description = Kann für bestimmte Rezepte verwendet werden.
+#-------------------------------Rezept
+[EPICENOIRE]
+Name = Dunkelwürze
+NamePlural = Dunkelwürze
+Pocket = 5
+Price = 200
+Description = Kann für bestimmte Rezepte verwendet werden.
+#-------------------------------Rezept
+[ARBOLIVAOIL]
+Name = Olithena-Öl
+NamePlural = Olithena-Öle
+Pocket = 5
+Price = 300
+Description = Kann für bestimmte Rezepte verwendet werden.
+#-------------------------------Einzigartig
+[EXPALL]
+Name = EP-Teiler
+NamePlural = EP-Teiler
+Pocket = 8
+Price = 0
+FieldUse = Direct
+Flags = KeyItem
+Description = Der EP-Teiler ist eingeschaltet. Alle deine Pokémon im Team erhalten EP nach dem Kampf.
+#-------------------------------Einzigartig
+[EXPALLOFF]
+Name = EP-Solo
+NamePlural = EP-Solos
+Pocket = 8
+Price = 0
+FieldUse = Direct
+Flags = KeyItem
+Description = Der EP-Teiler ist ausgeschaltet.
+#-------------------------------Einzigartig
+[VIAL]
+Name = Pokévial
+NamePlural = Pokévials
+Pocket = 8
+Price = 0
+FieldUse = Direct
+Flags = KeyItem
+Description = Hiermit kannst du einmalig deine Pokémon heilen. Kann im Pokécenter aufgefüllt werden.
+#-------------------------------Einzigartig
+[EMPTYVIAL]
+Name = Pokévial
+NamePlural = Pokévials
+Pocket = 8
+Price = 0
+FieldUse = Direct
+Flags = KeyItem
+Description = Hiermit kannst du einmalig deine Pokémon heilen. Kann im Pokécenter aufgefüllt werden.
+#-------------------------------Einzigartig
 [OLDROD]
 Name = Angel
 NamePlural = Angeln
@@ -7192,6 +8698,12 @@ Price = 0
 FieldUse = Direct
 Flags = KeyItem
 Description = Dieses Item ermöglicht die Flucht aus einer Höhle und teleportiert den Spieler zum Eingang.
+#-------------------------------Traumwelt
+[MONDSICHEL]
+Name = Mondsichel
+NamePlural = Mondsicheln
+Pocket = 8
+Description = Eine Sichel die Cresselia ähnelt.
 #-------------------------------Einzigartig
 [COINCASE]
 Name = Münzkorb
@@ -7235,6 +8747,318 @@ Pocket = 8
 Price = 0
 Flags = KeyItem
 Description = Mit der Loturzelkanne ist es möglich Beerensträucher zu bewässern. 
+#-------------------------------Einzigartig
+[OVALCHARM]
+Name = Ovalpin
+NamePlural = Ovalpins
+Pocket = 8
+Price = 0
+Flags = KeyItem
+Description = Er erhöht die Wahrscheinlichkeit, ein Ei in der Pension zu erhalten.
+#-------------------------------Einzigartig
+[SHINYCHARM]
+Name = Schillerpin
+NamePlural = Schillerpins
+Pocket = 8
+Price = 0
+Flags = KeyItem
+Description = Erhöht die Wahrscheinlichkeit ein Shiny Pokémon zu finden.
+#-------------------------------Einzigartig
+[CATCHINGCHARM]
+Name = Superfangpin
+NamePlural = Superfangpins
+Pocket = 8
+Price = 0
+Flags = KeyItem
+Description = Mit dem Superfangpin erhöht sich die Wahrscheinlichkeit, einen Superfang zu erzielen.
+#-------------------------------Einzigartig
+[EXPCHARM]
+Name = EP-Pin
+NamePlural = EP-Pins
+Pocket = 8
+Price = 0
+Flags = KeyItem
+Description = Der EP-Pin erhöht die erhaltene Erfahrung nach einem Pokémon-Kampf um 50 %.
+#-------------------------------Einzigartig
+[MEGARING]
+Name = Mega Armband
+NamePlural = Mega Armbänder
+Pocket = 8
+Price = 0
+Flags = KeyItem,MegaRing
+Description = Ein Armband, welches deinen Pokémon im Kampf die Mega-Entwicklung ermöglicht.
+#-------------------------------Einzigartig
+[POKEMONBOXLINK]
+Name = Pokémon Box Link
+NamePlural = Pokémon Box Links
+Pocket = 8
+Price = 0
+Flags = KeyItem
+Description = Dieses Gerät ermöglicht dir (fast) überall die Nutzung der Pokémon-Box.
+#===============================================================================
+#   HM ITEMS // Example Items
+#===============================================================================
+#-------------------------------Einzigartig
+[STOUTLANDRIDE]
+Name = Bissbark-Ride
+NamePlural = Bissbark-Rides
+Pocket = 8
+Price = 0
+FieldUse = Direct
+Flags = KeyItem
+Description = Ruft Bissbark als PokéRide herbei.
+#-------------------------------------------------------------------------------Einzigartig
+[CUTITEM]
+Name = Beil
+NamePlural = Beile
+Pocket = 8
+Price = 0
+FieldUse = Direct
+Flags = KeyItem
+Description = Damit kann man kleine Bäume fällen.
+#-------------------------------------------------------------------------------Einzigartig
+[FLYITEM]
+Name = Fliegen
+NamePlural = Fliegen
+Pocket = 8
+Price = 0
+FieldUse = Direct
+Flags = KeyItem
+Description = Ein Modul, mit dem du bereits besuchte Orte anfliegen kannst.
+#-------------------------------------------------------------------------------Einzigartig
+[SURFITEM]
+Name = Tohaido-Mobil
+NamePlural = Tohaido-Mobile
+Pocket = 8
+Price = 0
+FieldUse = Direct
+Flags = KeyItem
+Description = Damit kannst du über Wasser schwimmen.
+#-------------------------------------------------------------------------------Einzigartig
+[STRENGTHITEM]
+Name = Krafthandschuhe
+NamePlural = Krafthandschuhe
+Pocket = 8
+Price = 0
+FieldUse = Direct
+Flags = KeyItem
+Description = Damit können große Felsen verschoben werden.
+#-------------------------------------------------------------------------------Einzigartig
+[FLASHITEM]
+Name = Laterne
+NamePlural = Laternen
+Pocket = 8
+Price = 0
+FieldUse = Direct
+Flags = KeyItem
+Description = Erhellt dunkle Gebiete.
+#-------------------------------------------------------------------------------Einzigartig
+[ROCKSMASHITEM]
+Name = Spitzaxt
+NamePlural = Spitzäxte
+Pocket = 8
+Price = 0
+FieldUse = Direct
+Flags = KeyItem
+Description = Nutze diese, um Felsen zu zertrümmern.
+#-------------------------------------------------------------------------------Einzigartig
+[ICEBARRIEREITEM]
+Name = Eispickel
+NamePlural = Eispickel
+Pocket = 8
+Price = 0
+FieldUse = Direct
+Flags = KeyItem
+Description = Damit zerberchen gefrorene Felsen mit Leichtigkeit.
+#-------------------------------------------------------------------------------Einzigartig
+[WATERFALLITEM]
+Name = Kaskadeausrüstung
+NamePlural = Kaskadeausrüstungen
+Pocket = 8
+Price = 0
+FieldUse = Direct
+Flags = KeyItem
+Description = Einzigartige Ausrüstung, welche den Spieler Wasserfälle erklimmen lässt.
+#-------------------------------------------------------------------------------Einzigartig
+[DIVEITEM]
+Name = Tohaido-Tauchmodul
+NamePlural = Tohaido-Tauchmodule
+Pocket = 8
+Price = 0
+FieldUse = Direct
+Flags = KeyItem
+Description = Erlaubt es dir unter Wasser zu tauchen.
+#-------------------------------------------------------------------------------Einzigartig
+[WHIRLPOOLITEM]
+Name = Handpaddel
+NamePlural = Handpaddel
+Pocket = 8
+Price = 0
+FieldUse = Direct
+Flags = KeyItem
+Description = Einzigartige Paddel. Damit kannst du Strudel überwinden.
+#-------------------------------------------------------------------------------Einzigartig
+[ROCKCLIMBITEM]
+Name = Kletterausrüstung
+NamePlural = Kletterausrüstungen
+Pocket = 8
+Price = 0
+FieldUse = Direct
+Flags = KeyItem
+Description = Damit kann man Felswände erklimmen.
+#-------------------------------------------------------------------------------Einzigartig
+[HEADBUTTITEM]
+Name = Premium-Futter
+NamePlural = Premium-Futter
+Pocket = 8
+Price = 0
+FieldUse = Direct
+Flags = KeyItem
+Description = Locke Pokémon aus Bäumen hervor.
+#-------------------------------------------------------------------------------Einzigartig
+[TELEPORTITEM]
+Name = Disc der Rückkehr
+NamePlural = Discs der Rückkehr
+Pocket = 8
+Price = 0
+FieldUse = Direct
+Flags = KeyItem
+Description = Zum letzten Pokécenter zurückkehren.
+#-------------------------------------------------------------------------------Einzigartig
+[EXPLORERKIT]
+Name = Erkundungs-Set
+NamePlural = Erkundungs-Sets
+Pocket = 8
+Price = 0
+Flags = KeyItem
+Description = Das volle Repertoire, um brüchige Felswände aufzuschlagen.
+#-------------------------------Einzigartig
+[CABLECARTICKET]
+Name = Lift-Ticket
+NamePlural = Lift-Tickets
+Pocket = 8
+SellPrice = 0
+Description = Eine Dauerkarte für den Lift zwischen Solhaven und Route 6.
+#-------------------------------Einzigartig
+[KEYCARD]
+Name = Schlüsselkarte
+NamePlural = Schlüsselkarten
+Pocket = 8
+SellPrice = 0
+Description = Eine Schlüsselkarte für eine unbekannte Tür.
+#-------------------------------Einzigartig
+[KEYCARD2]
+Name = Schlüsselkarte
+NamePlural = Schlüsselkarten
+Pocket = 8
+SellPrice = 0
+Description = Eine Schlüsselkarte für eine unbekannte Tür.
+#-------------------------------------------------------------------------------Löschen
+[KAEFERSAMMLERITEM]
+Name = Käfersammleritem
+NamePlural = Erkundungs-Sets
+Pocket = 8
+Price = 0
+Flags = KeyItem
+Description = Das volle Repertoire, um brüchige Felswände aufzuschlagen.
+#-------------------------------------------------------------------------------Löschen
+[PROFIANGLERITEM]
+Name = Käfersammleritem
+NamePlural = Erkundungs-Sets
+Pocket = 8
+Price = 0
+Flags = KeyItem
+Description = Das volle Repertoire, um brüchige Felswände aufzuschlagen.
+#-------------------------------------------------------------------------------Einzigartig
+[ENKELGESCHENK]
+Name = Geschenk für Enkel
+NamePlural = Geschenke für Enkel
+Pocket = 8
+Price = 0
+Flags = KeyItem
+Description = Ein Geschenk einer Oma an ihr Enkelkind, welches in Lunafeld wohnt.
+#-------------------------------------------------------------------------------Einzigartig
+[NATURECHANGER]
+Name = Seelenspiegel
+NamePlural = Seelenspiegel
+Pocket = 8
+FieldUse = Direct
+Flags = KeyItem
+Description = Tauscht das Wesen eines Pokémon.
+#-------------------------------------------------------------------------------Einzigartig
+[LENSOFTRUTH]
+Name = Temporalscanner
+NamePlural = Temporalscanner
+Pocket = 8
+Price = 0
+FieldUse = Direct
+Flags = KeyItem
+Description = Ein Zeitenscanner, der verborgene Wege enthüllen kann.
+#-------------------------------Einzigartig
+[WELLSPRINGMASK]
+Name = Brunnenmaske
+NamePlural = Brunnenmasken
+Pocket = 1
+Price = 0
+Flags = Fling_60
+Description = Gibt Ogerpon zusätzlich den Typ Wasser.
+#-------------------------------Einzigartig
+[HEARTHFLAMEMASK]
+Name = Ofenmaske
+NamePlural = Ofenmasken
+Pocket = 1
+Price = 0
+Flags = Fling_60
+Description = Gibt Ogerpon zusätzlich den Typ Feuer.
+#-------------------------------Einzigartig
+[CORNERSTONEMASK]
+Name = Fundamentmaske
+NamePlural = Fundamentmasken
+Pocket = 1
+Price = 0
+Flags = Fling_60
+Description = Gibt Ogerpon zusätzlich den Typ Gestein.
+#-------------------------------Einzigartig
+[TEALMASK]
+Name = Türkisgrüne Maske
+NamePlural = Türkisgrüne Masken
+Pocket = 8
+Price = 0
+Flags = KeyItem,Fling_60
+Description = A teal mask patterned after the face of an ogre. Dropped by Ogerpon after visiting the Festival of Masks.
+#-------------------------------Einzigartig
+[INDIGODISK]
+Name = Indigoblaue Scheibe
+NamePlural = Indigoblaue Scheiben
+Pocket = 8
+Price = 0
+Flags = KeyItem
+Description = Eine mysteriöse Scheibe, die dir Zugang zu Zone Null verschafft.
+#-------------------------------Einzigartig
+[MYTHICALPECHABERRY]
+Name = Mysteriöse Pirsifbeere
+NamePlural = Mysteriöse Pirsifbeeren
+Pocket = 8
+Price = 0
+Flags = KeyItem
+Description = Löst ein bestimmtes Event aus.
+#-------------------------------Einzigartig
+[SYNCHROMACHINE]
+Name = Synchromaschine
+NamePlural = Synchromaschinen
+Pocket = 8
+Price = 0
+Flags = KeyItem
+Description = Synchronisiert Traumwelt und echte Welt.
+#-------------------------------Einzigartig
+[METEORITE]
+Name = Meteorit
+NamePlural = Meteoriten
+Pocket = 8
+Price = 0
+FieldUse = OnPokemon
+Flags = KeyItem
+Description = Damit lässt sich Deoxys Form ändern.
 #-------------------------------Einzigartig
 [GRACIDEA]
 Name = Gracidea
@@ -7344,295 +9168,13 @@ FieldUse = OnPokemon
 Flags = KeyItem
 Description = Es kann Coronospa mit Polaross oder Phantoross defusionieren.
 #-------------------------------Einzigartig
-[OVALCHARM]
-Name = Ovalpin
-NamePlural = Ovalpins
-Pocket = 8
-Price = 0
-Flags = KeyItem
-Description = Er erhöht die Wahrscheinlichkeit, ein Ei in der Pension zu erhalten.
-#-------------------------------Einzigartig
-[SHINYCHARM]
-Name = Schillerpin
-NamePlural = Schillerpins
-Pocket = 8
-Price = 0
-Flags = KeyItem
-Description = Erhöht die Wahrscheinlichkeit ein Shiny Pokémon zu finden.
-#-------------------------------Einzigartig
-[CATCHINGCHARM]
-Name = Superfangpin
-NamePlural = Superfangpins
-Pocket = 8
-Price = 0
-Flags = KeyItem
-Description = Mit dem Superfangpin erhöht sich die Wahrscheinlichkeit, einen Superfang zu erzielen.
-#-------------------------------Einzigartig
-[EXPCHARM]
-Name = EP-Pin
-NamePlural = EP-Pins
-Pocket = 8
-Price = 0
-Flags = KeyItem
-Description = Der EP-Pin erhöht die erhaltene Erfahrung nach einem Pokémon-Kampf um 50 %.
-#-------------------------------Einzigartig
-[MEGARING]
-Name = Mega Armband
-NamePlural = Mega Armbänder
-Pocket = 8
-Price = 0
-Flags = KeyItem,MegaRing
-Description = Ein Armband, welches deinen Pokémon im Kampf die Mega-Entwicklung ermöglicht.
-#-------------------------------Einzigartig
-[POKEMONBOXLINK]
-Name = Pokémon Box Link
-NamePlural = Pokémon Box Links
-Pocket = 8
-Price = 0
-Flags = KeyItem
-Description = Dieses Gerät ermöglicht dir (fast) überall die Nutzung der Pokémon-Box.
-#===============================================================================
-#   HM ITEMS // Example Items
-#===============================================================================
-#-------------------------------Einzigartig
-[STOUTLANDRIDE]
-Name = Bissbark-Ride
-NamePlural = Bissbark-Rides
-Pocket = 8
-Price = 0
-FieldUse = Direct
-Flags = KeyItem
-Description = Ruft Bissbark als PokéRide herbei.
-#-------------------------------------------------------------------------------Einzigartig
-[ROCKSMASHITEM]
-Name = Spitzaxt
-NamePlural = Spitzäxte
-Pocket = 8
-Price = 0
-FieldUse = Direct
-Flags = KeyItem
-Description = Nutze diese, um Felsen zu zertrümmern.
-#-------------------------------------------------------------------------------Einzigartig
-[CUTITEM]
-Name = Beil
-NamePlural = Beile
-Pocket = 8
-Price = 0
-FieldUse = Direct
-Flags = KeyItem
-Description = Damit kann man kleine Bäume fällen.
-#-------------------------------------------------------------------------------Einzigartig
-[STRENGTHITEM]
-Name = Krafthandschuhe
-NamePlural = Krafthandschuhe
-Pocket = 8
-Price = 0
-FieldUse = Direct
-Flags = KeyItem
-Description = Damit können große Felsen verschoben werden.
-#-------------------------------------------------------------------------------Einzigartig
-[SURFITEM]
-Name = Tohaido-Mobil
-NamePlural = Tohaido-Mobile
-Pocket = 8
-Price = 0
-FieldUse = Direct
-Flags = KeyItem
-Description = Damit kannst du über Wasser schwimmen.
-#-------------------------------------------------------------------------------Einzigartig
-[FLYITEM]
-Name = Fliegen
-NamePlural = Fliegen
-Pocket = 8
-Price = 0
-FieldUse = Direct
-Flags = KeyItem
-Description = Ein Modul, mit dem du bereits besuchte Orte anfliegen kannst.
-#-------------------------------------------------------------------------------Einzigartig
-[HEADBUTTITEM]
-Name = Premium-Futter
-NamePlural = Premium-Futter
-Pocket = 8
-Price = 0
-FieldUse = Direct
-Flags = KeyItem
-Description = Locke Pokémon aus Bäumen hervor.
-#-------------------------------------------------------------------------------Einzigartig
-[FLASHITEM]
-Name = Laterne
-NamePlural = Laternen
-Pocket = 8
-Price = 0
-FieldUse = Direct
-Flags = KeyItem
-Description = Erhellt dunkle Gebiete.
-#-------------------------------------------------------------------------------Einzigartig
-[DIVEITEM]
-Name = Tohaido-Tauchmodul
-NamePlural = Tohaido-Tauchmodule
-Pocket = 8
-Price = 0
-FieldUse = Direct
-Flags = KeyItem
-Description = Erlaubt es dir unter Wasser zu tauchen.
-#-------------------------------------------------------------------------------Einzigartig
-[TELEPORTITEM]
-Name = Disc der Rückkehr
-NamePlural = Discs der Rückkehr
-Pocket = 8
-Price = 0
-FieldUse = Direct
-Flags = KeyItem
-Description = Zum letzten Pokécenter zurückkehren.
-#-------------------------------------------------------------------------------Einzigartig
-[WATERFALLITEM]
-Name = Kaskadeausrüstung
-NamePlural = Kaskadeausrüstungen
-Pocket = 8
-Price = 0
-FieldUse = Direct
-Flags = KeyItem
-Description = Einzigartige Ausrüstung, welche den Spieler Wasserfälle erklimmen lässt.
-#-------------------------------------------------------------------------------Einzigartig
-[WHIRLPOOLITEM]
-Name = Handpaddel
-NamePlural = Handpaddel
-Pocket = 8
-Price = 0
-FieldUse = Direct
-Flags = KeyItem
-Description = Einzigartige Paddel. Damit kannst du Strudel überwinden.
-#-------------------------------------------------------------------------------Einzigartig
-[ROCKCLIMBITEM]
-Name = Kletterausrüstung
-NamePlural = Kletterausrüstungen
-Pocket = 8
-Price = 0
-FieldUse = Direct
-Flags = KeyItem
-Description = Damit kann man Felswände erklimmen.
-#-------------------------------------------------------------------------------Einzigartig
-[LENSOFTRUTH]
-Name = Temporalscanner
-NamePlural = Temporalscanner
-Pocket = 8
-Price = 0
-FieldUse = Direct
-Flags = KeyItem
-Description = Ein Zeitenscanner, der verborgene Wege enthüllen kann.
-#-------------------------------------------------------------------------------Einzigartig
-[ICEBARRIEREITEM]
-Name = Eispickel
-NamePlural = Eispickel
-Pocket = 8
-Price = 0
-FieldUse = Direct
-Flags = KeyItem
-Description = Damit zerberchen gefrorene Felsen mit Leichtigkeit.
-#-------------------------------------------------------------------------------Einzigartig
-[EXPLORERKIT]
-Name = Erkundungs-Set
-NamePlural = Erkundungs-Sets
-Pocket = 8
-Price = 0
-Flags = KeyItem
-Description = Das volle Repertoire, um brüchige Felswände aufzuschlagen.
-#-------------------------------------------------------------------------------Löschen
-[KAEFERSAMMLERITEM]
-Name = Käfersammleritem
-NamePlural = Erkundungs-Sets
-Pocket = 8
-Price = 0
-Flags = KeyItem
-Description = Das volle Repertoire, um brüchige Felswände aufzuschlagen.
-#-------------------------------------------------------------------------------Löschen
-[PROFIANGLERITEM]
-Name = Käfersammleritem
-NamePlural = Erkundungs-Sets
-Pocket = 8
-Price = 0
-Flags = KeyItem
-Description = Das volle Repertoire, um brüchige Felswände aufzuschlagen.
-#-------------------------------------------------------------------------------Einzigartig
-[ENKELGESCHENK]
-Name = Geschenk für Enkel
-NamePlural = Geschenke für Enkel
-Pocket = 8
-Price = 0
-Flags = KeyItem
-Description = Ein Geschenk einer Oma an ihr Enkelkind, welches in Lunafeld wohnt.
-#-------------------------------Einzigartig
-[DUDUNSPARCEDITEA]
-Name = Dummimiselnit-A
-NamePlural = Dummimiselniten-A
-Pocket = 6
-Price = 10000
-BPPrice = 50
-Flags = MegaStone,Fling_80
-Description = Dieser Stein ermöglicht Dummimisel eine Mega-Entwicklung.
-#-------------------------------Einzigartig
-[DUDUNSPARCEDITEB]
-Name = Dummimiselnit-B
-NamePlural = Dummimiselniten-B
-Pocket = 6
-Price = 10000
-BPPrice = 50
-Flags = MegaStone,Fling_80
-Description = Dieser Stein ermöglicht Dummimisel eine Mega-Entwicklung.
-#-------------------------------------------------------------------------------Einzigartig
-[NATURECHANGER]
-Name = Seelenspiegel
-NamePlural = Seelenspiegel
-Pocket = 8
-FieldUse = Direct
-Flags = KeyItem
-Description = Tauscht das Wesen eines Pokémon.
-#-------------------------------Einzigartig
 [BLUESTONE]
 Name = Blauer Stein
 NamePlural = Blaue Steine
 Pocket = 8
 SellPrice = 0
+Flags = KeyItem
 Description = Ein seltsamer blauer Stein.
-#-------------------------------Einzigartig
-[CABLECARTICKET]
-Name = Lift-Ticket
-NamePlural = Lift-Tickets
-Pocket = 8
-SellPrice = 0
-Description = Eine Dauerkarte für den Lift zwischen Solhaven und Route 6.
-#-------------------------------Einzigartig
-[KEYCARD]
-Name = Schlüsselkarte
-NamePlural = Schlüsselkarten
-Pocket = 8
-SellPrice = 0
-Description = Eine Schlüsselkarte für eine unbekannte Tür.
-#-------------------------------Einzigartig
-[KEYCARD2]
-Name = Schlüsselkarte
-NamePlural = Schlüsselkarten
-Pocket = 8
-SellPrice = 0
-Description = Eine Schlüsselkarte für eine unbekannte Tür.
-#-------------------------------Einzigartig
-[SNORLAXITE]
-Name = Relaxonit
-NamePlural = Relaxonite
-Pocket = 6
-Price = 10000
-BPPrice = 50
-Flags = MegaStone,Fling_80
-Description = Dieser Stein ermöglicht Relaxo eine Mega-Entwicklung.
-#-------------------------------Einzigartig
-[MELMETALNITE]
-Name = Melmetalnit
-NamePlural = Melmetalnite
-Pocket = 6
-Price = 10000
-BPPrice = 50
-Flags = MegaStone,Fling_80
-Description = Dieser Stein ermöglicht Melmetal eine Mega-Entwicklung.
 #-------------------------------Einzigartig
 [TERRANOXORB]
 Name = Terranox-Orb
@@ -7640,6 +9182,7 @@ NamePlural = Terranox-Orbs
 Pocket = 8
 Price = 0
 SellPrice = 0
+Flags = KeyItem
 Description = Ein massiver, erdener Stein, der Wärme ausstrahlt. Sein Inneres scheint aus geschmolzener Erde zu bestehen.
 #-------------------------------Einzigartig
 [AURANITORB]
@@ -7648,6 +9191,7 @@ NamePlural = Auranit-Orbs
 Pocket = 8
 Price = 0
 SellPrice = 0
+Flags = KeyItem
 Description = Ein klar schimmernder Kristall, der den unbeugsamen Willen eines Pokémon verkörpert.
 #-------------------------------Einzigartig
 [VERDANITHORB]
@@ -7656,25 +9200,8 @@ NamePlural = Verdanith-Orbs
 Pocket = 8
 Price = 0
 SellPrice = 0
+Flags = KeyItem
 Description = Dieser zarte Kristall duftet nach frischem Gras.
-#-------------------------------Einzigartig
-[VIAL]
-Name = Pokévial
-NamePlural = Pokévials
-Pocket = 8
-Price = 0
-FieldUse = Direct
-Flags = KeyItem
-Description = Hiermit kannst du einmalig deine Pokémon heilen. Kann im Pokécenter aufgefüllt werden.
-#-------------------------------Einzigartig
-[EMPTYVIAL]
-Name = Pokévial
-NamePlural = Pokévials
-Pocket = 8
-Price = 0
-FieldUse = Direct
-Flags = KeyItem
-Description = Hiermit kannst du einmalig deine Pokémon heilen. Kann im Pokécenter aufgefüllt werden.
 #-------------------------------Einzigartig
 [MEDIKAMENT]
 Name = Medizin
@@ -7691,6 +9218,7 @@ NamePlural = Fels-Orbs
 Pocket = 8
 Price = 0
 SellPrice = 0
+Flags = KeyItem
 Description = Ein massiver, felserner Stein. Er sieht so aus, als würde er in eine Vorrichtung passen.
 #-------------------------------Einzigartig
 [FROSTORB]
@@ -7699,6 +9227,7 @@ NamePlural = Frost-Orbs
 Pocket = 8
 Price = 0
 SellPrice = 0
+Flags = KeyItem
 Description = Ein massiver, gefrorener Stein. Er sieht so aus, als würde er in eine Vorrichtung passen.
 #-------------------------------Einzigartig
 [METALLORB]
@@ -7707,6 +9236,7 @@ NamePlural = Metall-Orbs
 Pocket = 8
 Price = 0
 SellPrice = 0
+Flags = KeyItem
 Description = Ein massiver, metallharter Stein. Er sieht so aus, als würde er in eine Vorrichtung passen.
 #-------------------------------Einzigartig
 [SPANNUNGSORB]
@@ -7715,6 +9245,7 @@ NamePlural = Spannungs-Orbs
 Pocket = 8
 Price = 0
 SellPrice = 0
+Flags = KeyItem
 Description = Ein massiver, geladener Stein. Er sieht so aus, als würde er in eine Vorrichtung passen.
 #-------------------------------Einzigartig
 [DRACOORB]
@@ -7723,11 +9254,5 @@ NamePlural = Draco-Orbs
 Pocket = 8
 Price = 0
 SellPrice = 0
+Flags = KeyItem
 Description = Ein massiver, schuppiger Stein. Er sieht so aus, als würde er in eine Vorrichtung passen.
-#-------------------------------Wenige
-[SHINYSPRAY]
-Name = Shinybeere
-NamePlural = Shinybeeren
-Pocket = 1
-FieldUse = OnPokemon
-Description = Eine extrem seltene Beere, das ein Pokémon dauerhaft schillernd macht.
