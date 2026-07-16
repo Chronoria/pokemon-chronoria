@@ -1138,7 +1138,7 @@ MapPosition = 0,9,14
 BattleBack = gym2
 #-------------------------------??
 [177]   # MAP177
-Name = Noch nicht vergeben
+Name = Noxburgh
 HealingSpot = 177,10,7
 MapPosition = 0,9,14
 #-------------------------------
@@ -1387,7 +1387,7 @@ WildBattleBGM = Battle! (Wild Pokémon)_7
 Flags = Levels
 #-------------------------------
 [207]   # MAP207
-Name = Noch nicht vergeben
+Name = Noxburgh
 MapPosition = 0,7,13
 #-------------------------------
 [208]   # Solhaven
