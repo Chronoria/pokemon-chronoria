@@ -77,7 +77,10 @@ export async function exportItemListXlsx(items: Item[], pokemon: Pokemon[]) {
         .filter((i) => i.locations.length > 0)
         .map((i) => ({
           name: i.name,
-          count: i.locations.length,
+          // Shop stock isn't a physical pickup (see formatLocationsByMap's "(Shop)" flag, which
+          // already excludes it from the per-map number) - exclude it here too so the overall
+          // "Anzahl" column stays a count of actual find spots, not purchase availability.
+          count: i.locations.filter((l) => l.source !== "shop").length,
           locationNames: formatLocationsByMap(i.locations),
           recipeLabel: isRecipeIngredient(i.description) ? "Ja" : "Nein",
         }))
@@ -110,10 +113,11 @@ export async function exportItemListXlsx(items: Item[], pokemon: Pokemon[]) {
   row += 1;
   sheet.getCell(row, 1).value =
     "Generiert aus den Map-Event-Fundorten der Wiki-Daten (data-import/parseMapLocations.ts), automatisch bei jedem build-data-Lauf. " +
-    'Taschen stehen nebeneinander. "Anzahl" zählt eindeutige Orte/Quellen (Boden, verstecktes Item, NPC-Geschenk, Beerenbaum, Sonderitem, ' +
-    'Shop-Bestand). "Fundorte" listet diese Orte namentlich, je Karte mit der Anzahl an nicht-Shop-Fundorten in Klammern, falls mehr als ' +
-    'einer (z.B. "Route 3 (2)"), und einem zusätzlichen "(Shop)"-Vermerk, falls dort auch käuflich (z.B. "Route 1 (Shop)" oder kombiniert ' +
-    '"Route 1 (2, Shop)"). "Rezept" = Ja, wenn die Item-Beschreibung "Rezept"/"Rezepte" erwähnt (Zutat für ein Kochrezept).';
+    'Taschen stehen nebeneinander. "Anzahl" zählt eindeutige Fundorte (Boden, verstecktes Item, NPC-Geschenk, Beerenbaum, Sonderitem) - ' +
+    'Shop-Bestand zählt hier nicht mit, erscheint aber weiterhin als "(Shop)"-Vermerk in "Fundorte". "Fundorte" listet diese Orte namentlich, ' +
+    'je Karte mit der Anzahl an nicht-Shop-Fundorten in Klammern, falls mehr als einer (z.B. "Route 3 (2)"), und einem zusätzlichen ' +
+    '"(Shop)"-Vermerk, falls dort auch käuflich (z.B. "Route 1 (Shop)" oder kombiniert "Route 1 (2, Shop)"). "Rezept" = Ja, wenn die ' +
+    'Item-Beschreibung "Rezept"/"Rezepte" erwähnt (Zutat für ein Kochrezept).';
   sheet.getCell(row, 1).font = NOTE_FONT;
   sheet.mergeCells(row, 1, row, maxCols);
   sheet.getRow(row).height = 45;
