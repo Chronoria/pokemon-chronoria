@@ -8,11 +8,22 @@ call npm run sync-data
 if errorlevel 1 goto :error
 
 echo.
+echo === Baue Item-Uebersicht.xlsx und Pokemon-Uebersicht.xlsx neu ===
+call npm run build-data
+if errorlevel 1 (
+    echo.
+    echo Fehler beim Neubauen der Daten - ist Item-Uebersicht.xlsx oder Pokemon-Uebersicht.xlsx
+    echo gerade in Excel geoeffnet? Bitte schliessen und nochmal versuchen.
+    goto :error
+)
+
+echo.
 echo === Pruefe Aenderungen ===
 git add -A
 git diff --cached --quiet
 if not errorlevel 1 (
-    echo Keine Aenderungen gefunden - Wiki ist bereits aktuell.
+    echo Keine Aenderungen an den Quelldaten - nichts zu committen/pushen.
+    echo Item-Uebersicht.xlsx und Pokemon-Uebersicht.xlsx wurden trotzdem gerade neu gebaut.
     goto :end
 )
 
@@ -24,7 +35,8 @@ git push
 if errorlevel 1 goto :error
 
 echo.
-echo Fertig! Die Wiki baut sich jetzt automatisch neu (ca. 30-60 Sekunden).
+echo Fertig! Item-Uebersicht.xlsx und Pokemon-Uebersicht.xlsx sind aktuell.
+echo Die Online-Wiki baut sich jetzt ebenfalls automatisch neu (ca. 30-60 Sekunden).
 echo Fortschritt: https://github.com/Chronoria/pokemon-chronoria/actions
 goto :end
 
