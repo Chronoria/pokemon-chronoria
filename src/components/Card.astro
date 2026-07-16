@@ -1,0 +1,15 @@
+---
+// Thin wrapper around the shared .card link pattern used across grids (Items, Pokémon, ability/
+// move pills, ...). Content stays fully freeform via the slot since real usages differ too much
+// (icon+name+price, id+name+type badges, plain text pill) for a rigid content prop shape - this
+// only consolidates the outer element and passes through any data-*/style attributes callers need
+// for their own filter/search scripts.
+interface Props {
+  href: string;
+}
+const { href, ...rest } = Astro.props;
+---
+
+<a class="card" href={href} {...rest}>
+  <slot />
+</a>

@@ -1,0 +1,25 @@
+---
+// Simple label/value spec table (e.g. item price/pocket, Pokémon height/weight/catch rate).
+// Not used for the location/moves/forms tables elsewhere on detail pages - those have rowspan
+// grouping and embedded components (TypeBadge, links) that a generic label/value row can't
+// represent without becoming a second, more complex API for no real gain.
+interface Row {
+  label: string;
+  value: string | number;
+  /** Optional title attribute on the label cell, for the existing .help-text tooltip pattern. */
+  labelTitle?: string;
+}
+interface Props {
+  rows: Row[];
+}
+const { rows } = Astro.props;
+---
+
+<table>
+  {rows.map((r) => (
+    <tr>
+      <th class={r.labelTitle ? "help-text" : undefined} title={r.labelTitle}>{r.label}</th>
+      <td>{r.value}</td>
+    </tr>
+  ))}
+</table>

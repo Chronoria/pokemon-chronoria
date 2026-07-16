@@ -1,0 +1,17 @@
+---
+// Consistent detail-page header: optional content before the back-link (e.g. prev/next dex nav),
+// the back-link itself, an <h1> with an optional prefix (e.g. the "#025" dex-number span), and a
+// default slot for whatever follows (icon+description on item pages, sprite/type badges on
+// Pokémon pages) - kept freeform there since that content differs meaningfully page to page.
+interface Props {
+  backHref: string;
+  backLabel: string;
+  title: string;
+}
+const { backHref, backLabel, title } = Astro.props;
+---
+
+<slot name="before" />
+<p class="meta-note"><a href={backHref}>{backLabel}</a></p>
+<h1><slot name="title-prefix" />{title}</h1>
+<slot />

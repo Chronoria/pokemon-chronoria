@@ -25,6 +25,10 @@
   --accent-gold: var(--gold-400);
   --accent-contrast: #0b1220;
 
+  /* 3-stufiges Elevation-System: sm (kleine/inline Elemente) < shadow-soft ("md", Karten im
+     Ruhezustand) < shadow-lift ("lg", Hover/aktive Zustände). shadow-soft/shadow-lift behalten
+     ihre Namen bei, da sie bereits an vielen Stellen referenziert werden. */
+  --shadow-sm: 0 2px 8px rgba(0, 0, 0, 0.25);
   --shadow-soft: 0 10px 30px rgba(0, 0, 0, 0.35);
   --shadow-lift: 0 20px 45px rgba(0, 0, 0, 0.45);
   --glow-blue: 0 0 0 1px rgba(96, 165, 250, 0.25), 0 0 28px rgba(59, 130, 246, 0.35);
@@ -54,6 +58,7 @@
     --text: #111827;
     --text-muted: #5b6472;
     --accent-contrast: #ffffff;
+    --shadow-sm: 0 2px 8px rgba(17, 24, 39, 0.06);
     --shadow-soft: 0 10px 30px rgba(17, 24, 39, 0.08);
     --shadow-lift: 0 20px 45px rgba(17, 24, 39, 0.14);
   }
@@ -120,10 +125,13 @@ body::before {
 a {
   color: var(--accent-light);
   text-decoration: none;
-  transition: color var(--dur-fast) var(--ease-out);
+  transition: color var(--dur-fast) var(--ease-out), transform var(--dur-fast) var(--ease-out);
 }
 a:hover {
-  color: var(--accent-gold);
+  color: var(--accent);
+}
+a:active {
+  transform: scale(0.98);
 }
 
 /* Consistent, visible keyboard focus everywhere (WCAG) */
@@ -205,10 +213,14 @@ input:focus-visible {
   border: 1px solid var(--border-glass);
   background: var(--bg-glass);
   cursor: pointer;
-  transition: color var(--dur-fast) var(--ease-out), background var(--dur-fast) var(--ease-out);
+  transition: color var(--dur-fast) var(--ease-out), background var(--dur-fast) var(--ease-out),
+    transform var(--dur-fast) var(--ease-out);
 }
 .nav-toggle:hover {
   background: var(--border-glass);
+}
+.nav-toggle:active {
+  transform: scale(0.97);
 }
 .nav-toggle svg {
   transition: transform var(--dur-fast) var(--ease-out);
@@ -245,11 +257,15 @@ input:focus-visible {
   font-size: 0.92rem;
   padding: 0.55rem 0.9rem;
   border-radius: 999px;
-  transition: color var(--dur-fast) var(--ease-out), background var(--dur-fast) var(--ease-out);
+  transition: color var(--dur-fast) var(--ease-out), background var(--dur-fast) var(--ease-out),
+    transform var(--dur-fast) var(--ease-out);
 }
 .site-nav a:hover {
   color: var(--text);
   background: var(--border-glass);
+}
+.site-nav a:active {
+  transform: scale(0.96);
 }
 .site-nav a[aria-current="page"] {
   color: var(--accent-contrast);
@@ -365,6 +381,29 @@ h2 {
   box-shadow: var(--shadow-lift), 0 0 30px var(--card-glow, rgba(59, 130, 246, 0.35));
   text-decoration: none;
   color: var(--text);
+}
+.card:active {
+  transform: translateY(-3px) scale(0.98);
+}
+
+/* Per-card entrance as each card scrolls into view - pure CSS (scroll-driven animation), no
+   JS observation needed. This matters because card-grids can hold 1000+ items (full Pokédex/
+   item list): the existing JS-based .reveal system (see Layout.astro) only fades the grid
+   container in once as a whole, so cards far below the fold were already opacity:1 long before
+   the player scrolled to them. animation-timeline:view() instead triggers per-card, driven by
+   the browser's compositor rather than an IntersectionObserver watching hundreds of elements.
+   Progressive enhancement: browsers without scroll-driven animation support simply keep the
+   existing whole-grid fade with no broken/missing state. */
+@supports (animation-timeline: view()) {
+  .card-grid .card {
+    animation: card-enter 500ms var(--ease-out) both;
+    animation-timeline: view();
+    animation-range: entry 0% cover 30%;
+  }
+  @keyframes card-enter {
+    from { opacity: 0; transform: translateY(14px); }
+    to { opacity: 1; transform: none; }
+  }
 }
 
 .card-sprite {
@@ -539,6 +578,9 @@ h2 {
   transform: translateY(-2px);
   color: var(--text);
 }
+.filter-bar a:active {
+  transform: translateY(-1px) scale(0.96);
+}
 .filter-bar a[aria-current="true"] {
   background: linear-gradient(120deg, var(--accent), var(--accent-light));
   color: var(--accent-contrast);
@@ -689,6 +731,9 @@ tr:hover td {
 .stat-tile:hover {
   transform: translateY(-4px);
   box-shadow: var(--shadow-lift), var(--glow-blue);
+}
+.stat-tile:active {
+  transform: translateY(-2px) scale(0.98);
 }
 .stat-tile .stat-tile-value {
   font-family: var(--font-display);

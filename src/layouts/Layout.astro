@@ -1,6 +1,7 @@
 ---
 import "../styles/global.css";
 import { href } from "../lib/url";
+import { ClientRouter } from "astro:transitions";
 
 interface Props {
   title: string;
@@ -33,9 +34,14 @@ const currentPath = Astro.url.pathname;
       href="https://fonts.googleapis.com/css2?family=Outfit:wght@500;600;700;800&family=Inter:wght@400;500;600;700&display=swap"
       rel="stylesheet"
     />
+    <ClientRouter />
   </head>
   <body>
-    <header class="site-header">
+    <!-- transition:persist: this element (and its nav-toggle/nav-dropdown children) carries
+         JS-attached event listeners set up once below. Without persisting it, the ClientRouter
+         would swap in a fresh, listener-less header on every navigation and break the dropdown
+         menu / auto-hide-on-scroll behavior after the first page. -->
+    <header class="site-header" transition:persist>
       <div class="page">
         <a class="site-title" href={href("/")}>Chronoria-Wiki</a>
         <div class="nav-menu">
@@ -57,7 +63,12 @@ const currentPath = Astro.url.pathname;
       <slot />
     </main>
 
-    <script>
+    <script data-astro-rerun>
+      // data-astro-rerun: re-run this script after every ClientRouter navigation (the <header>
+      // persists across navigations, but <main>'s content is swapped in fresh each time and
+      // needs its own .reveal targets re-scanned - otherwise only the very first page load
+      // would ever get the entrance animation).
+      //
       // Scroll-reveal: fade+lift each top-level section of the page as it enters the
       // viewport. Applied generically here (not per-page) so every page gets it for free.
       // Skips the <h1> so the page title is visible immediately on load.

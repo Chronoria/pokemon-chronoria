@@ -1,5 +1,7 @@
 ---
 import Layout from "../../layouts/Layout.astro";
+import PageHeader from "../../components/PageHeader.astro";
+import Table from "../../components/Table.astro";
 import { items, slugify, moveById } from "../../lib/data";
 import { pocketName } from "../../lib/itemPockets";
 import { itemLocationSourceLabel } from "../../lib/itemLocationSource";
@@ -20,16 +22,18 @@ const locationsByPlace = Object.groupBy
 ---
 
 <Layout title={displayName}>
-  <p class="meta-note"><a href={href("/items/")}>← Alle Items</a></p>
-  <h1>{displayName}</h1>
-  {i.icon && <img class="species-sprite" src={href(`/item-icons/${i.icon}${i.iconVersion ? `?v=${i.iconVersion}` : ""}`)} alt="" width="64" height="64" />}
-  <p>{i.description || "–"}</p>
+  <PageHeader backHref={href("/items/")} backLabel="← Alle Items" title={displayName}>
+    {i.icon && <img class="species-sprite" src={href(`/item-icons/${i.icon}${i.iconVersion ? `?v=${i.iconVersion}` : ""}`)} alt="" width="64" height="64" transition:name={`item-icon-${i.id}`} />}
+    <p>{i.description || "–"}</p>
+  </PageHeader>
 
-  <table>
-    {i.move && <tr><th>Name</th><td>{i.name}</td></tr>}
-    {i.pocket !== 8 && <tr><th>Preis</th><td>{i.price !== null ? `${i.price} ₽` : "nicht käuflich"}</td></tr>}
-    <tr><th>Tasche</th><td>{pocketName(i.pocket)}</td></tr>
-  </table>
+  <Table
+    rows={[
+      ...(i.move ? [{ label: "Name", value: i.name }] : []),
+      ...(i.pocket !== 8 ? [{ label: "Preis", value: i.price !== null ? `${i.price} ₽` : "nicht käuflich" }] : []),
+      { label: "Tasche", value: pocketName(i.pocket) },
+    ]}
+  />
 
   {i.locations.length > 0 && (
     <>

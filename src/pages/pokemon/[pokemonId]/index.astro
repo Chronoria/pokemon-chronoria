@@ -1,5 +1,6 @@
 ---
 import Layout from "../../../layouts/Layout.astro";
+import PageHeader from "../../../components/PageHeader.astro";
 import TypeBadge from "../../../components/TypeBadge.astro";
 import StatBar from "../../../components/StatBar.astro";
 import { pokemon, pokemonById, moveById, abilityById, itemById, slugify, pokemonDexNumber, typeNameById } from "../../../lib/data";
@@ -80,38 +81,41 @@ const nextPokemon = pokemon[(dexIndex + 1) % pokemon.length];
 
 <Layout title={p.name}>
   <div class="detail-hero">
-    <div class="dex-nav">
-      <a href={href(`/pokemon/${slugify(prevPokemon.id)}/`)}>← #{String(pokemonDexNumber.get(prevPokemon.id)).padStart(3, "0")} {prevPokemon.name}</a>
-      <a href={href(`/pokemon/${slugify(nextPokemon.id)}/`)}>#{String(pokemonDexNumber.get(nextPokemon.id)).padStart(3, "0")} {nextPokemon.name} →</a>
-    </div>
-    <p class="meta-note"><a href={href("/pokemon/")}>← Alle Pokémon</a></p>
-    <h1><span class="dex-number">#{String(pokemonDexNumber.get(p.id)).padStart(3, "0")}</span> {p.name}</h1>
-    {(p.sprite || p.femaleSprite) && (
-      <div class="sprite-pair">
-        {p.sprite && (
-          <figure>
-            <div class="species-sprite-frame">
-              <img class="species-sprite" src={href(`/sprites/${p.sprite}`)} alt={p.name} width="288" height="288" />
-            </div>
-            {p.femaleSprite && <figcaption>♂ Männlich</figcaption>}
-          </figure>
-        )}
-        {p.femaleSprite && (
-          <figure>
-            <div class="species-sprite-frame">
-              <img class="species-sprite" src={href(`/sprites/${p.femaleSprite}`)} alt={`${p.name} (weiblich)`} width="288" height="288" />
-            </div>
-            <figcaption>♀ Weiblich</figcaption>
-          </figure>
-        )}
+    <PageHeader backHref={href("/pokemon/")} backLabel="← Alle Pokémon" title={p.name}>
+      <Fragment slot="before">
+        <div class="dex-nav">
+          <a href={href(`/pokemon/${slugify(prevPokemon.id)}/`)}>← #{String(pokemonDexNumber.get(prevPokemon.id)).padStart(3, "0")} {prevPokemon.name}</a>
+          <a href={href(`/pokemon/${slugify(nextPokemon.id)}/`)}>#{String(pokemonDexNumber.get(nextPokemon.id)).padStart(3, "0")} {nextPokemon.name} →</a>
+        </div>
+      </Fragment>
+      <Fragment slot="title-prefix"><span class="dex-number">#{String(pokemonDexNumber.get(p.id)).padStart(3, "0")}</span> </Fragment>
+      {(p.sprite || p.femaleSprite) && (
+        <div class="sprite-pair">
+          {p.sprite && (
+            <figure>
+              <div class="species-sprite-frame">
+                <img class="species-sprite" src={href(`/sprites/${p.sprite}`)} alt={p.name} width="288" height="288" transition:name={`pokemon-sprite-${p.id}`} />
+              </div>
+              {p.femaleSprite && <figcaption>♂ Männlich</figcaption>}
+            </figure>
+          )}
+          {p.femaleSprite && (
+            <figure>
+              <div class="species-sprite-frame">
+                <img class="species-sprite" src={href(`/sprites/${p.femaleSprite}`)} alt={`${p.name} (weiblich)`} width="288" height="288" />
+              </div>
+              <figcaption>♀ Weiblich</figcaption>
+            </figure>
+          )}
+        </div>
+      )}
+      <div class="pill-list">
+        {p.types.map((t: string) => <TypeBadge type={t} />)}
       </div>
-    )}
-    <div class="pill-list">
-      {p.types.map((t: string) => <TypeBadge type={t} />)}
-    </div>
-    {p.shinySprite && (
-      <p class="meta-note"><a href={href(`/shiny/${slugify(p.id)}/`)}>✨ Shiny-Version ansehen</a></p>
-    )}
+      {p.shinySprite && (
+        <p class="meta-note"><a href={href(`/shiny/${slugify(p.id)}/`)}>✨ Shiny-Version ansehen</a></p>
+      )}
+    </PageHeader>
   </div>
 
   {femaleForm && (

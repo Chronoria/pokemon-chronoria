@@ -1,5 +1,6 @@
 ---
 import Layout from "../layouts/Layout.astro";
+import Card from "../components/Card.astro";
 import { meta, pokemon, medals } from "../lib/data";
 import { href } from "../lib/url";
 
@@ -27,10 +28,10 @@ const categories = [
 
   <div class="card-grid">
     {categories.map((c) => (
-      <a class="card" href={c.href}>
+      <Card href={c.href}>
         <div class="card-name">{c.label}</div>
         <div class="meta-note">{c.count}</div>
-      </a>
+      </Card>
     ))}
   </div>
 
