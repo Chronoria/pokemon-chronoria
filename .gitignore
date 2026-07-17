@@ -7,6 +7,7 @@ dist/
 src/data/*.json
 Item-Uebersicht.xlsx
 Pokemon-Uebersicht.xlsx
+Routen-Uebersicht.xlsx
 # Excel lock files for the two xlsx exports above - created while either is open, harmless but
 # shouldn't be tracked (one slipped into a past commit while Excel had Item-Uebersicht.xlsx open)
 ~$*.xlsx

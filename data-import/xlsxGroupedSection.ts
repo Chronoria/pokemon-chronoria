@@ -20,8 +20,15 @@ export interface ColumnDef<Row> {
   wrap?: boolean;
 }
 
+export interface RowStyle {
+  fill: { type: "pattern"; pattern: "solid"; fgColor: { argb: string } };
+  fontColor: string;
+}
+
 /** Writes one section as group column-blocks side by side, each block using the given column
- *  definitions. Returns the row after the last data row, so sections can be stacked. */
+ *  definitions. Returns the row after the last data row, so sections can be stacked.
+ *  `rowStyle` is optional (e.g. Wildfang/Event/beides highlighting in exportEncounterList.ts's
+ *  BST sheet) - existing callers that omit it keep the plain FONT/no-fill look unchanged. */
 export function writeGroupedSection<Row>(
   sheet: ExcelJS.Worksheet,
   startRow: number,
@@ -30,7 +37,8 @@ export function writeGroupedSection<Row>(
   groupKeys: readonly (string | number)[],
   groupLabel: (key: string | number) => string,
   rowsByGroup: Map<string | number, Row[]>,
-  columns: ColumnDef<Row>[]
+  columns: ColumnDef<Row>[],
+  rowStyle?: (row: Row) => RowStyle | null
 ): number {
   let row = startRow;
   const colsPerGroup = columns.length;
@@ -81,10 +89,12 @@ export function writeGroupedSection<Row>(
       const item = list[r];
       if (!item) return;
       const startCol = i * colsPerGroup + 1;
+      const style = rowStyle ? rowStyle(item) : null;
       columns.forEach((col, ci) => {
         const cell = sheet.getCell(dataStartRow + r, startCol + ci);
         cell.value = col.get(item);
-        cell.font = FONT;
+        cell.font = style ? { ...FONT, color: { argb: style.fontColor } } : FONT;
+        if (style) cell.fill = style.fill;
         if (col.wrap) cell.alignment = { wrapText: true };
       });
     });

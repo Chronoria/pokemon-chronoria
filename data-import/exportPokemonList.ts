@@ -34,7 +34,7 @@ const UNAVAILABLE_COLUMNS: ColumnDef<Row>[] = [
   { header: "ID", width: 16, get: (r) => r.id },
 ];
 
-function formLabel(speciesName: string, form: { formNumber: number; formName: { text: string } | null }): string {
+export function formLabel(speciesName: string, form: { formNumber: number; formName: { text: string } | null }): string {
   if (form.formNumber === 0) return speciesName;
   const name = form.formName?.text || `Form ${form.formNumber}`;
   return `${speciesName} (${name})`;

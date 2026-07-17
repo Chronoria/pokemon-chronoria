@@ -17,6 +17,7 @@ import { parseMedals } from "./parseMedals.ts";
 import { parseMapLocations } from "./parseMapLocations.ts";
 import { exportItemListXlsx } from "./exportItemList.ts";
 import { exportPokemonListXlsx } from "./exportPokemonList.ts";
+import { exportEncounterListXlsx } from "./exportEncounterList.ts";
 import { resolveEncounterTarget } from "./resolveEncounterTarget.ts";
 import type { EncounterRef } from "./dataModel.ts";
 
@@ -154,6 +155,12 @@ async function main() {
 
   const pokemonXlsxResult = await exportPokemonListXlsx(pokemon);
   console.log(`Pokemon-Uebersicht.xlsx aktualisiert: ${pokemonXlsxResult.used} verwendet, ${pokemonXlsxResult.unused} noch nicht verwendet.`);
+
+  const encounterXlsxResult = await exportEncounterListXlsx(encounters, pokemon);
+  console.log(
+    `Routen-Uebersicht.xlsx aktualisiert: ${encounterXlsxResult.locations} Routen, ${encounterXlsxResult.rows} Encounter-Einträge, ` +
+      `${encounterXlsxResult.bstEntries} Pokémon in der BST-Rangliste.`
+  );
 
   console.log(`Fertig: ${pokemon.length} Pokémon, ${moves.length} Attacken, ${abilities.length} Fähigkeiten, ` +
     `${items.length} Items, ${trainers.length} Trainer, ${encounters.length} Orte, ${medals.length} Medaillen.`);
