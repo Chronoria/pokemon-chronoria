@@ -37,11 +37,14 @@ const currentPath = Astro.url.pathname;
     <ClientRouter />
   </head>
   <body>
-    <!-- transition:persist: this element (and its nav-toggle/nav-dropdown children) carries
-         JS-attached event listeners set up once below. Without persisting it, the ClientRouter
-         would swap in a fresh, listener-less header on every navigation and break the dropdown
-         menu / auto-hide-on-scroll behavior after the first page. -->
-    <header class="site-header" transition:persist>
+    <!-- transition:persist="site-header": this element (and its nav-toggle/nav-dropdown children)
+         carries JS-attached event listeners set up once below. A fixed name is required, not bare
+         transition:persist - Astro's auto-generated persist id is based on the element's position
+         among astro-transition-marked nodes in that page's own rendered output, which differs
+         page to page (e.g. a card grid with hundreds of transition:name'd sprites shifts the
+         count), so the header's auto-id never matched between two different pages and got replaced
+         (losing all listeners) on every single navigation instead of actually persisting. -->
+    <header class="site-header" transition:persist="site-header">
       <div class="page">
         <a class="site-title" href={href("/")}>Chronoria-Wiki</a>
         <div class="nav-menu">
@@ -77,10 +80,16 @@ const currentPath = Astro.url.pathname;
       // area, not "any part visible" - some pages have a single huge target (e.g. the 1082-item
       // grid, far taller than the viewport), and that fraction can never be reached, so the
       // element stayed opacity:0 forever. threshold:0 fires as soon as even one pixel is in view.
+      //
+      // Whole thing is block-scoped (see items/index.astro for the full explanation): this script
+      // runs again on every single navigation via data-astro-rerun, and both the block scope and
+      // plain-JS syntax (no ": Element"/"as HTMLElement") are required for a dynamically
+      // re-inserted classic script to actually execute instead of throwing on redeclaration/parse.
+      {
       const prefersReducedMotion = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
       if (!prefersReducedMotion) {
         const targets = document.querySelectorAll("main.page > :not(h1)");
-        const reveal = (el: Element) => el.classList.add("is-visible");
+        const reveal = (el) => el.classList.add("is-visible");
         const io = new IntersectionObserver(
           (entries) => {
             for (const entry of entries) {
@@ -94,12 +103,13 @@ const currentPath = Astro.url.pathname;
         );
         targets.forEach((el, i) => {
           el.classList.add("reveal");
-          (el as HTMLElement).style.transitionDelay = `${Math.min(i, 6) * 40}ms`;
+          el.style.transitionDelay = `${Math.min(i, 6) * 40}ms`;
           io.observe(el);
         });
         // Safety net: never let content stay permanently invisible if the observer somehow
         // misses an element - force-reveal everything after a short delay regardless.
         setTimeout(() => targets.forEach(reveal), 1500);
+      }
       }
     </script>
 

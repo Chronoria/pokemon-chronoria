@@ -47,16 +47,20 @@ const sortedGroups = [...groups.entries()]
   </div>
 </Layout>
 
-<script>
-  const nameSearch = document.getElementById("name-search") as HTMLInputElement;
-  const resultCount = document.getElementById("result-count")!;
-  const groups = [...document.querySelectorAll<HTMLElement>(".trainer-group")];
+<script data-astro-rerun>
+  // Block-scoped (see items/index.astro for why: data-astro-rerun re-inserts this exact script on
+  // every revisit, and TS-only syntax must be plain JS since the dynamic re-insertion isn't passed
+  // back through Astro/esbuild's TS-stripping step the way the initial page load is.
+  {
+  const nameSearch = document.getElementById("name-search");
+  const resultCount = document.getElementById("result-count");
+  const groups = [...document.querySelectorAll(".trainer-group")];
 
   nameSearch.addEventListener("input", () => {
     const query = nameSearch.value.trim().toLowerCase();
     let visible = 0;
     for (const group of groups) {
-      const cards = [...group.querySelectorAll<HTMLElement>("[data-name]")];
+      const cards = [...group.querySelectorAll("[data-name]")];
       let groupVisible = 0;
       for (const card of cards) {
         const show = query === "" || (card.dataset.name ?? "").includes(query);
@@ -68,4 +72,5 @@ const sortedGroups = [...groups.entries()]
     }
     resultCount.textContent = query ? `${visible} Treffer` : "";
   });
+  }
 </script>

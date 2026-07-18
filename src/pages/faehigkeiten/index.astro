@@ -29,11 +29,15 @@ const sortedAbilities = [...abilities].sort((a, b) => a.name.localeCompare(b.nam
   </div>
 </Layout>
 
-<script>
-  const nameSearch = document.getElementById("name-search") as HTMLInputElement;
-  const resultCount = document.getElementById("result-count")!;
-  const grid = document.getElementById("ability-grid")!;
-  const cards = [...grid.querySelectorAll<HTMLElement>("[data-name]")];
+<script data-astro-rerun>
+  // Block-scoped (see items/index.astro for why: data-astro-rerun re-inserts this exact script on
+  // every revisit, and TS-only syntax must be plain JS since the dynamic re-insertion isn't passed
+  // back through Astro/esbuild's TS-stripping step the way the initial page load is.
+  {
+  const nameSearch = document.getElementById("name-search");
+  const resultCount = document.getElementById("result-count");
+  const grid = document.getElementById("ability-grid");
+  const cards = [...grid.querySelectorAll("[data-name]")];
 
   nameSearch.addEventListener("input", () => {
     const query = nameSearch.value.trim().toLowerCase();
@@ -45,4 +49,5 @@ const sortedAbilities = [...abilities].sort((a, b) => a.name.localeCompare(b.nam
     }
     resultCount.textContent = query ? `${visible} Treffer` : "";
   });
+  }
 </script>

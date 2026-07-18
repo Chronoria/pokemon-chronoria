@@ -334,18 +334,23 @@ const nextPokemon = pokemon[(dexIndex + 1) % pokemon.length];
   }
 </style>
 
-<script>
+<script data-astro-rerun>
+  // Block-scoped (see items/index.astro for why: data-astro-rerun re-inserts this exact script on
+  // every revisit, and TS-only syntax must be plain JS since the dynamic re-insertion isn't passed
+  // back through Astro/esbuild's TS-stripping step the way the initial page load is.
+  {
   const toggle = document.getElementById("gender-toggle");
   const content = document.getElementById("gender-content");
   if (toggle && content) {
     toggle.addEventListener("click", (e) => {
-      const link = (e.target as HTMLElement).closest("a[data-gender]");
+      const link = e.target.closest("a[data-gender]");
       if (!link) return;
       e.preventDefault();
-      const gender = link.getAttribute("data-gender")!;
+      const gender = link.getAttribute("data-gender");
       content.setAttribute("data-active-gender", gender);
       for (const a of toggle.querySelectorAll("a")) a.removeAttribute("aria-current");
       link.setAttribute("aria-current", "true");
     });
+  }
   }
 </script>

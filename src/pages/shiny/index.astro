@@ -48,12 +48,16 @@ const shinyPokemon = pokemon.filter((p) => p.shinySprite);
   </div>
 </Layout>
 
-<script>
-  const filterBar = document.getElementById("type-filter")!;
-  const nameSearch = document.getElementById("name-search") as HTMLInputElement;
-  const resultCount = document.getElementById("result-count")!;
-  const grid = document.getElementById("pokemon-grid")!;
-  const cards = [...grid.querySelectorAll<HTMLElement>("[data-types]")];
+<script data-astro-rerun>
+  // Block-scoped (see items/index.astro for why: data-astro-rerun re-inserts this exact script on
+  // every revisit, and TS-only syntax below must be plain JS since the dynamic re-insertion isn't
+  // passed back through Astro/esbuild's TS-stripping step the way the initial page load is.
+  {
+  const filterBar = document.getElementById("type-filter");
+  const nameSearch = document.getElementById("name-search");
+  const resultCount = document.getElementById("result-count");
+  const grid = document.getElementById("pokemon-grid");
+  const cards = [...grid.querySelectorAll("[data-types]")];
 
   let activeType = "ALL";
 
@@ -72,10 +76,10 @@ const shinyPokemon = pokemon.filter((p) => p.shinySprite);
   }
 
   filterBar.addEventListener("click", (e) => {
-    const link = (e.target as HTMLElement).closest("a[data-type]");
+    const link = e.target.closest("a[data-type]");
     if (!link) return;
     e.preventDefault();
-    activeType = link.getAttribute("data-type")!;
+    activeType = link.getAttribute("data-type");
 
     for (const a of filterBar.querySelectorAll("a")) a.removeAttribute("aria-current");
     link.setAttribute("aria-current", "true");
@@ -83,4 +87,5 @@ const shinyPokemon = pokemon.filter((p) => p.shinySprite);
   });
 
   nameSearch.addEventListener("input", applyFilters);
+  }
 </script>
