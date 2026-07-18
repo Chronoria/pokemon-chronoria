@@ -10,6 +10,7 @@ import { pocketName } from "../src/lib/itemPockets.ts";
 import { writeGroupedSection, TITLE_FONT, NOTE_FONT, type ColumnDef } from "./xlsxGroupedSection.ts";
 import { naturalCompare } from "./naturalSort.ts";
 import { addPricesSheet } from "./exportItemPrices.ts";
+import { addItemsByPocketSheet } from "./exportItemsByPocket.ts";
 import type { Item, Pokemon } from "./dataModel.ts";
 
 const OUT_PATH = join(import.meta.dirname, "..", "Item-Uebersicht.xlsx");
@@ -147,7 +148,8 @@ export async function exportItemListXlsx(items: Item[], pokemon: Pokemon[]) {
   );
 
   const pricesResult = addPricesSheet(wb, items, pokemon);
+  const byPocketTotal = addItemsByPocketSheet(wb, items);
 
   await wb.xlsx.writeFile(OUT_PATH);
-  return { available: availableTotal, unavailable: unavailableTotal, prices: pricesResult.total, path: OUT_PATH };
+  return { available: availableTotal, unavailable: unavailableTotal, prices: pricesResult.total, byPocket: byPocketTotal, path: OUT_PATH };
 }

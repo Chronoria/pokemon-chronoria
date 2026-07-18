@@ -150,7 +150,7 @@ async function main() {
   const xlsxResult = await exportItemListXlsx(items, pokemon);
   console.log(
     `Item-Uebersicht.xlsx aktualisiert: ${xlsxResult.available} erhältlich, ${xlsxResult.unavailable} noch nicht platziert, ` +
-      `${xlsxResult.prices} mit Preisvorschlag.`
+      `${xlsxResult.prices} mit Preisvorschlag, ${xlsxResult.byPocket} in der Tasche-Übersicht.`
   );
 
   const pokemonXlsxResult = await exportPokemonListXlsx(pokemon);
