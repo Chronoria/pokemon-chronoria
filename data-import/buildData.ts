@@ -15,6 +15,7 @@ import { parseEncounters } from "./parseEncounters.ts";
 import { parseTypes } from "./parseTypes.ts";
 import { parseMedals } from "./parseMedals.ts";
 import { parseMapLocations } from "./parseMapLocations.ts";
+import { CATEGORY_IDS, isItemEvolutionMethod } from "./itemCategoryRules.ts";
 import { exportItemListXlsx } from "./exportItemList.ts";
 import { exportPokemonListXlsx } from "./exportPokemonList.ts";
 import { exportEncounterListXlsx } from "./exportEncounterList.ts";
@@ -73,6 +74,24 @@ async function main() {
     for (const abilityId of [...p.abilities, ...p.hiddenAbilities]) {
       abilityById.get(abilityId)?.pokemonWithAbility.push(p.id);
     }
+  }
+
+  // item categories: "Entwicklungs-Items" needs every item id consumed by an item-based
+  // evolution method across all species (not available yet when parseItems.ts ran) - added here
+  // as its own pass, then "Sonstige Kampf-Items" catches whatever Pocket-1 item still has no
+  // category at all once that's done, so it only ever catches genuinely uncategorized items
+  // instead of also grabbing evolution items that happen to lack any of the other tags.
+  const evolutionItemIds = new Set<string>();
+  for (const p of pokemon) {
+    for (const evo of p.evolutions) {
+      if (isItemEvolutionMethod(evo.method) && evo.param) evolutionItemIds.add(evo.param);
+    }
+  }
+  for (const itemId of evolutionItemIds) {
+    itemById.get(itemId)?.categories.push(CATEGORY_IDS.ENTWICKLUNG);
+  }
+  for (const item of items) {
+    if (item.pocket === 1 && item.categories.length === 0) item.categories.push(CATEGORY_IDS.SONSTIGE_KAMPF_ITEMS);
   }
 
   // encounters -> pokemon.foundIn / form.foundIn

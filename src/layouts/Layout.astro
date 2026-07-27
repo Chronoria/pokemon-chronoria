@@ -166,6 +166,14 @@ const currentPath = Astro.url.pathname;
         if (!navDropdown.contains(target) && !navToggle.contains(target)) closeNav();
       });
 
+      // Clicking a link INSIDE the dropdown is "inside" navDropdown, so the outside-click
+      // handler above never fires for it - without this, the menu stayed visibly open after
+      // navigating (the header persists across ClientRouter navigations via transition:persist,
+      // so its stale open/hidden state carried over to the new page too).
+      navDropdown.addEventListener("click", (e) => {
+        if ((e.target as HTMLElement).closest("a")) closeNav();
+      });
+
       document.addEventListener("keydown", (e) => {
         if (e.key === "Escape" && !navDropdown.hidden) closeNav();
       });

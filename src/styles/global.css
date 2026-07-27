@@ -589,6 +589,84 @@ h2 {
 }
 
 /* ==========================================================================
+   Category dropdown (items page) - same open/close mechanics as the header's
+   "Menü" dropdown (nav-menu/nav-toggle/nav-dropdown in Layout.astro), separate
+   classes so the two stay independently stylable.
+   ========================================================================== */
+.category-menu {
+  position: relative;
+  display: inline-block;
+  margin-bottom: 1.5rem;
+}
+.category-toggle {
+  display: flex;
+  align-items: center;
+  gap: 0.45rem;
+  color: var(--text);
+  font-family: var(--font-display);
+  font-weight: 600;
+  font-size: 0.92rem;
+  padding: 0.45rem 0.9rem;
+  border-radius: 999px;
+  border: 1px solid var(--border-glass);
+  background: var(--bg-glass);
+  cursor: pointer;
+  transition: color var(--dur-fast) var(--ease-out), background var(--dur-fast) var(--ease-out),
+    transform var(--dur-fast) var(--ease-out);
+}
+.category-toggle:hover {
+  background: var(--border-glass);
+}
+.category-toggle:active {
+  transform: scale(0.97);
+}
+.category-toggle svg {
+  transition: transform var(--dur-fast) var(--ease-out);
+}
+.category-toggle[aria-expanded="true"] svg {
+  transform: rotate(180deg);
+}
+.category-dropdown[hidden] {
+  display: none;
+}
+.category-dropdown {
+  position: absolute;
+  top: calc(100% + 0.5rem);
+  left: 0;
+  z-index: 20;
+  display: flex;
+  flex-direction: column;
+  gap: 0.2rem;
+  min-width: 13rem;
+  max-height: 20rem;
+  overflow-y: auto;
+  padding: 0.5rem;
+  background: var(--bg-glass-strong);
+  backdrop-filter: blur(16px) saturate(160%);
+  -webkit-backdrop-filter: blur(16px) saturate(160%);
+  border: 1px solid var(--border-glass);
+  border-radius: var(--radius-md);
+  box-shadow: var(--shadow-soft);
+}
+.category-dropdown a {
+  color: var(--text-muted);
+  font-size: 0.88rem;
+  font-weight: 600;
+  padding: 0.5rem 0.75rem;
+  border-radius: 999px;
+  transition: color var(--dur-fast) var(--ease-out), background var(--dur-fast) var(--ease-out);
+}
+.category-dropdown a:hover {
+  color: var(--text);
+  background: var(--border-glass);
+}
+.category-dropdown a[aria-current="true"] {
+  color: var(--accent-contrast);
+  background: linear-gradient(120deg, var(--accent), var(--accent-light));
+  box-shadow: var(--glow-blue);
+}
+
+/* ==========================================================================
    Text inputs
    ========================================================================== */
 .text-input {

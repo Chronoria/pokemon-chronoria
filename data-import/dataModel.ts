@@ -156,6 +156,12 @@ export interface Item {
   iconVersion: string | null;
   /** move id this TM/HM teaches, or null for items that don't teach a move */
   move: string | null;
+  /** Content category slugs for the items-page category dropdown (see data-import/
+   *  itemCategoryRules.ts) - cuts across Pocket, since Pocket 1/2 each lump several unrelated
+   *  item kinds together. An item can hold more than one (e.g. Metallmantel is both
+   *  "typverstaerker" and "entwicklung"). Empty for items whose Pocket already has a clean,
+   *  redundant-free tab of its own (Pokébälle/TMs/Beeren/Mega-Steine). */
+  categories: string[];
   // reverse index, filled in by buildData.ts from the map-event dump
   locations: ItemLocationRef[];
 }

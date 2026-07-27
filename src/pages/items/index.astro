@@ -4,6 +4,7 @@ import Card from "../../components/Card.astro";
 import { items, slugify, moveById } from "../../lib/data";
 import { href } from "../../lib/url";
 import { pocketName } from "../../lib/itemPockets";
+import { ITEM_CATEGORIES } from "../../lib/itemCategories";
 
 // TM ids aren't zero-padded past TM99 ("TM100"), so plain string sort puts TM100 before TM11
 // (lexicographic "1","0","0" < "1","1") - sort TMs by their numeric suffix instead so the pocket
@@ -35,11 +36,24 @@ const pockets = [...new Set(items.map((i) => i.pocket).filter((p): p is number =
     ))}
   </div>
 
+  <div class="category-menu" id="category-menu">
+    <button type="button" class="category-toggle" id="category-toggle" aria-expanded="false" aria-controls="category-dropdown">
+      Kategorie: <span id="category-toggle-label">Alle</span>
+      <svg width="10" height="6" viewBox="0 0 10 6" fill="none" aria-hidden="true"><path d="M1 1l4 4 4-4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+    </button>
+    <div class="category-dropdown" id="category-dropdown" hidden>
+      <a href="#" data-category="ALL" aria-current="true">Alle</a>
+      {ITEM_CATEGORIES.map((c) => (
+        <a href="#" data-category={c.id}>{c.label}</a>
+      ))}
+    </div>
+  </div>
+
   <p class="meta-note" id="result-count"></p>
 
   <div class="card-grid" id="item-grid">
     {sortedItems.map((i) => (
-      <Card href={href(`/items/${slugify(i.id)}/`)} data-name={i.name.toLowerCase()} data-pocket={i.pocket !== null ? String(i.pocket) : ""}>
+      <Card href={href(`/items/${slugify(i.id)}/`)} data-name={i.name.toLowerCase()} data-pocket={i.pocket !== null ? String(i.pocket) : ""} data-categories={i.categories.join(",")}>
         {i.icon && <img class="card-sprite" src={href(`/item-icons/${i.icon}${i.iconVersion ? `?v=${i.iconVersion}` : ""}`)} alt="" loading="lazy" width="48" height="48" transition:name={`item-icon-${i.id}`} />}
         <div class="card-name">{i.move ? (moveById.get(i.move)?.name ?? i.name) : i.name}</div>
         {i.move && <div class="meta-note">{i.name}</div>}
@@ -62,14 +76,17 @@ const pockets = [...new Set(items.map((i) => i.pocket).filter((p): p is number =
   const cards = [...grid.querySelectorAll("[data-name]")];
 
   let activePocket = filterBar.querySelector("a")?.getAttribute("data-pocket") ?? "ALL";
+  let activeCategory = "ALL";
 
   function applyFilters() {
     const query = nameSearch.value.trim().toLowerCase();
     let visible = 0;
     for (const card of cards) {
       const matchesPocket = activePocket === "ALL" || card.dataset.pocket === activePocket;
+      const cardCategories = card.dataset.categories ? card.dataset.categories.split(",") : [];
+      const matchesCategory = activeCategory === "ALL" || cardCategories.includes(activeCategory);
       const matchesName = query === "" || (card.dataset.name ?? "").includes(query);
-      const show = matchesPocket && matchesName;
+      const show = matchesPocket && matchesCategory && matchesName;
       card.style.display = show ? "" : "none";
       if (show) visible++;
     }
@@ -85,6 +102,51 @@ const pockets = [...new Set(items.map((i) => i.pocket).filter((p): p is number =
     for (const a of filterBar.querySelectorAll("a")) a.removeAttribute("aria-current");
     link.setAttribute("aria-current", "true");
     applyFilters();
+  });
+
+  // Category dropdown: same open/close-on-outside-click/Escape/link-click behavior as the
+  // header's "Menü" dropdown in Layout.astro (kept in sync deliberately - see the fix there for
+  // why closing on an internal link click matters, same reasoning applies here).
+  const categoryToggle = document.getElementById("category-toggle");
+  const categoryToggleLabel = document.getElementById("category-toggle-label");
+  const categoryDropdown = document.getElementById("category-dropdown");
+
+  function closeCategoryDropdown() {
+    categoryDropdown.hidden = true;
+    categoryToggle.setAttribute("aria-expanded", "false");
+  }
+
+  categoryToggle.addEventListener("click", () => {
+    const isOpen = !categoryDropdown.hidden;
+    if (isOpen) {
+      closeCategoryDropdown();
+    } else {
+      categoryDropdown.hidden = false;
+      categoryToggle.setAttribute("aria-expanded", "true");
+    }
+  });
+
+  categoryDropdown.addEventListener("click", (e) => {
+    const link = e.target.closest("a[data-category]");
+    if (!link) return;
+    e.preventDefault();
+    activeCategory = link.getAttribute("data-category");
+    categoryToggleLabel.textContent = link.textContent;
+
+    for (const a of categoryDropdown.querySelectorAll("a")) a.removeAttribute("aria-current");
+    link.setAttribute("aria-current", "true");
+    closeCategoryDropdown();
+    applyFilters();
+  });
+
+  document.addEventListener("click", (e) => {
+    if (categoryDropdown.hidden) return;
+    const target = e.target;
+    if (!categoryDropdown.contains(target) && !categoryToggle.contains(target)) closeCategoryDropdown();
+  });
+
+  document.addEventListener("keydown", (e) => {
+    if (e.key === "Escape" && !categoryDropdown.hidden) closeCategoryDropdown();
   });
 
   nameSearch.addEventListener("input", applyFilters);
