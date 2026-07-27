@@ -18,5 +18,7 @@ export const ITEM_CATEGORIES: { id: string; label: string }[] = [
   { id: CATEGORY_IDS.WAHL_ITEMS, label: "Wahl-Items" },
   { id: CATEGORY_IDS.TERRAIN_SAMEN, label: "Terrain-Samen" },
   { id: CATEGORY_IDS.VERKAUFSWARE, label: "Verkaufsware" },
+  { id: CATEGORY_IDS.ZUTATEN, label: "Zutaten" },
+  { id: CATEGORY_IDS.FORMWECHSEL, label: "Formwechsel" },
   { id: CATEGORY_IDS.SONSTIGE_KAMPF_ITEMS, label: "Sonstige Kampf-Items" },
 ];

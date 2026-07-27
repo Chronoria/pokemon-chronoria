@@ -29,6 +29,8 @@ export const CATEGORY_IDS = {
   WAHL_ITEMS: "wahl-items",
   TERRAIN_SAMEN: "terrain-samen",
   VERKAUFSWARE: "verkaufsware",
+  ZUTATEN: "zutaten",
+  FORMWECHSEL: "formwechsel",
   SONSTIGE_KAMPF_ITEMS: "sonstige-kampf-items", // assigned in buildData.ts
 } as const;
 
@@ -98,6 +100,24 @@ const VERKAUFSWARE = new Set([
   "RAREBONE", "ODDKEYSTONE", "SLOWPOKETAIL",
 ]);
 
+// Items that change an already-existing Pokémon's form (not an evolution, and not the
+// battle-only/reverts-after-battle Mega Evolution or Primal-Reversion-style transformations -
+// those already have their own Mega-Steine pocket tab / Roter/Blauer Edelstein, deliberately not
+// duplicated here). Verified against each item's own description text, not assumed from general
+// Pokémon knowledge - e.g. UNREMARKABLETEACUP/MASTERPIECETEACUP mention a "form" too but are
+// evolution items (see the Entwicklungs-Items cross-reference in buildData.ts), not form-changers.
+const FORMWECHSEL = new Set([
+  "METEORITE", // Deoxys
+  "GRACIDEA", // Shaymin
+  "REVEALGLASS", // Boreos/Voltolos/Demeteros/Cupidos
+  "PRISONBOTTLE", // Hoopa
+  "ZYGARDECUBE", // Zygarde
+  "ADAMANTCRYSTAL", "LUSTROUSGLOBE", "GRISEOUSCORE", // Dialga/Palkia/Giratina
+  "RUSTEDSWORD", "RUSTEDSHIELD", // Zacian/Zamazenta
+  "WELLSPRINGMASK", "HEARTHFLAMEMASK", "CORNERSTONEMASK", "TEALMASK", // Ogerpon
+  "DNASPLICERS", "NSOLARIZER", "NLUNARIZER", "REINSOFUNITY", // Kyurem/Necrozma/Coronospa fusions
+]);
+
 /**
  * Every category assignable purely from an item's own PBS fields (pocket/flags/id) - excludes
  * "Entwicklungs-Items" (needs cross-referenced Pokémon evolution data, added later in
@@ -126,6 +146,10 @@ export function classifyItem(item: Item): string[] {
   if (WAHL_ITEMS.has(item.id)) categories.push(CATEGORY_IDS.WAHL_ITEMS);
   if (TERRAIN_SAMEN.has(item.id)) categories.push(CATEGORY_IDS.TERRAIN_SAMEN);
   if (VERKAUFSWARE.has(item.id)) categories.push(CATEGORY_IDS.VERKAUFSWARE);
+  // "Rezepte" covers both "Rezept" and "Rezepte" (substring match) - Kochzutaten, both actual
+  // Berry-flagged berries and the non-berry Pocket-5 items (butters/salt/oil), described this way.
+  if (item.description.includes("Rezept")) categories.push(CATEGORY_IDS.ZUTATEN);
+  if (FORMWECHSEL.has(item.id)) categories.push(CATEGORY_IDS.FORMWECHSEL);
 
   return categories;
 }
