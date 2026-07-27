@@ -666,6 +666,30 @@ h2 {
   box-shadow: var(--glow-blue);
 }
 
+/* Clickable category pill on an item's own detail page (links back to /items/?kategorie=...) -
+   deliberately its own class rather than reusing .filter-bar a, since it's a single informational
+   link on a detail page rather than part of an actual filter control. */
+.category-tag {
+  display: inline-flex;
+  align-items: center;
+  border: 1px solid var(--border-glass);
+  background: var(--bg-glass);
+  border-radius: 999px;
+  padding: 0.3rem 0.8rem;
+  font-size: 0.82rem;
+  font-weight: 600;
+  color: var(--text);
+  transition: transform var(--dur-fast) var(--ease-out), background var(--dur-fast) var(--ease-out);
+}
+.category-tag:hover {
+  background: var(--border-glass);
+  transform: translateY(-2px);
+  color: var(--text);
+}
+.category-tag:active {
+  transform: translateY(-1px) scale(0.96);
+}
+
 /* ==========================================================================
    Text inputs
    ========================================================================== */

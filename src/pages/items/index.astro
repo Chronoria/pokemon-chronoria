@@ -149,6 +149,20 @@ const pockets = [...new Set(items.map((i) => i.pocket).filter((p): p is number =
     if (e.key === "Escape" && !categoryDropdown.hidden) closeCategoryDropdown();
   });
 
+  // Lets item detail pages link straight into a pre-filtered category (e.g. "/items/?kategorie=
+  // entwicklung") instead of needing a dedicated static page per category - reads the same
+  // "kategorie" query param the detail page's category tags link to.
+  const initialCategory = new URLSearchParams(window.location.search).get("kategorie");
+  if (initialCategory) {
+    const initialLink = categoryDropdown.querySelector(`a[data-category="${initialCategory}"]`);
+    if (initialLink) {
+      activeCategory = initialCategory;
+      categoryToggleLabel.textContent = initialLink.textContent;
+      for (const a of categoryDropdown.querySelectorAll("a")) a.removeAttribute("aria-current");
+      initialLink.setAttribute("aria-current", "true");
+    }
+  }
+
   nameSearch.addEventListener("input", applyFilters);
   applyFilters();
   }

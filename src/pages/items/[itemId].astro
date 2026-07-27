@@ -1,11 +1,13 @@
 ---
 import Layout from "../../layouts/Layout.astro";
 import PageHeader from "../../components/PageHeader.astro";
-import Table from "../../components/Table.astro";
 import { items, slugify, moveById } from "../../lib/data";
 import { pocketName } from "../../lib/itemPockets";
+import { ITEM_CATEGORIES } from "../../lib/itemCategories";
 import { itemLocationSourceLabel } from "../../lib/itemLocationSource";
 import { href } from "../../lib/url";
+
+const categoryLabelById = new Map(ITEM_CATEGORIES.map((c) => [c.id, c.label]));
 
 export function getStaticPaths() {
   return items.map((i) => ({ params: { itemId: slugify(i.id) }, props: { i } }));
@@ -27,13 +29,27 @@ const locationsByPlace = Object.groupBy
     <p>{i.description || "–"}</p>
   </PageHeader>
 
-  <Table
-    rows={[
-      ...(i.move ? [{ label: "Name", value: i.name }] : []),
-      ...(i.pocket !== 8 ? [{ label: "Preis", value: i.price !== null ? `${i.price} ₽` : "nicht käuflich" }] : []),
-      { label: "Tasche", value: pocketName(i.pocket) },
-    ]}
-  />
+  <table>
+    {i.move && (
+      <tr><th>Name</th><td>{i.name}</td></tr>
+    )}
+    {i.pocket !== 8 && (
+      <tr><th>Preis</th><td>{i.price !== null ? `${i.price} ₽` : "nicht käuflich"}</td></tr>
+    )}
+    <tr><th>Tasche</th><td>{pocketName(i.pocket)}</td></tr>
+    {i.categories.length > 0 && (
+      <tr>
+        <th>Kategorie</th>
+        <td>
+          <div class="pill-list">
+            {i.categories.map((catId) => (
+              <a class="category-tag" href={href(`/items/?kategorie=${catId}`)}>{categoryLabelById.get(catId) ?? catId}</a>
+            ))}
+          </div>
+        </td>
+      </tr>
+    )}
+  </table>
 
   {i.locations.length > 0 && (
     <>
