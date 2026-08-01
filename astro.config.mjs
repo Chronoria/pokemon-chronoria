@@ -10,3 +10,9 @@ const base = process.env.BASE_PATH || '/';
 export default defineConfig({
   base,
 });
+
+// Note on the damage calculator's ~850 KB data payload (src/data/calc.json, inlined into the
+// /rechner/ page chunk): forcing a JSON.parse fast path via vite.json.stringify was tried and had
+// no effect - rolldown emitted a byte-identical chunk. Measured in the browser the difference is
+// ~13 ms (object literal) vs ~5 ms (JSON.parse) for this file, so it isn't worth working around.
+// The chunk is ~171 KB gzipped and only that one page loads it.

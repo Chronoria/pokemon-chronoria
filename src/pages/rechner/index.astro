@@ -1,0 +1,241 @@
+---
+import Layout from "../../layouts/Layout.astro";
+import { NATURES } from "../../lib/calc/natures";
+import { itemList } from "../../lib/calc/data";
+import { STAT_KEYS } from "../../lib/calc/types";
+
+// Option lists are rendered at build time; the client script only fills in the parts that depend
+// on the selected Pokémon (abilities, sprites, stats, results).
+const STAT_LABELS: Record<string, string> = {
+  hp: "KP",
+  attack: "Angr.",
+  defense: "Vert.",
+  spAtk: "Sp.Angr.",
+  spDef: "Sp.Vert.",
+  speed: "Init.",
+};
+
+const STATUS_OPTIONS: [string, string][] = [
+  ["none", "Keine"],
+  ["burn", "Verbrennung"],
+  ["poison", "Vergiftung"],
+  ["badPoison", "Schwere Vergiftung"],
+  ["paralysis", "Paralyse"],
+  ["sleep", "Schlaf"],
+  ["freeze", "Einfrierung"],
+  ["frostbite", "Erfrierung"],
+  ["drowsy", "Schläfrig"],
+];
+
+const WEATHER_OPTIONS: [string, string][] = [
+  ["none", "Kein Wetter"],
+  ["sun", "Sonne"],
+  ["harshSun", "Extreme Sonne"],
+  ["rain", "Regen"],
+  ["heavyRain", "Strömender Regen"],
+  ["sandstorm", "Sandsturm"],
+  ["hail", "Schnee"],
+  ["shadowSky", "Schattenhimmel"],
+];
+
+const TERRAIN_OPTIONS: [string, string][] = [
+  ["none", "Kein Feld"],
+  ["electric", "Elektrofeld"],
+  ["grassy", "Grasfeld"],
+  ["misty", "Nebelfeld"],
+  ["psychic", "Psychofeld"],
+];
+
+const sides = [
+  { key: "attacker", title: "Angreifer" },
+  { key: "defender", title: "Verteidiger" },
+];
+const sortedItems = [...itemList].sort((a, b) => a.n.localeCompare(b.n, "de"));
+---
+
+<Layout title="Rechner">
+  <h1>Schadensrechner</h1>
+  <p class="meta-note" style="margin-bottom:1.5rem">
+    Rechnet mit der Schadensformel dieses Spiels. Effekte, die noch nicht abgebildet sind, werden
+    beim Ergebnis ausdrücklich genannt – ein Wert ohne Hinweis berücksichtigt alle gewählten Angaben.
+  </p>
+
+  <div id="calc-root" class="calc-root">
+    <div class="calc-sides">
+      {sides.map((side) => (
+        <section class="calc-panel" data-side={side.key}>
+          <h2 class="calc-panel-title">{side.title}</h2>
+
+          <div class="calc-headline">
+            <div class="js-sprite calc-sprite"></div>
+            <div class="calc-headline-main">
+              <div class="calc-combo">
+                <input
+                  type="text"
+                  class="text-input calc-combo-input js-species-input"
+                  role="combobox"
+                  aria-expanded="false"
+                  aria-controls={`${side.key}-species-list`}
+                  aria-autocomplete="list"
+                  aria-label="Pokémon auswählen"
+                  autocomplete="off"
+                  placeholder="Pokémon suchen…"
+                />
+                <ul id={`${side.key}-species-list`} class="calc-combo-list js-species-list" role="listbox" hidden></ul>
+              </div>
+              <div class="js-types pill-list calc-type-row"></div>
+            </div>
+          </div>
+
+          <div class="calc-grid">
+            <label class="calc-field">
+              <span>Level</span>
+              <input type="number" class="text-input js-level" min="1" max="100" value="50" />
+            </label>
+            <label class="calc-field">
+              <span>Wesen</span>
+              <select class="text-input js-nature">
+                {NATURES.map((n) => (
+                  <option value={n.id} selected={n.id === "HARDY"}>
+                    {n.name}{n.up && n.down ? ` (+${STAT_LABELS[n.up]}, −${STAT_LABELS[n.down]})` : ""}
+                  </option>
+                ))}
+              </select>
+            </label>
+            <label class="calc-field">
+              <span>Fähigkeit</span>
+              <select class="text-input js-ability"></select>
+            </label>
+            <label class="calc-field">
+              <span>Item</span>
+              <select class="text-input js-item">
+                <option value="">Keins</option>
+                {sortedItems.map((i) => <option value={i.i}>{i.n}</option>)}
+              </select>
+            </label>
+            <label class="calc-field">
+              <span>Status</span>
+              <select class="text-input js-status">
+                {STATUS_OPTIONS.map(([v, t]) => <option value={v}>{t}</option>)}
+              </select>
+            </label>
+            <label class="calc-field">
+              <span>KP übrig (%)</span>
+              <input type="number" class="text-input js-hp" min="0" max="100" value="100" />
+            </label>
+          </div>
+
+          <details class="calc-details">
+            <summary>DVs, EVs und Statusstufen</summary>
+            <table class="calc-spread">
+              <tr><th></th><th>DV</th><th>EV</th><th>Stufe</th></tr>
+              {STAT_KEYS.map((key) => (
+                <tr>
+                  <th>{STAT_LABELS[key]}</th>
+                  <td><input type="number" class={`text-input js-iv-${key}`} min="0" max="31" value="31" /></td>
+                  <td><input type="number" class={`text-input js-ev-${key}`} min="0" max="252" step="4" value="0" /></td>
+                  <td>
+                    {key === "hp" ? (
+                      <span class="meta-note">–</span>
+                    ) : (
+                      <input type="number" class={`text-input js-stage-${key}`} min="-6" max="6" value="0" />
+                    )}
+                  </td>
+                </tr>
+              ))}
+            </table>
+            <p class="meta-note js-ev-total"></p>
+          </details>
+
+          <div class="js-stats calc-stats"></div>
+
+          {side.key === "attacker" && (
+            <div class="calc-moves">
+              <h3 class="calc-subtitle">Attacken</h3>
+              {[0, 1, 2, 3].map((i) => (
+                <div class="calc-combo js-move-slot">
+                  <input
+                    type="text"
+                    class="text-input calc-combo-input js-move-input"
+                    role="combobox"
+                    aria-expanded="false"
+                    aria-controls={`move-list-${i}`}
+                    aria-autocomplete="list"
+                    aria-label={`Attacke ${i + 1}`}
+                    autocomplete="off"
+                    placeholder={`Attacke ${i + 1}…`}
+                  />
+                  <ul id={`move-list-${i}`} class="calc-combo-list js-move-list" role="listbox" hidden></ul>
+                </div>
+              ))}
+            </div>
+          )}
+        </section>
+      ))}
+    </div>
+
+    <section class="calc-panel js-field">
+      <h2 class="calc-panel-title">Kampffeld</h2>
+      <div class="calc-grid">
+        <label class="calc-field">
+          <span>Wetter</span>
+          <select class="text-input js-weather">
+            {WEATHER_OPTIONS.map(([v, t]) => <option value={v}>{t}</option>)}
+          </select>
+        </label>
+        <label class="calc-field">
+          <span>Terrain</span>
+          <select class="text-input js-terrain">
+            {TERRAIN_OPTIONS.map(([v, t]) => <option value={v}>{t}</option>)}
+          </select>
+        </label>
+      </div>
+      <div class="calc-toggles">
+        <label><input type="checkbox" class="js-doubles" /> Doppelkampf</label>
+        <label><input type="checkbox" class="js-reflect" /> Reflektor</label>
+        <label><input type="checkbox" class="js-lightscreen" /> Lichtschild</label>
+        <label><input type="checkbox" class="js-auroraveil" /> Auroraschleier</label>
+        <label><input type="checkbox" class="js-crit" /> Volltreffer</label>
+      </div>
+    </section>
+
+    <section class="calc-panel">
+      <h2 class="calc-panel-title">Ergebnis</h2>
+      <p class="meta-note js-defender-hp"></p>
+      <div class="js-results calc-results"></div>
+    </section>
+  </div>
+</Layout>
+
+<script>
+  // A bundled module script, deliberately NOT one of the site's `<script data-astro-rerun>` blocks:
+  // those re-run plain JS on every ClientRouter navigation but cannot import modules, and a bundled
+  // module can't be revived by re-inserting its tag either (the browser caches module evaluation).
+  // So mounting is driven by astro:page-load, which fires on first load and after every navigation.
+  import { mountCalculator } from "../../lib/calcUi/mount";
+
+  let teardown: (() => void) | null = null;
+
+  function sync() {
+    const root = document.getElementById("calc-root");
+    if (!root) {
+      // Navigated away from the calculator - drop the old mount's listeners.
+      teardown?.();
+      teardown = null;
+      return;
+    }
+    // A freshly swapped-in root has no marker, which is exactly the signal to remount.
+    if (root.dataset.calcMounted) return;
+    teardown?.();
+    teardown = mountCalculator(root);
+  }
+
+  // Runs at module evaluation (after DOM parse, before window load) so the page is interactive
+  // immediately rather than waiting on fonts and sprites.
+  sync();
+  document.addEventListener("astro:page-load", sync);
+  document.addEventListener("astro:before-swap", () => {
+    teardown?.();
+    teardown = null;
+  });
+</script>
