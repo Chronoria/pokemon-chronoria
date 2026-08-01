@@ -16,6 +16,7 @@ import { parseTypes } from "./parseTypes.ts";
 import { parseMedals } from "./parseMedals.ts";
 import { parseMapLocations } from "./parseMapLocations.ts";
 import { CATEGORY_IDS, isItemEvolutionMethod } from "./itemCategoryRules.ts";
+import { exportCalcData } from "./exportCalcData.ts";
 import { exportItemListXlsx } from "./exportItemList.ts";
 import { exportPokemonListXlsx } from "./exportPokemonList.ts";
 import { exportEncounterListXlsx } from "./exportEncounterList.ts";
@@ -165,6 +166,12 @@ async function main() {
       trainerTypeName: trainers.filter((t) => t.trainerTypeName.fallback).length,
     },
   });
+
+  const calcResult = exportCalcData(pokemon, moves, abilities, items, types);
+  console.log(
+    `calc-data.json geschrieben: ${calcResult.entries} Pokémon-Einträge (inkl. Formen), ` +
+      `${calcResult.moves} Attacken, ${(calcResult.bytes / 1024).toFixed(0)} KB.`
+  );
 
   const xlsxResult = await exportItemListXlsx(items, pokemon);
   console.log(

@@ -117,6 +117,13 @@ export interface Move {
   target: string;
   priority: number;
   flags: string[];
+  /** PBS "FunctionCode" - the move's effect id (e.g. "HitTwoToFiveTimes",
+   *  "RecoilQuarterOfDamageDealt"). This is the only structured signal for multi-hit, recoil,
+   *  fixed-damage and weather-boosted moves, which the damage calculator needs; the flags list
+   *  alone doesn't distinguish them. "None" for moves with no special effect. */
+  functionCode: string;
+  /** PBS "EffectChance" - secondary-effect probability in percent, or null when the move has none. */
+  effectChance: number | null;
   description: TranslatedText;
   // reverse index
   learnedByLevelUp: string[]; // species ids

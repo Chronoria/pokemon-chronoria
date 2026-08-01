@@ -32,6 +32,8 @@ function blockToMove(block: PbsBlock, ctx: TranslationContext, description: Tran
     target: r.Target ?? "",
     priority: Number(r.Priority ?? 0),
     flags: splitList(r.Flags),
+    functionCode: r.FunctionCode ?? "None",
+    effectChance: toNumberOrNull(r.EffectChance),
     description,
     learnedByLevelUp: [],
     learnedByTutorOrEgg: [],
