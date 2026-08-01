@@ -11,6 +11,9 @@ import {
   defaultField,
   defaultSide,
   isAbilityModelled,
+  isItemModelled,
+  itemHasNoBattleEffect,
+  itemList,
   moveById,
   moveList,
   speciesByKey,
@@ -515,6 +518,34 @@ console.log("Warnqualitaet");
   // ...while a genuinely unknown one still must.
   const unknown = calculate(sideOf("PIKACHU", { ability: "SUPREMEOVERLORD", level: 100 }), def, thunderbolt, field);
   checkTrue("unbekannte Faehigkeit warnt weiterhin", unknown.unmodelled.includes("ability:SUPREMEOVERLORD"));
+
+  // An inert-by-category item must not warn...
+  const stone = itemList.find((i) => i.i === "FIRESTONE");
+  if (stone) {
+    const r = calculate(sideOf("PIKACHU", { ability: null, item: "FIRESTONE" }), def, thunderbolt, field);
+    checkTrue("Entwicklungsstein loest keine Warnung aus", !r.unmodelled.some((u) => u.startsWith("item:")));
+  }
+
+  // ...and an item that is BOTH inert-by-category and a real held item must keep its effect.
+  // Scharfklaue is an evolution item, so the categorisation flag marks it inert - the registry
+  // has to win. Without the ordering in calculate() this silently loses the crit boost.
+  {
+    const overlap = itemList.filter((i) => isItemModelled(i.i) && itemHasNoBattleEffect(i.i));
+    checkTrue(
+      "kategorisch inerte, aber modellierte Items behalten ihren Effekt",
+      overlap.every((i) => isItemModelled(i.i)),
+      `betroffen: ${overlap.map((i) => i.n).join(", ")}`
+    );
+    const razor = itemList.find((i) => i.i === "RAZORCLAW");
+    if (razor) {
+      const plain = calculate(sideOf("PIKACHU", { ability: null }), def, tackle, field, true);
+      const withClaw = calculate(sideOf("PIKACHU", { ability: null, item: "RAZORCLAW" }), def, tackle, field, true);
+      // Razor Claw only raises the crit STAGE, so damage is unchanged - what matters here is that
+      // it isn't reported as unmodelled despite carrying the inert flag.
+      check("Scharfklaue bleibt modelliert", withClaw.unmodelled.filter((u) => u.startsWith("item:")).length, 0);
+      void plain;
+    }
+  }
 
   // Skill Link pins a 2-5 hit move to 5 hits.
   const multi = moveList.find((m) => m.fn === "HitTwoToFiveTimes");

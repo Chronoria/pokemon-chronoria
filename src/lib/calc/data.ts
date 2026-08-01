@@ -23,6 +23,9 @@ interface CalcItem {
   ic: string | null;
   iv: string | null;
   d: string;
+  /** 1 when the item provably has no battle effect (see exportCalcData.ts) - suppresses the
+   *  "not modelled" warning for things like evolution stones and sell fodder. */
+  nb?: number;
 }
 
 const data = raw as unknown as {
@@ -60,6 +63,11 @@ export function abilityName(id: string | null | undefined): string {
 export function itemName(id: string | null | undefined): string {
   if (!id) return "—";
   return itemById.get(id)?.n ?? id;
+}
+
+/** True when the item can't affect damage at all, so no "not modelled" warning is warranted. */
+export function itemHasNoBattleEffect(id: string | null | undefined): boolean {
+  return id != null && itemById.get(id)?.nb === 1;
 }
 
 export function typeName(id: string): string {

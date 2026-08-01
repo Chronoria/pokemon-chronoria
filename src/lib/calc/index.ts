@@ -8,7 +8,7 @@ import "./effects/items.ts";
 import { NO_DAMAGE_EFFECT } from "./effects/noDamage.ts";
 
 import { calculateDamage, type CalcInput } from "./damage.ts";
-import { speciesByKey, typeById } from "./data.ts";
+import { itemHasNoBattleEffect, speciesByKey, typeById } from "./data.ts";
 import { ASSUMED_ACTIVE, isAbilityModelled, isItemModelled } from "./registry.ts";
 import { calcAllStats, emptyStats, EV_MAX_PER_STAT, EV_MAX_TOTAL, IV_MAX, LEVEL_MAX } from "./stats.ts";
 import { effectivenessLabel } from "./typechart.ts";
@@ -16,7 +16,7 @@ import type { CalcMove, DamageResult, FieldState, SideState, StatKey } from "./t
 
 export * from "./types.ts";
 export { NATURES, natureById } from "./natures.ts";
-export { speciesList, moveList, abilityList, itemList, typeList, speciesByKey, moveById, itemById, abilityById, typeById, speciesLabel, abilityName, itemName, typeName } from "./data.ts";
+export { speciesList, moveList, abilityList, itemList, typeList, speciesByKey, moveById, itemById, abilityById, typeById, speciesLabel, abilityName, itemName, typeName, itemHasNoBattleEffect } from "./data.ts";
 export { calcAllStats, emptyStats, applyStage, IV_MAX, EV_MAX_PER_STAT, EV_MAX_TOTAL, LEVEL_MAX } from "./stats.ts";
 export { effectivenessLabel } from "./typechart.ts";
 export { isAbilityModelled, isItemModelled, ASSUMED_ACTIVE } from "./registry.ts";
@@ -76,8 +76,12 @@ export function calculate(
   const unmodelled: string[] = [];
   if (needsWarning(attacker.ability)) unmodelled.push(`ability:${attacker.ability}`);
   if (needsWarning(defender.ability)) unmodelled.push(`ability:${defender.ability}`);
-  if (attacker.item && !isItemModelled(attacker.item)) unmodelled.push(`item:${attacker.item}`);
-  if (defender.item && !isItemModelled(defender.item)) unmodelled.push(`item:${defender.item}`);
+  // isItemModelled first, so an item that is both inert-by-category and a real held item (Metall-
+  // mantel counts as an evolution item AND a type booster) keeps its handler.
+  const itemNeedsWarning = (item: string | null) =>
+    item !== null && !isItemModelled(item) && !itemHasNoBattleEffect(item);
+  if (itemNeedsWarning(attacker.item)) unmodelled.push(`item:${attacker.item}`);
+  if (itemNeedsWarning(defender.item)) unmodelled.push(`item:${defender.item}`);
 
   const assumptions: string[] = [];
   for (const ability of [attacker.ability, defender.ability]) {

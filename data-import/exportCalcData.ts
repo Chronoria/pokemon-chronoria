@@ -21,6 +21,26 @@ function packStats(s: Pokemon["baseStats"]): number[] {
   return [s.hp, s.attack, s.defense, s.speed, s.spAtk, s.spDef];
 }
 
+/**
+ * True when an item's categories place it entirely outside battle, so the calculator can stay
+ * silent about it rather than warning that it isn't modelled.
+ *
+ * This is a CATEGORISATION signal, not a proof: a few items are both, e.g. Scharfklaue is an
+ * evolution item (inert by category) and a real crit-boosting held item. Consumers must therefore
+ * consult their own effect registry FIRST and only fall back to this flag - which is exactly what
+ * calculate() in src/lib/calc/index.ts does, and what verifyCalc.ts pins down.
+ *
+ * Deliberately conservative regardless: a wrongly-silenced item would produce a wrong number with
+ * no hint, which is worse than noise. Held-item categories like "typverstaerker" or
+ * "sonstige-kampf-items" are never treated as inert.
+ */
+const INERT_CATEGORIES = new Set(["verkaufsware", "entwicklung", "fossilien", "zutaten"]);
+
+function hasNoBattleEffect(item: Item): boolean {
+  if (item.pocket === 2) return true;
+  return item.categories.length > 0 && item.categories.every((c) => INERT_CATEGORIES.has(c));
+}
+
 export function buildCalcData(
   pokemon: Pokemon[],
   moves: Move[],
@@ -98,6 +118,18 @@ export function buildCalcData(
     // (pocket 8) can never affect damage and would just bloat the payload and clutter the picker.
     it: items
       .filter((i) => i.move === null && i.pocket !== 8 && i.pocket !== 4)
-      .map((i) => ({ i: i.id, n: i.name, ic: i.icon, iv: i.iconVersion, d: i.description })),
+      .map((i) => ({
+        i: i.id,
+        n: i.name,
+        ic: i.icon,
+        iv: i.iconVersion,
+        d: i.description,
+        // "no battle effect": lets the calculator stay quiet about items that cannot influence
+        // damage no matter what (sell fodder, evolution stones, fossils, cooking ingredients,
+        // medicine), instead of warning that they aren't modelled. Consumers must check this
+        // AFTER their own effect registry, so an item that is both - Metallmantel is an evolution
+        // item and a type booster - still gets its real handler.
+        ...(hasNoBattleEffect(i) ? { nb: 1 } : {}),
+      })),
   };
 }
