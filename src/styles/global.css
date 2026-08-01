@@ -1017,6 +1017,15 @@ h2 {
   font-size: 0.85rem;
   font-variant-numeric: tabular-nums;
 }
+.calc-result-total {
+  margin-top: 0.3rem;
+  font-size: 0.85rem;
+  color: var(--text-muted);
+  font-variant-numeric: tabular-nums;
+}
+.calc-result-total strong {
+  color: var(--text);
+}
 .calc-result-bar {
   height: 6px;
   border-radius: 999px;
@@ -1063,6 +1072,12 @@ h2 {
    matters most: a number that silently ignores a chosen ability would be misleading. */
 .calc-warn {
   color: var(--accent-gold);
+}
+/* Weaker than .calc-warn on purpose: an assumption means the number DOES include the effect,
+   it just couldn't be verified - that's a footnote, not a warning. */
+.calc-note {
+  color: var(--text-muted);
+  font-style: italic;
 }
 
 /* ==========================================================================

@@ -181,6 +181,85 @@ ItemEffects.DamageCalcFromTarget.add("METALPOWDER", (ctx) => {
   if (ctx.move.c === "Physical" && isSpecies(ctx.target.species.k, "DITTO")) ctx.multipliers.defense *= 2;
 });
 
+// [core] Deep Sea Tooth is the offensive counterpart to Deep Sea Scale above.
+ItemEffects.DamageCalcFromUser.add("DEEPSEATOOTH", (ctx) => {
+  if (ctx.move.c === "Special" && isSpecies(ctx.user.species.k, "CLAMPERL")) ctx.multipliers.attack *= 2;
+});
+
+// [core] Genesect drives - same 1.2x shape as the memories/plates.
+const DRIVES: [string, string][] = [
+  ["DOUSEDRIVE", "WATER"],
+  ["SHOCKDRIVE", "ELECTRIC"],
+  ["BURNDRIVE", "FIRE"],
+  ["CHILLDRIVE", "ICE"],
+];
+for (const [item, type] of DRIVES) {
+  ItemEffects.DamageCalcFromUser.add(item, (ctx) => {
+    if (ctx.type === type) ctx.multipliers.power *= 1.2;
+  });
+}
+
+// [core] Sinnoh trio orbs: 1.2x on the holder's two signature types.
+// [Gen9] The crystal/globe/core variants copy these (New Item Handlers.rb:172-174).
+const ORBS: [string[], string, string[]][] = [
+  [["ADAMANTORB", "ADAMANTCRYSTAL"], "DIALGA", ["STEEL", "DRAGON"]],
+  [["LUSTROUSORB", "LUSTROUSGLOBE"], "PALKIA", ["WATER", "DRAGON"]],
+  [["GRISEOUSORB", "GRISEOUSCORE"], "GIRATINA", ["GHOST", "DRAGON"]],
+];
+for (const [ids, species, types] of ORBS) {
+  ItemEffects.DamageCalcFromUser.addMany(ids, (ctx) => {
+    if (isSpecies(ctx.user.species.k, species) && types.includes(ctx.type)) ctx.multipliers.power *= 1.2;
+  });
+}
+// [Gen9] Blank Plate behaves as a Normal-type booster (copied from Silk Scarf).
+ItemEffects.DamageCalcFromUser.add("BLANKPLATE", (ctx) => {
+  if (ctx.type === "NORMAL") ctx.multipliers.power *= 1.2;
+});
+
+// [Gen9] Punching Glove: 1.1x on punching moves.
+ItemEffects.DamageCalcFromUser.add("PUNCHINGGLOVE", (ctx) => {
+  if (ctx.move.f.includes("Punching")) ctx.multipliers.power *= 1.1;
+});
+
+// [Gen9] Ogerpon masks: a flat 1.2x final multiplier, but only for Ogerpon itself.
+ItemEffects.DamageCalcFromUser.addMany(
+  ["WELLSPRINGMASK", "HEARTHFLAMEMASK", "CORNERSTONEMASK"],
+  (ctx) => {
+    if (isSpecies(ctx.user.species.k, "OGERPON")) ctx.multipliers.final *= 1.2;
+  }
+);
+
+// [core] Resist berries halve a super-effective hit of their type (Chilan Berry covers Normal
+// regardless of effectiveness). Single-use, so this assumes the berry is still held.
+const RESIST_BERRIES: [string, string][] = [
+  ["OCCABERRY", "FIRE"],
+  ["PASSHOBERRY", "WATER"],
+  ["WACANBERRY", "ELECTRIC"],
+  ["RINDOBERRY", "GRASS"],
+  ["YACHEBERRY", "ICE"],
+  ["CHOPLEBERRY", "FIGHTING"],
+  ["KEBIABERRY", "POISON"],
+  ["SHUCABERRY", "GROUND"],
+  ["COBABERRY", "FLYING"],
+  ["PAYAPABERRY", "PSYCHIC"],
+  ["TANGABERRY", "BUG"],
+  ["CHARTIBERRY", "ROCK"],
+  ["KASIBBERRY", "GHOST"],
+  ["HABANBERRY", "DRAGON"],
+  ["COLBURBERRY", "DARK"],
+  ["BABIRIBERRY", "STEEL"],
+  ["ROSELIBERRY", "FAIRY"],
+];
+for (const [berry, type] of RESIST_BERRIES) {
+  ItemEffects.DamageCalcFromTarget.add(berry, (ctx) => {
+    if (ctx.type === type && ctx.typeMod > 1) ctx.multipliers.final /= 2;
+  });
+}
+// Chilan Berry is the odd one out: halves Normal damage without needing super-effectiveness.
+ItemEffects.DamageCalcFromTarget.add("CHILANBERRY", (ctx) => {
+  if (ctx.type === "NORMAL") ctx.multipliers.final /= 2;
+});
+
 // ---------------------------------------------------------------------------------------------
 // Critical hit items
 // ---------------------------------------------------------------------------------------------

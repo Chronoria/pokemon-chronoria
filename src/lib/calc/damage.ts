@@ -11,6 +11,8 @@
 //     Showdown's pokeRound/65536 chain would give different results and must not be introduced.
 //   * Only five roundings happen in total: four `.round` (half-up) and one integer floor-division
 //     chain in the middle.
+import { abilityName } from "./data.ts";
+import { HIT_COUNTS, POWER_MODIFIERS, SPECIAL_DAMAGE, weightBasedPower } from "./effects/moves.ts";
 import { AbilityEffects, ItemEffects } from "./registry.ts";
 import { applyStage, calcAllStats, NEUTRAL_STAGE_INDEX } from "./stats.ts";
 import { typeMod as calcTypeMod } from "./typechart.ts";
@@ -190,6 +192,24 @@ export function calculateDamage(input: CalcInput): DamageResult {
   });
 
   if (move.c === "Status") return zero("Statusattacke - verursacht keinen Schaden.");
+
+  // Moves whose damage doesn't come from the formula (Seismic Toss, OHKO moves, counters) are
+  // reported as what they are. Running the normal formula on them would invent a number.
+  const special = SPECIAL_DAMAGE[move.fn];
+  if (special) {
+    const { damage, note } = special(attacker, defender);
+    if (damage === null) return { ...zero(note), typeMod: 1 };
+    return {
+      rolls: new Array(16).fill(damage),
+      min: damage,
+      max: damage,
+      percent: [(damage / targetMaxHP) * 100, (damage / targetMaxHP) * 100],
+      targetMaxHP,
+      typeMod: 1,
+      note,
+    };
+  }
+
   if (move.p === null || move.p <= 0) return zero("Diese Attacke hat keine feste Stärke.");
 
   const attackerStats = calcAllStats(attacker.species.b, attacker.level, attacker.ivs, attacker.evs, attacker.nature);
@@ -213,17 +233,24 @@ export function calculateDamage(input: CalcInput): DamageResult {
     const rawAtk = useTargetAttack ? defenderStats[atkKey] : attackerStats[atkKey];
     const rawDef = defenderStats[defKey];
 
+    // Base power: a weight- or HP-scaled function code replaces it outright, otherwise the PBS
+    // value stands. Both are computed before any multiplier, matching pbBaseDamage.
+    const weightPower = weightBasedPower(move.fn, attacker, defender);
+    const basePower = weightPower ?? move.p;
+
     const ctx: EffectContext = {
       user: attacker,
       target: defender,
       move,
       type: baseCtxType,
-      baseDamage: move.p,
+      baseDamage: basePower,
       field,
       multipliers,
       typeMod: 1,
       isCritical,
     };
+    const powerMod = POWER_MODIFIERS[move.fn];
+    if (powerMod) multipliers.power *= powerMod(attacker, defender, move);
     if (typeHandler) ctx.type = typeHandler(ctx);
     ctx.typeMod = calcTypeMod(ctx.type, defender.species.t, typeById);
     resolvedType = ctx.type;
@@ -231,6 +258,18 @@ export function calculateDamage(input: CalcInput): DamageResult {
 
     if (ctx.typeMod === 0) {
       return { ...zero("Keine Wirkung - der Verteidiger ist immun."), typeMod: 0 };
+    }
+
+    // Ability-granted immunity (Levitate, Volt Absorb, Wonder Guard, ...). Mold Breaker ignores
+    // these, matching Essentials. Checked after typeMod so Wonder Guard can read it.
+    if (!moldBreaker(attacker)) {
+      const immune = AbilityEffects.MoveImmunity.get(defender.ability);
+      if (immune?.(ctx)) {
+        return {
+          ...zero(`Keine Wirkung - ${abilityName(defender.ability)} macht den Verteidiger immun.`),
+          typeMod: 0,
+        };
+      }
     }
 
     // Stat stages are applied here, floored, BEFORE any multiplier - matching Essentials.
@@ -261,6 +300,14 @@ export function calculateDamage(input: CalcInput): DamageResult {
   rolls.sort((a, b) => a - b);
   const min = rolls[0];
   const max = rolls[rolls.length - 1];
+
+  const notes: string[] = [];
+  if (resolvedType !== baseCtxType) notes.push(`Attackentyp geändert zu ${resolvedType}.`);
+  // Multi-hit moves: the rolls above are ONE hit, so report the count too rather than letting a
+  // 2-5x move read as a single weak hit.
+  const hits = HIT_COUNTS[move.fn];
+  if (hits) notes.push(`${hits.note} - Werte gelten je Treffer.`);
+
   return {
     rolls,
     min,
@@ -268,6 +315,7 @@ export function calculateDamage(input: CalcInput): DamageResult {
     percent: [(min / targetMaxHP) * 100, (max / targetMaxHP) * 100],
     targetMaxHP,
     typeMod: resolvedTypeMod,
-    note: resolvedType !== baseCtxType ? `Attackentyp geändert zu ${resolvedType}.` : undefined,
+    hits: hits ? { min: hits.min, max: hits.max } : undefined,
+    note: notes.length ? notes.join(" ") : undefined,
   };
 }

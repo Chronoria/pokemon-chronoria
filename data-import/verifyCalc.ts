@@ -5,7 +5,7 @@
 // The engine is DOM-free on purpose so it can be exercised here. These cases pin down the parts
 // of the formula that are easy to get subtly wrong (rounding order, stage application, the crit
 // clamp, spread reduction) - a UI can look perfectly fine while quietly producing wrong numbers.
-import { calculate, defaultField, defaultSide, speciesByKey, moveById, statsFor } from "../src/lib/calc/index.ts";
+import { calculate, defaultField, defaultSide, speciesByKey, moveById, moveList, statsFor } from "../src/lib/calc/index.ts";
 import { calcHP, calcStat } from "../src/lib/calc/stats.ts";
 import type { SideState } from "../src/lib/calc/types.ts";
 
@@ -256,6 +256,217 @@ const findDefender = (pred: (types: string[]) => boolean) =>
     const r = calculate(sideOf("PIKACHU"), sideOf("BULBASAUR"), growl, field);
     check("Statusattacke verursacht 0 Schaden", [r.min, r.max], [0, 0]);
     checkTrue("Statusattacke wird erklärt", !!r.note);
+  }
+}
+
+// --- Ported ability handlers ------------------------------------------------------------------
+// These are transcriptions of real Ruby handlers, so the checks target the things a transcription
+// gets wrong: which accumulator was used, and whether a stacking effect stacks.
+console.log("Portierte Faehigkeiten");
+{
+  const def = sideOf("BULBASAUR", { ability: null });
+  const base = (ability: string | null, move = thunderbolt, f = field) =>
+    calculate(sideOf("PIKACHU", { ability, level: 100 }), def, move, f).max;
+
+  const plain = base(null);
+
+  // Arcane Mage: 1.5x attack on Fire/Ice/Electric. Thunderbolt is Electric, so it applies.
+  checkTrue(
+    "Arkanmagier verstärkt Elektro 1.5x",
+    Math.abs(base("ARCANEMAGE") / plain - 1.5) < 0.03,
+    `Verhältnis ${(base("ARCANEMAGE") / plain).toFixed(3)}`
+  );
+  // ...but not on a Fighting move.
+  const brickBreak = moveById.get("BRICKBREAK");
+  if (brickBreak) {
+    const p = calculate(sideOf("PIKACHU", { ability: null, level: 100 }), def, brickBreak, field).max;
+    const a = calculate(sideOf("PIKACHU", { ability: "ARCANEMAGE", level: 100 }), def, brickBreak, field).max;
+    check("Arkanmagier lässt Kampf-Attacken unberührt", a, p);
+  }
+
+  // Rusted Feathers halves its own attack unconditionally.
+  checkTrue(
+    "Rostfedern halbiert eigenen Angriff",
+    Math.abs(base("RUSTEDFEATHERS") / plain - 0.5) < 0.03,
+    `Verhältnis ${(base("RUSTEDFEATHERS") / plain).toFixed(3)}`
+  );
+
+  // Neutralize makes the move typeless: no STAB, no type chart, but x1.8 attack. Against a
+  // Grass/Poison defender, Electric would normally be neutral (1x) with STAB 1.5.
+  {
+    const before = calculate(sideOf("PIKACHU", { ability: null, level: 100 }), def, thunderbolt, field);
+    const neutral = calculate(sideOf("PIKACHU", { ability: "NEUTRALIZE", level: 100 }), def, thunderbolt, field);
+    check("Neutralisierung macht die Attacke typlos", neutral.typeMod, 1);
+    // Expectation is derived from the defender's ACTUAL matchup rather than assumed: Neutralize
+    // trades away STAB (1.5) and the type chart for a flat 1.8x attack.
+    const expected = 1.8 / (before.typeMod * 1.5);
+    checkTrue(
+      "Neutralisierung: 1.8x Angriff ohne STAB und Typentabelle",
+      Math.abs(neutral.max / plain - expected) < 0.05,
+      `erwartet ~${expected.toFixed(3)}, erhalten ${(neutral.max / plain).toFixed(3)}`
+    );
+  }
+
+  // Unconcerned stacks against a Rock/Steel target - the Ruby applies x2 per matching type.
+  {
+    const rockSteel = speciesList.find((s) => !s.fl && s.t.includes("ROCK") && s.t.includes("STEEL"));
+    const rockOnly = speciesList.find((s) => !s.fl && s.t.includes("ROCK") && !s.t.includes("STEEL"));
+    // Max EVs and a strong Normal move: Normal is resisted by both Rock and Steel (0.25x total),
+    // so with a weak move the formula's flat "+ 2" term is a large share of the result and the
+    // ratio can't reach 4 no matter how correct the multiplier is.
+    const bigHit = moveById.get("BODYSLAM") ?? tackle;
+    const tackleUser = (ability: string | null, target: string) =>
+      calculate(
+        sideOf("PIKACHU", { ability, level: 100, evs: { ...defaultSide("PIKACHU").evs, attack: 252 } }),
+        sideOf(target, { ability: null }),
+        bigHit,
+        field
+      ).max;
+    if (rockOnly) {
+      const ratio = tackleUser("UNCONCERNED", rockOnly.k) / tackleUser(null, rockOnly.k);
+      checkTrue("Unbekümmert 2x gegen Gestein", Math.abs(ratio - 2) < 0.05, `Verhältnis ${ratio.toFixed(3)}`);
+    }
+    if (rockSteel) {
+      const ratio = tackleUser("UNCONCERNED", rockSteel.k) / tackleUser(null, rockSteel.k);
+      checkTrue(
+        "Unbekümmert stapelt auf 4x gegen Gestein/Stahl",
+        Math.abs(ratio - 4) < 0.1,
+        `Verhältnis ${ratio.toFixed(3)}`
+      );
+    }
+  }
+
+  // Orichalcum Pulse only fires on physical moves in sun.
+  {
+    const sunField = { ...field, weather: "sun" as const };
+    const p = calculate(sideOf("PIKACHU", { ability: null, level: 100 }), def, tackle, sunField).max;
+    const a = calculate(sideOf("PIKACHU", { ability: "ORICHALCUMPULSE", level: 100 }), def, tackle, sunField).max;
+    checkTrue("Orichalkum-Puls 4/3 physisch bei Sonne", Math.abs(a / p - 4 / 3) < 0.04, `Verhältnis ${(a / p).toFixed(3)}`);
+    const pNoSun = calculate(sideOf("PIKACHU", { ability: null, level: 100 }), def, tackle, field).max;
+    const aNoSun = calculate(sideOf("PIKACHU", { ability: "ORICHALCUMPULSE", level: 100 }), def, tackle, field).max;
+    check("Orichalkum-Puls ohne Sonne wirkungslos", aNoSun, pNoSun);
+  }
+
+  // Assumption reporting: Flash Fire is applied, but the result must say it was assumed active.
+  {
+    const r = calculate(sideOf("PIKACHU", { ability: "FLASHFIRE", level: 100 }), def, flamethrower, field);
+    checkTrue("Flammkörper-Annahme wird gemeldet", r.assumptions.some((a) => a.startsWith("FLASHFIRE")));
+    checkTrue("angenommene Fähigkeit gilt nicht als unmodelliert", !r.unmodelled.includes("ability:FLASHFIRE"));
+  }
+
+  // Supreme Overlord needs battle state that can't be assumed - must be reported as unmodelled.
+  {
+    const r = calculate(sideOf("PIKACHU", { ability: "SUPREMEOVERLORD", level: 100 }), def, thunderbolt, field);
+    checkTrue("Feldherr wird als nicht modelliert gemeldet", r.unmodelled.includes("ability:SUPREMEOVERLORD"));
+  }
+}
+
+// --- Ability immunities -------------------------------------------------------------------------
+// The highest-stakes category: an unmodelled immunity turns a guaranteed 0 into a full hit.
+console.log("Faehigkeits-Immunitaeten");
+{
+  const atk = sideOf("PIKACHU", { ability: null, level: 100 });
+  const immune = (ability: string, moveId: string, defenderKey = "BULBASAUR") => {
+    const move = moveById.get(moveId);
+    if (!move) return null;
+    return calculate(atk, sideOf(defenderKey, { ability }), move, field);
+  };
+
+  const lev = immune("LEVITATE", "EARTHQUAKE");
+  if (lev) check("Schwebe: immun gegen Boden", [lev.min, lev.max, lev.typeMod], [0, 0, 0]);
+
+  const volt = immune("VOLTABSORB", "THUNDERBOLT");
+  if (volt) check("Voltabsorber: immun gegen Elektro", [volt.min, volt.max], [0, 0]);
+
+  const sap = immune("SAPSIPPER", "VINEWHIP");
+  if (sap) check("Vegetarier: immun gegen Pflanze", [sap.min, sap.max], [0, 0]);
+
+  // Mold Breaker ignores the immunity.
+  {
+    const eq = moveById.get("EARTHQUAKE")!;
+    const breaker = calculate(
+      sideOf("PIKACHU", { ability: "MOLDBREAKER", level: 100 }),
+      sideOf("BULBASAUR", { ability: "LEVITATE" }),
+      eq,
+      field
+    );
+    checkTrue("Überbrückung hebt Schwebe auf", breaker.max > 0, `erhielt ${breaker.max}`);
+  }
+
+  // Wonder Guard lets only super-effective damage through.
+  {
+    const flying = speciesList.find((s) => !s.fl && s.t.includes("FLYING"));
+    if (flying) {
+      const neutral = calculate(atk, sideOf(flying.k, { ability: "WONDERGUARD" }), tackle, field);
+      check("Wunderwache blockt nicht sehr effektive Treffer", [neutral.min, neutral.max], [0, 0]);
+      const superEff = calculate(atk, sideOf(flying.k, { ability: "WONDERGUARD" }), thunderbolt, field);
+      checkTrue("Wunderwache lässt sehr effektive Treffer durch", superEff.max > 0, `erhielt ${superEff.max}`);
+    }
+  }
+
+  // An immunity ability must not also be reported as unmodelled.
+  {
+    const r = calculate(atk, sideOf("BULBASAUR", { ability: "LEVITATE" }), moveById.get("EARTHQUAKE")!, field);
+    checkTrue("Schwebe gilt als modelliert", !r.unmodelled.includes("ability:LEVITATE"));
+  }
+}
+
+// --- Move function codes -----------------------------------------------------------------------
+console.log("Attacken-Funktionscodes");
+{
+  const def = sideOf("BULBASAUR", { ability: null });
+  const atk = sideOf("PIKACHU", { ability: null, level: 100 });
+
+  // Fixed-damage moves must NOT go through the formula.
+  const seismicToss = moveList.find((m) => m.fn === "FixedDamageUserLevel");
+  if (seismicToss) {
+    const r = calculate(atk, def, seismicToss, field);
+    check("Fester Schaden = Level des Anwenders", [r.min, r.max], [100, 100]);
+    checkTrue("Fester Schaden wird erklärt", !!r.note);
+  }
+
+  // OHKO moves report themselves rather than inventing a number.
+  const ohko = moveList.find((m) => m.fn === "OHKO");
+  if (ohko) {
+    const r = calculate(atk, def, ohko, field);
+    check("K.o.-Attacke liefert keinen Zahlenwert", [r.min, r.max], [0, 0]);
+    checkTrue("K.o.-Attacke wird erklärt", (r.note ?? "").includes("K.o."));
+  }
+
+  // Multi-hit moves expose their hit count so the per-hit value isn't mistaken for the total.
+  const doubleKick = moveList.find((m) => m.fn === "HitTwoTimes");
+  if (doubleKick) {
+    const r = calculate(atk, def, doubleKick, field);
+    check("Zweifachtreffer meldet 2 Treffer", [r.hits?.min, r.hits?.max], [2, 2]);
+  }
+  const multi = moveList.find((m) => m.fn === "HitTwoToFiveTimes");
+  if (multi) {
+    const r = calculate(atk, def, multi, field);
+    check("2-5-Fachtreffer meldet die Spanne", [r.hits?.min, r.hits?.max], [2, 5]);
+  }
+
+  // Weight-based power reads the real weights from the data.
+  const heavyMove = moveList.find((m) => m.fn === "PowerHigherWithTargetWeight");
+  if (heavyMove) {
+    const lightTarget = speciesList.find((s) => !s.fl && s.w > 0 && s.w < 10);
+    const heavyTarget = speciesList.find((s) => !s.fl && s.w >= 200);
+    if (lightTarget && heavyTarget) {
+      const light = calculate(atk, sideOf(lightTarget.k, { ability: null }), heavyMove, field);
+      const heavy = calculate(atk, sideOf(heavyTarget.k, { ability: null }), heavyMove, field);
+      checkTrue(
+        `Gewichtsbasierte Stärke: ${heavyTarget.n} (${heavyTarget.w}kg) > ${lightTarget.n} (${lightTarget.w}kg)`,
+        heavy.max / heavy.typeMod > light.max / light.typeMod,
+        `${heavy.max} (x${heavy.typeMod}) vs ${light.max} (x${light.typeMod})`
+      );
+    }
+  }
+
+  // HP-scaled power: Eruption-likes hit hard at full HP and weakly at low HP.
+  const eruption = moveList.find((m) => m.fn === "PowerHigherWithUserHP");
+  if (eruption) {
+    const full = calculate({ ...atk, hpFraction: 1 }, def, eruption, field).max;
+    const low = calculate({ ...atk, hpFraction: 0.25 }, def, eruption, field).max;
+    checkTrue("KP-abhängige Stärke sinkt mit den KP", low < full / 2, `voll ${full}, bei 25% ${low}`);
   }
 }
 

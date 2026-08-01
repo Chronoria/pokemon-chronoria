@@ -59,7 +59,13 @@ class HookTable<F> {
   }
 }
 
+/** Returns true when the ability makes its holder immune to the incoming move. */
+export type MoveImmunityHandler = (ctx: EffectContext) => boolean;
+
 export const AbilityEffects = {
+  /** Mirrors Battle::AbilityEffects::MoveImmunity. Far more impactful than any multiplier: an
+   *  unmodelled immunity turns a guaranteed 0 into a full-damage reading. */
+  MoveImmunity: new HookTable<MoveImmunityHandler>(),
   DamageCalcFromUser: new HookTable<DamageCalcHandler>(),
   DamageCalcFromAlly: new HookTable<DamageCalcHandler>(),
   DamageCalcFromTarget: new HookTable<DamageCalcHandler>(),
@@ -76,6 +82,22 @@ export const ItemEffects = {
   CriticalCalcFromUser: new HookTable<CritCalcHandler>(),
   CriticalCalcFromTarget: new HookTable<CritCalcHandler>(),
 };
+
+/**
+ * Abilities whose real effect depends on battle state a calculator has no way to know (whether
+ * Flash Fire has already absorbed a hit, whether the user is moving last, ...). They ARE applied,
+ * assuming the favourable case, and the UI says so - reporting the assumption is the difference
+ * between a useful number and a misleading one.
+ *
+ * Abilities needing state that can't even be assumed sensibly (Supreme Overlord counts fainted
+ * allies) are deliberately left unregistered instead, so they show up as "not modelled".
+ */
+export const ASSUMED_ACTIVE = new Map<string, string>([
+  ["FLASHFIRE", "als bereits aktiviert angenommen"],
+  ["ANALYTIC", "angenommen, der Angreifer ist zuletzt am Zug"],
+  ["BOULDERBARRIER", "als aktiv angenommen"],
+  ["STAKEOUT", "angenommen, das Ziel ist gerade eingewechselt"],
+]);
 
 /**
  * Abilities the formula handles directly rather than through a hook, because Essentials does the

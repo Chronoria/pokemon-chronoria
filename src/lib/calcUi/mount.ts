@@ -290,6 +290,12 @@ export function mountCalculator(root: HTMLElement): () => void {
         const [kind, id] = entry.split(":");
         return kind === "ability" ? abilityName(id) : itemName(id);
       });
+      // Effects that WERE applied, but only under an assumption - shown separately from the
+      // "not modelled" list, since the number does account for them.
+      const assumptionNotes = out.assumptions.map((entry) => {
+        const idx = entry.indexOf(":");
+        return `${abilityName(entry.slice(0, idx))}: ${entry.slice(idx + 1)}`;
+      });
 
       rows.push(
         `<div class="calc-result" data-move="${escapeHtml(move.i)}">` +
@@ -302,14 +308,24 @@ export function mountCalculator(root: HTMLElement): () => void {
             ? `<div class="calc-result-empty">Kein Schaden</div>`
             : `<div class="calc-result-main">` +
               `<span class="calc-result-range">${out.min} – ${out.max}</span>` +
-              `<span class="calc-result-pct">${pct[0].toFixed(1)} – ${pct[1].toFixed(1)} % der KP</span>` +
+              `<span class="calc-result-pct">${pct[0].toFixed(1)} – ${pct[1].toFixed(1)} % der KP${out.hits ? " je Treffer" : ""}</span>` +
               `</div>` +
+              // For multi-hit moves the per-hit figure alone badly understates the move, so the
+              // full-connect total is shown alongside it.
+              (out.hits
+                ? `<div class="calc-result-total">Bei ${out.hits.min === out.hits.max ? out.hits.min : `${out.hits.min}–${out.hits.max}`} Treffern: ` +
+                  `<strong>${out.min * out.hits.min} – ${out.max * out.hits.max}</strong> ` +
+                  `(${((out.min * out.hits.min) / out.targetMaxHP * 100).toFixed(1)} – ${((out.max * out.hits.max) / out.targetMaxHP * 100).toFixed(1)} %)</div>`
+                : "") +
               `<div class="calc-result-bar"><span style="width:${Math.min(100, pct[1])}%"></span></div>` +
               `<details class="calc-result-rolls"><summary>Mögliche Schadenswerte</summary>` +
               `<div class="calc-rolls">${out.rolls.map((r) => `<span>${r}</span>`).join("")}</div>` +
               `</details>`) +
           (unmodelledNames.length
             ? `<p class="calc-warn calc-result-note">Noch nicht berücksichtigt: ${escapeHtml(unmodelledNames.join(", "))}</p>`
+            : "") +
+          (assumptionNotes.length
+            ? `<p class="calc-note calc-result-note">${escapeHtml(assumptionNotes.join(" · "))}</p>`
             : "") +
           `</div>`
       );

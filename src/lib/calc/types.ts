@@ -114,6 +114,9 @@ export interface DamageResult {
   percent: [number, number];
   targetMaxHP: number;
   typeMod: number;
-  /** Set when the move can't deal damage at all (status move, or immune) - rolls will be all 0. */
+  /** For multi-hit moves: how often it strikes. `rolls`/`min`/`max` are PER HIT when set. */
+  hits?: { min: number; max: number };
+  /** Explains anything the plain numbers don't convey - a status/immune zero, a changed move
+   *  type, a multi-hit count, or a fixed-damage rule. */
   note?: string;
 }
