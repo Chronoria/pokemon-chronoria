@@ -16,7 +16,7 @@ import { parseTypes } from "./parseTypes.ts";
 import { parseMedals } from "./parseMedals.ts";
 import { parseMapLocations } from "./parseMapLocations.ts";
 import { CATEGORY_IDS, isItemEvolutionMethod } from "./itemCategoryRules.ts";
-import { exportCalcData } from "./exportCalcData.ts";
+import { buildCalcData } from "./exportCalcData.ts";
 import { exportItemListXlsx } from "./exportItemList.ts";
 import { exportPokemonListXlsx } from "./exportPokemonList.ts";
 import { exportEncounterListXlsx } from "./exportEncounterList.ts";
@@ -144,6 +144,14 @@ async function main() {
   writeJson("encounters", encounters);
   writeJson("types", types);
   writeJson("medals", medals);
+  // Slim client-side payload for the damage calculator - see exportCalcData.ts for why it's a
+  // separate projection rather than a reuse of the files above.
+  const calcData = buildCalcData(pokemon, moves, abilities, items, types);
+  writeJson("calc", calcData);
+  console.log(
+    `calc.json: ${calcData.p.length} Pokémon-Einträge (inkl. Formen), ${calcData.m.length} Attacken, ` +
+      `${calcData.it.length} tragbare Items, ${(Buffer.byteLength(JSON.stringify(calcData)) / 1024).toFixed(0)} KB.`
+  );
   writeJson("meta", {
     generatedAt: new Date().toISOString(),
     counts: {
@@ -166,12 +174,6 @@ async function main() {
       trainerTypeName: trainers.filter((t) => t.trainerTypeName.fallback).length,
     },
   });
-
-  const calcResult = exportCalcData(pokemon, moves, abilities, items, types);
-  console.log(
-    `calc-data.json geschrieben: ${calcResult.entries} Pokémon-Einträge (inkl. Formen), ` +
-      `${calcResult.moves} Attacken, ${(calcResult.bytes / 1024).toFixed(0)} KB.`
-  );
 
   const xlsxResult = await exportItemListXlsx(items, pokemon);
   console.log(

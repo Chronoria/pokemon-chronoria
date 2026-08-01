@@ -1,0 +1,195 @@
+// Held item damage effects.
+//
+// Same provenance convention as abilities.ts. Item battle effects exist nowhere in the parsed
+// data (items.json carries only German prose descriptions and Fling/NaturalGift flags), so every
+// entry here is a hand-transcribed handler.
+import { ItemEffects } from "../registry.ts";
+
+// ---------------------------------------------------------------------------------------------
+// Flat power / attack boosters
+// ---------------------------------------------------------------------------------------------
+// [core] Life Orb: 1.3x power (the 10% recoil is not a damage-calc concern).
+ItemEffects.DamageCalcFromUser.add("LIFEORB", (ctx) => {
+  ctx.multipliers.power *= 1.3;
+});
+
+// [core]/[DBK] Choice items boost the matching attacking stat by 1.5x. DBK re-registers these
+// with a `!move.powerMove?` guard; power moves aren't modelled yet, so this is the plain form.
+ItemEffects.DamageCalcFromUser.add("CHOICEBAND", (ctx) => {
+  if (ctx.move.c === "Physical") ctx.multipliers.attack *= 1.5;
+});
+ItemEffects.DamageCalcFromUser.add("CHOICESPECS", (ctx) => {
+  if (ctx.move.c === "Special") ctx.multipliers.attack *= 1.5;
+});
+
+// [core] Muscle Band / Wise Glasses: 1.1x power on the matching category.
+ItemEffects.DamageCalcFromUser.add("MUSCLEBAND", (ctx) => {
+  if (ctx.move.c === "Physical") ctx.multipliers.power *= 1.1;
+});
+ItemEffects.DamageCalcFromUser.add("WISEGLASSES", (ctx) => {
+  if (ctx.move.c === "Special") ctx.multipliers.power *= 1.1;
+});
+
+// [core] Expert Belt: 1.2x on super-effective hits.
+ItemEffects.DamageCalcFromUser.add("EXPERTBELT", (ctx) => {
+  if (ctx.typeMod > 1) ctx.multipliers.final *= 1.2;
+});
+
+// ---------------------------------------------------------------------------------------------
+// Type-boosting held items (1.2x on their type)
+// ---------------------------------------------------------------------------------------------
+// The classic held boosters. Plates, Silvally memories and Genesect drives share the same 1.2x
+// shape and are registered from the same table.
+const TYPE_ITEMS: [string, string][] = [
+  ["CHARCOAL", "FIRE"],
+  ["MYSTICWATER", "WATER"],
+  ["MAGNET", "ELECTRIC"],
+  ["MIRACLESEED", "GRASS"],
+  ["NEVERMELTICE", "ICE"],
+  ["BLACKBELT", "FIGHTING"],
+  ["POISONBARB", "POISON"],
+  ["SOFTSAND", "GROUND"],
+  ["SHARPBEAK", "FLYING"],
+  ["TWISTEDSPOON", "PSYCHIC"],
+  ["SILVERPOWDER", "BUG"],
+  ["HARDSTONE", "ROCK"],
+  ["SPELLTAG", "GHOST"],
+  ["DRAGONFANG", "DRAGON"],
+  ["BLACKGLASSES", "DARK"],
+  ["METALCOAT", "STEEL"],
+  ["SILKSCARF", "NORMAL"],
+  ["FAIRYFEATHER", "FAIRY"], // [Gen9]
+  // Arceus plates
+  ["FLAMEPLATE", "FIRE"],
+  ["SPLASHPLATE", "WATER"],
+  ["ZAPPLATE", "ELECTRIC"],
+  ["MEADOWPLATE", "GRASS"],
+  ["ICICLEPLATE", "ICE"],
+  ["FISTPLATE", "FIGHTING"],
+  ["TOXICPLATE", "POISON"],
+  ["EARTHPLATE", "GROUND"],
+  ["SKYPLATE", "FLYING"],
+  ["MINDPLATE", "PSYCHIC"],
+  ["INSECTPLATE", "BUG"],
+  ["STONEPLATE", "ROCK"],
+  ["SPOOKYPLATE", "GHOST"],
+  ["DRACOPLATE", "DRAGON"],
+  ["DREADPLATE", "DARK"],
+  ["IRONPLATE", "STEEL"],
+  ["PIXIEPLATE", "FAIRY"],
+  // Silvally memories
+  ["FIREMEMORY", "FIRE"],
+  ["WATERMEMORY", "WATER"],
+  ["ELECTRICMEMORY", "ELECTRIC"],
+  ["GRASSMEMORY", "GRASS"],
+  ["ICEMEMORY", "ICE"],
+  ["FIGHTINGMEMORY", "FIGHTING"],
+  ["POISONMEMORY", "POISON"],
+  ["GROUNDMEMORY", "GROUND"],
+  ["FLYINGMEMORY", "FLYING"],
+  ["PSYCHICMEMORY", "PSYCHIC"],
+  ["BUGMEMORY", "BUG"],
+  ["ROCKMEMORY", "ROCK"],
+  ["GHOSTMEMORY", "GHOST"],
+  ["DRAGONMEMORY", "DRAGON"],
+  ["DARKMEMORY", "DARK"],
+  ["STEELMEMORY", "STEEL"],
+  ["FAIRYMEMORY", "FAIRY"],
+];
+for (const [item, type] of TYPE_ITEMS) {
+  ItemEffects.DamageCalcFromUser.add(item, (ctx) => {
+    if (ctx.type === type) ctx.multipliers.power *= 1.2;
+  });
+}
+
+// [core] Incenses that boost a type, same 1.2x shape.
+const INCENSE: [string, string][] = [
+  ["SEAINCENSE", "WATER"],
+  ["WAVEINCENSE", "WATER"],
+  ["ROSEINCENSE", "GRASS"],
+  ["ODDINCENSE", "PSYCHIC"],
+  ["ROCKINCENSE", "ROCK"],
+];
+for (const [item, type] of INCENSE) {
+  ItemEffects.DamageCalcFromUser.add(item, (ctx) => {
+    if (ctx.type === type) ctx.multipliers.power *= 1.2;
+  });
+}
+
+// [core] Type gems: 1.3x, single use.
+const GEMS: [string, string][] = [
+  ["FIREGEM", "FIRE"], ["WATERGEM", "WATER"], ["ELECTRICGEM", "ELECTRIC"], ["GRASSGEM", "GRASS"],
+  ["ICEGEM", "ICE"], ["FIGHTINGGEM", "FIGHTING"], ["POISONGEM", "POISON"], ["GROUNDGEM", "GROUND"],
+  ["FLYINGGEM", "FLYING"], ["PSYCHICGEM", "PSYCHIC"], ["BUGGEM", "BUG"], ["ROCKGEM", "ROCK"],
+  ["GHOSTGEM", "GHOST"], ["DRAGONGEM", "DRAGON"], ["DARKGEM", "DARK"], ["STEELGEM", "STEEL"],
+  ["NORMALGEM", "NORMAL"], ["FAIRYGEM", "FAIRY"],
+];
+for (const [item, type] of GEMS) {
+  ItemEffects.DamageCalcFromUser.add(item, (ctx) => {
+    if (ctx.type === type) ctx.multipliers.power *= 1.3;
+  });
+}
+
+// ---------------------------------------------------------------------------------------------
+// Species-specific items
+// ---------------------------------------------------------------------------------------------
+// [core] These check the holder's species, which is why CalcSpecies keeps the base id in `k`
+// (form entries are "SPECIES#n", so a startsWith check covers both base and form).
+const isSpecies = (key: string, species: string) => key === species || key.startsWith(`${species}#`);
+
+ItemEffects.DamageCalcFromUser.add("THICKCLUB", (ctx) => {
+  if (
+    ctx.move.c === "Physical" &&
+    (isSpecies(ctx.user.species.k, "CUBONE") || isSpecies(ctx.user.species.k, "MAROWAK"))
+  ) {
+    ctx.multipliers.attack *= 2;
+  }
+});
+
+ItemEffects.DamageCalcFromUser.add("LIGHTBALL", (ctx) => {
+  if (isSpecies(ctx.user.species.k, "PIKACHU")) ctx.multipliers.attack *= 2;
+});
+
+ItemEffects.DamageCalcFromUser.add("SOULDEW", (ctx) => {
+  if (
+    (isSpecies(ctx.user.species.k, "LATIOS") || isSpecies(ctx.user.species.k, "LATIAS")) &&
+    (ctx.type === "PSYCHIC" || ctx.type === "DRAGON")
+  ) {
+    ctx.multipliers.power *= 1.2;
+  }
+});
+
+// ---------------------------------------------------------------------------------------------
+// Defensive items
+// ---------------------------------------------------------------------------------------------
+// [core] Assault Vest: 1.5x special defence.
+ItemEffects.DamageCalcFromTarget.add("ASSAULTVEST", (ctx) => {
+  if (ctx.move.c === "Special") ctx.multipliers.defense *= 1.5;
+});
+
+// [core] Eviolite: 1.5x both defences for not-fully-evolved holders. The calculator has no
+// evolution data in its payload, so it applies unconditionally when selected - noted in the UI.
+ItemEffects.DamageCalcFromTarget.add("EVIOLITE", (ctx) => {
+  ctx.multipliers.defense *= 1.5;
+});
+
+ItemEffects.DamageCalcFromTarget.add("DEEPSEASCALE", (ctx) => {
+  if (ctx.move.c === "Special" && isSpecies(ctx.target.species.k, "CLAMPERL")) ctx.multipliers.defense *= 2;
+});
+
+ItemEffects.DamageCalcFromTarget.add("METALPOWDER", (ctx) => {
+  if (ctx.move.c === "Physical" && isSpecies(ctx.target.species.k, "DITTO")) ctx.multipliers.defense *= 2;
+});
+
+// ---------------------------------------------------------------------------------------------
+// Critical hit items
+// ---------------------------------------------------------------------------------------------
+ItemEffects.CriticalCalcFromUser.addMany(["SCOPELENS", "RAZORCLAW"], (ctx) => ctx.critStage + 1);
+ItemEffects.CriticalCalcFromUser.add("LUCKYPUNCH", (ctx) =>
+  isSpecies(ctx.user.species.k, "CHANSEY") ? ctx.critStage + 2 : ctx.critStage
+);
+ItemEffects.CriticalCalcFromUser.add("LEEK", (ctx) =>
+  isSpecies(ctx.user.species.k, "FARFETCHD") || isSpecies(ctx.user.species.k, "SIRFETCHD")
+    ? ctx.critStage + 2
+    : ctx.critStage
+);
