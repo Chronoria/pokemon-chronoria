@@ -410,7 +410,7 @@ WildItemUncommon = POISONBARB
 RaidRanks = 3,4
 #-------------------------------
 [PIDGEY]
-Name = Pidgey
+Name = Taubsi
 Types = NORMAL,FLYING
 BaseStats = 40,45,40,56,35,35
 GenderRatio = Female50Percent
@@ -438,7 +438,7 @@ Evolutions = PIDGEOTTO,Level,18
 RaidRanks = 1,2
 #-------------------------------
 [PIDGEOTTO]
-Name = Pidgeotto
+Name = Tauboga
 Types = NORMAL,FLYING
 BaseStats = 63,60,55,71,50,50
 GenderRatio = Female50Percent
@@ -465,7 +465,7 @@ Evolutions = PIDGEOT,Level,36
 RaidRanks = 2,3
 #-------------------------------
 [PIDGEOT]
-Name = Pidgeot
+Name = Tauboss
 Types = NORMAL,FLYING
 BaseStats = 83,80,75,101,70,70
 GenderRatio = Female50Percent

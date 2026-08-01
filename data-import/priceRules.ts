@@ -4,6 +4,7 @@
 // hardcoded per-item value, so the suggestions stay in sync automatically whenever the PBS
 // files or pokemon.txt evolutions change.
 import type { Item, Pokemon } from "./dataModel.ts";
+import { isItemEvolutionMethod } from "./itemCategoryRules.ts";
 
 export type PriceCategory =
   | "KeyItem"
@@ -53,15 +54,6 @@ export function classifyItem(item: Item): PriceCategory {
   // usually quest markers rather than sell fodder, so they fall through to "Sonstiges" instead.
   if (!item.fieldUse && (item.price ?? 0) > 0) return "Verkaufsware";
   return "Sonstiges";
-}
-
-// The Essentials evolution schema uses "Item" plus gender/time-locked variants ("ItemMale",
-// "ItemFemale", "ItemDay", "ItemNight", ...) for every evolution method that consumes a held/
-// used item - mirrors the method-name convention parsePokemon.ts already relies on for
-// ZERO_PARAM_EVOLUTION_METHODS, just from the opposite direction (these methods always DO carry
-// an item-id param).
-function isItemEvolutionMethod(method: string): boolean {
-  return method.startsWith("Item");
 }
 
 /** Counts, per item id, how many species evolutions (across pokemon.txt AND the Gen 9 pack,

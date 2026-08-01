@@ -127,3 +127,8 @@ IsSpecialType = true
 Weaknesses = POISON,STEEL
 Resistances = FIGHTING,BUG,DARK
 Immunities = DRAGON
+#-------------------------------
+[SHADOW]
+Name = Shadow
+IconPosition = 19
+IsSpecialType = true

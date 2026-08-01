@@ -574,6 +574,7 @@ Name = Mistral
 Outdoor = true
 ShowArea = true
 Bicycle = true
+HealingSpot = 92,12,15
 MapPosition = 0,5,15
 SnapEdges = true
 BattleBack = city
@@ -667,7 +668,7 @@ SnapEdges = true
 Name = Morastia
 Outdoor = true
 ShowArea = true
-HealingSpot = 92,12,15
+HealingSpot = 109,37,19
 MapPosition = 0,22,5
 SnapEdges = true
 BattleBack = Swamp
@@ -681,6 +682,7 @@ Name = Mistral
 Outdoor = true
 ShowArea = true
 Bicycle = true
+HealingSpot = 110,81,11
 MapPosition = 0,6,15
 SnapEdges = true
 BattleBack = city
@@ -1030,9 +1032,13 @@ WildVictoryBGM = Victory! (Wild Pokemon)_3
 Environment = Forest
 Flags = Levels
 #-------------------------------
-[162]   # MAP162
-Name = Route 4
-MapPosition = 0,6,13
+[162]   # Route 17
+Name = Route 17
+Outdoor = true
+ShowArea = true
+MapPosition = 0,18,4
+SnapEdges = true
+Flags = Levels
 #-------------------------------
 [163]   # MAP163
 Name = Route 5
@@ -1137,7 +1143,7 @@ Name = Azumaris Arena
 MapPosition = 0,9,14
 BattleBack = gym2
 #-------------------------------
-[177]   # MAP177
+[177]   # Noxburgh
 Name = Noxburgh
 HealingSpot = 177,10,7
 MapPosition = 0,9,14
@@ -1620,6 +1626,7 @@ MapPosition = 0,11,8
 Name = Celestia
 Outdoor = true
 ShowArea = true
+HealingSpot = 251,31,13
 Weather = Snow,100
 MapPosition = 0,6,5
 SnapEdges = true
@@ -2011,15 +2018,15 @@ SnapEdges = true
 Environment = Grass
 Flags = Levels
 #-------------------------------
-[306]   # MAP306
-Name = Trainerschule
+[306]   # Lucenhöhle
+Name = Lucenhöhle
 ShowArea = true
 MapPosition = 0,3,14
-DarkMap = true
 SnapEdges = true
 #-------------------------------
-[307]   # MAP307
-Name = Trainerschule
+[307]   # Lucenhöhle
+Name = Lucenhöhle
+ShowArea = true
 MapPosition = 0,3,14
 DarkMap = true
 SnapEdges = true
@@ -2059,12 +2066,20 @@ WildVictoryBGM = Victory! (Wild Pokemon)_4
 Environment = Forest
 Flags = Levels
 #-------------------------------
-[315]   # MAP315
-Name = Anglerladen
+[314]   # Spiegelräume
+Name = Spiegelräume
+ShowArea = true
+MapPosition = 0,5,16
+SnapEdges = true
+BattleBack = cave7
+#-------------------------------
+[315]   # Lucenhöhle
+Name = Lucenhöhle
 ShowArea = true
 MapPosition = 0,5,16
 DarkMap = true
 SnapEdges = true
+BattleBack = cave7
 #-------------------------------
 [316]   # Route 5 Angler
 Name = Anglerladen
@@ -2353,6 +2368,7 @@ Name = Route 1
 Outdoor = true
 ShowArea = true
 Bicycle = true
+HealingSpot = 369,39,18
 MapPosition = 0,2,16
 SnapEdges = true
 BattleBack = forest
@@ -2373,15 +2389,21 @@ WildVictoryBGM = Victory! (Wild Pokémon)_2
 Environment = Forest
 Flags = Levels
 #-------------------------------
-[374]   # MAP374
-Name = MAP374
+[374]   # Lucenhöhle
+Name = Lucenhöhle
+ShowArea = true
+MapPosition = 0,5,16
 DarkMap = true
 SnapEdges = true
+BattleBack = cave7
 #-------------------------------
-[375]   # MAP375
-Name = MAP375
+[375]   # Lucenhöhle
+Name = Lucenhöhle
+ShowArea = true
+MapPosition = 0,5,16
 DarkMap = true
 SnapEdges = true
+BattleBack = cave7
 #-------------------------------
 [376]   # Brunnen
 Name = Brunnen
@@ -3138,10 +3160,13 @@ WildVictoryBGM = Victory! (Wild Pokemon)_3
 Environment = Cave
 Flags = Levels
 #-------------------------------
-[468]   # MAP468
-Name = MAP468
+[468]   # Lucenhöhle
+Name = Lucenhöhle
+ShowArea = true
+MapPosition = 0,5,16
 DarkMap = true
 SnapEdges = true
+BattleBack = cave7
 #-------------------------------
 [469]   # Arena 4
 Name = Ephiron Arena
@@ -3155,24 +3180,36 @@ MapPosition = 0,3,10
 SnapEdges = true
 BattleBack = gym4
 #-------------------------------
-[471]   # MAP471
-Name = MAP471
+[471]   # Lucenhöhle
+Name = Lucenhöhle
+ShowArea = true
+MapPosition = 0,5,16
+DarkMap = true
+SnapEdges = true
+BattleBack = cave7
+#-------------------------------
+[472]   # Lucenhöhle
+Name = Lucenhöhle
+ShowArea = true
+MapPosition = 0,5,16
 DarkMap = true
 SnapEdges = true
 #-------------------------------
-[472]   # MAP472
-Name = MAP472
+[473]   # Lucenhöhle
+Name = Lucenhöhle
+ShowArea = true
+MapPosition = 0,5,16
 DarkMap = true
 SnapEdges = true
+BattleBack = cave7
 #-------------------------------
-[473]   # MAP473
+[474]   # Lucenhöhle
+Name = Lucenhöhle
+ShowArea = true
+MapPosition = 0,5,16
 DarkMap = true
 SnapEdges = true
-#-------------------------------
-[474]   # MAP474
-Name = MAP474
-DarkMap = true
-SnapEdges = true
+BattleBack = cave7
 #-------------------------------
 [475]   # Arena 4
 Name = Ephiron Arena
@@ -3885,10 +3922,13 @@ WildBattleBGM = battle wild 2
 TrainerBattleBGM = Battle Trainer (6)
 WildVictoryBGM = Battle victory wild
 #-------------------------------
-[602]   # MAP602
-Name = MAP602
+[602]   # Lucenhöhle
+Name = Lucenhöhle
+ShowArea = true
+MapPosition = 0,5,16
 DarkMap = true
 SnapEdges = true
+BattleBack = cave7
 #-------------------------------
 [603]   # Klartrug Arena
 Name = Morastia Arena
@@ -3945,27 +3985,149 @@ Name = Faulmoor / Morastia
 MapPosition = 0,22,5
 SnapEdges = true
 #-------------------------------
-[611]   # MAP611
-Name = MAP611
+[611]   # Lucenhöhle
+Name = Lucenhöhle
+ShowArea = true
+MapPosition = 0,5,16
 DarkMap = true
 SnapEdges = true
+BattleBack = cave7
 #-------------------------------
-[612]   # MAP612
-Name = MAP612
+[612]   # Aetherspitze
+Name = Aetherspitze
 Outdoor = true
+ShowArea = true
+MapPosition = 0,5,16
+SnapEdges = true
+BattleBack = forest2
+#-------------------------------
+[613]   # Aetherspitze
+Name = Aetherspitze
+Outdoor = true
+ShowArea = true
+MapPosition = 0,5,16
+SnapEdges = true
+BattleBack = forest2
+#-------------------------------
+[614]   # Aetherspitze
+Name = Aetherspitze
+Outdoor = true
+ShowArea = true
+MapPosition = 0,5,16
+SnapEdges = true
+BattleBack = forest2
+#-------------------------------
+[615]   # Aetherspitze
+Name = Aetherspitze
+Outdoor = true
+ShowArea = true
+MapPosition = 0,5,16
+SnapEdges = true
+BattleBack = field
+#-------------------------------
+[616]   # Lucenhöhle
+Name = Lucenhöhle
+ShowArea = true
+MapPosition = 0,5,16
+DarkMap = true
+SnapEdges = true
+BattleBack = cave7
+#-------------------------------
+[617]   # Lucenhöhle
+Name = Lucenhöhle
+ShowArea = true
+MapPosition = 0,5,16
+SnapEdges = true
+BattleBack = cave7
+#-------------------------------
+[618]   # Lucenhöhle
+Name = Lucenhöhle
+ShowArea = true
+MapPosition = 0,5,16
+SnapEdges = true
+BattleBack = cave7
+#-------------------------------
+[619]   # Lucenhöhle
+Name = Lucenhöhle
+ShowArea = true
+MapPosition = 0,5,16
+DarkMap = true
+SnapEdges = true
+BattleBack = cave7
+#-------------------------------
+[620]   # Lucenhöhle
+Name = Lucenhöhle
+ShowArea = true
+MapPosition = 0,5,16
+DarkMap = true
+SnapEdges = true
+BattleBack = cave7
+#-------------------------------
+[621]   # Schule
+Name = Poké-Schule
+ShowArea = true
+MapPosition = 0,1,18
 SnapEdges = true
 #-------------------------------
-[613]   # MAP613
-Name = MAP613
+[622]   # Spiegelräume
+Name = Spiegelräume
+ShowArea = true
+MapPosition = 0,5,16
+SnapEdges = true
+BattleBack = cave7
+#-------------------------------
+[623]   # Spiegelräume
+Name = Spiegelräume
+ShowArea = true
+MapPosition = 0,5,16
+SnapEdges = true
+BattleBack = cave7
+#-------------------------------
+[624]   # Spiegelräume
+Name = Spiegelräume
+ShowArea = true
+MapPosition = 0,5,16
+SnapEdges = true
+BattleBack = cave7
+#-------------------------------
+[625]   # Spiegelräume
+Name = Spiegelräume
+ShowArea = true
+MapPosition = 0,5,16
+SnapEdges = true
+BattleBack = cave7
+#-------------------------------
+[626]   # Spiegelräume
+Name = Spiegelräume
+ShowArea = true
+MapPosition = 0,5,16
+SnapEdges = true
+BattleBack = cave7
+#-------------------------------
+[627]   # Schrein des entzweiten Eises
+Name = Schrein des entzweiten Eises
+ShowArea = true
+MapPosition = 0,5,16
+DarkMap = true
+SnapEdges = true
+BattleBack = cave7
+#-------------------------------
+[628]   # Lucenhöhle
+Name = Lucenhöhle
+ShowArea = true
+MapPosition = 0,5,16
+DarkMap = true
+SnapEdges = true
+BattleBack = cave7
+#-------------------------------
+[631]   # Dracheninsel 1
+Name = Dracheninsel
 Outdoor = true
+ShowArea = true
 SnapEdges = true
 #-------------------------------
-[614]   # MAP614
-Name = MAP614
+[632]   # Dracheninsel 1
+Name = Dracheninsel
 Outdoor = true
-SnapEdges = true
-#-------------------------------
-[615]   # MAP615
-Name = MAP615
-Outdoor = true
+ShowArea = true
 SnapEdges = true

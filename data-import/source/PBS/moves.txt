@@ -8710,3 +8710,215 @@ TotalPP = 40
 Target = User
 FunctionCode = RaiseUserDefense1
 Description = The user withdraws its body into its hard shell, raising its Defense stat.
+#-------------------------------
+[SHADOWEND]
+Name = Cryptoretour
+Type = SHADOW
+Category = Special
+Power = 120
+Accuracy = 60
+TotalPP = 0
+Target = NearOther
+FunctionCode = UserLosesHalfHP
+Flags = Contact,CanProtect
+Description = Es verursacht Schaden und der Anwender erhält Rückstoßschaden.
+#-------------------------------
+[SHADOWSTORM]
+Name = Cryptosturm
+Type = SHADOW
+Category = Special
+Power = 95
+Accuracy = 100
+TotalPP = 0
+Target = AllFoes
+FunctionCode = DoublePowerIfTargetUnderwater
+Flags = CanProtect
+Description = Es fügt Schaden zu ohne weiter Effekte.
+#-------------------------------
+[SHADOWBLAST]
+Name = Cryptostrahl
+Type = SHADOW
+Category = Special
+Power = 80
+Accuracy = 100
+TotalPP = 0
+Target = NearOther
+FunctionCode = None
+Flags = CanProtect,HighCriticalHitRate
+Description = Es fügt dem Gegner Schaden zu und hat eine erhöhte Volltrefferquote.
+#-------------------------------
+[SHADOWBOLT]
+Name = Cryptoblitz
+Type = SHADOW
+Category = Special
+Power = 75
+Accuracy = 100
+TotalPP = 0
+Target = NearOther
+FunctionCode = ParalyzeTarget
+Flags = CanProtect
+EffectChance = 10
+Description = Es hat eine Wahrscheinlichkeit von 10% den Gegner zu paralysieren.
+#-------------------------------
+[SHADOWBREAK]
+Name = Cryptohieb
+Type = SHADOW
+Category = Physical
+Power = 75
+Accuracy = 100
+TotalPP = 0
+Target = NearOther
+FunctionCode = None
+Flags = Contact,CanProtect
+Description = Cryptohieb fügt dem Gegner Schaden ohne Nebeneffekte zu.
+#-------------------------------
+[SHADOWCHILL]
+Name = Cryptofrost
+Type = SHADOW
+Category = Special
+Power = 75
+Accuracy = 100
+TotalPP = 0
+Target = NearOther
+FunctionCode = FreezeTarget
+Flags = CanProtect
+EffectChance = 10
+Description = Es hat eine Wahrscheinlichkeit von 10 %, den Gegner einzufrieren.
+#-------------------------------
+[SHADOWFIRE]
+Name = Cryptofeuer
+Type = SHADOW
+Category = Special
+Power = 75
+Accuracy = 100
+TotalPP = 0
+Target = NearOther
+FunctionCode = BurnTarget
+Flags = CanProtect
+EffectChance = 10
+Description = Es hat eine Wahrscheinlichkeit von 10 %, den Gegner zu verbrennen.
+#-------------------------------
+[SHADOWRAVE]
+Name = Cryptobeben
+Type = SHADOW
+Category = Special
+Power = 70
+Accuracy = 100
+TotalPP = 0
+Target = AllFoes
+FunctionCode = None
+Flags = CanProtect
+Description = Richtet Schaden ohne weitere Zusatzeffekte an.
+#-------------------------------
+[SHADOWRUSH]
+Name = Cryptoschlag
+Type = SHADOW
+Category = Physical
+Power = 90
+Accuracy = 100
+TotalPP = 0
+Target = NearOther
+FunctionCode = None
+Flags = Contact,CanProtect
+Description = Eine braftvolle Attacke, bei der sich der Anwender selbst auch verletzt.
+#-------------------------------
+[SHADOWWAVE]
+Name = Cryptowelle
+Type = SHADOW
+Category = Special
+Power = 50
+Accuracy = 100
+TotalPP = 0
+Target = AllFoes
+FunctionCode = None
+Flags = CanProtect
+Description = Cryptowelle fügt Schaden ohne weitere Zusatzeffekte zu.
+#-------------------------------
+[SHADOWBLITZ]
+Name = Cryptoknall
+Type = SHADOW
+Category = Physical
+Power = 40
+Accuracy = 100
+TotalPP = 0
+Target = NearOther
+FunctionCode = None
+Flags = Contact,CanProtect
+Description = Diese Attacke fügt Schaden ohne Nebeneffekte zu.
+#-------------------------------
+[SHADOWDOWN]
+Name = Cryptobann
+Type = SHADOW
+Category = Status
+Accuracy = 100
+TotalPP = 0
+Target = AllFoes
+FunctionCode = LowerTargetDefense2
+Flags = CanProtect
+Description = Es senkt die Verteidigung des Gegners um 2 Stufen. 
+#-------------------------------
+[SHADOWHALF]
+Name = Cryptozorn
+Type = SHADOW
+Category = Status
+Accuracy = 100
+TotalPP = 0
+Target = AllBattlers
+FunctionCode = AllBattlersLoseHalfHPUserSkipsNextTurn
+Flags = CanProtect
+Description = Es halbiert die momentanen LP aller im Kampf befindlichen Pokémon.
+#-------------------------------
+[SHADOWHOLD]
+Name = Cryptofessel
+Type = SHADOW
+Category = Status
+Accuracy = 100
+TotalPP = 0
+Target = AllFoes
+FunctionCode = TrapTargetInBattle
+Flags = CanProtect
+Description = Es verhindert, dass der Gegner ausgetauscht wird.
+#-------------------------------
+[SHADOWMIST]
+Name = Cryptodunst
+Type = SHADOW
+Category = Status
+Accuracy = 100
+TotalPP = 0
+Target = AllFoes
+FunctionCode = LowerTargetEvasion2
+Flags = CanProtect
+Description = Es senkt den Fluchtwert des Gegners um 2 Stufen.
+#-------------------------------
+[SHADOWPANIC]
+Name = Cryptochaos
+Type = SHADOW
+Category = Status
+Accuracy = 90
+TotalPP = 0
+Target = AllFoes
+FunctionCode = ConfuseTarget
+Flags = CanProtect,Sound
+Description = Es verwirrt den Gegner.
+#-------------------------------
+[SHADOWSHED]
+Name = Cryptobruch
+Type = SHADOW
+Category = Status
+Accuracy = 100
+TotalPP = 0
+Target = BothSides
+FunctionCode = RemoveAllScreens
+Flags = CanProtect
+Description = Cryptobruch hebt den Effekt von Bodyguard, Reflektor und Lichtschild des Gegners auf.
+#-------------------------------
+[SHADOWSKY]
+Name = Cryptowetter
+Type = SHADOW
+Category = Status
+Accuracy = 100
+TotalPP = 0
+Target = BothSides
+FunctionCode = StartShadowSkyWeather
+Flags = CanProtect
+Description = Fügt allen Nicht-Crypto Pokémon am Ende der Runde Schaden zu.

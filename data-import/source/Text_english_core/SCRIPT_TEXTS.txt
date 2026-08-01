@@ -1921,7 +1921,7 @@ Info
 Do what with {1}?
 Was tun mit {1}?
 Use
-verwenden
+Verwenden
 {1} is selected.
 {1} ist ausgewählt.
 Use on which Pokémon?
