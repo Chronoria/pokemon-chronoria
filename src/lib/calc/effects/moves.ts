@@ -102,3 +102,16 @@ export function weightBasedPower(code: string, user: SideState, target: SideStat
 
 /** Codes that always crit, so the UI can apply it without the user ticking the box. */
 export const ALWAYS_CRIT = new Set(["AlwaysCriticalHit", "HitThreeTimesAlwaysCriticalHit"]);
+
+/**
+ * Skill Link makes variable multi-hit moves always land the maximum number of hits. It only
+ * became damage-relevant once hit counts were modelled at all - before that there was nothing
+ * for it to change.
+ */
+export function applySkillLink(
+  hits: { min: number; max: number } | undefined,
+  ability: string | null
+): { min: number; max: number } | undefined {
+  if (!hits || ability !== "SKILLLINK") return hits;
+  return { min: hits.max, max: hits.max };
+}

@@ -5,7 +5,18 @@
 // The engine is DOM-free on purpose so it can be exercised here. These cases pin down the parts
 // of the formula that are easy to get subtly wrong (rounding order, stage application, the crit
 // clamp, spread reduction) - a UI can look perfectly fine while quietly producing wrong numbers.
-import { calculate, defaultField, defaultSide, speciesByKey, moveById, moveList, statsFor } from "../src/lib/calc/index.ts";
+import {
+  abilityList,
+  calculate,
+  defaultField,
+  defaultSide,
+  isAbilityModelled,
+  moveById,
+  moveList,
+  speciesByKey,
+  statsFor,
+} from "../src/lib/calc/index.ts";
+import { NO_DAMAGE_EFFECT } from "../src/lib/calc/effects/noDamage.ts";
 import { calcHP, calcStat } from "../src/lib/calc/stats.ts";
 import type { SideState } from "../src/lib/calc/types.ts";
 
@@ -232,8 +243,10 @@ const findDefender = (pred: (types: string[]) => boolean) =>
 
 // Unmodelled effects must be reported, never silently ignored.
 {
-  const r = calculate(sideOf("PIKACHU", { ability: "STATIC" }), sideOf("BULBASAUR"), thunderbolt, field);
-  checkTrue("nicht modellierte Fähigkeit wird gemeldet", r.unmodelled.includes("ability:STATIC"));
+  // Supreme Overlord scales with fainted allies - genuinely unmodellable here, so it must warn.
+  // (Static would NOT warn: it has no damage effect at all, see effects/noDamage.ts.)
+  const r = calculate(sideOf("PIKACHU", { ability: "SUPREMEOVERLORD" }), sideOf("BULBASAUR"), thunderbolt, field);
+  checkTrue("nicht modellierte Fähigkeit wird gemeldet", r.unmodelled.includes("ability:SUPREMEOVERLORD"));
   // Both sides must be pinned: species defaults differ from the official games here (Bulbasaur
   // has Cute Charm in Chronoria), so leaving the defender on its default would report that.
   const r2 = calculate(
@@ -467,6 +480,49 @@ console.log("Attacken-Funktionscodes");
     const full = calculate({ ...atk, hpFraction: 1 }, def, eruption, field).max;
     const low = calculate({ ...atk, hpFraction: 0.25 }, def, eruption, field).max;
     checkTrue("KP-abhängige Stärke sinkt mit den KP", low < full / 2, `voll ${full}, bei 25% ${low}`);
+  }
+}
+
+// --- Warning quality --------------------------------------------------------------------------
+// A warning that fires for harmless abilities gets ignored when it finally matters, so the
+// no-damage list is checked as carefully as the handlers themselves.
+console.log("Warnqualitaet");
+{
+  const atk = sideOf("PIKACHU", { ability: null, level: 100 });
+  const def = sideOf("BULBASAUR", { ability: null });
+
+  // Every id on the no-damage list must be a real ability in this game's data.
+  const realAbilities = new Set(abilityList.map((a) => a.i));
+  const ghosts = [...NO_DAMAGE_EFFECT].filter((id) => !realAbilities.has(id));
+  checkTrue(
+    "keine erfundenen Ids in der Ohne-Wirkung-Liste",
+    ghosts.length === 0,
+    ghosts.length ? `unbekannt: ${ghosts.join(", ")}` : ""
+  );
+
+  // ...and must not also be registered as a real handler - that would be contradictory.
+  const contradictions = [...NO_DAMAGE_EFFECT].filter((id) => isAbilityModelled(id));
+  checkTrue(
+    "Ohne-Wirkung-Liste ueberschneidet sich nicht mit echten Handlern",
+    contradictions.length === 0,
+    contradictions.length ? `doppelt: ${contradictions.join(", ")}` : ""
+  );
+
+  // A harmless ability must produce no warning...
+  const harmless = calculate(sideOf("PIKACHU", { ability: "STATIC", level: 100 }), def, thunderbolt, field);
+  checkTrue("Statik loest keine Warnung aus", !harmless.unmodelled.includes("ability:STATIC"));
+
+  // ...while a genuinely unknown one still must.
+  const unknown = calculate(sideOf("PIKACHU", { ability: "SUPREMEOVERLORD", level: 100 }), def, thunderbolt, field);
+  checkTrue("unbekannte Faehigkeit warnt weiterhin", unknown.unmodelled.includes("ability:SUPREMEOVERLORD"));
+
+  // Skill Link pins a 2-5 hit move to 5 hits.
+  const multi = moveList.find((m) => m.fn === "HitTwoToFiveTimes");
+  if (multi) {
+    const plain = calculate(atk, def, multi, field);
+    const linked = calculate(sideOf("PIKACHU", { ability: "SKILLLINK", level: 100 }), def, multi, field);
+    check("ohne Wertelink: 2-5 Treffer", [plain.hits?.min, plain.hits?.max], [2, 5]);
+    check("mit Wertelink: immer 5 Treffer", [linked.hits?.min, linked.hits?.max], [5, 5]);
   }
 }
 

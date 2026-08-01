@@ -5,6 +5,8 @@
 import "./effects/abilities.ts";
 import "./effects/items.ts";
 
+import { NO_DAMAGE_EFFECT } from "./effects/noDamage.ts";
+
 import { calculateDamage, type CalcInput } from "./damage.ts";
 import { speciesByKey, typeById } from "./data.ts";
 import { ASSUMED_ACTIVE, isAbilityModelled, isItemModelled } from "./registry.ts";
@@ -66,9 +68,14 @@ export function calculate(
 ): CalcOutcome {
   const result = calculateDamage({ attacker, defender, move, field, typeById, isCritical } satisfies CalcInput);
 
+  // Abilities on the NO_DAMAGE_EFFECT list are skipped here: warning about Cute Charm or
+  // Chlorophyll would be noise, and a warning that's usually noise gets ignored when it matters.
+  const needsWarning = (ability: string | null) =>
+    ability !== null && !isAbilityModelled(ability) && !NO_DAMAGE_EFFECT.has(ability);
+
   const unmodelled: string[] = [];
-  if (attacker.ability && !isAbilityModelled(attacker.ability)) unmodelled.push(`ability:${attacker.ability}`);
-  if (defender.ability && !isAbilityModelled(defender.ability)) unmodelled.push(`ability:${defender.ability}`);
+  if (needsWarning(attacker.ability)) unmodelled.push(`ability:${attacker.ability}`);
+  if (needsWarning(defender.ability)) unmodelled.push(`ability:${defender.ability}`);
   if (attacker.item && !isItemModelled(attacker.item)) unmodelled.push(`item:${attacker.item}`);
   if (defender.item && !isItemModelled(defender.item)) unmodelled.push(`item:${defender.item}`);
 

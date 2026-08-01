@@ -12,7 +12,7 @@
 //   * Only five roundings happen in total: four `.round` (half-up) and one integer floor-division
 //     chain in the middle.
 import { abilityName } from "./data.ts";
-import { HIT_COUNTS, POWER_MODIFIERS, SPECIAL_DAMAGE, weightBasedPower } from "./effects/moves.ts";
+import { applySkillLink, HIT_COUNTS, POWER_MODIFIERS, SPECIAL_DAMAGE, weightBasedPower } from "./effects/moves.ts";
 import { AbilityEffects, ItemEffects } from "./registry.ts";
 import { applyStage, calcAllStats, NEUTRAL_STAGE_INDEX } from "./stats.ts";
 import { typeMod as calcTypeMod } from "./typechart.ts";
@@ -305,8 +305,15 @@ export function calculateDamage(input: CalcInput): DamageResult {
   if (resolvedType !== baseCtxType) notes.push(`Attackentyp geändert zu ${resolvedType}.`);
   // Multi-hit moves: the rolls above are ONE hit, so report the count too rather than letting a
   // 2-5x move read as a single weak hit.
-  const hits = HIT_COUNTS[move.fn];
-  if (hits) notes.push(`${hits.note} - Werte gelten je Treffer.`);
+  const baseHits = HIT_COUNTS[move.fn];
+  const hits = applySkillLink(baseHits, attacker.ability);
+  if (hits && baseHits) {
+    const label = hits.min === hits.max ? `Trifft ${hits.min}x` : baseHits.note;
+    const skillLink = baseHits.min !== baseHits.max && hits.min === hits.max;
+    notes.push(
+      `${label}${skillLink ? ` (${abilityName(attacker.ability)})` : ""} - Werte gelten je Treffer.`
+    );
+  }
 
   return {
     rolls,
@@ -315,7 +322,7 @@ export function calculateDamage(input: CalcInput): DamageResult {
     percent: [(min / targetMaxHP) * 100, (max / targetMaxHP) * 100],
     targetMaxHP,
     typeMod: resolvedTypeMod,
-    hits: hits ? { min: hits.min, max: hits.max } : undefined,
+    hits,
     note: notes.length ? notes.join(" ") : undefined,
   };
 }
