@@ -3055,4 +3055,121 @@ Pokemon = ZOROARK,59
     Gender = male
     Shadow = true
     Ball = SHADOWBALL
-
+#-------------------------------Lucenhöhle
+[HIKER2,Hans]
+LoseText = Lass mich kurz verschnaufen.
+Pokemon = STONJOURNER,59
+    Moves = HEAVYSLAM,ROCKSLIDE,STEALTHROCK,HEATCRASH
+    Gender = male
+    Ball = HEAVYBALL
+Pokemon = EXCADRILL,61
+    Moves = EARTHQUAKE,FISSURE,HORNDRILL,METALCLAW
+    AbilityIndex = 2
+	Gender = female
+	Item = WIDELENS
+    Ball = POKEBALL
+Pokemon = UNOWN,60
+    Form = 5
+    Ball = GREATBALL
+#-------------------------------Lucenhöhle
+[RUINMANIAC,Alberto]
+LoseText = Lass mich nur kurz schauen, was da liegt.
+Pokemon = ONIX,65
+    Moves = DIG,ROCKBLAST,STEALTHROCK,HEATCRASH
+	Item = CHOICEBAND
+    AbilityIndex = 1
+    Gender = male
+    Ball = HEAVYBALL
+Pokemon = URSARING,61
+    Moves = HIGHHORSEPOWER,PLAYROUGH,FURYSWIPES,PAYBACK
+    AbilityIndex = 0
+    Gender = male
+	Item = TOXICORB
+    Ball = GREATBALL
+#-------------------------------Lucenhöhle
+[BUGMANIAC,Ronaldo]
+Items = MEGARING
+LoseText = Vielleicht brauche ich noch ein zweites Pokémon.
+Pokemon = HERACROSS,64
+    Moves = MEGAHORN,CLOSECOMBAT,THROATCHOP,THRASH
+    AbilityIndex = 0
+    Gender = male
+    Item = HERACRONITE
+    Ball = NETBALL
+#-------------------------------Route 17
+[SWIMMER_M3,Kyle]
+LoseText = Ich will doch nur trainieren.
+Pokemon = PALAFIN,62
+    Moves = FLIPTURN,DIVE,ACROBATICS,BLIZZARD
+    AbilityIndex = 0
+    Gender = female
+    Ball = NETBALL
+Pokemon = SIMIPOUR,60
+    Moves = SPARKLINGARIA,DARKPULSE,VACUUMWAVE,SCALD
+    AbilityIndex = 0
+    Gender = male
+    Ball = GREATBALL
+Pokemon = BARRASKEWDA,58
+    Moves = CRUNCH,DIVE,LIQUIDATION,DOUBLEEDGE
+    AbilityIndex = 0
+    Gender = male
+    Ball = NETBALL
+#-------------------------------Route 17
+[SWIMMER_M4,Taylor]
+LoseText = Du kannst hier unbesorgt surfen.
+Pokemon = GOLDUCK,59
+    Moves = SOAK,HYDROPUMP,TRAILBLAZE,ZENHEADBUTT
+    AbilityIndex = 0
+    Gender = female
+    Ball = LUREBALL
+Pokemon = POLITOED,58
+    Moves = BOUNCE,HYDROPUMP,BELLYDRUM,MUDSHOT
+    AbilityIndex = 2
+    Gender = male
+    Ball = QUICKBALL
+Pokemon = PELIPPER,61
+    Moves = HURRICANE,STOCKPILE,SPITUP,SWALLOW
+    AbilityIndex = 2
+    Gender = male
+    Ball = GREATBALL
+#-------------------------------Route 17
+[SWIMMER_F2,Carla]
+LoseText = Ich habe die falsche Cremé eingepackt.
+Pokemon = LUMINEON,60
+    Moves = RAINDANCE,UTURN,AQUARING,SURF
+    AbilityIndex = 0
+    Item = DAMPROCK
+    Gender = female
+    Ball = NETBALL
+Pokemon = VAPOREON,58
+    Moves = MUDDYWATER,AQUARING,ACIDARMOR,AURORABEAM
+    AbilityIndex = 1
+    Gender = male
+    Shiny = true
+    Ball = GREATBALL
+Pokemon = CORSOLA,63
+    Moves = LIFEDEW,EARTHPOWER,SURF,RECOVER
+    AbilityIndex = 2
+    Gender = female
+    Ball = POKEBALL
+#-------------------------------Route 17
+[SWIMMER_M2,Dustin]
+LoseText = Ich bin immernoch erschrocken.
+Pokemon = OCTILLERY,62
+    Moves = OCTAZOOKA,WRAP,SOAK,BULLETSEED
+    AbilityIndex = 0
+    Gender = female
+    Ball = NETBALL
+Pokemon = MANTINE,62
+    Moves = PSYBEAM,BULLETSEED,BOUNCE,SURF
+    AbilityIndex = 2
+    Gender = male
+    Ball = GREATBALL
+	#-------------------------------Route 17
+[SWIMMER_F4,Dorie]
+LoseText = Ich habe vergessen, was ich sagen wollte.
+Pokemon = LAPRAS,60
+    Moves = ICEBEAM,CONFUSERAY,MIST,BRINE
+    AbilityIndex = 1
+    Gender = female
+    Ball = POKEBALL

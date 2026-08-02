@@ -22608,6 +22608,43 @@ List of Event Commands:
 @>
 
 #------------------------------------------------------------------------------
+Event ID: 011
+Event Name: EV011
+(X,Y): (030,012)
+
+Page #1
+Conditions
+Switch 0001: Starting over is ON
+
+Autonomous Movement
+Type: Fixed
+Speed: 3: Slow
+Freq: 3: Low
+Options Enabled
+Move Animation
+Trigger: Autorun
+
+List of Event Commands:
+@>Control Switches: [0001: Starting over] = OFF
+@>Control Self Switch: A =ON
+@>
+
+Page #2
+Conditions
+Self Switch A is ON
+
+Autonomous Movement
+Type: Fixed
+Speed: 3: Slow
+Freq: 3: Low
+Options Enabled
+Move Animation
+Trigger: Action Button
+
+List of Event Commands:
+@>
+
+#------------------------------------------------------------------------------
 Event ID: 013
 Event Name: EV013
 (X,Y): (033,014)
@@ -53721,7 +53758,7 @@ List of Event Commands:
 #------------------------------------------------------------------------------
 Event ID: 072
 Event Name: EV072
-(X,Y): (065,009)
+(X,Y): (063,009)
 
 Page #1
 Conditions
@@ -83672,7 +83709,7 @@ List of Event Commands:
 #------------------------------------------------------------------------------
 Event ID: 037
 Event Name: Tauboga size(2,1)
-(X,Y): (009,006)
+(X,Y): (010,005)
 
 Page #1
 Conditions
@@ -83721,7 +83758,7 @@ List of Event Commands:
 #------------------------------------------------------------------------------
 Event ID: 039
 Event Name: Tauboga size(2,1)
-(X,Y): (028,022)
+(X,Y): (028,021)
 
 Page #1
 Conditions
@@ -83737,6 +83774,7 @@ Options Enabled
 Move Animation
 Stop Animation
 Direction Fix
+Through
 Always on Top
 Trigger: Action Button
 
@@ -83771,30 +83809,6 @@ List of Event Commands:
 Event ID: 041
 Event Name: Strawickl
 (X,Y): (053,023)
-
-Page #1
-Conditions
-None
-
-Graphic: Sleep Strawickl
-
-Autonomous Movement
-Type: Fixed
-Speed: 1: Slowest
-Freq: 1: Lowest
-Options Enabled
-Move Animation
-Stop Animation
-Direction Fix
-Trigger: Action Button
-
-List of Event Commands:
-@>
-
-#------------------------------------------------------------------------------
-Event ID: 042
-Event Name: Strawickl
-(X,Y): (017,063)
 
 Page #1
 Conditions
@@ -84010,6 +84024,54 @@ Move Animation
 Stop Animation
 Direction Fix
 Always on Top
+Trigger: Action Button
+
+List of Event Commands:
+@>
+
+#------------------------------------------------------------------------------
+Event ID: 051
+Event Name: Bluzuk
+(X,Y): (002,018)
+
+Page #1
+Conditions
+None
+
+Graphic: Sleep Blutzuk
+
+Autonomous Movement
+Type: Fixed
+Speed: 1: Slowest
+Freq: 1: Lowest
+Options Enabled
+Move Animation
+Stop Animation
+Direction Fix
+Trigger: Action Button
+
+List of Event Commands:
+@>
+
+#------------------------------------------------------------------------------
+Event ID: 052
+Event Name: Strawickl size(2,1)
+(X,Y): (003,051)
+
+Page #1
+Conditions
+None
+
+Graphic: Sleep Strawickl
+
+Autonomous Movement
+Type: Fixed
+Speed: 1: Slowest
+Freq: 1: Lowest
+Options Enabled
+Move Animation
+Stop Animation
+Direction Fix
 Trigger: Action Button
 
 List of Event Commands:
@@ -110813,7 +110875,7 @@ List of Event Commands:
 @>Change Screen Color Tone: (-255,-255,-255,0), @6
 @>Wait: 8 frame(s)
 @>Script: pbCaveEntrance
-@>Transfer Player:[629: MAP629], (021,011), Up, No Fade
+@>Transfer Player:[629: Hohlfels], (021,011), Up, No Fade
 @>Change Screen Color Tone: (0,0,0,0), @6
 @>Wait: 6 frame(s)
 @>
@@ -110843,6 +110905,974 @@ List of Event Commands:
  @>
 : Branch End
 @>Script: setTempSwitchOn("A")
+@>
+
+#------------------------------------------------------------------------------
+Event ID: 009
+Event Name: Trainer(6)
+(X,Y): (062,064)
+
+Page #1
+Conditions
+None
+
+Graphic: SWIMMER_M3
+
+Autonomous Movement
+Type: Custom
+Custom Move Route:
+(Repeat Action)
+$>Move Right
+$>Move Right
+$>Move Right
+$>Move Right
+$>Move Right
+$>Move Right
+$>Move Right
+$>Move Right
+$>Move Right
+$>Move Right
+$>Move Right
+$>Move Right
+$>Wait: 4 frame(s)
+$>Turn Left
+$>Wait: 4 frame(s)
+$>Move Left
+$>Move Left
+$>Move Left
+$>Move Left
+$>Move Left
+$>Move Left
+$>Move Left
+$>Move Left
+$>Move Left
+$>Move Left
+$>Move Left
+$>Move Left
+$>Wait: 4 frame(s)
+$>Turn Right
+$>Wait: 4 frame(s)
+
+Speed: 3: Slow
+Freq: 6: Highest
+Options Enabled
+Move Animation
+Trigger: Event Touch
+
+List of Event Commands:
+@>Script: pbTrainerIntro(:SWIMMER_M3)
+@>Script: pbNoticePlayer(get_self)
+@>Text: \xn[Schwimmer Kyle]Aus dem Weg!
+@>Conditional Branch: Script: TrainerBattle.start(:SWIMMER_M3, "Kyle")
+ @>Text: \xn[Schwimmer Kyle]Nimm das und verschwinde.
+ @>Script: pbReceiveItem(:MAXREVIVE)
+ @>Control Self Switch: A =ON
+ @>
+: Branch End
+@>Script: pbTrainerEnd
+@>
+
+Page #2
+Conditions
+Self Switch A is ON
+
+Graphic: SWIMMER_M3
+
+Autonomous Movement
+Type: Custom
+Custom Move Route:
+(Repeat Action)
+$>Move Right
+$>Move Right
+$>Move Right
+$>Move Right
+$>Move Right
+$>Move Right
+$>Move Right
+$>Move Right
+$>Move Right
+$>Move Right
+$>Move Right
+$>Move Right
+$>Wait: 4 frame(s)
+$>Turn Left
+$>Wait: 4 frame(s)
+$>Move Left
+$>Move Left
+$>Move Left
+$>Move Left
+$>Move Left
+$>Move Left
+$>Move Left
+$>Move Left
+$>Move Left
+$>Move Left
+$>Move Left
+$>Move Left
+$>Wait: 4 frame(s)
+$>Turn Right
+$>Wait: 4 frame(s)
+
+Speed: 3: Slow
+Freq: 6: Highest
+Options Enabled
+Move Animation
+Trigger: Action Button
+
+List of Event Commands:
+@>Text: \xn[Schwimmer Kyle]Lass mich trainieren.
+@>
+
+#------------------------------------------------------------------------------
+Event ID: 010
+Event Name: Trainer(6)
+(X,Y): (049,068)
+
+Page #1
+Conditions
+None
+
+Graphic: SWIMMER_M4
+
+Autonomous Movement
+Type: Fixed
+Speed: 3: Slow
+Freq: 3: Low
+Options Enabled
+Move Animation
+Trigger: Event Touch
+
+List of Event Commands:
+@>Script: pbTrainerIntro(:SWIMMER_M4)
+@>Script: pbNoticePlayer(get_self)
+@>Text: \xn[Schwimmer Taylor]Diese Gewässer sind 
+ :    : gefährlich.
+@>Conditional Branch: Script: TrainerBattle.start(:SWIMMER_M4, "Taylor")
+ @>Control Self Switch: A =ON
+ @>
+: Branch End
+@>Script: pbTrainerEnd
+@>
+
+Page #2
+Conditions
+Self Switch A is ON
+
+Graphic: SWIMMER_M4
+
+Autonomous Movement
+Type: Fixed
+Speed: 3: Slow
+Freq: 3: Low
+Options Enabled
+Move Animation
+Trigger: Action Button
+
+List of Event Commands:
+@>Text: \xn[Schwimmer Taylor]Für dich ist es hier sicher.
+@>
+
+#------------------------------------------------------------------------------
+Event ID: 011
+Event Name: Trainer(6)
+(X,Y): (020,074)
+
+Page #1
+Conditions
+None
+
+Graphic: SWIMMER_F2
+
+Autonomous Movement
+Type: Fixed
+Speed: 3: Slow
+Freq: 3: Low
+Options Enabled
+Move Animation
+Trigger: Event Touch
+
+List of Event Commands:
+@>Script: pbTrainerIntro(:SWIMMER_F2)
+@>Script: pbNoticePlayer(get_self)
+@>Text: \xn[Schwimmerin Carla]Hast du dich auch 
+ :    : eingecremt?
+@>Script: setBattleRule("double")
+@>Conditional Branch: Script: TrainerBattle.start(:SWIMMER_F2, "Carla")
+ @>Text: \xn[Schwimmerin Carla]Hier, das ist für dich.
+ @>Script: pbReceiveItem(:MAXREPEL)
+ @>Control Self Switch: A =ON
+ @>
+: Branch End
+@>Script: pbTrainerEnd
+@>
+
+Page #2
+Conditions
+Self Switch A is ON
+
+Graphic: SWIMMER_F2
+
+Autonomous Movement
+Type: Fixed
+Speed: 3: Slow
+Freq: 3: Low
+Options Enabled
+Move Animation
+Trigger: Action Button
+
+List of Event Commands:
+@>Text: \xn[Schwimmerin Carla]Sonnenschutz ist wichtig!
+@>
+
+#------------------------------------------------------------------------------
+Event ID: 012
+Event Name: Trainer(6)
+(X,Y): (003,064)
+
+Page #1
+Conditions
+None
+
+Graphic: SWIMMER_M2
+
+Autonomous Movement
+Type: Custom
+Custom Move Route:
+(Repeat Action)
+$>Move Down
+$>Move Down
+$>Move Down
+$>Move Down
+$>Move Down
+$>Move Up
+$>Move Up
+$>Move Up
+$>Move Up
+$>Move Up
+
+Speed: 3: Slow
+Freq: 6: Highest
+Options Enabled
+Move Animation
+Trigger: Event Touch
+
+List of Event Commands:
+@>Script: pbTrainerIntro(:SWIMMER_M2)
+@>Script: pbNoticePlayer(get_self)
+@>Text: \xn[Schwimmer Dustin]Hast du mich erschreckt.
+@>Conditional Branch: Script: TrainerBattle.start(:SWIMMER_M2, "Dustin")
+ @>Control Self Switch: A =ON
+ @>
+: Branch End
+@>Script: pbTrainerEnd
+@>
+
+Page #2
+Conditions
+Self Switch A is ON
+
+Graphic: SWIMMER_M2
+
+Autonomous Movement
+Type: Custom
+Custom Move Route:
+(Repeat Action)
+$>Move Right
+$>Move Right
+$>Move Right
+$>Move Right
+$>Move Down
+$>Move Down
+$>Move Down
+$>Move Down
+$>Move Down
+$>Move Left
+$>Move Left
+$>Move Left
+$>Move Left
+$>Move Up
+$>Move Up
+$>Move Up
+$>Move Up
+$>Move Up
+
+Speed: 3: Slow
+Freq: 6: Highest
+Options Enabled
+Move Animation
+Trigger: Action Button
+
+List of Event Commands:
+@>Text: \xn[Schwimmer Dustin]Boah!
+@>
+
+#------------------------------------------------------------------------------
+Event ID: 013
+Event Name: Trainer(6)
+(X,Y): (034,068)
+
+Page #1
+Conditions
+None
+
+Graphic: SWIMMER_F4
+
+Autonomous Movement
+Type: Custom
+Custom Move Route:
+(Repeat Action)
+$>Move Right
+$>Move Right
+$>Move Right
+$>Move Right
+$>Move Down
+$>Move Down
+$>Move Down
+$>Move Left
+$>Move Left
+$>Move Left
+$>Move Left
+$>Move Up
+$>Move Up
+$>Move Up
+
+Speed: 3: Slow
+Freq: 6: Highest
+Options Enabled
+Move Animation
+Trigger: Event Touch
+
+List of Event Commands:
+@>Script: pbTrainerIntro(:SWIMMER_F4)
+@>Script: pbNoticePlayer(get_self)
+@>Text: \xn[Schwimmerin Dorie]Einfach schimmen...
+@>Text: \xn[Schwimmerin Dorie]schimmen...
+@>Text: \xn[Schwimmerin Dorie]schimmen.
+@>Conditional Branch: Script: TrainerBattle.start(:SWIMMER_F4, "Dorie")
+ @>Control Self Switch: A =ON
+ @>
+: Branch End
+@>Script: pbTrainerEnd
+@>
+
+Page #2
+Conditions
+Self Switch A is ON
+
+Graphic: SWIMMER_F4
+
+Autonomous Movement
+Type: Custom
+Custom Move Route:
+(Repeat Action)
+$>Move Right
+$>Move Right
+$>Move Right
+$>Move Right
+$>Move Down
+$>Move Down
+$>Move Down
+$>Move Down
+$>Move Down
+$>Move Left
+$>Move Left
+$>Move Left
+$>Move Left
+$>Move Up
+$>Move Up
+$>Move Up
+$>Move Up
+$>Move Up
+
+Speed: 3: Slow
+Freq: 6: Highest
+Options Enabled
+Move Animation
+Trigger: Action Button
+
+List of Event Commands:
+@>Text: \xn[Schwimmerin Dorie]Einfach schimmen...
+@>Text: \xn[Schwimmerin Dorie]schimmen...
+@>Text: \xn[Schwimmerin Dorie]schimmen.
+@>
+
+#------------------------------------------------------------------------------
+Event ID: 014
+Event Name: BASCULIN2 sight(6)
+(X,Y): (080,020)
+
+Page #1
+Conditions
+None
+
+Graphic: BASCULIN_2_swimming
+
+Autonomous Movement
+Type: Custom
+Custom Move Route:
+(Repeat Action)
+$>Move Up
+$>Move Up
+$>Move Up
+$>Move Left
+$>Move Left
+$>Move Left
+$>Move Left
+$>Move Left
+$>Move Down
+$>Move Down
+$>Move Down
+$>Move Right
+$>Move Right
+$>Move Right
+$>Move Right
+$>Move Right
+
+Speed: 3: Slow
+Freq: 6: Highest
+Options Enabled
+Move Animation
+Stop Animation
+Trigger: Event Touch
+
+List of Event Commands:
+@>Script: pbNoticePlayer(get_self)
+@>Play SE: 'BASCULIN', 80, 100
+@>Script: WildBattle.start(:BASCULIN_2, 54)
+@>Control Self Switch: A =ON
+@>
+
+Page #2
+Conditions
+Self Switch A is ON
+
+Autonomous Movement
+Type: Fixed
+Speed: 3: Slow
+Freq: 3: Low
+Options Enabled
+Move Animation
+Trigger: Action Button
+
+List of Event Commands:
+@>
+
+#------------------------------------------------------------------------------
+Event ID: 015
+Event Name: BASCULIN2 sight(6)
+(X,Y): (069,070)
+
+Page #1
+Conditions
+None
+
+Graphic: BASCULIN_2_swimming
+
+Autonomous Movement
+Type: Custom
+Custom Move Route:
+(Repeat Action)
+$>Move Up
+$>Move Up
+$>Move Up
+$>Move Left
+$>Move Left
+$>Move Left
+$>Move Down
+$>Move Down
+$>Move Down
+$>Move Right
+$>Move Right
+$>Move Right
+
+Speed: 3: Slow
+Freq: 6: Highest
+Options Enabled
+Move Animation
+Stop Animation
+Trigger: Event Touch
+
+List of Event Commands:
+@>Script: pbNoticePlayer(get_self)
+@>Play SE: 'BASCULIN', 80, 100
+@>Script: WildBattle.start(:BASCULIN_2, 51)
+@>Control Self Switch: A =ON
+@>
+
+Page #2
+Conditions
+Self Switch A is ON
+
+Autonomous Movement
+Type: Fixed
+Speed: 3: Slow
+Freq: 3: Low
+Options Enabled
+Move Animation
+Trigger: Action Button
+
+List of Event Commands:
+@>
+
+#------------------------------------------------------------------------------
+Event ID: 016
+Event Name: BASCULIN2 sight(6)
+(X,Y): (054,076)
+
+Page #1
+Conditions
+None
+
+Graphic: BASCULIN_2_swimming
+
+Autonomous Movement
+Type: Custom
+Custom Move Route:
+(Repeat Action)
+$>Move Up
+$>Move Up
+$>Move Up
+$>Move Left
+$>Move Left
+$>Move Left
+$>Move Down
+$>Move Down
+$>Move Down
+$>Move Right
+$>Move Right
+$>Move Right
+
+Speed: 3: Slow
+Freq: 6: Highest
+Options Enabled
+Move Animation
+Stop Animation
+Trigger: Event Touch
+
+List of Event Commands:
+@>Script: pbNoticePlayer(get_self)
+@>Play SE: 'BASCULIN', 80, 100
+@>Script: WildBattle.start(:BASCULIN_2, 53)
+@>Control Self Switch: A =ON
+@>
+
+Page #2
+Conditions
+Self Switch A is ON
+
+Autonomous Movement
+Type: Fixed
+Speed: 3: Slow
+Freq: 3: Low
+Options Enabled
+Move Animation
+Trigger: Action Button
+
+List of Event Commands:
+@>
+
+#------------------------------------------------------------------------------
+Event ID: 017
+Event Name: BASCULIN2 sight(6)
+(X,Y): (029,076)
+
+Page #1
+Conditions
+None
+
+Graphic: BASCULIN_2_swimming
+
+Autonomous Movement
+Type: Custom
+Custom Move Route:
+(Repeat Action)
+$>Move Up
+$>Move Up
+$>Move Up
+$>Move Left
+$>Move Left
+$>Move Left
+$>Move Down
+$>Move Down
+$>Move Down
+$>Move Right
+$>Move Right
+$>Move Right
+
+Speed: 3: Slow
+Freq: 6: Highest
+Options Enabled
+Move Animation
+Stop Animation
+Trigger: Event Touch
+
+List of Event Commands:
+@>Script: pbNoticePlayer(get_self)
+@>Play SE: 'BASCULIN', 80, 100
+@>Script: WildBattle.start(:BASCULIN_2, 52)
+@>Control Self Switch: A =ON
+@>
+
+Page #2
+Conditions
+Self Switch A is ON
+
+Autonomous Movement
+Type: Fixed
+Speed: 3: Slow
+Freq: 3: Low
+Options Enabled
+Move Animation
+Trigger: Action Button
+
+List of Event Commands:
+@>
+
+#------------------------------------------------------------------------------
+Event ID: 018
+Event Name: BASCULIN2 sight(6)
+(X,Y): (021,015)
+
+Page #1
+Conditions
+None
+
+Graphic: BASCULIN_2_swimming
+
+Autonomous Movement
+Type: Custom
+Custom Move Route:
+(Repeat Action)
+$>Move Down
+$>Move Down
+$>Move Down
+$>Move Left
+$>Move Left
+$>Move Left
+$>Move Up
+$>Move Up
+$>Move Up
+$>Move Right
+$>Move Right
+$>Move Right
+
+Speed: 3: Slow
+Freq: 6: Highest
+Options Enabled
+Move Animation
+Stop Animation
+Trigger: Event Touch
+
+List of Event Commands:
+@>Script: pbNoticePlayer(get_self)
+@>Play SE: 'BASCULIN', 80, 100
+@>Script: WildBattle.start(:BASCULIN_2, 53)
+@>Control Self Switch: A =ON
+@>
+
+Page #2
+Conditions
+Self Switch A is ON
+
+Autonomous Movement
+Type: Fixed
+Speed: 3: Slow
+Freq: 3: Low
+Options Enabled
+Move Animation
+Trigger: Action Button
+
+List of Event Commands:
+@>
+
+#------------------------------------------------------------------------------
+Event ID: 019
+Event Name: BASCULEGION sight(6)
+(X,Y): (048,026)
+
+Page #1
+Conditions
+None
+
+Graphic: BASCULEGION_swimming
+
+Autonomous Movement
+Type: Custom
+Custom Move Route:
+(Repeat Action)
+$>Move Up
+$>Move Up
+$>Move Up
+$>Move Left
+$>Move Left
+$>Move Left
+$>Move Left
+$>Move Left
+$>Move Down
+$>Move Down
+$>Move Down
+$>Move Right
+$>Move Right
+$>Move Right
+$>Move Right
+$>Move Right
+
+Speed: 3: Slow
+Freq: 6: Highest
+Options Enabled
+Move Animation
+Stop Animation
+Trigger: Event Touch
+
+List of Event Commands:
+@>Script: pbNoticePlayer(get_self)
+@>Play SE: 'BASCULEGION', 80, 100
+@>Script: pkmn = Pokemon.new(:BASCULEGION, 60)
+:       : pkmn.makeMale
+:       : WildBattle.start(pkmn)
+@>Control Self Switch: A =ON
+@>
+
+Page #2
+Conditions
+Self Switch A is ON
+
+Autonomous Movement
+Type: Fixed
+Speed: 3: Slow
+Freq: 3: Low
+Options Enabled
+Move Animation
+Trigger: Action Button
+
+List of Event Commands:
+@>
+
+#------------------------------------------------------------------------------
+Event ID: 020
+Event Name: BASCULIN2 sight(6)
+(X,Y): (038,016)
+
+Page #1
+Conditions
+None
+
+Graphic: BASCULIN_2_swimming
+
+Autonomous Movement
+Type: Custom
+Custom Move Route:
+(Repeat Action)
+$>Move Down
+$>Move Down
+$>Move Down
+$>Move Left
+$>Move Left
+$>Move Left
+$>Move Left
+$>Move Up
+$>Move Up
+$>Move Up
+$>Move Right
+$>Move Right
+$>Move Right
+$>Move Right
+
+Speed: 3: Slow
+Freq: 6: Highest
+Options Enabled
+Move Animation
+Stop Animation
+Trigger: Event Touch
+
+List of Event Commands:
+@>Script: pbNoticePlayer(get_self)
+@>Play SE: 'BASCULIN', 80, 100
+@>Script: WildBattle.start(:BASCULIN_2, 51)
+@>Control Self Switch: A =ON
+@>
+
+Page #2
+Conditions
+Self Switch A is ON
+
+Autonomous Movement
+Type: Fixed
+Speed: 3: Slow
+Freq: 3: Low
+Options Enabled
+Move Animation
+Trigger: Action Button
+
+List of Event Commands:
+@>
+
+#------------------------------------------------------------------------------
+Event ID: 021
+Event Name: BASCULIN2 sight(6)
+(X,Y): (012,072)
+
+Page #1
+Conditions
+None
+
+Graphic: BASCULIN_2_swimming
+
+Autonomous Movement
+Type: Custom
+Custom Move Route:
+(Repeat Action)
+$>Move Up
+$>Move Up
+$>Move Up
+$>Move Left
+$>Move Left
+$>Move Left
+$>Move Down
+$>Move Down
+$>Move Down
+$>Move Right
+$>Move Right
+$>Move Right
+
+Speed: 3: Slow
+Freq: 6: Highest
+Options Enabled
+Move Animation
+Stop Animation
+Trigger: Event Touch
+
+List of Event Commands:
+@>Script: pbNoticePlayer(get_self)
+@>Play SE: 'BASCULIN', 80, 100
+@>Script: WildBattle.start(:BASCULIN_2, 52)
+@>Control Self Switch: A =ON
+@>
+
+Page #2
+Conditions
+Self Switch A is ON
+
+Autonomous Movement
+Type: Fixed
+Speed: 3: Slow
+Freq: 3: Low
+Options Enabled
+Move Animation
+Trigger: Action Button
+
+List of Event Commands:
+@>
+
+#------------------------------------------------------------------------------
+Event ID: 022
+Event Name: BASCULEGION sight(6)
+(X,Y): (045,076)
+
+Page #1
+Conditions
+None
+
+Graphic: BASCULEGION_swimming
+
+Autonomous Movement
+Type: Custom
+Custom Move Route:
+(Repeat Action)
+$>Move Up
+$>Move Up
+$>Move Up
+$>Move Left
+$>Move Left
+$>Move Left
+$>Move Left
+$>Move Left
+$>Move Down
+$>Move Down
+$>Move Down
+$>Move Right
+$>Move Right
+$>Move Right
+$>Move Right
+$>Move Right
+
+Speed: 3: Slow
+Freq: 6: Highest
+Options Enabled
+Move Animation
+Stop Animation
+Trigger: Event Touch
+
+List of Event Commands:
+@>Script: pbNoticePlayer(get_self)
+@>Play SE: 'BASCULEGION', 80, 100
+@>Script: pkmn = Pokemon.new(:BASCULEGION, 60)
+:       : pkmn.makeMale
+:       : WildBattle.start(pkmn)
+@>Control Self Switch: A =ON
+@>
+
+Page #2
+Conditions
+Self Switch A is ON
+
+Autonomous Movement
+Type: Fixed
+Speed: 3: Slow
+Freq: 3: Low
+Options Enabled
+Move Animation
+Trigger: Action Button
+
+List of Event Commands:
+@>
+
+#------------------------------------------------------------------------------
+Event ID: 023
+Event Name: SenLong size(3,2) .noshadow
+(X,Y): (017,033)
+
+Page #1
+Conditions
+None
+
+Graphic: sleep_Sen-Long
+
+Autonomous Movement
+Type: Fixed
+Speed: 1: Slowest
+Freq: 4: High
+Options Enabled
+Move Animation
+Stop Animation
+Direction Fix
+Trigger: Action Button
+
+List of Event Commands:
+@>Wait: 10 frame(s)
+@>Play SE: 'DRAMPA', 100, 100
+@>Script: pkmn = Pokemon.new(:DRAMPA,66)
+:       : pkmn.ability_index = 2
+:       : pkmn.shiny = true
+:       : pkmn.item = :DRAMPANITE
+:       : pkmn.calc_stats
+:       : WildBattle.start(pkmn)
+@>Control Self Switch: A =ON
+@>
+
+Page #2
+Conditions
+Self Switch A is ON
+
+Autonomous Movement
+Type: Fixed
+Speed: 3: Slow
+Freq: 3: Low
+Options Enabled
+Move Animation
+Trigger: Action Button
+
+List of Event Commands:
 @>
 
 #------------------------------------------------------------------------------
@@ -129408,7 +130438,7 @@ Move Animation
 Trigger: Action Button
 
 List of Event Commands:
-@>Script: pbTrainerIntro(:SWIMMER_F5)
+@>Script: pbTrainerIntro(:SWIMMER_M4)
 @>Script: pbNoticePlayer(get_self)
 @>Text: \xn[Schwimmer Markus]Ist das Meer nicht 
  :    : wunderschön?
@@ -129558,7 +130588,7 @@ Move Animation
 Trigger: Event Touch
 
 List of Event Commands:
-@>Script: pbTrainerIntro(:SWIMMER_F5)
+@>Script: pbTrainerIntro(:SWIMMER_M4)
 @>Script: pbNoticePlayer(get_self)
 @>Text: \xn[Schwimmer Jens]Auaaaa!!!
 @>Show Animation: This event, [Poison bubble]
@@ -228214,6 +229244,58 @@ List of Event Commands:
 @>
 
 #------------------------------------------------------------------------------
+Event ID: 004
+Event Name: Trainer(5)
+(X,Y): (031,024)
+
+Page #1
+Conditions
+None
+
+Graphic: HIKER2
+
+Autonomous Movement
+Type: Fixed
+Speed: 3: Slow
+Freq: 3: Low
+Options Enabled
+Move Animation
+Trigger: Event Touch
+
+List of Event Commands:
+@>Script: pbTrainerIntro(:HIKER2)
+@>Script: pbNoticePlayer(get_self)
+@>Text: \xn[Wanderer Hans]Manchmal träume ich beim 
+ :    : Wandern...
+@>Text: \xn[Wanderer Hans]und finde mich dann an den 
+ :    : verschiedensten Orten wieder.
+@>Conditional Branch: Script: TrainerBattle.start(:HIKER2, "Hans")
+ @>Control Self Switch: A =ON
+ @>
+: Branch End
+@>Script: pbTrainerEnd
+@>
+
+Page #2
+Conditions
+Self Switch A is ON
+
+Graphic: HIKER2
+
+Autonomous Movement
+Type: Fixed
+Speed: 3: Slow
+Freq: 3: Low
+Options Enabled
+Move Animation
+Trigger: Action Button
+
+List of Event Commands:
+@>Text: \xn[Wanderer Hans]Ich weiß garnicht, wie ich hier 
+ :    : rein gekommen bin.
+@>
+
+#------------------------------------------------------------------------------
 
 #==============================================================================
 Map ID: 307
@@ -228747,6 +229829,107 @@ List of Event Commands:
  @>
 : Branch End
 @>Script: setTempSwitchOn("A")
+@>
+
+#------------------------------------------------------------------------------
+Event ID: 013
+Event Name: Trainer(5)
+(X,Y): (012,022)
+
+Page #1
+Conditions
+None
+
+Graphic: RUINMANIAC
+
+Autonomous Movement
+Type: Fixed
+Speed: 3: Slow
+Freq: 6: Highest
+Options Enabled
+Move Animation
+Trigger: Event Touch
+
+List of Event Commands:
+@>Script: pbTrainerIntro(:RUINMANIAC)
+@>Script: pbNoticePlayer(get_self)
+@>Text: \xn[Ruinenforscher Alberto]Halt stopp!
+@>Text: \xn[Ruinenforscher Alberto]Du wärst fast auf etwas 
+ :    : getreten.
+@>Conditional Branch: Script: TrainerBattle.start(:RUINMANIAC, "Alberto")
+ @>Control Self Switch: A =ON
+ @>
+: Branch End
+@>Script: pbTrainerEnd
+@>
+
+Page #2
+Conditions
+Self Switch A is ON
+
+Graphic: RUINMANIAC
+
+Autonomous Movement
+Type: Fixed
+Speed: 3: Slow
+Freq: 6: Highest
+Options Enabled
+Move Animation
+Trigger: Action Button
+
+List of Event Commands:
+@>Text: \xn[Ruinenforscher Alberto]Ach war doch nichts 
+ :    : besonders.
+@>
+
+#------------------------------------------------------------------------------
+Event ID: 014
+Event Name: Trainer(3)
+(X,Y): (050,037)
+
+Page #1
+Conditions
+None
+
+Graphic: BUGMANIAC
+
+Autonomous Movement
+Type: Fixed
+Speed: 3: Slow
+Freq: 3: Low
+Options Enabled
+Move Animation
+Trigger: Event Touch
+
+List of Event Commands:
+@>Script: pbTrainerIntro(:BUGMANIAC)
+@>Script: pbNoticePlayer(get_self)
+@>Text: \xn[Käferexperte Ronaldo]Ich brauche nur ein 
+ :    : Pokémon, um dich zu besiegen.
+@>Conditional Branch: Script: TrainerBattle.start(:BUGMANIAC, "Ronaldo")
+ @>Control Self Switch: A =ON
+ @>
+: Branch End
+@>Script: pbTrainerEnd
+@>
+
+Page #2
+Conditions
+Self Switch A is ON
+
+Graphic: BUGMANIAC
+
+Autonomous Movement
+Type: Fixed
+Speed: 3: Slow
+Freq: 3: Low
+Options Enabled
+Move Animation
+Trigger: Action Button
+
+List of Event Commands:
+@>Text: \xn[Käferexperte Ronaldo]Ich suche mir noch ein 
+ :    : zweites Pokémon.
 @>
 
 #------------------------------------------------------------------------------
@@ -356627,7 +357810,7 @@ List of Event Commands:
 @>Change Screen Color Tone: (-255,-255,-255,0), @6
 @>Wait: 8 frame(s)
 @>Script: pbCaveEntrance
-@>Transfer Player:[629: MAP629], (048,011), Up, No Fade
+@>Transfer Player:[629: Hohlfels], (048,011), Up, No Fade
 @>Change Screen Color Tone: (0,0,0,0), @6
 @>Wait: 6 frame(s)
 @>
@@ -445814,7 +446997,7 @@ List of Event Commands:
 
 #==============================================================================
 Map ID: 629
-Map Name: MAP629
+Map Name: Hohlfels
 Tileset: 059: Höhle Pflanzen
 Width: 60, Height: 15
 
@@ -446125,6 +447308,28 @@ List of Event Commands:
 @>
 
 #------------------------------------------------------------------------------
+Event ID: 010
+Event Name: Bridge
+(X,Y): (019,006)
+
+Page #1
+Conditions
+None
+
+Autonomous Movement
+Type: Fixed
+Speed: 3: Slow
+Freq: 3: Low
+Options Enabled
+Move Animation
+Through
+Trigger: Player Touch
+
+List of Event Commands:
+@>Script: pbBridgeOn
+@>
+
+#------------------------------------------------------------------------------
 Event ID: 011
 Event Name: Bridge size(3,1)
 (X,Y): (009,031)
@@ -446144,6 +447349,97 @@ Trigger: Player Touch
 
 List of Event Commands:
 @>Script: pbBridgeOff
+@>
+
+#------------------------------------------------------------------------------
+Event ID: 012
+Event Name: Bridge
+(X,Y): (019,007)
+
+Page #1
+Conditions
+None
+
+Autonomous Movement
+Type: Fixed
+Speed: 3: Slow
+Freq: 3: Low
+Options Enabled
+Move Animation
+Through
+Trigger: Player Touch
+
+List of Event Commands:
+@>Script: pbBridgeOn
+@>
+
+#------------------------------------------------------------------------------
+Event ID: 013
+Event Name: Balgoras
+(X,Y): (020,023)
+
+Page #1
+Conditions
+None
+
+Graphic: Sleep Balgoras
+
+Autonomous Movement
+Type: Fixed
+Speed: 1: Slowest
+Freq: 1: Lowest
+Options Enabled
+Move Animation
+Stop Animation
+Trigger: Action Button
+
+List of Event Commands:
+@>
+
+#------------------------------------------------------------------------------
+Event ID: 014
+Event Name: Trikephalo
+(X,Y): (015,020)
+
+Page #1
+Conditions
+None
+
+Graphic: Sleep Trikephalo
+
+Autonomous Movement
+Type: Fixed
+Speed: 1: Slowest
+Freq: 1: Lowest
+Options Enabled
+Move Animation
+Stop Animation
+Trigger: Action Button
+
+List of Event Commands:
+@>
+
+#------------------------------------------------------------------------------
+Event ID: 015
+Event Name: Amagarga size(2,1)
+(X,Y): (041,033)
+
+Page #1
+Conditions
+None
+
+Graphic: Sleep Amagarga
+
+Autonomous Movement
+Type: Fixed
+Speed: 1: Slowest
+Freq: 1: Lowest
+Options Enabled
+Move Animation
+Stop Animation
+Trigger: Action Button
+
+List of Event Commands:
 @>
 
 #------------------------------------------------------------------------------
@@ -446276,10 +447572,5101 @@ Move Animation
 Trigger: Player Touch
 
 List of Event Commands:
+@>Script: Followers.hide_followers
+@>Play SE: 'Player jump', 100, 100
 @>Set Move Route: Player
  :              : $>Through ON
  :              : $>Jump: +0,+3
  :              : $>Through OFF
+@>Wait for Move's Completion
+@>Script: Followers.put_followers_on_player
+@>
+
+#------------------------------------------------------------------------------
+Event ID: 006
+Event Name: EV006
+(X,Y): (022,019)
+
+Page #1
+Conditions
+None
+
+Autonomous Movement
+Type: Fixed
+Speed: 3: Slow
+Freq: 3: Low
+Options Enabled
+Move Animation
+Trigger: Player Touch
+
+List of Event Commands:
+@>Script: Followers.hide_followers
+@>Play SE: 'Player jump', 100, 100
+@>Set Move Route: Player
+ :              : $>Through ON
+ :              : $>Jump: +0,+3
+ :              : $>Through OFF
+@>Wait for Move's Completion
+@>Script: Followers.put_followers_on_player
+@>
+
+#------------------------------------------------------------------------------
+Event ID: 007
+Event Name: EV007
+(X,Y): (036,029)
+
+Page #1
+Conditions
+None
+
+Autonomous Movement
+Type: Fixed
+Speed: 3: Slow
+Freq: 3: Low
+Options Enabled
+Move Animation
+Trigger: Player Touch
+
+List of Event Commands:
+@>Script: Followers.hide_followers
+@>Play SE: 'Player jump', 100, 100
+@>Set Move Route: Player
+ :              : $>Through ON
+ :              : $>Jump: +0,+4
+ :              : $>Through OFF
+@>Wait for Move's Completion
+@>Script: Followers.put_followers_on_player
+@>
+
+#------------------------------------------------------------------------------
+Event ID: 008
+Event Name: EV008
+(X,Y): (022,025)
+
+Page #1
+Conditions
+None
+
+Autonomous Movement
+Type: Fixed
+Speed: 3: Slow
+Freq: 3: Low
+Options Enabled
+Move Animation
+Trigger: Player Touch
+
+List of Event Commands:
+@>Script: Followers.hide_followers
+@>Play SE: 'Player jump', 100, 100
+@>Set Move Route: Player
+ :              : $>Through ON
+ :              : $>Jump: +0,+3
+ :              : $>Through OFF
+@>Wait for Move's Completion
+@>Script: Followers.put_followers_on_player
+@>
+
+#------------------------------------------------------------------------------
+Event ID: 009
+Event Name: EV009
+(X,Y): (020,035)
+
+Page #1
+Conditions
+None
+
+Autonomous Movement
+Type: Fixed
+Speed: 3: Slow
+Freq: 3: Low
+Options Enabled
+Move Animation
+Trigger: Player Touch
+
+List of Event Commands:
+@>Script: Followers.hide_followers
+@>Play SE: 'Player jump', 100, 100
+@>Set Move Route: Player
+ :              : $>Through ON
+ :              : $>Jump: +0,+3
+ :              : $>Through OFF
+@>Wait for Move's Completion
+@>Script: Followers.put_followers_on_player
+@>
+
+#------------------------------------------------------------------------------
+Event ID: 010
+Event Name: EV010
+(X,Y): (032,051)
+
+Page #1
+Conditions
+None
+
+Autonomous Movement
+Type: Fixed
+Speed: 3: Slow
+Freq: 3: Low
+Options Enabled
+Move Animation
+Trigger: Player Touch
+
+List of Event Commands:
+@>Script: Followers.hide_followers
+@>Play SE: 'Player jump', 100, 100
+@>Set Move Route: Player
+ :              : $>Through ON
+ :              : $>Jump: +0,+4
+ :              : $>Through OFF
+@>Wait for Move's Completion
+@>Script: Followers.put_followers_on_player
+@>
+
+#------------------------------------------------------------------------------
+Event ID: 011
+Event Name: EV011
+(X,Y): (019,042)
+
+Page #1
+Conditions
+None
+
+Autonomous Movement
+Type: Fixed
+Speed: 3: Slow
+Freq: 3: Low
+Options Enabled
+Move Animation
+Trigger: Player Touch
+
+List of Event Commands:
+@>Script: Followers.hide_followers
+@>Play SE: 'Player jump', 100, 100
+@>Set Move Route: Player
+ :              : $>Through ON
+ :              : $>Jump: +0,+6
+ :              : $>Through OFF
+@>Wait for Move's Completion
+@>Script: Followers.put_followers_on_player
+@>
+
+#------------------------------------------------------------------------------
+Event ID: 012
+Event Name: EV012
+(X,Y): (020,030)
+
+Page #1
+Conditions
+None
+
+Autonomous Movement
+Type: Fixed
+Speed: 3: Slow
+Freq: 3: Low
+Options Enabled
+Move Animation
+Trigger: Player Touch
+
+List of Event Commands:
+@>Script: Followers.hide_followers
+@>Play SE: 'Player jump', 100, 100
+@>Set Move Route: Player
+ :              : $>Through ON
+ :              : $>Jump: +0,+2
+ :              : $>Through OFF
+@>Wait for Move's Completion
+@>Script: Followers.put_followers_on_player
+@>
+
+#------------------------------------------------------------------------------
+Event ID: 013
+Event Name: EV013
+(X,Y): (042,041)
+
+Page #1
+Conditions
+None
+
+Autonomous Movement
+Type: Fixed
+Speed: 3: Slow
+Freq: 3: Low
+Options Enabled
+Move Animation
+Trigger: Player Touch
+
+List of Event Commands:
+@>Script: Followers.hide_followers
+@>Play SE: 'Player jump', 100, 100
+@>Set Move Route: Player
+ :              : $>Through ON
+ :              : $>Jump: +0,+2
+ :              : $>Through OFF
+@>Wait for Move's Completion
+@>Script: Followers.put_followers_on_player
+@>
+
+#------------------------------------------------------------------------------
+Event ID: 014
+Event Name: EV014
+(X,Y): (041,044)
+
+Page #1
+Conditions
+None
+
+Autonomous Movement
+Type: Fixed
+Speed: 3: Slow
+Freq: 3: Low
+Options Enabled
+Move Animation
+Trigger: Player Touch
+
+List of Event Commands:
+@>Script: Followers.hide_followers
+@>Play SE: 'Player jump', 100, 100
+@>Set Move Route: Player
+ :              : $>Through ON
+ :              : $>Jump: +0,+2
+ :              : $>Through OFF
+@>Wait for Move's Completion
+@>Script: Followers.put_followers_on_player
+@>
+
+#------------------------------------------------------------------------------
+Event ID: 015
+Event Name: EV015
+(X,Y): (019,051)
+
+Page #1
+Conditions
+None
+
+Autonomous Movement
+Type: Fixed
+Speed: 3: Slow
+Freq: 3: Low
+Options Enabled
+Move Animation
+Trigger: Player Touch
+
+List of Event Commands:
+@>Script: Followers.hide_followers
+@>Play SE: 'Player jump', 100, 100
+@>Set Move Route: Player
+ :              : $>Through ON
+ :              : $>Jump: +0,+2
+ :              : $>Through OFF
+@>Wait for Move's Completion
+@>Script: Followers.put_followers_on_player
+@>
+
+#------------------------------------------------------------------------------
+Event ID: 016
+Event Name: EV016
+(X,Y): (022,055)
+
+Page #1
+Conditions
+None
+
+Autonomous Movement
+Type: Fixed
+Speed: 3: Slow
+Freq: 3: Low
+Options Enabled
+Move Animation
+Trigger: Player Touch
+
+List of Event Commands:
+@>Script: Followers.hide_followers
+@>Play SE: 'Player jump', 100, 100
+@>Set Move Route: Player
+ :              : $>Through ON
+ :              : $>Jump: +0,+6
+ :              : $>Through OFF
+@>Wait for Move's Completion
+@>Script: Followers.put_followers_on_player
+@>
+
+#------------------------------------------------------------------------------
+Event ID: 017
+Event Name: EV017
+(X,Y): (035,042)
+
+Page #1
+Conditions
+None
+
+Autonomous Movement
+Type: Fixed
+Speed: 3: Slow
+Freq: 3: Low
+Options Enabled
+Move Animation
+Trigger: Player Touch
+
+List of Event Commands:
+@>Script: Followers.hide_followers
+@>Play SE: 'Player jump', 100, 100
+@>Set Move Route: Player
+ :              : $>Through ON
+ :              : $>Jump: +0,+6
+ :              : $>Through OFF
+@>Wait for Move's Completion
+@>Script: Followers.put_followers_on_player
+@>
+
+#------------------------------------------------------------------------------
+Event ID: 018
+Event Name: EV018
+(X,Y): (031,056)
+
+Page #1
+Conditions
+None
+
+Autonomous Movement
+Type: Fixed
+Speed: 3: Slow
+Freq: 3: Low
+Options Enabled
+Move Animation
+Trigger: Player Touch
+
+List of Event Commands:
+@>Script: Followers.hide_followers
+@>Play SE: 'Player jump', 100, 100
+@>Set Move Route: Player
+ :              : $>Through ON
+ :              : $>Jump: +0,+8
+ :              : $>Through OFF
+@>Wait for Move's Completion
+@>Script: Followers.put_followers_on_player
+@>
+
+#------------------------------------------------------------------------------
+Event ID: 019
+Event Name: EV019
+(X,Y): (024,049)
+
+Page #1
+Conditions
+None
+
+Autonomous Movement
+Type: Fixed
+Speed: 3: Slow
+Freq: 3: Low
+Options Enabled
+Move Animation
+Trigger: Player Touch
+
+List of Event Commands:
+@>Script: Followers.hide_followers
+@>Play SE: 'Player jump', 100, 100
+@>Set Move Route: Player
+ :              : $>Through ON
+ :              : $>Jump: +0,+11
+ :              : $>Through OFF
+@>Wait for Move's Completion
+@>Script: Followers.put_followers_on_player
+@>
+
+#------------------------------------------------------------------------------
+Event ID: 020
+Event Name: EV020
+(X,Y): (005,040)
+
+Page #1
+Conditions
+None
+
+Autonomous Movement
+Type: Fixed
+Speed: 3: Slow
+Freq: 3: Low
+Options Enabled
+Move Animation
+Trigger: Player Touch
+
+List of Event Commands:
+@>Script: Followers.hide_followers
+@>Play SE: 'Player jump', 100, 100
+@>Set Move Route: Player
+ :              : $>Through ON
+ :              : $>Jump: +0,+8
+ :              : $>Through OFF
+@>Wait for Move's Completion
+@>Script: Followers.put_followers_on_player
+@>
+
+#------------------------------------------------------------------------------
+Event ID: 021
+Event Name: EV021
+(X,Y): (005,030)
+
+Page #1
+Conditions
+None
+
+Autonomous Movement
+Type: Fixed
+Speed: 3: Slow
+Freq: 3: Low
+Options Enabled
+Move Animation
+Trigger: Player Touch
+
+List of Event Commands:
+@>Script: Followers.hide_followers
+@>Play SE: 'Player jump', 100, 100
+@>Set Move Route: Player
+ :              : $>Through ON
+ :              : $>Jump: +0,+8
+ :              : $>Through OFF
+@>Wait for Move's Completion
+@>Script: Followers.put_followers_on_player
+@>
+
+#------------------------------------------------------------------------------
+Event ID: 022
+Event Name: EV022
+(X,Y): (026,026)
+
+Page #1
+Conditions
+None
+
+Autonomous Movement
+Type: Fixed
+Speed: 3: Slow
+Freq: 3: Low
+Options Enabled
+Move Animation
+Trigger: Player Touch
+
+List of Event Commands:
+@>Script: Followers.hide_followers
+@>Play SE: 'Player jump', 100, 100
+@>Set Move Route: Player
+ :              : $>Through ON
+ :              : $>Jump: +0,+33
+ :              : $>Through OFF
+@>Wait for Move's Completion
+@>Script: Followers.put_followers_on_player
+@>
+
+#------------------------------------------------------------------------------
+Event ID: 023
+Event Name: EV023
+(X,Y): (038,036)
+
+Page #1
+Conditions
+None
+
+Autonomous Movement
+Type: Fixed
+Speed: 3: Slow
+Freq: 3: Low
+Options Enabled
+Move Animation
+Trigger: Player Touch
+
+List of Event Commands:
+@>Script: pbBridgeOff
+@>Script: Followers.hide_followers
+@>Play SE: 'Player jump', 100, 100
+@>Set Move Route: Player
+ :              : $>Through ON
+ :              : $>Jump: +0,+9
+ :              : $>Through OFF
+@>Wait for Move's Completion
+@>Script: Followers.put_followers_on_player
+@>Script: pbBridgeOn
+@>
+
+#------------------------------------------------------------------------------
+Event ID: 024
+Event Name: Bridge
+(X,Y): (040,049)
+
+Page #1
+Conditions
+None
+
+Autonomous Movement
+Type: Fixed
+Speed: 3: Slow
+Freq: 3: Low
+Options Enabled
+Move Animation
+Through
+Trigger: Player Touch
+
+List of Event Commands:
+@>Script: pbBridgeOn
+@>
+
+#------------------------------------------------------------------------------
+Event ID: 025
+Event Name: Bridge
+(X,Y): (022,015)
+
+Page #1
+Conditions
+None
+
+Autonomous Movement
+Type: Fixed
+Speed: 3: Slow
+Freq: 3: Low
+Options Enabled
+Move Animation
+Through
+Trigger: Player Touch
+
+List of Event Commands:
+@>Script: pbBridgeOn
+@>
+
+#------------------------------------------------------------------------------
+
+#==============================================================================
+Map ID: 633
+Map Name: Noxburgh
+Tileset: 097: Hafen
+Width: 65, Height: 120
+
+#------------------------------------------------------------------------------
+Event ID: 001
+Event Name: EV001
+(X,Y): (020,035)
+
+Page #1
+Conditions
+None
+
+Autonomous Movement
+Type: Fixed
+Speed: 3: Slow
+Freq: 3: Low
+Options Enabled
+Move Animation
+Trigger: Action Button
+
+List of Event Commands:
+@>Text: Zutritt nur für Befugte.
+@>
+
+#------------------------------------------------------------------------------
+Event ID: 002
+Event Name: EV002
+(X,Y): (000,000)
+
+Page #1
+Conditions
+None
+
+Autonomous Movement
+Type: Fixed
+Speed: 3: Slow
+Freq: 3: Low
+Options Enabled
+Move Animation
+Trigger: Parallel Process
+
+List of Event Commands:
+@>Conditional Branch: Switch [0015: s:PBDayNight.isNight?] == OFF
+ @>Change Map Settings:Fog = 'Pueblo_Clio_Dia_Hojas', 230, 255, Normal, 100, -10, 10
+ @>
+: Else
+ @>
+: Branch End
+@>
+
+#------------------------------------------------------------------------------
+Event ID: 004
+Event Name: Pokécenter Tür
+(X,Y): (044,060)
+
+Page #1
+Conditions
+None
+
+Graphic: Doors Stadt 5 Center Markt
+
+Autonomous Movement
+Type: Fixed
+Speed: 3: Slow
+Freq: 3: Low
+Options Enabled
+Move Animation
+Trigger: Player Touch
+
+List of Event Commands:
+@>Set Move Route: This event
+                  (Ignore If Can't Move)
+ :              : $>SE: 'Door slide', 85, 100
+ :              : $>Wait: 2 frame(s)
+ :              : $>Turn Left
+ :              : $>Wait: 2 frame(s)
+ :              : $>Turn Right
+ :              : $>Wait: 2 frame(s)
+ :              : $>Turn Up
+ :              : $>Wait: 2 frame(s)
+@>Wait for Move's Completion
+@>Set Move Route: Player
+                  (Ignore If Can't Move)
+ :              : $>Through ON
+ :              : $>Move Up
+ :              : $>Through OFF
+@>Wait for Move's Completion
+@>Change Transparent Flag: Transparency
+@>Script: Followers.follow_into_door
+@>Wait for Move's Completion
+@>Set Move Route: This event
+                  (Ignore If Can't Move)
+ :              : $>Wait: 2 frame(s)
+ :              : $>Turn Right
+ :              : $>Wait: 2 frame(s)
+ :              : $>Turn Left
+ :              : $>Wait: 2 frame(s)
+ :              : $>Turn Down
+ :              : $>Wait: 2 frame(s)
+@>Wait for Move's Completion
+@>Change Screen Color Tone: (-255,-255,-255,0), @6
+@>Wait: 8 frame(s)
+@>Change Transparent Flag: Normal
+@>Transfer Player:[494: Center], (012,018), Up, No Fade
+@>Change Screen Color Tone: (0,0,0,0), @6
+@>
+
+Page #2
+Conditions
+Switch 0022: s:tsOff?("A") is ON
+
+Graphic: Doors Stadt 5 Center Markt
+
+Autonomous Movement
+Type: Fixed
+Speed: 3: Slow
+Freq: 3: Low
+Options Enabled
+Move Animation
+Trigger: Autorun
+
+List of Event Commands:
+@>Conditional Branch: Script: get_self.onEvent?
+ @>Change Transparent Flag: Transparency
+ @>Script: Followers.hide_followers
+ @>Set Move Route: This event
+                   (Ignore If Can't Move)
+  :              : $>SE: 'Door slide', 85, 100
+  :              : $>Wait: 2 frame(s)
+  :              : $>Turn Left
+  :              : $>Wait: 2 frame(s)
+  :              : $>Turn Right
+  :              : $>Wait: 2 frame(s)
+  :              : $>Turn Up
+  :              : $>Wait: 2 frame(s)
+ @>Wait for Move's Completion
+ @>Change Transparent Flag: Normal
+ @>Set Move Route: Player
+                   (Ignore If Can't Move)
+  :              : $>Move Down
+ @>Wait for Move's Completion
+ @>Script: Followers.put_followers_on_player
+ @>Set Move Route: This event
+                   (Ignore If Can't Move)
+  :              : $>Turn Right
+  :              : $>Wait: 2 frame(s)
+  :              : $>Turn Left
+  :              : $>Wait: 2 frame(s)
+  :              : $>Turn Down
+  :              : $>Wait: 2 frame(s)
+ @>Wait for Move's Completion
+ @>
+: Branch End
+@>Script: setTempSwitchOn("A")
+@>
+
+Page #3
+Conditions
+Switch 0015: s:PBDayNight.isNight? is ON
+
+Graphic: Doors Stadt 5 Center Markt
+
+Autonomous Movement
+Type: Fixed
+Speed: 3: Slow
+Freq: 3: Low
+Options Enabled
+Move Animation
+Trigger: Player Touch
+
+List of Event Commands:
+@>Set Move Route: This event
+                  (Ignore If Can't Move)
+ :              : $>SE: 'Door slide', 85, 100
+ :              : $>Wait: 2 frame(s)
+ :              : $>Turn Left
+ :              : $>Wait: 2 frame(s)
+ :              : $>Turn Right
+ :              : $>Wait: 2 frame(s)
+ :              : $>Turn Up
+ :              : $>Wait: 2 frame(s)
+@>Wait for Move's Completion
+@>Set Move Route: Player
+                  (Ignore If Can't Move)
+ :              : $>Through ON
+ :              : $>Move Up
+ :              : $>Through OFF
+@>Wait for Move's Completion
+@>Change Transparent Flag: Transparency
+@>Script: Followers.follow_into_door
+@>Wait for Move's Completion
+@>Set Move Route: This event
+                  (Ignore If Can't Move)
+ :              : $>Wait: 2 frame(s)
+ :              : $>Turn Right
+ :              : $>Wait: 2 frame(s)
+ :              : $>Turn Left
+ :              : $>Wait: 2 frame(s)
+ :              : $>Turn Down
+ :              : $>Wait: 2 frame(s)
+@>Wait for Move's Completion
+@>Change Screen Color Tone: (-255,-255,-255,0), @6
+@>Wait: 8 frame(s)
+@>Change Transparent Flag: Normal
+@>Transfer Player:[494: Center], (012,018), Up, No Fade
+@>Change Screen Color Tone: (0,0,0,0), @6
+@>
+
+Page #4
+Conditions
+Switch 0022: s:tsOff?("A") is ON
+Switch 0015: s:PBDayNight.isNight? is ON
+
+Graphic: Doors Stadt 5 Center Markt
+
+Autonomous Movement
+Type: Fixed
+Speed: 3: Slow
+Freq: 3: Low
+Options Enabled
+Move Animation
+Trigger: Autorun
+
+List of Event Commands:
+@>Conditional Branch: Script: get_self.onEvent?
+ @>Change Transparent Flag: Transparency
+ @>Script: Followers.hide_followers
+ @>Set Move Route: This event
+                   (Ignore If Can't Move)
+  :              : $>SE: 'Door slide', 85, 100
+  :              : $>Wait: 2 frame(s)
+  :              : $>Turn Left
+  :              : $>Wait: 2 frame(s)
+  :              : $>Turn Right
+  :              : $>Wait: 2 frame(s)
+  :              : $>Turn Up
+  :              : $>Wait: 2 frame(s)
+ @>Wait for Move's Completion
+ @>Change Transparent Flag: Normal
+ @>Set Move Route: Player
+                   (Ignore If Can't Move)
+  :              : $>Move Down
+ @>Wait for Move's Completion
+ @>Script: Followers.put_followers_on_player
+ @>Set Move Route: This event
+                   (Ignore If Can't Move)
+  :              : $>Turn Right
+  :              : $>Wait: 2 frame(s)
+  :              : $>Turn Left
+  :              : $>Wait: 2 frame(s)
+  :              : $>Turn Down
+  :              : $>Wait: 2 frame(s)
+ @>Wait for Move's Completion
+ @>
+: Branch End
+@>Script: setTempSwitchOn("A")
+@>
+
+#------------------------------------------------------------------------------
+Event ID: 006
+Event Name: Markt Tür
+(X,Y): (045,082)
+
+Page #1
+Conditions
+None
+
+Graphic: Doors Stadt 5 Center Markt
+
+Autonomous Movement
+Type: Fixed
+Speed: 3: Slow
+Freq: 3: Low
+Options Enabled
+Move Animation
+Trigger: Player Touch
+
+List of Event Commands:
+@>Set Move Route: This event
+                  (Ignore If Can't Move)
+ :              : $>SE: 'Door slide', 85, 100
+ :              : $>Wait: 2 frame(s)
+ :              : $>Turn Left
+ :              : $>Wait: 2 frame(s)
+ :              : $>Turn Right
+ :              : $>Wait: 2 frame(s)
+ :              : $>Turn Up
+ :              : $>Wait: 2 frame(s)
+@>Wait for Move's Completion
+@>Set Move Route: Player
+                  (Ignore If Can't Move)
+ :              : $>Through ON
+ :              : $>Move Up
+ :              : $>Through OFF
+@>Wait for Move's Completion
+@>Change Transparent Flag: Transparency
+@>Script: Followers.follow_into_door
+@>Wait for Move's Completion
+@>Set Move Route: This event
+                  (Ignore If Can't Move)
+ :              : $>Wait: 2 frame(s)
+ :              : $>Turn Right
+ :              : $>Wait: 2 frame(s)
+ :              : $>Turn Left
+ :              : $>Wait: 2 frame(s)
+ :              : $>Turn Down
+ :              : $>Wait: 2 frame(s)
+@>Wait for Move's Completion
+@>Change Screen Color Tone: (-255,-255,-255,0), @6
+@>Wait: 8 frame(s)
+@>Change Transparent Flag: Normal
+@>Transfer Player:[495: Markt], (012,018), Up, No Fade
+@>Change Screen Color Tone: (0,0,0,0), @6
+@>
+
+Page #2
+Conditions
+Switch 0022: s:tsOff?("A") is ON
+
+Graphic: Doors Stadt 5 Center Markt
+
+Autonomous Movement
+Type: Fixed
+Speed: 3: Slow
+Freq: 3: Low
+Options Enabled
+Move Animation
+Trigger: Autorun
+
+List of Event Commands:
+@>Conditional Branch: Script: get_self.onEvent?
+ @>Change Transparent Flag: Transparency
+ @>Script: Followers.hide_followers
+ @>Set Move Route: This event
+                   (Ignore If Can't Move)
+  :              : $>SE: 'Door slide', 85, 100
+  :              : $>Wait: 2 frame(s)
+  :              : $>Turn Left
+  :              : $>Wait: 2 frame(s)
+  :              : $>Turn Right
+  :              : $>Wait: 2 frame(s)
+  :              : $>Turn Up
+  :              : $>Wait: 2 frame(s)
+ @>Wait for Move's Completion
+ @>Change Transparent Flag: Normal
+ @>Set Move Route: Player
+                   (Ignore If Can't Move)
+  :              : $>Move Down
+ @>Wait for Move's Completion
+ @>Script: Followers.put_followers_on_player
+ @>Set Move Route: This event
+                   (Ignore If Can't Move)
+  :              : $>Turn Right
+  :              : $>Wait: 2 frame(s)
+  :              : $>Turn Left
+  :              : $>Wait: 2 frame(s)
+  :              : $>Turn Down
+  :              : $>Wait: 2 frame(s)
+ @>Wait for Move's Completion
+ @>
+: Branch End
+@>Script: setTempSwitchOn("A")
+@>
+
+Page #3
+Conditions
+Switch 0015: s:PBDayNight.isNight? is ON
+
+Graphic: Doors Stadt 5 Center Markt
+
+Autonomous Movement
+Type: Fixed
+Speed: 3: Slow
+Freq: 3: Low
+Options Enabled
+Move Animation
+Trigger: Player Touch
+
+List of Event Commands:
+@>Set Move Route: This event
+                  (Ignore If Can't Move)
+ :              : $>SE: 'Door slide', 85, 100
+ :              : $>Wait: 2 frame(s)
+ :              : $>Turn Left
+ :              : $>Wait: 2 frame(s)
+ :              : $>Turn Right
+ :              : $>Wait: 2 frame(s)
+ :              : $>Turn Up
+ :              : $>Wait: 2 frame(s)
+@>Wait for Move's Completion
+@>Set Move Route: Player
+                  (Ignore If Can't Move)
+ :              : $>Through ON
+ :              : $>Move Up
+ :              : $>Through OFF
+@>Wait for Move's Completion
+@>Change Transparent Flag: Transparency
+@>Script: Followers.follow_into_door
+@>Wait for Move's Completion
+@>Set Move Route: This event
+                  (Ignore If Can't Move)
+ :              : $>Wait: 2 frame(s)
+ :              : $>Turn Right
+ :              : $>Wait: 2 frame(s)
+ :              : $>Turn Left
+ :              : $>Wait: 2 frame(s)
+ :              : $>Turn Down
+ :              : $>Wait: 2 frame(s)
+@>Wait for Move's Completion
+@>Change Screen Color Tone: (-255,-255,-255,0), @6
+@>Wait: 8 frame(s)
+@>Change Transparent Flag: Normal
+@>Transfer Player:[495: Markt], (012,018), Up, No Fade
+@>Change Screen Color Tone: (0,0,0,0), @6
+@>
+
+Page #4
+Conditions
+Switch 0022: s:tsOff?("A") is ON
+Switch 0015: s:PBDayNight.isNight? is ON
+
+Graphic: Doors Stadt 5 Center Markt
+
+Autonomous Movement
+Type: Fixed
+Speed: 3: Slow
+Freq: 3: Low
+Options Enabled
+Move Animation
+Trigger: Autorun
+
+List of Event Commands:
+@>Conditional Branch: Script: get_self.onEvent?
+ @>Change Transparent Flag: Transparency
+ @>Script: Followers.hide_followers
+ @>Set Move Route: This event
+                   (Ignore If Can't Move)
+  :              : $>SE: 'Door slide', 85, 100
+  :              : $>Wait: 2 frame(s)
+  :              : $>Turn Left
+  :              : $>Wait: 2 frame(s)
+  :              : $>Turn Right
+  :              : $>Wait: 2 frame(s)
+  :              : $>Turn Up
+  :              : $>Wait: 2 frame(s)
+ @>Wait for Move's Completion
+ @>Change Transparent Flag: Normal
+ @>Set Move Route: Player
+                   (Ignore If Can't Move)
+  :              : $>Move Down
+ @>Wait for Move's Completion
+ @>Script: Followers.put_followers_on_player
+ @>Set Move Route: This event
+                   (Ignore If Can't Move)
+  :              : $>Turn Right
+  :              : $>Wait: 2 frame(s)
+  :              : $>Turn Left
+  :              : $>Wait: 2 frame(s)
+  :              : $>Turn Down
+  :              : $>Wait: 2 frame(s)
+ @>Wait for Move's Completion
+ @>
+: Branch End
+@>Script: setTempSwitchOn("A")
+@>
+
+#------------------------------------------------------------------------------
+Event ID: 010
+Event Name: EV010
+(X,Y): (020,071)
+
+Page #1
+Conditions
+None
+
+Graphic: SAILOR
+
+Autonomous Movement
+Type: Random
+Speed: 3: Slow
+Freq: 3: Low
+Options Enabled
+Move Animation
+Trigger: Action Button
+
+List of Event Commands:
+@>Text: Die Stürme draußen auf dem Meer sind 
+ :    : unberechenbar.
+@>Text: Manchmal schwöre ich, eine rote oder blaue 
+ :    : Silhouette über den Wellen zu sehen.
+@>
+
+#------------------------------------------------------------------------------
+Event ID: 012
+Event Name: EV012
+(X,Y): (022,086)
+
+Page #1
+Conditions
+None
+
+Graphic: FISHERMAN
+
+Autonomous Movement
+Type: Random
+Speed: 3: Slow
+Freq: 3: Low
+Options Enabled
+Move Animation
+Trigger: Action Button
+
+List of Event Commands:
+@>Text: Wenn die See ruhig ist, hört man abends manchmal 
+ :    : ein sanftes Summen.
+@>Text: Manche sagen, das Meer selbst singt.
+@>Text: Ich sag, es sind Pokémon.
+@>
+
+#------------------------------------------------------------------------------
+Event ID: 013
+Event Name: EV013
+(X,Y): (048,073)
+
+Page #1
+Conditions
+None
+
+Graphic: WORKER5
+
+Autonomous Movement
+Type: Fixed
+Speed: 3: Slow
+Freq: 3: Low
+Options Enabled
+Move Animation
+Trigger: Action Button
+
+List of Event Commands:
+@>Text: Ich lade jeden Tag die Fracht ab, die hier ankommt.
+@>Set Move Route: This event
+ :              : $>Turn Up
+@>
+
+#------------------------------------------------------------------------------
+Event ID: 014
+Event Name: EV014
+(X,Y): (048,051)
+
+Page #1
+Conditions
+None
+
+Graphic: NPC_Frau 7
+
+Autonomous Movement
+Type: Random
+Speed: 3: Slow
+Freq: 3: Low
+Options Enabled
+Move Animation
+Trigger: Action Button
+
+List of Event Commands:
+@>Text: Die roten Blütenblätter aus dem Gebirge wehen bis 
+ :    : hier rüber.
+@>
+
+#------------------------------------------------------------------------------
+Event ID: 015
+Event Name: Mart
+(X,Y): (022,067)
+
+Page #1
+Conditions
+None
+
+Graphic: NPCClerk
+
+Autonomous Movement
+Type: Fixed
+Speed: 3: Slow
+Freq: 3: Low
+Options Enabled
+Move Animation
+Trigger: Action Button
+
+List of Event Commands:
+@>Script: pbPokemonMart([
+:       :   :LOCKBALL, :PENALTYBALL,
+:       :   :MINUSBALL, :NETBALL, :MAGMARBALL,
+:       :   :VALUEBALL, :SHINYBALL, :LUCKBALL,
+:       :   :ELECTRICBALL,
+:       :   :REPEATBALL, :TIMERBALL,
+:       :   :LUXURYBALL, :DUSKBALL, :QUICKBALL,
+:       :   :FASTBALL, :SLOWBALL, :DREAMBALL,
+:       :   :MOONBALL
+:       : ])
+@>
+
+#------------------------------------------------------------------------------
+Event ID: 016
+Event Name: Mart
+(X,Y): (028,068)
+
+Page #1
+Conditions
+None
+
+Graphic: NPCClerk
+
+Autonomous Movement
+Type: Fixed
+Speed: 3: Slow
+Freq: 3: Low
+Options Enabled
+Move Animation
+Trigger: Action Button
+
+List of Event Commands:
+@>Script: pbPokemonMart([
+:       :   :ORANBERRY, :CHERIBERRY,
+:       :   :CHESTOBERRY, :PECHABERRY,
+:       :   :RAWSTBERRY, :ASPEARBERRY,
+:       :   :PERSIMBERRY, :SITRUSBERRY,
+:       :   :LUMBERRY, :LEPPABERRY
+:       : ])
+@>
+
+#------------------------------------------------------------------------------
+Event ID: 017
+Event Name: EV017
+(X,Y): (033,053)
+
+Page #1
+Conditions
+None
+
+Graphic: NPC_Frau 3
+
+Autonomous Movement
+Type: Fixed
+Speed: 3: Slow
+Freq: 3: Low
+Options Enabled
+Move Animation
+Trigger: Action Button
+
+List of Event Commands:
+@>Script: pbPokemonMart([
+:       :   :CHILANBERRY, :BABIRIBERRY,         
+:       :   :ROSELIBERRY, :OCCABERRY, 
+:       :   :PASSHOBERRY, :WACANBERRY,
+:       :   :RINDOBERRY, :YACHEBERRY,
+:       :   :CHOPLEBERRY, :KEBIABERRY,
+:       :   :SHUCABERRY, :COBABERRY,
+:       :   :PAYAPABERRY, :TANGABERRY,
+:       :   :CHARTIBERRY, :KASIBBERRY,
+:       :   :HABANBERRY, :COLBURBERRY
+:       : ])
+@>
+
+#------------------------------------------------------------------------------
+Event ID: 018
+Event Name: Mart
+(X,Y): (061,083)
+
+Page #1
+Conditions
+None
+
+Graphic: NPCClerk
+
+Autonomous Movement
+Type: Fixed
+Speed: 3: Slow
+Freq: 3: Low
+Options Enabled
+Move Animation
+Trigger: Action Button
+
+List of Event Commands:
+@>Script: pbPokemonMart([
+:       :   :LEAFSTONE, :THUNDERSTONE,     
+:       :   :WATERSTONE, :FIRESTONE,
+:       :   :OVALSTONE, :SACHET,
+:       :   :ICESTONE, :DAWNSTONE,
+:       :   :LINKINGCORD, :RAZORCLAW,
+:       :   :RAZORFANG,
+:       :   :KINGSROCK, :SHINYSTONE,
+:       :   :MOONSTONE, :SUNSTONE,
+:       :   :DUSKSTONE
+:       : ])
+@>
+
+#------------------------------------------------------------------------------
+Event ID: 019
+Event Name: EV019
+(X,Y): (059,086)
+
+Page #1
+Conditions
+None
+
+Graphic: NPC_Frau 4
+
+Autonomous Movement
+Type: Fixed
+Speed: 3: Slow
+Freq: 3: Low
+Options Enabled
+Move Animation
+Trigger: Action Button
+
+List of Event Commands:
+@>Text: Man munkelt, ein Pokémon könne die Gestalt eines 
+ :    : Menschen annehmen und sich in der Stadt unter's 
+ :    : Volk mischen.
+@>Text: Pff, das klingt doch verrückt, oder?
+@>
+
+#------------------------------------------------------------------------------
+Event ID: 020
+Event Name: EV020
+(X,Y): (035,075)
+
+Page #1
+Conditions
+None
+
+Graphic: TOURISTF
+
+Autonomous Movement
+Type: Fixed
+Speed: 3: Slow
+Freq: 3: Low
+Options Enabled
+Move Animation
+Trigger: Action Button
+
+List of Event Commands:
+@>Text: Ich bin nur Wegen der Aussicht hier.
+@>Text: Manchmal sieht man von hier aus Lichter über der 
+ :    : Stadt oder dem Meer.
+@>Text: Richtig mystisch.
+@>Set Move Route: This event
+ :              : $>Turn Left
+@>
+
+#------------------------------------------------------------------------------
+Event ID: 021
+Event Name: EV021
+(X,Y): (038,074)
+
+Page #1
+Conditions
+None
+
+Graphic: NPC_Frau 8
+
+Autonomous Movement
+Type: Fixed
+Speed: 3: Slow
+Freq: 3: Low
+Options Enabled
+Move Animation
+Trigger: Action Button
+
+List of Event Commands:
+@>Text: Ich war jung, als es passiert ist.
+@>Text: Was genau, weiß ich aber nicht mehr.
+@>Text: Viele glauben mir nicht, aber ich weiß ganz genau, 
+ :    : das irgendwann etwas war.
+@>Set Move Route: This event
+ :              : $>Turn Right
+@>
+
+#------------------------------------------------------------------------------
+Event ID: 025
+Event Name: Ausgang unten
+(X,Y): (047,038)
+
+Page #1
+Conditions
+None
+
+Autonomous Movement
+Type: Fixed
+Speed: 3: Slow
+Freq: 3: Low
+Options Enabled
+Move Animation
+Trigger: Event Touch
+
+List of Event Commands:
+@>Conditional Branch: Player is facing Up
+ @>Play SE: 'Door enter', 100, 100
+ @>Change Screen Color Tone: (-255,-255,-255,0), @6
+ @>Wait: 8 frame(s)
+ @>Transfer Player:[163: MAP163], (020,050), Up, No Fade
+ @>Change Screen Color Tone: (0,0,0,0), @6
+ @>
+: Else
+ @>Set Move Route: Player
+  :              : $>Move Down
+  :              : $>Wait: 4 frame(s)
+ @>
+: Branch End
+@>
+
+#------------------------------------------------------------------------------
+Event ID: 026
+Event Name: Haus 1 Tür
+(X,Y): (027,076)
+
+Page #1
+Conditions
+None
+
+Graphic: Doors Stadt 5 Häuser
+
+Autonomous Movement
+Type: Fixed
+Speed: 3: Slow
+Freq: 3: Low
+Options Enabled
+Move Animation
+Trigger: Player Touch
+
+List of Event Commands:
+@>Set Move Route: This event
+                  (Ignore If Can't Move)
+ :              : $>SE: 'Center Door', 100, 100
+ :              : $>Wait: 2 frame(s)
+ :              : $>Turn Left
+ :              : $>Wait: 2 frame(s)
+ :              : $>Turn Right
+ :              : $>Wait: 2 frame(s)
+ :              : $>Turn Up
+ :              : $>Wait: 2 frame(s)
+@>Wait for Move's Completion
+@>Set Move Route: Player
+                  (Ignore If Can't Move)
+ :              : $>Through ON
+ :              : $>Move Up
+ :              : $>Through OFF
+@>Wait for Move's Completion
+@>Change Transparent Flag: Transparency
+@>Script: Followers.follow_into_door
+@>Wait for Move's Completion
+@>Set Move Route: This event
+                  (Ignore If Can't Move)
+ :              : $>Wait: 2 frame(s)
+ :              : $>Turn Right
+ :              : $>Wait: 2 frame(s)
+ :              : $>Turn Left
+ :              : $>Wait: 2 frame(s)
+ :              : $>Turn Down
+ :              : $>Wait: 2 frame(s)
+@>Wait for Move's Completion
+@>Change Screen Color Tone: (-255,-255,-255,0), @6
+@>Wait: 8 frame(s)
+@>Change Transparent Flag: Normal
+@>Transfer Player:[492: Solhaven], (009,018), Up, No Fade
+@>Change Screen Color Tone: (0,0,0,0), @6
+@>
+
+Page #2
+Conditions
+Switch 0022: s:tsOff?("A") is ON
+
+Graphic: Doors Stadt 5 Häuser
+
+Autonomous Movement
+Type: Fixed
+Speed: 3: Slow
+Freq: 3: Low
+Options Enabled
+Move Animation
+Trigger: Autorun
+
+List of Event Commands:
+@>Conditional Branch: Script: get_self.onEvent?
+ @>Change Transparent Flag: Transparency
+ @>Script: Followers.hide_followers
+ @>Set Move Route: This event
+                   (Ignore If Can't Move)
+  :              : $>SE: 'Center Door', 100, 100
+  :              : $>Wait: 2 frame(s)
+  :              : $>Turn Left
+  :              : $>Wait: 2 frame(s)
+  :              : $>Turn Right
+  :              : $>Wait: 2 frame(s)
+  :              : $>Turn Up
+  :              : $>Wait: 2 frame(s)
+ @>Wait for Move's Completion
+ @>Change Transparent Flag: Normal
+ @>Set Move Route: Player
+                   (Ignore If Can't Move)
+  :              : $>Move Down
+ @>Wait for Move's Completion
+ @>Script: Followers.put_followers_on_player
+ @>Set Move Route: This event
+                   (Ignore If Can't Move)
+  :              : $>Turn Right
+  :              : $>Wait: 2 frame(s)
+  :              : $>Turn Left
+  :              : $>Wait: 2 frame(s)
+  :              : $>Turn Down
+  :              : $>Wait: 2 frame(s)
+ @>Wait for Move's Completion
+ @>
+: Branch End
+@>Script: setTempSwitchOn("A")
+@>
+
+Page #3
+Conditions
+Switch 0015: s:PBDayNight.isNight? is ON
+
+Graphic: Doors Stadt 5 Häuser
+
+Autonomous Movement
+Type: Fixed
+Speed: 3: Slow
+Freq: 3: Low
+Options Enabled
+Move Animation
+Trigger: Player Touch
+
+List of Event Commands:
+@>Set Move Route: This event
+                  (Ignore If Can't Move)
+ :              : $>SE: 'Center Door', 100, 100
+ :              : $>Wait: 2 frame(s)
+ :              : $>Turn Left
+ :              : $>Wait: 2 frame(s)
+ :              : $>Turn Right
+ :              : $>Wait: 2 frame(s)
+ :              : $>Turn Up
+ :              : $>Wait: 2 frame(s)
+@>Wait for Move's Completion
+@>Set Move Route: Player
+                  (Ignore If Can't Move)
+ :              : $>Through ON
+ :              : $>Move Up
+ :              : $>Through OFF
+@>Wait for Move's Completion
+@>Change Transparent Flag: Transparency
+@>Script: Followers.follow_into_door
+@>Wait for Move's Completion
+@>Set Move Route: This event
+                  (Ignore If Can't Move)
+ :              : $>Wait: 2 frame(s)
+ :              : $>Turn Right
+ :              : $>Wait: 2 frame(s)
+ :              : $>Turn Left
+ :              : $>Wait: 2 frame(s)
+ :              : $>Turn Down
+ :              : $>Wait: 2 frame(s)
+@>Wait for Move's Completion
+@>Change Screen Color Tone: (-255,-255,-255,0), @6
+@>Wait: 8 frame(s)
+@>Change Transparent Flag: Normal
+@>Transfer Player:[492: Solhaven], (009,018), Up, No Fade
+@>Change Screen Color Tone: (0,0,0,0), @6
+@>
+
+Page #4
+Conditions
+Switch 0022: s:tsOff?("A") is ON
+Switch 0015: s:PBDayNight.isNight? is ON
+
+Graphic: Doors Stadt 5 Häuser
+
+Autonomous Movement
+Type: Fixed
+Speed: 3: Slow
+Freq: 3: Low
+Options Enabled
+Move Animation
+Trigger: Autorun
+
+List of Event Commands:
+@>Conditional Branch: Script: get_self.onEvent?
+ @>Change Transparent Flag: Transparency
+ @>Script: Followers.hide_followers
+ @>Set Move Route: This event
+                   (Ignore If Can't Move)
+  :              : $>SE: 'Center Door', 100, 100
+  :              : $>Wait: 2 frame(s)
+  :              : $>Turn Left
+  :              : $>Wait: 2 frame(s)
+  :              : $>Turn Right
+  :              : $>Wait: 2 frame(s)
+  :              : $>Turn Up
+  :              : $>Wait: 2 frame(s)
+ @>Wait for Move's Completion
+ @>Change Transparent Flag: Normal
+ @>Set Move Route: Player
+                   (Ignore If Can't Move)
+  :              : $>Move Down
+ @>Wait for Move's Completion
+ @>Script: Followers.put_followers_on_player
+ @>Set Move Route: This event
+                   (Ignore If Can't Move)
+  :              : $>Turn Right
+  :              : $>Wait: 2 frame(s)
+  :              : $>Turn Left
+  :              : $>Wait: 2 frame(s)
+  :              : $>Turn Down
+  :              : $>Wait: 2 frame(s)
+ @>Wait for Move's Completion
+ @>
+: Branch End
+@>Script: setTempSwitchOn("A")
+@>
+
+#------------------------------------------------------------------------------
+Event ID: 027
+Event Name: Haus 1 Tür
+(X,Y): (060,075)
+
+Page #1
+Conditions
+None
+
+Graphic: Doors Stadt 5 Häuser
+
+Autonomous Movement
+Type: Fixed
+Speed: 3: Slow
+Freq: 3: Low
+Options Enabled
+Move Animation
+Trigger: Player Touch
+
+List of Event Commands:
+@>Set Move Route: This event
+                  (Ignore If Can't Move)
+ :              : $>SE: 'Door enter', 100, 100
+ :              : $>Wait: 2 frame(s)
+ :              : $>Turn Left
+ :              : $>Wait: 2 frame(s)
+ :              : $>Turn Right
+ :              : $>Wait: 2 frame(s)
+ :              : $>Turn Up
+ :              : $>Wait: 2 frame(s)
+@>Wait for Move's Completion
+@>Set Move Route: Player
+                  (Ignore If Can't Move)
+ :              : $>Through ON
+ :              : $>Move Up
+ :              : $>Through OFF
+@>Wait for Move's Completion
+@>Change Transparent Flag: Transparency
+@>Script: Followers.follow_into_door
+@>Wait for Move's Completion
+@>Set Move Route: This event
+                  (Ignore If Can't Move)
+ :              : $>Wait: 2 frame(s)
+ :              : $>Turn Right
+ :              : $>Wait: 2 frame(s)
+ :              : $>Turn Left
+ :              : $>Wait: 2 frame(s)
+ :              : $>Turn Down
+ :              : $>Wait: 2 frame(s)
+@>Wait for Move's Completion
+@>Change Screen Color Tone: (-255,-255,-255,0), @6
+@>Wait: 8 frame(s)
+@>Change Transparent Flag: Normal
+@>Transfer Player:[491: Solhaven], (009,018), Up, No Fade
+@>Change Screen Color Tone: (0,0,0,0), @6
+@>
+
+Page #2
+Conditions
+Switch 0022: s:tsOff?("A") is ON
+
+Graphic: Doors Stadt 5 Häuser
+
+Autonomous Movement
+Type: Fixed
+Speed: 3: Slow
+Freq: 3: Low
+Options Enabled
+Move Animation
+Trigger: Autorun
+
+List of Event Commands:
+@>Conditional Branch: Script: get_self.onEvent?
+ @>Change Transparent Flag: Transparency
+ @>Script: Followers.hide_followers
+ @>Set Move Route: This event
+                   (Ignore If Can't Move)
+  :              : $>SE: 'Center Door', 100, 100
+  :              : $>Wait: 2 frame(s)
+  :              : $>Turn Left
+  :              : $>Wait: 2 frame(s)
+  :              : $>Turn Right
+  :              : $>Wait: 2 frame(s)
+  :              : $>Turn Up
+  :              : $>Wait: 2 frame(s)
+ @>Wait for Move's Completion
+ @>Change Transparent Flag: Normal
+ @>Set Move Route: Player
+                   (Ignore If Can't Move)
+  :              : $>Move Down
+ @>Wait for Move's Completion
+ @>Script: Followers.put_followers_on_player
+ @>Set Move Route: This event
+                   (Ignore If Can't Move)
+  :              : $>Turn Right
+  :              : $>Wait: 2 frame(s)
+  :              : $>Turn Left
+  :              : $>Wait: 2 frame(s)
+  :              : $>Turn Down
+  :              : $>Wait: 2 frame(s)
+ @>Wait for Move's Completion
+ @>
+: Branch End
+@>Script: setTempSwitchOn("A")
+@>
+
+Page #3
+Conditions
+Switch 0015: s:PBDayNight.isNight? is ON
+
+Graphic: Doors Stadt 5 Häuser
+
+Autonomous Movement
+Type: Fixed
+Speed: 3: Slow
+Freq: 3: Low
+Options Enabled
+Move Animation
+Trigger: Player Touch
+
+List of Event Commands:
+@>Set Move Route: This event
+                  (Ignore If Can't Move)
+ :              : $>SE: 'Center Door', 100, 100
+ :              : $>Wait: 2 frame(s)
+ :              : $>Turn Left
+ :              : $>Wait: 2 frame(s)
+ :              : $>Turn Right
+ :              : $>Wait: 2 frame(s)
+ :              : $>Turn Up
+ :              : $>Wait: 2 frame(s)
+@>Wait for Move's Completion
+@>Set Move Route: Player
+                  (Ignore If Can't Move)
+ :              : $>Through ON
+ :              : $>Move Up
+ :              : $>Through OFF
+@>Wait for Move's Completion
+@>Change Transparent Flag: Transparency
+@>Script: Followers.follow_into_door
+@>Wait for Move's Completion
+@>Set Move Route: This event
+                  (Ignore If Can't Move)
+ :              : $>Wait: 2 frame(s)
+ :              : $>Turn Right
+ :              : $>Wait: 2 frame(s)
+ :              : $>Turn Left
+ :              : $>Wait: 2 frame(s)
+ :              : $>Turn Down
+ :              : $>Wait: 2 frame(s)
+@>Wait for Move's Completion
+@>Change Screen Color Tone: (-255,-255,-255,0), @6
+@>Wait: 8 frame(s)
+@>Change Transparent Flag: Normal
+@>Transfer Player:[491: Solhaven], (009,018), Up, No Fade
+@>Change Screen Color Tone: (0,0,0,0), @6
+@>
+
+Page #4
+Conditions
+Switch 0022: s:tsOff?("A") is ON
+Switch 0015: s:PBDayNight.isNight? is ON
+
+Graphic: Doors Stadt 5 Häuser
+
+Autonomous Movement
+Type: Fixed
+Speed: 3: Slow
+Freq: 3: Low
+Options Enabled
+Move Animation
+Trigger: Autorun
+
+List of Event Commands:
+@>Conditional Branch: Script: get_self.onEvent?
+ @>Change Transparent Flag: Transparency
+ @>Script: Followers.hide_followers
+ @>Set Move Route: This event
+                   (Ignore If Can't Move)
+  :              : $>SE: 'Center Door', 100, 100
+  :              : $>Wait: 2 frame(s)
+  :              : $>Turn Left
+  :              : $>Wait: 2 frame(s)
+  :              : $>Turn Right
+  :              : $>Wait: 2 frame(s)
+  :              : $>Turn Up
+  :              : $>Wait: 2 frame(s)
+ @>Wait for Move's Completion
+ @>Change Transparent Flag: Normal
+ @>Set Move Route: Player
+                   (Ignore If Can't Move)
+  :              : $>Move Down
+ @>Wait for Move's Completion
+ @>Script: Followers.put_followers_on_player
+ @>Set Move Route: This event
+                   (Ignore If Can't Move)
+  :              : $>Turn Right
+  :              : $>Wait: 2 frame(s)
+  :              : $>Turn Left
+  :              : $>Wait: 2 frame(s)
+  :              : $>Turn Down
+  :              : $>Wait: 2 frame(s)
+ @>Wait for Move's Completion
+ @>
+: Branch End
+@>Script: setTempSwitchOn("A")
+@>
+
+#------------------------------------------------------------------------------
+Event ID: 029
+Event Name: EV029
+(X,Y): (049,080)
+
+Page #1
+Conditions
+None
+
+Graphic: NPC_Frau 5
+
+Autonomous Movement
+Type: Fixed
+Speed: 3: Slow
+Freq: 3: Low
+Options Enabled
+Move Animation
+Stop Animation
+Trigger: Action Button
+
+List of Event Commands:
+@>Conditional Branch: Script: $bag.has?(:TM58)
+ @>Text: Du hast uns bereits durchschaut, wir werden härter 
+  :    : trainieren.
+ @>Set Move Route: This event
+  :              : $>Turn Down
+  :              : $>Stop Animation ON
+ @>
+: Else
+ @>Set Move Route: This event
+  :              : $>Stop Animation OFF
+ @>Text: Heeeeey!
+ @>Text: Schau dir diese Schönheiten an.
+ @>Text: Sie trainieren gerade ihre perfekte Teamarbeit.
+ @>Text: Möchtest du mit uns trainieren?
+ @>Show Choices: Klar, Nee
+ (When Cancel: Choice 2)
+ : When [Klar]
+  @>Text: Wunderbar!
+  @>Text: Sie werden gleich Positionen tauschen.
+  @>Text: Merke dir gut welches Meloetta ich dir zeige.
+  @>Text: Auf dieses Meloetta musst du achten.
+  @>Set Move Route: [EV032]
+   :              : $>Jump: +0,+0
+  @>Wait: 6 frame(s)
+  @>Text: Wenn du es findest, gibt es dir ein Item.
+  @>Text: Los geht's!
+  @>Control Variables: [0050: Meloetta] = Random No. (1...3)
+  @>Conditional Branch: Variable [0050: Meloetta] == 1
+   @>Set Move Route: This event
+    :              : $>Jump: +0,+0
+   @>Wait: 6 frame(s)
+   @>Set Move Route: This event
+    :              : $>Turn 90 Right
+    :              : $>Wait: 4 frame(s)
+    :              : $>Turn 90 Right
+    :              : $>Wait: 4 frame(s)
+    :              : $>Turn 90 Right
+    :              : $>Wait: 4 frame(s)
+    :              : $>Turn 90 Right
+    :              : $>Wait: 4 frame(s)
+   @>Wait: 14 frame(s)
+   @>Set Move Route: [EV030]
+    :              : $>Jump: +0,+0
+   @>Set Move Route: [EV031]
+    :              : $>Jump: +0,+0
+   @>Set Move Route: [EV032]
+    :              : $>Jump: +0,+0
+   @>Set Move Route: [EV033]
+    :              : $>Jump: +0,+0
+   @>Show Animation: [EV030], [Teleport]
+   @>Show Animation: [EV031], [Teleport]
+   @>Show Animation: [EV032], [Teleport]
+   @>Show Animation: [EV033], [Teleport]
+   @>Wait: 15 frame(s)
+   @>Set Move Route: [EV030]
+    :              : $>Graphic: "MELOETTA_1', 0, 2, 0
+   @>Set Move Route: [EV031]
+    :              : $>Graphic: "MELOETTA_1', 0, 2, 0
+   @>Set Move Route: [EV032]
+    :              : $>Graphic: "MELOETTA_1', 0, 2, 0
+   @>Set Move Route: [EV033]
+    :              : $>Graphic: "MELOETTA_1', 0, 2, 0
+   @>Wait: 3 frame(s)
+   @>Set Move Route: [EV030]
+    :              : $>Stop Animation OFF
+    :              : $>Through ON
+    :              : $>Turn 90 Right
+    :              : $>Wait: 4 frame(s)
+    :              : $>Turn 90 Right
+    :              : $>Wait: 4 frame(s)
+    :              : $>Turn 90 Right
+    :              : $>Wait: 4 frame(s)
+    :              : $>Turn 90 Right
+    :              : $>Wait: 4 frame(s)
+   @>Wait: 6 frame(s)
+   @>Set Move Route: [EV031]
+    :              : $>Stop Animation OFF
+    :              : $>Through ON
+    :              : $>Turn 90 Right
+    :              : $>Wait: 4 frame(s)
+    :              : $>Turn 90 Right
+    :              : $>Wait: 4 frame(s)
+    :              : $>Turn 90 Right
+    :              : $>Wait: 4 frame(s)
+    :              : $>Turn 90 Right
+    :              : $>Wait: 4 frame(s)
+   @>Wait: 6 frame(s)
+   @>Set Move Route: [EV032]
+    :              : $>Stop Animation OFF
+    :              : $>Through ON
+    :              : $>Turn 90 Right
+    :              : $>Wait: 4 frame(s)
+    :              : $>Turn 90 Right
+    :              : $>Wait: 4 frame(s)
+    :              : $>Turn 90 Right
+    :              : $>Wait: 4 frame(s)
+    :              : $>Turn 90 Right
+    :              : $>Wait: 4 frame(s)
+   @>Wait: 6 frame(s)
+   @>Set Move Route: [EV033]
+    :              : $>Stop Animation OFF
+    :              : $>Through ON
+    :              : $>Turn 90 Right
+    :              : $>Wait: 4 frame(s)
+    :              : $>Turn 90 Right
+    :              : $>Wait: 4 frame(s)
+    :              : $>Turn 90 Right
+    :              : $>Wait: 4 frame(s)
+    :              : $>Turn 90 Right
+    :              : $>Wait: 4 frame(s)
+   @>Wait: 12 frame(s)
+   @>Set Move Route: [EV030]
+    :              : $>Jump: +0,+0
+   @>Wait: 6 frame(s)
+   @>Set Move Route: [EV031]
+    :              : $>Jump: +0,+0
+   @>Wait: 6 frame(s)
+   @>Set Move Route: [EV032]
+    :              : $>Jump: +0,+0
+   @>Wait: 6 frame(s)
+   @>Set Move Route: [EV033]
+    :              : $>Jump: +0,+0
+   @>Wait: 6 frame(s)
+   @>Set Move Route: [EV030]
+    :              : $>Move Up
+    :              : $>Move Right
+    :              : $>Move Right
+    :              : $>Move Down
+   @>Set Move Route: [EV031]
+    :              : $>Move Up
+    :              : $>Move Right
+    :              : $>Move Right
+    :              : $>Move Down
+   @>Set Move Route: [EV032]
+    :              : $>Move Down
+    :              : $>Move Left
+    :              : $>Move Left
+    :              : $>Move Up
+   @>Set Move Route: [EV033]
+    :              : $>Move Down
+    :              : $>Move Left
+    :              : $>Move Left
+    :              : $>Move Up
+   @>Wait for Move's Completion
+   @>Set Move Route: [EV030]
+    :              : $>Wait: 4 frame(s)
+    :              : $>Turn Right
+    :              : $>Wait: 4 frame(s)
+    :              : $>Turn 90 Left
+    :              : $>Wait: 4 frame(s)
+    :              : $>Turn 90 Left
+    :              : $>Wait: 4 frame(s)
+    :              : $>Turn 90 Left
+    :              : $>Wait: 4 frame(s)
+    :              : $>Turn 90 Left
+    :              : $>Wait: 4 frame(s)
+    :              : $>Turn 90 Left
+    :              : $>Wait: 4 frame(s)
+    :              : $>Turn 90 Left
+    :              : $>Wait: 4 frame(s)
+    :              : $>Turn 90 Left
+   @>Set Move Route: [EV031]
+    :              : $>Wait: 4 frame(s)
+    :              : $>Turn Right
+    :              : $>Wait: 4 frame(s)
+    :              : $>Turn 90 Left
+    :              : $>Wait: 4 frame(s)
+    :              : $>Turn 90 Left
+    :              : $>Wait: 4 frame(s)
+    :              : $>Turn 90 Left
+    :              : $>Wait: 4 frame(s)
+    :              : $>Turn 90 Left
+    :              : $>Wait: 4 frame(s)
+    :              : $>Turn 90 Left
+    :              : $>Wait: 4 frame(s)
+    :              : $>Turn 90 Left
+    :              : $>Wait: 4 frame(s)
+    :              : $>Turn 90 Left
+   @>Set Move Route: [EV032]
+    :              : $>Wait: 4 frame(s)
+    :              : $>Turn Right
+    :              : $>Wait: 4 frame(s)
+    :              : $>Turn 90 Left
+    :              : $>Wait: 4 frame(s)
+    :              : $>Turn 90 Left
+    :              : $>Wait: 4 frame(s)
+    :              : $>Turn 90 Left
+    :              : $>Wait: 4 frame(s)
+    :              : $>Turn 90 Left
+    :              : $>Wait: 4 frame(s)
+    :              : $>Turn 90 Left
+    :              : $>Wait: 4 frame(s)
+    :              : $>Turn 90 Left
+    :              : $>Wait: 4 frame(s)
+    :              : $>Turn 90 Left
+   @>Set Move Route: [EV033]
+    :              : $>Wait: 4 frame(s)
+    :              : $>Turn Right
+    :              : $>Wait: 4 frame(s)
+    :              : $>Turn 90 Left
+    :              : $>Wait: 4 frame(s)
+    :              : $>Turn 90 Left
+    :              : $>Wait: 4 frame(s)
+    :              : $>Turn 90 Left
+    :              : $>Wait: 4 frame(s)
+    :              : $>Turn 90 Left
+    :              : $>Wait: 4 frame(s)
+    :              : $>Turn 90 Left
+    :              : $>Wait: 4 frame(s)
+    :              : $>Turn 90 Left
+    :              : $>Wait: 4 frame(s)
+    :              : $>Turn 90 Left
+   @>Wait for Move's Completion
+   @>Set Move Route: [EV030]
+    :              : $>Wait: 4 frame(s)
+    :              : $>Move Down
+    :              : $>Move Left
+    :              : $>Move Up
+    :              : $>Turn Down
+   @>Set Move Route: [EV031]
+    :              : $>Wait: 4 frame(s)
+    :              : $>Move Up
+    :              : $>Change Speed: 5
+    :              : $>Move Left
+    :              : $>Move Left
+    :              : $>Move Left
+    :              : $>Change Speed: 3
+    :              : $>Move Down
+   @>Set Move Route: [EV032]
+    :              : $>Wait: 4 frame(s)
+    :              : $>Move Down
+    :              : $>Change Speed: 5
+    :              : $>Move Right
+    :              : $>Move Right
+    :              : $>Move Right
+    :              : $>Change Speed: 3
+    :              : $>Move Up
+    :              : $>Turn Down
+   @>Set Move Route: [EV033]
+    :              : $>Wait: 4 frame(s)
+    :              : $>Move Up
+    :              : $>Move Right
+    :              : $>Move Down
+    :              : $>Turn Down
+   @>Wait for Move's Completion
+   @>Set Move Route: [EV030]
+    :              : $>Wait: 4 frame(s)
+    :              : $>Turn Right
+    :              : $>Wait: 4 frame(s)
+    :              : $>Turn 90 Left
+    :              : $>Wait: 4 frame(s)
+    :              : $>Turn 90 Left
+    :              : $>Wait: 4 frame(s)
+    :              : $>Turn 90 Left
+    :              : $>Wait: 4 frame(s)
+    :              : $>Turn 90 Left
+    :              : $>Wait: 4 frame(s)
+    :              : $>Turn 90 Left
+    :              : $>Wait: 4 frame(s)
+    :              : $>Turn 90 Left
+    :              : $>Wait: 4 frame(s)
+    :              : $>Turn 90 Left
+   @>Set Move Route: [EV031]
+    :              : $>Wait: 4 frame(s)
+    :              : $>Turn Right
+    :              : $>Wait: 4 frame(s)
+    :              : $>Turn 90 Left
+    :              : $>Wait: 4 frame(s)
+    :              : $>Turn 90 Left
+    :              : $>Wait: 4 frame(s)
+    :              : $>Turn 90 Left
+    :              : $>Wait: 4 frame(s)
+    :              : $>Turn 90 Left
+    :              : $>Wait: 4 frame(s)
+    :              : $>Turn 90 Left
+    :              : $>Wait: 4 frame(s)
+    :              : $>Turn 90 Left
+    :              : $>Wait: 4 frame(s)
+    :              : $>Turn 90 Left
+   @>Set Move Route: [EV032]
+    :              : $>Wait: 4 frame(s)
+    :              : $>Turn Right
+    :              : $>Wait: 4 frame(s)
+    :              : $>Turn 90 Left
+    :              : $>Wait: 4 frame(s)
+    :              : $>Turn 90 Left
+    :              : $>Wait: 4 frame(s)
+    :              : $>Turn 90 Left
+    :              : $>Wait: 4 frame(s)
+    :              : $>Turn 90 Left
+    :              : $>Wait: 4 frame(s)
+    :              : $>Turn 90 Left
+    :              : $>Wait: 4 frame(s)
+    :              : $>Turn 90 Left
+    :              : $>Wait: 4 frame(s)
+    :              : $>Turn 90 Left
+   @>Set Move Route: [EV033]
+    :              : $>Wait: 4 frame(s)
+    :              : $>Turn Right
+    :              : $>Wait: 4 frame(s)
+    :              : $>Turn 90 Left
+    :              : $>Wait: 4 frame(s)
+    :              : $>Turn 90 Left
+    :              : $>Wait: 4 frame(s)
+    :              : $>Turn 90 Left
+    :              : $>Wait: 4 frame(s)
+    :              : $>Turn 90 Left
+    :              : $>Wait: 4 frame(s)
+    :              : $>Turn 90 Left
+    :              : $>Wait: 4 frame(s)
+    :              : $>Turn 90 Left
+    :              : $>Wait: 4 frame(s)
+    :              : $>Turn 90 Left
+   @>Wait for Move's Completion
+   @>Set Move Route: [EV030]
+    :              : $>Wait: 4 frame(s)
+    :              : $>Move Up
+    :              : $>Move Left
+    :              : $>Move Down
+   @>Set Move Route: [EV031]
+    :              : $>Wait: 4 frame(s)
+    :              : $>Move Down
+    :              : $>Move Right
+    :              : $>Move Up
+    :              : $>Turn Down
+   @>Set Move Route: [EV032]
+    :              : $>Wait: 4 frame(s)
+    :              : $>Move Down
+    :              : $>Move Left
+    :              : $>Move Up
+    :              : $>Turn Down
+   @>Set Move Route: [EV033]
+    :              : $>Wait: 4 frame(s)
+    :              : $>Move Up
+    :              : $>Move Right
+    :              : $>Move Down
+   @>Wait for Move's Completion
+   @>Set Move Route: [EV030]
+    :              : $>Wait: 4 frame(s)
+    :              : $>Turn Right
+    :              : $>Wait: 4 frame(s)
+    :              : $>Turn 90 Left
+    :              : $>Wait: 4 frame(s)
+    :              : $>Turn 90 Left
+    :              : $>Wait: 4 frame(s)
+    :              : $>Turn 90 Left
+    :              : $>Wait: 4 frame(s)
+    :              : $>Turn 90 Left
+    :              : $>Wait: 4 frame(s)
+    :              : $>Turn 90 Left
+    :              : $>Wait: 4 frame(s)
+    :              : $>Turn 90 Left
+    :              : $>Wait: 4 frame(s)
+    :              : $>Turn 90 Left
+   @>Set Move Route: [EV031]
+    :              : $>Wait: 4 frame(s)
+    :              : $>Turn Right
+    :              : $>Wait: 4 frame(s)
+    :              : $>Turn 90 Left
+    :              : $>Wait: 4 frame(s)
+    :              : $>Turn 90 Left
+    :              : $>Wait: 4 frame(s)
+    :              : $>Turn 90 Left
+    :              : $>Wait: 4 frame(s)
+    :              : $>Turn 90 Left
+    :              : $>Wait: 4 frame(s)
+    :              : $>Turn 90 Left
+    :              : $>Wait: 4 frame(s)
+    :              : $>Turn 90 Left
+    :              : $>Wait: 4 frame(s)
+    :              : $>Turn 90 Left
+   @>Set Move Route: [EV032]
+    :              : $>Wait: 4 frame(s)
+    :              : $>Turn Right
+    :              : $>Wait: 4 frame(s)
+    :              : $>Turn 90 Left
+    :              : $>Wait: 4 frame(s)
+    :              : $>Turn 90 Left
+    :              : $>Wait: 4 frame(s)
+    :              : $>Turn 90 Left
+    :              : $>Wait: 4 frame(s)
+    :              : $>Turn 90 Left
+    :              : $>Wait: 4 frame(s)
+    :              : $>Turn 90 Left
+    :              : $>Wait: 4 frame(s)
+    :              : $>Turn 90 Left
+    :              : $>Wait: 4 frame(s)
+    :              : $>Turn 90 Left
+   @>Set Move Route: [EV033]
+    :              : $>Wait: 4 frame(s)
+    :              : $>Turn Right
+    :              : $>Wait: 4 frame(s)
+    :              : $>Turn 90 Left
+    :              : $>Wait: 4 frame(s)
+    :              : $>Turn 90 Left
+    :              : $>Wait: 4 frame(s)
+    :              : $>Turn 90 Left
+    :              : $>Wait: 4 frame(s)
+    :              : $>Turn 90 Left
+    :              : $>Wait: 4 frame(s)
+    :              : $>Turn 90 Left
+    :              : $>Wait: 4 frame(s)
+    :              : $>Turn 90 Left
+    :              : $>Wait: 4 frame(s)
+    :              : $>Turn 90 Left
+   @>Wait for Move's Completion
+   @>Set Move Route: [EV030]
+    :              : $>Wait: 4 frame(s)
+    :              : $>Move Up
+    :              : $>Change Speed: 5
+    :              : $>Move Right
+    :              : $>Move Right
+    :              : $>Move Right
+    :              : $>Change Speed: 3
+    :              : $>Move Down
+   @>Set Move Route: [EV031]
+    :              : $>Wait: 4 frame(s)
+    :              : $>Move Up
+    :              : $>Move Right
+    :              : $>Move Down
+   @>Set Move Route: [EV032]
+    :              : $>Wait: 4 frame(s)
+    :              : $>Move Down
+    :              : $>Move Left
+    :              : $>Move Up
+    :              : $>Turn Down
+   @>Set Move Route: [EV033]
+    :              : $>Wait: 4 frame(s)
+    :              : $>Move Down
+    :              : $>Change Speed: 5
+    :              : $>Move Left
+    :              : $>Move Left
+    :              : $>Move Left
+    :              : $>Change Speed: 3
+    :              : $>Move Up
+   @>Wait for Move's Completion
+   @>Set Move Route: [EV030]
+    :              : $>Wait: 4 frame(s)
+    :              : $>Turn Right
+    :              : $>Wait: 4 frame(s)
+    :              : $>Turn 90 Left
+    :              : $>Wait: 4 frame(s)
+    :              : $>Turn 90 Left
+    :              : $>Wait: 4 frame(s)
+    :              : $>Turn 90 Left
+    :              : $>Wait: 4 frame(s)
+    :              : $>Turn 90 Left
+    :              : $>Wait: 4 frame(s)
+    :              : $>Turn 90 Left
+    :              : $>Wait: 4 frame(s)
+    :              : $>Turn 90 Left
+    :              : $>Wait: 4 frame(s)
+    :              : $>Turn 90 Left
+   @>Set Move Route: [EV031]
+    :              : $>Wait: 4 frame(s)
+    :              : $>Turn Right
+    :              : $>Wait: 4 frame(s)
+    :              : $>Turn 90 Left
+    :              : $>Wait: 4 frame(s)
+    :              : $>Turn 90 Left
+    :              : $>Wait: 4 frame(s)
+    :              : $>Turn 90 Left
+    :              : $>Wait: 4 frame(s)
+    :              : $>Turn 90 Left
+    :              : $>Wait: 4 frame(s)
+    :              : $>Turn 90 Left
+    :              : $>Wait: 4 frame(s)
+    :              : $>Turn 90 Left
+    :              : $>Wait: 4 frame(s)
+    :              : $>Turn 90 Left
+   @>Set Move Route: [EV032]
+    :              : $>Wait: 4 frame(s)
+    :              : $>Turn Right
+    :              : $>Wait: 4 frame(s)
+    :              : $>Turn 90 Left
+    :              : $>Wait: 4 frame(s)
+    :              : $>Turn 90 Left
+    :              : $>Wait: 4 frame(s)
+    :              : $>Turn 90 Left
+    :              : $>Wait: 4 frame(s)
+    :              : $>Turn 90 Left
+    :              : $>Wait: 4 frame(s)
+    :              : $>Turn 90 Left
+    :              : $>Wait: 4 frame(s)
+    :              : $>Turn 90 Left
+    :              : $>Wait: 4 frame(s)
+    :              : $>Turn 90 Left
+   @>Set Move Route: [EV033]
+    :              : $>Wait: 4 frame(s)
+    :              : $>Turn Right
+    :              : $>Wait: 4 frame(s)
+    :              : $>Turn 90 Left
+    :              : $>Wait: 4 frame(s)
+    :              : $>Turn 90 Left
+    :              : $>Wait: 4 frame(s)
+    :              : $>Turn 90 Left
+    :              : $>Wait: 4 frame(s)
+    :              : $>Turn 90 Left
+    :              : $>Wait: 4 frame(s)
+    :              : $>Turn 90 Left
+    :              : $>Wait: 4 frame(s)
+    :              : $>Turn 90 Left
+    :              : $>Wait: 4 frame(s)
+    :              : $>Turn 90 Left
+   @>Wait for Move's Completion
+   @>Set Move Route: [EV030]
+    :              : $>Wait: 4 frame(s)
+    :              : $>Jump: +0,+0
+    :              : $>Wait: 10 frame(s)
+    :              : $>Jump: +0,+0
+    :              : $>Wait: 4 frame(s)
+   @>Set Move Route: [EV031]
+    :              : $>Wait: 4 frame(s)
+    :              : $>Change Speed: 5
+    :              : $>Jump: -2,+0
+    :              : $>Wait: 4 frame(s)
+    :              : $>Change Speed: 3
+    :              : $>Turn Down
+    :              : $>Jump: +0,+0
+    :              : $>Wait: 4 frame(s)
+   @>Set Move Route: [EV032]
+    :              : $>Wait: 4 frame(s)
+    :              : $>Jump: +0,+0
+    :              : $>Wait: 10 frame(s)
+    :              : $>Jump: +0,+0
+    :              : $>Wait: 4 frame(s)
+   @>Set Move Route: [EV033]
+    :              : $>Wait: 4 frame(s)
+    :              : $>Change Speed: 5
+    :              : $>Jump: +2,+0
+    :              : $>Wait: 4 frame(s)
+    :              : $>Change Speed: 3
+    :              : $>Turn Down
+    :              : $>Jump: +0,+0
+    :              : $>Wait: 4 frame(s)
+   @>Wait for Move's Completion
+   @>Set Move Route: [EV030]
+    :              : $>Wait: 4 frame(s)
+    :              : $>Turn Right
+    :              : $>Wait: 4 frame(s)
+    :              : $>Turn 90 Left
+    :              : $>Wait: 4 frame(s)
+    :              : $>Turn 90 Left
+    :              : $>Wait: 4 frame(s)
+    :              : $>Turn 90 Left
+    :              : $>Wait: 4 frame(s)
+    :              : $>Turn 90 Left
+    :              : $>Wait: 4 frame(s)
+    :              : $>Turn 90 Left
+    :              : $>Wait: 4 frame(s)
+    :              : $>Turn 90 Left
+    :              : $>Wait: 4 frame(s)
+    :              : $>Turn 90 Left
+   @>Set Move Route: [EV031]
+    :              : $>Wait: 4 frame(s)
+    :              : $>Turn Right
+    :              : $>Wait: 4 frame(s)
+    :              : $>Turn 90 Left
+    :              : $>Wait: 4 frame(s)
+    :              : $>Turn 90 Left
+    :              : $>Wait: 4 frame(s)
+    :              : $>Turn 90 Left
+    :              : $>Wait: 4 frame(s)
+    :              : $>Turn 90 Left
+    :              : $>Wait: 4 frame(s)
+    :              : $>Turn 90 Left
+    :              : $>Wait: 4 frame(s)
+    :              : $>Turn 90 Left
+    :              : $>Wait: 4 frame(s)
+    :              : $>Turn 90 Left
+   @>Set Move Route: [EV032]
+    :              : $>Wait: 4 frame(s)
+    :              : $>Turn Right
+    :              : $>Wait: 4 frame(s)
+    :              : $>Turn 90 Left
+    :              : $>Wait: 4 frame(s)
+    :              : $>Turn 90 Left
+    :              : $>Wait: 4 frame(s)
+    :              : $>Turn 90 Left
+    :              : $>Wait: 4 frame(s)
+    :              : $>Turn 90 Left
+    :              : $>Wait: 4 frame(s)
+    :              : $>Turn 90 Left
+    :              : $>Wait: 4 frame(s)
+    :              : $>Turn 90 Left
+    :              : $>Wait: 4 frame(s)
+    :              : $>Turn 90 Left
+   @>Set Move Route: [EV033]
+    :              : $>Wait: 4 frame(s)
+    :              : $>Turn Right
+    :              : $>Wait: 4 frame(s)
+    :              : $>Turn 90 Left
+    :              : $>Wait: 4 frame(s)
+    :              : $>Turn 90 Left
+    :              : $>Wait: 4 frame(s)
+    :              : $>Turn 90 Left
+    :              : $>Wait: 4 frame(s)
+    :              : $>Turn 90 Left
+    :              : $>Wait: 4 frame(s)
+    :              : $>Turn 90 Left
+    :              : $>Wait: 4 frame(s)
+    :              : $>Turn 90 Left
+    :              : $>Wait: 4 frame(s)
+    :              : $>Turn 90 Left
+   @>Wait for Move's Completion
+   @>Set Move Route: [EV030]
+    :              : $>Wait: 4 frame(s)
+    :              : $>Jump: +0,+0
+    :              : $>Wait: 4 frame(s)
+    :              : $>Jump: +0,+0
+    :              : $>Wait: 4 frame(s)
+   @>Set Move Route: [EV031]
+    :              : $>Wait: 4 frame(s)
+    :              : $>Jump: +0,+0
+    :              : $>Wait: 4 frame(s)
+    :              : $>Jump: +0,+0
+    :              : $>Wait: 4 frame(s)
+   @>Set Move Route: [EV032]
+    :              : $>Wait: 4 frame(s)
+    :              : $>Jump: +1,+0
+    :              : $>Wait: 4 frame(s)
+    :              : $>Turn Down
+    :              : $>Jump: +0,+0
+    :              : $>Wait: 4 frame(s)
+   @>Set Move Route: [EV033]
+    :              : $>Wait: 4 frame(s)
+    :              : $>Jump: -1,+0
+    :              : $>Wait: 4 frame(s)
+    :              : $>Turn Down
+    :              : $>Jump: +0,+0
+    :              : $>Wait: 4 frame(s)
+   @>Wait for Move's Completion
+   @>Set Move Route: [EV030]
+    :              : $>Wait: 4 frame(s)
+    :              : $>Turn Right
+    :              : $>Wait: 4 frame(s)
+    :              : $>Turn 90 Left
+    :              : $>Wait: 4 frame(s)
+    :              : $>Turn 90 Left
+    :              : $>Wait: 4 frame(s)
+    :              : $>Turn 90 Left
+    :              : $>Wait: 4 frame(s)
+    :              : $>Turn 90 Left
+    :              : $>Wait: 4 frame(s)
+    :              : $>Turn 90 Left
+    :              : $>Wait: 4 frame(s)
+    :              : $>Turn 90 Left
+    :              : $>Wait: 4 frame(s)
+    :              : $>Turn 90 Left
+   @>Set Move Route: [EV031]
+    :              : $>Wait: 4 frame(s)
+    :              : $>Turn Right
+    :              : $>Wait: 4 frame(s)
+    :              : $>Turn 90 Left
+    :              : $>Wait: 4 frame(s)
+    :              : $>Turn 90 Left
+    :              : $>Wait: 4 frame(s)
+    :              : $>Turn 90 Left
+    :              : $>Wait: 4 frame(s)
+    :              : $>Turn 90 Left
+    :              : $>Wait: 4 frame(s)
+    :              : $>Turn 90 Left
+    :              : $>Wait: 4 frame(s)
+    :              : $>Turn 90 Left
+    :              : $>Wait: 4 frame(s)
+    :              : $>Turn 90 Left
+   @>Set Move Route: [EV032]
+    :              : $>Wait: 4 frame(s)
+    :              : $>Turn Right
+    :              : $>Wait: 4 frame(s)
+    :              : $>Turn 90 Left
+    :              : $>Wait: 4 frame(s)
+    :              : $>Turn 90 Left
+    :              : $>Wait: 4 frame(s)
+    :              : $>Turn 90 Left
+    :              : $>Wait: 4 frame(s)
+    :              : $>Turn 90 Left
+    :              : $>Wait: 4 frame(s)
+    :              : $>Turn 90 Left
+    :              : $>Wait: 4 frame(s)
+    :              : $>Turn 90 Left
+    :              : $>Wait: 4 frame(s)
+    :              : $>Turn 90 Left
+   @>Set Move Route: [EV033]
+    :              : $>Wait: 4 frame(s)
+    :              : $>Turn Right
+    :              : $>Wait: 4 frame(s)
+    :              : $>Turn 90 Left
+    :              : $>Wait: 4 frame(s)
+    :              : $>Turn 90 Left
+    :              : $>Wait: 4 frame(s)
+    :              : $>Turn 90 Left
+    :              : $>Wait: 4 frame(s)
+    :              : $>Turn 90 Left
+    :              : $>Wait: 4 frame(s)
+    :              : $>Turn 90 Left
+    :              : $>Wait: 4 frame(s)
+    :              : $>Turn 90 Left
+    :              : $>Wait: 4 frame(s)
+    :              : $>Turn 90 Left
+   @>Wait for Move's Completion
+   @>Set Move Route: [EV030]
+    :              : $>Wait: 4 frame(s)
+    :              : $>Jump: -1,+0
+    :              : $>Wait: 10 frame(s)
+    :              : $>Turn Down
+    :              : $>Jump: +0,+0
+    :              : $>Wait: 4 frame(s)
+   @>Set Move Route: [EV031]
+    :              : $>Wait: 4 frame(s)
+    :              : $>Jump: +1,+0
+    :              : $>Wait: 10 frame(s)
+    :              : $>Turn Down
+    :              : $>Jump: +0,+0
+    :              : $>Wait: 4 frame(s)
+   @>Set Move Route: [EV032]
+    :              : $>Wait: 4 frame(s)
+    :              : $>Change Speed: 5
+    :              : $>Jump: -2,+0
+    :              : $>Wait: 4 frame(s)
+    :              : $>Change Speed: 3
+    :              : $>Turn Down
+    :              : $>Jump: +0,+0
+    :              : $>Wait: 4 frame(s)
+   @>Set Move Route: [EV033]
+    :              : $>Wait: 4 frame(s)
+    :              : $>Change Speed: 5
+    :              : $>Jump: +2,+0
+    :              : $>Wait: 4 frame(s)
+    :              : $>Change Speed: 3
+    :              : $>Turn Down
+    :              : $>Jump: +0,+0
+    :              : $>Wait: 4 frame(s)
+   @>Wait for Move's Completion
+   @>Set Move Route: [EV030]
+    :              : $>Wait: 4 frame(s)
+    :              : $>Turn Right
+    :              : $>Wait: 4 frame(s)
+    :              : $>Turn 90 Left
+    :              : $>Wait: 4 frame(s)
+    :              : $>Turn 90 Left
+    :              : $>Wait: 4 frame(s)
+    :              : $>Turn 90 Left
+    :              : $>Wait: 4 frame(s)
+    :              : $>Turn 90 Left
+    :              : $>Wait: 4 frame(s)
+    :              : $>Turn 90 Left
+    :              : $>Wait: 4 frame(s)
+    :              : $>Turn 90 Left
+    :              : $>Wait: 4 frame(s)
+    :              : $>Turn 90 Left
+   @>Set Move Route: [EV031]
+    :              : $>Wait: 4 frame(s)
+    :              : $>Turn Right
+    :              : $>Wait: 4 frame(s)
+    :              : $>Turn 90 Left
+    :              : $>Wait: 4 frame(s)
+    :              : $>Turn 90 Left
+    :              : $>Wait: 4 frame(s)
+    :              : $>Turn 90 Left
+    :              : $>Wait: 4 frame(s)
+    :              : $>Turn 90 Left
+    :              : $>Wait: 4 frame(s)
+    :              : $>Turn 90 Left
+    :              : $>Wait: 4 frame(s)
+    :              : $>Turn 90 Left
+    :              : $>Wait: 4 frame(s)
+    :              : $>Turn 90 Left
+   @>Set Move Route: [EV032]
+    :              : $>Wait: 4 frame(s)
+    :              : $>Turn Right
+    :              : $>Wait: 4 frame(s)
+    :              : $>Turn 90 Left
+    :              : $>Wait: 4 frame(s)
+    :              : $>Turn 90 Left
+    :              : $>Wait: 4 frame(s)
+    :              : $>Turn 90 Left
+    :              : $>Wait: 4 frame(s)
+    :              : $>Turn 90 Left
+    :              : $>Wait: 4 frame(s)
+    :              : $>Turn 90 Left
+    :              : $>Wait: 4 frame(s)
+    :              : $>Turn 90 Left
+    :              : $>Wait: 4 frame(s)
+    :              : $>Turn 90 Left
+   @>Set Move Route: [EV033]
+    :              : $>Wait: 4 frame(s)
+    :              : $>Turn Right
+    :              : $>Wait: 4 frame(s)
+    :              : $>Turn 90 Left
+    :              : $>Wait: 4 frame(s)
+    :              : $>Turn 90 Left
+    :              : $>Wait: 4 frame(s)
+    :              : $>Turn 90 Left
+    :              : $>Wait: 4 frame(s)
+    :              : $>Turn 90 Left
+    :              : $>Wait: 4 frame(s)
+    :              : $>Turn 90 Left
+    :              : $>Wait: 4 frame(s)
+    :              : $>Turn 90 Left
+    :              : $>Wait: 4 frame(s)
+    :              : $>Turn 90 Left
+   @>Wait for Move's Completion
+   @>Set Move Route: [EV030]
+    :              : $>Wait: 4 frame(s)
+    :              : $>Move Right
+    :              : $>Turn Down
+   @>Set Move Route: [EV031]
+    :              : $>Wait: 4 frame(s)
+    :              : $>Move Left
+    :              : $>Turn Down
+   @>Set Move Route: [EV032]
+    :              : $>Wait: 4 frame(s)
+    :              : $>Change Speed: 5
+    :              : $>Move Right
+    :              : $>Move Right
+    :              : $>Change Speed: 3
+    :              : $>Turn Down
+   @>Set Move Route: [EV033]
+    :              : $>Wait: 4 frame(s)
+    :              : $>Change Speed: 5
+    :              : $>Move Left
+    :              : $>Move Left
+    :              : $>Change Speed: 3
+    :              : $>Turn Down
+   @>Wait for Move's Completion
+   @>Set Move Route: [EV030]
+    :              : $>Wait: 4 frame(s)
+    :              : $>Turn Right
+    :              : $>Wait: 4 frame(s)
+    :              : $>Turn 90 Left
+    :              : $>Wait: 4 frame(s)
+    :              : $>Turn 90 Left
+    :              : $>Wait: 4 frame(s)
+    :              : $>Turn 90 Left
+    :              : $>Wait: 4 frame(s)
+    :              : $>Turn 90 Left
+    :              : $>Wait: 4 frame(s)
+    :              : $>Turn 90 Left
+    :              : $>Wait: 4 frame(s)
+    :              : $>Turn 90 Left
+    :              : $>Wait: 4 frame(s)
+    :              : $>Turn 90 Left
+   @>Set Move Route: [EV031]
+    :              : $>Wait: 4 frame(s)
+    :              : $>Turn Right
+    :              : $>Wait: 4 frame(s)
+    :              : $>Turn 90 Left
+    :              : $>Wait: 4 frame(s)
+    :              : $>Turn 90 Left
+    :              : $>Wait: 4 frame(s)
+    :              : $>Turn 90 Left
+    :              : $>Wait: 4 frame(s)
+    :              : $>Turn 90 Left
+    :              : $>Wait: 4 frame(s)
+    :              : $>Turn 90 Left
+    :              : $>Wait: 4 frame(s)
+    :              : $>Turn 90 Left
+    :              : $>Wait: 4 frame(s)
+    :              : $>Turn 90 Left
+   @>Set Move Route: [EV032]
+    :              : $>Wait: 4 frame(s)
+    :              : $>Turn Right
+    :              : $>Wait: 4 frame(s)
+    :              : $>Turn 90 Left
+    :              : $>Wait: 4 frame(s)
+    :              : $>Turn 90 Left
+    :              : $>Wait: 4 frame(s)
+    :              : $>Turn 90 Left
+    :              : $>Wait: 4 frame(s)
+    :              : $>Turn 90 Left
+    :              : $>Wait: 4 frame(s)
+    :              : $>Turn 90 Left
+    :              : $>Wait: 4 frame(s)
+    :              : $>Turn 90 Left
+    :              : $>Wait: 4 frame(s)
+    :              : $>Turn 90 Left
+   @>Set Move Route: [EV033]
+    :              : $>Wait: 4 frame(s)
+    :              : $>Turn Right
+    :              : $>Wait: 4 frame(s)
+    :              : $>Turn 90 Left
+    :              : $>Wait: 4 frame(s)
+    :              : $>Turn 90 Left
+    :              : $>Wait: 4 frame(s)
+    :              : $>Turn 90 Left
+    :              : $>Wait: 4 frame(s)
+    :              : $>Turn 90 Left
+    :              : $>Wait: 4 frame(s)
+    :              : $>Turn 90 Left
+    :              : $>Wait: 4 frame(s)
+    :              : $>Turn 90 Left
+    :              : $>Wait: 4 frame(s)
+    :              : $>Turn 90 Left
+   @>Wait for Move's Completion
+   @>Set Move Route: [EV030]
+    :              : $>Wait: 4 frame(s)
+    :              : $>Change Speed: 5
+    :              : $>Move Left
+    :              : $>Move Left
+    :              : $>Move Left
+    :              : $>Change Speed: 3
+    :              : $>Turn Down
+   @>Set Move Route: [EV031]
+    :              : $>Wait: 4 frame(s)
+    :              : $>Move Right
+    :              : $>Turn Down
+   @>Set Move Route: [EV032]
+    :              : $>Wait: 4 frame(s)
+    :              : $>Move Right
+    :              : $>Turn Down
+   @>Set Move Route: [EV033]
+    :              : $>Wait: 4 frame(s)
+    :              : $>Move Right
+    :              : $>Turn Down
+   @>Wait for Move's Completion
+   @>Set Move Route: [EV030]
+    :              : $>Wait: 4 frame(s)
+    :              : $>Turn Right
+    :              : $>Wait: 4 frame(s)
+    :              : $>Turn 90 Left
+    :              : $>Wait: 4 frame(s)
+    :              : $>Turn 90 Left
+    :              : $>Wait: 4 frame(s)
+    :              : $>Turn 90 Left
+    :              : $>Wait: 4 frame(s)
+    :              : $>Turn 90 Left
+    :              : $>Wait: 4 frame(s)
+    :              : $>Turn 90 Left
+    :              : $>Wait: 4 frame(s)
+    :              : $>Turn 90 Left
+    :              : $>Wait: 4 frame(s)
+    :              : $>Turn 90 Left
+   @>Set Move Route: [EV031]
+    :              : $>Wait: 4 frame(s)
+    :              : $>Turn Right
+    :              : $>Wait: 4 frame(s)
+    :              : $>Turn 90 Left
+    :              : $>Wait: 4 frame(s)
+    :              : $>Turn 90 Left
+    :              : $>Wait: 4 frame(s)
+    :              : $>Turn 90 Left
+    :              : $>Wait: 4 frame(s)
+    :              : $>Turn 90 Left
+    :              : $>Wait: 4 frame(s)
+    :              : $>Turn 90 Left
+    :              : $>Wait: 4 frame(s)
+    :              : $>Turn 90 Left
+    :              : $>Wait: 4 frame(s)
+    :              : $>Turn 90 Left
+   @>Set Move Route: [EV032]
+    :              : $>Wait: 4 frame(s)
+    :              : $>Turn Right
+    :              : $>Wait: 4 frame(s)
+    :              : $>Turn 90 Left
+    :              : $>Wait: 4 frame(s)
+    :              : $>Turn 90 Left
+    :              : $>Wait: 4 frame(s)
+    :              : $>Turn 90 Left
+    :              : $>Wait: 4 frame(s)
+    :              : $>Turn 90 Left
+    :              : $>Wait: 4 frame(s)
+    :              : $>Turn 90 Left
+    :              : $>Wait: 4 frame(s)
+    :              : $>Turn 90 Left
+    :              : $>Wait: 4 frame(s)
+    :              : $>Turn 90 Left
+   @>Set Move Route: [EV033]
+    :              : $>Wait: 4 frame(s)
+    :              : $>Turn Right
+    :              : $>Wait: 4 frame(s)
+    :              : $>Turn 90 Left
+    :              : $>Wait: 4 frame(s)
+    :              : $>Turn 90 Left
+    :              : $>Wait: 4 frame(s)
+    :              : $>Turn 90 Left
+    :              : $>Wait: 4 frame(s)
+    :              : $>Turn 90 Left
+    :              : $>Wait: 4 frame(s)
+    :              : $>Turn 90 Left
+    :              : $>Wait: 4 frame(s)
+    :              : $>Turn 90 Left
+    :              : $>Wait: 4 frame(s)
+    :              : $>Turn 90 Left
+   @>Wait for Move's Completion
+   @>Set Move Route: [EV030]
+    :              : $>Wait: 4 frame(s)
+    :              : $>Jump: +0,+0
+    :              : $>Wait: 4 frame(s)
+    :              : $>Stop Animation ON
+    :              : $>Through OFF
+   @>Set Move Route: [EV031]
+    :              : $>Wait: 4 frame(s)
+    :              : $>Jump: +0,+0
+    :              : $>Wait: 4 frame(s)
+    :              : $>Stop Animation ON
+    :              : $>Through OFF
+   @>Set Move Route: [EV032]
+    :              : $>Wait: 4 frame(s)
+    :              : $>Jump: +0,+0
+    :              : $>Wait: 4 frame(s)
+    :              : $>Stop Animation ON
+    :              : $>Through OFF
+   @>Set Move Route: [EV033]
+    :              : $>Wait: 4 frame(s)
+    :              : $>Jump: +0,+0
+    :              : $>Wait: 4 frame(s)
+    :              : $>Stop Animation ON
+    :              : $>Through OFF
+   @>Wait for Move's Completion
+   @>Show Animation: [EV030], [Teleport]
+   @>Show Animation: [EV031], [Teleport]
+   @>Show Animation: [EV032], [Teleport]
+   @>Show Animation: [EV033], [Teleport]
+   @>Wait: 15 frame(s)
+   @>Set Move Route: [EV030]
+    :              : $>Graphic: "MELOETTA', 0, 2, 0
+   @>Set Move Route: [EV031]
+    :              : $>Graphic: "MELOETTA', 0, 2, 0
+   @>Set Move Route: [EV032]
+    :              : $>Graphic: "MELOETTA', 0, 2, 0
+   @>Set Move Route: [EV033]
+    :              : $>Graphic: "MELOETTA', 0, 2, 0
+   @>Wait: 3 frame(s)
+   @>Text: Ganz schön flink, oder?
+   @>Text: Also, welches Meloetta ist es?
+   @>
+  : Else
+   @>Conditional Branch: Variable [0050: Meloetta] == 2
+    @>Set Move Route: This event
+     :              : $>Jump: +0,+0
+    @>Wait: 6 frame(s)
+    @>Set Move Route: This event
+     :              : $>Turn 90 Right
+     :              : $>Wait: 4 frame(s)
+     :              : $>Turn 90 Right
+     :              : $>Wait: 4 frame(s)
+     :              : $>Turn 90 Right
+     :              : $>Wait: 4 frame(s)
+     :              : $>Turn 90 Right
+     :              : $>Wait: 4 frame(s)
+    @>Wait: 14 frame(s)
+    @>Set Move Route: [EV030]
+     :              : $>Jump: +0,+0
+    @>Set Move Route: [EV031]
+     :              : $>Jump: +0,+0
+    @>Set Move Route: [EV032]
+     :              : $>Jump: +0,+0
+    @>Set Move Route: [EV033]
+     :              : $>Jump: +0,+0
+    @>Show Animation: [EV030], [Teleport]
+    @>Show Animation: [EV031], [Teleport]
+    @>Show Animation: [EV032], [Teleport]
+    @>Show Animation: [EV033], [Teleport]
+    @>Wait: 15 frame(s)
+    @>Set Move Route: [EV030]
+     :              : $>Graphic: "MELOETTA_1', 0, 2, 0
+    @>Set Move Route: [EV031]
+     :              : $>Graphic: "MELOETTA_1', 0, 2, 0
+    @>Set Move Route: [EV032]
+     :              : $>Graphic: "MELOETTA_1', 0, 2, 0
+    @>Set Move Route: [EV033]
+     :              : $>Graphic: "MELOETTA_1', 0, 2, 0
+    @>Wait: 3 frame(s)
+    @>Set Move Route: [EV030]
+     :              : $>Stop Animation OFF
+     :              : $>Through ON
+     :              : $>Turn 90 Right
+     :              : $>Wait: 4 frame(s)
+     :              : $>Turn 90 Right
+     :              : $>Wait: 4 frame(s)
+     :              : $>Turn 90 Right
+     :              : $>Wait: 4 frame(s)
+     :              : $>Turn 90 Right
+     :              : $>Wait: 4 frame(s)
+    @>Wait: 6 frame(s)
+    @>Set Move Route: [EV031]
+     :              : $>Stop Animation OFF
+     :              : $>Through ON
+     :              : $>Turn 90 Right
+     :              : $>Wait: 4 frame(s)
+     :              : $>Turn 90 Right
+     :              : $>Wait: 4 frame(s)
+     :              : $>Turn 90 Right
+     :              : $>Wait: 4 frame(s)
+     :              : $>Turn 90 Right
+     :              : $>Wait: 4 frame(s)
+    @>Wait: 6 frame(s)
+    @>Set Move Route: [EV032]
+     :              : $>Stop Animation OFF
+     :              : $>Through ON
+     :              : $>Turn 90 Right
+     :              : $>Wait: 4 frame(s)
+     :              : $>Turn 90 Right
+     :              : $>Wait: 4 frame(s)
+     :              : $>Turn 90 Right
+     :              : $>Wait: 4 frame(s)
+     :              : $>Turn 90 Right
+     :              : $>Wait: 4 frame(s)
+    @>Wait: 6 frame(s)
+    @>Set Move Route: [EV033]
+     :              : $>Stop Animation OFF
+     :              : $>Through ON
+     :              : $>Turn 90 Right
+     :              : $>Wait: 4 frame(s)
+     :              : $>Turn 90 Right
+     :              : $>Wait: 4 frame(s)
+     :              : $>Turn 90 Right
+     :              : $>Wait: 4 frame(s)
+     :              : $>Turn 90 Right
+     :              : $>Wait: 4 frame(s)
+    @>Wait: 12 frame(s)
+    @>Set Move Route: [EV030]
+     :              : $>Jump: +0,+0
+    @>Wait: 6 frame(s)
+    @>Set Move Route: [EV031]
+     :              : $>Jump: +0,+0
+    @>Wait: 6 frame(s)
+    @>Set Move Route: [EV032]
+     :              : $>Jump: +0,+0
+    @>Wait: 6 frame(s)
+    @>Set Move Route: [EV033]
+     :              : $>Jump: +0,+0
+    @>Wait: 6 frame(s)
+    @>Set Move Route: [EV030]
+     :              : $>Move Up
+     :              : $>Move Right
+     :              : $>Move Right
+     :              : $>Move Down
+    @>Set Move Route: [EV031]
+     :              : $>Move Up
+     :              : $>Move Right
+     :              : $>Move Right
+     :              : $>Move Down
+    @>Set Move Route: [EV032]
+     :              : $>Move Down
+     :              : $>Move Left
+     :              : $>Move Left
+     :              : $>Move Up
+    @>Set Move Route: [EV033]
+     :              : $>Move Down
+     :              : $>Move Left
+     :              : $>Move Left
+     :              : $>Move Up
+    @>Wait for Move's Completion
+    @>Set Move Route: [EV030]
+     :              : $>Wait: 4 frame(s)
+     :              : $>Turn Right
+     :              : $>Wait: 4 frame(s)
+     :              : $>Turn 90 Left
+     :              : $>Wait: 4 frame(s)
+     :              : $>Turn 90 Left
+     :              : $>Wait: 4 frame(s)
+     :              : $>Turn 90 Left
+     :              : $>Wait: 4 frame(s)
+     :              : $>Turn 90 Left
+     :              : $>Wait: 4 frame(s)
+     :              : $>Turn 90 Left
+     :              : $>Wait: 4 frame(s)
+     :              : $>Turn 90 Left
+     :              : $>Wait: 4 frame(s)
+     :              : $>Turn 90 Left
+    @>Set Move Route: [EV031]
+     :              : $>Wait: 4 frame(s)
+     :              : $>Turn Right
+     :              : $>Wait: 4 frame(s)
+     :              : $>Turn 90 Left
+     :              : $>Wait: 4 frame(s)
+     :              : $>Turn 90 Left
+     :              : $>Wait: 4 frame(s)
+     :              : $>Turn 90 Left
+     :              : $>Wait: 4 frame(s)
+     :              : $>Turn 90 Left
+     :              : $>Wait: 4 frame(s)
+     :              : $>Turn 90 Left
+     :              : $>Wait: 4 frame(s)
+     :              : $>Turn 90 Left
+     :              : $>Wait: 4 frame(s)
+     :              : $>Turn 90 Left
+    @>Set Move Route: [EV032]
+     :              : $>Wait: 4 frame(s)
+     :              : $>Turn Right
+     :              : $>Wait: 4 frame(s)
+     :              : $>Turn 90 Left
+     :              : $>Wait: 4 frame(s)
+     :              : $>Turn 90 Left
+     :              : $>Wait: 4 frame(s)
+     :              : $>Turn 90 Left
+     :              : $>Wait: 4 frame(s)
+     :              : $>Turn 90 Left
+     :              : $>Wait: 4 frame(s)
+     :              : $>Turn 90 Left
+     :              : $>Wait: 4 frame(s)
+     :              : $>Turn 90 Left
+     :              : $>Wait: 4 frame(s)
+     :              : $>Turn 90 Left
+    @>Set Move Route: [EV033]
+     :              : $>Wait: 4 frame(s)
+     :              : $>Turn Right
+     :              : $>Wait: 4 frame(s)
+     :              : $>Turn 90 Left
+     :              : $>Wait: 4 frame(s)
+     :              : $>Turn 90 Left
+     :              : $>Wait: 4 frame(s)
+     :              : $>Turn 90 Left
+     :              : $>Wait: 4 frame(s)
+     :              : $>Turn 90 Left
+     :              : $>Wait: 4 frame(s)
+     :              : $>Turn 90 Left
+     :              : $>Wait: 4 frame(s)
+     :              : $>Turn 90 Left
+     :              : $>Wait: 4 frame(s)
+     :              : $>Turn 90 Left
+    @>Wait for Move's Completion
+    @>Set Move Route: [EV030]
+     :              : $>Wait: 4 frame(s)
+     :              : $>Move Down
+     :              : $>Move Left
+     :              : $>Move Up
+     :              : $>Turn Down
+    @>Set Move Route: [EV031]
+     :              : $>Wait: 4 frame(s)
+     :              : $>Move Up
+     :              : $>Change Speed: 5
+     :              : $>Move Left
+     :              : $>Move Left
+     :              : $>Move Left
+     :              : $>Change Speed: 3
+     :              : $>Move Down
+    @>Set Move Route: [EV032]
+     :              : $>Wait: 4 frame(s)
+     :              : $>Move Down
+     :              : $>Change Speed: 5
+     :              : $>Move Right
+     :              : $>Move Right
+     :              : $>Move Right
+     :              : $>Change Speed: 3
+     :              : $>Move Up
+     :              : $>Turn Down
+    @>Set Move Route: [EV033]
+     :              : $>Wait: 4 frame(s)
+     :              : $>Move Up
+     :              : $>Move Right
+     :              : $>Move Down
+     :              : $>Turn Down
+    @>Wait for Move's Completion
+    @>Set Move Route: [EV030]
+     :              : $>Wait: 4 frame(s)
+     :              : $>Turn Right
+     :              : $>Wait: 4 frame(s)
+     :              : $>Turn 90 Left
+     :              : $>Wait: 4 frame(s)
+     :              : $>Turn 90 Left
+     :              : $>Wait: 4 frame(s)
+     :              : $>Turn 90 Left
+     :              : $>Wait: 4 frame(s)
+     :              : $>Turn 90 Left
+     :              : $>Wait: 4 frame(s)
+     :              : $>Turn 90 Left
+     :              : $>Wait: 4 frame(s)
+     :              : $>Turn 90 Left
+     :              : $>Wait: 4 frame(s)
+     :              : $>Turn 90 Left
+    @>Set Move Route: [EV031]
+     :              : $>Wait: 4 frame(s)
+     :              : $>Turn Right
+     :              : $>Wait: 4 frame(s)
+     :              : $>Turn 90 Left
+     :              : $>Wait: 4 frame(s)
+     :              : $>Turn 90 Left
+     :              : $>Wait: 4 frame(s)
+     :              : $>Turn 90 Left
+     :              : $>Wait: 4 frame(s)
+     :              : $>Turn 90 Left
+     :              : $>Wait: 4 frame(s)
+     :              : $>Turn 90 Left
+     :              : $>Wait: 4 frame(s)
+     :              : $>Turn 90 Left
+     :              : $>Wait: 4 frame(s)
+     :              : $>Turn 90 Left
+    @>Set Move Route: [EV032]
+     :              : $>Wait: 4 frame(s)
+     :              : $>Turn Right
+     :              : $>Wait: 4 frame(s)
+     :              : $>Turn 90 Left
+     :              : $>Wait: 4 frame(s)
+     :              : $>Turn 90 Left
+     :              : $>Wait: 4 frame(s)
+     :              : $>Turn 90 Left
+     :              : $>Wait: 4 frame(s)
+     :              : $>Turn 90 Left
+     :              : $>Wait: 4 frame(s)
+     :              : $>Turn 90 Left
+     :              : $>Wait: 4 frame(s)
+     :              : $>Turn 90 Left
+     :              : $>Wait: 4 frame(s)
+     :              : $>Turn 90 Left
+    @>Set Move Route: [EV033]
+     :              : $>Wait: 4 frame(s)
+     :              : $>Turn Right
+     :              : $>Wait: 4 frame(s)
+     :              : $>Turn 90 Left
+     :              : $>Wait: 4 frame(s)
+     :              : $>Turn 90 Left
+     :              : $>Wait: 4 frame(s)
+     :              : $>Turn 90 Left
+     :              : $>Wait: 4 frame(s)
+     :              : $>Turn 90 Left
+     :              : $>Wait: 4 frame(s)
+     :              : $>Turn 90 Left
+     :              : $>Wait: 4 frame(s)
+     :              : $>Turn 90 Left
+     :              : $>Wait: 4 frame(s)
+     :              : $>Turn 90 Left
+    @>Wait for Move's Completion
+    @>Set Move Route: [EV030]
+     :              : $>Wait: 4 frame(s)
+     :              : $>Move Up
+     :              : $>Move Left
+     :              : $>Move Down
+    @>Set Move Route: [EV031]
+     :              : $>Wait: 4 frame(s)
+     :              : $>Move Down
+     :              : $>Move Right
+     :              : $>Move Up
+     :              : $>Turn Down
+    @>Set Move Route: [EV032]
+     :              : $>Wait: 4 frame(s)
+     :              : $>Move Down
+     :              : $>Move Left
+     :              : $>Move Up
+     :              : $>Turn Down
+    @>Set Move Route: [EV033]
+     :              : $>Wait: 4 frame(s)
+     :              : $>Move Up
+     :              : $>Move Right
+     :              : $>Move Down
+    @>Wait for Move's Completion
+    @>Set Move Route: [EV030]
+     :              : $>Wait: 4 frame(s)
+     :              : $>Turn Right
+     :              : $>Wait: 4 frame(s)
+     :              : $>Turn 90 Left
+     :              : $>Wait: 4 frame(s)
+     :              : $>Turn 90 Left
+     :              : $>Wait: 4 frame(s)
+     :              : $>Turn 90 Left
+     :              : $>Wait: 4 frame(s)
+     :              : $>Turn 90 Left
+     :              : $>Wait: 4 frame(s)
+     :              : $>Turn 90 Left
+     :              : $>Wait: 4 frame(s)
+     :              : $>Turn 90 Left
+     :              : $>Wait: 4 frame(s)
+     :              : $>Turn 90 Left
+    @>Set Move Route: [EV031]
+     :              : $>Wait: 4 frame(s)
+     :              : $>Turn Right
+     :              : $>Wait: 4 frame(s)
+     :              : $>Turn 90 Left
+     :              : $>Wait: 4 frame(s)
+     :              : $>Turn 90 Left
+     :              : $>Wait: 4 frame(s)
+     :              : $>Turn 90 Left
+     :              : $>Wait: 4 frame(s)
+     :              : $>Turn 90 Left
+     :              : $>Wait: 4 frame(s)
+     :              : $>Turn 90 Left
+     :              : $>Wait: 4 frame(s)
+     :              : $>Turn 90 Left
+     :              : $>Wait: 4 frame(s)
+     :              : $>Turn 90 Left
+    @>Set Move Route: [EV032]
+     :              : $>Wait: 4 frame(s)
+     :              : $>Turn Right
+     :              : $>Wait: 4 frame(s)
+     :              : $>Turn 90 Left
+     :              : $>Wait: 4 frame(s)
+     :              : $>Turn 90 Left
+     :              : $>Wait: 4 frame(s)
+     :              : $>Turn 90 Left
+     :              : $>Wait: 4 frame(s)
+     :              : $>Turn 90 Left
+     :              : $>Wait: 4 frame(s)
+     :              : $>Turn 90 Left
+     :              : $>Wait: 4 frame(s)
+     :              : $>Turn 90 Left
+     :              : $>Wait: 4 frame(s)
+     :              : $>Turn 90 Left
+    @>Set Move Route: [EV033]
+     :              : $>Wait: 4 frame(s)
+     :              : $>Turn Right
+     :              : $>Wait: 4 frame(s)
+     :              : $>Turn 90 Left
+     :              : $>Wait: 4 frame(s)
+     :              : $>Turn 90 Left
+     :              : $>Wait: 4 frame(s)
+     :              : $>Turn 90 Left
+     :              : $>Wait: 4 frame(s)
+     :              : $>Turn 90 Left
+     :              : $>Wait: 4 frame(s)
+     :              : $>Turn 90 Left
+     :              : $>Wait: 4 frame(s)
+     :              : $>Turn 90 Left
+     :              : $>Wait: 4 frame(s)
+     :              : $>Turn 90 Left
+    @>Wait for Move's Completion
+    @>Set Move Route: [EV030]
+     :              : $>Wait: 4 frame(s)
+     :              : $>Move Up
+     :              : $>Change Speed: 5
+     :              : $>Move Right
+     :              : $>Move Right
+     :              : $>Move Right
+     :              : $>Change Speed: 3
+     :              : $>Move Down
+    @>Set Move Route: [EV031]
+     :              : $>Wait: 4 frame(s)
+     :              : $>Move Up
+     :              : $>Move Right
+     :              : $>Move Down
+    @>Set Move Route: [EV032]
+     :              : $>Wait: 4 frame(s)
+     :              : $>Move Down
+     :              : $>Move Left
+     :              : $>Move Up
+     :              : $>Turn Down
+    @>Set Move Route: [EV033]
+     :              : $>Wait: 4 frame(s)
+     :              : $>Move Down
+     :              : $>Change Speed: 5
+     :              : $>Move Left
+     :              : $>Move Left
+     :              : $>Move Left
+     :              : $>Change Speed: 3
+     :              : $>Move Up
+    @>Wait for Move's Completion
+    @>Set Move Route: [EV030]
+     :              : $>Wait: 4 frame(s)
+     :              : $>Turn Right
+     :              : $>Wait: 4 frame(s)
+     :              : $>Turn 90 Left
+     :              : $>Wait: 4 frame(s)
+     :              : $>Turn 90 Left
+     :              : $>Wait: 4 frame(s)
+     :              : $>Turn 90 Left
+     :              : $>Wait: 4 frame(s)
+     :              : $>Turn 90 Left
+     :              : $>Wait: 4 frame(s)
+     :              : $>Turn 90 Left
+     :              : $>Wait: 4 frame(s)
+     :              : $>Turn 90 Left
+     :              : $>Wait: 4 frame(s)
+     :              : $>Turn 90 Left
+    @>Set Move Route: [EV031]
+     :              : $>Wait: 4 frame(s)
+     :              : $>Turn Right
+     :              : $>Wait: 4 frame(s)
+     :              : $>Turn 90 Left
+     :              : $>Wait: 4 frame(s)
+     :              : $>Turn 90 Left
+     :              : $>Wait: 4 frame(s)
+     :              : $>Turn 90 Left
+     :              : $>Wait: 4 frame(s)
+     :              : $>Turn 90 Left
+     :              : $>Wait: 4 frame(s)
+     :              : $>Turn 90 Left
+     :              : $>Wait: 4 frame(s)
+     :              : $>Turn 90 Left
+     :              : $>Wait: 4 frame(s)
+     :              : $>Turn 90 Left
+    @>Set Move Route: [EV032]
+     :              : $>Wait: 4 frame(s)
+     :              : $>Turn Right
+     :              : $>Wait: 4 frame(s)
+     :              : $>Turn 90 Left
+     :              : $>Wait: 4 frame(s)
+     :              : $>Turn 90 Left
+     :              : $>Wait: 4 frame(s)
+     :              : $>Turn 90 Left
+     :              : $>Wait: 4 frame(s)
+     :              : $>Turn 90 Left
+     :              : $>Wait: 4 frame(s)
+     :              : $>Turn 90 Left
+     :              : $>Wait: 4 frame(s)
+     :              : $>Turn 90 Left
+     :              : $>Wait: 4 frame(s)
+     :              : $>Turn 90 Left
+    @>Set Move Route: [EV033]
+     :              : $>Wait: 4 frame(s)
+     :              : $>Turn Right
+     :              : $>Wait: 4 frame(s)
+     :              : $>Turn 90 Left
+     :              : $>Wait: 4 frame(s)
+     :              : $>Turn 90 Left
+     :              : $>Wait: 4 frame(s)
+     :              : $>Turn 90 Left
+     :              : $>Wait: 4 frame(s)
+     :              : $>Turn 90 Left
+     :              : $>Wait: 4 frame(s)
+     :              : $>Turn 90 Left
+     :              : $>Wait: 4 frame(s)
+     :              : $>Turn 90 Left
+     :              : $>Wait: 4 frame(s)
+     :              : $>Turn 90 Left
+    @>Wait for Move's Completion
+    @>Set Move Route: [EV030]
+     :              : $>Wait: 4 frame(s)
+     :              : $>Jump: +0,+0
+     :              : $>Wait: 10 frame(s)
+     :              : $>Jump: +0,+0
+     :              : $>Wait: 4 frame(s)
+    @>Set Move Route: [EV031]
+     :              : $>Wait: 4 frame(s)
+     :              : $>Change Speed: 5
+     :              : $>Jump: -2,+0
+     :              : $>Wait: 4 frame(s)
+     :              : $>Change Speed: 3
+     :              : $>Turn Down
+     :              : $>Jump: +0,+0
+     :              : $>Wait: 4 frame(s)
+    @>Set Move Route: [EV032]
+     :              : $>Wait: 4 frame(s)
+     :              : $>Jump: +0,+0
+     :              : $>Wait: 10 frame(s)
+     :              : $>Jump: +0,+0
+     :              : $>Wait: 4 frame(s)
+    @>Set Move Route: [EV033]
+     :              : $>Wait: 4 frame(s)
+     :              : $>Change Speed: 5
+     :              : $>Jump: +2,+0
+     :              : $>Wait: 4 frame(s)
+     :              : $>Change Speed: 3
+     :              : $>Turn Down
+     :              : $>Jump: +0,+0
+     :              : $>Wait: 4 frame(s)
+    @>Wait for Move's Completion
+    @>Set Move Route: [EV030]
+     :              : $>Wait: 4 frame(s)
+     :              : $>Turn Right
+     :              : $>Wait: 4 frame(s)
+     :              : $>Turn 90 Left
+     :              : $>Wait: 4 frame(s)
+     :              : $>Turn 90 Left
+     :              : $>Wait: 4 frame(s)
+     :              : $>Turn 90 Left
+     :              : $>Wait: 4 frame(s)
+     :              : $>Turn 90 Left
+     :              : $>Wait: 4 frame(s)
+     :              : $>Turn 90 Left
+     :              : $>Wait: 4 frame(s)
+     :              : $>Turn 90 Left
+     :              : $>Wait: 4 frame(s)
+     :              : $>Turn 90 Left
+    @>Set Move Route: [EV031]
+     :              : $>Wait: 4 frame(s)
+     :              : $>Turn Right
+     :              : $>Wait: 4 frame(s)
+     :              : $>Turn 90 Left
+     :              : $>Wait: 4 frame(s)
+     :              : $>Turn 90 Left
+     :              : $>Wait: 4 frame(s)
+     :              : $>Turn 90 Left
+     :              : $>Wait: 4 frame(s)
+     :              : $>Turn 90 Left
+     :              : $>Wait: 4 frame(s)
+     :              : $>Turn 90 Left
+     :              : $>Wait: 4 frame(s)
+     :              : $>Turn 90 Left
+     :              : $>Wait: 4 frame(s)
+     :              : $>Turn 90 Left
+    @>Set Move Route: [EV032]
+     :              : $>Wait: 4 frame(s)
+     :              : $>Turn Right
+     :              : $>Wait: 4 frame(s)
+     :              : $>Turn 90 Left
+     :              : $>Wait: 4 frame(s)
+     :              : $>Turn 90 Left
+     :              : $>Wait: 4 frame(s)
+     :              : $>Turn 90 Left
+     :              : $>Wait: 4 frame(s)
+     :              : $>Turn 90 Left
+     :              : $>Wait: 4 frame(s)
+     :              : $>Turn 90 Left
+     :              : $>Wait: 4 frame(s)
+     :              : $>Turn 90 Left
+     :              : $>Wait: 4 frame(s)
+     :              : $>Turn 90 Left
+    @>Set Move Route: [EV033]
+     :              : $>Wait: 4 frame(s)
+     :              : $>Turn Right
+     :              : $>Wait: 4 frame(s)
+     :              : $>Turn 90 Left
+     :              : $>Wait: 4 frame(s)
+     :              : $>Turn 90 Left
+     :              : $>Wait: 4 frame(s)
+     :              : $>Turn 90 Left
+     :              : $>Wait: 4 frame(s)
+     :              : $>Turn 90 Left
+     :              : $>Wait: 4 frame(s)
+     :              : $>Turn 90 Left
+     :              : $>Wait: 4 frame(s)
+     :              : $>Turn 90 Left
+     :              : $>Wait: 4 frame(s)
+     :              : $>Turn 90 Left
+    @>Wait for Move's Completion
+    @>Set Move Route: [EV030]
+     :              : $>Wait: 4 frame(s)
+     :              : $>Jump: +0,+0
+     :              : $>Wait: 4 frame(s)
+     :              : $>Jump: +0,+0
+     :              : $>Wait: 4 frame(s)
+    @>Set Move Route: [EV031]
+     :              : $>Wait: 4 frame(s)
+     :              : $>Jump: +0,+0
+     :              : $>Wait: 4 frame(s)
+     :              : $>Jump: +0,+0
+     :              : $>Wait: 4 frame(s)
+    @>Set Move Route: [EV032]
+     :              : $>Wait: 4 frame(s)
+     :              : $>Jump: +1,+0
+     :              : $>Wait: 4 frame(s)
+     :              : $>Turn Down
+     :              : $>Jump: +0,+0
+     :              : $>Wait: 4 frame(s)
+    @>Set Move Route: [EV033]
+     :              : $>Wait: 4 frame(s)
+     :              : $>Jump: -1,+0
+     :              : $>Wait: 4 frame(s)
+     :              : $>Turn Down
+     :              : $>Jump: +0,+0
+     :              : $>Wait: 4 frame(s)
+    @>Wait for Move's Completion
+    @>Set Move Route: [EV030]
+     :              : $>Wait: 4 frame(s)
+     :              : $>Turn Right
+     :              : $>Wait: 4 frame(s)
+     :              : $>Turn 90 Left
+     :              : $>Wait: 4 frame(s)
+     :              : $>Turn 90 Left
+     :              : $>Wait: 4 frame(s)
+     :              : $>Turn 90 Left
+     :              : $>Wait: 4 frame(s)
+     :              : $>Turn 90 Left
+     :              : $>Wait: 4 frame(s)
+     :              : $>Turn 90 Left
+     :              : $>Wait: 4 frame(s)
+     :              : $>Turn 90 Left
+     :              : $>Wait: 4 frame(s)
+     :              : $>Turn 90 Left
+    @>Set Move Route: [EV031]
+     :              : $>Wait: 4 frame(s)
+     :              : $>Turn Right
+     :              : $>Wait: 4 frame(s)
+     :              : $>Turn 90 Left
+     :              : $>Wait: 4 frame(s)
+     :              : $>Turn 90 Left
+     :              : $>Wait: 4 frame(s)
+     :              : $>Turn 90 Left
+     :              : $>Wait: 4 frame(s)
+     :              : $>Turn 90 Left
+     :              : $>Wait: 4 frame(s)
+     :              : $>Turn 90 Left
+     :              : $>Wait: 4 frame(s)
+     :              : $>Turn 90 Left
+     :              : $>Wait: 4 frame(s)
+     :              : $>Turn 90 Left
+    @>Set Move Route: [EV032]
+     :              : $>Wait: 4 frame(s)
+     :              : $>Turn Right
+     :              : $>Wait: 4 frame(s)
+     :              : $>Turn 90 Left
+     :              : $>Wait: 4 frame(s)
+     :              : $>Turn 90 Left
+     :              : $>Wait: 4 frame(s)
+     :              : $>Turn 90 Left
+     :              : $>Wait: 4 frame(s)
+     :              : $>Turn 90 Left
+     :              : $>Wait: 4 frame(s)
+     :              : $>Turn 90 Left
+     :              : $>Wait: 4 frame(s)
+     :              : $>Turn 90 Left
+     :              : $>Wait: 4 frame(s)
+     :              : $>Turn 90 Left
+    @>Set Move Route: [EV033]
+     :              : $>Wait: 4 frame(s)
+     :              : $>Turn Right
+     :              : $>Wait: 4 frame(s)
+     :              : $>Turn 90 Left
+     :              : $>Wait: 4 frame(s)
+     :              : $>Turn 90 Left
+     :              : $>Wait: 4 frame(s)
+     :              : $>Turn 90 Left
+     :              : $>Wait: 4 frame(s)
+     :              : $>Turn 90 Left
+     :              : $>Wait: 4 frame(s)
+     :              : $>Turn 90 Left
+     :              : $>Wait: 4 frame(s)
+     :              : $>Turn 90 Left
+     :              : $>Wait: 4 frame(s)
+     :              : $>Turn 90 Left
+    @>Wait for Move's Completion
+    @>Set Move Route: [EV030]
+     :              : $>Wait: 4 frame(s)
+     :              : $>Jump: -1,+0
+     :              : $>Wait: 10 frame(s)
+     :              : $>Turn Down
+     :              : $>Jump: +0,+0
+     :              : $>Wait: 4 frame(s)
+    @>Set Move Route: [EV031]
+     :              : $>Wait: 4 frame(s)
+     :              : $>Jump: +1,+0
+     :              : $>Wait: 10 frame(s)
+     :              : $>Turn Down
+     :              : $>Jump: +0,+0
+     :              : $>Wait: 4 frame(s)
+    @>Set Move Route: [EV032]
+     :              : $>Wait: 4 frame(s)
+     :              : $>Change Speed: 5
+     :              : $>Jump: -2,+0
+     :              : $>Wait: 4 frame(s)
+     :              : $>Change Speed: 3
+     :              : $>Turn Down
+     :              : $>Jump: +0,+0
+     :              : $>Wait: 4 frame(s)
+    @>Set Move Route: [EV033]
+     :              : $>Wait: 4 frame(s)
+     :              : $>Change Speed: 5
+     :              : $>Jump: +2,+0
+     :              : $>Wait: 4 frame(s)
+     :              : $>Change Speed: 3
+     :              : $>Turn Down
+     :              : $>Jump: +0,+0
+     :              : $>Wait: 4 frame(s)
+    @>Wait for Move's Completion
+    @>Set Move Route: [EV030]
+     :              : $>Wait: 4 frame(s)
+     :              : $>Turn Right
+     :              : $>Wait: 4 frame(s)
+     :              : $>Turn 90 Left
+     :              : $>Wait: 4 frame(s)
+     :              : $>Turn 90 Left
+     :              : $>Wait: 4 frame(s)
+     :              : $>Turn 90 Left
+     :              : $>Wait: 4 frame(s)
+     :              : $>Turn 90 Left
+     :              : $>Wait: 4 frame(s)
+     :              : $>Turn 90 Left
+     :              : $>Wait: 4 frame(s)
+     :              : $>Turn 90 Left
+     :              : $>Wait: 4 frame(s)
+     :              : $>Turn 90 Left
+    @>Set Move Route: [EV031]
+     :              : $>Wait: 4 frame(s)
+     :              : $>Turn Right
+     :              : $>Wait: 4 frame(s)
+     :              : $>Turn 90 Left
+     :              : $>Wait: 4 frame(s)
+     :              : $>Turn 90 Left
+     :              : $>Wait: 4 frame(s)
+     :              : $>Turn 90 Left
+     :              : $>Wait: 4 frame(s)
+     :              : $>Turn 90 Left
+     :              : $>Wait: 4 frame(s)
+     :              : $>Turn 90 Left
+     :              : $>Wait: 4 frame(s)
+     :              : $>Turn 90 Left
+     :              : $>Wait: 4 frame(s)
+     :              : $>Turn 90 Left
+    @>Set Move Route: [EV032]
+     :              : $>Wait: 4 frame(s)
+     :              : $>Turn Right
+     :              : $>Wait: 4 frame(s)
+     :              : $>Turn 90 Left
+     :              : $>Wait: 4 frame(s)
+     :              : $>Turn 90 Left
+     :              : $>Wait: 4 frame(s)
+     :              : $>Turn 90 Left
+     :              : $>Wait: 4 frame(s)
+     :              : $>Turn 90 Left
+     :              : $>Wait: 4 frame(s)
+     :              : $>Turn 90 Left
+     :              : $>Wait: 4 frame(s)
+     :              : $>Turn 90 Left
+     :              : $>Wait: 4 frame(s)
+     :              : $>Turn 90 Left
+    @>Set Move Route: [EV033]
+     :              : $>Wait: 4 frame(s)
+     :              : $>Turn Right
+     :              : $>Wait: 4 frame(s)
+     :              : $>Turn 90 Left
+     :              : $>Wait: 4 frame(s)
+     :              : $>Turn 90 Left
+     :              : $>Wait: 4 frame(s)
+     :              : $>Turn 90 Left
+     :              : $>Wait: 4 frame(s)
+     :              : $>Turn 90 Left
+     :              : $>Wait: 4 frame(s)
+     :              : $>Turn 90 Left
+     :              : $>Wait: 4 frame(s)
+     :              : $>Turn 90 Left
+     :              : $>Wait: 4 frame(s)
+     :              : $>Turn 90 Left
+    @>Wait for Move's Completion
+    @>Set Move Route: [EV030]
+     :              : $>Wait: 4 frame(s)
+     :              : $>Move Right
+     :              : $>Turn Down
+    @>Set Move Route: [EV031]
+     :              : $>Wait: 4 frame(s)
+     :              : $>Move Left
+     :              : $>Turn Down
+    @>Set Move Route: [EV032]
+     :              : $>Wait: 4 frame(s)
+     :              : $>Change Speed: 5
+     :              : $>Move Right
+     :              : $>Move Right
+     :              : $>Change Speed: 3
+     :              : $>Turn Down
+    @>Set Move Route: [EV033]
+     :              : $>Wait: 4 frame(s)
+     :              : $>Change Speed: 5
+     :              : $>Move Left
+     :              : $>Move Left
+     :              : $>Change Speed: 3
+     :              : $>Turn Down
+    @>Wait for Move's Completion
+    @>Set Move Route: [EV030]
+     :              : $>Wait: 4 frame(s)
+     :              : $>Turn Right
+     :              : $>Wait: 4 frame(s)
+     :              : $>Turn 90 Left
+     :              : $>Wait: 4 frame(s)
+     :              : $>Turn 90 Left
+     :              : $>Wait: 4 frame(s)
+     :              : $>Turn 90 Left
+     :              : $>Wait: 4 frame(s)
+     :              : $>Turn 90 Left
+     :              : $>Wait: 4 frame(s)
+     :              : $>Turn 90 Left
+     :              : $>Wait: 4 frame(s)
+     :              : $>Turn 90 Left
+     :              : $>Wait: 4 frame(s)
+     :              : $>Turn 90 Left
+    @>Set Move Route: [EV031]
+     :              : $>Wait: 4 frame(s)
+     :              : $>Turn Right
+     :              : $>Wait: 4 frame(s)
+     :              : $>Turn 90 Left
+     :              : $>Wait: 4 frame(s)
+     :              : $>Turn 90 Left
+     :              : $>Wait: 4 frame(s)
+     :              : $>Turn 90 Left
+     :              : $>Wait: 4 frame(s)
+     :              : $>Turn 90 Left
+     :              : $>Wait: 4 frame(s)
+     :              : $>Turn 90 Left
+     :              : $>Wait: 4 frame(s)
+     :              : $>Turn 90 Left
+     :              : $>Wait: 4 frame(s)
+     :              : $>Turn 90 Left
+    @>Set Move Route: [EV032]
+     :              : $>Wait: 4 frame(s)
+     :              : $>Turn Right
+     :              : $>Wait: 4 frame(s)
+     :              : $>Turn 90 Left
+     :              : $>Wait: 4 frame(s)
+     :              : $>Turn 90 Left
+     :              : $>Wait: 4 frame(s)
+     :              : $>Turn 90 Left
+     :              : $>Wait: 4 frame(s)
+     :              : $>Turn 90 Left
+     :              : $>Wait: 4 frame(s)
+     :              : $>Turn 90 Left
+     :              : $>Wait: 4 frame(s)
+     :              : $>Turn 90 Left
+     :              : $>Wait: 4 frame(s)
+     :              : $>Turn 90 Left
+    @>Set Move Route: [EV033]
+     :              : $>Wait: 4 frame(s)
+     :              : $>Turn Right
+     :              : $>Wait: 4 frame(s)
+     :              : $>Turn 90 Left
+     :              : $>Wait: 4 frame(s)
+     :              : $>Turn 90 Left
+     :              : $>Wait: 4 frame(s)
+     :              : $>Turn 90 Left
+     :              : $>Wait: 4 frame(s)
+     :              : $>Turn 90 Left
+     :              : $>Wait: 4 frame(s)
+     :              : $>Turn 90 Left
+     :              : $>Wait: 4 frame(s)
+     :              : $>Turn 90 Left
+     :              : $>Wait: 4 frame(s)
+     :              : $>Turn 90 Left
+    @>Wait for Move's Completion
+    @>Set Move Route: [EV030]
+     :              : $>Wait: 4 frame(s)
+     :              : $>Move Left
+     :              : $>Turn Down
+    @>Set Move Route: [EV031]
+     :              : $>Wait: 4 frame(s)
+     :              : $>Change Speed: 5
+     :              : $>Move Right
+     :              : $>Move Right
+     :              : $>Move Right
+     :              : $>Change Speed: 3
+     :              : $>Turn Down
+    @>Set Move Route: [EV032]
+     :              : $>Wait: 4 frame(s)
+     :              : $>Move Left
+     :              : $>Turn Down
+    @>Set Move Route: [EV033]
+     :              : $>Wait: 4 frame(s)
+     :              : $>Change Speed: 5
+     :              : $>Move Left
+     :              : $>Change Speed: 3
+     :              : $>Turn Down
+    @>Wait for Move's Completion
+    @>Set Move Route: [EV030]
+     :              : $>Wait: 4 frame(s)
+     :              : $>Turn Right
+     :              : $>Wait: 4 frame(s)
+     :              : $>Turn 90 Left
+     :              : $>Wait: 4 frame(s)
+     :              : $>Turn 90 Left
+     :              : $>Wait: 4 frame(s)
+     :              : $>Turn 90 Left
+     :              : $>Wait: 4 frame(s)
+     :              : $>Turn 90 Left
+     :              : $>Wait: 4 frame(s)
+     :              : $>Turn 90 Left
+     :              : $>Wait: 4 frame(s)
+     :              : $>Turn 90 Left
+     :              : $>Wait: 4 frame(s)
+     :              : $>Turn 90 Left
+    @>Set Move Route: [EV031]
+     :              : $>Wait: 4 frame(s)
+     :              : $>Turn Right
+     :              : $>Wait: 4 frame(s)
+     :              : $>Turn 90 Left
+     :              : $>Wait: 4 frame(s)
+     :              : $>Turn 90 Left
+     :              : $>Wait: 4 frame(s)
+     :              : $>Turn 90 Left
+     :              : $>Wait: 4 frame(s)
+     :              : $>Turn 90 Left
+     :              : $>Wait: 4 frame(s)
+     :              : $>Turn 90 Left
+     :              : $>Wait: 4 frame(s)
+     :              : $>Turn 90 Left
+     :              : $>Wait: 4 frame(s)
+     :              : $>Turn 90 Left
+    @>Set Move Route: [EV032]
+     :              : $>Wait: 4 frame(s)
+     :              : $>Turn Right
+     :              : $>Wait: 4 frame(s)
+     :              : $>Turn 90 Left
+     :              : $>Wait: 4 frame(s)
+     :              : $>Turn 90 Left
+     :              : $>Wait: 4 frame(s)
+     :              : $>Turn 90 Left
+     :              : $>Wait: 4 frame(s)
+     :              : $>Turn 90 Left
+     :              : $>Wait: 4 frame(s)
+     :              : $>Turn 90 Left
+     :              : $>Wait: 4 frame(s)
+     :              : $>Turn 90 Left
+     :              : $>Wait: 4 frame(s)
+     :              : $>Turn 90 Left
+    @>Set Move Route: [EV033]
+     :              : $>Wait: 4 frame(s)
+     :              : $>Turn Right
+     :              : $>Wait: 4 frame(s)
+     :              : $>Turn 90 Left
+     :              : $>Wait: 4 frame(s)
+     :              : $>Turn 90 Left
+     :              : $>Wait: 4 frame(s)
+     :              : $>Turn 90 Left
+     :              : $>Wait: 4 frame(s)
+     :              : $>Turn 90 Left
+     :              : $>Wait: 4 frame(s)
+     :              : $>Turn 90 Left
+     :              : $>Wait: 4 frame(s)
+     :              : $>Turn 90 Left
+     :              : $>Wait: 4 frame(s)
+     :              : $>Turn 90 Left
+    @>Wait for Move's Completion
+    @>Set Move Route: [EV030]
+     :              : $>Wait: 4 frame(s)
+     :              : $>Jump: +0,+0
+     :              : $>Wait: 4 frame(s)
+     :              : $>Stop Animation ON
+     :              : $>Through OFF
+    @>Set Move Route: [EV031]
+     :              : $>Wait: 4 frame(s)
+     :              : $>Jump: +0,+0
+     :              : $>Wait: 4 frame(s)
+     :              : $>Stop Animation ON
+     :              : $>Through OFF
+    @>Set Move Route: [EV032]
+     :              : $>Wait: 4 frame(s)
+     :              : $>Jump: +0,+0
+     :              : $>Wait: 4 frame(s)
+     :              : $>Stop Animation ON
+     :              : $>Through OFF
+    @>Set Move Route: [EV033]
+     :              : $>Wait: 4 frame(s)
+     :              : $>Jump: +0,+0
+     :              : $>Wait: 4 frame(s)
+     :              : $>Stop Animation ON
+     :              : $>Through OFF
+    @>Wait for Move's Completion
+    @>Show Animation: [EV030], [Teleport]
+    @>Show Animation: [EV031], [Teleport]
+    @>Show Animation: [EV032], [Teleport]
+    @>Show Animation: [EV033], [Teleport]
+    @>Wait: 15 frame(s)
+    @>Set Move Route: [EV030]
+     :              : $>Graphic: "MELOETTA', 0, 2, 0
+    @>Set Move Route: [EV031]
+     :              : $>Graphic: "MELOETTA', 0, 2, 0
+    @>Set Move Route: [EV032]
+     :              : $>Graphic: "MELOETTA', 0, 2, 0
+    @>Set Move Route: [EV033]
+     :              : $>Graphic: "MELOETTA', 0, 2, 0
+    @>Wait: 3 frame(s)
+    @>Text: Ganz schön flink, oder?
+    @>Text: Also, welches Meloetta ist es?
+    @>
+   : Else
+    @>Conditional Branch: Variable [0050: Meloetta] == 3
+     @>Set Move Route: This event
+      :              : $>Jump: +0,+0
+     @>Wait: 6 frame(s)
+     @>Set Move Route: This event
+      :              : $>Turn 90 Right
+      :              : $>Wait: 4 frame(s)
+      :              : $>Turn 90 Right
+      :              : $>Wait: 4 frame(s)
+      :              : $>Turn 90 Right
+      :              : $>Wait: 4 frame(s)
+      :              : $>Turn 90 Right
+      :              : $>Wait: 4 frame(s)
+     @>Wait: 14 frame(s)
+     @>Set Move Route: [EV030]
+      :              : $>Jump: +0,+0
+     @>Set Move Route: [EV031]
+      :              : $>Jump: +0,+0
+     @>Set Move Route: [EV032]
+      :              : $>Jump: +0,+0
+     @>Set Move Route: [EV033]
+      :              : $>Jump: +0,+0
+     @>Show Animation: [EV030], [Teleport]
+     @>Show Animation: [EV031], [Teleport]
+     @>Show Animation: [EV032], [Teleport]
+     @>Show Animation: [EV033], [Teleport]
+     @>Wait: 15 frame(s)
+     @>Set Move Route: [EV030]
+      :              : $>Graphic: "MELOETTA_1', 0, 2, 0
+     @>Set Move Route: [EV031]
+      :              : $>Graphic: "MELOETTA_1', 0, 2, 0
+     @>Set Move Route: [EV032]
+      :              : $>Graphic: "MELOETTA_1', 0, 2, 0
+     @>Set Move Route: [EV033]
+      :              : $>Graphic: "MELOETTA_1', 0, 2, 0
+     @>Wait: 3 frame(s)
+     @>Set Move Route: [EV030]
+      :              : $>Stop Animation OFF
+      :              : $>Through ON
+      :              : $>Turn 90 Right
+      :              : $>Wait: 4 frame(s)
+      :              : $>Turn 90 Right
+      :              : $>Wait: 4 frame(s)
+      :              : $>Turn 90 Right
+      :              : $>Wait: 4 frame(s)
+      :              : $>Turn 90 Right
+      :              : $>Wait: 4 frame(s)
+     @>Wait: 6 frame(s)
+     @>Set Move Route: [EV031]
+      :              : $>Stop Animation OFF
+      :              : $>Through ON
+      :              : $>Turn 90 Right
+      :              : $>Wait: 4 frame(s)
+      :              : $>Turn 90 Right
+      :              : $>Wait: 4 frame(s)
+      :              : $>Turn 90 Right
+      :              : $>Wait: 4 frame(s)
+      :              : $>Turn 90 Right
+      :              : $>Wait: 4 frame(s)
+     @>Wait: 6 frame(s)
+     @>Set Move Route: [EV032]
+      :              : $>Stop Animation OFF
+      :              : $>Through ON
+      :              : $>Turn 90 Right
+      :              : $>Wait: 4 frame(s)
+      :              : $>Turn 90 Right
+      :              : $>Wait: 4 frame(s)
+      :              : $>Turn 90 Right
+      :              : $>Wait: 4 frame(s)
+      :              : $>Turn 90 Right
+      :              : $>Wait: 4 frame(s)
+     @>Wait: 6 frame(s)
+     @>Set Move Route: [EV033]
+      :              : $>Stop Animation OFF
+      :              : $>Through ON
+      :              : $>Turn 90 Right
+      :              : $>Wait: 4 frame(s)
+      :              : $>Turn 90 Right
+      :              : $>Wait: 4 frame(s)
+      :              : $>Turn 90 Right
+      :              : $>Wait: 4 frame(s)
+      :              : $>Turn 90 Right
+      :              : $>Wait: 4 frame(s)
+     @>Wait: 12 frame(s)
+     @>Set Move Route: [EV030]
+      :              : $>Jump: +0,+0
+     @>Wait: 6 frame(s)
+     @>Set Move Route: [EV031]
+      :              : $>Jump: +0,+0
+     @>Wait: 6 frame(s)
+     @>Set Move Route: [EV032]
+      :              : $>Jump: +0,+0
+     @>Wait: 6 frame(s)
+     @>Set Move Route: [EV033]
+      :              : $>Jump: +0,+0
+     @>Wait: 6 frame(s)
+     @>Set Move Route: [EV030]
+      :              : $>Move Up
+      :              : $>Move Right
+      :              : $>Move Right
+      :              : $>Move Down
+     @>Set Move Route: [EV031]
+      :              : $>Move Up
+      :              : $>Move Right
+      :              : $>Move Right
+      :              : $>Move Down
+     @>Set Move Route: [EV032]
+      :              : $>Move Down
+      :              : $>Move Left
+      :              : $>Move Left
+      :              : $>Move Up
+     @>Set Move Route: [EV033]
+      :              : $>Move Down
+      :              : $>Move Left
+      :              : $>Move Left
+      :              : $>Move Up
+     @>Wait for Move's Completion
+     @>Set Move Route: [EV030]
+      :              : $>Wait: 4 frame(s)
+      :              : $>Turn Right
+      :              : $>Wait: 4 frame(s)
+      :              : $>Turn 90 Left
+      :              : $>Wait: 4 frame(s)
+      :              : $>Turn 90 Left
+      :              : $>Wait: 4 frame(s)
+      :              : $>Turn 90 Left
+      :              : $>Wait: 4 frame(s)
+      :              : $>Turn 90 Left
+      :              : $>Wait: 4 frame(s)
+      :              : $>Turn 90 Left
+      :              : $>Wait: 4 frame(s)
+      :              : $>Turn 90 Left
+      :              : $>Wait: 4 frame(s)
+      :              : $>Turn 90 Left
+     @>Set Move Route: [EV031]
+      :              : $>Wait: 4 frame(s)
+      :              : $>Turn Right
+      :              : $>Wait: 4 frame(s)
+      :              : $>Turn 90 Left
+      :              : $>Wait: 4 frame(s)
+      :              : $>Turn 90 Left
+      :              : $>Wait: 4 frame(s)
+      :              : $>Turn 90 Left
+      :              : $>Wait: 4 frame(s)
+      :              : $>Turn 90 Left
+      :              : $>Wait: 4 frame(s)
+      :              : $>Turn 90 Left
+      :              : $>Wait: 4 frame(s)
+      :              : $>Turn 90 Left
+      :              : $>Wait: 4 frame(s)
+      :              : $>Turn 90 Left
+     @>Set Move Route: [EV032]
+      :              : $>Wait: 4 frame(s)
+      :              : $>Turn Right
+      :              : $>Wait: 4 frame(s)
+      :              : $>Turn 90 Left
+      :              : $>Wait: 4 frame(s)
+      :              : $>Turn 90 Left
+      :              : $>Wait: 4 frame(s)
+      :              : $>Turn 90 Left
+      :              : $>Wait: 4 frame(s)
+      :              : $>Turn 90 Left
+      :              : $>Wait: 4 frame(s)
+      :              : $>Turn 90 Left
+      :              : $>Wait: 4 frame(s)
+      :              : $>Turn 90 Left
+      :              : $>Wait: 4 frame(s)
+      :              : $>Turn 90 Left
+     @>Set Move Route: [EV033]
+      :              : $>Wait: 4 frame(s)
+      :              : $>Turn Right
+      :              : $>Wait: 4 frame(s)
+      :              : $>Turn 90 Left
+      :              : $>Wait: 4 frame(s)
+      :              : $>Turn 90 Left
+      :              : $>Wait: 4 frame(s)
+      :              : $>Turn 90 Left
+      :              : $>Wait: 4 frame(s)
+      :              : $>Turn 90 Left
+      :              : $>Wait: 4 frame(s)
+      :              : $>Turn 90 Left
+      :              : $>Wait: 4 frame(s)
+      :              : $>Turn 90 Left
+      :              : $>Wait: 4 frame(s)
+      :              : $>Turn 90 Left
+     @>Wait for Move's Completion
+     @>Set Move Route: [EV030]
+      :              : $>Wait: 4 frame(s)
+      :              : $>Move Down
+      :              : $>Move Left
+      :              : $>Move Up
+      :              : $>Turn Down
+     @>Set Move Route: [EV031]
+      :              : $>Wait: 4 frame(s)
+      :              : $>Move Up
+      :              : $>Change Speed: 5
+      :              : $>Move Left
+      :              : $>Move Left
+      :              : $>Move Left
+      :              : $>Change Speed: 3
+      :              : $>Move Down
+     @>Set Move Route: [EV032]
+      :              : $>Wait: 4 frame(s)
+      :              : $>Move Down
+      :              : $>Change Speed: 5
+      :              : $>Move Right
+      :              : $>Move Right
+      :              : $>Move Right
+      :              : $>Change Speed: 3
+      :              : $>Move Up
+      :              : $>Turn Down
+     @>Set Move Route: [EV033]
+      :              : $>Wait: 4 frame(s)
+      :              : $>Move Up
+      :              : $>Move Right
+      :              : $>Move Down
+      :              : $>Turn Down
+     @>Wait for Move's Completion
+     @>Set Move Route: [EV030]
+      :              : $>Wait: 4 frame(s)
+      :              : $>Turn Right
+      :              : $>Wait: 4 frame(s)
+      :              : $>Turn 90 Left
+      :              : $>Wait: 4 frame(s)
+      :              : $>Turn 90 Left
+      :              : $>Wait: 4 frame(s)
+      :              : $>Turn 90 Left
+      :              : $>Wait: 4 frame(s)
+      :              : $>Turn 90 Left
+      :              : $>Wait: 4 frame(s)
+      :              : $>Turn 90 Left
+      :              : $>Wait: 4 frame(s)
+      :              : $>Turn 90 Left
+      :              : $>Wait: 4 frame(s)
+      :              : $>Turn 90 Left
+     @>Set Move Route: [EV031]
+      :              : $>Wait: 4 frame(s)
+      :              : $>Turn Right
+      :              : $>Wait: 4 frame(s)
+      :              : $>Turn 90 Left
+      :              : $>Wait: 4 frame(s)
+      :              : $>Turn 90 Left
+      :              : $>Wait: 4 frame(s)
+      :              : $>Turn 90 Left
+      :              : $>Wait: 4 frame(s)
+      :              : $>Turn 90 Left
+      :              : $>Wait: 4 frame(s)
+      :              : $>Turn 90 Left
+      :              : $>Wait: 4 frame(s)
+      :              : $>Turn 90 Left
+      :              : $>Wait: 4 frame(s)
+      :              : $>Turn 90 Left
+     @>Set Move Route: [EV032]
+      :              : $>Wait: 4 frame(s)
+      :              : $>Turn Right
+      :              : $>Wait: 4 frame(s)
+      :              : $>Turn 90 Left
+      :              : $>Wait: 4 frame(s)
+      :              : $>Turn 90 Left
+      :              : $>Wait: 4 frame(s)
+      :              : $>Turn 90 Left
+      :              : $>Wait: 4 frame(s)
+      :              : $>Turn 90 Left
+      :              : $>Wait: 4 frame(s)
+      :              : $>Turn 90 Left
+      :              : $>Wait: 4 frame(s)
+      :              : $>Turn 90 Left
+      :              : $>Wait: 4 frame(s)
+      :              : $>Turn 90 Left
+     @>Set Move Route: [EV033]
+      :              : $>Wait: 4 frame(s)
+      :              : $>Turn Right
+      :              : $>Wait: 4 frame(s)
+      :              : $>Turn 90 Left
+      :              : $>Wait: 4 frame(s)
+      :              : $>Turn 90 Left
+      :              : $>Wait: 4 frame(s)
+      :              : $>Turn 90 Left
+      :              : $>Wait: 4 frame(s)
+      :              : $>Turn 90 Left
+      :              : $>Wait: 4 frame(s)
+      :              : $>Turn 90 Left
+      :              : $>Wait: 4 frame(s)
+      :              : $>Turn 90 Left
+      :              : $>Wait: 4 frame(s)
+      :              : $>Turn 90 Left
+     @>Wait for Move's Completion
+     @>Set Move Route: [EV030]
+      :              : $>Wait: 4 frame(s)
+      :              : $>Move Up
+      :              : $>Move Left
+      :              : $>Move Down
+     @>Set Move Route: [EV031]
+      :              : $>Wait: 4 frame(s)
+      :              : $>Move Down
+      :              : $>Move Right
+      :              : $>Move Up
+      :              : $>Turn Down
+     @>Set Move Route: [EV032]
+      :              : $>Wait: 4 frame(s)
+      :              : $>Move Down
+      :              : $>Move Left
+      :              : $>Move Up
+      :              : $>Turn Down
+     @>Set Move Route: [EV033]
+      :              : $>Wait: 4 frame(s)
+      :              : $>Move Up
+      :              : $>Move Right
+      :              : $>Move Down
+     @>Wait for Move's Completion
+     @>Set Move Route: [EV030]
+      :              : $>Wait: 4 frame(s)
+      :              : $>Turn Right
+      :              : $>Wait: 4 frame(s)
+      :              : $>Turn 90 Left
+      :              : $>Wait: 4 frame(s)
+      :              : $>Turn 90 Left
+      :              : $>Wait: 4 frame(s)
+      :              : $>Turn 90 Left
+      :              : $>Wait: 4 frame(s)
+      :              : $>Turn 90 Left
+      :              : $>Wait: 4 frame(s)
+      :              : $>Turn 90 Left
+      :              : $>Wait: 4 frame(s)
+      :              : $>Turn 90 Left
+      :              : $>Wait: 4 frame(s)
+      :              : $>Turn 90 Left
+     @>Set Move Route: [EV031]
+      :              : $>Wait: 4 frame(s)
+      :              : $>Turn Right
+      :              : $>Wait: 4 frame(s)
+      :              : $>Turn 90 Left
+      :              : $>Wait: 4 frame(s)
+      :              : $>Turn 90 Left
+      :              : $>Wait: 4 frame(s)
+      :              : $>Turn 90 Left
+      :              : $>Wait: 4 frame(s)
+      :              : $>Turn 90 Left
+      :              : $>Wait: 4 frame(s)
+      :              : $>Turn 90 Left
+      :              : $>Wait: 4 frame(s)
+      :              : $>Turn 90 Left
+      :              : $>Wait: 4 frame(s)
+      :              : $>Turn 90 Left
+     @>Set Move Route: [EV032]
+      :              : $>Wait: 4 frame(s)
+      :              : $>Turn Right
+      :              : $>Wait: 4 frame(s)
+      :              : $>Turn 90 Left
+      :              : $>Wait: 4 frame(s)
+      :              : $>Turn 90 Left
+      :              : $>Wait: 4 frame(s)
+      :              : $>Turn 90 Left
+      :              : $>Wait: 4 frame(s)
+      :              : $>Turn 90 Left
+      :              : $>Wait: 4 frame(s)
+      :              : $>Turn 90 Left
+      :              : $>Wait: 4 frame(s)
+      :              : $>Turn 90 Left
+      :              : $>Wait: 4 frame(s)
+      :              : $>Turn 90 Left
+     @>Set Move Route: [EV033]
+      :              : $>Wait: 4 frame(s)
+      :              : $>Turn Right
+      :              : $>Wait: 4 frame(s)
+      :              : $>Turn 90 Left
+      :              : $>Wait: 4 frame(s)
+      :              : $>Turn 90 Left
+      :              : $>Wait: 4 frame(s)
+      :              : $>Turn 90 Left
+      :              : $>Wait: 4 frame(s)
+      :              : $>Turn 90 Left
+      :              : $>Wait: 4 frame(s)
+      :              : $>Turn 90 Left
+      :              : $>Wait: 4 frame(s)
+      :              : $>Turn 90 Left
+      :              : $>Wait: 4 frame(s)
+      :              : $>Turn 90 Left
+     @>Wait for Move's Completion
+     @>Set Move Route: [EV030]
+      :              : $>Wait: 4 frame(s)
+      :              : $>Move Up
+      :              : $>Change Speed: 5
+      :              : $>Move Right
+      :              : $>Move Right
+      :              : $>Move Right
+      :              : $>Change Speed: 3
+      :              : $>Move Down
+     @>Set Move Route: [EV031]
+      :              : $>Wait: 4 frame(s)
+      :              : $>Move Up
+      :              : $>Move Right
+      :              : $>Move Down
+     @>Set Move Route: [EV032]
+      :              : $>Wait: 4 frame(s)
+      :              : $>Move Down
+      :              : $>Move Left
+      :              : $>Move Up
+      :              : $>Turn Down
+     @>Set Move Route: [EV033]
+      :              : $>Wait: 4 frame(s)
+      :              : $>Move Down
+      :              : $>Change Speed: 5
+      :              : $>Move Left
+      :              : $>Move Left
+      :              : $>Move Left
+      :              : $>Change Speed: 3
+      :              : $>Move Up
+     @>Wait for Move's Completion
+     @>Set Move Route: [EV030]
+      :              : $>Wait: 4 frame(s)
+      :              : $>Turn Right
+      :              : $>Wait: 4 frame(s)
+      :              : $>Turn 90 Left
+      :              : $>Wait: 4 frame(s)
+      :              : $>Turn 90 Left
+      :              : $>Wait: 4 frame(s)
+      :              : $>Turn 90 Left
+      :              : $>Wait: 4 frame(s)
+      :              : $>Turn 90 Left
+      :              : $>Wait: 4 frame(s)
+      :              : $>Turn 90 Left
+      :              : $>Wait: 4 frame(s)
+      :              : $>Turn 90 Left
+      :              : $>Wait: 4 frame(s)
+      :              : $>Turn 90 Left
+     @>Set Move Route: [EV031]
+      :              : $>Wait: 4 frame(s)
+      :              : $>Turn Right
+      :              : $>Wait: 4 frame(s)
+      :              : $>Turn 90 Left
+      :              : $>Wait: 4 frame(s)
+      :              : $>Turn 90 Left
+      :              : $>Wait: 4 frame(s)
+      :              : $>Turn 90 Left
+      :              : $>Wait: 4 frame(s)
+      :              : $>Turn 90 Left
+      :              : $>Wait: 4 frame(s)
+      :              : $>Turn 90 Left
+      :              : $>Wait: 4 frame(s)
+      :              : $>Turn 90 Left
+      :              : $>Wait: 4 frame(s)
+      :              : $>Turn 90 Left
+     @>Set Move Route: [EV032]
+      :              : $>Wait: 4 frame(s)
+      :              : $>Turn Right
+      :              : $>Wait: 4 frame(s)
+      :              : $>Turn 90 Left
+      :              : $>Wait: 4 frame(s)
+      :              : $>Turn 90 Left
+      :              : $>Wait: 4 frame(s)
+      :              : $>Turn 90 Left
+      :              : $>Wait: 4 frame(s)
+      :              : $>Turn 90 Left
+      :              : $>Wait: 4 frame(s)
+      :              : $>Turn 90 Left
+      :              : $>Wait: 4 frame(s)
+      :              : $>Turn 90 Left
+      :              : $>Wait: 4 frame(s)
+      :              : $>Turn 90 Left
+     @>Set Move Route: [EV033]
+      :              : $>Wait: 4 frame(s)
+      :              : $>Turn Right
+      :              : $>Wait: 4 frame(s)
+      :              : $>Turn 90 Left
+      :              : $>Wait: 4 frame(s)
+      :              : $>Turn 90 Left
+      :              : $>Wait: 4 frame(s)
+      :              : $>Turn 90 Left
+      :              : $>Wait: 4 frame(s)
+      :              : $>Turn 90 Left
+      :              : $>Wait: 4 frame(s)
+      :              : $>Turn 90 Left
+      :              : $>Wait: 4 frame(s)
+      :              : $>Turn 90 Left
+      :              : $>Wait: 4 frame(s)
+      :              : $>Turn 90 Left
+     @>Wait for Move's Completion
+     @>Set Move Route: [EV030]
+      :              : $>Wait: 4 frame(s)
+      :              : $>Jump: +0,+0
+      :              : $>Wait: 10 frame(s)
+      :              : $>Jump: +0,+0
+      :              : $>Wait: 4 frame(s)
+     @>Set Move Route: [EV031]
+      :              : $>Wait: 4 frame(s)
+      :              : $>Change Speed: 5
+      :              : $>Jump: -2,+0
+      :              : $>Wait: 4 frame(s)
+      :              : $>Change Speed: 3
+      :              : $>Turn Down
+      :              : $>Jump: +0,+0
+      :              : $>Wait: 4 frame(s)
+     @>Set Move Route: [EV032]
+      :              : $>Wait: 4 frame(s)
+      :              : $>Jump: +0,+0
+      :              : $>Wait: 10 frame(s)
+      :              : $>Jump: +0,+0
+      :              : $>Wait: 4 frame(s)
+     @>Set Move Route: [EV033]
+      :              : $>Wait: 4 frame(s)
+      :              : $>Change Speed: 5
+      :              : $>Jump: +2,+0
+      :              : $>Wait: 4 frame(s)
+      :              : $>Change Speed: 3
+      :              : $>Turn Down
+      :              : $>Jump: +0,+0
+      :              : $>Wait: 4 frame(s)
+     @>Wait for Move's Completion
+     @>Set Move Route: [EV030]
+      :              : $>Wait: 4 frame(s)
+      :              : $>Turn Right
+      :              : $>Wait: 4 frame(s)
+      :              : $>Turn 90 Left
+      :              : $>Wait: 4 frame(s)
+      :              : $>Turn 90 Left
+      :              : $>Wait: 4 frame(s)
+      :              : $>Turn 90 Left
+      :              : $>Wait: 4 frame(s)
+      :              : $>Turn 90 Left
+      :              : $>Wait: 4 frame(s)
+      :              : $>Turn 90 Left
+      :              : $>Wait: 4 frame(s)
+      :              : $>Turn 90 Left
+      :              : $>Wait: 4 frame(s)
+      :              : $>Turn 90 Left
+     @>Set Move Route: [EV031]
+      :              : $>Wait: 4 frame(s)
+      :              : $>Turn Right
+      :              : $>Wait: 4 frame(s)
+      :              : $>Turn 90 Left
+      :              : $>Wait: 4 frame(s)
+      :              : $>Turn 90 Left
+      :              : $>Wait: 4 frame(s)
+      :              : $>Turn 90 Left
+      :              : $>Wait: 4 frame(s)
+      :              : $>Turn 90 Left
+      :              : $>Wait: 4 frame(s)
+      :              : $>Turn 90 Left
+      :              : $>Wait: 4 frame(s)
+      :              : $>Turn 90 Left
+      :              : $>Wait: 4 frame(s)
+      :              : $>Turn 90 Left
+     @>Set Move Route: [EV032]
+      :              : $>Wait: 4 frame(s)
+      :              : $>Turn Right
+      :              : $>Wait: 4 frame(s)
+      :              : $>Turn 90 Left
+      :              : $>Wait: 4 frame(s)
+      :              : $>Turn 90 Left
+      :              : $>Wait: 4 frame(s)
+      :              : $>Turn 90 Left
+      :              : $>Wait: 4 frame(s)
+      :              : $>Turn 90 Left
+      :              : $>Wait: 4 frame(s)
+      :              : $>Turn 90 Left
+      :              : $>Wait: 4 frame(s)
+      :              : $>Turn 90 Left
+      :              : $>Wait: 4 frame(s)
+      :              : $>Turn 90 Left
+     @>Set Move Route: [EV033]
+      :              : $>Wait: 4 frame(s)
+      :              : $>Turn Right
+      :              : $>Wait: 4 frame(s)
+      :              : $>Turn 90 Left
+      :              : $>Wait: 4 frame(s)
+      :              : $>Turn 90 Left
+      :              : $>Wait: 4 frame(s)
+      :              : $>Turn 90 Left
+      :              : $>Wait: 4 frame(s)
+      :              : $>Turn 90 Left
+      :              : $>Wait: 4 frame(s)
+      :              : $>Turn 90 Left
+      :              : $>Wait: 4 frame(s)
+      :              : $>Turn 90 Left
+      :              : $>Wait: 4 frame(s)
+      :              : $>Turn 90 Left
+     @>Wait for Move's Completion
+     @>Set Move Route: [EV030]
+      :              : $>Wait: 4 frame(s)
+      :              : $>Jump: +0,+0
+      :              : $>Wait: 4 frame(s)
+      :              : $>Jump: +0,+0
+      :              : $>Wait: 4 frame(s)
+     @>Set Move Route: [EV031]
+      :              : $>Wait: 4 frame(s)
+      :              : $>Jump: +0,+0
+      :              : $>Wait: 4 frame(s)
+      :              : $>Jump: +0,+0
+      :              : $>Wait: 4 frame(s)
+     @>Set Move Route: [EV032]
+      :              : $>Wait: 4 frame(s)
+      :              : $>Jump: +1,+0
+      :              : $>Wait: 4 frame(s)
+      :              : $>Turn Down
+      :              : $>Jump: +0,+0
+      :              : $>Wait: 4 frame(s)
+     @>Set Move Route: [EV033]
+      :              : $>Wait: 4 frame(s)
+      :              : $>Jump: -1,+0
+      :              : $>Wait: 4 frame(s)
+      :              : $>Turn Down
+      :              : $>Jump: +0,+0
+      :              : $>Wait: 4 frame(s)
+     @>Wait for Move's Completion
+     @>Set Move Route: [EV030]
+      :              : $>Wait: 4 frame(s)
+      :              : $>Turn Right
+      :              : $>Wait: 4 frame(s)
+      :              : $>Turn 90 Left
+      :              : $>Wait: 4 frame(s)
+      :              : $>Turn 90 Left
+      :              : $>Wait: 4 frame(s)
+      :              : $>Turn 90 Left
+      :              : $>Wait: 4 frame(s)
+      :              : $>Turn 90 Left
+      :              : $>Wait: 4 frame(s)
+      :              : $>Turn 90 Left
+      :              : $>Wait: 4 frame(s)
+      :              : $>Turn 90 Left
+      :              : $>Wait: 4 frame(s)
+      :              : $>Turn 90 Left
+     @>Set Move Route: [EV031]
+      :              : $>Wait: 4 frame(s)
+      :              : $>Turn Right
+      :              : $>Wait: 4 frame(s)
+      :              : $>Turn 90 Left
+      :              : $>Wait: 4 frame(s)
+      :              : $>Turn 90 Left
+      :              : $>Wait: 4 frame(s)
+      :              : $>Turn 90 Left
+      :              : $>Wait: 4 frame(s)
+      :              : $>Turn 90 Left
+      :              : $>Wait: 4 frame(s)
+      :              : $>Turn 90 Left
+      :              : $>Wait: 4 frame(s)
+      :              : $>Turn 90 Left
+      :              : $>Wait: 4 frame(s)
+      :              : $>Turn 90 Left
+     @>Set Move Route: [EV032]
+      :              : $>Wait: 4 frame(s)
+      :              : $>Turn Right
+      :              : $>Wait: 4 frame(s)
+      :              : $>Turn 90 Left
+      :              : $>Wait: 4 frame(s)
+      :              : $>Turn 90 Left
+      :              : $>Wait: 4 frame(s)
+      :              : $>Turn 90 Left
+      :              : $>Wait: 4 frame(s)
+      :              : $>Turn 90 Left
+      :              : $>Wait: 4 frame(s)
+      :              : $>Turn 90 Left
+      :              : $>Wait: 4 frame(s)
+      :              : $>Turn 90 Left
+      :              : $>Wait: 4 frame(s)
+      :              : $>Turn 90 Left
+     @>Set Move Route: [EV033]
+      :              : $>Wait: 4 frame(s)
+      :              : $>Turn Right
+      :              : $>Wait: 4 frame(s)
+      :              : $>Turn 90 Left
+      :              : $>Wait: 4 frame(s)
+      :              : $>Turn 90 Left
+      :              : $>Wait: 4 frame(s)
+      :              : $>Turn 90 Left
+      :              : $>Wait: 4 frame(s)
+      :              : $>Turn 90 Left
+      :              : $>Wait: 4 frame(s)
+      :              : $>Turn 90 Left
+      :              : $>Wait: 4 frame(s)
+      :              : $>Turn 90 Left
+      :              : $>Wait: 4 frame(s)
+      :              : $>Turn 90 Left
+     @>Wait for Move's Completion
+     @>Set Move Route: [EV030]
+      :              : $>Wait: 4 frame(s)
+      :              : $>Jump: -1,+0
+      :              : $>Wait: 10 frame(s)
+      :              : $>Turn Down
+      :              : $>Jump: +0,+0
+      :              : $>Wait: 4 frame(s)
+     @>Set Move Route: [EV031]
+      :              : $>Wait: 4 frame(s)
+      :              : $>Jump: +1,+0
+      :              : $>Wait: 10 frame(s)
+      :              : $>Turn Down
+      :              : $>Jump: +0,+0
+      :              : $>Wait: 4 frame(s)
+     @>Set Move Route: [EV032]
+      :              : $>Wait: 4 frame(s)
+      :              : $>Change Speed: 5
+      :              : $>Jump: -2,+0
+      :              : $>Wait: 4 frame(s)
+      :              : $>Change Speed: 3
+      :              : $>Turn Down
+      :              : $>Jump: +0,+0
+      :              : $>Wait: 4 frame(s)
+     @>Set Move Route: [EV033]
+      :              : $>Wait: 4 frame(s)
+      :              : $>Change Speed: 5
+      :              : $>Jump: +2,+0
+      :              : $>Wait: 4 frame(s)
+      :              : $>Change Speed: 3
+      :              : $>Turn Down
+      :              : $>Jump: +0,+0
+      :              : $>Wait: 4 frame(s)
+     @>Wait for Move's Completion
+     @>Set Move Route: [EV030]
+      :              : $>Wait: 4 frame(s)
+      :              : $>Turn Right
+      :              : $>Wait: 4 frame(s)
+      :              : $>Turn 90 Left
+      :              : $>Wait: 4 frame(s)
+      :              : $>Turn 90 Left
+      :              : $>Wait: 4 frame(s)
+      :              : $>Turn 90 Left
+      :              : $>Wait: 4 frame(s)
+      :              : $>Turn 90 Left
+      :              : $>Wait: 4 frame(s)
+      :              : $>Turn 90 Left
+      :              : $>Wait: 4 frame(s)
+      :              : $>Turn 90 Left
+      :              : $>Wait: 4 frame(s)
+      :              : $>Turn 90 Left
+     @>Set Move Route: [EV031]
+      :              : $>Wait: 4 frame(s)
+      :              : $>Turn Right
+      :              : $>Wait: 4 frame(s)
+      :              : $>Turn 90 Left
+      :              : $>Wait: 4 frame(s)
+      :              : $>Turn 90 Left
+      :              : $>Wait: 4 frame(s)
+      :              : $>Turn 90 Left
+      :              : $>Wait: 4 frame(s)
+      :              : $>Turn 90 Left
+      :              : $>Wait: 4 frame(s)
+      :              : $>Turn 90 Left
+      :              : $>Wait: 4 frame(s)
+      :              : $>Turn 90 Left
+      :              : $>Wait: 4 frame(s)
+      :              : $>Turn 90 Left
+     @>Set Move Route: [EV032]
+      :              : $>Wait: 4 frame(s)
+      :              : $>Turn Right
+      :              : $>Wait: 4 frame(s)
+      :              : $>Turn 90 Left
+      :              : $>Wait: 4 frame(s)
+      :              : $>Turn 90 Left
+      :              : $>Wait: 4 frame(s)
+      :              : $>Turn 90 Left
+      :              : $>Wait: 4 frame(s)
+      :              : $>Turn 90 Left
+      :              : $>Wait: 4 frame(s)
+      :              : $>Turn 90 Left
+      :              : $>Wait: 4 frame(s)
+      :              : $>Turn 90 Left
+      :              : $>Wait: 4 frame(s)
+      :              : $>Turn 90 Left
+     @>Set Move Route: [EV033]
+      :              : $>Wait: 4 frame(s)
+      :              : $>Turn Right
+      :              : $>Wait: 4 frame(s)
+      :              : $>Turn 90 Left
+      :              : $>Wait: 4 frame(s)
+      :              : $>Turn 90 Left
+      :              : $>Wait: 4 frame(s)
+      :              : $>Turn 90 Left
+      :              : $>Wait: 4 frame(s)
+      :              : $>Turn 90 Left
+      :              : $>Wait: 4 frame(s)
+      :              : $>Turn 90 Left
+      :              : $>Wait: 4 frame(s)
+      :              : $>Turn 90 Left
+      :              : $>Wait: 4 frame(s)
+      :              : $>Turn 90 Left
+     @>Wait for Move's Completion
+     @>Set Move Route: [EV030]
+      :              : $>Wait: 4 frame(s)
+      :              : $>Move Right
+      :              : $>Turn Down
+     @>Set Move Route: [EV031]
+      :              : $>Wait: 4 frame(s)
+      :              : $>Move Left
+      :              : $>Turn Down
+     @>Set Move Route: [EV032]
+      :              : $>Wait: 4 frame(s)
+      :              : $>Change Speed: 5
+      :              : $>Move Right
+      :              : $>Move Right
+      :              : $>Change Speed: 3
+      :              : $>Turn Down
+     @>Set Move Route: [EV033]
+      :              : $>Wait: 4 frame(s)
+      :              : $>Change Speed: 5
+      :              : $>Move Left
+      :              : $>Move Left
+      :              : $>Change Speed: 3
+      :              : $>Turn Down
+     @>Wait for Move's Completion
+     @>Set Move Route: [EV030]
+      :              : $>Wait: 4 frame(s)
+      :              : $>Turn Right
+      :              : $>Wait: 4 frame(s)
+      :              : $>Turn 90 Left
+      :              : $>Wait: 4 frame(s)
+      :              : $>Turn 90 Left
+      :              : $>Wait: 4 frame(s)
+      :              : $>Turn 90 Left
+      :              : $>Wait: 4 frame(s)
+      :              : $>Turn 90 Left
+      :              : $>Wait: 4 frame(s)
+      :              : $>Turn 90 Left
+      :              : $>Wait: 4 frame(s)
+      :              : $>Turn 90 Left
+      :              : $>Wait: 4 frame(s)
+      :              : $>Turn 90 Left
+     @>Set Move Route: [EV031]
+      :              : $>Wait: 4 frame(s)
+      :              : $>Turn Right
+      :              : $>Wait: 4 frame(s)
+      :              : $>Turn 90 Left
+      :              : $>Wait: 4 frame(s)
+      :              : $>Turn 90 Left
+      :              : $>Wait: 4 frame(s)
+      :              : $>Turn 90 Left
+      :              : $>Wait: 4 frame(s)
+      :              : $>Turn 90 Left
+      :              : $>Wait: 4 frame(s)
+      :              : $>Turn 90 Left
+      :              : $>Wait: 4 frame(s)
+      :              : $>Turn 90 Left
+      :              : $>Wait: 4 frame(s)
+      :              : $>Turn 90 Left
+     @>Set Move Route: [EV032]
+      :              : $>Wait: 4 frame(s)
+      :              : $>Turn Right
+      :              : $>Wait: 4 frame(s)
+      :              : $>Turn 90 Left
+      :              : $>Wait: 4 frame(s)
+      :              : $>Turn 90 Left
+      :              : $>Wait: 4 frame(s)
+      :              : $>Turn 90 Left
+      :              : $>Wait: 4 frame(s)
+      :              : $>Turn 90 Left
+      :              : $>Wait: 4 frame(s)
+      :              : $>Turn 90 Left
+      :              : $>Wait: 4 frame(s)
+      :              : $>Turn 90 Left
+      :              : $>Wait: 4 frame(s)
+      :              : $>Turn 90 Left
+     @>Set Move Route: [EV033]
+      :              : $>Wait: 4 frame(s)
+      :              : $>Turn Right
+      :              : $>Wait: 4 frame(s)
+      :              : $>Turn 90 Left
+      :              : $>Wait: 4 frame(s)
+      :              : $>Turn 90 Left
+      :              : $>Wait: 4 frame(s)
+      :              : $>Turn 90 Left
+      :              : $>Wait: 4 frame(s)
+      :              : $>Turn 90 Left
+      :              : $>Wait: 4 frame(s)
+      :              : $>Turn 90 Left
+      :              : $>Wait: 4 frame(s)
+      :              : $>Turn 90 Left
+      :              : $>Wait: 4 frame(s)
+      :              : $>Turn 90 Left
+     @>Wait for Move's Completion
+     @>Set Move Route: [EV030]
+      :              : $>Wait: 4 frame(s)
+      :              : $>Change Speed: 5
+      :              : $>Move Left
+      :              : $>Move Left
+      :              : $>Change Speed: 3
+      :              : $>Turn Down
+     @>Set Move Route: [EV031]
+      :              : $>Wait: 4 frame(s)
+      :              : $>Change Speed: 5
+      :              : $>Move Right
+      :              : $>Move Right
+      :              : $>Change Speed: 3
+      :              : $>Turn Down
+     @>Set Move Route: [EV032]
+      :              : $>Wait: 4 frame(s)
+      :              : $>Move Right
+      :              : $>Turn Down
+     @>Set Move Route: [EV033]
+      :              : $>Wait: 4 frame(s)
+      :              : $>Move Left
+      :              : $>Turn Down
+     @>Wait for Move's Completion
+     @>Set Move Route: [EV030]
+      :              : $>Wait: 4 frame(s)
+      :              : $>Turn Right
+      :              : $>Wait: 4 frame(s)
+      :              : $>Turn 90 Left
+      :              : $>Wait: 4 frame(s)
+      :              : $>Turn 90 Left
+      :              : $>Wait: 4 frame(s)
+      :              : $>Turn 90 Left
+      :              : $>Wait: 4 frame(s)
+      :              : $>Turn 90 Left
+      :              : $>Wait: 4 frame(s)
+      :              : $>Turn 90 Left
+      :              : $>Wait: 4 frame(s)
+      :              : $>Turn 90 Left
+      :              : $>Wait: 4 frame(s)
+      :              : $>Turn 90 Left
+     @>Set Move Route: [EV031]
+      :              : $>Wait: 4 frame(s)
+      :              : $>Turn Right
+      :              : $>Wait: 4 frame(s)
+      :              : $>Turn 90 Left
+      :              : $>Wait: 4 frame(s)
+      :              : $>Turn 90 Left
+      :              : $>Wait: 4 frame(s)
+      :              : $>Turn 90 Left
+      :              : $>Wait: 4 frame(s)
+      :              : $>Turn 90 Left
+      :              : $>Wait: 4 frame(s)
+      :              : $>Turn 90 Left
+      :              : $>Wait: 4 frame(s)
+      :              : $>Turn 90 Left
+      :              : $>Wait: 4 frame(s)
+      :              : $>Turn 90 Left
+     @>Set Move Route: [EV032]
+      :              : $>Wait: 4 frame(s)
+      :              : $>Turn Right
+      :              : $>Wait: 4 frame(s)
+      :              : $>Turn 90 Left
+      :              : $>Wait: 4 frame(s)
+      :              : $>Turn 90 Left
+      :              : $>Wait: 4 frame(s)
+      :              : $>Turn 90 Left
+      :              : $>Wait: 4 frame(s)
+      :              : $>Turn 90 Left
+      :              : $>Wait: 4 frame(s)
+      :              : $>Turn 90 Left
+      :              : $>Wait: 4 frame(s)
+      :              : $>Turn 90 Left
+      :              : $>Wait: 4 frame(s)
+      :              : $>Turn 90 Left
+     @>Set Move Route: [EV033]
+      :              : $>Wait: 4 frame(s)
+      :              : $>Turn Right
+      :              : $>Wait: 4 frame(s)
+      :              : $>Turn 90 Left
+      :              : $>Wait: 4 frame(s)
+      :              : $>Turn 90 Left
+      :              : $>Wait: 4 frame(s)
+      :              : $>Turn 90 Left
+      :              : $>Wait: 4 frame(s)
+      :              : $>Turn 90 Left
+      :              : $>Wait: 4 frame(s)
+      :              : $>Turn 90 Left
+      :              : $>Wait: 4 frame(s)
+      :              : $>Turn 90 Left
+      :              : $>Wait: 4 frame(s)
+      :              : $>Turn 90 Left
+     @>Wait for Move's Completion
+     @>Set Move Route: [EV030]
+      :              : $>Wait: 4 frame(s)
+      :              : $>Jump: +0,+0
+      :              : $>Wait: 4 frame(s)
+      :              : $>Stop Animation ON
+      :              : $>Through OFF
+     @>Set Move Route: [EV031]
+      :              : $>Wait: 4 frame(s)
+      :              : $>Jump: +0,+0
+      :              : $>Wait: 4 frame(s)
+      :              : $>Stop Animation ON
+      :              : $>Through OFF
+     @>Set Move Route: [EV032]
+      :              : $>Wait: 4 frame(s)
+      :              : $>Jump: +0,+0
+      :              : $>Wait: 4 frame(s)
+      :              : $>Stop Animation ON
+      :              : $>Through OFF
+     @>Set Move Route: [EV033]
+      :              : $>Wait: 4 frame(s)
+      :              : $>Jump: +0,+0
+      :              : $>Wait: 4 frame(s)
+      :              : $>Stop Animation ON
+      :              : $>Through OFF
+     @>Wait for Move's Completion
+     @>Show Animation: [EV030], [Teleport]
+     @>Show Animation: [EV031], [Teleport]
+     @>Show Animation: [EV032], [Teleport]
+     @>Show Animation: [EV033], [Teleport]
+     @>Wait: 15 frame(s)
+     @>Set Move Route: [EV030]
+      :              : $>Graphic: "MELOETTA', 0, 2, 0
+     @>Set Move Route: [EV031]
+      :              : $>Graphic: "MELOETTA', 0, 2, 0
+     @>Set Move Route: [EV032]
+      :              : $>Graphic: "MELOETTA', 0, 2, 0
+     @>Set Move Route: [EV033]
+      :              : $>Graphic: "MELOETTA', 0, 2, 0
+     @>Wait: 3 frame(s)
+     @>Text: Ganz schön flink, oder?
+     @>Text: Also, welches Meloetta ist es?
+     @>
+    : Else
+     @>
+    : Branch End
+    @>
+   : Branch End
+   @>
+  : Branch End
+  @>
+ : When [Nee]
+  @>Text: Vielleicht ein anderes Mal.
+  @>Set Move Route: This event
+   :              : $>Turn Down
+   :              : $>Stop Animation ON
+  @>
+ : Branch End
+ @>
+: Branch End
+@>
+
+Page #2
+Conditions
+Variable 0050: Meloetta is 1 or above
+
+Graphic: NPC_Frau 5
+
+Autonomous Movement
+Type: Fixed
+Speed: 3: Slow
+Freq: 3: Low
+Options Enabled
+Move Animation
+Stop Animation
+Trigger: Action Button
+
+List of Event Commands:
+@>Text: Also, welches Meloetta ist es?
+@>
+
+#------------------------------------------------------------------------------
+Event ID: 030
+Event Name: EV030
+(X,Y): (050,080)
+
+Page #1
+Conditions
+None
+
+Graphic: MELOETTA
+
+Autonomous Movement
+Type: Fixed
+Speed: 3: Slow
+Freq: 3: Low
+Options Enabled
+Move Animation
+Stop Animation
+Trigger: Action Button
+
+List of Event Commands:
+@>Conditional Branch: Variable [0050: Meloetta] >= 1
+ @>Text: Oh nein!
+ @>Text: Das war nicht das richtige Meloetta.
+ @>Text: Die vier sehen sich einfach zu ähnlich, was?
+ @>Text: Sag Bescheid, wenn du es nochmal versuchen 
+  :    : möchtest.
+ @>Set Move Route: This event
+  :              : $>Turn Down
+ @>Set Event Location: [EV030],(050,080)
+ @>Set Event Location: [EV031],(051,080)
+ @>Set Event Location: [EV032],(052,080)
+ @>Set Event Location: [EV033],(053,080)
+ @>Control Variables: [0050: Meloetta] = 0
+ @>
+: Else
+ @>Play SE: 'MELOETTA', 100, 100
+ @>Wait: 8 frame(s)
+ @>Set Move Route: This event
+  :              : $>Turn Down
+ @>
+: Branch End
+@>
+
+#------------------------------------------------------------------------------
+Event ID: 031
+Event Name: EV031
+(X,Y): (051,080)
+
+Page #1
+Conditions
+None
+
+Graphic: MELOETTA
+
+Autonomous Movement
+Type: Fixed
+Speed: 3: Slow
+Freq: 3: Low
+Options Enabled
+Move Animation
+Stop Animation
+Trigger: Action Button
+
+List of Event Commands:
+@>Conditional Branch: Variable [0050: Meloetta] >= 1
+ @>Text: Oh nein!
+ @>Text: Das war nicht das richtige Meloetta.
+ @>Text: Die vier sehen sich einfach zu ähnlich, was?
+ @>Text: Sag Bescheid, wenn du es nochmal versuchen 
+  :    : möchtest.
+ @>Set Event Location: [EV030],(050,080)
+ @>Set Event Location: [EV031],(051,080)
+ @>Set Event Location: [EV032],(052,080)
+ @>Set Event Location: [EV033],(053,080)
+ @>Set Move Route: This event
+  :              : $>Turn Down
+ @>Control Variables: [0050: Meloetta] = 0
+ @>
+: Else
+ @>Play SE: 'MELOETTA', 100, 100
+ @>Wait: 8 frame(s)
+ @>Set Move Route: This event
+  :              : $>Turn Down
+ @>
+: Branch End
+@>
+
+#------------------------------------------------------------------------------
+Event ID: 032
+Event Name: EV032
+(X,Y): (052,080)
+
+Page #1
+Conditions
+None
+
+Graphic: MELOETTA
+
+Autonomous Movement
+Type: Fixed
+Speed: 3: Slow
+Freq: 3: Low
+Options Enabled
+Move Animation
+Stop Animation
+Trigger: Action Button
+
+List of Event Commands:
+@>Conditional Branch: Variable [0050: Meloetta] >= 1
+ @>Text: Wow!
+ @>Text: Du hast es dir wirklich gemerkt.
+ @>Text: Die Meloetta sind ganz begeistert von dir.
+ @>Set Move Route: This event
+  :              : $>Turn Down
+ @>Text: Das erhälst du als Belohnung.
+ @>Script: pbReceiveItem(:TM58)
+ @>Text: Vielleicht schaffen wir mit unserem Tanz eines Tages 
+  :    : auch den Durchbruch.
+ @>Set Event Location: [EV030],(050,080)
+ @>Set Event Location: [EV031],(051,080)
+ @>Set Event Location: [EV032],(052,080)
+ @>Set Event Location: [EV033],(053,080)
+ @>Control Variables: [0050: Meloetta] = 0
+ @>Control Switches: [0300: Meloetta Tanz beendet] = ON
+ @>
+: Else
+ @>Play SE: 'MELOETTA', 100, 100
+ @>Wait: 8 frame(s)
+ @>Set Move Route: This event
+  :              : $>Turn Down
+ @>
+: Branch End
+@>
+
+Page #2
+Conditions
+Switch 0300: Meloetta Tanz beendet is ON
+
+Graphic: MELOETTA
+
+Autonomous Movement
+Type: Fixed
+Speed: 3: Slow
+Freq: 3: Low
+Options Enabled
+Move Animation
+Stop Animation
+Trigger: Action Button
+
+List of Event Commands:
+@>Conditional Branch: Variable [0050: Meloetta] >= 1
+ @>Text: Wow!
+ @>Text: Du hast es dir wirklich gemerkt.
+ @>Text: Die Meloetta sind ganz begeistert von dir.
+ @>Set Move Route: This event
+  :              : $>Turn Down
+ @>Text: Vielleicht schaffen wir mit unserem Tanz eines Tages 
+  :    : auch den Durchbruch.
+ @>Control Switches: [0300: Meloetta Tanz beendet] = ON
+ @>Control Variables: [0050: Meloetta] = 0
+ @>
+: Else
+ @>Play SE: 'MELOETTA', 100, 100
+ @>Wait: 8 frame(s)
+ @>Set Move Route: This event
+  :              : $>Turn Down
+ @>
+: Branch End
+@>
+
+#------------------------------------------------------------------------------
+Event ID: 033
+Event Name: EV033
+(X,Y): (053,080)
+
+Page #1
+Conditions
+None
+
+Graphic: MELOETTA
+
+Autonomous Movement
+Type: Fixed
+Speed: 3: Slow
+Freq: 3: Low
+Options Enabled
+Move Animation
+Stop Animation
+Trigger: Action Button
+
+List of Event Commands:
+@>Conditional Branch: Variable [0050: Meloetta] >= 1
+ @>Text: Oh nein!
+ @>Text: Das war nicht das richtige Meloetta.
+ @>Text: Die vier sehen sich einfach zu ähnlich, was?
+ @>Text: Sag Bescheid, wenn du es nochmal versuchen 
+  :    : möchtest.
+ @>Set Event Location: [EV030],(050,080)
+ @>Set Event Location: [EV031],(051,080)
+ @>Set Event Location: [EV032],(052,080)
+ @>Set Event Location: [EV033],(053,080)
+ @>Set Move Route: This event
+  :              : $>Turn Down
+ @>Control Variables: [0050: Meloetta] = 0
+ @>
+: Else
+ @>Play SE: 'MELOETTA', 100, 100
+ @>Wait: 8 frame(s)
+ @>Set Move Route: This event
+  :              : $>Turn Down
+ @>
+: Branch End
 @>
 
 #------------------------------------------------------------------------------

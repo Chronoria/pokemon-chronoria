@@ -239,7 +239,7 @@ BPPrice = 5
 FieldUse = OnPokemon
 Flags = EvolutionStone,Fling_30
 Description = Damit lässt sich Knapfel entwickeln.
-#-------------------------------Shop
+#-------------------------------Besonderer Shop
 [SYRUPYAPPLE]
 Name = Saftiger Apfel
 NamePlural = Saftige Äpfel
@@ -400,7 +400,7 @@ Flags = Fling_30
 Description = Damit lässt sich Barschwa entwickeln.
 #-------------------------------Shop
 [WHIPPEDDREAM]
-Name = WSahnehäubchen
+Name = Sahnehäubchen
 NamePlural = Sahnehäubchen
 Pocket = 1
 Price = 3000
@@ -525,7 +525,7 @@ Pocket = 1
 Price = 3000
 Flags = Fling_30
 Description = Wenn Caesurio dieses Item trägt und drei andere Caesurio besiegt, entwickelt es sich ab Level 52.
-#-------------------------------Einzigartig
+#-------------------------------Selten
 [BOOSTERENERGY]
 Name = Energiekapsel
 NamePlural = Energiekapseln
@@ -3783,7 +3783,7 @@ FieldUse = TM
 Move = STRUGGLEBUG
 Flags = Fling_50
 Description = Schädigt das Ziel und senkt dessen Spezial-Angriff um eine Stufe. 
-#-------------------------------
+#-------------------------------Map / Shop
 [TM16]
 Name = TM16
 NamePlural = TM16s
@@ -3793,7 +3793,7 @@ FieldUse = TM
 Move = PSYBEAM
 Flags = Fling_65
 Description = Psystrahl verursacht Schaden und verwirrt das Ziel mit einer Wahrscheinlichkeit von 10 %. 
-#-------------------------------
+#-------------------------------Map / Shop
 [TM17]
 Name = TM17
 NamePlural = TM17s
@@ -3803,7 +3803,7 @@ FieldUse = TM
 Move = CONFUSERAY
 Flags = Fling_10
 Description = Das Ziel wird nach erfolgreicher Ausführung dieser Attacke verwirrt. 
-#-------------------------------
+#-------------------------------Map / Shop
 [TM18]
 Name = TM18
 NamePlural = TM18s
@@ -3813,7 +3813,7 @@ FieldUse = TM
 Move = THIEF
 Flags = Fling_60
 Description = Raub verursacht Schaden und stiehlt das Item des Zieles, falls dieses eins hält.
-#-------------------------------
+#-------------------------------Map / Shop
 [TM19]
 Name = TM19
 NamePlural = TM19s
@@ -3823,7 +3823,7 @@ FieldUse = TM
 Move = DISARMINGVOICE
 Flags = Fling_40
 Description = Säuselstimme verursacht Schaden ohne Zusatzeffekte und trifft unabhängig von Veränderungen des Fluchtwerts und der Genauigkeit. 
-#-------------------------------
+#-------------------------------Map / Shop
 [TM20]
 Name = TM20
 NamePlural = TM20s
@@ -3833,7 +3833,7 @@ FieldUse = TM
 Move = TRAILBLAZE
 Flags = Fling_50
 Description = Greift den Gegner an und erhöht die Initiative des Anwenders um eine Stufe. 
-#-------------------------------
+#-------------------------------Map / Shop
 [TM21]
 Name = TM21
 NamePlural = TM21s
@@ -3843,7 +3843,7 @@ FieldUse = TM
 Move = POUNCE
 Flags = Fling_50
 Description = Greift den Gegner an und senkt dessen Initiative um eine Stufe. 
-#-------------------------------
+#-------------------------------Map / Shop
 [TM22]
 Name = TM22
 NamePlural = TM22s
