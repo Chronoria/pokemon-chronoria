@@ -77,6 +77,10 @@ export const AbilityEffects = {
 };
 
 export const ItemEffects = {
+  /** Mirrors AbilityEffects.MoveImmunity - Luftballon (Air Balloon) is the only item in this
+   *  game that grants one. Unlike ability immunities, Mold Breaker does NOT bypass this: it only
+   *  ignores abilities, never held items. */
+  MoveImmunity: new HookTable<MoveImmunityHandler>(),
   DamageCalcFromUser: new HookTable<DamageCalcHandler>(),
   DamageCalcFromTarget: new HookTable<DamageCalcHandler>(),
   CriticalCalcFromUser: new HookTable<CritCalcHandler>(),
@@ -125,6 +129,22 @@ export function isAbilityModelled(id: string | null | undefined): boolean {
   return Object.values(AbilityEffects).some((table) => table.has(id));
 }
 
+/**
+ * Items handled directly in damage.ts/effects/moves.ts rather than through the ItemEffects hook
+ * table - mirrors INLINE_ABILITIES above, for the same reason: their effect isn't expressible as
+ * a DamageCalcFromUser/Target multiplier (a weight lookup, a hit-count floor, a stat STAGE change
+ * applied before any multiplier), not that they're unmodelled.
+ */
+export const INLINE_ITEMS = new Set([
+  "FLOATSTONE",
+  "LOADEDDICE",
+  "ELECTRICSEED",
+  "GRASSYSEED",
+  "MISTYSEED",
+  "PSYCHICSEED",
+]);
+
 export function isItemModelled(id: string | null | undefined): boolean {
+  if (id != null && INLINE_ITEMS.has(id)) return true;
   return Object.values(ItemEffects).some((table) => table.has(id));
 }

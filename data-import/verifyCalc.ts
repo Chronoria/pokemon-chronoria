@@ -547,6 +547,65 @@ console.log("Warnqualitaet");
     }
   }
 
+  // Item-based inertness / real handlers found while auditing the "sonstige-kampf-items" bucket.
+  {
+    // The original complaint: Zitter-Orb (Adrenaline Orb) only affects Speed, no damage effect.
+    const r0 = calculate(sideOf("PIKACHU", { ability: null, item: "ADRENALINEORB" }), def, thunderbolt, field);
+    checkTrue("Zitter-Orb loest keine Warnung aus", !r0.unmodelled.some((u) => u.startsWith("item:")));
+
+    // Poké Bälle, Mega-Steine und Kampf-Items (X-Attacke etc.) dürfen gar nicht mehr im
+    // Item-Picker auftauchen - sie sind pocket 3/6/7 und wurden aus dem Export entfernt.
+    const gone = ["POKEBALL", "MASTERBALL", "VENUSAURITEX", "XATTACK", "DIREHIT", "GUARDSPEC"];
+    checkTrue(
+      "Bälle/Mega-Steine/Kampf-Items nicht im Picker",
+      gone.every((id) => !itemList.some((i) => i.i === id)),
+      `noch vorhanden: ${gone.filter((id) => itemList.some((i) => i.i === id)).join(", ")}`
+    );
+
+    // Luftballon: echte Bodenimmunität, wie Schwebe.
+    const balloon = calculate(sideOf("PIKACHU", { ability: null }), sideOf("BULBASAUR", { ability: null, item: "AIRBALLOON" }), moveById.get("EARTHQUAKE")!, field);
+    check("Luftballon: immun gegen Boden", [balloon.min, balloon.max, balloon.typeMod], [0, 0, 0]);
+    checkTrue("Luftballon gilt als modelliert", !balloon.unmodelled.some((u) => u.startsWith("item:")));
+
+    // Leichtstein halbiert das Gewicht - wirkt sich auf gewichtsbasierte Stärke aus.
+    const heavyMove = moveList.find((m) => m.fn === "PowerHigherWithTargetWeight");
+    if (heavyMove) {
+      const heavyTarget = speciesList.find((s) => !s.fl && s.w >= 200);
+      if (heavyTarget) {
+        const atk = sideOf("PIKACHU", { ability: null, level: 100 });
+        const plain = calculate(atk, sideOf(heavyTarget.k, { ability: null }), heavyMove, field);
+        const lighter = calculate(atk, sideOf(heavyTarget.k, { ability: null, item: "FLOATSTONE" }), heavyMove, field);
+        checkTrue(
+          "Leichtstein senkt gewichtsbasierte Stärke",
+          lighter.max <= plain.max,
+          `ohne ${plain.max}, mit ${lighter.max}`
+        );
+      }
+    }
+
+    // Elektro-Samen: +1 Verteidigung nur auf passendem Terrain.
+    const tackleAtk = sideOf("PIKACHU", { ability: null, level: 100 });
+    const seedDef = sideOf("BULBASAUR", { ability: null, item: "ELECTRICSEED" });
+    const noTerrain = calculate(tackleAtk, seedDef, tackle, field);
+    const electricField = { ...field, terrain: "electric" as const };
+    const withTerrain = calculate(tackleAtk, seedDef, tackle, electricField);
+    checkTrue(
+      "Elektro-Samen wirkt nur auf Elektro-Terrain",
+      withTerrain.max <= noTerrain.max,
+      `ohne Terrain ${noTerrain.max}, mit ${withTerrain.max}`
+    );
+    const grassyField = { ...field, terrain: "grassy" as const };
+    const wrongTerrain = calculate(tackleAtk, seedDef, tackle, grassyField);
+    check("Elektro-Samen bleibt auf falschem Terrain wirkungslos", wrongTerrain.max, noTerrain.max);
+
+    // Gezinkter Würfel: Mehrfachtreffer landen mindestens 4x (statt 2-5x).
+    const multiMove = moveList.find((m) => m.fn === "HitTwoToFiveTimes");
+    if (multiMove) {
+      const diced = calculate(sideOf("PIKACHU", { ability: null, item: "LOADEDDICE" }), def, multiMove, field);
+      check("Gezinkter Würfel: mindestens 4 Treffer", [diced.hits?.min, diced.hits?.max], [4, 5]);
+    }
+  }
+
   // Skill Link pins a 2-5 hit move to 5 hits.
   const multi = moveList.find((m) => m.fn === "HitTwoToFiveTimes");
   if (multi) {

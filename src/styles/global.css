@@ -722,6 +722,40 @@ h2 {
   flex-direction: column;
   gap: 1.25rem;
 }
+.calc-swap-row {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  flex-wrap: wrap;
+}
+.calc-swap-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
+  font: inherit;
+  font-weight: 600;
+  font-size: 0.85rem;
+  color: var(--text);
+  background: var(--bg-glass);
+  border: 1px solid var(--border-glass);
+  border-radius: var(--radius-sm);
+  padding: 0.45rem 0.9rem;
+  cursor: pointer;
+  transition: border-color var(--dur-fast) var(--ease-out), box-shadow var(--dur-fast) var(--ease-out);
+}
+.calc-swap-btn:hover,
+.calc-swap-btn:focus-visible {
+  outline: none;
+  border-color: var(--accent-light);
+  box-shadow: var(--glow-blue);
+}
+.calc-swap-btn span[aria-hidden] {
+  font-size: 1rem;
+}
+.calc-swap-note {
+  font-size: 0.78rem;
+}
+
 .calc-sides {
   display: grid;
   grid-template-columns: 1fr;

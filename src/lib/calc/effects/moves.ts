@@ -9,7 +9,7 @@
 //   3. Moves whose damage doesn't come from the formula at all  -> SPECIAL_DAMAGE
 // Anything not listed simply uses the plain formula, which is correct for the 92 damaging moves
 // with no function code at all plus every code that only has a secondary effect.
-import type { CalcMove, SideState } from "../types.ts";
+import type { CalcMove, SideState, StatKey, Terrain } from "../types.ts";
 
 /** Multiplies base power. Returns the factor, or 1 when the code doesn't apply. */
 export type PowerModifier = (user: SideState, target: SideState, move: CalcMove) => number;
@@ -78,10 +78,15 @@ export const SPECIAL_DAMAGE: Record<string, (user: SideState, target: SideState)
   FixedDamageUserLevelRandom: () => ({ damage: null, note: "Zufälliger Schaden abhängig vom Level" }),
 };
 
+/** A holder's real weight for weight-based moves - halved by Float Stone (Leichtstein). */
+function effectiveWeight(side: SideState): number {
+  return side.item === "FLOATSTONE" ? side.species.w / 2 : side.species.w;
+}
+
 /** Weight-based power (Heavy Slam / Grass Knot), computed from the actual weights in the data. */
 export function weightBasedPower(code: string, user: SideState, target: SideState): number | null {
   if (code === "PowerHigherWithTargetWeight") {
-    const w = target.species.w;
+    const w = effectiveWeight(target);
     if (w >= 200) return 120;
     if (w >= 100) return 100;
     if (w >= 50) return 80;
@@ -90,7 +95,8 @@ export function weightBasedPower(code: string, user: SideState, target: SideStat
     return 20;
   }
   if (code === "PowerHigherWithUserHeavierThanTarget") {
-    const ratio = target.species.w > 0 ? user.species.w / target.species.w : 5;
+    const targetWeight = effectiveWeight(target);
+    const ratio = targetWeight > 0 ? effectiveWeight(user) / targetWeight : 5;
     if (ratio >= 5) return 120;
     if (ratio >= 4) return 100;
     if (ratio >= 3) return 80;
@@ -104,14 +110,31 @@ export function weightBasedPower(code: string, user: SideState, target: SideStat
 export const ALWAYS_CRIT = new Set(["AlwaysCriticalHit", "HitThreeTimesAlwaysCriticalHit"]);
 
 /**
- * Skill Link makes variable multi-hit moves always land the maximum number of hits. It only
- * became damage-relevant once hit counts were modelled at all - before that there was nothing
- * for it to change.
+ * Skill Link pins a variable multi-hit move to its maximum hit count; Loaded Dice instead only
+ * raises the FLOOR to 4 (still variable between 4 and the move's max). Both only became damage-
+ * relevant once hit counts were modelled at all - before that there was nothing for them to
+ * change.
  */
-export function applySkillLink(
+export function applyMultiHitModifiers(
   hits: { min: number; max: number } | undefined,
-  ability: string | null
+  ability: string | null,
+  item: string | null
 ): { min: number; max: number } | undefined {
-  if (!hits || ability !== "SKILLLINK") return hits;
-  return { min: hits.max, max: hits.max };
+  if (!hits) return hits;
+  if (ability === "SKILLLINK") return { min: hits.max, max: hits.max };
+  if (item === "LOADEDDICE") return { min: Math.max(hits.min, Math.min(4, hits.max)), max: hits.max };
+  return hits;
 }
+
+/**
+ * The four terrain seeds raise a defense STAGE by +1 while their terrain is active - not a
+ * multiplier, since stat stages are applied before any multiplier in damage.ts (see the
+ * "Ability-granted immunity" / Unaware handling there for the same reason other stage-level
+ * effects live inline rather than in the ItemEffects hook table).
+ */
+export const TERRAIN_SEED_BOOST: Record<string, { terrain: Terrain; stat: StatKey }> = {
+  ELECTRICSEED: { terrain: "electric", stat: "defense" },
+  GRASSYSEED: { terrain: "grassy", stat: "defense" },
+  MISTYSEED: { terrain: "misty", stat: "spDef" },
+  PSYCHICSEED: { terrain: "psychic", stat: "spDef" },
+};

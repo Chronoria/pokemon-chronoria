@@ -61,6 +61,12 @@ const sortedItems = [...itemList].sort((a, b) => a.n.localeCompare(b.n, "de"));
   </p>
 
   <div id="calc-root" class="calc-root">
+    <div class="calc-swap-row">
+      <button type="button" class="calc-swap-btn js-swap" title="Angreifer und Verteidiger tauschen">
+        <span aria-hidden="true">⇄</span> Seiten tauschen
+      </button>
+      <span class="meta-note calc-swap-note">Tauscht die Werte beider Seiten. Die Attacken bleiben beim Angreifer.</span>
+    </div>
     <div class="calc-sides">
       {sides.map((side) => (
         <section class="calc-panel" data-side={side.key}>

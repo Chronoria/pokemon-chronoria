@@ -26,19 +26,77 @@ function packStats(s: Pokemon["baseStats"]): number[] {
  * silent about it rather than warning that it isn't modelled.
  *
  * This is a CATEGORISATION signal, not a proof: a few items are both, e.g. Scharfklaue is an
- * evolution item (inert by category) and a real crit-boosting held item. Consumers must therefore
- * consult their own effect registry FIRST and only fall back to this flag - which is exactly what
- * calculate() in src/lib/calc/index.ts does, and what verifyCalc.ts pins down.
+ * evolution item (inert by category) and a real crit-boosting held item, and Wellspring-/
+ * Hearthflame-/Cornerstone-Maske are "formwechsel" AND real 1.2x-final-multiplier items.
+ * Consumers must therefore consult their own effect registry FIRST and only fall back to this
+ * flag - which is exactly what calculate() in src/lib/calc/index.ts does, and what
+ * verifyCalc.ts pins down.
  *
  * Deliberately conservative regardless: a wrongly-silenced item would produce a wrong number with
  * no hint, which is worse than noise. Held-item categories like "typverstaerker" or
- * "sonstige-kampf-items" are never treated as inert.
+ * "sonstige-kampf-items" are never treated as inert by category - the latter is a pocket-1 catch-
+ * all that also contains real damage items (Choice-/Leben-Orb-style), so its genuinely inert
+ * members are listed by id instead, in SONSTIGE_KAMPF_INERT below.
  */
-const INERT_CATEGORIES = new Set(["verkaufsware", "entwicklung", "fossilien", "zutaten"]);
+const INERT_CATEGORIES = new Set(["verkaufsware", "entwicklung", "fossilien", "zutaten", "formwechsel"]);
+
+// Hand-verified against every "sonstige-kampf-items" entry in E:\Test\PBS\items.txt (the category
+// is a pocket-1 catch-all, so it also contains real damage items like Wahlband/Leben-Orb which
+// stay OUT of this list on purpose). Every id here was checked to have no damage-magnitude effect
+// under any circumstance: pure exploration items (Schutz/Flöten/Honig), crafting/sell fodder
+// (Aprikokos, Splitter, Bambussprosse), breeding/friendship/cosmetic items, switch-out/flee-only
+// items, end-of-turn healing with no damage term, and items whose only effect is a stat STAGE
+// change (already a direct calculator input, same reasoning as Bedroher/Intimidate).
+//
+// NOT listed here despite living in the same category, because they get real handlers instead:
+// FLOATSTONE (halves weight -> changes weight-based move power), LOADEDDICE (raises the multi-hit
+// floor). NOT listed either because the calculator genuinely can't approximate them and a silent
+// zero would be worse than the warning: IRONBALL/RINGTARGET (remove type immunities - would need
+// typeMod to expose per-type components, not just a combined multiplier), METRONOME (scales with
+// same-move streaks the calculator has no concept of), LEGENDPLATE (retypes Judgment specifically,
+// unverified whether distinct from the modelled Arceus plates), and the doubles ally-trigger items
+// (RESETURGE/ABILITYURGE/ITEMURGE/ITEMDROP - depend on teammates the calculator doesn't model).
+const SONSTIGE_KAMPF_INERT = new Set([
+  "REPEL", "SUPERREPEL", "MAXREPEL", "BLACKFLUTE", "WHITEFLUTE", "HONEY",
+  "GALARICACUFF", "GALARICAWREATH", "CHIPPEDPOT", "MASTERPIECETEACUP",
+  "REDAPRICORN", "YELLOWAPRICORN", "BLUEAPRICORN", "GREENAPRICORN", "PINKAPRICORN", "WHITEAPRICORN", "BLACKAPRICORN",
+  "MEGASHARD", "TINYBAMBOOSHOOT", "BIGBAMBOOSHOOT",
+  "DESTINYKNOT", "LUCKYEGG", "AMULETCOIN", "SOOTHEBELL", "CLEANSETAG",
+  "SHEDSHELL", "SMOKEBALL",
+  "HEATROCK", "DAMPROCK", "SMOOTHROCK", "ICYROCK", "TERRAINEXTENDER", "LIGHTCLAY", "GRIPCLAW", "BINDINGBAND",
+  "BIGROOT", "BLACKSLUDGE", "LEFTOVERS", "SHELLBELL",
+  "MENTALHERB", "WHITEHERB", "POWERHERB",
+  "ABSORBBULB", "CELLBATTERY", "LUMINOUSMOSS", "SNOWBALL", "WEAKNESSPOLICY", "BLUNDERPOLICY", "THROATSPRAY",
+  "ADRENALINEORB", "ROOMSERVICE",
+  "WIDELENS", "ZOOMLENS", "LAGGINGTAIL", "QUICKCLAW",
+  "FOCUSBAND", "FOCUSSASH",
+  "FLAMEORB", "TOXICORB", "STICKYBARB",
+  "QUICKPOWDER", "CLEARAMULET", "MIRRORHERB", "COVERTCLOAK",
+  "MACHOBRACE", "POWERWEIGHT", "POWERBRACER", "POWERBELT", "POWERLENS", "POWERBAND", "POWERANKLET",
+  "EVERSTONE", "SHINYSPRAY", "HEARTSCALE", "ABILITYSHIELD", "GACHATICKET",
+  "REDNECTAR", "YELLOWNECTAR", "PINKNECTAR", "PURPLENECTAR",
+  "JOYSCENT", "EXCITESCENT", "VIVIDSCENT", "TIMEFLUTE", "RAIDBAIT",
+  // Accuracy/evasion-only, or protects from something the calculator doesn't model (hazards,
+  // contact effects, weather chip, powder moves) - none of it changes a hit's damage magnitude.
+  "BRIGHTPOWDER", "ROCKYHELMET", "SAFETYGOGGLES", "PROTECTIVEPADS", "HEAVYDUTYBOOTS",
+  // Switch-out triggers only.
+  "EJECTBUTTON", "EJECTPACK", "REDCARD",
+  // Choice Scarf is Speed-only, unlike Choice Band/Specs (which ARE modelled, see the choice
+  // items above) - no damage multiplier at all.
+  "CHOICESCARF",
+  // Non-boosting incenses: accuracy, speed, prize money, wild-encounter rate - none affect
+  // damage. (The five that DO boost a type's power - Sea/Wave/Rose/Odd/Rock - are real handlers.)
+  "LAXINCENSE", "FULLINCENSE", "LUCKINCENSE", "PUREINCENSE",
+  // Primal Reversion trigger - the resulting Primal form is chosen via the species/form picker,
+  // same reasoning as the Mega Stones and Rusted Sword/Shield above.
+  "REDORB", "BLUEORB",
+]);
 
 function hasNoBattleEffect(item: Item): boolean {
-  if (item.pocket === 2) return true;
-  return item.categories.length > 0 && item.categories.every((c) => INERT_CATEGORIES.has(c));
+  if (item.pocket === 2) return true; // Medizin: does nothing until used from the bag.
+  if (item.flags.includes("Berry")) return true; // see the file header for why this is safe.
+  if (item.categories.length > 0 && item.categories.every((c) => INERT_CATEGORIES.has(c))) return true;
+  return SONSTIGE_KAMPF_INERT.has(item.id);
 }
 
 export function buildCalcData(
@@ -114,10 +172,14 @@ export function buildCalcData(
       fn: m.functionCode,
     })),
     a: abilities.map((a) => ({ i: a.id, n: a.name, d: a.description })),
-    // Only items that can plausibly be held in battle. TMs (which carry a `move`) and Key Items
-    // (pocket 8) can never affect damage and would just bloat the payload and clutter the picker.
+    // Only items that can plausibly be held in battle. TMs (`move` set) and pockets 4 (Poffins/
+    // whatever occupies it), 8 (Key Items), 3 (Poké Bälle - 35 of them, cannot be "held"), 6
+    // (Mega-Steine - Mega Evolution is chosen via the species/form picker instead, and the stone
+    // itself has no independent multiplier once that form is selected) and 7 (Kampf-Items: X-Item/
+    // Dire-Hit-style stat boosters that are consumed from the bag, not held, plus doubles-ally
+    // triggers and flee items) can never be a HELD item and would just clutter the picker.
     it: items
-      .filter((i) => i.move === null && i.pocket !== 8 && i.pocket !== 4)
+      .filter((i) => i.move === null && ![3, 4, 6, 7, 8].includes(i.pocket))
       .map((i) => ({
         i: i.id,
         n: i.name,

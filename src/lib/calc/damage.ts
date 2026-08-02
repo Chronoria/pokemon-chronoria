@@ -11,8 +11,15 @@
 //     Showdown's pokeRound/65536 chain would give different results and must not be introduced.
 //   * Only five roundings happen in total: four `.round` (half-up) and one integer floor-division
 //     chain in the middle.
-import { abilityName } from "./data.ts";
-import { applySkillLink, HIT_COUNTS, POWER_MODIFIERS, SPECIAL_DAMAGE, weightBasedPower } from "./effects/moves.ts";
+import { abilityName, itemName } from "./data.ts";
+import {
+  applyMultiHitModifiers,
+  HIT_COUNTS,
+  POWER_MODIFIERS,
+  SPECIAL_DAMAGE,
+  TERRAIN_SEED_BOOST,
+  weightBasedPower,
+} from "./effects/moves.ts";
 import { AbilityEffects, ItemEffects } from "./registry.ts";
 import { applyStage, calcAllStats, NEUTRAL_STAGE_INDEX } from "./stats.ts";
 import { typeMod as calcTypeMod } from "./typechart.ts";
@@ -271,11 +278,26 @@ export function calculateDamage(input: CalcInput): DamageResult {
         };
       }
     }
+    // Item-granted immunity (Luftballon/Air Balloon). Never bypassed by Mold Breaker - that only
+    // ever ignores abilities.
+    {
+      const immune = ItemEffects.MoveImmunity.get(defender.item);
+      if (immune?.(ctx)) {
+        return {
+          ...zero(`Keine Wirkung - ${itemName(defender.item)} macht den Verteidiger immun.`),
+          typeMod: 0,
+        };
+      }
+    }
 
     // Stat stages are applied here, floored, BEFORE any multiplier - matching Essentials.
     // On a crit the attacker's negative stages and the defender's positive stages are ignored.
     let atkStageIdx = Math.max(0, Math.min(12, (useTargetAttack ? defender.stages[atkKey] : attacker.stages[atkKey]) + 6));
-    let defStageIdx = Math.max(0, Math.min(12, defender.stages[defKey] + 6));
+    // Terrain seeds: a genuine +1 stage, applied here rather than as a Multipliers hook because
+    // stat stages are resolved before any multiplier runs (see the module comment on TERRAIN_SEED_BOOST).
+    const seedBoost = defender.item ? TERRAIN_SEED_BOOST[defender.item] : undefined;
+    const seedActive = seedBoost && seedBoost.terrain === field.terrain && seedBoost.stat === defKey;
+    let defStageIdx = Math.max(0, Math.min(12, defender.stages[defKey] + (seedActive ? 1 : 0) + 6));
     // Unaware on the target skips the attacker's stage application entirely (and Mold Breaker
     // overrides that); Unaware on the user skips the defender's. The asymmetry - only the
     // attacker branch has the Mold Breaker escape - is in the game's source, so it is kept.
@@ -306,13 +328,16 @@ export function calculateDamage(input: CalcInput): DamageResult {
   // Multi-hit moves: the rolls above are ONE hit, so report the count too rather than letting a
   // 2-5x move read as a single weak hit.
   const baseHits = HIT_COUNTS[move.fn];
-  const hits = applySkillLink(baseHits, attacker.ability);
+  const hits = applyMultiHitModifiers(baseHits, attacker.ability, attacker.item);
   if (hits && baseHits) {
-    const label = hits.min === hits.max ? `Trifft ${hits.min}x` : baseHits.note;
-    const skillLink = baseHits.min !== baseHits.max && hits.min === hits.max;
-    notes.push(
-      `${label}${skillLink ? ` (${abilityName(attacker.ability)})` : ""} - Werte gelten je Treffer.`
-    );
+    const changed = baseHits.min !== hits.min || baseHits.max !== hits.max;
+    // Skill Link/Loaded Dice change the min/max but the move's own note (which for some codes
+    // carries extra info beyond the count, e.g. Dreifachschlag's "Stärke steigt je Treffer") is
+    // still worth keeping - only the count portion is overridden when it no longer matches.
+    const label = changed ? `Trifft ${hits.min === hits.max ? `${hits.min}x` : `${hits.min}-${hits.max}x`}` : baseHits.note;
+    const source =
+      attacker.ability === "SKILLLINK" ? abilityName(attacker.ability) : attacker.item === "LOADEDDICE" ? itemName(attacker.item) : null;
+    notes.push(`${label}${changed && source ? ` (${source})` : ""} - Werte gelten je Treffer.`);
   }
 
   return {

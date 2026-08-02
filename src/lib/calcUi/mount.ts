@@ -230,6 +230,56 @@ export function mountCalculator(root: HTMLElement): () => void {
   const critToggle = root.querySelector<HTMLInputElement>(".js-crit");
   critToggle?.addEventListener("change", recalculate, { signal });
 
+  // --- Swap ------------------------------------------------------------------------------------
+  // Pushes side.state values into every plain input/select for that panel. Needed only after a
+  // programmatic state change (swap) - on normal user input the DOM is already the source of
+  // truth, so nothing else needs to call this.
+  function syncPanelInputs(which: "attacker" | "defender") {
+    const panel = el<HTMLElement>(root, `[data-side="${which}"]`);
+    const state = sides[which].state;
+    const setVal = (selector: string, value: string) => {
+      const node = panel.querySelector<HTMLInputElement | HTMLSelectElement>(selector);
+      if (node) node.value = value;
+    };
+    setVal(".js-level", String(state.level));
+    setVal(".js-nature", state.nature);
+    setVal(".js-item", state.item ?? "");
+    setVal(".js-status", state.status);
+    setVal(".js-hp", String(Math.round(state.hpFraction * 100)));
+    for (const key of STAT_KEYS) {
+      setVal(`.js-iv-${key}`, String(state.ivs[key]));
+      setVal(`.js-ev-${key}`, String(state.evs[key]));
+      if (key !== "hp") setVal(`.js-stage-${key}`, String(state.stages[key]));
+    }
+  }
+
+  const swapButton = root.querySelector<HTMLButtonElement>(".js-swap");
+  swapButton?.addEventListener(
+    "click",
+    () => {
+      // Only the attacker panel has move pickers (damage only ever runs FROM attacker TO
+      // defender), so there is nothing to swap moves WITH - they deliberately stay on the
+      // attacker panel while everything else (species, level, EVs, ability, ...) trades places.
+      // Swapping the state OBJECT REFERENCES (rather than copying fields) is safe and simplest
+      // here: every input listener above reads/writes through the stable `side` object captured
+      // at setup time, so `side.state.x`, not a locally-cached `state`, always sees the swap.
+      const temp = sides.attacker.state;
+      sides.attacker.state = sides.defender.state;
+      sides.defender.state = temp;
+
+      sides.attacker.speciesCombo.setValue(sides.attacker.state.species);
+      sides.defender.speciesCombo.setValue(sides.defender.state.species);
+      syncPanelInputs("attacker");
+      syncPanelInputs("defender");
+      renderSide("attacker");
+      renderSide("defender");
+      // The attacker's moves may no longer be learnable by its (new) species - re-sort, don't clear.
+      for (const combo of sides.attacker.moveCombos) combo.refresh();
+      recalculate();
+    },
+    { signal }
+  );
+
   // --- Rendering ------------------------------------------------------------------------------
   function renderSide(which: "attacker" | "defender") {
     const panel = el<HTMLElement>(root, `[data-side="${which}"]`);

@@ -199,6 +199,38 @@ for (const [item, type] of DRIVES) {
   });
 }
 
+// The five Gen-4 breeding incenses (Sea/Wave/Rose/Odd/Rock) are the same 1.2x-power mechanic as
+// Charcoal/Mystic Water above, just tied to an egg item instead of a plain type-booster item.
+const INCENSE_BOOSTERS: [string, string][] = [
+  ["SEAINCENSE", "WATER"],
+  ["WAVEINCENSE", "WATER"],
+  ["ROSEINCENSE", "GRASS"],
+  ["ODDINCENSE", "PSYCHIC"],
+  ["ROCKINCENSE", "ROCK"],
+];
+for (const [item, type] of INCENSE_BOOSTERS) {
+  ItemEffects.DamageCalcFromUser.add(item, (ctx) => {
+    if (ctx.type === type) ctx.multipliers.power *= 1.2;
+  });
+}
+
+// Luftballon (Air Balloon) grants full Ground immunity while held - same shape as Levitate, just
+// item-granted instead of ability-granted, hence the separate ItemEffects.MoveImmunity table.
+ItemEffects.MoveImmunity.add("AIRBALLOON", (ctx) => ctx.type === "GROUND");
+
+// Allzweckschirm (Utility Umbrella) is deliberately NOT modelled: the DBK formula reads weather
+// via `user.effectiveWeather` (E:\Test\Plugins\[DBK_000] Deluxe Battle Kit\...\[002] Damage Calc
+// Refactor.rb:166/674), and whether that core Essentials method already accounts for this item -
+// and for which side - could not be verified (no local core source, GitHub code search needs
+// auth). A hand-rolled duplicate risks double-cancelling or silently disagreeing with the real
+// mechanic; the honest choice is to leave this as a reported "not modelled" item rather than guess.
+
+// Float Stone (weight halving -> weight-based move power), Loaded Dice (multi-hit floor) and the
+// four terrain seeds (a defense STAGE change, applied before any multiplier - can't be expressed
+// as a DamageCalcFromTarget hook at all) are handled directly in damage.ts/effects/moves.ts rather
+// than through this table. They're listed in INLINE_ITEMS (registry.ts) for the same reason
+// INLINE_ABILITIES exists: so isItemModelled() reports them correctly without a fake no-op hook.
+
 // [core] Sinnoh trio orbs: 1.2x on the holder's two signature types.
 // [Gen9] The crystal/globe/core variants copy these (New Item Handlers.rb:172-174).
 const ORBS: [string[], string, string[]][] = [
