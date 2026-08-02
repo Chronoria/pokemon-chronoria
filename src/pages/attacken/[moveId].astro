@@ -25,7 +25,7 @@ const learnedByAll = [...new Set([...m.learnedByLevelUp, ...m.learnedByTutorOrEg
   <p class="meta-note"><a href={href("/attacken/")}>← Alle Attacken</a></p>
   <h1>{m.name}</h1>
   <div class="pill-list">
-    <TypeBadge type={m.type} linkTo="pokemon" />
+    <TypeBadge type={m.type} link />
     <span class="badge" style="background:#888">{CATEGORY_LABEL[m.category] ?? m.category}</span>
   </div>
 

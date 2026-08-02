@@ -110,7 +110,7 @@ const nextPokemon = pokemon[(dexIndex + 1) % pokemon.length];
         </div>
       )}
       <div class="pill-list">
-        {p.types.map((t: string) => <TypeBadge type={t} linkTo="pokemon" />)}
+        {p.types.map((t: string) => <TypeBadge type={t} link />)}
       </div>
       {p.shinySprite && (
         <p class="meta-note"><a href={href(`/shiny/${slugify(p.id)}/`)}>✨ Shiny-Version ansehen</a></p>
@@ -211,7 +211,7 @@ const nextPokemon = pokemon[(dexIndex + 1) % pokemon.length];
             <tr>
               <td><a href={href(`/pokemon/${slugify(p.id)}/${f.formNumber}/`)}>{f.sprite && <img class="form-sprite" src={href(`/sprites/${f.sprite}`)} alt="" width="40" height="40" />}</a></td>
               <td><a href={href(`/pokemon/${slugify(p.id)}/${f.formNumber}/`)}>{f.formName?.text || `Form ${f.formNumber}`}</a></td>
-              <td><div class="pill-list">{f.types.map((t: string) => <TypeBadge type={t} linkTo="formen" />)}</div></td>
+              <td><div class="pill-list">{f.types.map((t: string) => <TypeBadge type={t} link />)}</div></td>
               <td>
                 <div class="form-stat-grid">
                   <span class="form-stat"><span class="form-stat-lbl">LP</span><span class="form-stat-val">{f.baseStats.hp}</span></span>
@@ -240,7 +240,7 @@ const nextPokemon = pokemon[(dexIndex + 1) % pokemon.length];
                 <tr>
                   <td>{lm.level === 0 ? "bei Entwicklung" : lm.level}</td>
                   <td><a href={href(`/attacken/${slugify(lm.move)}/`)}>{moveName(lm.move)}</a></td>
-                  <td>{mv && <TypeBadge type={mv.type} linkTo="pokemon" />}</td>
+                  <td>{mv && <TypeBadge type={mv.type} link />}</td>
                   <td>{mv?.totalPP ?? "–"}</td>
                   <td>{mv?.power ?? "–"}</td>
                   <td>{mv?.accuracy ?? "–"}</td>

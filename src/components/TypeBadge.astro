@@ -6,15 +6,14 @@ import { href } from "../lib/url";
 
 interface Props {
   type: string;
-  // Makes the badge a link into the filtered Pokémon list for this type - "pokemon" for a
-  // species'/move's own type, "formen" for a FORM's own type (Mega Evolutions etc. can have a
-  // type the base species never shows, which only the Formen list actually indexes). Omitted by
-  // default so no existing call site changes behavior unless explicitly opted in - several sit
-  // inside an outer <a> already (card grids, linked table rows) where a nested link would be
-  // invalid HTML.
-  linkTo?: "pokemon" | "formen";
+  // Makes the badge a link into the type-filtered "/pokemon/?typ=..." list (which shows species
+  // AND their forms together whenever a specific type is selected - see pokemon/index.astro).
+  // Omitted by default so no existing call site changes behavior unless explicitly opted in -
+  // several sit inside an outer <a> already (card grids, linked table rows) where a nested link
+  // would be invalid HTML.
+  link?: boolean;
 }
-const { type, linkTo } = Astro.props;
+const { type, link } = Astro.props;
 const name = typeNameById.get(type) ?? type;
 const color = typeColor(type);
 const ink = textColorFor(type);
@@ -23,8 +22,8 @@ const textShadow =
 const style = `background:linear-gradient(155deg, ${mixColor(color, 25)}, ${mixColor(color, -35)}); box-shadow: 0 4px 14px -3px ${color}99, inset 0 1px 0 rgba(255,255,255,0.14); color: ${ink}; text-shadow: ${textShadow};`;
 ---
 
-{linkTo ? (
-  <a class="badge badge-type badge-type-link" style={style} href={href(`/${linkTo}/?typ=${type}`)}>
+{link ? (
+  <a class="badge badge-type badge-type-link" style={style} href={href(`/pokemon/?typ=${type}`)}>
     <svg class="badge-type-icon" viewBox="0 0 14 14" aria-hidden="true" set:html={typeIcon(type)} />
     {name}
   </a>

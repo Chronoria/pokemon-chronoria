@@ -6,6 +6,20 @@ import { pokemon, types, pokemonDexNumber } from "../../lib/data";
 import { slugify } from "../../lib/data";
 import { href } from "../../lib/url";
 import { typeColor } from "../../lib/typeColors";
+
+// Forms (Mega Evolutions etc.) are rendered into the same grid so a type-filtered view shows
+// species and forms together - see the note above the .filter-bar script for why they stay hidden
+// until a specific type is picked. Same flattening formen/index.astro uses (female forms are
+// cosmetic-only duplicates of the base sprite/stats, so they're excluded there too).
+const allForms = pokemon.flatMap((p) =>
+  p.forms
+    .filter((f) => !f.isFemaleForm)
+    .map((f) => ({
+      p,
+      f,
+      label: f.formName?.text || `Form ${f.formNumber}`,
+    }))
+);
 ---
 
 <Layout title="Pokémon">
@@ -44,6 +58,22 @@ import { typeColor } from "../../lib/typeColors";
         </div>
       </Card>
     ))}
+    {allForms.map(({ p, f, label }) => (
+      <Card
+        href={href(`/pokemon/${slugify(p.id)}/${f.formNumber}/`)}
+        data-kind="form"
+        data-types={f.types.join(",")}
+        data-name={`${p.name.toLowerCase()} ${label.toLowerCase()}`}
+        style={`--card-glow:${typeColor(f.types[0])}66`}
+      >
+        {f.sprite && <img class="card-sprite" src={href(`/sprites/${f.sprite}`)} alt="" loading="lazy" width="64" height="64" />}
+        <div class="card-name">{p.name}</div>
+        <div class="meta-note">{label}</div>
+        <div class="pill-list" style="margin-top:0.35rem">
+          {f.types.map((t) => <TypeBadge type={t} />)}
+        </div>
+      </Card>
+    ))}
   </div>
 </Layout>
 
@@ -64,6 +94,12 @@ import { typeColor } from "../../lib/typeColors";
     const query = nameSearch.value.trim().toLowerCase();
     let visible = 0;
     for (const card of cards) {
+      // Forms only join the list once a specific type is picked - normal browsing (activeType
+      // "ALL") stays species-only, matching how this page looked before forms were added here.
+      if (card.dataset.kind === "form" && activeType === "ALL") {
+        card.style.display = "none";
+        continue;
+      }
       const cardTypes = card.dataset.types?.split(",") ?? [];
       const matchesType = activeType === "ALL" || cardTypes.includes(activeType);
       const matchesName = query === "" || (card.dataset.name ?? "").includes(query);
@@ -87,7 +123,7 @@ import { typeColor } from "../../lib/typeColors";
 
   // Lets a TypeBadge link straight into a pre-filtered list (e.g. "/pokemon/?typ=FIRE") instead of
   // needing a dedicated static page per type - reads the same "typ" query param TypeBadge.astro
-  // builds when linkTo="pokemon" (mirrors items/index.astro's "?kategorie=" reader).
+  // builds when link=true (mirrors items/index.astro's "?kategorie=" reader).
   const initialType = new URLSearchParams(window.location.search).get("typ");
   if (initialType) {
     const initialLink = filterBar.querySelector(`a[data-type="${initialType}"]`);

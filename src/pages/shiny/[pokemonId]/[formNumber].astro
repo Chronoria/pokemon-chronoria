@@ -40,7 +40,7 @@ const formLabel = f.formName?.text || `Form ${f.formNumber}`;
       )}
     </div>
     <div class="pill-list">
-      {f.types.map((t: string) => <TypeBadge type={t} linkTo="formen" />)}
+      {f.types.map((t: string) => <TypeBadge type={t} link />)}
     </div>
     <p class="meta-note">
       <a href={href(`/pokemon/${slugify(p.id)}/${f.formNumber}/`)}>→ Normale Ansicht (Basiswerte, Attacken, Entwicklung …)</a>

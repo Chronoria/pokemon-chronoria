@@ -94,9 +94,9 @@ const allForms = pokemon.flatMap((p) =>
     applyFilters();
   });
 
-  // Lets a TypeBadge link straight into a pre-filtered list (e.g. "/formen/?typ=FIRE") instead of
-  // needing a dedicated static page per type - reads the same "typ" query param TypeBadge.astro
-  // builds when linkTo="formen" (mirrors items/index.astro's "?kategorie=" reader).
+  // No TypeBadge links here anymore - type-filtered results now live on /pokemon/, which shows
+  // species and forms together (see the note there). Kept so a manually-typed/bookmarked
+  // "/formen/?typ=FIRE" URL still pre-filters this page's own, forms-only view.
   const initialType = new URLSearchParams(window.location.search).get("typ");
   if (initialType) {
     const initialLink = filterBar.querySelector(`a[data-type="${initialType}"]`);
