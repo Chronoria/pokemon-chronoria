@@ -151,7 +151,16 @@ const nextPokemon = pokemon[(dexIndex + 1) % pokemon.length];
     <table>
       <tr><th>Größe</th><td>{p.height} m</td></tr>
       <tr><th>Gewicht</th><td>{p.weight} kg</td></tr>
-      <tr><th class="help-text" title="Je höher der Wert, desto leichter lässt sich das Pokémon fangen (0–255).">Fangrate</th><td>{p.catchRate}</td></tr>
+      <tr>
+        <th>
+          Fangrate
+          <details class="th-help">
+            <summary aria-label="Erklärung anzeigen"><span class="th-help-icon">i</span></summary>
+            <p>Je höher der Wert, desto leichter lässt sich das Pokémon fangen (0–255).</p>
+          </details>
+        </th>
+        <td>{p.catchRate}</td>
+      </tr>
       <tr><th>Ei-Gruppen</th><td>{p.eggGroups.map(eggGroupLabel).join(", ") || "–"}</td></tr>
       <tr><th>Schlüpfschritte</th><td>{p.hatchSteps}</td></tr>
       {p.raidRanks.length > 0 && (

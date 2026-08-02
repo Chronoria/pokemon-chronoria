@@ -528,12 +528,52 @@ h2 {
   font-variant-numeric: tabular-nums;
 }
 
-/* Small hover hint for table headers etc. - dotted underline signals a tooltip is available
-   via the element's title attribute. */
-.help-text {
-  cursor: help;
-  text-decoration: underline dotted;
-  text-underline-offset: 3px;
+/* Inline "i" info toggle for a table header's explanation, opened by tap or click via <details>.
+   Replaces a plain title-attribute tooltip, which never shows on touch devices - there's no
+   hover there, so the explanation was simply unreachable on mobile. */
+.th-help {
+  display: inline-block;
+  margin-left: 0.3rem;
+  vertical-align: middle;
+}
+.th-help > summary {
+  /* The tap target is this whole padded box, not just the visible circle inside it - sized only
+     by its content (no explicit width/height here), so the padding actually grows the hit area
+     instead of being absorbed by box-sizing: border-box (see the global reset above). This is the
+     whole reason for this fix, so the tap target shouldn't itself be too small to hit reliably. */
+  display: inline-flex;
+  padding: 0.4rem;
+  margin: -0.4rem;
+  cursor: pointer;
+  list-style: none;
+}
+.th-help > summary::-webkit-details-marker {
+  display: none;
+}
+.th-help-icon {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 1rem;
+  height: 1rem;
+  border-radius: 50%;
+  background: var(--border-glass);
+  color: var(--text-muted);
+  font-size: 0.65rem;
+  font-weight: 700;
+}
+.th-help[open] .th-help-icon {
+  background: var(--accent-light);
+  color: #fff;
+}
+.th-help p {
+  margin: 0.4rem 0 0;
+  font-weight: 400;
+  font-size: 0.78rem;
+  text-transform: none;
+  letter-spacing: normal;
+  white-space: normal;
+  color: var(--text-muted);
 }
 
 /* ==========================================================================
