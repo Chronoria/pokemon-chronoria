@@ -218,12 +218,10 @@ for (const [item, type] of INCENSE_BOOSTERS) {
 // item-granted instead of ability-granted, hence the separate ItemEffects.MoveImmunity table.
 ItemEffects.MoveImmunity.add("AIRBALLOON", (ctx) => ctx.type === "GROUND");
 
-// Allzweckschirm (Utility Umbrella) is deliberately NOT modelled: the DBK formula reads weather
-// via `user.effectiveWeather` (E:\Test\Plugins\[DBK_000] Deluxe Battle Kit\...\[002] Damage Calc
-// Refactor.rb:166/674), and whether that core Essentials method already accounts for this item -
-// and for which side - could not be verified (no local core source, GitHub code search needs
-// auth). A hand-rolled duplicate risks double-cancelling or silently disagreeing with the real
-// mechanic; the honest choice is to leave this as a reported "not modelled" item rather than guess.
+// Allzweckschirm (Utility Umbrella): verified against the live core Essentials source
+// (Data/Scripts/011_Battle/002_Battler/001_Battle_Battler.rb#effectiveWeather) that DBK's weather
+// multiplier keys on the ATTACKER's item only - handled directly in applyWeather() via
+// effectiveWeatherFor() (damage.ts), not through this hook table, hence INLINE_ITEMS below.
 
 // Float Stone (weight halving -> weight-based move power), Loaded Dice (multi-hit floor) and the
 // four terrain seeds (a defense STAGE change, applied before any multiplier - can't be expressed

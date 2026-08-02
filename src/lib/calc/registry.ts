@@ -142,6 +142,7 @@ export const INLINE_ITEMS = new Set([
   "GRASSYSEED",
   "MISTYSEED",
   "PSYCHICSEED",
+  "UTILITYUMBRELLA",
 ]);
 
 export function isItemModelled(id: string | null | undefined): boolean {

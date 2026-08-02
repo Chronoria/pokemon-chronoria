@@ -65,9 +65,31 @@ function defenseStatKey(move: CalcMove): StatKey {
   return move.c === "Physical" ? "defense" : "spDef";
 }
 
+/**
+ * Mirrors Battle::Battler#effectiveWeather (core Essentials, Data/Scripts/011_Battle/002_Battler/
+ * 001_Battle_Battler.rb - verified against the live GitHub source since no local copy exists and
+ * no plugin here overrides it):
+ *   ret = @battle.pbWeather
+ *   ret = :None if [:Sun, :Rain, :HarshSun, :HeavyRain].include?(ret) && hasActiveItem?(:UTILITYUMBRELLA)
+ * DBK's weather multiplier switches on `user.effectiveWeather`, not the raw field weather - so
+ * Allzweckschirm (Utility Umbrella) held by the ATTACKER nullifies Sun/Rain (both regular and
+ * Harsh/Heavy) entirely, INCLUDING the Sandstorm/Hail branches below (they sit in the same `case`,
+ * so falling through to no match skips them too) - but Sandstorm/Hail/ShadowSky themselves are NOT
+ * in the nullified list, so they're unaffected even if the attacker holds the item. Crucially this
+ * is keyed on the ATTACKER's item only: a Utility Umbrella held by the DEFENDER has no effect on
+ * this calculation at all in this game's actual code, unlike the official games' battler-agnostic
+ * version of the item - do not "fix" this towards the official behaviour.
+ */
+function effectiveWeatherFor(user: SideState, field: FieldState): FieldState["weather"] {
+  if (user.item === "UTILITYUMBRELLA" && (field.weather === "sun" || field.weather === "harshSun" || field.weather === "rain" || field.weather === "heavyRain")) {
+    return "none";
+  }
+  return field.weather;
+}
+
 function applyWeather(ctx: EffectContext): void {
-  const { field, type, move, target, multipliers: m } = ctx;
-  switch (field.weather) {
+  const { field, type, move, target, user, multipliers: m } = ctx;
+  switch (effectiveWeatherFor(user, field)) {
     case "sun":
     case "harshSun":
       if (type === "FIRE") m.final *= 1.5;

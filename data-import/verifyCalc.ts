@@ -606,6 +606,39 @@ console.log("Warnqualitaet");
     }
   }
 
+  // Allzweckschirm (Utility Umbrella): verified against core Essentials' effectiveWeather - only
+  // the ATTACKER's item matters here, and it only nullifies Sun/Rain, not Sandstorm/Hail/ShadowSky.
+  {
+    const sunField = { ...field, weather: "sun" as const };
+    const noWeather = calculate(sideOf("PIKACHU", { ability: null }), def, flamethrower, field);
+    const sunNoItem = calculate(sideOf("PIKACHU", { ability: null }), def, flamethrower, sunField);
+    checkTrue("Sonne verstärkt Feuer normalerweise", sunNoItem.max > noWeather.max);
+
+    const sunWithUmbrella = calculate(sideOf("PIKACHU", { ability: null, item: "UTILITYUMBRELLA" }), def, flamethrower, sunField);
+    check("Allzweckschirm beim Angreifer hebt Sonnenboost auf", sunWithUmbrella.max, noWeather.max);
+    checkTrue("Allzweckschirm gilt als modelliert", !sunWithUmbrella.unmodelled.some((u) => u.startsWith("item:")));
+
+    // Held by the DEFENDER instead: no effect at all in this game's actual formula (it only ever
+    // reads the attacker's item) - a real deviation from the official games, kept deliberately.
+    const defHoldsUmbrella = calculate(
+      sideOf("PIKACHU", { ability: null }),
+      { ...def, item: "UTILITYUMBRELLA" },
+      flamethrower,
+      sunField
+    );
+    check("Allzweckschirm beim Verteidiger bleibt wirkungslos", defHoldsUmbrella.max, sunNoItem.max);
+
+    // Sandstorm's Rock-type special-defense boost is NOT in the nullified weather list.
+    const rockDefender = speciesList.find((s) => !s.fl && s.t.includes("ROCK"));
+    if (rockDefender) {
+      const sandField = { ...field, weather: "sandstorm" as const };
+      const rockSide = sideOf(rockDefender.k, { ability: null });
+      const plainSand = calculate(sideOf("PIKACHU", { ability: null }), rockSide, thunderbolt, sandField);
+      const umbrellaSand = calculate(sideOf("PIKACHU", { ability: null, item: "UTILITYUMBRELLA" }), rockSide, thunderbolt, sandField);
+      check("Allzweckschirm lässt Sandsturm-Verteidigungsbonus unangetastet", umbrellaSand.max, plainSand.max);
+    }
+  }
+
   // Skill Link pins a 2-5 hit move to 5 hits.
   const multi = moveList.find((m) => m.fn === "HitTwoToFiveTimes");
   if (multi) {
