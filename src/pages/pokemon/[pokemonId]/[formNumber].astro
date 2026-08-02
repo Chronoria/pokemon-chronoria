@@ -98,7 +98,7 @@ const locationsByPlace = Object.groupBy
       </div>
     )}
     <div class="pill-list">
-      {f.types.map((t: string) => <TypeBadge type={t} />)}
+      {f.types.map((t: string) => <TypeBadge type={t} linkTo="formen" />)}
     </div>
     {f.shinySprite && (
       <p class="meta-note"><a href={href(`/shiny/${slugify(p.id)}/${f.formNumber}/`)}>✨ Shiny-Version ansehen</a></p>
@@ -189,7 +189,7 @@ const locationsByPlace = Object.groupBy
           <tr>
             <td>{lm.level === 0 ? "bei Entwicklung" : lm.level}</td>
             <td><a href={href(`/attacken/${slugify(lm.move)}/`)}>{moveName(lm.move)}</a></td>
-            <td>{mv && <TypeBadge type={mv.type} />}</td>
+            <td>{mv && <TypeBadge type={mv.type} linkTo="pokemon" />}</td>
             <td>{mv?.totalPP ?? "–"}</td>
             <td>{mv?.power ?? "–"}</td>
             <td>{mv?.accuracy ?? "–"}</td>

@@ -33,7 +33,7 @@ const sortedMoves = [...moves].sort((a, b) => a.name.localeCompare(b.name, "de")
     {sortedMoves.map((m) => (
       <tr data-type={m.type} data-name={m.name.toLowerCase()}>
         <td><a href={href(`/attacken/${slugify(m.id)}/`)}>{m.name}</a></td>
-        <td><TypeBadge type={m.type} /></td>
+        <td><TypeBadge type={m.type} linkTo="pokemon" /></td>
         <td>{CATEGORY_LABEL[m.category] ?? m.category}</td>
         <td>{m.power ?? "–"}</td>
         <td>{m.accuracy ?? "–"}</td>

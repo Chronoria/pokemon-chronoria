@@ -29,7 +29,7 @@ const CELL_CLASS: Record<number, string> = { 0: "tc-cell--0", 0.5: "tc-cell--hal
         {chartTypes.map((d) => (
           <th class="tc-head tc-head--rotated" scope="col">
             <div class="tc-rotate">
-              <TypeBadge type={d.id} />
+              <TypeBadge type={d.id} linkTo="pokemon" />
             </div>
           </th>
         ))}
@@ -39,7 +39,7 @@ const CELL_CLASS: Record<number, string> = { 0: "tc-cell--0", 0.5: "tc-cell--hal
       {chartTypes.map((a) => (
         <tr>
           <th class="tc-head tc-row-head" scope="row">
-            <TypeBadge type={a.id} />
+            <TypeBadge type={a.id} linkTo="pokemon" />
           </th>
           {chartTypes.map((d) => {
             const m = multiplier(a.id, d);

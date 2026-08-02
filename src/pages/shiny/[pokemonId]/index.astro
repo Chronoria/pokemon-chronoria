@@ -35,7 +35,7 @@ const shinyForms = p.forms.filter((f: any) => f.shinySprite && !f.isFemaleForm);
       )}
     </div>
     <div class="pill-list">
-      {p.types.map((t: string) => <TypeBadge type={t} />)}
+      {p.types.map((t: string) => <TypeBadge type={t} linkTo="pokemon" />)}
     </div>
     <p class="meta-note">
       <a href={href(`/pokemon/${slugify(p.id)}/`)}>→ Normale Ansicht (Basiswerte, Attacken, Entwicklung …)</a>

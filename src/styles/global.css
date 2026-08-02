@@ -500,6 +500,24 @@ h2 {
   filter: drop-shadow(0 1px 1px rgba(0, 0, 0, 0.3));
 }
 
+/* Only applied when TypeBadge.astro's linkTo prop turns the badge into a link - mirrors .card's
+   hover lift, scaled down for badge size. Inline color/text-shadow (set per badge) already beats
+   any global `a` color rule since inline styles win regardless of selector specificity. */
+.badge-type-link {
+  cursor: pointer;
+  transition: transform var(--dur-fast) var(--ease-out), box-shadow var(--dur-fast) var(--ease-out),
+    filter var(--dur-fast) var(--ease-out);
+}
+.badge-type-link:hover,
+.badge-type-link:focus-visible {
+  transform: translateY(-2px);
+  filter: brightness(1.08);
+  text-decoration: none;
+}
+.badge-type-link:active {
+  transform: translateY(-1px) scale(0.97);
+}
+
 /* Pokédex number: small, quiet, tabular so digits line up in lists */
 .dex-number {
   color: var(--text-muted);
