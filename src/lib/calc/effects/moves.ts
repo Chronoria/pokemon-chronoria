@@ -66,9 +66,9 @@ export const HIT_COUNTS: Record<string, { min: number; max: number; note: string
  */
 export const SPECIAL_DAMAGE: Record<string, (user: SideState, target: SideState) => { damage: number | null; note: string }> = {
   FixedDamageUserLevel: (user) => ({ damage: user.level, note: "Fester Schaden: Level des Anwenders" }),
-  FixedDamage20: () => ({ damage: 20, note: "Fester Schaden: 20 KP" }),
-  FixedDamage40: () => ({ damage: 40, note: "Fester Schaden: 40 KP" }),
-  FixedDamageHalfTargetHP: () => ({ damage: null, note: "Halbiert die aktuellen KP des Ziels" }),
+  FixedDamage20: () => ({ damage: 20, note: "Fester Schaden: 20 LP" }),
+  FixedDamage40: () => ({ damage: 40, note: "Fester Schaden: 40 LP" }),
+  FixedDamageHalfTargetHP: () => ({ damage: null, note: "Halbiert die aktuellen LP des Ziels" }),
   OHKO: () => ({ damage: null, note: "K.o.-Attacke - besiegt das Ziel sofort" }),
   OHKOIce: () => ({ damage: null, note: "K.o.-Attacke - besiegt das Ziel sofort" }),
   OHKOHitsUndergroundTarget: () => ({ damage: null, note: "K.o.-Attacke - besiegt das Ziel sofort" }),

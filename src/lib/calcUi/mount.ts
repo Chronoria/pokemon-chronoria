@@ -33,7 +33,7 @@ import { createCombobox, type ComboboxHandle } from "./combobox.ts";
 import { href } from "../url.ts";
 
 const STAT_LABELS: Record<StatKey, string> = {
-  hp: "KP",
+  hp: "LP",
   attack: "Angriff",
   defense: "Verteidigung",
   spAtk: "Sp. Angriff",
@@ -358,7 +358,7 @@ export function mountCalculator(root: HTMLElement): () => void {
             ? `<div class="calc-result-empty">Kein Schaden</div>`
             : `<div class="calc-result-main">` +
               `<span class="calc-result-range">${out.min} – ${out.max}</span>` +
-              `<span class="calc-result-pct">${pct[0].toFixed(1)} – ${pct[1].toFixed(1)} % der KP${out.hits ? " je Treffer" : ""}</span>` +
+              `<span class="calc-result-pct">${pct[0].toFixed(1)} – ${pct[1].toFixed(1)} % der LP${out.hits ? " je Treffer" : ""}</span>` +
               `</div>` +
               // For multi-hit moves the per-hit figure alone badly understates the move, so the
               // full-connect total is shown alongside it.
@@ -386,7 +386,7 @@ export function mountCalculator(root: HTMLElement): () => void {
       : `<p class="meta-note">Wähle links mindestens eine Attacke, um den Schaden zu berechnen.</p>`;
 
     const hpNote = el<HTMLElement>(root, ".js-defender-hp");
-    hpNote.textContent = `${defender.state.species.n}: ${statsFor(defender.state).hp} KP`;
+    hpNote.textContent = `${defender.state.species.n}: ${statsFor(defender.state).hp} LP`;
   }
 
   recalculate();

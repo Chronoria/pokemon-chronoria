@@ -7,7 +7,7 @@ import { STAT_KEYS } from "../../lib/calc/types";
 // Option lists are rendered at build time; the client script only fills in the parts that depend
 // on the selected Pokémon (abilities, sprites, stats, results).
 const STAT_LABELS: Record<string, string> = {
-  hp: "KP",
+  hp: "LP",
   attack: "Angr.",
   defense: "Vert.",
   spAtk: "Sp.Angr.",
@@ -126,7 +126,7 @@ const sortedItems = [...itemList].sort((a, b) => a.n.localeCompare(b.n, "de"));
               </select>
             </label>
             <label class="calc-field">
-              <span>KP übrig (%)</span>
+              <span>LP übrig (%)</span>
               <input type="number" class="text-input js-hp" min="0" max="100" value="100" />
             </label>
           </div>

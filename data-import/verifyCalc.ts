@@ -482,7 +482,7 @@ console.log("Attacken-Funktionscodes");
   if (eruption) {
     const full = calculate({ ...atk, hpFraction: 1 }, def, eruption, field).max;
     const low = calculate({ ...atk, hpFraction: 0.25 }, def, eruption, field).max;
-    checkTrue("KP-abhängige Stärke sinkt mit den KP", low < full / 2, `voll ${full}, bei 25% ${low}`);
+    checkTrue("LP-abhängige Stärke sinkt mit den LP", low < full / 2, `voll ${full}, bei 25% ${low}`);
   }
 }
 
