@@ -82,10 +82,20 @@ async function main() {
   // as its own pass, then "Sonstige Kampf-Items" catches whatever Pocket-1 item still has no
   // category at all once that's done, so it only ever catches genuinely uncategorized items
   // instead of also grabbing evolution items that happen to lack any of the other tags.
+  //
+  // Forms carry their own `evolutions` array, distinct from the base species' (e.g. Galar-
+  // Flegmon evolves via Reife Galarnuss/Galarnusskranz, items its base species never mentions) -
+  // missing this pass silently dropped exactly those two items until it was caught by manually
+  // cross-checking every item-conditioned evolution against items.json.
   const evolutionItemIds = new Set<string>();
   for (const p of pokemon) {
     for (const evo of p.evolutions) {
       if (isItemEvolutionMethod(evo.method) && evo.param) evolutionItemIds.add(evo.param);
+    }
+    for (const f of p.forms) {
+      for (const evo of f.evolutions) {
+        if (isItemEvolutionMethod(evo.method) && evo.param) evolutionItemIds.add(evo.param);
+      }
     }
   }
   for (const itemId of evolutionItemIds) {
