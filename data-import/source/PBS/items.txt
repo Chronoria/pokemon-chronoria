@@ -1839,7 +1839,7 @@ NamePlural = Glücksrauch
 Pocket = 1
 Price = 11000
 Flags = Fling_10
-Description = Das Preisgeld nach dem Kampf wird verdoppelt, wenn der Träger gekämpft hat.
+Description = Das Preisgeld nach dem Kampf wird verdoppelt, wenn der Träger gekämpft hat (nicht kombinierbar mit Münzamulett).
 #-------------------------------Einzigartig
 [PUREINCENSE]
 Name = Scheuchrauch
@@ -1855,7 +1855,7 @@ NamePlural = Seerauch
 Pocket = 1
 Price = 2000
 Flags = Fling_10
-Description = Verstärkt Wasser-Attacken des Trägers um 20%. Bei Zucht erhält man ein Azurill.
+Description = Verstärkt Wasser-Attacken des Trägers um 20%.
 #-------------------------------Einzigartig
 [WAVEINCENSE]
 Name = Wellenrauch
@@ -1863,7 +1863,7 @@ NamePlural = Wellenrauch
 Pocket = 1
 Price = 2000
 Flags = Fling_10
-Description = Verstärkt Wasser-Attacken des Trägers um 20%. Bei Zucht erhält man ein Mantirps.
+Description = Verstärkt Wasser-Attacken des Trägers um 20%.
 #-------------------------------Einzigartig
 [ROSEINCENSE]
 Name = Rosenrauch
@@ -1871,7 +1871,7 @@ NamePlural = Rosenrauch
 Pocket = 1
 Price = 2000
 Flags = Fling_10
-Description = Verstärkt Pflanzen-Attacken des Trägers um 20%. Bei Zucht erhält man ein Knospi.
+Description = Verstärkt Pflanzen-Attacken des Trägers um 20%.
 #-------------------------------Einzigartig
 [ODDINCENSE]
 Name = Schrägrauch
@@ -1879,7 +1879,7 @@ NamePlural = Schrägrauch
 Pocket = 1
 Price = 2000
 Flags = Fling_10
-Description = Verstärkt Psycho-Attacken des Trägers um 20%. Bei Zucht erhält man ein Pantimimi.
+Description = Verstärkt Psycho-Attacken des Trägers um 20%.
 #-------------------------------Einzigartig
 [ROCKINCENSE]
 Name = Steinrauch
@@ -1887,7 +1887,7 @@ NamePlural = Steinrauch
 Pocket = 1
 Price = 2000
 Flags = Fling_10
-Description = Verstärkt Gestein-Attacken des Trägers um 20%. Bei Zucht erhält man ein Mobai.
+Description = Verstärkt Gestein-Attacken des Trägers um 20%.
 #-------------------------------Einzigartig
 [CHARCOAL]
 Name = Holzkohle
