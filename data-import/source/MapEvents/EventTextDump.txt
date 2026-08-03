@@ -22697,6 +22697,22 @@ Event Name: EV011
 
 Page #1
 Conditions
+None
+
+Autonomous Movement
+Type: Fixed
+Speed: 3: Slow
+Freq: 3: Low
+Options Enabled
+Move Animation
+Trigger: Autorun
+
+List of Event Commands:
+@>Control Switches: [0001: Starting over] = OFF
+@>
+
+Page #2
+Conditions
 Switch 0001: Starting over is ON
 
 Autonomous Movement
@@ -22709,22 +22725,6 @@ Trigger: Autorun
 
 List of Event Commands:
 @>Control Switches: [0001: Starting over] = OFF
-@>Control Self Switch: A =ON
-@>
-
-Page #2
-Conditions
-Self Switch A is ON
-
-Autonomous Movement
-Type: Fixed
-Speed: 3: Slow
-Freq: 3: Low
-Options Enabled
-Move Animation
-Trigger: Action Button
-
-List of Event Commands:
 @>
 
 #------------------------------------------------------------------------------
@@ -47374,6 +47374,54 @@ List of Event Commands:
 @>
 
 #------------------------------------------------------------------------------
+Event ID: 089
+Event Name: HeadbuttTree size(2,2)
+(X,Y): (013,035)
+
+Page #1
+Conditions
+None
+
+Graphic: Object Tree Headbutt
+
+Autonomous Movement
+Type: Fixed
+Speed: 3: Slow
+Freq: 3: Low
+Options Enabled
+Move Animation
+Direction Fix
+Trigger: Action Button
+
+List of Event Commands:
+@>Script: pbHeadbutt
+@>
+
+#------------------------------------------------------------------------------
+Event ID: 090
+Event Name: HeadbuttTree size(2,2)
+(X,Y): (056,002)
+
+Page #1
+Conditions
+None
+
+Graphic: Object Tree Headbutt
+
+Autonomous Movement
+Type: Fixed
+Speed: 3: Slow
+Freq: 3: Low
+Options Enabled
+Move Animation
+Direction Fix
+Trigger: Action Button
+
+List of Event Commands:
+@>Script: pbHeadbutt
+@>
+
+#------------------------------------------------------------------------------
 
 #==============================================================================
 Map ID: 088
@@ -54677,6 +54725,30 @@ Trigger: Action Button
 
 List of Event Commands:
 @>Text: Mistral - Wenn der Wind flüstert, hört die Welt zu.
+@>
+
+#------------------------------------------------------------------------------
+Event ID: 091
+Event Name: HeadbuttTree size(2,2)
+(X,Y): (052,009)
+
+Page #1
+Conditions
+None
+
+Graphic: Object Tree Headbutt
+
+Autonomous Movement
+Type: Fixed
+Speed: 3: Slow
+Freq: 3: Low
+Options Enabled
+Move Animation
+Direction Fix
+Trigger: Action Button
+
+List of Event Commands:
+@>Script: pbHeadbutt
 @>
 
 #------------------------------------------------------------------------------
@@ -84354,6 +84426,102 @@ List of Event Commands:
 @>
 
 #------------------------------------------------------------------------------
+Event ID: 054
+Event Name: HeadbuttTree size(2,2)
+(X,Y): (033,009)
+
+Page #1
+Conditions
+None
+
+Graphic: Object Tree Headbutt
+
+Autonomous Movement
+Type: Fixed
+Speed: 3: Slow
+Freq: 3: Low
+Options Enabled
+Move Animation
+Direction Fix
+Trigger: Action Button
+
+List of Event Commands:
+@>Script: pbHeadbutt
+@>
+
+#------------------------------------------------------------------------------
+Event ID: 055
+Event Name: HeadbuttTree size(2,2)
+(X,Y): (038,025)
+
+Page #1
+Conditions
+None
+
+Graphic: Object Tree Headbutt
+
+Autonomous Movement
+Type: Fixed
+Speed: 3: Slow
+Freq: 3: Low
+Options Enabled
+Move Animation
+Direction Fix
+Trigger: Action Button
+
+List of Event Commands:
+@>Script: pbHeadbutt
+@>
+
+#------------------------------------------------------------------------------
+Event ID: 056
+Event Name: HeadbuttTree size(2,2)
+(X,Y): (016,056)
+
+Page #1
+Conditions
+None
+
+Graphic: Object Tree Headbutt
+
+Autonomous Movement
+Type: Fixed
+Speed: 3: Slow
+Freq: 3: Low
+Options Enabled
+Move Animation
+Direction Fix
+Trigger: Action Button
+
+List of Event Commands:
+@>Script: pbHeadbutt
+@>
+
+#------------------------------------------------------------------------------
+Event ID: 057
+Event Name: HeadbuttTree size(2,2)
+(X,Y): (006,019)
+
+Page #1
+Conditions
+None
+
+Graphic: Object Tree Headbutt
+
+Autonomous Movement
+Type: Fixed
+Speed: 3: Slow
+Freq: 3: Low
+Options Enabled
+Move Animation
+Direction Fix
+Trigger: Action Button
+
+List of Event Commands:
+@>Script: pbHeadbutt
+@>
+
+#------------------------------------------------------------------------------
 
 #==============================================================================
 Map ID: 140
@@ -89065,6 +89233,54 @@ Move Animation
 Trigger: Action Button
 
 List of Event Commands:
+@>
+
+#------------------------------------------------------------------------------
+Event ID: 089
+Event Name: HeadbuttTree size(2,2)
+(X,Y): (011,016)
+
+Page #1
+Conditions
+None
+
+Graphic: Object Tree Headbutt
+
+Autonomous Movement
+Type: Fixed
+Speed: 3: Slow
+Freq: 3: Low
+Options Enabled
+Move Animation
+Direction Fix
+Trigger: Action Button
+
+List of Event Commands:
+@>Script: pbHeadbutt
+@>
+
+#------------------------------------------------------------------------------
+Event ID: 090
+Event Name: HeadbuttTree size(2,2)
+(X,Y): (026,035)
+
+Page #1
+Conditions
+None
+
+Graphic: Object Tree Headbutt
+
+Autonomous Movement
+Type: Fixed
+Speed: 3: Slow
+Freq: 3: Low
+Options Enabled
+Move Animation
+Direction Fix
+Trigger: Action Button
+
+List of Event Commands:
+@>Script: pbHeadbutt
 @>
 
 #------------------------------------------------------------------------------
@@ -104852,6 +105068,150 @@ List of Event Commands:
 @>
 
 #------------------------------------------------------------------------------
+Event ID: 128
+Event Name: HeadbuttTree size(2,2)
+(X,Y): (018,031)
+
+Page #1
+Conditions
+None
+
+Graphic: Object Tree Headbutt
+
+Autonomous Movement
+Type: Fixed
+Speed: 3: Slow
+Freq: 3: Low
+Options Enabled
+Move Animation
+Direction Fix
+Trigger: Action Button
+
+List of Event Commands:
+@>Script: pbHeadbutt
+@>
+
+#------------------------------------------------------------------------------
+Event ID: 129
+Event Name: HeadbuttTree size(2,2)
+(X,Y): (036,013)
+
+Page #1
+Conditions
+None
+
+Graphic: Object Tree Headbutt
+
+Autonomous Movement
+Type: Fixed
+Speed: 3: Slow
+Freq: 3: Low
+Options Enabled
+Move Animation
+Direction Fix
+Trigger: Action Button
+
+List of Event Commands:
+@>Script: pbHeadbutt
+@>
+
+#------------------------------------------------------------------------------
+Event ID: 130
+Event Name: HeadbuttTree size(2,2)
+(X,Y): (091,038)
+
+Page #1
+Conditions
+None
+
+Graphic: Object Tree Headbutt
+
+Autonomous Movement
+Type: Fixed
+Speed: 3: Slow
+Freq: 3: Low
+Options Enabled
+Move Animation
+Direction Fix
+Trigger: Action Button
+
+List of Event Commands:
+@>Script: pbHeadbutt
+@>
+
+#------------------------------------------------------------------------------
+Event ID: 131
+Event Name: HeadbuttTree size(2,2)
+(X,Y): (130,021)
+
+Page #1
+Conditions
+None
+
+Graphic: Object Tree Headbutt
+
+Autonomous Movement
+Type: Fixed
+Speed: 3: Slow
+Freq: 3: Low
+Options Enabled
+Move Animation
+Direction Fix
+Trigger: Action Button
+
+List of Event Commands:
+@>Script: pbHeadbutt
+@>
+
+#------------------------------------------------------------------------------
+Event ID: 132
+Event Name: HeadbuttTree size(2,2)
+(X,Y): (116,015)
+
+Page #1
+Conditions
+None
+
+Graphic: Object Tree Headbutt
+
+Autonomous Movement
+Type: Fixed
+Speed: 3: Slow
+Freq: 3: Low
+Options Enabled
+Move Animation
+Direction Fix
+Trigger: Action Button
+
+List of Event Commands:
+@>Script: pbHeadbutt
+@>
+
+#------------------------------------------------------------------------------
+Event ID: 133
+Event Name: HeadbuttTree size(2,2)
+(X,Y): (122,033)
+
+Page #1
+Conditions
+None
+
+Graphic: Object Tree Headbutt
+
+Autonomous Movement
+Type: Fixed
+Speed: 3: Slow
+Freq: 3: Low
+Options Enabled
+Move Animation
+Direction Fix
+Trigger: Action Button
+
+List of Event Commands:
+@>Script: pbHeadbutt
+@>
+
+#------------------------------------------------------------------------------
 
 #==============================================================================
 Map ID: 157
@@ -111315,6 +111675,54 @@ List of Event Commands:
 @>
 
 #------------------------------------------------------------------------------
+Event ID: 093
+Event Name: HeadbuttTree size(2,2)
+(X,Y): (038,014)
+
+Page #1
+Conditions
+None
+
+Graphic: Object Tree Headbutt
+
+Autonomous Movement
+Type: Fixed
+Speed: 3: Slow
+Freq: 3: Low
+Options Enabled
+Move Animation
+Direction Fix
+Trigger: Action Button
+
+List of Event Commands:
+@>Script: pbHeadbutt
+@>
+
+#------------------------------------------------------------------------------
+Event ID: 094
+Event Name: HeadbuttTree size(2,2)
+(X,Y): (028,046)
+
+Page #1
+Conditions
+None
+
+Graphic: Object Tree Headbutt
+
+Autonomous Movement
+Type: Fixed
+Speed: 3: Slow
+Freq: 3: Low
+Options Enabled
+Move Animation
+Direction Fix
+Trigger: Action Button
+
+List of Event Commands:
+@>Script: pbHeadbutt
+@>
+
+#------------------------------------------------------------------------------
 
 #==============================================================================
 Map ID: 162
@@ -112515,13 +112923,22 @@ Trigger: Action Button
 List of Event Commands:
 @>Wait: 10 frame(s)
 @>Play SE: 'DRAMPA', 100, 100
-@>Script: pkmn = Pokemon.new(:DRAMPA,66)
+@>Script: setBattleRule("cannotRun")
+:       : setBattleRule("outcome", 48)
+:       : pkmn = Pokemon.new(:DRAMPA,66)
 :       : pkmn.ability_index = 2
 :       : pkmn.shiny = true
 :       : pkmn.item = :DRAMPANITE
 :       : pkmn.calc_stats
 :       : WildBattle.start(pkmn)
-@>Control Self Switch: A =ON
+@>Conditional Branch: Variable [0048: Kampf-Ergebnis] == 2
+ @>Exit Event Processing
+ @>
+: Else
+ @>Control Variables: [0124: Anzahl Mega-Steine] += 1
+ @>Control Self Switch: A =ON
+ @>
+: Branch End
 @>
 
 Page #2
@@ -113117,6 +113534,78 @@ Move Animation
 Trigger: Action Button
 
 List of Event Commands:
+@>
+
+#------------------------------------------------------------------------------
+Event ID: 037
+Event Name: HeadbuttTree size(2,2)
+(X,Y): (014,031)
+
+Page #1
+Conditions
+None
+
+Graphic: Object Tree Headbutt
+
+Autonomous Movement
+Type: Fixed
+Speed: 3: Slow
+Freq: 3: Low
+Options Enabled
+Move Animation
+Direction Fix
+Trigger: Action Button
+
+List of Event Commands:
+@>Script: pbHeadbutt
+@>
+
+#------------------------------------------------------------------------------
+Event ID: 038
+Event Name: HeadbuttTree size(2,2)
+(X,Y): (035,027)
+
+Page #1
+Conditions
+None
+
+Graphic: Object Tree Headbutt
+
+Autonomous Movement
+Type: Fixed
+Speed: 3: Slow
+Freq: 3: Low
+Options Enabled
+Move Animation
+Direction Fix
+Trigger: Action Button
+
+List of Event Commands:
+@>Script: pbHeadbutt
+@>
+
+#------------------------------------------------------------------------------
+Event ID: 039
+Event Name: HeadbuttTree size(2,2)
+(X,Y): (062,044)
+
+Page #1
+Conditions
+None
+
+Graphic: Object Tree Headbutt
+
+Autonomous Movement
+Type: Fixed
+Speed: 3: Slow
+Freq: 3: Low
+Options Enabled
+Move Animation
+Direction Fix
+Trigger: Action Button
+
+List of Event Commands:
+@>Script: pbHeadbutt
 @>
 
 #------------------------------------------------------------------------------
@@ -114124,8 +114613,9 @@ List of Event Commands:
 @>Play SE: 'Door exit', 80, 100
 @>Change Screen Color Tone: (-255,-255,-255,0), @6
 @>Wait: 8 frame(s)
-@>Transfer Player:[177: Tonishi], (047,038), Down, No Fade
+@>Transfer Player:[633: Tonishi], (047,038), Down, No Fade
 @>Change Screen Color Tone: (0,0,0,0), @6
+@>Wait: 8 frame(s)
 @>
 
 #------------------------------------------------------------------------------
@@ -123465,7 +123955,7 @@ List of Event Commands:
  @>Play SE: 'Door enter', 100, 100
  @>Change Screen Color Tone: (-255,-255,-255,0), @6
  @>Wait: 8 frame(s)
- @>Transfer Player:[207: MAP207], (034,014), Up, No Fade
+ @>Transfer Player:[207: Häuser], (034,014), Up, No Fade
  @>Change Screen Color Tone: (0,0,0,0), @6
  @>
 : Else
@@ -123498,7 +123988,7 @@ List of Event Commands:
  @>Play SE: 'Door enter', 100, 100
  @>Change Screen Color Tone: (-255,-255,-255,0), @6
  @>Wait: 8 frame(s)
- @>Transfer Player:[207: MAP207], (034,035), Up, No Fade
+ @>Transfer Player:[207: Häuser], (034,035), Up, No Fade
  @>Change Screen Color Tone: (0,0,0,0), @6
  @>
 : Else
@@ -123531,7 +124021,7 @@ List of Event Commands:
  @>Play SE: 'Door enter', 100, 100
  @>Change Screen Color Tone: (-255,-255,-255,0), @6
  @>Wait: 8 frame(s)
- @>Transfer Player:[207: MAP207], (010,035), Up, No Fade
+ @>Transfer Player:[207: Häuser], (010,035), Up, No Fade
  @>Change Screen Color Tone: (0,0,0,0), @6
  @>
 : Else
@@ -123590,7 +124080,7 @@ List of Event Commands:
  @>Play SE: 'Door enter', 100, 100
  @>Change Screen Color Tone: (-255,-255,-255,0), @6
  @>Wait: 8 frame(s)
- @>Transfer Player:[207: MAP207], (010,014), Up, No Fade
+ @>Transfer Player:[207: Häuser], (010,014), Up, No Fade
  @>Change Screen Color Tone: (0,0,0,0), @6
  @>
 : Else
@@ -155263,6 +155753,102 @@ List of Event Commands:
 @>
 
 #------------------------------------------------------------------------------
+Event ID: 040
+Event Name: HeadbuttTree size(2,2)
+(X,Y): (021,018)
+
+Page #1
+Conditions
+None
+
+Graphic: Object Tree Headbutt
+
+Autonomous Movement
+Type: Fixed
+Speed: 3: Slow
+Freq: 3: Low
+Options Enabled
+Move Animation
+Direction Fix
+Trigger: Action Button
+
+List of Event Commands:
+@>Script: pbHeadbutt
+@>
+
+#------------------------------------------------------------------------------
+Event ID: 041
+Event Name: HeadbuttTree size(2,2)
+(X,Y): (047,007)
+
+Page #1
+Conditions
+None
+
+Graphic: Object Tree Headbutt
+
+Autonomous Movement
+Type: Fixed
+Speed: 3: Slow
+Freq: 3: Low
+Options Enabled
+Move Animation
+Direction Fix
+Trigger: Action Button
+
+List of Event Commands:
+@>Script: pbHeadbutt
+@>
+
+#------------------------------------------------------------------------------
+Event ID: 042
+Event Name: HeadbuttTree size(2,2)
+(X,Y): (045,028)
+
+Page #1
+Conditions
+None
+
+Graphic: Object Tree Headbutt
+
+Autonomous Movement
+Type: Fixed
+Speed: 3: Slow
+Freq: 3: Low
+Options Enabled
+Move Animation
+Direction Fix
+Trigger: Action Button
+
+List of Event Commands:
+@>Script: pbHeadbutt
+@>
+
+#------------------------------------------------------------------------------
+Event ID: 043
+Event Name: HeadbuttTree size(2,2)
+(X,Y): (052,028)
+
+Page #1
+Conditions
+None
+
+Graphic: Object Tree Headbutt
+
+Autonomous Movement
+Type: Fixed
+Speed: 3: Slow
+Freq: 3: Low
+Options Enabled
+Move Animation
+Direction Fix
+Trigger: Action Button
+
+List of Event Commands:
+@>Script: pbHeadbutt
+@>
+
+#------------------------------------------------------------------------------
 Event ID: 053
 Event Name: EV053
 (X,Y): (048,038)
@@ -162724,7 +163310,7 @@ List of Event Commands:
 
 #==============================================================================
 Map ID: 207
-Map Name: MAP207
+Map Name: Häuser
 Tileset: 099: Drinnen
 Width: 45, Height: 40
 
@@ -213824,6 +214410,54 @@ List of Event Commands:
 @>
 
 #------------------------------------------------------------------------------
+Event ID: 078
+Event Name: HeadbuttTree size(2,2)
+(X,Y): (028,004)
+
+Page #1
+Conditions
+None
+
+Graphic: Object Tree Headbutt
+
+Autonomous Movement
+Type: Fixed
+Speed: 3: Slow
+Freq: 3: Low
+Options Enabled
+Move Animation
+Direction Fix
+Trigger: Action Button
+
+List of Event Commands:
+@>Script: pbHeadbutt
+@>
+
+#------------------------------------------------------------------------------
+Event ID: 079
+Event Name: HeadbuttTree size(2,2)
+(X,Y): (045,022)
+
+Page #1
+Conditions
+None
+
+Graphic: Object Tree Headbutt
+
+Autonomous Movement
+Type: Fixed
+Speed: 3: Slow
+Freq: 3: Low
+Options Enabled
+Move Animation
+Direction Fix
+Trigger: Action Button
+
+List of Event Commands:
+@>Script: pbHeadbutt
+@>
+
+#------------------------------------------------------------------------------
 
 #==============================================================================
 Map ID: 274
@@ -215930,6 +216564,102 @@ Move Animation
 Trigger: Action Button
 
 List of Event Commands:
+@>
+
+#------------------------------------------------------------------------------
+Event ID: 044
+Event Name: HeadbuttTree size(2,2)
+(X,Y): (037,010)
+
+Page #1
+Conditions
+None
+
+Graphic: Object Tree Headbutt
+
+Autonomous Movement
+Type: Fixed
+Speed: 3: Slow
+Freq: 3: Low
+Options Enabled
+Move Animation
+Direction Fix
+Trigger: Action Button
+
+List of Event Commands:
+@>Script: pbHeadbutt
+@>
+
+#------------------------------------------------------------------------------
+Event ID: 045
+Event Name: HeadbuttTree size(2,2)
+(X,Y): (050,012)
+
+Page #1
+Conditions
+None
+
+Graphic: Object Tree Headbutt
+
+Autonomous Movement
+Type: Fixed
+Speed: 3: Slow
+Freq: 3: Low
+Options Enabled
+Move Animation
+Direction Fix
+Trigger: Action Button
+
+List of Event Commands:
+@>Script: pbHeadbutt
+@>
+
+#------------------------------------------------------------------------------
+Event ID: 046
+Event Name: HeadbuttTree size(2,2)
+(X,Y): (020,016)
+
+Page #1
+Conditions
+None
+
+Graphic: Object Tree Headbutt
+
+Autonomous Movement
+Type: Fixed
+Speed: 3: Slow
+Freq: 3: Low
+Options Enabled
+Move Animation
+Direction Fix
+Trigger: Action Button
+
+List of Event Commands:
+@>Script: pbHeadbutt
+@>
+
+#------------------------------------------------------------------------------
+Event ID: 047
+Event Name: HeadbuttTree size(2,2)
+(X,Y): (030,009)
+
+Page #1
+Conditions
+None
+
+Graphic: Object Tree Headbutt
+
+Autonomous Movement
+Type: Fixed
+Speed: 3: Slow
+Freq: 3: Low
+Options Enabled
+Move Animation
+Direction Fix
+Trigger: Action Button
+
+List of Event Commands:
+@>Script: pbHeadbutt
 @>
 
 #------------------------------------------------------------------------------
@@ -249121,6 +249851,102 @@ List of Event Commands:
 @>
 
 #------------------------------------------------------------------------------
+Event ID: 104
+Event Name: HeadbuttTree size(2,2)
+(X,Y): (056,026)
+
+Page #1
+Conditions
+None
+
+Graphic: Object Tree Headbutt
+
+Autonomous Movement
+Type: Fixed
+Speed: 3: Slow
+Freq: 3: Low
+Options Enabled
+Move Animation
+Direction Fix
+Trigger: Action Button
+
+List of Event Commands:
+@>Script: pbHeadbutt
+@>
+
+#------------------------------------------------------------------------------
+Event ID: 105
+Event Name: HeadbuttTree size(2,2)
+(X,Y): (080,020)
+
+Page #1
+Conditions
+None
+
+Graphic: Object Tree Headbutt
+
+Autonomous Movement
+Type: Fixed
+Speed: 3: Slow
+Freq: 3: Low
+Options Enabled
+Move Animation
+Direction Fix
+Trigger: Action Button
+
+List of Event Commands:
+@>Script: pbHeadbutt
+@>
+
+#------------------------------------------------------------------------------
+Event ID: 106
+Event Name: HeadbuttTree size(2,2)
+(X,Y): (042,013)
+
+Page #1
+Conditions
+None
+
+Graphic: Object Tree Headbutt
+
+Autonomous Movement
+Type: Fixed
+Speed: 3: Slow
+Freq: 3: Low
+Options Enabled
+Move Animation
+Direction Fix
+Trigger: Action Button
+
+List of Event Commands:
+@>Script: pbHeadbutt
+@>
+
+#------------------------------------------------------------------------------
+Event ID: 107
+Event Name: HeadbuttTree size(2,2)
+(X,Y): (024,028)
+
+Page #1
+Conditions
+None
+
+Graphic: Object Tree Headbutt
+
+Autonomous Movement
+Type: Fixed
+Speed: 3: Slow
+Freq: 3: Low
+Options Enabled
+Move Animation
+Direction Fix
+Trigger: Action Button
+
+List of Event Commands:
+@>Script: pbHeadbutt
+@>
+
+#------------------------------------------------------------------------------
 
 #==============================================================================
 Map ID: 343
@@ -253572,6 +254398,30 @@ List of Event Commands:
 @>
 
 #------------------------------------------------------------------------------
+Event ID: 104
+Event Name: HeadbuttTree size(2,2)
+(X,Y): (069,014)
+
+Page #1
+Conditions
+None
+
+Graphic: Object Tree Headbutt
+
+Autonomous Movement
+Type: Fixed
+Speed: 3: Slow
+Freq: 3: Low
+Options Enabled
+Move Animation
+Direction Fix
+Trigger: Action Button
+
+List of Event Commands:
+@>Script: pbHeadbutt
+@>
+
+#------------------------------------------------------------------------------
 Event ID: 105
 Event Name: EV105
 (X,Y): (142,014)
@@ -257394,6 +258244,153 @@ List of Event Commands:
 @>
 
 #------------------------------------------------------------------------------
+Event ID: 028
+Event Name: HeadbuttTree size(2,1)
+(X,Y): (043,054)
+
+Page #1
+Conditions
+None
+
+Graphic: Object Tree Headbutt
+
+Autonomous Movement
+Type: Fixed
+Speed: 3: Slow
+Freq: 3: Low
+Options Enabled
+Move Animation
+Direction Fix
+Trigger: Action Button
+
+List of Event Commands:
+@>Script: pbHeadbutt
+@>
+
+#------------------------------------------------------------------------------
+Event ID: 029
+Event Name: Quest 85
+(X,Y): (042,054)
+
+Page #1
+Conditions
+None
+
+Graphic: SCIENTIST_M4
+
+Autonomous Movement
+Type: Fixed
+Speed: 3: Slow
+Freq: 3: Low
+Options Enabled
+Move Animation
+Trigger: Action Button
+
+List of Event Commands:
+@>Text: \xn[William]Ah, ein Trainer!
+@>Text: \xn[William]Sieht dir diesen Baum hier an, wir nennen 
+ :    : es den Rüttelbaum.
+@>Text: \xn[William]Wenn man kräftig genug schüttelt, fallen 
+ :    : manchmal wilde Pokémon heraus.
+@>Text: \xn[William]Man braucht dafür ein spezielles 
+ :    : Werkzeug.
+@>Text: \xn[William]Ehrlich gesagt, gebe ich den nicht an 
+ :    : jeden x-beliebigen Trainer weiter.
+@>Text: \xn[William]Zeig mir erst, dass du ernsthaft 
+ :    : unterwegs bist.
+@>Text: \xn[William]Besorge einen Arenaorden, dann reden 
+ :    : wir weiter.
+@>Script: activateQuest(:Quest85)
+@>Script: pbSetSelfSwitch(35,"A",true)
+@>Conditional Branch: Switch [0004: Defeated Gym 1] == ON
+ @>Show Animation: This event, [Exclaim bubble]
+ @>Wait: 12 frame(s)
+ @>Text: \xn[William]Warte mal...
+ @>Text: \xn[William]ist das nicht der Orden aus Lunafeld?
+ @>Text: \xn[William]Gut, ein Versprechen ist ein Versprechen.
+ @>Text: \xn[William]Hier, nimm das.
+ @>Script: pbReceiveItem(:HEADBUTTITEM)
+ @>Text: \xn[William]Damit kannst du an Bäumen, wie diesen 
+  :    : rüttlen und schauen, was herausfällt.
+ @>Script: completeQuest(:Quest85)
+ @>Script: pbSetSelfSwitch(35,"B",true)
+ @>Text: \xn[William]Manchmal sieht es so aus, als würden die 
+  :    : Äste das Gesicht eines Pokémon formen.
+ @>Text: \xn[William]Findest du nicht auch?!
+ @>Text: \xn[William]Man sieht sich.
+ @>Change Screen Color Tone: (-255,-255,-255,0), @20
+ @>Wait: 20 frame(s)
+ @>Control Self Switch: B =ON
+ @>Change Screen Color Tone: (0,0,0,0), @20
+ @>Wait: 20 frame(s)
+ @>
+: Else
+ @>Control Self Switch: A =ON
+ @>
+: Branch End
+@>
+
+Page #2
+Conditions
+Self Switch A is ON
+
+Graphic: SCIENTIST_M4
+
+Autonomous Movement
+Type: Fixed
+Speed: 3: Slow
+Freq: 3: Low
+Options Enabled
+Move Animation
+Trigger: Action Button
+
+List of Event Commands:
+@>Conditional Branch: Switch [0004: Defeated Gym 1] == ON
+ @>Show Animation: This event, [Exclaim bubble]
+ @>Wait: 12 frame(s)
+ @>Text: \xn[William]Warte mal...
+ @>Text: \xn[William]ist das nicht der Orden aus Lunafeld?
+ @>Text: \xn[William]Gut, ein Versprechen ist ein Versprechen.
+ @>Text: \xn[William]Hier, nimm das.
+ @>Script: pbReceiveItem(:HEADBUTTITEM)
+ @>Text: \xn[William]Damit kannst du an Bäumen, wie diesen 
+  :    : rüttlen und schauen, was herausfällt.
+ @>Script: completeQuest(:Quest85)
+ @>Script: pbSetSelfSwitch(35,"B",true)
+ @>Text: \xn[William]Manchmal sieht es so aus, als würden die 
+  :    : Äste das Gesicht eines Pokémon formen.
+ @>Text: \xn[William]Findest du nicht auch?!
+ @>Text: \xn[William]Man sieht sich.
+ @>Change Screen Color Tone: (-255,-255,-255,0), @20
+ @>Wait: 20 frame(s)
+ @>Control Self Switch: B =ON
+ @>Change Screen Color Tone: (0,0,0,0), @20
+ @>Wait: 20 frame(s)
+ @>
+: Else
+ @>Text: \xn[William]Sobald du einen Orden hast, überreiche 
+  :    : ich dir gerne das nötige Werkzeug für die 
+  :    : Rüttelbäume.
+ @>
+: Branch End
+@>
+
+Page #3
+Conditions
+Self Switch B is ON
+
+Autonomous Movement
+Type: Fixed
+Speed: 3: Slow
+Freq: 3: Low
+Options Enabled
+Move Animation
+Trigger: Action Button
+
+List of Event Commands:
+@>
+
+#------------------------------------------------------------------------------
 Event ID: 030
 Event Name: Item
 (X,Y): (017,068)
@@ -257433,6 +258430,30 @@ Move Animation
 Trigger: Action Button
 
 List of Event Commands:
+@>
+
+#------------------------------------------------------------------------------
+Event ID: 031
+Event Name: HeadbuttTree size(2,1)
+(X,Y): (026,010)
+
+Page #1
+Conditions
+None
+
+Graphic: Object Tree Headbutt
+
+Autonomous Movement
+Type: Fixed
+Speed: 3: Slow
+Freq: 3: Low
+Options Enabled
+Move Animation
+Direction Fix
+Trigger: Action Button
+
+List of Event Commands:
+@>Script: pbHeadbutt
 @>
 
 #------------------------------------------------------------------------------
@@ -257502,6 +258523,68 @@ Trigger: Player Touch
 
 List of Event Commands:
 @>Script: pbBridgeOn
+@>
+
+#------------------------------------------------------------------------------
+Event ID: 035
+Event Name: EV035
+(X,Y): (042,053)
+
+Page #1
+Conditions
+None
+
+Graphic: Quest Symbol
+
+Autonomous Movement
+Type: Fixed
+Speed: 2: Slower
+Freq: 6: Highest
+Options Enabled
+Move Animation
+Stop Animation
+Direction Fix
+Through
+Always on Top
+Trigger: Action Button
+
+List of Event Commands:
+@>
+
+Page #2
+Conditions
+Self Switch A is ON
+
+Graphic: Quest Symbol Solved
+
+Autonomous Movement
+Type: Fixed
+Speed: 2: Slower
+Freq: 6: Highest
+Options Enabled
+Move Animation
+Stop Animation
+Direction Fix
+Through
+Always on Top
+Trigger: Action Button
+
+List of Event Commands:
+@>
+
+Page #3
+Conditions
+Self Switch B is ON
+
+Autonomous Movement
+Type: Fixed
+Speed: 3: Slow
+Freq: 3: Low
+Options Enabled
+Move Animation
+Trigger: Action Button
+
+List of Event Commands:
 @>
 
 #------------------------------------------------------------------------------
@@ -276184,6 +277267,30 @@ List of Event Commands:
 @>
 
 #------------------------------------------------------------------------------
+Event ID: 039
+Event Name: HeadbuttTree size(2,2)
+(X,Y): (014,018)
+
+Page #1
+Conditions
+None
+
+Graphic: Object Tree Headbutt
+
+Autonomous Movement
+Type: Fixed
+Speed: 3: Slow
+Freq: 3: Low
+Options Enabled
+Move Animation
+Direction Fix
+Trigger: Action Button
+
+List of Event Commands:
+@>Script: pbHeadbutt
+@>
+
+#------------------------------------------------------------------------------
 Event ID: 040
 Event Name: Haus 1 Tür
 (X,Y): (023,000)
@@ -276207,6 +277314,30 @@ List of Event Commands:
 @>Transfer Player:[451: Route 13], (033,048), Up, No Fade
 @>Change Screen Color Tone: (0,0,0,0), @6
 @>Wait: 8 frame(s)
+@>
+
+#------------------------------------------------------------------------------
+Event ID: 041
+Event Name: HeadbuttTree size(2,2)
+(X,Y): (035,012)
+
+Page #1
+Conditions
+None
+
+Graphic: Object Tree Headbutt
+
+Autonomous Movement
+Type: Fixed
+Speed: 3: Slow
+Freq: 3: Low
+Options Enabled
+Move Animation
+Direction Fix
+Trigger: Action Button
+
+List of Event Commands:
+@>Script: pbHeadbutt
 @>
 
 #------------------------------------------------------------------------------
@@ -289558,6 +290689,54 @@ Trigger: Action Button
 
 List of Event Commands:
 @>Text: Route 7
+@>
+
+#------------------------------------------------------------------------------
+Event ID: 058
+Event Name: HeadbuttTree size(2,2)
+(X,Y): (007,023)
+
+Page #1
+Conditions
+None
+
+Graphic: Object Tree Headbutt
+
+Autonomous Movement
+Type: Fixed
+Speed: 3: Slow
+Freq: 3: Low
+Options Enabled
+Move Animation
+Direction Fix
+Trigger: Action Button
+
+List of Event Commands:
+@>Script: pbHeadbutt
+@>
+
+#------------------------------------------------------------------------------
+Event ID: 059
+Event Name: HeadbuttTree size(2,2)
+(X,Y): (029,019)
+
+Page #1
+Conditions
+None
+
+Graphic: Object Tree Headbutt
+
+Autonomous Movement
+Type: Fixed
+Speed: 3: Slow
+Freq: 3: Low
+Options Enabled
+Move Animation
+Direction Fix
+Trigger: Action Button
+
+List of Event Commands:
+@>Script: pbHeadbutt
 @>
 
 #------------------------------------------------------------------------------
@@ -358924,6 +360103,30 @@ List of Event Commands:
 @>
 
 #------------------------------------------------------------------------------
+Event ID: 049
+Event Name: HeadbuttTree size(2,2)
+(X,Y): (030,025)
+
+Page #1
+Conditions
+None
+
+Graphic: Object Tree Headbutt
+
+Autonomous Movement
+Type: Fixed
+Speed: 3: Slow
+Freq: 3: Low
+Options Enabled
+Move Animation
+Direction Fix
+Trigger: Action Button
+
+List of Event Commands:
+@>Script: pbHeadbutt
+@>
+
+#------------------------------------------------------------------------------
 
 #==============================================================================
 Map ID: 452
@@ -362135,6 +363338,102 @@ List of Event Commands:
 @>
 
 #------------------------------------------------------------------------------
+Event ID: 064
+Event Name: HeadbuttTree size(2,2)
+(X,Y): (013,032)
+
+Page #1
+Conditions
+None
+
+Graphic: Object Tree Headbutt 2
+
+Autonomous Movement
+Type: Fixed
+Speed: 3: Slow
+Freq: 3: Low
+Options Enabled
+Move Animation
+Direction Fix
+Trigger: Action Button
+
+List of Event Commands:
+@>Script: pbHeadbutt
+@>
+
+#------------------------------------------------------------------------------
+Event ID: 065
+Event Name: HeadbuttTree size(2,2)
+(X,Y): (025,045)
+
+Page #1
+Conditions
+None
+
+Graphic: Object Tree Headbutt 2
+
+Autonomous Movement
+Type: Fixed
+Speed: 3: Slow
+Freq: 3: Low
+Options Enabled
+Move Animation
+Direction Fix
+Trigger: Action Button
+
+List of Event Commands:
+@>Script: pbHeadbutt
+@>
+
+#------------------------------------------------------------------------------
+Event ID: 066
+Event Name: HeadbuttTree size(2,2)
+(X,Y): (026,023)
+
+Page #1
+Conditions
+None
+
+Graphic: Object Tree Headbutt 2
+
+Autonomous Movement
+Type: Fixed
+Speed: 3: Slow
+Freq: 3: Low
+Options Enabled
+Move Animation
+Direction Fix
+Trigger: Action Button
+
+List of Event Commands:
+@>Script: pbHeadbutt
+@>
+
+#------------------------------------------------------------------------------
+Event ID: 068
+Event Name: HeadbuttTree size(2,2)
+(X,Y): (040,016)
+
+Page #1
+Conditions
+None
+
+Graphic: Object Tree Headbutt 2
+
+Autonomous Movement
+Type: Fixed
+Speed: 3: Slow
+Freq: 3: Low
+Options Enabled
+Move Animation
+Direction Fix
+Trigger: Action Button
+
+List of Event Commands:
+@>Script: pbHeadbutt
+@>
+
+#------------------------------------------------------------------------------
 Event ID: 069
 Event Name: Tannza size(2,1)
 (X,Y): (033,032)
@@ -362491,6 +363790,30 @@ Stop Animation
 Trigger: Action Button
 
 List of Event Commands:
+@>
+
+#------------------------------------------------------------------------------
+Event ID: 084
+Event Name: HeadbuttTree size(2,2)
+(X,Y): (015,017)
+
+Page #1
+Conditions
+None
+
+Graphic: Object Tree Headbutt 2
+
+Autonomous Movement
+Type: Fixed
+Speed: 3: Slow
+Freq: 3: Low
+Options Enabled
+Move Animation
+Direction Fix
+Trigger: Action Button
+
+List of Event Commands:
+@>Script: pbHeadbutt
 @>
 
 #------------------------------------------------------------------------------
@@ -387960,182 +389283,6 @@ List of Event Commands:
 #------------------------------------------------------------------------------
 
 #==============================================================================
-Map ID: 490
-Map Name: MAP490
-Tileset: 101: Latias/Latios
-Width: 32, Height: 46
-
-#------------------------------------------------------------------------------
-Event ID: 001
-Event Name: EV001
-(X,Y): (016,040)
-
-Page #1
-Conditions
-None
-
-Graphic: MEDIUM
-
-Autonomous Movement
-Type: Fixed
-Speed: 3: Slow
-Freq: 3: Low
-Options Enabled
-Move Animation
-Trigger: Autorun
-
-List of Event Commands:
-@>Text: Sobald du wieder zurück möchtest, lass es mich 
- :    : wissen.
-@>Control Self Switch: A =ON
-@>
-
-Page #2
-Conditions
-Self Switch A is ON
-
-Graphic: MEDIUM
-
-Autonomous Movement
-Type: Fixed
-Speed: 3: Slow
-Freq: 3: Low
-Options Enabled
-Move Animation
-Trigger: Action Button
-
-List of Event Commands:
-@>Text: Du möchtest zurück?
-@>Show Choices: Ja, Nein
-(When Cancel: Choice 2)
-: When [Ja]
- @>Change Screen Color Tone: (-255,-255,-255,0), @20
- @>Wait: 20 frame(s)
- @>Transfer Player:[177: Tonishi], (119,031), Up
- @>Change Screen Color Tone: (0,0,0,0), @20
- @>Wait: 20 frame(s)
- @>
-: When [Nein]
- @>
-: Branch End
-@>
-
-#------------------------------------------------------------------------------
-Event ID: 002
-Event Name: EV002 size(2,1)
-(X,Y): (015,014)
-
-Page #1
-Conditions
-None
-
-Autonomous Movement
-Type: Fixed
-Speed: 3: Slow
-Freq: 3: Low
-Options Enabled
-Move Animation
-Trigger: Event Touch
-
-List of Event Commands:
-@>Wait: 20 frame(s)
-@>Play SE: 'LATIAS', 100, 100
-@>Wait: 20 frame(s)
-@>Play SE: 'LATIOS', 100, 100
-@>Wait: 20 frame(s)
-@>Screen Flash: (0,0,255,255), @10
-@>Play SE: 'PRSFX- Supersonic Skystrike7', 100, 100
-@>Set Event Location: [Latios],(009,012), Down
-@>Wait: 10 frame(s)
-@>Screen Flash: (255,0,0,255), @10
-@>Play SE: 'PRSFX- Supersonic Skystrike7', 100, 100
-@>Set Event Location: [Latias],(022,012), Down
-@>Wait: 10 frame(s)
-@>Set Move Route: [Latias]
- :              : $>Move Left
- :              : $>Move Left
- :              : $>Move Left
- :              : $>Move Left
- :              : $>Move Left
- :              : $>Turn Down
-@>Set Move Route: [Latios]
- :              : $>Move Right
- :              : $>Move Right
- :              : $>Move Right
- :              : $>Move Right
- :              : $>Move Right
- :              : $>Turn Down
-@>Wait for Move's Completion
-@>Play SE: 'LATIAS', 100, 100
-@>Wait: 20 frame(s)
-@>Play SE: 'LATIOS', 100, 100
-@>Control Self Switch: A =ON
-@>
-
-Page #2
-Conditions
-Self Switch A is ON
-
-Autonomous Movement
-Type: Fixed
-Speed: 3: Slow
-Freq: 3: Low
-Options Enabled
-Move Animation
-Trigger: Action Button
-
-List of Event Commands:
-@>
-
-#------------------------------------------------------------------------------
-Event ID: 003
-Event Name: Latias
-(X,Y): (031,000)
-
-Page #1
-Conditions
-None
-
-Graphic: LATIAS
-
-Autonomous Movement
-Type: Fixed
-Speed: 3: Slow
-Freq: 3: Low
-Options Enabled
-Move Animation
-Stop Animation
-Trigger: Action Button
-
-List of Event Commands:
-@>
-
-#------------------------------------------------------------------------------
-Event ID: 004
-Event Name: Latios
-(X,Y): (030,000)
-
-Page #1
-Conditions
-None
-
-Graphic: LATIOS
-
-Autonomous Movement
-Type: Fixed
-Speed: 3: Slow
-Freq: 3: Low
-Options Enabled
-Move Animation
-Stop Animation
-Trigger: Action Button
-
-List of Event Commands:
-@>
-
-#------------------------------------------------------------------------------
-
-#==============================================================================
 Map ID: 491
 Map Name: Haus
 Tileset: 030: Stadt 5 Innen
@@ -388163,8 +389310,9 @@ List of Event Commands:
 @>Play SE: 'Door exit', 80, 100
 @>Change Screen Color Tone: (-255,-255,-255,0), @6
 @>Wait: 8 frame(s)
-@>Transfer Player:[177: Tonishi], (060,075), Down, No Fade
+@>Transfer Player:[633: Tonishi], (060,075), Down, No Fade
 @>Change Screen Color Tone: (0,0,0,0), @6
+@>Wait: 8 frame(s)
 @>
 
 #------------------------------------------------------------------------------
@@ -388251,8 +389399,9 @@ List of Event Commands:
 @>Play SE: 'Door exit', 80, 100
 @>Change Screen Color Tone: (-255,-255,-255,0), @6
 @>Wait: 8 frame(s)
-@>Transfer Player:[177: Tonishi], (027,076), Down, No Fade
+@>Transfer Player:[633: Tonishi], (027,076), Down, No Fade
 @>Change Screen Color Tone: (0,0,0,0), @6
+@>Wait: 8 frame(s)
 @>
 
 #------------------------------------------------------------------------------
@@ -388381,8 +389530,9 @@ List of Event Commands:
 @>Play SE: 'Door exit', 80, 100
 @>Change Screen Color Tone: (-255,-255,-255,0), @6
 @>Wait: 8 frame(s)
-@>Transfer Player:[177: Tonishi], (044,060), Down, No Fade
+@>Transfer Player:[633: Tonishi], (044,060), Down, No Fade
 @>Change Screen Color Tone: (0,0,0,0), @6
+@>Wait: 8 frame(s)
 @>
 
 #------------------------------------------------------------------------------
@@ -388824,8 +389974,9 @@ List of Event Commands:
 @>Play SE: 'Door exit', 80, 100
 @>Change Screen Color Tone: (-255,-255,-255,0), @6
 @>Wait: 8 frame(s)
-@>Transfer Player:[177: Tonishi], (045,082), Down, No Fade
+@>Transfer Player:[633: Tonishi], (045,082), Down, No Fade
 @>Change Screen Color Tone: (0,0,0,0), @6
+@>Wait: 8 frame(s)
 @>
 
 #------------------------------------------------------------------------------
@@ -417051,6 +418202,7 @@ Stop Animation
 Trigger: Action Button
 
 List of Event Commands:
+@>Control Switches: [0032: Fateful encounters] = ON
 @>Script: $game_temp.vs_transition_bg
 @>Script: $game_temp.vs_transition_bg = 
 :       : "Landorus"
@@ -417063,6 +418215,7 @@ List of Event Commands:
 :       : pkmn = Pokemon.new(:LANDORUS, 75)
 :       : pkmn.calc_stats
 :       : WildBattle.start(pkmn)
+@>Control Switches: [0032: Fateful encounters] = OFF
 @>Conditional Branch: Variable [0048: Kampf-Ergebnis] != 2
  @>Control Self Switch: A =ON
  @>
@@ -425172,6 +426325,126 @@ List of Event Commands:
 @>
 
 #------------------------------------------------------------------------------
+Event ID: 073
+Event Name: HeadbuttTree size(2,2)
+(X,Y): (017,052)
+
+Page #1
+Conditions
+None
+
+Graphic: Object Tree Headbutt 2
+
+Autonomous Movement
+Type: Fixed
+Speed: 3: Slow
+Freq: 3: Low
+Options Enabled
+Move Animation
+Direction Fix
+Trigger: Action Button
+
+List of Event Commands:
+@>Script: pbHeadbutt
+@>
+
+#------------------------------------------------------------------------------
+Event ID: 074
+Event Name: HeadbuttTree size(2,2)
+(X,Y): (062,069)
+
+Page #1
+Conditions
+None
+
+Graphic: Object Tree Headbutt 2
+
+Autonomous Movement
+Type: Fixed
+Speed: 3: Slow
+Freq: 3: Low
+Options Enabled
+Move Animation
+Direction Fix
+Trigger: Action Button
+
+List of Event Commands:
+@>Script: pbHeadbutt
+@>
+
+#------------------------------------------------------------------------------
+Event ID: 075
+Event Name: HeadbuttTree size(2,2)
+(X,Y): (038,016)
+
+Page #1
+Conditions
+None
+
+Graphic: Object Tree Headbutt 2
+
+Autonomous Movement
+Type: Fixed
+Speed: 3: Slow
+Freq: 3: Low
+Options Enabled
+Move Animation
+Direction Fix
+Trigger: Action Button
+
+List of Event Commands:
+@>Script: pbHeadbutt
+@>
+
+#------------------------------------------------------------------------------
+Event ID: 076
+Event Name: HeadbuttTree size(2,2)
+(X,Y): (045,049)
+
+Page #1
+Conditions
+None
+
+Graphic: Object Tree Headbutt 2
+
+Autonomous Movement
+Type: Fixed
+Speed: 3: Slow
+Freq: 3: Low
+Options Enabled
+Move Animation
+Direction Fix
+Trigger: Action Button
+
+List of Event Commands:
+@>Script: pbHeadbutt
+@>
+
+#------------------------------------------------------------------------------
+Event ID: 077
+Event Name: HeadbuttTree size(2,2)
+(X,Y): (010,065)
+
+Page #1
+Conditions
+None
+
+Graphic: Object Tree Headbutt 2
+
+Autonomous Movement
+Type: Fixed
+Speed: 3: Slow
+Freq: 3: Low
+Options Enabled
+Move Animation
+Direction Fix
+Trigger: Action Button
+
+List of Event Commands:
+@>Script: pbHeadbutt
+@>
+
+#------------------------------------------------------------------------------
 Event ID: 080
 Event Name: Fukano
 (X,Y): (002,037)
@@ -426756,6 +428029,54 @@ List of Event Commands:
 @>
 
 #------------------------------------------------------------------------------
+Event ID: 030
+Event Name: HeadbuttTree size(2,2)
+(X,Y): (030,006)
+
+Page #1
+Conditions
+None
+
+Graphic: Object Tree Headbutt 2
+
+Autonomous Movement
+Type: Fixed
+Speed: 3: Slow
+Freq: 3: Low
+Options Enabled
+Move Animation
+Direction Fix
+Trigger: Action Button
+
+List of Event Commands:
+@>Script: pbHeadbutt
+@>
+
+#------------------------------------------------------------------------------
+Event ID: 031
+Event Name: HeadbuttTree size(2,2)
+(X,Y): (017,026)
+
+Page #1
+Conditions
+None
+
+Graphic: Object Tree Headbutt 2
+
+Autonomous Movement
+Type: Fixed
+Speed: 3: Slow
+Freq: 3: Low
+Options Enabled
+Move Animation
+Direction Fix
+Trigger: Action Button
+
+List of Event Commands:
+@>Script: pbHeadbutt
+@>
+
+#------------------------------------------------------------------------------
 Event ID: 033
 Event Name: Solosis
 (X,Y): (001,027)
@@ -426855,31 +428176,6 @@ List of Event Commands:
 Event ID: 040
 Event Name: Tannza size(2,1)
 (X,Y): (039,022)
-
-Page #1
-Conditions
-None
-
-Graphic: PINECO
-
-Autonomous Movement
-Type: Fixed
-Speed: 1: Slowest
-Freq: 1: Lowest
-Options Enabled
-Move Animation
-Stop Animation
-Direction Fix
-Always on Top
-Trigger: Action Button
-
-List of Event Commands:
-@>
-
-#------------------------------------------------------------------------------
-Event ID: 041
-Event Name: Tannza size(2,1)
-(X,Y): (017,024)
 
 Page #1
 Conditions
@@ -448278,6 +449574,102 @@ List of Event Commands:
 @>
 
 #------------------------------------------------------------------------------
+Event ID: 007
+Event Name: HeadbuttTree size(2,2)
+(X,Y): (012,011)
+
+Page #1
+Conditions
+None
+
+Graphic: Object Tree Headbutt
+
+Autonomous Movement
+Type: Fixed
+Speed: 3: Slow
+Freq: 3: Low
+Options Enabled
+Move Animation
+Direction Fix
+Trigger: Action Button
+
+List of Event Commands:
+@>Script: pbHeadbutt
+@>
+
+#------------------------------------------------------------------------------
+Event ID: 008
+Event Name: HeadbuttTree size(2,2)
+(X,Y): (032,009)
+
+Page #1
+Conditions
+None
+
+Graphic: Object Tree Headbutt
+
+Autonomous Movement
+Type: Fixed
+Speed: 3: Slow
+Freq: 3: Low
+Options Enabled
+Move Animation
+Direction Fix
+Trigger: Action Button
+
+List of Event Commands:
+@>Script: pbHeadbutt
+@>
+
+#------------------------------------------------------------------------------
+Event ID: 009
+Event Name: HeadbuttTree size(2,2)
+(X,Y): (035,035)
+
+Page #1
+Conditions
+None
+
+Graphic: Object Tree Headbutt
+
+Autonomous Movement
+Type: Fixed
+Speed: 3: Slow
+Freq: 3: Low
+Options Enabled
+Move Animation
+Direction Fix
+Trigger: Action Button
+
+List of Event Commands:
+@>Script: pbHeadbutt
+@>
+
+#------------------------------------------------------------------------------
+Event ID: 010
+Event Name: HeadbuttTree size(2,2)
+(X,Y): (006,023)
+
+Page #1
+Conditions
+None
+
+Graphic: Object Tree Headbutt
+
+Autonomous Movement
+Type: Fixed
+Speed: 3: Slow
+Freq: 3: Low
+Options Enabled
+Move Animation
+Direction Fix
+Trigger: Action Button
+
+List of Event Commands:
+@>Script: pbHeadbutt
+@>
+
+#------------------------------------------------------------------------------
 
 #==============================================================================
 Map ID: 613
@@ -448687,6 +450079,102 @@ List of Event Commands:
 @>
 
 #------------------------------------------------------------------------------
+Event ID: 017
+Event Name: HeadbuttTree size(2,2)
+(X,Y): (008,007)
+
+Page #1
+Conditions
+None
+
+Graphic: Object Tree Headbutt
+
+Autonomous Movement
+Type: Fixed
+Speed: 3: Slow
+Freq: 3: Low
+Options Enabled
+Move Animation
+Direction Fix
+Trigger: Action Button
+
+List of Event Commands:
+@>Script: pbHeadbutt
+@>
+
+#------------------------------------------------------------------------------
+Event ID: 018
+Event Name: HeadbuttTree size(2,2)
+(X,Y): (010,007)
+
+Page #1
+Conditions
+None
+
+Graphic: Object Tree Headbutt
+
+Autonomous Movement
+Type: Fixed
+Speed: 3: Slow
+Freq: 3: Low
+Options Enabled
+Move Animation
+Direction Fix
+Trigger: Action Button
+
+List of Event Commands:
+@>Script: pbHeadbutt
+@>
+
+#------------------------------------------------------------------------------
+Event ID: 019
+Event Name: HeadbuttTree size(2,2)
+(X,Y): (043,031)
+
+Page #1
+Conditions
+None
+
+Graphic: Object Tree Headbutt
+
+Autonomous Movement
+Type: Fixed
+Speed: 3: Slow
+Freq: 3: Low
+Options Enabled
+Move Animation
+Direction Fix
+Trigger: Action Button
+
+List of Event Commands:
+@>Script: pbHeadbutt
+@>
+
+#------------------------------------------------------------------------------
+Event ID: 020
+Event Name: HeadbuttTree size(2,2)
+(X,Y): (016,037)
+
+Page #1
+Conditions
+None
+
+Graphic: Object Tree Headbutt
+
+Autonomous Movement
+Type: Fixed
+Speed: 3: Slow
+Freq: 3: Low
+Options Enabled
+Move Animation
+Direction Fix
+Trigger: Action Button
+
+List of Event Commands:
+@>Script: pbHeadbutt
+@>
+
+#------------------------------------------------------------------------------
 
 #==============================================================================
 Map ID: 614
@@ -448849,6 +450337,54 @@ List of Event Commands:
 @>Transfer Player:[613: Aetherspitze], (037,001), Down, No Fade
 @>Change Screen Color Tone: (0,0,0,0), @6
 @>Wait: 8 frame(s)
+@>
+
+#------------------------------------------------------------------------------
+Event ID: 007
+Event Name: HeadbuttTree size(2,2)
+(X,Y): (004,010)
+
+Page #1
+Conditions
+None
+
+Graphic: Object Tree Headbutt
+
+Autonomous Movement
+Type: Fixed
+Speed: 3: Slow
+Freq: 3: Low
+Options Enabled
+Move Animation
+Direction Fix
+Trigger: Action Button
+
+List of Event Commands:
+@>Script: pbHeadbutt
+@>
+
+#------------------------------------------------------------------------------
+Event ID: 008
+Event Name: HeadbuttTree size(2,2)
+(X,Y): (019,010)
+
+Page #1
+Conditions
+None
+
+Graphic: Object Tree Headbutt
+
+Autonomous Movement
+Type: Fixed
+Speed: 3: Slow
+Freq: 3: Low
+Options Enabled
+Move Animation
+Direction Fix
+Trigger: Action Button
+
+List of Event Commands:
+@>Script: pbHeadbutt
 @>
 
 #------------------------------------------------------------------------------
@@ -449113,7 +450649,9 @@ Always on Top
 Trigger: Action Button
 
 List of Event Commands:
+@>Control Switches: [0032: Fateful encounters] = ON
 @>Conditional Branch: Script: WildBattle.start(:LATIAS, 60)
+ @>Control Switches: [0032: Fateful encounters] = OFF
  @>Control Self Switch: B =ON
  @>
 : Else
@@ -451324,7 +452862,9 @@ Stop Animation
 Trigger: Action Button
 
 List of Event Commands:
+@>Control Switches: [0032: Fateful encounters] = ON
 @>Conditional Branch: Script: WildBattle.start(:CHIENPAO, 60)
+ @>Control Switches: [0032: Fateful encounters] = OFF
  @>Control Self Switch: A =ON
  @>
 : Else

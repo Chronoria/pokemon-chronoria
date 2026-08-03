@@ -216,6 +216,13 @@ TreasureRod,21
     10,QUAGSIRE,40,45
     10,MUDKIP,40,45
 	10,MARSHTOMP,42,48
+HeadbuttLow,21
+    100,STUFFUL,8,12
+HeadbuttHigh,21
+    40,FLETCHLING,7,9
+    30,TAILLOW,7,9
+    20,CHERUBI,7,9
+    10,HOPPIP,7,9
 #-------------------------------
 [087,1] # Route 2
 Land,21
@@ -343,6 +350,13 @@ DoubleRod,21
 TreasureRod,21
     90,GOLDEEN,40,45
     10,SEAKING,42,48
+HeadbuttLow,21
+    100,SNEASEL_1,8,10
+HeadbuttHigh,21
+    40,COMBEE,7,8
+    30,KRICKETOT,7,9
+    20,PIDOVE,7,8
+    10,APPLIN,8,9
 #-------------------------------
 [110] # Mistral
 LandMorning,21
@@ -482,6 +496,14 @@ TreasureRod,21
     10,QUAGSIRE,40,45
     10,MUDKIP,40,45
 	10,MARSHTOMP,42,48
+HeadbuttLow,21
+    100,HOOTHOOT,9,11
+HeadbuttHigh,21
+    35,SEWADDLE,9,11
+    25,TAROUNTULA,9,12
+    20,WEEDLE,9,10
+    10,GRUBBIN,9,11
+    10,SPINARAK,9,10
 #-------------------------------
 [142] # Lunafeld Höhle
 LandMorning,21
@@ -616,6 +638,14 @@ TreasureRod,21
     10,PSYDUCK,40,45
 	5,GOLDUCK,42,48
 	5,GYARADOS,42,48
+HeadbuttLow,21
+    100,SKWOVET,10,13
+HeadbuttHigh,21
+    35,BLIPBUG,10,13
+    25,WURMPLE,10,13
+    20,VENIPEDE,11,13
+    10,SPINARAK,12,15
+    10,NYMBLE,10,13
 #-------------------------------
 [156,1] # Route 3
 LandMorning,21
@@ -859,6 +889,13 @@ TreasureRod,21
     10,SOBBLE,40,45
 	8,GYARADOS,42,48
 	2,DRIZZILE,42,48
+HeadbuttLow,21
+    100,CORVISQUIRE,14,17
+HeadbuttHigh,21
+    40,WURMPLE,13,14
+    30,SPINARAK,13,18
+    20,VENIPEDE,10,17
+    10,PANSAGE,13,16
 #-------------------------------
 [168] # Käfersammler-Contest
 Land,21
@@ -2612,6 +2649,13 @@ LandNight,21
     6,MUNCHLAX,30
     2,PERSIAN,35
     2,STOUTLAND,35
+HeadbuttLow,21
+    100,MUNCHLAX,28,32
+HeadbuttHigh,21
+    40,BELLSPROUT,25,30
+    30,PETILIL,25,30
+    20,DEDENNE,25,30
+    10,CORVISQUIRE,25,30
 #-------------------------------
 [274] # Route 7 (Sternwarte)
 LandMorning,21
@@ -2681,6 +2725,13 @@ LandNight,21
     5,TINKATINK,27,30
     5,TINKATUFF,31,33
     5,WORMADAM_2,31,35
+HeadbuttLow,21
+    100,WORMADAM,31,35
+HeadbuttHigh,21
+    40,BURMY,25,30
+    30,TAROUNTULA,25,30
+    20,APPLIN,25,30
+    10,ELDEGOSS,25,30
 #-------------------------------
 [289] # Moostiefen
 RockSmash,50
@@ -2863,6 +2914,13 @@ LandNight,21
     5,VENOMOTH,38,42
     5,XATU,34,38
     2,PINSIR,34,38
+HeadbuttLow,21
+    100,PINSIR,34,38
+HeadbuttHigh,21
+    40,LEDIAN,38,42
+    30,YANMA,34,38
+    20,BEEDRILL,36,40
+    10,NINJASK,36,40
 OldRod,21
     50,MAGIKARP,15,20
     20,BARBOACH,15,20
@@ -3091,6 +3149,13 @@ LandNight,21
     10,ROOKIDEE,3,4
     10,TADBULB,2,4
     5,CUBONE,2,5
+HeadbuttLow,21
+    100,BUNEARY,2,4
+HeadbuttHigh,21
+    40,CATERPIE,3,4
+    30,LEDYBA,2,4
+    20,CHERUBI,2,4
+    10,GRUBBIN,3,6
 OldRod,21
     50,MAGIKARP,5,10
     50,SURSKIT,5,10
@@ -3439,6 +3504,13 @@ LandNight,14
     5,MABOSSTIFF,30,35
     5,SNOVER_2,28,33
     2,HONCHKROW,35
+HeadbuttLow,14
+    100,TREVENANT,29,32
+HeadbuttHigh,14
+    40,SEEDOT,25,28
+    30,NUZLEAF,29,32
+    20,PHANTUMP,25,28
+    10,APPLETUN,25,30
 RockSmash,50
     50,GEODUDE,35,40
     30,SHUCKLE,35,40
@@ -5757,6 +5829,13 @@ TreasureRod,21
 	5,SEAKING,42,48
 	3,POLIWRATH,42,48
 	2,POLITOED,42,48
+HeadbuttLow,21
+    100,HERACROSS,45,50
+HeadbuttHigh,21
+    40,SPINARAK,45,50
+    30,PACHIRISU,45,50
+    20,TRUMBEAK,45,50
+    10,TOUCANNON,45,50
 #-------------------------------
 [192] # Route 13
 LandMorning,21
@@ -5820,6 +5899,13 @@ LandNight,21
 	1,YANMEGA,45,50
 	1,TANGROWTH,45,50
 	5,POLIWAG,45,50
+HeadbuttLow,21
+    100,TANGROWTH,45,50
+HeadbuttHigh,21
+    40,FOMANTIS,45,50
+    30,LURANTIS,45,50
+    20,SHIINOTIC,45,50
+    10,GLOOM,45,50
 #-------------------------------
 [370] # Route 13
 LandMorning,21
@@ -5883,6 +5969,13 @@ LandNight,21
 	1,YANMEGA,45,50
 	1,TANGROWTH,45,50
 	5,POLIWAG,45,50
+HeadbuttLow,21
+    100,TANGROWTH,45,50
+HeadbuttHigh,21
+    40,FOMANTIS,45,50
+    30,LURANTIS,45,50
+    20,SHIINOTIC,45,50
+    10,GLOOM,45,50
 #-------------------------------
 [451] # Route 13
 LandMorning,21
@@ -5946,6 +6039,13 @@ LandNight,21
 	1,YANMEGA,45,50
 	1,TANGROWTH,45,50
 	5,POLIWAG,45,50
+HeadbuttLow,21
+    100,TANGROWTH,45,50
+HeadbuttHigh,21
+    40,FOMANTIS,45,50
+    30,LURANTIS,45,50
+    20,SHIINOTIC,45,50
+    10,GLOOM,45,50
 #-------------------------------
 [155] # Bruchhain
 LandMorning,21
@@ -6849,6 +6949,14 @@ TreasureRod,21
     25,MASQUERAIN,45,50
     20,ARAQUANID,45,50
 	5,WHISCASH,45,50
+HeadbuttLow,21
+    100,LARVESTA,55,57
+HeadbuttHigh,21
+    35,SEWADDLE,50,55
+    25,SWADLOON,50,55
+    20,LEAVANNY,50,55
+    10,PINECO,50,55
+    10,FORRETRESS,50,55
 #-------------------------------
 [546] # Route 15
 LandMorning,21
@@ -7045,6 +7153,13 @@ LandNight,21
 	1,ARCANINE,50,55
 	1,ALTARIA,50,55
 	1,GRIMMSNARL,50,55
+HeadbuttLow,21
+    100,GRIMMSNARL,50,55
+HeadbuttHigh,21
+    40,PINECO,50,55
+    30,PARAS,50,55
+    20,PARASECT,50,55
+    10,FORRETRESS,50,55
 Water,11
 	10,VELUZA,50,55
 	10,FEEBAS,50,55
@@ -7333,6 +7448,13 @@ LandNight,21
 	1,ARCANINE,50,55
 	1,ALTARIA,50,55
 	1,GRIMMSNARL,50,55
+HeadbuttLow,21
+    100,GRIMMSNARL,50,55
+HeadbuttHigh,21
+    40,PINECO,50,55
+    30,PARAS,50,55
+    20,PARASECT,50,55
+    10,FORRETRESS,50,55
 Water,11
 	10,VELUZA,50,55
 	10,FEEBAS,50,55
@@ -7477,6 +7599,13 @@ LandNight,21
 	1,ARCANINE,50,55
 	1,ALTARIA,50,55
 	1,GRIMMSNARL,50,55
+HeadbuttLow,21
+    100,GRIMMSNARL,50,55
+HeadbuttHigh,21
+    40,PINECO,50,55
+    30,PARAS,50,55
+    20,PARASECT,50,55
+    10,FORRETRESS,50,55
 Water,11
 	10,VELUZA,50,55
 	10,FEEBAS,50,55
@@ -7768,6 +7897,13 @@ LandNight,21
 	5,MEOWSTIC,50,60
 	5,SEVIPER,60,65
 	5,ZANGOOSE,60,65
+HeadbuttLow,21
+    100,ROSERADE,55,60
+HeadbuttHigh,21
+    40,ROSELIA,50,60
+    30,FURRET,55,60
+    20,SKIPLOOM,50,60
+    10,OINKOLOGNE,50,60
 Water,11
     10,MAGIKARP,15,20
     10,WOOPER,15,20
@@ -9025,6 +9161,13 @@ LandNight,21
 	5,AMBIPOM,55,60
 	5,HERACROSS,60,65
 	5,DRAMPA,60,65
+HeadbuttLow,21
+    100,HERACROSS,60,65
+HeadbuttHigh,21
+    40,AIPOM,50,60
+    30,HOOTHOOT,50,60
+    20,PIDOVE,50,60
+    10,ORBEETLE,55,60
 OldRod,21
     40,MAGIKARP,15,20
     20,WOOPER,15,20
@@ -9123,6 +9266,13 @@ LandNight,21
 	5,AMBIPOM,55,60
 	5,HERACROSS,60,65
 	5,DRAMPA,60,65
+HeadbuttLow,21
+    100,HERACROSS,60,65
+HeadbuttHigh,21
+    40,AIPOM,50,60
+    30,HOOTHOOT,50,60
+    20,PIDOVE,50,60
+    10,ORBEETLE,55,60
 OldRod,21
     40,MAGIKARP,15,20
     20,WOOPER,15,20
@@ -9221,6 +9371,13 @@ LandNight,21
 	5,AMBIPOM,55,60
 	5,HERACROSS,60,65
 	5,DRAMPA,60,65
+HeadbuttLow,21
+    100,HERACROSS,60,65
+HeadbuttHigh,21
+    40,AIPOM,50,60
+    30,HOOTHOOT,50,60
+    20,PIDOVE,50,60
+    10,ORBEETLE,55,60
 #-------------------------------
 [615] # Aetherspitze
 LandMorning,21

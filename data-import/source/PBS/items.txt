@@ -8914,8 +8914,8 @@ Flags = KeyItem
 Description = Damit kann man Felswände erklimmen.
 #-------------------------------------------------------------------------------Einzigartig
 [HEADBUTTITEM]
-Name = Premium-Futter
-NamePlural = Premium-Futter
+Name = Baumrüttler
+NamePlural = Baumrüttler
 Pocket = 8
 Price = 0
 FieldUse = Direct

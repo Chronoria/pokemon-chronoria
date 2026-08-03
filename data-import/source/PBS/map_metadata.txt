@@ -514,6 +514,7 @@ Name = Pokécenter Route 1
 ShowArea = true
 Bicycle = true
 MapPosition = 0,2,16
+HealingSpot = 369,39,18
 SnapEdges = true
 Environment = None
 #-------------------------------
@@ -574,7 +575,6 @@ Name = Mistral
 Outdoor = true
 ShowArea = true
 Bicycle = true
-HealingSpot = 92,12,15
 MapPosition = 0,5,15
 SnapEdges = true
 BattleBack = city
@@ -668,7 +668,6 @@ SnapEdges = true
 Name = Morastia
 Outdoor = true
 ShowArea = true
-HealingSpot = 109,37,19
 MapPosition = 0,22,5
 SnapEdges = true
 BattleBack = Swamp
@@ -682,7 +681,6 @@ Name = Mistral
 Outdoor = true
 ShowArea = true
 Bicycle = true
-HealingSpot = 110,81,11
 MapPosition = 0,6,15
 SnapEdges = true
 BattleBack = city
@@ -863,7 +861,6 @@ Name = Lunafeld
 Outdoor = true
 ShowArea = true
 Bicycle = true
-HealingSpot = 141,35,37
 MapPosition = 0,4,13
 SnapEdges = true
 BattleBack = city
@@ -959,7 +956,6 @@ BattleBack = arena1
 Name = Bruchhain
 Outdoor = true
 ShowArea = true
-HealingSpot = 155,12,18
 MapPosition = 0,22,7
 SnapEdges = true
 BattleBack = Forest_2
@@ -1023,7 +1019,6 @@ Name = Route 4
 Outdoor = true
 ShowArea = true
 Bicycle = true
-HealingSpot = 161,13,20
 MapPosition = 0,6,13
 SnapEdges = true
 BattleBack = forest
@@ -1040,7 +1035,7 @@ MapPosition = 0,18,4
 SnapEdges = true
 Flags = Levels
 #-------------------------------
-[163]   # MAP163
+[163]   # Spheal-Life
 Name = Route 5
 MapPosition = 0,7,13
 #-------------------------------
@@ -1126,7 +1121,6 @@ Name = Azumaris
 Outdoor = true
 ShowArea = true
 Bicycle = true
-HealingSpot = 174,36,30
 MapPosition = 0,9,14
 SnapEdges = true
 BattleBack = beach
@@ -1144,13 +1138,6 @@ MapPosition = 0,9,14
 BattleBack = gym2
 #-------------------------------
 [177]   # Tonishi
-Name = Tonishi
-HealingSpot = 177,10,7
-MapPosition = 0,9,14
-SnapEdges = true
-Flags = Levels
-#-------------------------------
-[633]   # Tonishi
 Name = Tonishi
 HealingSpot = 177,10,7
 MapPosition = 0,9,14
@@ -1209,7 +1196,6 @@ Name = Route 5
 Outdoor = true
 ShowArea = true
 Bicycle = true
-HealingSpot = 184,17,64
 MapPosition = 0,9,12
 SnapEdges = true
 BattleBack = beach
@@ -1402,13 +1388,13 @@ WildBattleBGM = Battle! (Wild Pokémon)_7
 Flags = Levels
 #-------------------------------
 [207]   # MAP207
-Name = Noxburgh
+Name = Tonishi
 MapPosition = 0,7,13
+SnapEdges = true
 #-------------------------------
 [208]   # Solhaven
 Name = Solhaven
 Outdoor = true
-HealingSpot = 208,15,54
 MapPosition = 0,11,8
 SnapEdges = true
 BattleBack = forest
@@ -1635,7 +1621,6 @@ MapPosition = 0,11,8
 Name = Celestia
 Outdoor = true
 ShowArea = true
-HealingSpot = 251,31,13
 Weather = Snow,100
 MapPosition = 0,6,5
 SnapEdges = true
@@ -1835,7 +1820,6 @@ Name = Ephiron
 Outdoor = true
 ShowArea = true
 Bicycle = true
-HealingSpot = 273,35,9
 MapPosition = 0,3,10
 SnapEdges = true
 BattleBack = forest
@@ -2194,7 +2178,6 @@ Name = Ariduna
 Outdoor = true
 ShowArea = true
 Bicycle = true
-HealingSpot = 340,26,20
 MapPosition = 0,19,9
 SnapEdges = true
 BattleBack = desert
@@ -2377,7 +2360,6 @@ Name = Route 1
 Outdoor = true
 ShowArea = true
 Bicycle = true
-HealingSpot = 369,39,18
 MapPosition = 0,2,16
 SnapEdges = true
 BattleBack = forest
@@ -3148,7 +3130,6 @@ Flags = Levels
 Name = Lone Beach
 Outdoor = true
 ShowArea = true
-HealingSpot = 466,33,6
 MapPosition = 0,17,12
 SnapEdges = true
 BattleBack = beach
@@ -3312,6 +3293,30 @@ MapPosition = 0,12,9
 DarkMap = true
 SnapEdges = true
 Flags = Levels
+#-------------------------------
+[458]   # Vogelfängerclub
+Name = Vogelfängerclub
+ShowArea = true
+MapPosition = 0,12,9
+SnapEdges = true
+#-------------------------------
+[459]   # Vogelfängerclub
+Name = Vogelfängerclub
+ShowArea = true
+MapPosition = 0,12,9
+SnapEdges = true
+#-------------------------------
+[460]   # Vogelfängerclub
+Name = Vogelfängerclub
+ShowArea = true
+MapPosition = 0,12,9
+SnapEdges = true
+#-------------------------------
+[461]   # Vogelfängerclub
+Name = Vogelfängerclub
+ShowArea = true
+MapPosition = 0,12,9
+SnapEdges = true
 #-------------------------------
 [497]   # Lone Beach Pokécenter
 Name = Lone Beach Pokécenter
@@ -4140,3 +4145,19 @@ Name = Dracheninsel
 Outdoor = true
 ShowArea = true
 SnapEdges = true
+#-------------------------------
+[633]   # Tonishi
+Name = Tonishi
+Outdoor = true
+ShowArea = true
+MapPosition = 0,9,14
+SnapEdges = true
+Flags = Levels
+#-------------------------------
+[494]   # Tonishi Center
+Name = Pokécenter Tonishi
+ShowArea = true
+HealingSpot = 633,44,61
+MapPosition = 0,9,14
+SnapEdges = true
+Environment = None
