@@ -39,23 +39,28 @@ function byName(a: Row, b: Row) {
 }
 
 // Groups an item's locations by map name and formats them as e.g. "Route 3 (2), Ariduna (Shop)".
-// "shop" locations (Poké Mart stock, see parseMapLocations.ts) aren't a physical pickup count,
-// so they're shown as a standalone "(Shop)" flag instead of contributing to the numeric count -
-// an item sold at two different mart counters on the same map is still just "available there",
-// not "found twice". A map with neither a count above 1 nor a shop flag renders as a bare name,
-// so the common single-location case stays exactly as readable as before this change.
+// "shop" locations (Poké Mart stock, see parseMapLocations.ts) and "headbutt" locations (random
+// Rüttelbaum drop, see buildData.ts's HEADBUTT_ITEM_POOL) aren't a physical pickup count, so
+// they're shown as a standalone "(Shop)"/"(Rüttelbaum)" flag instead of contributing to the
+// numeric count - an item sold at two different mart counters on the same map is still just
+// "available there", not "found twice", and the same logic applies to a randomly-dropped
+// Rüttelbaum item. A map with neither a count above 1 nor either flag renders as a bare name, so
+// the common single-location case stays exactly as readable as before this change.
+const NON_PHYSICAL_SOURCES: Record<string, string> = { shop: "Shop", headbutt: "Rüttelbaum" };
+
 function formatLocationsByMap(locations: { locationName: string; source: string }[]): string {
-  const byMap = new Map<string, { count: number; shop: boolean }>();
+  const byMap = new Map<string, { count: number; flags: Set<string> }>();
   for (const l of locations) {
-    const entry = byMap.get(l.locationName) ?? { count: 0, shop: false };
-    if (l.source === "shop") entry.shop = true;
+    const entry = byMap.get(l.locationName) ?? { count: 0, flags: new Set<string>() };
+    const flagLabel = NON_PHYSICAL_SOURCES[l.source];
+    if (flagLabel) entry.flags.add(flagLabel);
     else entry.count += 1;
     byMap.set(l.locationName, entry);
   }
   return [...byMap.entries()]
     .sort((a, b) => a[0].localeCompare(b[0], "de"))
-    .map(([name, { count, shop }]) => {
-      const parts = [count > 1 ? String(count) : null, shop ? "Shop" : null].filter((p): p is string => p !== null);
+    .map(([name, { count, flags }]) => {
+      const parts = [count > 1 ? String(count) : null, ...flags].filter((p): p is string => p !== null);
       return parts.length ? `${name} (${parts.join(", ")})` : name;
     })
     .join(", ");
@@ -78,10 +83,11 @@ export async function exportItemListXlsx(items: Item[], pokemon: Pokemon[]) {
         .filter((i) => i.locations.length > 0)
         .map((i) => ({
           name: i.name,
-          // Shop stock isn't a physical pickup (see formatLocationsByMap's "(Shop)" flag, which
-          // already excludes it from the per-map number) - exclude it here too so the overall
-          // "Anzahl" column stays a count of actual find spots, not purchase availability.
-          count: i.locations.filter((l) => l.source !== "shop").length,
+          // Shop stock and Headbutt-tree drops aren't a physical pickup (see
+          // formatLocationsByMap's "(Shop)"/"(Kopfnuss)" flags, which already exclude them from
+          // the per-map number) - exclude them here too so the overall "Anzahl" column stays a
+          // count of actual find spots, not purchase/drop availability.
+          count: i.locations.filter((l) => !(l.source in NON_PHYSICAL_SOURCES)).length,
           locationNames: formatLocationsByMap(i.locations),
           recipeLabel: isRecipeIngredient(i.description) ? "Ja" : "Nein",
         }))

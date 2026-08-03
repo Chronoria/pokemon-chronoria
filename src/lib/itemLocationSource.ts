@@ -6,6 +6,7 @@ const ITEM_LOCATION_SOURCE_LABELS: Record<string, string> = {
   berry: "Beerenbaum",
   special: "Besonderes Item",
   shop: "Shop",
+  headbutt: "Rüttelbaum",
 };
 
 export function itemLocationSourceLabel(source: string): string {

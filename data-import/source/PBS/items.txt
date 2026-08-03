@@ -8234,264 +8234,264 @@ Flags = Berry,Fling_10,NaturalGift_FIGHTING_80
 Description = Frischt die Angriffspunkte eines Pokémon auf.
 #-------------------------------Rezept
 [HYPERCHERIBERRY]
-Name = Dimensions-Amrenabeere
-NamePlural = Dimensions-Amrenabeeren
+Name = Mega-Amrenabeere
+NamePlural = Mega-Amrenabeeren
 Pocket = 5
 Price = 0
 Flags = Berry
 Description = Kann für bestimmte Rezepte verwendet werden.
 #-------------------------------Rezept
 [HYPERCHESTOBERRY]
-Name = Dimensions-Maronbeere
-NamePlural = Dimensions-Maronbeeren
+Name = Mega-Maronbeere
+NamePlural = Mega-Maronbeeren
 Pocket = 5
 Price = 0
 Flags = Berry
 Description = Kann für bestimmte Rezepte verwendet werden.
 #-------------------------------
 [HYPERPECHABERRY]
-Name = Dimensions-Pirsifbeere
-NamePlural = Dimensions-Pirsifbeeren
+Name = Mega-Pirsifbeere
+NamePlural = Mega-Pirsifbeeren
 Pocket = 5
 Price = 0
 Flags = Berry
 Description = Kann für bestimmte Rezepte verwendet werden.
 #-------------------------------Rezept
 [HYPERRAWSTBERRY]
-Name = Dimensions-Fragiabeere
-NamePlural = Dimensions-Fragiabeeren
+Name = Mega-Fragiabeere
+NamePlural = Mega-Fragiabeeren
 Pocket = 5
 Price = 0
 Flags = Berry
 Description = Kann für bestimmte Rezepte verwendet werden.
 #-------------------------------Rezept
 [HYPERASPEARBERRY]
-Name = Dimensions-Wilbirbeere
-NamePlural = Dimensions-Wilbirbeeren
+Name = Mega-Wilbirbeere
+NamePlural = Mega-Wilbirbeeren
 Pocket = 5
 Price = 0
 Flags = Berry
 Description = Kann für bestimmte Rezepte verwendet werden.
 #-------------------------------Rezept
 [HYPERORANBERRY]
-Name = Dimensions-Sinelbeere
-NamePlural = Dimensions-Sinelbeeren
+Name = Mega-Sinelbeere
+NamePlural = Mega-Sinelbeeren
 Pocket = 5
 Price = 0
 Flags = Berry
 Description = Kann für bestimmte Rezepte verwendet werden.
 #-------------------------------Rezept
 [HYPERPERSIMBERRY]
-Name = Dimensions-Persimbeere
-NamePlural = Dimensions-Persimbeeren
+Name = Mega-Persimbeere
+NamePlural = Mega-Persimbeeren
 Pocket = 5
 Price = 0
 Flags = Berry
 Description = Kann für bestimmte Rezepte verwendet werden.
 #-------------------------------Rezept
 [HYPERLUMBERRY]
-Name = Dimensions-Prunusbeere
-NamePlural = Dimensions-Prunusbeeren
+Name = Mega-Prunusbeere
+NamePlural = Mega-Prunusbeeren
 Pocket = 5
 Price = 0
 Flags = Berry
 Description = Kann für bestimmte Rezepte verwendet werden.
 #-------------------------------Rezept
 [HYPERSITRUSBERRY]
-Name = Dimensions-Tsitrubeere
-NamePlural = Dimensions-Tsitrubeeren
+Name = Mega-Tsitrubeere
+NamePlural = Mega-Tsitrubeeren
 Pocket = 5
 Price = 0
 Flags = Berry
 Description = Kann für bestimmte Rezepte verwendet werden.
 #-------------------------------Rezept
 [HYPERPOMEGBERRY]
-Name = Dimensions-Granabeere
-NamePlural = Dimensions-Granabeeren
+Name = Mega-Granabeere
+NamePlural = Mega-Granabeeren
 Pocket = 5
 Price = 0
 Flags = Berry
 Description = Kann für bestimmte Rezepte verwendet werden.
 #-------------------------------Rezept
 [HYPERKELPSYBERRY]
-Name = Dimensions-Setangbeere
-NamePlural = Dimensions-Setangbeeren
+Name = Mega-Setangbeere
+NamePlural = Mega-Setangbeeren
 Pocket = 5
 Price = 0
 Flags = Berry
 Description = Kann für bestimmte Rezepte verwendet werden.
 #-------------------------------Rezept
 [HYPERQUALOTBERRY]
-Name = Dimensions-Qualotbeere
-NamePlural = Dimensions-Qualotbeeren
+Name = Mega-Qualotbeere
+NamePlural = Mega-Qualotbeeren
 Pocket = 5
 Price = 0
 Flags = Berry
 Description = Kann für bestimmte Rezepte verwendet werden.
 #-------------------------------Rezept
 [HYPERHONDEWBERRY]
-Name = Dimensions-Honmelbeere
-NamePlural = Dimensions-Honmelbeeren
+Name = Mega-Honmelbeere
+NamePlural = Mega-Honmelbeeren
 Pocket = 5
 Price = 0
 Flags = Berry
 Description = Kann für bestimmte Rezepte verwendet werden.
 #-------------------------------Rezept
 [HYPERGREPABERRY]
-Name = Dimensions-Labrusbeere
-NamePlural = Dimensions-Labrusbeeren
+Name = Mega-Labrusbeere
+NamePlural = Mega-Labrusbeeren
 Pocket = 5
 Price = 0
 Flags = Berry
 Description = Kann für bestimmte Rezepte verwendet werden.
 #-------------------------------Rezept
 [HYPERTAMATOBERRY]
-Name = Dimensions-Tamotbeere
-NamePlural = Dimensions-Tamotbeeren
+Name = Mega-Tamotbeere
+NamePlural = Mega-Tamotbeeren
 Pocket = 5
 Price = 0
 Flags = Berry
 Description = Kann für bestimmte Rezepte verwendet werden.
 #-------------------------------Rezept
 [HYPEROCCABERRY]
-Name = Dimensions-Koakobeere
-NamePlural = Dimensions-Koakobeeren
+Name = Mega-Koakobeere
+NamePlural = Mega-Koakobeeren
 Pocket = 5
 Price = 0
 Flags = Berry
 Description = Kann für bestimmte Rezepte verwendet werden.
 #-------------------------------Rezept
 [HYPERPASSHOBERRY]
-Name = Dimensions-Foepasbeere
-NamePlural = Dimensions-Foepasbeeren
+Name = Mega-Foepasbeere
+NamePlural = Mega-Foepasbeeren
 Pocket = 5
 Price = 0
 Flags = Berry
 Description = Kann für bestimmte Rezepte verwendet werden.
 #-------------------------------Rezept
 [HYPERWACANBERRY]
-Name = Dimensions-Kerzalbeere
-NamePlural = Dimensions-Kerzalbeeren
+Name = Mega-Kerzalbeere
+NamePlural = Mega-Kerzalbeeren
 Pocket = 5
 Price = 0
 Flags = Berry
 Description = Kann für bestimmte Rezepte verwendet werden.
 #-------------------------------Rezept
 [HYPERRINDOBERRY]
-Name = Dimensions-Grindobeere
-NamePlural = Dimensions-Grindobeeren
+Name = Mega-Grindobeere
+NamePlural = Mega-Grindobeeren
 Pocket = 5
 Price = 0
 Flags = Berry
 Description = Kann für bestimmte Rezepte verwendet werden.
 #-------------------------------Rezept
 [HYPERYACHEBERRY]
-Name = Dimensions-Kiroyabeere
-NamePlural = Dimensions-Kiroyabeeren
+Name = Mega-Kiroyabeere
+NamePlural = Mega-Kiroyabeeren
 Pocket = 5
 Price = 0
 Flags = Berry
 Description = Kann für bestimmte Rezepte verwendet werden.
 #-------------------------------Rezept
 [HYPERCHOPLEBERRY]
-Name = Dimensions-Rospelbeere
-NamePlural = Dimensions-Rospelbeeren
+Name = Mega-Rospelbeere
+NamePlural = Mega-Rospelbeeren
 Pocket = 5
 Price = 0
 Flags = Berry
 Description = Kann für bestimmte Rezepte verwendet werden.
 #-------------------------------Rezept
 [HYPERKEBIABERRY]
-Name = Dimensions-Grarzbeere
-NamePlural = Dimensions-Grarzbeeren
+Name = Mega-Grarzbeere
+NamePlural = Mega-Grarzbeeren
 Pocket = 5
 Price = 0
 Flags = Berry
 Description = Kann für bestimmte Rezepte verwendet werden.
 #-------------------------------Rezept
 [HYPERSHUCABERRY]
-Name = Dimensions-Schukebeere
-NamePlural = Dimensions-Schukebeeren
+Name = Mega-Schukebeere
+NamePlural = Mega-Schukebeeren
 Pocket = 5
 Price = 0
 Flags = Berry
 Description = Kann für bestimmte Rezepte verwendet werden.
 #-------------------------------Rezept
 [HYPERCOBABERRY]
-Name = Dimensions-Kobabeere
-NamePlural = Dimensions-Kobabeeren
+Name = Mega-Kobabeere
+NamePlural = Mega-Kobabeeren
 Pocket = 5
 Price = 0
 Flags = Berry
 Description = Kann für bestimmte Rezepte verwendet werden.
 #-------------------------------Rezept
 [HYPERPAYAPABERRY]
-Name = Dimensions-Pyapabeere
-NamePlural = Dimensions-Pyapabeeren
+Name = Mega-Pyapabeere
+NamePlural = Mega-Pyapabeeren
 Pocket = 5
 Price = 0
 Flags = Berry
 Description = Kann für bestimmte Rezepte verwendet werden.
 #-------------------------------Rezept
 [HYPERTANGABERRY]
-Name = Dimensions-Tanigabeere
-NamePlural = Dimensions-Tanigabeeren
+Name = Mega-Tanigabeere
+NamePlural = Mega-Tanigabeeren
 Pocket = 5
 Price = 0
 Flags = Berry
 Description = Kann für bestimmte Rezepte verwendet werden.
 #-------------------------------Rezept
 [HYPERCHARTIBERRY]
-Name = Dimensions-Chiaribeere
-NamePlural = Dimensions-Chiaribeeren
+Name = Mega-Chiaribeere
+NamePlural = Mega-Chiaribeeren
 Pocket = 5
 Price = 0
 Flags = Berry
 Description = Kann für bestimmte Rezepte verwendet werden.
 #-------------------------------Rezept
 [HYPERKASIBBERRY]
-Name = Dimensions-Zitarzbeere
-NamePlural = Dimensions-Zitarzbeeren
+Name = Mega-Zitarzbeere
+NamePlural = Mega-Zitarzbeeren
 Pocket = 5
 Price = 0
 Flags = Berry
 Description = Kann für bestimmte Rezepte verwendet werden.
 #-------------------------------Rezept
 [HYPERHABANBERRY]
-Name = Dimensions-Terirobeere
-NamePlural = Dimensions-Terirobeeren
+Name = Mega-Terirobeere
+NamePlural = Mega-Terirobeeren
 Pocket = 5
 Price = 0
 Flags = Berry
 Description = Kann für bestimmte Rezepte verwendet werden.
 #-------------------------------Rezept
 [HYPERCOLBURBERRY]
-Name = Dimensions-Burleobeere
-NamePlural = Dimensions-Burleobeeren
+Name = Mega-Burleobeere
+NamePlural = Mega-Burleobeeren
 Pocket = 5
 Price = 0
 Flags = Berry
 Description = Kann für bestimmte Rezepte verwendet werden.
 #-------------------------------Rezept
 [HYPERBABIRIBERRY]
-Name = Dimensions-Babiribeere
-NamePlural = Dimensions-Babiribeeren
+Name = Mega-Babiribeere
+NamePlural = Mega-Babiribeeren
 Pocket = 5
 Price = 0
 Flags = Berry
 Description = Kann für bestimmte Rezepte verwendet werden.
 #-------------------------------Rezept
 [HYPERCHILANBERRY]
-Name = Dimensions-Chilanbeere
-NamePlural = Dimensions-Chilanbeeren
+Name = Mega-Chilanbeere
+NamePlural = Mega-Chilanbeeren
 Pocket = 5
 Price = 0
 Flags = Berry
 Description = Kann für bestimmte Rezepte verwendet werden.
 #-------------------------------Rezept
 [HYPERROSELIBERRY]
-Name = Dimensions-Hibisbeere
-NamePlural = Dimensions-Hibisbeeren
+Name = Mega-Hibisbeere
+NamePlural = Mega-Hibisbeeren
 Pocket = 5
 Price = 0
 Flags = Berry
@@ -8543,8 +8543,8 @@ Price = 500
 Description = Kann für bestimmte Rezepte verwendet werden.
 #-------------------------------Rezept
 [HYPERSPACEBUTTER]
-Name = Dimensionsbutter
-NamePlural = Dimensionsbutter
+Name = Mega-Butter
+NamePlural = Mega-Butter
 Pocket = 5
 Price = 1000
 Description = Kann für bestimmte Rezepte verwendet werden.

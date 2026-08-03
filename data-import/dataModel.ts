@@ -213,9 +213,13 @@ export interface MapLocationRef {
 /** Same as MapLocationRef, plus how the item is obtained there. "shop" means the item is sold
  *  at a Poké Mart on that map (pbPokemonMart(...) in the event dump) - unlike the other
  *  sources, this isn't a single physical pickup, so exportItemList.ts's per-map count treats it
- *  as a standalone "available for purchase" flag rather than counting it. */
+ *  as a standalone "available for purchase" flag rather than counting it. "headbutt" is likewise
+ *  not tied to one map: it's the ITEM_POOL in Plugins/Custom Headbutt Chance/*.rb (game project),
+ *  which lives in Ruby plugin code rather than any PBS/event-dump text the parser can scan, so
+ *  buildData.ts adds these refs manually - keep HEADBUTT_ITEM_POOL there in sync with the plugin
+ *  by hand if its pool ever changes. */
 export interface ItemLocationRef extends MapLocationRef {
-  source: "ground" | "hidden" | "gift" | "berry" | "special" | "shop";
+  source: "ground" | "hidden" | "gift" | "berry" | "special" | "shop" | "headbutt";
 }
 
 export interface Trainer {

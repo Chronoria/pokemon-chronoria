@@ -145,6 +145,27 @@ async function main() {
     if (item) item.locations.push(...refs);
   }
 
+  // Headbutt-tree (Rüttelbaum) item drops: this pool lives in Ruby plugin code (game project's
+  // Plugins/Custom Headbutt Chance/*.rb, ITEM_POOL constant), not any PBS/event-dump text, so
+  // parseMapLocations.ts has no way to see it. Added by hand instead - keep this list in sync
+  // with the plugin's ITEM_POOL if it's ever changed there. Not tied to a single map (any of the
+  // game's Headbutt trees can drop these), hence the synthetic "HEADBUTT" location.
+  // NOTE: the HYPERxxxBERRY ids all display in-game as "Dimensions-<Beere>" (items.txt Name
+  // field), not "Hyper-<Beere>" - the ids just happen to look like a "Hyper" prefix.
+  const HEADBUTT_ITEM_POOL = [
+    "HYPERCHERIBERRY", "HYPERCHESTOBERRY", "HYPERPECHABERRY", "HYPERRAWSTBERRY",
+    "HYPERASPEARBERRY", "HYPERPERSIMBERRY", "HYPERORANBERRY", "HYPERSITRUSBERRY",
+    "HYPERLUMBERRY", "HYPERCHARTIBERRY", "HYPERCOBABERRY", "HYPERYACHEBERRY",
+    "HYPERROSELIBERRY", "HYPERBABIRIBERRY",
+    "CHERIBERRY", "CHESTOBERRY", "PECHABERRY", "RAWSTBERRY", "ASPEARBERRY",
+    "ORANBERRY", "LEPPABERRY", "PERSIMBERRY", "SITRUSBERRY", "LUMBERRY",
+  ];
+  for (const itemId of HEADBUTT_ITEM_POOL) {
+    const item = itemById.get(itemId);
+    if (item) item.locations.push({ mapId: "HEADBUTT", locationName: "Rüttelbaum", source: "headbutt" });
+    else console.warn(`[Rüttelbaum-Item-Pool] Unbekannte Item-ID: ${itemId}`);
+  }
+
   console.log("Schreibe JSON-Dateien...");
   writeJson("pokemon", pokemon);
   writeJson("moves", moves);
