@@ -1143,10 +1143,19 @@ Name = Azumaris Arena
 MapPosition = 0,9,14
 BattleBack = gym2
 #-------------------------------
-[177]   # Noxburgh
-Name = Noxburgh
+[177]   # Tonishi
+Name = Tonishi
 HealingSpot = 177,10,7
 MapPosition = 0,9,14
+SnapEdges = true
+Flags = Levels
+#-------------------------------
+[633]   # Tonishi
+Name = Tonishi
+HealingSpot = 177,10,7
+MapPosition = 0,9,14
+SnapEdges = true
+Flags = Levels
 #-------------------------------
 [178]   # Arena 4
 Name = Ephiron Arena

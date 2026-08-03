@@ -110822,7 +110822,7 @@ List of Event Commands:
 @>Play SE: 'Door exit', 100, 100
 @>Change Screen Color Tone: (-255,-255,-255,0), @6
 @>Wait: 8 frame(s)
-@>Transfer Player:[177: Noxburgh], (138,086), Left, No Fade
+@>Transfer Player:[177: Tonishi], (138,086), Left, No Fade
 @>Change Screen Color Tone: (0,0,0,0), @6
 @>Wait: 8 frame(s)
 @>
@@ -110848,7 +110848,7 @@ List of Event Commands:
 @>Play SE: 'Door exit', 100, 100
 @>Change Screen Color Tone: (-255,-255,-255,0), @6
 @>Wait: 8 frame(s)
-@>Transfer Player:[177: Noxburgh], (138,087), Left, No Fade
+@>Transfer Player:[177: Tonishi], (138,087), Left, No Fade
 @>Change Screen Color Tone: (0,0,0,0), @6
 @>Wait: 8 frame(s)
 @>
@@ -111876,10 +111876,506 @@ List of Event Commands:
 @>
 
 #------------------------------------------------------------------------------
+Event ID: 024
+Event Name: Parfi size(2,1)
+(X,Y): (005,047)
+
+Page #1
+Conditions
+None
+
+Graphic: Sleep Parfi
+
+Autonomous Movement
+Type: Fixed
+Speed: 1: Slowest
+Freq: 1: Lowest
+Options Enabled
+Move Animation
+Stop Animation
+Direction Fix
+Through
+Always on Top
+Trigger: Action Button
+
+List of Event Commands:
+@>
+
+#------------------------------------------------------------------------------
+Event ID: 025
+Event Name: Parfi size(2,1)
+(X,Y): (042,024)
+
+Page #1
+Conditions
+None
+
+Graphic: Sleep Parfi
+
+Autonomous Movement
+Type: Fixed
+Speed: 1: Slowest
+Freq: 1: Lowest
+Options Enabled
+Move Animation
+Stop Animation
+Direction Fix
+Through
+Always on Top
+Trigger: Action Button
+
+List of Event Commands:
+@>
+
+#------------------------------------------------------------------------------
+Event ID: 026
+Event Name: Parfi size(2,1)
+(X,Y): (053,061)
+
+Page #1
+Conditions
+None
+
+Graphic: Sleep Parfi
+
+Autonomous Movement
+Type: Fixed
+Speed: 1: Slowest
+Freq: 1: Lowest
+Options Enabled
+Move Animation
+Stop Animation
+Direction Fix
+Through
+Always on Top
+Trigger: Action Button
+
+List of Event Commands:
+@>
+
+#------------------------------------------------------------------------------
+Event ID: 027
+Event Name: Parfi size(2,1)
+(X,Y): (085,077)
+
+Page #1
+Conditions
+None
+
+Graphic: Sleep Parfi
+
+Autonomous Movement
+Type: Fixed
+Speed: 1: Slowest
+Freq: 1: Lowest
+Options Enabled
+Move Animation
+Stop Animation
+Direction Fix
+Through
+Always on Top
+Trigger: Action Button
+
+List of Event Commands:
+@>
+
+#------------------------------------------------------------------------------
+Event ID: 028
+Event Name: Parfi size(2,1)
+(X,Y): (048,080)
+
+Page #1
+Conditions
+None
+
+Graphic: Sleep Parfi
+
+Autonomous Movement
+Type: Fixed
+Speed: 1: Slowest
+Freq: 1: Lowest
+Options Enabled
+Move Animation
+Stop Animation
+Direction Fix
+Through
+Always on Top
+Trigger: Action Button
+
+List of Event Commands:
+@>
+
+#------------------------------------------------------------------------------
+Event ID: 029
+Event Name: Parfi size(2,1)
+(X,Y): (004,074)
+
+Page #1
+Conditions
+None
+
+Graphic: Sleep Parfi
+
+Autonomous Movement
+Type: Fixed
+Speed: 1: Slowest
+Freq: 1: Lowest
+Options Enabled
+Move Animation
+Stop Animation
+Direction Fix
+Through
+Always on Top
+Trigger: Action Button
+
+List of Event Commands:
+@>
+
+#------------------------------------------------------------------------------
+Event ID: 030
+Event Name: Parfi size(2,1)
+(X,Y): (084,007)
+
+Page #1
+Conditions
+None
+
+Graphic: Sleep Parfi
+
+Autonomous Movement
+Type: Fixed
+Speed: 1: Slowest
+Freq: 1: Lowest
+Options Enabled
+Move Animation
+Stop Animation
+Direction Fix
+Through
+Always on Top
+Trigger: Action Button
+
+List of Event Commands:
+@>
+
+#------------------------------------------------------------------------------
+Event ID: 031
+Event Name: Krawalloro .sl
+(X,Y): (011,081)
+
+Page #1
+Conditions
+None
+
+Graphic: DEKO Krawalloro
+
+Autonomous Movement
+Type: Custom
+Custom Move Route:
+(Repeat Action)
+$>Move Right
+$>Move Right
+$>Move Right
+$>Move Right
+$>Move Right
+$>Move Right
+$>Move Right
+$>Move Right
+$>Move Right
+$>Move Right
+$>Move Right
+$>Move Right
+$>Move Right
+$>Move Right
+$>Move Right
+$>Move Right
+$>Move Right
+$>Move Right
+$>Move Right
+$>Move Right
+$>Move Right
+$>Move Right
+$>Move Right
+$>Move Right
+$>Move Right
+$>Move Right
+$>Move Right
+$>Move Right
+$>Move Right
+$>Move Right
+$>Move Right
+$>Move Right
+$>Move Right
+$>Move Right
+$>Move Right
+$>Move Right
+$>Move Right
+$>Move Right
+$>Move Right
+$>Move Right
+$>Move Right
+$>Move Right
+$>Move Right
+$>Move Right
+$>Move Right
+$>Move Right
+$>Move Right
+$>Move Right
+$>Move Right
+$>Move Right
+$>Move Left
+$>Move Left
+$>Move Left
+$>Move Left
+$>Move Left
+$>Move Left
+$>Move Left
+$>Move Left
+$>Move Left
+$>Move Left
+$>Move Left
+$>Move Left
+$>Move Left
+$>Move Left
+$>Move Left
+$>Move Left
+$>Move Left
+$>Move Left
+$>Move Left
+$>Move Left
+$>Move Left
+$>Move Left
+$>Move Left
+$>Move Left
+$>Move Left
+$>Move Left
+$>Move Left
+$>Move Left
+$>Move Left
+$>Move Left
+$>Move Left
+$>Move Left
+$>Move Left
+$>Move Left
+$>Move Left
+$>Move Left
+$>Move Left
+$>Move Left
+$>Move Left
+$>Move Left
+$>Move Left
+$>Move Left
+$>Move Left
+$>Move Left
+$>Move Left
+$>Move Left
+$>Move Left
+$>Move Left
+$>Move Left
+$>Move Left
+
+Speed: 3: Slow
+Freq: 6: Highest
+Options Enabled
+Move Animation
+Stop Animation
+Through
+Always on Top
+Trigger: Action Button
+
+List of Event Commands:
+@>
+
+#------------------------------------------------------------------------------
+Event ID: 032
+Event Name: Krawalloro .sl
+(X,Y): (048,028)
+
+Page #1
+Conditions
+None
+
+Graphic: DEKO Krawalloro
+
+Autonomous Movement
+Type: Custom
+Custom Move Route:
+(Repeat Action)
+$>Move Right
+$>Move Right
+$>Move Right
+$>Move Right
+$>Move Right
+$>Move Right
+$>Move Right
+$>Move Right
+$>Move Right
+$>Move Right
+$>Move Right
+$>Move Right
+$>Move Right
+$>Move Right
+$>Move Right
+$>Move Right
+$>Move Right
+$>Move Right
+$>Move Right
+$>Move Right
+$>Move Right
+$>Move Right
+$>Move Right
+$>Move Right
+$>Move Right
+$>Move Right
+$>Move Right
+$>Move Right
+$>Move Right
+$>Move Right
+$>Move Right
+$>Move Right
+$>Move Right
+$>Move Right
+$>Move Right
+$>Move Right
+$>Move Right
+$>Move Right
+$>Move Right
+$>Move Right
+$>Move Right
+$>Move Right
+$>Move Right
+$>Move Right
+$>Move Right
+$>Move Right
+$>Move Right
+$>Move Right
+$>Move Right
+$>Move Right
+$>Move Left
+$>Move Left
+$>Move Left
+$>Move Left
+$>Move Left
+$>Move Left
+$>Move Left
+$>Move Left
+$>Move Left
+$>Move Left
+$>Move Left
+$>Move Left
+$>Move Left
+$>Move Left
+$>Move Left
+$>Move Left
+$>Move Left
+$>Move Left
+$>Move Left
+$>Move Left
+$>Move Left
+$>Move Left
+$>Move Left
+$>Move Left
+$>Move Left
+$>Move Left
+$>Move Left
+$>Move Left
+$>Move Left
+$>Move Left
+$>Move Left
+$>Move Left
+$>Move Left
+$>Move Left
+$>Move Left
+$>Move Left
+$>Move Left
+$>Move Left
+$>Move Left
+$>Move Left
+$>Move Left
+$>Move Left
+$>Move Left
+$>Move Left
+$>Move Left
+$>Move Left
+$>Move Left
+$>Move Left
+$>Move Left
+$>Move Left
+
+Speed: 3: Slow
+Freq: 6: Highest
+Options Enabled
+Move Animation
+Stop Animation
+Through
+Always on Top
+Trigger: Action Button
+
+List of Event Commands:
+@>
+
+#------------------------------------------------------------------------------
+Event ID: 033
+Event Name: EV033
+(X,Y): (020,049)
+
+Page #1
+Conditions
+None
+
+Graphic: trainer_BIRDKEEPER_M
+
+Autonomous Movement
+Type: Fixed
+Speed: 3: Slow
+Freq: 3: Low
+Options Enabled
+Move Animation
+Trigger: Action Button
+
+List of Event Commands:
+@>Text: Hier soll es irgendwo einen Vogelfänger-Club geben.
+@>Text: Ich finde ihn nur nicht.
+@>Show Animation: This event, [Sad bubble]
+@>Wait: 24 frame(s)
+@>Set Move Route: This event
+ :              : $>Turn Down
+@>
+
+#------------------------------------------------------------------------------
+Event ID: 034
+Event Name: EV034
+(X,Y): (075,054)
+
+Page #1
+Conditions
+None
+
+Graphic: HIKER3
+
+Autonomous Movement
+Type: Fixed
+Speed: 3: Slow
+Freq: 3: Low
+Options Enabled
+Move Animation
+Trigger: Action Button
+
+List of Event Commands:
+@>Text: Wenn du in die nächste Stadt möchtes, musst über 
+ :    : den See surfen.
+@>Text: Ich habe gehört, dass es dort ein tolles Aquarium 
+ :    : gibt,...
+@>Text: welches man sich unbedingt anschauen sollte.
+@>Wait: 8 frame(s)
+@>Set Move Route: This event
+ :              : $>Turn Down
+@>
+
+#------------------------------------------------------------------------------
 
 #==============================================================================
 Map ID: 163
-Map Name: MAP163
+Map Name: Spheal-Life
 Tileset: 100: Marin
 Width: 42, Height: 55
 
@@ -112880,7 +113376,7 @@ List of Event Commands:
 @>Play SE: 'Door exit', 80, 100
 @>Change Screen Color Tone: (-255,-255,-255,0), @6
 @>Wait: 8 frame(s)
-@>Transfer Player:[177: Noxburgh], (047,038), Down, No Fade
+@>Transfer Player:[177: Tonishi], (047,038), Down, No Fade
 @>Change Screen Color Tone: (0,0,0,0), @6
 @>
 
@@ -121573,9 +122069,10 @@ List of Event Commands:
 
 #==============================================================================
 Map ID: 177
-Map Name: Noxburgh
+Map Name: Tonishi
 Tileset: 097: Hafen
 Width: 140, Height: 120
+Auto-Change BGM: SM 067 Island Kahuna_s Theme
 
 #------------------------------------------------------------------------------
 Event ID: 001
@@ -122712,7 +123209,7 @@ List of Event Commands:
  @>Play SE: 'Door enter', 100, 100
  @>Change Screen Color Tone: (-255,-255,-255,0), @6
  @>Wait: 8 frame(s)
- @>Transfer Player:[163: MAP163], (020,050), Up, No Fade
+ @>Transfer Player:[163: Spheal-Life], (020,050), Up, No Fade
  @>Change Screen Color Tone: (0,0,0,0), @6
  @>
 : Else
@@ -122776,7 +123273,7 @@ List of Event Commands:
 @>Change Screen Color Tone: (-255,-255,-255,0), @6
 @>Wait: 8 frame(s)
 @>Change Transparent Flag: Normal
-@>Transfer Player:[492: Solhaven], (009,018), Up, No Fade
+@>Transfer Player:[492: Haus], (009,018), Up, No Fade
 @>Change Screen Color Tone: (0,0,0,0), @6
 @>
 
@@ -122877,7 +123374,7 @@ List of Event Commands:
 @>Change Screen Color Tone: (-255,-255,-255,0), @6
 @>Wait: 8 frame(s)
 @>Change Transparent Flag: Normal
-@>Transfer Player:[492: Solhaven], (009,018), Up, No Fade
+@>Transfer Player:[492: Haus], (009,018), Up, No Fade
 @>Change Screen Color Tone: (0,0,0,0), @6
 @>
 
@@ -122984,7 +123481,7 @@ List of Event Commands:
 @>Change Screen Color Tone: (-255,-255,-255,0), @6
 @>Wait: 8 frame(s)
 @>Change Transparent Flag: Normal
-@>Transfer Player:[491: Solhaven], (009,018), Up, No Fade
+@>Transfer Player:[491: Haus], (009,018), Up, No Fade
 @>Change Screen Color Tone: (0,0,0,0), @6
 @>
 
@@ -123085,7 +123582,7 @@ List of Event Commands:
 @>Change Screen Color Tone: (-255,-255,-255,0), @6
 @>Wait: 8 frame(s)
 @>Change Transparent Flag: Normal
-@>Transfer Player:[491: Solhaven], (009,018), Up, No Fade
+@>Transfer Player:[491: Haus], (009,018), Up, No Fade
 @>Change Screen Color Tone: (0,0,0,0), @6
 @>
 
@@ -126558,6 +127055,207 @@ List of Event Commands:
   :              : $>Wait: 4 frame(s)
  @>
 : Branch End
+@>
+
+#------------------------------------------------------------------------------
+Event ID: 037
+Event Name: Seempos .sl
+(X,Y): (047,036)
+
+Page #1
+Conditions
+None
+
+Graphic: SPHEAL Museum
+
+Autonomous Movement
+Type: Fixed
+Speed: 3: Slow
+Freq: 3: Low
+Options Enabled
+Move Animation
+Always on Top
+Trigger: Action Button
+
+List of Event Commands:
+@>
+
+#------------------------------------------------------------------------------
+Event ID: 038
+Event Name: Krawalloro .sl
+(X,Y): (089,090)
+
+Page #1
+Conditions
+None
+
+Graphic: DEKO Krawalloro
+
+Autonomous Movement
+Type: Custom
+Custom Move Route:
+(Repeat Action)
+$>Move Right
+$>Move Right
+$>Move Right
+$>Move Right
+$>Move Right
+$>Move Right
+$>Move Right
+$>Move Right
+$>Move Right
+$>Move Right
+$>Move Right
+$>Move Right
+$>Move Right
+$>Move Right
+$>Move Right
+$>Move Right
+$>Move Right
+$>Move Right
+$>Move Right
+$>Move Right
+$>Move Right
+$>Move Right
+$>Move Right
+$>Move Right
+$>Move Right
+$>Move Right
+$>Move Right
+$>Move Right
+$>Move Right
+$>Move Right
+$>Move Right
+$>Move Right
+$>Move Right
+$>Move Right
+$>Move Right
+$>Move Right
+$>Move Left
+$>Move Left
+$>Move Left
+$>Move Left
+$>Move Left
+$>Move Left
+$>Move Left
+$>Move Left
+$>Move Left
+$>Move Left
+$>Move Left
+$>Move Left
+$>Move Left
+$>Move Left
+$>Move Left
+$>Move Left
+$>Move Left
+$>Move Left
+$>Move Left
+$>Move Left
+$>Move Left
+$>Move Left
+$>Move Left
+$>Move Left
+$>Move Left
+$>Move Left
+$>Move Left
+$>Move Left
+$>Move Left
+$>Move Left
+$>Move Left
+$>Move Left
+$>Move Left
+$>Move Left
+$>Move Left
+$>Move Left
+
+Speed: 3: Slow
+Freq: 6: Highest
+Options Enabled
+Move Animation
+Stop Animation
+Through
+Always on Top
+Trigger: Action Button
+
+List of Event Commands:
+@>
+
+#------------------------------------------------------------------------------
+Event ID: 039
+Event Name: Haus 1 Tür
+(X,Y): (059,057)
+
+Page #1
+Conditions
+None
+
+Autonomous Movement
+Type: Fixed
+Speed: 3: Slow
+Freq: 3: Low
+Options Enabled
+Move Animation
+Trigger: Player Touch
+
+List of Event Commands:
+@>Play SE: 'Door exit', 100, 100
+@>Change Screen Color Tone: (-255,-255,-255,0), @6
+@>Wait: 8 frame(s)
+@>Transfer Player:[633: Tonishi], (057,057), Left, No Fade
+@>Change Screen Color Tone: (0,0,0,0), @6
+@>Wait: 8 frame(s)
+@>
+
+#------------------------------------------------------------------------------
+Event ID: 040
+Event Name: Haus 1 Tür
+(X,Y): (059,058)
+
+Page #1
+Conditions
+None
+
+Autonomous Movement
+Type: Fixed
+Speed: 3: Slow
+Freq: 3: Low
+Options Enabled
+Move Animation
+Trigger: Player Touch
+
+List of Event Commands:
+@>Play SE: 'Door exit', 100, 100
+@>Change Screen Color Tone: (-255,-255,-255,0), @6
+@>Wait: 8 frame(s)
+@>Transfer Player:[633: Tonishi], (057,058), Left, No Fade
+@>Change Screen Color Tone: (0,0,0,0), @6
+@>Wait: 8 frame(s)
+@>
+
+#------------------------------------------------------------------------------
+Event ID: 041
+Event Name: Haus 1 Tür
+(X,Y): (059,059)
+
+Page #1
+Conditions
+None
+
+Autonomous Movement
+Type: Fixed
+Speed: 3: Slow
+Freq: 3: Low
+Options Enabled
+Move Animation
+Trigger: Player Touch
+
+List of Event Commands:
+@>Play SE: 'Door exit', 100, 100
+@>Change Screen Color Tone: (-255,-255,-255,0), @6
+@>Wait: 8 frame(s)
+@>Transfer Player:[633: Tonishi], (057,059), Left, No Fade
+@>Change Screen Color Tone: (0,0,0,0), @6
+@>Wait: 8 frame(s)
 @>
 
 #------------------------------------------------------------------------------
@@ -160612,7 +161310,7 @@ List of Event Commands:
 @>Play SE: 'Door exit', 80, 100
 @>Change Screen Color Tone: (-255,-255,-255,0), @6
 @>Wait: 8 frame(s)
-@>Transfer Player:[177: Noxburgh], (076,076), Down, No Fade
+@>Transfer Player:[177: Tonishi], (076,076), Down, No Fade
 @>Change Screen Color Tone: (0,0,0,0), @6
 @>
 
@@ -160637,7 +161335,7 @@ List of Event Commands:
 @>Play SE: 'Door exit', 80, 100
 @>Change Screen Color Tone: (-255,-255,-255,0), @6
 @>Wait: 8 frame(s)
-@>Transfer Player:[177: Noxburgh], (091,059), Down, No Fade
+@>Transfer Player:[177: Tonishi], (091,059), Down, No Fade
 @>Change Screen Color Tone: (0,0,0,0), @6
 @>
 
@@ -160662,7 +161360,7 @@ List of Event Commands:
 @>Play SE: 'Door exit', 80, 100
 @>Change Screen Color Tone: (-255,-255,-255,0), @6
 @>Wait: 8 frame(s)
-@>Transfer Player:[177: Noxburgh], (094,095), Down, No Fade
+@>Transfer Player:[177: Tonishi], (094,095), Down, No Fade
 @>Change Screen Color Tone: (0,0,0,0), @6
 @>
 
@@ -160687,7 +161385,7 @@ List of Event Commands:
 @>Play SE: 'Door exit', 80, 100
 @>Change Screen Color Tone: (-255,-255,-255,0), @6
 @>Wait: 8 frame(s)
-@>Transfer Player:[177: Noxburgh], (108,095), Down, No Fade
+@>Transfer Player:[177: Tonishi], (108,095), Down, No Fade
 @>Change Screen Color Tone: (0,0,0,0), @6
 @>
 
@@ -179585,7 +180283,7 @@ List of Event Commands:
    @>Wait: 24 frame(s)
    @>Text: \xn[Sakura]Bevor ich es vergesse.
    @>Text: \xn[Sakura]Das hier ist für dich.
-   @>Script: pbReceiveItem(:LIFTTICKET)
+   @>Script: pbReceiveItem(:CABLECARTICKET)
    @>Text: \xn[Sakura]Damit kannst du die Seilbahn benutzen, 
     :    : um auf den Berg zu Route 6 zu gelangen.
    @>
@@ -364786,7 +365484,7 @@ List of Event Commands:
 @>Play SE: 'Door exit', 80, 100
 @>Change Screen Color Tone: (-255,-255,-255,0), @6
 @>Wait: 8 frame(s)
-@>Transfer Player:[177: Noxburgh], (075,095), Down, No Fade
+@>Transfer Player:[177: Tonishi], (075,095), Down, No Fade
 @>Change Screen Color Tone: (0,0,0,0), @6
 @>
 
@@ -382748,6 +383446,7 @@ Map ID: 486
 Map Name: Turm der Wiederkehr
 Tileset: 093: Vogelfänger-Club
 Width: 35, Height: 45
+Auto-Change BGM: SM 103 Malie City (Day)
 
 #------------------------------------------------------------------------------
 Event ID: 001
@@ -383335,7 +384034,7 @@ List of Event Commands:
 @>Play SE: 'Door exit', 80, 100
 @>Change Screen Color Tone: (-255,-255,-255,0), @6
 @>Wait: 8 frame(s)
-@>Transfer Player:[177: Noxburgh], (102,029), Down, No Fade
+@>Transfer Player:[177: Tonishi], (102,029), Down, No Fade
 @>Change Screen Color Tone: (0,0,0,0), @6
 @>
 
@@ -383346,6 +384045,7 @@ Map ID: 487
 Map Name: Turm der Wiederkehr
 Tileset: 093: Vogelfänger-Club
 Width: 35, Height: 45
+Auto-Change BGM: SM 103 Malie City (Day)
 
 #------------------------------------------------------------------------------
 Event ID: 001
@@ -383719,6 +384419,7 @@ Map ID: 488
 Map Name: Turm der Wiederkehr
 Tileset: 093: Vogelfänger-Club
 Width: 35, Height: 45
+Auto-Change BGM: SM 103 Malie City (Day)
 
 #------------------------------------------------------------------------------
 Event ID: 001
@@ -383861,6 +384562,7 @@ Map ID: 489
 Map Name: Turm der Wiederkehr
 Tileset: 093: Vogelfänger-Club
 Width: 35, Height: 45
+Auto-Change BGM: SM 103 Malie City (Day)
 
 #------------------------------------------------------------------------------
 Event ID: 001
@@ -384035,7 +384737,7 @@ List of Event Commands:
 : When [Ja]
  @>Change Screen Color Tone: (-255,-255,-255,0), @20
  @>Wait: 20 frame(s)
- @>Transfer Player:[177: Noxburgh], (119,031), Up
+ @>Transfer Player:[177: Tonishi], (119,031), Up
  @>Change Screen Color Tone: (0,0,0,0), @20
  @>Wait: 20 frame(s)
  @>
@@ -384161,7 +384863,7 @@ List of Event Commands:
 
 #==============================================================================
 Map ID: 491
-Map Name: Solhaven
+Map Name: Haus
 Tileset: 030: Stadt 5 Innen
 Width: 25, Height: 25
 Auto-Change BGM: XY 039 Professor Sycamore_s Theme
@@ -384187,7 +384889,7 @@ List of Event Commands:
 @>Play SE: 'Door exit', 80, 100
 @>Change Screen Color Tone: (-255,-255,-255,0), @6
 @>Wait: 8 frame(s)
-@>Transfer Player:[177: Noxburgh], (060,075), Down, No Fade
+@>Transfer Player:[177: Tonishi], (060,075), Down, No Fade
 @>Change Screen Color Tone: (0,0,0,0), @6
 @>
 
@@ -384239,7 +384941,7 @@ List of Event Commands:
  @>Play SE: 'Door exit', 80, 100
  @>Change Screen Color Tone: (-255,-255,-255,0), @6
  @>Wait: 8 frame(s)
- @>Transfer Player:[496: Solhaven], (012,013), Down, No Fade
+ @>Transfer Player:[496: Haus], (012,013), Down, No Fade
  @>Change Screen Color Tone: (0,0,0,0), @6
  @>
 : Branch End
@@ -384249,7 +384951,7 @@ List of Event Commands:
 
 #==============================================================================
 Map ID: 492
-Map Name: Solhaven
+Map Name: Haus
 Tileset: 030: Stadt 5 Innen
 Width: 25, Height: 25
 Auto-Change BGM: XY 039 Professor Sycamore_s Theme
@@ -384275,7 +384977,7 @@ List of Event Commands:
 @>Play SE: 'Door exit', 80, 100
 @>Change Screen Color Tone: (-255,-255,-255,0), @6
 @>Wait: 8 frame(s)
-@>Transfer Player:[177: Noxburgh], (027,076), Down, No Fade
+@>Transfer Player:[177: Tonishi], (027,076), Down, No Fade
 @>Change Screen Color Tone: (0,0,0,0), @6
 @>
 
@@ -384306,7 +385008,7 @@ List of Event Commands:
  @>Play SE: 'Door exit', 80, 100
  @>Change Screen Color Tone: (-255,-255,-255,0), @6
  @>Wait: 8 frame(s)
- @>Transfer Player:[493: Solhaven], (012,013), Down, No Fade
+ @>Transfer Player:[493: Haus], (012,013), Down, No Fade
  @>Change Screen Color Tone: (0,0,0,0), @6
  @>
 : Branch End
@@ -384337,7 +385039,7 @@ List of Event Commands:
 
 #==============================================================================
 Map ID: 493
-Map Name: Solhaven
+Map Name: Haus
 Tileset: 030: Stadt 5 Innen
 Width: 25, Height: 25
 Auto-Change BGM: XY 039 Professor Sycamore_s Theme
@@ -384369,7 +385071,7 @@ List of Event Commands:
  @>Play SE: 'Door exit', 80, 100
  @>Change Screen Color Tone: (-255,-255,-255,0), @6
  @>Wait: 8 frame(s)
- @>Transfer Player:[492: Solhaven], (012,013), Down, No Fade
+ @>Transfer Player:[492: Haus], (012,013), Down, No Fade
  @>Change Screen Color Tone: (0,0,0,0), @6
  @>
 : Branch End
@@ -384405,7 +385107,7 @@ List of Event Commands:
 @>Play SE: 'Door exit', 80, 100
 @>Change Screen Color Tone: (-255,-255,-255,0), @6
 @>Wait: 8 frame(s)
-@>Transfer Player:[177: Noxburgh], (044,060), Down, No Fade
+@>Transfer Player:[177: Tonishi], (044,060), Down, No Fade
 @>Change Screen Color Tone: (0,0,0,0), @6
 @>
 
@@ -384848,7 +385550,7 @@ List of Event Commands:
 @>Play SE: 'Door exit', 80, 100
 @>Change Screen Color Tone: (-255,-255,-255,0), @6
 @>Wait: 8 frame(s)
-@>Transfer Player:[177: Noxburgh], (045,082), Down, No Fade
+@>Transfer Player:[177: Tonishi], (045,082), Down, No Fade
 @>Change Screen Color Tone: (0,0,0,0), @6
 @>
 
@@ -384877,7 +385579,7 @@ List of Event Commands:
 
 #==============================================================================
 Map ID: 496
-Map Name: Solhaven
+Map Name: Haus
 Tileset: 030: Stadt 5 Innen
 Width: 25, Height: 25
 Auto-Change BGM: XY 039 Professor Sycamore_s Theme
@@ -384909,7 +385611,7 @@ List of Event Commands:
  @>Play SE: 'Door exit', 80, 100
  @>Change Screen Color Tone: (-255,-255,-255,0), @6
  @>Wait: 8 frame(s)
- @>Transfer Player:[491: Solhaven], (012,013), Down, No Fade
+ @>Transfer Player:[491: Haus], (012,013), Down, No Fade
  @>Change Screen Color Tone: (0,0,0,0), @6
  @>
 : Branch End
@@ -448136,7 +448838,7 @@ List of Event Commands:
 
 #==============================================================================
 Map ID: 633
-Map Name: Noxburgh
+Map Name: Tonishi
 Tileset: 097: Hafen
 Width: 65, Height: 120
 
@@ -448185,6 +448887,30 @@ List of Event Commands:
 : Else
  @>
 : Branch End
+@>
+
+#------------------------------------------------------------------------------
+Event ID: 003
+Event Name: EV003
+(X,Y): (020,103)
+
+Page #1
+Conditions
+None
+
+Graphic: Swimmer_F5_walking
+
+Autonomous Movement
+Type: Fixed
+Speed: 3: Slow
+Freq: 3: Low
+Options Enabled
+Move Animation
+Direction Fix
+Trigger: Action Button
+
+List of Event Commands:
+@>Text: Schubs mich nicht!
 @>
 
 #------------------------------------------------------------------------------
@@ -448396,6 +449122,30 @@ List of Event Commands:
 @>
 
 #------------------------------------------------------------------------------
+Event ID: 005
+Event Name: EV005
+(X,Y): (040,095)
+
+Page #1
+Conditions
+None
+
+Graphic: SWIMMER_M_Bademeister
+
+Autonomous Movement
+Type: Fixed
+Speed: 3: Slow
+Freq: 3: Low
+Options Enabled
+Move Animation
+Trigger: Action Button
+
+List of Event Commands:
+@>Text: \xn[Rettungsschwimmer Mitch]Ich passe hier auf, 
+ :    : dass keiner untergeht.
+@>
+
+#------------------------------------------------------------------------------
 Event ID: 006
 Event Name: Markt Tür
 (X,Y): (045,082)
@@ -448604,6 +449354,85 @@ List of Event Commands:
 @>
 
 #------------------------------------------------------------------------------
+Event ID: 007
+Event Name: EV007
+(X,Y): (030,110)
+
+Page #1
+Conditions
+None
+
+Graphic: SWIMMER_M4_WALKING_sonnenbrand
+
+Autonomous Movement
+Type: Fixed
+Speed: 3: Slow
+Freq: 3: Low
+Options Enabled
+Move Animation
+Direction Fix
+Trigger: Action Button
+
+List of Event Commands:
+@>Text: Aua!
+@>Show Animation: This event, [Poison bubble]
+@>Wait: 20 frame(s)
+@>Text: Ich bin wohl eingeschlafen.
+@>
+
+#------------------------------------------------------------------------------
+Event ID: 008
+Event Name: Haus 1 Tür
+(X,Y): (058,057)
+
+Page #1
+Conditions
+None
+
+Autonomous Movement
+Type: Fixed
+Speed: 3: Slow
+Freq: 3: Low
+Options Enabled
+Move Animation
+Trigger: Player Touch
+
+List of Event Commands:
+@>Play SE: 'Door exit', 100, 100
+@>Change Screen Color Tone: (-255,-255,-255,0), @6
+@>Wait: 8 frame(s)
+@>Transfer Player:[177: Tonishi], (060,057), Right, No Fade
+@>Change Screen Color Tone: (0,0,0,0), @6
+@>Wait: 8 frame(s)
+@>
+
+#------------------------------------------------------------------------------
+Event ID: 009
+Event Name: Haus 1 Tür
+(X,Y): (058,058)
+
+Page #1
+Conditions
+None
+
+Autonomous Movement
+Type: Fixed
+Speed: 3: Slow
+Freq: 3: Low
+Options Enabled
+Move Animation
+Trigger: Player Touch
+
+List of Event Commands:
+@>Play SE: 'Door exit', 100, 100
+@>Change Screen Color Tone: (-255,-255,-255,0), @6
+@>Wait: 8 frame(s)
+@>Transfer Player:[177: Tonishi], (060,058), Right, No Fade
+@>Change Screen Color Tone: (0,0,0,0), @6
+@>Wait: 8 frame(s)
+@>
+
+#------------------------------------------------------------------------------
 Event ID: 010
 Event Name: EV010
 (X,Y): (020,071)
@@ -448627,6 +449456,32 @@ List of Event Commands:
  :    : unberechenbar.
 @>Text: Manchmal schwöre ich, eine rote oder blaue 
  :    : Silhouette über den Wellen zu sehen.
+@>
+
+#------------------------------------------------------------------------------
+Event ID: 011
+Event Name: Haus 1 Tür
+(X,Y): (058,059)
+
+Page #1
+Conditions
+None
+
+Autonomous Movement
+Type: Fixed
+Speed: 3: Slow
+Freq: 3: Low
+Options Enabled
+Move Animation
+Trigger: Player Touch
+
+List of Event Commands:
+@>Play SE: 'Door exit', 100, 100
+@>Change Screen Color Tone: (-255,-255,-255,0), @6
+@>Wait: 8 frame(s)
+@>Transfer Player:[177: Tonishi], (060,059), Right, No Fade
+@>Change Screen Color Tone: (0,0,0,0), @6
+@>Wait: 8 frame(s)
 @>
 
 #------------------------------------------------------------------------------
@@ -448935,7 +449790,7 @@ List of Event Commands:
  @>Play SE: 'Door enter', 100, 100
  @>Change Screen Color Tone: (-255,-255,-255,0), @6
  @>Wait: 8 frame(s)
- @>Transfer Player:[163: MAP163], (020,050), Up, No Fade
+ @>Transfer Player:[163: Spheal-Life], (020,050), Up, No Fade
  @>Change Screen Color Tone: (0,0,0,0), @6
  @>
 : Else
@@ -448999,7 +449854,7 @@ List of Event Commands:
 @>Change Screen Color Tone: (-255,-255,-255,0), @6
 @>Wait: 8 frame(s)
 @>Change Transparent Flag: Normal
-@>Transfer Player:[492: Solhaven], (009,018), Up, No Fade
+@>Transfer Player:[492: Haus], (009,018), Up, No Fade
 @>Change Screen Color Tone: (0,0,0,0), @6
 @>
 
@@ -449100,7 +449955,7 @@ List of Event Commands:
 @>Change Screen Color Tone: (-255,-255,-255,0), @6
 @>Wait: 8 frame(s)
 @>Change Transparent Flag: Normal
-@>Transfer Player:[492: Solhaven], (009,018), Up, No Fade
+@>Transfer Player:[492: Haus], (009,018), Up, No Fade
 @>Change Screen Color Tone: (0,0,0,0), @6
 @>
 
@@ -449207,7 +450062,7 @@ List of Event Commands:
 @>Change Screen Color Tone: (-255,-255,-255,0), @6
 @>Wait: 8 frame(s)
 @>Change Transparent Flag: Normal
-@>Transfer Player:[491: Solhaven], (009,018), Up, No Fade
+@>Transfer Player:[491: Haus], (009,018), Up, No Fade
 @>Change Screen Color Tone: (0,0,0,0), @6
 @>
 
@@ -449308,7 +450163,7 @@ List of Event Commands:
 @>Change Screen Color Tone: (-255,-255,-255,0), @6
 @>Wait: 8 frame(s)
 @>Change Transparent Flag: Normal
-@>Transfer Player:[491: Solhaven], (009,018), Up, No Fade
+@>Transfer Player:[491: Haus], (009,018), Up, No Fade
 @>Change Screen Color Tone: (0,0,0,0), @6
 @>
 
