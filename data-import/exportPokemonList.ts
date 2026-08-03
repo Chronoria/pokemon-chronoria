@@ -8,7 +8,7 @@ import ExcelJS from "exceljs";
 import { join } from "node:path";
 import { parsePokemonMapLocations } from "./parsePokemonMapLocations.ts";
 import { writeGroupedSection, TITLE_FONT, NOTE_FONT, type ColumnDef } from "./xlsxGroupedSection.ts";
-import type { Pokemon } from "./dataModel.ts";
+import type { Pokemon, Item } from "./dataModel.ts";
 
 const OUT_PATH = join(import.meta.dirname, "..", "Pokemon-Uebersicht.xlsx");
 const GENERATIONS = [1, 2, 3, 4, 5, 6, 7, 8, 9];
@@ -44,8 +44,9 @@ function byDexNumber(a: Row, b: Row) {
   return a.dexNumber - b.dexNumber;
 }
 
-export async function exportPokemonListXlsx(pokemon: Pokemon[]) {
+export async function exportPokemonListXlsx(pokemon: Pokemon[], items: Item[]) {
   const pokemonById = new Map(pokemon.map((p) => [p.id, p]));
+  const itemById = new Map(items.map((i) => [i.id, i]));
   const eventLocations = parsePokemonMapLocations(pokemonById);
 
   const availableByGen = new Map<string | number, Row[]>();
@@ -65,7 +66,15 @@ export async function exportPokemonListXlsx(pokemon: Pokemon[]) {
     for (const f of forms) {
       const wildNames = f.foundIn.map((r) => r.locationName);
       const eventNames = (eventLocations.get(p.id)?.get(f.formNumber) ?? []).map((r) => r.locationName);
-      const locationNames = [...new Set([...wildNames, ...eventNames])].sort((a, b) => a.localeCompare(b, "de"));
+      // Mega Evolutions never have their own wild/event locations (they're only reached via the
+      // base species + an obtainable Mega Stone + Mega Ring) - count the form as "used" if its
+      // triggering stone is itself findable somewhere, instead of always showing as unused.
+      const megaStoneItem = f.megaStone ? itemById.get(f.megaStone) : undefined;
+      const megaStoneNames =
+        megaStoneItem && megaStoneItem.locations.length > 0 ? [`Mega-Stein verfügbar (${megaStoneItem.name})`] : [];
+      const locationNames = [...new Set([...wildNames, ...eventNames, ...megaStoneNames])].sort((a, b) =>
+        a.localeCompare(b, "de")
+      );
       const row: Row = {
         dexNumber,
         name: formLabel(p.name, f),
@@ -101,6 +110,8 @@ export async function exportPokemonListXlsx(pokemon: Pokemon[]) {
   sheet.getCell(row, 1).value =
     "Generiert aus Wildfang-Encounterdaten (parseEncounters.ts) und dem Map-Event-Dump (parsePokemonMapLocations.ts: " +
     "pbAddPokemon/pbAddPokemonSilent, pbGenerateEgg, Pokemon.new, pbStartTrade), automatisch bei jedem build-data-Lauf. " +
+    "Mega-Entwicklungen zählen zusätzlich als verwendet, sobald ihr auslösender Mega-Stein irgendwo auffindbar ist " +
+    "(auch ohne eigenen Wildfang/Event, da man sie nur über die Basis-Art + Stein + Mega-Armband erreicht). " +
     "Generationen stehen nebeneinander, sortiert nach Dex-Nummer. \"ID\" ist die interne PBS-ID (inkl. \"_N\"-Formen-Suffix). " +
     "Fundorte fassen Wildfang- und Event-/Geschenk-/Tausch-/Ei-Vorkommen zusammen, ohne die Quelle zu unterscheiden. " +
     "Bekannte Essentials-Demo-/Test-Maps werden ausgeschlossen (siehe parseMapLocations.ts EXCLUDED_MAP_IDS).";

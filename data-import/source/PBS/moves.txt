@@ -495,7 +495,7 @@ Flags = Contact,CanProtect,CanMirrorMove
 Description = The user lashes out to vent its frustration. Power is doubled if its stats dropped this turn.
 #-------------------------------
 [NIGHTSLASH]
-Name = Night Slash
+Name = Nachthieb
 Type = DARK
 Category = Physical
 Power = 70
@@ -507,7 +507,7 @@ Flags = Contact,CanProtect,CanMirrorMove,HighCriticalHitRate
 Description = The user slashes the target the instant an opportunity arises. Critical hits land more easily.
 #-------------------------------
 [SUCKERPUNCH]
-Name = Sucker Punch
+Name = Tiefschlag
 Type = DARK
 Category = Physical
 Power = 70
@@ -520,7 +520,7 @@ Flags = Contact,CanProtect,CanMirrorMove
 Description = This move enables the user to attack first. It fails if the target is not readying an attack, however.
 #-------------------------------
 [KNOCKOFF]
-Name = Knock Off
+Name = Abschlag
 Type = DARK
 Category = Physical
 Power = 65
@@ -722,7 +722,7 @@ Flags = CanProtect,CanMirrorMove
 Description = Flattery is used to confuse the target. However, it also raises the target's Sp. Atk stat.
 #-------------------------------
 [HONECLAWS]
-Name = Hone Claws
+Name = Klauenwetzer
 Type = DARK
 Category = Status
 Accuracy = 0
@@ -1844,7 +1844,7 @@ Flags = Contact,CanProtect,CanMirrorMove
 Description = The target is attacked with a knee kick from a jump. If it misses, the user is hurt instead.
 #-------------------------------
 [CLOSECOMBAT]
-Name = Close Combat
+Name = Nahkampf
 Type = FIGHTING
 Category = Physical
 Power = 120
@@ -1942,7 +1942,7 @@ Flags = Contact,CanProtect,CanMirrorMove
 Description = The user jumps up high, then strikes with a kick. If the kick misses, the user hurts itself.
 #-------------------------------
 [SACREDSWORD]
-Name = Sacred Sword
+Name = Sanctoklinge
 Type = FIGHTING
 Category = Physical
 Power = 90
@@ -2027,7 +2027,7 @@ Flags = Contact,CanProtect,CanMirrorMove
 Description = The user grabs the target and recklessly dives for the ground. It also hurts the user slightly.
 #-------------------------------
 [BRICKBREAK]
-Name = Brick Break
+Name = Durchbruch
 Type = FIGHTING
 Category = Physical
 Power = 75
@@ -3308,7 +3308,7 @@ Flags = Contact,CanProtect,CanMirrorMove,Punching
 Description = The user throws a punch from the shadows. The punch lands without fail.
 #-------------------------------
 [SHADOWSNEAK]
-Name = Shadow Sneak
+Name = Schattenstoß
 Type = GHOST
 Category = Physical
 Power = 40
@@ -4498,7 +4498,7 @@ EffectChance = 100
 Description = The user attacks with a gust of chilled air. It also lowers the targets' Speed stat.
 #-------------------------------
 [ICESHARD]
-Name = Ice Shard
+Name = Eissplitter
 Type = ICE
 Category = Physical
 Power = 40
@@ -5054,7 +5054,7 @@ EffectChance = 30
 Description = The user attacks with a secret power. Its added effects vary depending on the user's environment.
 #-------------------------------
 [SLASH]
-Name = Slash
+Name = Schlitzer
 Type = NORMAL
 Category = Physical
 Power = 70
@@ -5916,7 +5916,7 @@ Flags = CanProtect,CanMirrorMove
 Description = The user flashes a light that cuts the target's accuracy. It can also be used to illuminate caves.
 #-------------------------------
 [FOCUSENERGY]
-Name = Focus Energy
+Name = Energiefokus
 Type = NORMAL
 Category = Status
 Accuracy = 0
@@ -6539,7 +6539,7 @@ Flags = CanProtect,CanMirrorMove
 Description = A sweet scent that lowers the foe's evasiveness. It also lures wild Pokémon if used in grass, etc.
 #-------------------------------
 [SWORDSDANCE]
-Name = Swords Dance
+Name = Schwerttanz
 Type = NORMAL
 Category = Status
 Accuracy = 0
@@ -7213,7 +7213,7 @@ EffectChance = 50
 Description = A mistlike flurry of down envelops and damages the target. It may also lower the target's Sp. Atk.
 #-------------------------------
 [PSYCHOCUT]
-Name = Psycho Cut
+Name = Psychoklinge
 Type = PSYCHIC
 Category = Physical
 Power = 70
@@ -7766,7 +7766,7 @@ EffectChance = 50
 Description = The user whips up a storm of diamonds to damage foes. This may also sharply raise the user's Defense stat.
 #-------------------------------
 [STONEEDGE]
-Name = Stone Edge
+Name = Steinkante
 Type = ROCK
 Category = Physical
 Power = 100
@@ -8065,7 +8065,7 @@ EffectChance = 10
 Description = The user gathers all its light energy and releases it at once. It may also lower the target's Sp. Def stat.
 #-------------------------------
 [IRONHEAD]
-Name = Iron Head
+Name = Eisenschädel
 Type = STEEL
 Category = Physical
 Power = 80
@@ -8166,7 +8166,7 @@ EffectChance = 10
 Description = The target is raked with steel claws. It may also raise the user's Attack stat.
 #-------------------------------
 [BULLETPUNCH]
-Name = Bullet Punch
+Name = Patronenhieb
 Type = STEEL
 Category = Physical
 Power = 40
@@ -8245,7 +8245,7 @@ FunctionCode = RaiseUserDefense2
 Description = The user hardens its body's surface like iron, sharply raising its Defense stat.
 #-------------------------------
 [KINGSSHIELD]
-Name = King's Shield
+Name = Königsschild
 Type = STEEL
 Category = Status
 Accuracy = 0
@@ -8338,7 +8338,7 @@ EffectChance = 30
 Description = The user immerses the target in superheated steam. This may also leave the target with a burn.
 #-------------------------------
 [CRABHAMMER]
-Name = Crabhammer
+Name = Krabbhammer
 Type = WATER
 Category = Physical
 Power = 100
@@ -8487,7 +8487,7 @@ EffectChance = 20
 Description = The user charges at the target and may make it flinch. It can also be used to climb a waterfall.
 #-------------------------------
 [RAZORSHELL]
-Name = Razor Shell
+Name = Kalkklinge
 Type = WATER
 Category = Physical
 Power = 75
@@ -8563,7 +8563,7 @@ EffectChance = 20
 Description = The user attacks the target with a pulsing blast of water. It may also confuse the target.
 #-------------------------------
 [AQUAJET]
-Name = Aqua Jet
+Name = Wasserdüse
 Type = WATER
 Category = Physical
 Power = 40

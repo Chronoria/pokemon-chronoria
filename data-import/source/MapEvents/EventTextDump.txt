@@ -176161,7 +176161,8 @@ List of Event Commands:
 :       :   :WHIPPEDDREAM, :BERRYSWEET,
 :       :   :FLOWERSWEET, :STRAWBERRYSWEET,
 :       :   :LOVESWEET, :CLOVERSWEET,
-:       :   :RIBBONSWEET, :STARSWEET
+:       :   :RIBBONSWEET, :STARSWEET,
+:       :   :SWEETHEART, :ENERGYPOWDER
 :       : ])
 @>
 
@@ -264804,6 +264805,7 @@ Trigger: Autorun
 
 List of Event Commands:
 @>Control Switches: [0061: Erstes Event] = ON
+@>Script: $bag.add(:TOWNMAP)
 @>Set Event Location: [EV017],(027,018), Down
 @>Set Event Location: [EV016],(029,018), Down
 @>Set Event Location: [Vater],(031,027)
@@ -264846,6 +264848,7 @@ List of Event Commands:
  :              : $>Move Right
  :              : $>Turn Up
 @>Wait for Move's Completion
+@>Control Switches: [0186: Start abgeschlossen] = ON
 @>Set Move Route: [Matteo]
  :              : $>Turn Up
 @>Set Move Route: [EV016]

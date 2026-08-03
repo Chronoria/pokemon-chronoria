@@ -1,5 +1,75 @@
 ﻿# See the documentation on the wiki to learn how to edit this file.
 #-------------------------------
+[GAMBLER,Rocco]
+LoseText = Haha... na gut, das Glück war heute wohl ganz auf deiner Seite!
+Pokemon = ZANGOOSE,25
+    Moves = SLASH,NIGHTSLASH,SWORDSDANCE,XSCISSOR
+    Nature = ADAMANT
+    Item = RAZORCLAW
+Pokemon = KABUTOPS,25
+    Moves = NIGHTSLASH,STONEEDGE,AQUAJET,ANCIENTPOWER
+    Nature = ADAMANT
+    AbilityIndex = 1
+    Item = SCOPELENS
+#-------------------------------
+[GAMBLER,Rocco,1]
+LoseText = Haha... na gut, das Glück war heute wohl ganz auf deiner Seite!
+Pokemon = SCIZOR,30
+    Moves = SLASH,BULLETPUNCH,FOCUSENERGY,XSCISSOR
+    Nature = ADAMANT
+    AbilityIndex = 1
+    Item = SCOPELENS
+Pokemon = WEAVILE,30
+    Moves = NIGHTSLASH,ICESHARD,HONECLAWS,DARKPULSE
+    Nature = JOLLY
+    Item = RAZORCLAW
+Pokemon = HONEDGE,30
+    Moves = NIGHTSLASH,SHADOWSNEAK,SWORDSDANCE,IRONHEAD
+    Nature = ADAMANT
+#-------------------------------
+[GAMBLER,Rocco,2]
+LoseText = Haha... na gut, das Glück war heute wohl ganz auf deiner Seite!
+Pokemon = KINGLER,35
+    Moves = CRABHAMMER,SWORDSDANCE,RAZORSHELL,GUILLOTINE
+    Nature = ADAMANT
+    AbilityIndex = 0
+    Item = RAZORCLAW
+Pokemon = GALLADE,35
+    Moves = NIGHTSLASH,PSYCHOCUT,CLOSECOMBAT,SWORDSDANCE
+    Nature = JOLLY
+    Item = SCOPELENS
+Pokemon = ABSOL,35
+    Moves = NIGHTSLASH,SLASH,FOCUSENERGY,SUCKERPUNCH
+    Nature = JOLLY
+    AbilityIndex = 1
+Pokemon = AEGISLASH,35
+    Moves = NIGHTSLASH,SACREDSWORD,IRONHEAD,KINGSSHIELD
+    Nature = ADAMANT
+#-------------------------------
+[GAMBLER,Rocco,3]
+LoseText = Haha... na gut, das Glück war heute wohl ganz auf deiner Seite!
+Pokemon = KINGLER,40
+    Moves = CRABHAMMER,SWORDSDANCE,RAZORSHELL,GUILLOTINE
+    Nature = ADAMANT
+    AbilityIndex = 0
+    Item = RAZORCLAW
+Pokemon = GALLADE,40
+    Moves = NIGHTSLASH,PSYCHOCUT,CLOSECOMBAT,SWORDSDANCE
+    Nature = JOLLY
+    Item = SCOPELENS
+Pokemon = AEGISLASH,40
+    Moves = NIGHTSLASH,SACREDSWORD,IRONHEAD,KINGSSHIELD
+    Nature = ADAMANT
+Pokemon = ABSOL,40
+    Moves = NIGHTSLASH,SLASH,FOCUSENERGY,SUCKERPUNCH
+    Nature = JOLLY
+    AbilityIndex = 1
+    Item = SCOPELENS
+Pokemon = SIRFETCHD,40
+    Moves = LEAFBLADE,SWORDSDANCE,KNOCKOFF,BRICKBREAK
+    Nature = ADAMANT
+    Item = LEEK
+#-------------------------------
 [CAMPER_M,Liam]
 LoseText = A very good battle, indeed!
 Pokemon = DIGLETT,10

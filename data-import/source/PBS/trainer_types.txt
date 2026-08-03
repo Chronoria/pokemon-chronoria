@@ -706,7 +706,7 @@ BaseMoney = 32
 IntroBGM = ORAS 079 Trainers_ Eyes Meet (Swimmer)
 #-------------------------------
 [GAMBLER]
-Name = Rollenspieler
+Name = Glücksspieler
 Gender = Male
 BaseMoney = 72
 SkillLevel = 32
