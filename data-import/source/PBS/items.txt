@@ -8965,22 +8965,6 @@ Price = 0
 SellPrice = 0
 Flags = KeyItem
 Description = Eine Schlüsselkarte für eine unbekannte Tür.
-#-------------------------------------------------------------------------------Löschen
-[KAEFERSAMMLERITEM]
-Name = Käfersammleritem
-NamePlural = Erkundungs-Sets
-Pocket = 8
-Price = 0
-Flags = KeyItem
-Description = Das volle Repertoire, um brüchige Felswände aufzuschlagen.
-#-------------------------------------------------------------------------------Löschen
-[PROFIANGLERITEM]
-Name = Käfersammleritem
-NamePlural = Erkundungs-Sets
-Pocket = 8
-Price = 0
-Flags = KeyItem
-Description = Das volle Repertoire, um brüchige Felswände aufzuschlagen.
 #-------------------------------------------------------------------------------Einzigartig
 [ENKELGESCHENK]
 Name = Geschenk für Enkel

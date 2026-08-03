@@ -115863,7 +115863,7 @@ List of Event Commands:
   @>Conditional Branch: Script: $bag.has?(:TM219)
    @>
   : Else
-   @>Script: pbReceiveItem(:KAEFERSAMMLERITEM)
+   @>Script: pbReceiveItem(:TM219)
    @>Control Switches: [0091: Käfersammleritem] = ON
    @>
   : Branch End
