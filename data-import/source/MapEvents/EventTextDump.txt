@@ -38981,6 +38981,48 @@ List of Event Commands:
 @>
 
 #------------------------------------------------------------------------------
+Event ID: 009
+Event Name: Item
+(X,Y): (047,033)
+
+Page #1
+Conditions
+None
+
+Graphic: Items Amigento-Discs 2
+
+Autonomous Movement
+Type: Fixed
+Speed: 3: Slow
+Freq: 3: Low
+Options Enabled
+Move Animation
+Direction Fix
+Trigger: Action Button
+
+List of Event Commands:
+@>Conditional Branch: Script: pbItemBall(:EXPCANDYXS)
+ @>Control Self Switch: A =ON
+ @>
+: Branch End
+@>
+
+Page #2
+Conditions
+Self Switch A is ON
+
+Autonomous Movement
+Type: Fixed
+Speed: 3: Slow
+Freq: 3: Low
+Options Enabled
+Move Animation
+Trigger: Action Button
+
+List of Event Commands:
+@>
+
+#------------------------------------------------------------------------------
 Event ID: 010
 Event Name: Ast
 (X,Y): (041,025)
@@ -53787,6 +53829,48 @@ Freq: 6: Highest
 Options Enabled
 Move Animation
 Through
+Trigger: Action Button
+
+List of Event Commands:
+@>
+
+#------------------------------------------------------------------------------
+Event ID: 073
+Event Name: Item
+(X,Y): (014,006)
+
+Page #1
+Conditions
+None
+
+Graphic: Items Amigento-Discs 2
+
+Autonomous Movement
+Type: Fixed
+Speed: 3: Slow
+Freq: 3: Low
+Options Enabled
+Move Animation
+Direction Fix
+Trigger: Action Button
+
+List of Event Commands:
+@>Conditional Branch: Script: pbItemBall(:EXPCANDYXS)
+ @>Control Self Switch: A =ON
+ @>
+: Branch End
+@>
+
+Page #2
+Conditions
+Self Switch A is ON
+
+Autonomous Movement
+Type: Fixed
+Speed: 3: Slow
+Freq: 3: Low
+Options Enabled
+Move Animation
 Trigger: Action Button
 
 List of Event Commands:
@@ -83830,6 +83914,48 @@ List of Event Commands:
 @>
 
 #------------------------------------------------------------------------------
+Event ID: 042
+Event Name: Item
+(X,Y): (025,006)
+
+Page #1
+Conditions
+None
+
+Graphic: Items Amigento-Discs 2
+
+Autonomous Movement
+Type: Fixed
+Speed: 3: Slow
+Freq: 3: Low
+Options Enabled
+Move Animation
+Direction Fix
+Trigger: Action Button
+
+List of Event Commands:
+@>Conditional Branch: Script: pbItemBall(:EXPCANDYL)
+ @>Control Self Switch: A =ON
+ @>
+: Branch End
+@>
+
+Page #2
+Conditions
+Self Switch A is ON
+
+Autonomous Movement
+Type: Fixed
+Speed: 3: Slow
+Freq: 3: Low
+Options Enabled
+Move Animation
+Trigger: Action Button
+
+List of Event Commands:
+@>
+
+#------------------------------------------------------------------------------
 Event ID: 043
 Event Name: Tannza
 (X,Y): (048,001)
@@ -85037,13 +85163,21 @@ List of Event Commands:
  @>Wait: 20 frame(s)
  @>Play SE: 'SNORLAX', 100, 100
  @>Script: setBattleRule("cannotRun")
+ :       : setBattleRule("outcome", 48)
  :       : pkmn = Pokemon.new(:SNORLAX, 45)
  :       : pkmn.ability_index = 2
  :       : pkmn.calc_stats
  :       : WildBattle.start(pkmn)
- @>Script: pbSetSelfSwitch(19,"B",true)
- @>Control Switches: [0261: Relaxo besiegt] = ON
- @>Control Self Switch: B =ON
+ @>Conditional Branch: Variable [0048: Kampf-Ergebnis] == 2
+  @>Exit Event Processing
+  @>
+ : Else
+  @>Script: pbSetSelfSwitch(19,"B",true)
+  @>Script: pbReceiveItem(:FULLINCENSE)
+  @>Control Switches: [0261: Relaxo besiegt] = ON
+  @>Control Self Switch: B =ON
+  @>
+ : Branch End
  @>
 : Else
  @>
@@ -88736,6 +88870,48 @@ Freq: 1: Lowest
 Options Enabled
 Move Animation
 Stop Animation
+Trigger: Action Button
+
+List of Event Commands:
+@>
+
+#------------------------------------------------------------------------------
+Event ID: 088
+Event Name: Item
+(X,Y): (010,017)
+
+Page #1
+Conditions
+None
+
+Graphic: Items Amigento-Discs 2
+
+Autonomous Movement
+Type: Fixed
+Speed: 3: Slow
+Freq: 3: Low
+Options Enabled
+Move Animation
+Direction Fix
+Trigger: Action Button
+
+List of Event Commands:
+@>Conditional Branch: Script: pbItemBall(:EXPCANDYXS)
+ @>Control Self Switch: A =ON
+ @>
+: Branch End
+@>
+
+Page #2
+Conditions
+Self Switch A is ON
+
+Autonomous Movement
+Type: Fixed
+Speed: 3: Slow
+Freq: 3: Low
+Options Enabled
+Move Animation
 Trigger: Action Button
 
 List of Event Commands:
@@ -104294,6 +104470,48 @@ List of Event Commands:
 @>
 
 #------------------------------------------------------------------------------
+Event ID: 123
+Event Name: Item
+(X,Y): (071,010)
+
+Page #1
+Conditions
+None
+
+Graphic: Items Amigento-Discs 2
+
+Autonomous Movement
+Type: Fixed
+Speed: 3: Slow
+Freq: 3: Low
+Options Enabled
+Move Animation
+Direction Fix
+Trigger: Action Button
+
+List of Event Commands:
+@>Conditional Branch: Script: pbItemBall(:EXPCANDYXL)
+ @>Control Self Switch: A =ON
+ @>
+: Branch End
+@>
+
+Page #2
+Conditions
+Self Switch A is ON
+
+Autonomous Movement
+Type: Fixed
+Speed: 3: Slow
+Freq: 3: Low
+Options Enabled
+Move Animation
+Trigger: Action Button
+
+List of Event Commands:
+@>
+
+#------------------------------------------------------------------------------
 
 #==============================================================================
 Map ID: 157
@@ -106463,6 +106681,48 @@ List of Event Commands:
 @>Script: pbReceiveItem(:REVIVE)
 @>Script: pbUnlist(@event_id)
 @>Control Self Switch: A =ON
+@>
+
+Page #2
+Conditions
+Self Switch A is ON
+
+Autonomous Movement
+Type: Fixed
+Speed: 3: Slow
+Freq: 3: Low
+Options Enabled
+Move Animation
+Trigger: Action Button
+
+List of Event Commands:
+@>
+
+#------------------------------------------------------------------------------
+Event ID: 057
+Event Name: Item
+(X,Y): (043,020)
+
+Page #1
+Conditions
+None
+
+Graphic: Items Amigento-Discs 2
+
+Autonomous Movement
+Type: Fixed
+Speed: 3: Slow
+Freq: 3: Low
+Options Enabled
+Move Animation
+Direction Fix
+Trigger: Action Button
+
+List of Event Commands:
+@>Conditional Branch: Script: pbItemBall(:EXPCANDYM)
+ @>Control Self Switch: A =ON
+ @>
+: Branch End
 @>
 
 Page #2
@@ -110651,6 +110911,48 @@ List of Event Commands:
 @>
 
 #------------------------------------------------------------------------------
+Event ID: 091
+Event Name: Item
+(X,Y): (011,041)
+
+Page #1
+Conditions
+None
+
+Graphic: Items Amigento-Discs 2
+
+Autonomous Movement
+Type: Fixed
+Speed: 3: Slow
+Freq: 3: Low
+Options Enabled
+Move Animation
+Direction Fix
+Trigger: Action Button
+
+List of Event Commands:
+@>Conditional Branch: Script: pbItemBall(:EXPCANDYS)
+ @>Control Self Switch: A =ON
+ @>
+: Branch End
+@>
+
+Page #2
+Conditions
+Self Switch A is ON
+
+Autonomous Movement
+Type: Fixed
+Speed: 3: Slow
+Freq: 3: Low
+Options Enabled
+Move Animation
+Trigger: Action Button
+
+List of Event Commands:
+@>
+
+#------------------------------------------------------------------------------
 
 #==============================================================================
 Map ID: 162
@@ -112372,6 +112674,90 @@ List of Event Commands:
 @>
 
 #------------------------------------------------------------------------------
+Event ID: 035
+Event Name: Item
+(X,Y): (007,042)
+
+Page #1
+Conditions
+None
+
+Graphic: Items Amigento-Discs 2
+
+Autonomous Movement
+Type: Fixed
+Speed: 3: Slow
+Freq: 3: Low
+Options Enabled
+Move Animation
+Direction Fix
+Trigger: Action Button
+
+List of Event Commands:
+@>Conditional Branch: Script: pbItemBall(:EXPCANDYL)
+ @>Control Self Switch: A =ON
+ @>
+: Branch End
+@>
+
+Page #2
+Conditions
+Self Switch A is ON
+
+Autonomous Movement
+Type: Fixed
+Speed: 3: Slow
+Freq: 3: Low
+Options Enabled
+Move Animation
+Trigger: Action Button
+
+List of Event Commands:
+@>
+
+#------------------------------------------------------------------------------
+Event ID: 036
+Event Name: Item
+(X,Y): (056,056)
+
+Page #1
+Conditions
+None
+
+Graphic: Items Amigento-Discs 2
+
+Autonomous Movement
+Type: Fixed
+Speed: 3: Slow
+Freq: 3: Low
+Options Enabled
+Move Animation
+Direction Fix
+Trigger: Action Button
+
+List of Event Commands:
+@>Conditional Branch: Script: pbItemBall(:EXPCANDYL)
+ @>Control Self Switch: A =ON
+ @>
+: Branch End
+@>
+
+Page #2
+Conditions
+Self Switch A is ON
+
+Autonomous Movement
+Type: Fixed
+Speed: 3: Slow
+Freq: 3: Low
+Options Enabled
+Move Animation
+Trigger: Action Button
+
+List of Event Commands:
+@>
+
+#------------------------------------------------------------------------------
 
 #==============================================================================
 Map ID: 163
@@ -113378,6 +113764,29 @@ List of Event Commands:
 @>Wait: 8 frame(s)
 @>Transfer Player:[177: Tonishi], (047,038), Down, No Fade
 @>Change Screen Color Tone: (0,0,0,0), @6
+@>
+
+#------------------------------------------------------------------------------
+Event ID: 037
+Event Name: EV037
+(X,Y): (020,041)
+
+Page #1
+Conditions
+None
+
+Graphic: NPC_Frau 15
+
+Autonomous Movement
+Type: Fixed
+Speed: 3: Slow
+Freq: 3: Low
+Options Enabled
+Move Animation
+Trigger: Action Button
+
+List of Event Commands:
+@>Text: Willkommen im Spheal-Life.
 @>
 
 #------------------------------------------------------------------------------
@@ -115020,7 +115429,7 @@ Trigger: Autorun
 List of Event Commands:
 @>Text: \xn[Prüfungsbeauftragter]Herzlich Willkommen zur 
  :    : Siegerehrung des heutigen Käfersammler-Turniers!
-@>Conditional Branch: Script: $bag.has?(:KAEFERSAMMLERITEM)
+@>Conditional Branch: Script: $bag.has?(:TM219)
  @>Text: \xn[Prüfungsbeauftragter]Die ersten drei Plätze 
   :    : erhalten eine Überraschung!
  @>
@@ -115075,10 +115484,10 @@ List of Event Commands:
   @>Text: \me[Bug contest 1st]\b\PN, der Gewinner bekommt 
    :    : das \v[3]!
   @>Script: pbReceiveItem(pbGet(1))
-  @>Conditional Branch: Script: $bag.has?(:KAEFERSAMMLERITEM)
+  @>Conditional Branch: Script: $bag.has?(:TM219)
    @>
   : Else
-   @>Script: pbReceiveItem(:KAEFERSAMMLERITEM)
+   @>Script: pbReceiveItem(:TM219)
    @>Control Switches: [0091: Käfersammleritem] = ON
    @>
   : Branch End
@@ -115089,7 +115498,7 @@ List of Event Commands:
    :    : \PN einen Sonnenstein!
   @>Script: pbReceiveItem(:SUNSTONE)
   @>Control Variables: [0036: Turnier mind. dritter] = 1
-  @>Conditional Branch: Script: $bag.has?(:KAEFERSAMMLERITEM)
+  @>Conditional Branch: Script: $bag.has?(:TM219)
    @>
   : Else
    @>Script: pbReceiveItem(:KAEFERSAMMLERITEM)
@@ -115106,10 +115515,10 @@ List of Event Commands:
   :    : \PN einen Ewigstein!
  @>Script: pbReceiveItem(:EVERSTONE)
  @>Control Variables: [0036: Turnier mind. dritter] = 1
- @>Conditional Branch: Script: $bag.has?(:KAEFERSAMMLERITEM)
+ @>Conditional Branch: Script: $bag.has?(:TM219)
   @>
  : Else
-  @>Script: pbReceiveItem(:KAEFERSAMMLERITEM)
+  @>Script: pbReceiveItem(:TM219)
   @>Control Switches: [0091: Käfersammleritem] = ON
   @>
  : Branch End
@@ -115121,10 +115530,10 @@ List of Event Commands:
   :    : \PN eine Tsitrubeere!
  @>Script: pbReceiveItem(:SITRUSBERRY)
  @>Control Variables: [0036: Turnier mind. dritter] = 1
- @>Conditional Branch: Script: $bag.has?(:KAEFERSAMMLERITEM)
+ @>Conditional Branch: Script: $bag.has?(:TM219)
   @>
  : Else
-  @>Script: pbReceiveItem(:KAEFERSAMMLERITEM)
+  @>Script: pbReceiveItem(:TM219)
   @>Control Switches: [0091: Käfersammleritem] = ON
   @>
  : Branch End
@@ -127059,14 +127468,14 @@ List of Event Commands:
 
 #------------------------------------------------------------------------------
 Event ID: 037
-Event Name: Seempos .sl
-(X,Y): (047,036)
+Event Name: Item
+(X,Y): (079,060)
 
 Page #1
 Conditions
 None
 
-Graphic: SPHEAL Museum
+Graphic: ITEM Fossile
 
 Autonomous Movement
 Type: Fixed
@@ -127074,7 +127483,26 @@ Speed: 3: Slow
 Freq: 3: Low
 Options Enabled
 Move Animation
-Always on Top
+Direction Fix
+Trigger: Action Button
+
+List of Event Commands:
+@>Conditional Branch: Script: pbItemBall(:PLUMEFOSSIL)
+ @>Control Self Switch: A =ON
+ @>
+: Branch End
+@>
+
+Page #2
+Conditions
+Self Switch A is ON
+
+Autonomous Movement
+Type: Fixed
+Speed: 3: Slow
+Freq: 3: Low
+Options Enabled
+Move Animation
 Trigger: Action Button
 
 List of Event Commands:
@@ -127256,6 +127684,90 @@ List of Event Commands:
 @>Transfer Player:[633: Tonishi], (057,059), Left, No Fade
 @>Change Screen Color Tone: (0,0,0,0), @6
 @>Wait: 8 frame(s)
+@>
+
+#------------------------------------------------------------------------------
+Event ID: 042
+Event Name: Item
+(X,Y): (114,101)
+
+Page #1
+Conditions
+None
+
+Graphic: Items Amigento-Discs 2
+
+Autonomous Movement
+Type: Fixed
+Speed: 3: Slow
+Freq: 3: Low
+Options Enabled
+Move Animation
+Direction Fix
+Trigger: Action Button
+
+List of Event Commands:
+@>Conditional Branch: Script: pbItemBall(:EXPCANDYL)
+ @>Control Self Switch: A =ON
+ @>
+: Branch End
+@>
+
+Page #2
+Conditions
+Self Switch A is ON
+
+Autonomous Movement
+Type: Fixed
+Speed: 3: Slow
+Freq: 3: Low
+Options Enabled
+Move Animation
+Trigger: Action Button
+
+List of Event Commands:
+@>
+
+#------------------------------------------------------------------------------
+Event ID: 043
+Event Name: Item
+(X,Y): (073,106)
+
+Page #1
+Conditions
+None
+
+Graphic: Items Amigento-Discs 2
+
+Autonomous Movement
+Type: Fixed
+Speed: 3: Slow
+Freq: 3: Low
+Options Enabled
+Move Animation
+Direction Fix
+Trigger: Action Button
+
+List of Event Commands:
+@>Conditional Branch: Script: pbItemBall(:EXPCANDYL)
+ @>Control Self Switch: A =ON
+ @>
+: Branch End
+@>
+
+Page #2
+Conditions
+Self Switch A is ON
+
+Autonomous Movement
+Type: Fixed
+Speed: 3: Slow
+Freq: 3: Low
+Options Enabled
+Move Animation
+Trigger: Action Button
+
+List of Event Commands:
 @>
 
 #------------------------------------------------------------------------------
@@ -129542,7 +130054,7 @@ Page #1
 Conditions
 None
 
-Graphic: Items3
+Graphic: ITEM Fossile
 
 Autonomous Movement
 Type: Fixed
@@ -129554,7 +130066,7 @@ Direction Fix
 Trigger: Action Button
 
 List of Event Commands:
-@>Conditional Branch: Script: pbItemBall(:SKULLFOSSIL)
+@>Conditional Branch: Script: pbItemBall(:FOSSILIZEDDINO)
  @>Control Self Switch: A =ON
  @>
 : Branch End
@@ -130329,6 +130841,48 @@ Trigger: Parallel Process
 
 List of Event Commands:
 @>Play BGS: 'PR - Temple Ambience', 80, 100
+@>
+
+#------------------------------------------------------------------------------
+Event ID: 018
+Event Name: Item
+(X,Y): (011,013)
+
+Page #1
+Conditions
+None
+
+Graphic: Items Amigento-Discs 2
+
+Autonomous Movement
+Type: Fixed
+Speed: 3: Slow
+Freq: 3: Low
+Options Enabled
+Move Animation
+Direction Fix
+Trigger: Action Button
+
+List of Event Commands:
+@>Conditional Branch: Script: pbItemBall(:EXPCANDYS)
+ @>Control Self Switch: A =ON
+ @>
+: Branch End
+@>
+
+Page #2
+Conditions
+Self Switch A is ON
+
+Autonomous Movement
+Type: Fixed
+Speed: 3: Slow
+Freq: 3: Low
+Options Enabled
+Move Animation
+Trigger: Action Button
+
+List of Event Commands:
 @>
 
 #------------------------------------------------------------------------------
@@ -139833,159 +140387,6 @@ List of Event Commands:
 @>
 
 Page #2
-Conditions
-Self Switch A is ON
-
-Autonomous Movement
-Type: Fixed
-Speed: 3: Slow
-Freq: 3: Low
-Options Enabled
-Move Animation
-Trigger: Action Button
-
-List of Event Commands:
-@>
-
-#------------------------------------------------------------------------------
-Event ID: 125
-Event Name: EV125
-(X,Y): (057,046)
-
-Page #1
-Conditions
-None
-
-Autonomous Movement
-Type: Fixed
-Speed: 3: Slow
-Freq: 3: Low
-Options Enabled
-Move Animation
-Trigger: Event Touch
-
-List of Event Commands:
-@>Set Event Location: [Arenaleiter Marvin],(049,044), Right
-@>Set Move Route: [Arenaleiter Marvin]
- :              : $>Move Right
- :              : $>Move Right
- :              : $>Move Right
- :              : $>Turn Down
-@>Show Animation: Player, [Exclaim bubble]
-@>Wait for Move's Completion
-@>Text: \xn[????]Hey du!
-@>Text: \xn[????]Irgendetwas ist im Kraftwerk passiert,
- :    : besser ist es, wenn du von hier verschwindest!
-@>Text: \xn[????]Ach, du bist ein Pokémon-Trainer?
-@>Text: \xn[????]Kurz gesagt, wir wissen nicht 
- :    : genau was passiert ist.
-@>Text: \xn[????]Das Kraftwerk ist abgeschaltet und die 
- :    : Region wird aktuell über unseren Energie-Speicher 
- :    : versorgt!
-@>Text: \xn[????]Dieser hat aber nur für kurze Zeit 
- :    : Energie gespeichert.
-@>Text: \xn[????]Als Pokémon-Trainer hilfst du uns 
- :    : bestimmt das Kraftwerk wieder in Betrieb zu 
- :    : nehmen?
-@>Show Choices: Ja, Nein
-(When Cancel: Choice 2)
-: When [Ja]
- @>Show Animation: [Arenaleiter Marvin], [Smile bubble]
- @>Text: \xn[????]Perfekt!
- @>
-: When [Nein]
- @>Show Animation: [Arenaleiter Marvin], [Sad bubble]
- @>Text: \xn[????]Ich dachte du wärst ein richtiger Pokémon-
-  :    : Trainer.
- @>Text: \xn[????]Ein richtiger Trainer hat keine Angst vor 
-  :    : einer Herausforderung!
- @>Text: \xn[????]Ich werde aus dir noch einen richtigen 
-  :    : Pokémon-Trainer machen!
- @>Text: \xn[????]Also pack jetzt mit an!
- @>
-: Branch End
-@>Text: \xn[????]Zuerst müssen die Solar-Felder 
- :    : eingeschaltet werden!
-@>Scroll Map: Down, 15, 4
-@>Scroll Map: Left, 26, 4
-@>Wait: 92 frame(s)
-@>Scroll Map: Up, 15, 6
-@>Scroll Map: Right, 26, 6
-@>Text: \xn[????]Hier!\nDas könnte dir helfen!
-@>Script: pbItemBall(:STRENGTHITEM)
-@>Text: \xn[????]Und jetzt los!
-@>Set Move Route: [Arenaleiter Marvin]
- :              : $>Move Right
- :              : $>Move Right
-@>Wait for Move's Completion
-@>Set Event Location: [Arenaleiter Marvin],(087,023), Right
-@>Set Move Route: Player
- :              : $>Move Down
-@>Wait for Move's Completion
-@>Control Switches: [0098: Kraftwerk start] = ON
-@>
-
-Page #2
-Conditions
-Switch 0098: Kraftwerk start is ON
-
-Autonomous Movement
-Type: Fixed
-Speed: 3: Slow
-Freq: 3: Low
-Options Enabled
-Move Animation
-Trigger: Player Touch
-
-List of Event Commands:
-@>Text: Du musst erst die beiden Solar-Felder einschalten!
-@>Set Move Route: Player
- :              : $>Move Down
-@>Wait for Move's Completion
-@>
-
-Page #3
-Conditions
-Switch 0096: Solar1 is ON
-Switch 0097: Solar2 is ON
-
-Autonomous Movement
-Type: Fixed
-Speed: 3: Slow
-Freq: 3: Low
-Options Enabled
-Move Animation
-Trigger: Event Touch
-
-List of Event Commands:
-@>Set Event Location: [Arenaleiter Marvin],(054,044), Left
-@>Set Move Route: [Arenaleiter Marvin]
- :              : $>Move Left
- :              : $>Move Left
- :              : $>Turn Down
-@>Text: \xn[????]Super!\nDu hast die Solar-Felder wieder eingeschaltet!
-@>Text: \xn[????]Jetzt muss nur noch der Wind-Park wieder 
- :    : in Betrieb genommen werden!
-@>Scroll Map: Up, 33, 4
-@>Scroll Map: Left, 36, 4
-@>Wait: 92 frame(s)
-@>Scroll Map: Right, 36, 6
-@>Scroll Map: Down, 33, 6
-@>Text: \xn[????]Wenn alles richitg läuft, sehen wir uns im 
- :    : Kraftwerk!
-@>Text: \xn[????]Sag einfach Marvin schickt dich!
-@>Text: \xn[Marvin]Ich muss nochmal nach den Energie-
- :    : Speicher sehen!
-@>Set Move Route: [Arenaleiter Marvin]
- :              : $>Move Right
- :              : $>Move Right
-@>Wait for Move's Completion
-@>Set Event Location: [Arenaleiter Marvin],(087,023), Right
-@>Wait for Move's Completion
-@>Control Self Switch: A =ON
-@>
-
-Page #4
 Conditions
 Self Switch A is ON
 
@@ -152726,6 +153127,90 @@ List of Event Commands:
 @>
 
 #------------------------------------------------------------------------------
+Event ID: 075
+Event Name: Item
+(X,Y): (048,038)
+
+Page #1
+Conditions
+None
+
+Graphic: Items Amigento-Discs 2
+
+Autonomous Movement
+Type: Fixed
+Speed: 3: Slow
+Freq: 3: Low
+Options Enabled
+Move Animation
+Direction Fix
+Trigger: Action Button
+
+List of Event Commands:
+@>Conditional Branch: Script: pbItemBall(:EXPCANDYL)
+ @>Control Self Switch: A =ON
+ @>
+: Branch End
+@>
+
+Page #2
+Conditions
+Self Switch A is ON
+
+Autonomous Movement
+Type: Fixed
+Speed: 3: Slow
+Freq: 3: Low
+Options Enabled
+Move Animation
+Trigger: Action Button
+
+List of Event Commands:
+@>
+
+#------------------------------------------------------------------------------
+Event ID: 076
+Event Name: Item
+(X,Y): (046,016)
+
+Page #1
+Conditions
+None
+
+Graphic: Items Amigento-Discs 2
+
+Autonomous Movement
+Type: Fixed
+Speed: 3: Slow
+Freq: 3: Low
+Options Enabled
+Move Animation
+Direction Fix
+Trigger: Action Button
+
+List of Event Commands:
+@>Conditional Branch: Script: pbItemBall(:EXPCANDYL)
+ @>Control Self Switch: A =ON
+ @>
+: Branch End
+@>
+
+Page #2
+Conditions
+Self Switch A is ON
+
+Autonomous Movement
+Type: Fixed
+Speed: 3: Slow
+Freq: 3: Low
+Options Enabled
+Move Animation
+Trigger: Action Button
+
+List of Event Commands:
+@>
+
+#------------------------------------------------------------------------------
 
 #==============================================================================
 Map ID: 192
@@ -153945,6 +154430,48 @@ List of Event Commands:
 @>
 
 #------------------------------------------------------------------------------
+Event ID: 035
+Event Name: Item
+(X,Y): (010,004)
+
+Page #1
+Conditions
+None
+
+Graphic: Items Amigento-Discs 2
+
+Autonomous Movement
+Type: Fixed
+Speed: 3: Slow
+Freq: 3: Low
+Options Enabled
+Move Animation
+Direction Fix
+Trigger: Action Button
+
+List of Event Commands:
+@>Conditional Branch: Script: pbItemBall(:EXPCANDYXL)
+ @>Control Self Switch: A =ON
+ @>
+: Branch End
+@>
+
+Page #2
+Conditions
+Self Switch A is ON
+
+Autonomous Movement
+Type: Fixed
+Speed: 3: Slow
+Freq: 3: Low
+Options Enabled
+Move Animation
+Trigger: Action Button
+
+List of Event Commands:
+@>
+
+#------------------------------------------------------------------------------
 Event ID: 036
 Event Name: Haus 1 Tür
 (X,Y): (006,031)
@@ -153989,6 +154516,90 @@ Trigger: Action Button
 
 List of Event Commands:
 @>Text: Route 13
+@>
+
+#------------------------------------------------------------------------------
+Event ID: 038
+Event Name: Item
+(X,Y): (045,020)
+
+Page #1
+Conditions
+None
+
+Graphic: Items Amigento-Discs 2
+
+Autonomous Movement
+Type: Fixed
+Speed: 3: Slow
+Freq: 3: Low
+Options Enabled
+Move Animation
+Direction Fix
+Trigger: Action Button
+
+List of Event Commands:
+@>Conditional Branch: Script: pbItemBall(:EXPCANDYL)
+ @>Control Self Switch: A =ON
+ @>
+: Branch End
+@>
+
+Page #2
+Conditions
+Self Switch A is ON
+
+Autonomous Movement
+Type: Fixed
+Speed: 3: Slow
+Freq: 3: Low
+Options Enabled
+Move Animation
+Trigger: Action Button
+
+List of Event Commands:
+@>
+
+#------------------------------------------------------------------------------
+Event ID: 039
+Event Name: Item
+(X,Y): (013,004)
+
+Page #1
+Conditions
+None
+
+Graphic: Items Amigento-Discs 2
+
+Autonomous Movement
+Type: Fixed
+Speed: 3: Slow
+Freq: 3: Low
+Options Enabled
+Move Animation
+Direction Fix
+Trigger: Action Button
+
+List of Event Commands:
+@>Conditional Branch: Script: pbItemBall(:EXPCANDYXL)
+ @>Control Self Switch: A =ON
+ @>
+: Branch End
+@>
+
+Page #2
+Conditions
+Self Switch A is ON
+
+Autonomous Movement
+Type: Fixed
+Speed: 3: Slow
+Freq: 3: Low
+Options Enabled
+Move Animation
+Trigger: Action Button
+
+List of Event Commands:
 @>
 
 #------------------------------------------------------------------------------
@@ -159335,6 +159946,90 @@ List of Event Commands:
 @>
 
 #------------------------------------------------------------------------------
+Event ID: 095
+Event Name: Item
+(X,Y): (058,038)
+
+Page #1
+Conditions
+None
+
+Graphic: Items Amigento-Discs 2
+
+Autonomous Movement
+Type: Fixed
+Speed: 3: Slow
+Freq: 3: Low
+Options Enabled
+Move Animation
+Direction Fix
+Trigger: Action Button
+
+List of Event Commands:
+@>Conditional Branch: Script: pbItemBall(:EXPCANDYM)
+ @>Control Self Switch: A =ON
+ @>
+: Branch End
+@>
+
+Page #2
+Conditions
+Self Switch A is ON
+
+Autonomous Movement
+Type: Fixed
+Speed: 3: Slow
+Freq: 3: Low
+Options Enabled
+Move Animation
+Trigger: Action Button
+
+List of Event Commands:
+@>
+
+#------------------------------------------------------------------------------
+Event ID: 096
+Event Name: Item
+(X,Y): (019,071)
+
+Page #1
+Conditions
+None
+
+Graphic: Items Amigento-Discs 2
+
+Autonomous Movement
+Type: Fixed
+Speed: 3: Slow
+Freq: 3: Low
+Options Enabled
+Move Animation
+Direction Fix
+Trigger: Action Button
+
+List of Event Commands:
+@>Conditional Branch: Script: pbItemBall(:EXPCANDYM)
+ @>Control Self Switch: A =ON
+ @>
+: Branch End
+@>
+
+Page #2
+Conditions
+Self Switch A is ON
+
+Autonomous Movement
+Type: Fixed
+Speed: 3: Slow
+Freq: 3: Low
+Options Enabled
+Move Animation
+Trigger: Action Button
+
+List of Event Commands:
+@>
+
+#------------------------------------------------------------------------------
 
 #==============================================================================
 Map ID: 198
@@ -160929,6 +161624,90 @@ List of Event Commands:
   :              : $>Change Speed: 3
  @>
 : Branch End
+@>
+
+#------------------------------------------------------------------------------
+Event ID: 013
+Event Name: Item
+(X,Y): (010,007)
+
+Page #1
+Conditions
+None
+
+Graphic: Items Amigento-Discs 2
+
+Autonomous Movement
+Type: Fixed
+Speed: 3: Slow
+Freq: 3: Low
+Options Enabled
+Move Animation
+Direction Fix
+Trigger: Action Button
+
+List of Event Commands:
+@>Conditional Branch: Script: pbItemBall(:EXPCANDYL)
+ @>Control Self Switch: A =ON
+ @>
+: Branch End
+@>
+
+Page #2
+Conditions
+Self Switch A is ON
+
+Autonomous Movement
+Type: Fixed
+Speed: 3: Slow
+Freq: 3: Low
+Options Enabled
+Move Animation
+Trigger: Action Button
+
+List of Event Commands:
+@>
+
+#------------------------------------------------------------------------------
+Event ID: 014
+Event Name: Item
+(X,Y): (027,012)
+
+Page #1
+Conditions
+None
+
+Graphic: Items Amigento-Discs 2
+
+Autonomous Movement
+Type: Fixed
+Speed: 3: Slow
+Freq: 3: Low
+Options Enabled
+Move Animation
+Direction Fix
+Trigger: Action Button
+
+List of Event Commands:
+@>Conditional Branch: Script: pbItemBall(:EXPCANDYL)
+ @>Control Self Switch: A =ON
+ @>
+: Branch End
+@>
+
+Page #2
+Conditions
+Self Switch A is ON
+
+Autonomous Movement
+Type: Fixed
+Speed: 3: Slow
+Freq: 3: Low
+Options Enabled
+Move Animation
+Trigger: Action Button
+
+List of Event Commands:
 @>
 
 #------------------------------------------------------------------------------
@@ -165088,6 +165867,48 @@ List of Event Commands:
 @>
 
 #------------------------------------------------------------------------------
+Event ID: 053
+Event Name: Item
+(X,Y): (068,035)
+
+Page #1
+Conditions
+None
+
+Graphic: Items Amigento-Discs 2
+
+Autonomous Movement
+Type: Fixed
+Speed: 3: Slow
+Freq: 3: Low
+Options Enabled
+Move Animation
+Direction Fix
+Trigger: Action Button
+
+List of Event Commands:
+@>Conditional Branch: Script: pbItemBall(:EXPCANDYM)
+ @>Control Self Switch: A =ON
+ @>
+: Branch End
+@>
+
+Page #2
+Conditions
+Self Switch A is ON
+
+Autonomous Movement
+Type: Fixed
+Speed: 3: Slow
+Freq: 3: Low
+Options Enabled
+Move Animation
+Trigger: Action Button
+
+List of Event Commands:
+@>
+
+#------------------------------------------------------------------------------
 Event ID: 054
 Event Name: Hilfe
 (X,Y): (013,054)
@@ -165123,6 +165944,48 @@ List of Event Commands:
 : When [Nein]
  @>
 : Branch End
+@>
+
+#------------------------------------------------------------------------------
+Event ID: 055
+Event Name: Item
+(X,Y): (033,006)
+
+Page #1
+Conditions
+None
+
+Graphic: Items Amigento-Discs 2
+
+Autonomous Movement
+Type: Fixed
+Speed: 3: Slow
+Freq: 3: Low
+Options Enabled
+Move Animation
+Direction Fix
+Trigger: Action Button
+
+List of Event Commands:
+@>Conditional Branch: Script: pbItemBall(:EXPCANDYM)
+ @>Control Self Switch: A =ON
+ @>
+: Branch End
+@>
+
+Page #2
+Conditions
+Self Switch A is ON
+
+Autonomous Movement
+Type: Fixed
+Speed: 3: Slow
+Freq: 3: Low
+Options Enabled
+Move Animation
+Trigger: Action Button
+
+List of Event Commands:
 @>
 
 #------------------------------------------------------------------------------
@@ -166534,6 +167397,48 @@ List of Event Commands:
  @>
 : Branch End
 @>Script: setTempSwitchOn("A")
+@>
+
+#------------------------------------------------------------------------------
+Event ID: 100
+Event Name: Item
+(X,Y): (018,023)
+
+Page #1
+Conditions
+None
+
+Graphic: Items Amigento-Discs 2
+
+Autonomous Movement
+Type: Fixed
+Speed: 3: Slow
+Freq: 3: Low
+Options Enabled
+Move Animation
+Direction Fix
+Trigger: Action Button
+
+List of Event Commands:
+@>Conditional Branch: Script: pbItemBall(:EXPCANDYM)
+ @>Control Self Switch: A =ON
+ @>
+: Branch End
+@>
+
+Page #2
+Conditions
+Self Switch A is ON
+
+Autonomous Movement
+Type: Fixed
+Speed: 3: Slow
+Freq: 3: Low
+Options Enabled
+Move Animation
+Trigger: Action Button
+
+List of Event Commands:
 @>
 
 #------------------------------------------------------------------------------
@@ -179091,7 +179996,7 @@ Direction Fix
 Trigger: Action Button
 
 List of Event Commands:
-@>Conditional Branch: Script: pbItemBall(:CLEANSETAG)
+@>Conditional Branch: Script: pbItemBall(:SPELLTAG)
  @>Control Self Switch: A =ON
  @>
 : Branch End
@@ -179917,6 +180822,132 @@ Options Enabled
 Move Animation
 Stop Animation
 Direction Fix
+Trigger: Action Button
+
+List of Event Commands:
+@>
+
+#------------------------------------------------------------------------------
+Event ID: 075
+Event Name: Item
+(X,Y): (036,030)
+
+Page #1
+Conditions
+None
+
+Graphic: Items Amigento-Discs 2
+
+Autonomous Movement
+Type: Fixed
+Speed: 3: Slow
+Freq: 3: Low
+Options Enabled
+Move Animation
+Direction Fix
+Trigger: Action Button
+
+List of Event Commands:
+@>Conditional Branch: Script: pbItemBall(:EXPCANDYL)
+ @>Control Self Switch: A =ON
+ @>
+: Branch End
+@>
+
+Page #2
+Conditions
+Self Switch A is ON
+
+Autonomous Movement
+Type: Fixed
+Speed: 3: Slow
+Freq: 3: Low
+Options Enabled
+Move Animation
+Trigger: Action Button
+
+List of Event Commands:
+@>
+
+#------------------------------------------------------------------------------
+Event ID: 076
+Event Name: Item
+(X,Y): (069,060)
+
+Page #1
+Conditions
+None
+
+Graphic: Items Amigento-Discs 2
+
+Autonomous Movement
+Type: Fixed
+Speed: 3: Slow
+Freq: 3: Low
+Options Enabled
+Move Animation
+Direction Fix
+Trigger: Action Button
+
+List of Event Commands:
+@>Conditional Branch: Script: pbItemBall(:EXPCANDYL)
+ @>Control Self Switch: A =ON
+ @>
+: Branch End
+@>
+
+Page #2
+Conditions
+Self Switch A is ON
+
+Autonomous Movement
+Type: Fixed
+Speed: 3: Slow
+Freq: 3: Low
+Options Enabled
+Move Animation
+Trigger: Action Button
+
+List of Event Commands:
+@>
+
+#------------------------------------------------------------------------------
+Event ID: 077
+Event Name: Item
+(X,Y): (013,037)
+
+Page #1
+Conditions
+None
+
+Graphic: Items Amigento-Discs 2
+
+Autonomous Movement
+Type: Fixed
+Speed: 3: Slow
+Freq: 3: Low
+Options Enabled
+Move Animation
+Direction Fix
+Trigger: Action Button
+
+List of Event Commands:
+@>Conditional Branch: Script: pbItemBall(:EXPCANDYL)
+ @>Control Self Switch: A =ON
+ @>
+: Branch End
+@>
+
+Page #2
+Conditions
+Self Switch A is ON
+
+Autonomous Movement
+Type: Fixed
+Speed: 3: Slow
+Freq: 3: Low
+Options Enabled
+Move Animation
 Trigger: Action Button
 
 List of Event Commands:
@@ -181005,6 +182036,90 @@ List of Event Commands:
 : Else
  @>
 : Branch End
+@>
+
+#------------------------------------------------------------------------------
+Event ID: 016
+Event Name: Item
+(X,Y): (033,018)
+
+Page #1
+Conditions
+None
+
+Graphic: Items Amigento-Discs 2
+
+Autonomous Movement
+Type: Fixed
+Speed: 3: Slow
+Freq: 3: Low
+Options Enabled
+Move Animation
+Direction Fix
+Trigger: Action Button
+
+List of Event Commands:
+@>Conditional Branch: Script: pbItemBall(:EXPCANDYS)
+ @>Control Self Switch: A =ON
+ @>
+: Branch End
+@>
+
+Page #2
+Conditions
+Self Switch A is ON
+
+Autonomous Movement
+Type: Fixed
+Speed: 3: Slow
+Freq: 3: Low
+Options Enabled
+Move Animation
+Trigger: Action Button
+
+List of Event Commands:
+@>
+
+#------------------------------------------------------------------------------
+Event ID: 017
+Event Name: Item
+(X,Y): (013,033)
+
+Page #1
+Conditions
+None
+
+Graphic: Items Amigento-Discs 2
+
+Autonomous Movement
+Type: Fixed
+Speed: 3: Slow
+Freq: 3: Low
+Options Enabled
+Move Animation
+Direction Fix
+Trigger: Action Button
+
+List of Event Commands:
+@>Conditional Branch: Script: pbItemBall(:EXPCANDYS)
+ @>Control Self Switch: A =ON
+ @>
+: Branch End
+@>
+
+Page #2
+Conditions
+Self Switch A is ON
+
+Autonomous Movement
+Type: Fixed
+Speed: 3: Slow
+Freq: 3: Low
+Options Enabled
+Move Animation
+Trigger: Action Button
+
+List of Event Commands:
 @>
 
 #------------------------------------------------------------------------------
@@ -184603,6 +185718,48 @@ List of Event Commands:
 @>
 
 #------------------------------------------------------------------------------
+Event ID: 056
+Event Name: Item
+(X,Y): (051,016)
+
+Page #1
+Conditions
+None
+
+Graphic: ITEM Fossile
+
+Autonomous Movement
+Type: Fixed
+Speed: 3: Slow
+Freq: 3: Low
+Options Enabled
+Move Animation
+Direction Fix
+Trigger: Action Button
+
+List of Event Commands:
+@>Conditional Branch: Script: pbItemBall(:FOSSILIZEDFISH)
+ @>Control Self Switch: A =ON
+ @>
+: Branch End
+@>
+
+Page #2
+Conditions
+Self Switch A is ON
+
+Autonomous Movement
+Type: Fixed
+Speed: 3: Slow
+Freq: 3: Low
+Options Enabled
+Move Animation
+Trigger: Action Button
+
+List of Event Commands:
+@>
+
+#------------------------------------------------------------------------------
 
 #==============================================================================
 Map ID: 237
@@ -187144,6 +188301,48 @@ Trigger: Action Button
 
 List of Event Commands:
 @>Play SE: 'MRMIME', 100, 100
+@>
+
+#------------------------------------------------------------------------------
+Event ID: 009
+Event Name: Item
+(X,Y): (020,006)
+
+Page #1
+Conditions
+None
+
+Graphic: Items Amigento-Discs 2
+
+Autonomous Movement
+Type: Fixed
+Speed: 3: Slow
+Freq: 3: Low
+Options Enabled
+Move Animation
+Direction Fix
+Trigger: Action Button
+
+List of Event Commands:
+@>Conditional Branch: Script: pbItemBall(:EXPCANDYM)
+ @>Control Self Switch: A =ON
+ @>
+: Branch End
+@>
+
+Page #2
+Conditions
+Self Switch A is ON
+
+Autonomous Movement
+Type: Fixed
+Speed: 3: Slow
+Freq: 3: Low
+Options Enabled
+Move Animation
+Trigger: Action Button
+
+List of Event Commands:
 @>
 
 #------------------------------------------------------------------------------
@@ -213988,6 +215187,48 @@ List of Event Commands:
 @>
 
 #------------------------------------------------------------------------------
+Event ID: 043
+Event Name: Item
+(X,Y): (031,002)
+
+Page #1
+Conditions
+None
+
+Graphic: Items Amigento-Discs 2
+
+Autonomous Movement
+Type: Fixed
+Speed: 3: Slow
+Freq: 3: Low
+Options Enabled
+Move Animation
+Direction Fix
+Trigger: Action Button
+
+List of Event Commands:
+@>Conditional Branch: Script: pbItemBall(:EXPCANDYL)
+ @>Control Self Switch: A =ON
+ @>
+: Branch End
+@>
+
+Page #2
+Conditions
+Self Switch A is ON
+
+Autonomous Movement
+Type: Fixed
+Speed: 3: Slow
+Freq: 3: Low
+Options Enabled
+Move Animation
+Trigger: Action Button
+
+List of Event Commands:
+@>
+
+#------------------------------------------------------------------------------
 
 #==============================================================================
 Map ID: 276
@@ -236929,11 +238170,9 @@ Trigger: Action Button
 
 List of Event Commands:
 @>Script: pbPokemonMart([
-:       :   :ORANBERRY, :CHERIBERRY,
-:       :   :CHESTOBERRY, :PECHABERRY,
-:       :   :RAWSTBERRY, :ASPEARBERRY,
-:       :   :PERSIMBERRY, :SITRUSBERRY,
-:       :   :LUMBERRY, :LEPPABERRY
+:       :   :HEALFEATHER, :MUSCLEFEATHER,
+:       :   :RESISTFEATHER, :GENIUSFEATHER,
+:       :   :CELVERFEATHER, :SWIFTFEATHER
 :       : ])
 @>
 
@@ -237213,6 +238452,33 @@ List of Event Commands:
  :    : verwendet werden, wie du möchtest.
 @>Set Move Route: This event
  :              : $>Turn Up
+@>
+
+#------------------------------------------------------------------------------
+Event ID: 007
+Event Name: Mart
+(X,Y): (018,007)
+
+Page #1
+Conditions
+None
+
+Graphic: NPCClerk
+
+Autonomous Movement
+Type: Fixed
+Speed: 3: Slow
+Freq: 3: Low
+Options Enabled
+Move Animation
+Trigger: Action Button
+
+List of Event Commands:
+@>Script: pbPokemonMart([
+:       :   :PPUP, :HPUP, :PROTEIN,
+:       :   :IRON, :CALCIUM, :ZINC,
+:       :   :CARBOS
+:       : ])
 @>
 
 #------------------------------------------------------------------------------
@@ -247084,6 +248350,48 @@ Trigger: Action Button
 
 List of Event Commands:
 @>Text: Route 12
+@>
+
+#------------------------------------------------------------------------------
+Event ID: 102
+Event Name: Item
+(X,Y): (062,030)
+
+Page #1
+Conditions
+None
+
+Graphic: Items Amigento-Discs 2
+
+Autonomous Movement
+Type: Fixed
+Speed: 3: Slow
+Freq: 3: Low
+Options Enabled
+Move Animation
+Direction Fix
+Trigger: Action Button
+
+List of Event Commands:
+@>Conditional Branch: Script: pbItemBall(:EXPCANDYL)
+ @>Control Self Switch: A =ON
+ @>
+: Branch End
+@>
+
+Page #2
+Conditions
+Self Switch A is ON
+
+Autonomous Movement
+Type: Fixed
+Speed: 3: Slow
+Freq: 3: Low
+Options Enabled
+Move Animation
+Trigger: Action Button
+
+List of Event Commands:
 @>
 
 #------------------------------------------------------------------------------
@@ -267731,7 +269039,6 @@ List of Event Commands:
    :    : als offizielles Mitglied in unserem Club schimpfen.
   @>Script: completeQuest(:Quest27)
   @>Script: pbSetSelfSwitch(13,"B",true)
-  @>Script: pbEarnMedal(:KAEFERSAMMLER)
   @>Control Variables: [0035: Käferclub Mitglied] += 1
   @>Text: \xn[Käfersammler Eberhard]Unsere erfahreneren 
    :    : Mitglieder halten Aufgaben für dich bereit.
@@ -267790,7 +269097,6 @@ List of Event Commands:
  @>Script: pbReceiveItem(:METALCOAT)
  @>Script: completeQuest(:Quest27)
  @>Script: pbSetSelfSwitch(13,"B",true)
- @>Script: pbEarnMedal(:KAEFERSAMMLER)
  @>Control Variables: [0035: Käferclub Mitglied] += 1
  @>Text: \xn[Käfersammler Eberhard]Unsere erfahreneren 
   :    : Mitglieder halten Aufgaben für dich bereit.
@@ -268435,12 +269741,34 @@ List of Event Commands:
 
 #------------------------------------------------------------------------------
 Event ID: 009
-Event Name: EV009
-(X,Y): (011,004)
+Event Name: Item
+(X,Y): (013,008)
 
 Page #1
 Conditions
 None
+
+Graphic: Items Amigento-Discs 2
+
+Autonomous Movement
+Type: Fixed
+Speed: 3: Slow
+Freq: 3: Low
+Options Enabled
+Move Animation
+Direction Fix
+Trigger: Action Button
+
+List of Event Commands:
+@>Conditional Branch: Script: pbItemBall(:EXPCANDYS)
+ @>Control Self Switch: A =ON
+ @>
+: Branch End
+@>
+
+Page #2
+Conditions
+Self Switch A is ON
 
 Autonomous Movement
 Type: Fixed
@@ -268451,7 +269779,6 @@ Move Animation
 Trigger: Action Button
 
 List of Event Commands:
-@>Text: Ein Buch über Azumaris.
 @>
 
 #------------------------------------------------------------------------------
@@ -269208,6 +270535,159 @@ List of Event Commands:
  : Branch End
  @>
 : Branch End
+@>
+
+#------------------------------------------------------------------------------
+Event ID: 016
+Event Name: EV016
+(X,Y): (016,001)
+
+Page #1
+Conditions
+None
+
+Autonomous Movement
+Type: Fixed
+Speed: 3: Slow
+Freq: 3: Low
+Options Enabled
+Move Animation
+Trigger: Event Touch
+
+List of Event Commands:
+@>Set Event Location: [],(049,044), Right
+@>Set Move Route: []
+ :              : $>Move Right
+ :              : $>Move Right
+ :              : $>Move Right
+ :              : $>Turn Down
+@>Show Animation: Player, [Exclaim bubble]
+@>Wait for Move's Completion
+@>Text: \xn[????]Hey du!
+@>Text: \xn[????]Irgendetwas ist im Kraftwerk passiert,
+ :    : besser ist es, wenn du von hier verschwindest!
+@>Text: \xn[????]Ach, du bist ein Pokémon-Trainer?
+@>Text: \xn[????]Kurz gesagt, wir wissen nicht 
+ :    : genau was passiert ist.
+@>Text: \xn[????]Das Kraftwerk ist abgeschaltet und die 
+ :    : Region wird aktuell über unseren Energie-Speicher 
+ :    : versorgt!
+@>Text: \xn[????]Dieser hat aber nur für kurze Zeit 
+ :    : Energie gespeichert.
+@>Text: \xn[????]Als Pokémon-Trainer hilfst du uns 
+ :    : bestimmt das Kraftwerk wieder in Betrieb zu 
+ :    : nehmen?
+@>Show Choices: Ja, Nein
+(When Cancel: Choice 2)
+: When [Ja]
+ @>Show Animation: [], [Smile bubble]
+ @>Text: \xn[????]Perfekt!
+ @>
+: When [Nein]
+ @>Show Animation: [], [Sad bubble]
+ @>Text: \xn[????]Ich dachte du wärst ein richtiger Pokémon-
+  :    : Trainer.
+ @>Text: \xn[????]Ein richtiger Trainer hat keine Angst vor 
+  :    : einer Herausforderung!
+ @>Text: \xn[????]Ich werde aus dir noch einen richtigen 
+  :    : Pokémon-Trainer machen!
+ @>Text: \xn[????]Also pack jetzt mit an!
+ @>
+: Branch End
+@>Text: \xn[????]Zuerst müssen die Solar-Felder 
+ :    : eingeschaltet werden!
+@>Scroll Map: Down, 15, 4
+@>Scroll Map: Left, 26, 4
+@>Wait: 92 frame(s)
+@>Scroll Map: Up, 15, 6
+@>Scroll Map: Right, 26, 6
+@>Text: \xn[????]Hier!\nDas könnte dir helfen!
+@>Script: pbItemBall(:STRENGTHITEM)
+@>Text: \xn[????]Und jetzt los!
+@>Set Move Route: []
+ :              : $>Move Right
+ :              : $>Move Right
+@>Wait for Move's Completion
+@>Set Event Location: [],(087,023), Right
+@>Set Move Route: Player
+ :              : $>Move Down
+@>Wait for Move's Completion
+@>Control Switches: [0098: Kraftwerk start] = ON
+@>
+
+Page #2
+Conditions
+Switch 0098: Kraftwerk start is ON
+
+Autonomous Movement
+Type: Fixed
+Speed: 3: Slow
+Freq: 3: Low
+Options Enabled
+Move Animation
+Trigger: Player Touch
+
+List of Event Commands:
+@>Text: Du musst erst die beiden Solar-Felder einschalten!
+@>Set Move Route: Player
+ :              : $>Move Down
+@>Wait for Move's Completion
+@>
+
+Page #3
+Conditions
+Switch 0096: Solar1 is ON
+Switch 0097: Solar2 is ON
+
+Autonomous Movement
+Type: Fixed
+Speed: 3: Slow
+Freq: 3: Low
+Options Enabled
+Move Animation
+Trigger: Event Touch
+
+List of Event Commands:
+@>Set Event Location: [],(054,044), Left
+@>Set Move Route: []
+ :              : $>Move Left
+ :              : $>Move Left
+ :              : $>Turn Down
+@>Text: \xn[????]Super!\nDu hast die Solar-Felder wieder eingeschaltet!
+@>Text: \xn[????]Jetzt muss nur noch der Wind-Park wieder 
+ :    : in Betrieb genommen werden!
+@>Scroll Map: Up, 33, 4
+@>Scroll Map: Left, 36, 4
+@>Wait: 92 frame(s)
+@>Scroll Map: Right, 36, 6
+@>Scroll Map: Down, 33, 6
+@>Text: \xn[????]Wenn alles richitg läuft, sehen wir uns im 
+ :    : Kraftwerk!
+@>Text: \xn[????]Sag einfach Marvin schickt dich!
+@>Text: \xn[Marvin]Ich muss nochmal nach den Energie-
+ :    : Speicher sehen!
+@>Set Move Route: []
+ :              : $>Move Right
+ :              : $>Move Right
+@>Wait for Move's Completion
+@>Set Event Location: [],(087,023), Right
+@>Wait for Move's Completion
+@>Control Self Switch: A =ON
+@>
+
+Page #4
+Conditions
+Self Switch A is ON
+
+Autonomous Movement
+Type: Fixed
+Speed: 3: Slow
+Freq: 3: Low
+Options Enabled
+Move Animation
+Trigger: Action Button
+
+List of Event Commands:
 @>
 
 #------------------------------------------------------------------------------
@@ -272497,6 +273977,48 @@ List of Event Commands:
 @>
 
 #------------------------------------------------------------------------------
+Event ID: 050
+Event Name: Item
+(X,Y): (027,027)
+
+Page #1
+Conditions
+None
+
+Graphic: Items Amigento-Discs 2
+
+Autonomous Movement
+Type: Fixed
+Speed: 3: Slow
+Freq: 3: Low
+Options Enabled
+Move Animation
+Direction Fix
+Trigger: Action Button
+
+List of Event Commands:
+@>Conditional Branch: Script: pbItemBall(:EXPCANDYXS)
+ @>Control Self Switch: A =ON
+ @>
+: Branch End
+@>
+
+Page #2
+Conditions
+Self Switch A is ON
+
+Autonomous Movement
+Type: Fixed
+Speed: 3: Slow
+Freq: 3: Low
+Options Enabled
+Move Animation
+Trigger: Action Button
+
+List of Event Commands:
+@>
+
+#------------------------------------------------------------------------------
 
 #==============================================================================
 Map ID: 370
@@ -274424,6 +275946,48 @@ List of Event Commands:
  @>
 : Branch End
 @>Script: setTempSwitchOn("A")
+@>
+
+#------------------------------------------------------------------------------
+Event ID: 002
+Event Name: Item
+(X,Y): (030,008)
+
+Page #1
+Conditions
+None
+
+Graphic: Items Amigento-Discs 2
+
+Autonomous Movement
+Type: Fixed
+Speed: 3: Slow
+Freq: 3: Low
+Options Enabled
+Move Animation
+Direction Fix
+Trigger: Action Button
+
+List of Event Commands:
+@>Conditional Branch: Script: pbItemBall(:EXPCANDYL)
+ @>Control Self Switch: A =ON
+ @>
+: Branch End
+@>
+
+Page #2
+Conditions
+Self Switch A is ON
+
+Autonomous Movement
+Type: Fixed
+Speed: 3: Slow
+Freq: 3: Low
+Options Enabled
+Move Animation
+Trigger: Action Button
+
+List of Event Commands:
 @>
 
 #------------------------------------------------------------------------------
@@ -282660,6 +284224,174 @@ Freq: 1: Lowest
 Options Enabled
 Move Animation
 Stop Animation
+Trigger: Action Button
+
+List of Event Commands:
+@>
+
+#------------------------------------------------------------------------------
+Event ID: 111
+Event Name: Item
+(X,Y): (086,093)
+
+Page #1
+Conditions
+None
+
+Graphic: ITEM Fossile
+
+Autonomous Movement
+Type: Fixed
+Speed: 3: Slow
+Freq: 3: Low
+Options Enabled
+Move Animation
+Direction Fix
+Trigger: Action Button
+
+List of Event Commands:
+@>Conditional Branch: Script: pbItemBall(:JAWFOSSIL)
+ @>Control Self Switch: A =ON
+ @>
+: Branch End
+@>
+
+Page #2
+Conditions
+Self Switch A is ON
+
+Autonomous Movement
+Type: Fixed
+Speed: 3: Slow
+Freq: 3: Low
+Options Enabled
+Move Animation
+Trigger: Action Button
+
+List of Event Commands:
+@>
+
+#------------------------------------------------------------------------------
+Event ID: 112
+Event Name: Item
+(X,Y): (082,083)
+
+Page #1
+Conditions
+None
+
+Graphic: Items Amigento-Discs 2
+
+Autonomous Movement
+Type: Fixed
+Speed: 3: Slow
+Freq: 3: Low
+Options Enabled
+Move Animation
+Direction Fix
+Trigger: Action Button
+
+List of Event Commands:
+@>Conditional Branch: Script: pbItemBall(:EXPCANDYL)
+ @>Control Self Switch: A =ON
+ @>
+: Branch End
+@>
+
+Page #2
+Conditions
+Self Switch A is ON
+
+Autonomous Movement
+Type: Fixed
+Speed: 3: Slow
+Freq: 3: Low
+Options Enabled
+Move Animation
+Trigger: Action Button
+
+List of Event Commands:
+@>
+
+#------------------------------------------------------------------------------
+Event ID: 113
+Event Name: Item
+(X,Y): (084,049)
+
+Page #1
+Conditions
+None
+
+Graphic: Items Amigento-Discs 2
+
+Autonomous Movement
+Type: Fixed
+Speed: 3: Slow
+Freq: 3: Low
+Options Enabled
+Move Animation
+Direction Fix
+Trigger: Action Button
+
+List of Event Commands:
+@>Conditional Branch: Script: pbItemBall(:EXPCANDYL)
+ @>Control Self Switch: A =ON
+ @>
+: Branch End
+@>
+
+Page #2
+Conditions
+Self Switch A is ON
+
+Autonomous Movement
+Type: Fixed
+Speed: 3: Slow
+Freq: 3: Low
+Options Enabled
+Move Animation
+Trigger: Action Button
+
+List of Event Commands:
+@>
+
+#------------------------------------------------------------------------------
+Event ID: 114
+Event Name: Item
+(X,Y): (029,032)
+
+Page #1
+Conditions
+None
+
+Graphic: Items Amigento-Discs 2
+
+Autonomous Movement
+Type: Fixed
+Speed: 3: Slow
+Freq: 3: Low
+Options Enabled
+Move Animation
+Direction Fix
+Trigger: Action Button
+
+List of Event Commands:
+@>Conditional Branch: Script: pbItemBall(:EXPCANDYL)
+ @>Control Self Switch: A =ON
+ @>
+: Branch End
+@>
+
+Page #2
+Conditions
+Self Switch A is ON
+
+Autonomous Movement
+Type: Fixed
+Speed: 3: Slow
+Freq: 3: Low
+Options Enabled
+Move Animation
 Trigger: Action Button
 
 List of Event Commands:
@@ -293638,6 +295370,64 @@ List of Event Commands:
 @>
 
 #------------------------------------------------------------------------------
+Event ID: 009
+Event Name: Info
+(X,Y): (013,010)
+
+Page #1
+Conditions
+None
+
+Graphic: NPCMan1
+
+Autonomous Movement
+Type: Fixed
+Speed: 3: Slow
+Freq: 3: Low
+Options Enabled
+Move Animation
+Trigger: Action Button
+
+List of Event Commands:
+@>Text: Es gibt insgesamt 9 Räucherwerke, die alle eine 
+ :    : andere Wirkung haben.
+@>Text: Darüber hinaus haben sie beim Züchten einen netten 
+ :    : Nebeneffekt.
+@>Text: Du kannst die Räucherwerke bestimmten Pokémon 
+ :    : zum Tragen geben.
+@>Text: Bei der Zucht erhälst du dann das jeweilige Baby-
+ :    : Pokémon.
+@>Text: Möchtest du genaueres wissen?
+@>Show Choices: Ja, Nein
+(When Cancel: Choice 2)
+: When [Ja]
+ @>Text: Chaneira / Heiteira + Glücksrauch = Wonneira
+ @>Text: Relaxo + Lahmrauch = Mampfaxo
+ @>Text: Woingenau + Laxrauch = Isso
+ @>Text: Roselia / Roserade + Rosenrauch = Knospi
+ @>Text: Palimpalim + Scheuchrauch = Klingplim
+ @>Text: Pantimos / Pantifrost + Schrägrauch = Pantimimi
+ @>Text: Marill / Azumarill + Seerauch = Azurill
+ @>Text: Mogelbaum + Steinrauch = Mobai
+ @>Text: und Mantax + Wellenrauch = Mantirps.
+ @>Conditional Branch: Script: $bag.has?(:ODDINCENSE)
+  @>
+ : Else
+  @>Text: Hier, dann kannst du es irgendwann ausprobieren.
+  @>Script: pbReceiveItem(:ODDINCENSE)
+  @>
+ : Branch End
+ @>Set Move Route: This event
+  :              : $>Turn Right
+ @>
+: When [Nein]
+ @>Set Move Route: This event
+  :              : $>Turn Right
+ @>
+: Branch End
+@>
+
+#------------------------------------------------------------------------------
 Event ID: 010
 Event Name: EV010
 (X,Y): (016,009)
@@ -294937,6 +296727,48 @@ Trigger: Parallel Process
 
 List of Event Commands:
 @>Change Map Settings:Fog = 'Moostiefen Zarude', 0, 255, Normal, 100, 0, 0
+@>
+
+#------------------------------------------------------------------------------
+Event ID: 019
+Event Name: Item
+(X,Y): (008,015)
+
+Page #1
+Conditions
+None
+
+Graphic: Items91
+
+Autonomous Movement
+Type: Fixed
+Speed: 3: Slow
+Freq: 3: Low
+Options Enabled
+Move Animation
+Direction Fix
+Trigger: Action Button
+
+List of Event Commands:
+@>Conditional Branch: Script: pbItemBall(:ROSEINCENSE)
+ @>Control Self Switch: A =ON
+ @>
+: Branch End
+@>
+
+Page #2
+Conditions
+Self Switch A is ON
+
+Autonomous Movement
+Type: Fixed
+Speed: 3: Slow
+Freq: 3: Low
+Options Enabled
+Move Animation
+Trigger: Action Button
+
+List of Event Commands:
 @>
 
 #------------------------------------------------------------------------------
@@ -308024,6 +309856,48 @@ Trigger: Action Button
 List of Event Commands:
 @>Text: \xn[Künstlerin Yvonne]Vielleicht ist meine Kunst 
  :    : überbewertet.
+@>
+
+#------------------------------------------------------------------------------
+Event ID: 033
+Event Name: Item
+(X,Y): (022,004)
+
+Page #1
+Conditions
+None
+
+Graphic: Items Amigento-Discs 2
+
+Autonomous Movement
+Type: Fixed
+Speed: 3: Slow
+Freq: 3: Low
+Options Enabled
+Move Animation
+Direction Fix
+Trigger: Action Button
+
+List of Event Commands:
+@>Conditional Branch: Script: pbItemBall(:EXPCANDYXL)
+ @>Control Self Switch: A =ON
+ @>
+: Branch End
+@>
+
+Page #2
+Conditions
+Self Switch A is ON
+
+Autonomous Movement
+Type: Fixed
+Speed: 3: Slow
+Freq: 3: Low
+Options Enabled
+Move Animation
+Trigger: Action Button
+
+List of Event Commands:
 @>
 
 #------------------------------------------------------------------------------
@@ -323664,6 +325538,132 @@ List of Event Commands:
 @>
 
 #------------------------------------------------------------------------------
+Event ID: 085
+Event Name: Item
+(X,Y): (005,005)
+
+Page #1
+Conditions
+None
+
+Graphic: Items Amigento-Discs 2
+
+Autonomous Movement
+Type: Fixed
+Speed: 3: Slow
+Freq: 3: Low
+Options Enabled
+Move Animation
+Direction Fix
+Trigger: Action Button
+
+List of Event Commands:
+@>Conditional Branch: Script: pbItemBall(:EXPCANDYXL)
+ @>Control Self Switch: A =ON
+ @>
+: Branch End
+@>
+
+Page #2
+Conditions
+Self Switch A is ON
+
+Autonomous Movement
+Type: Fixed
+Speed: 3: Slow
+Freq: 3: Low
+Options Enabled
+Move Animation
+Trigger: Action Button
+
+List of Event Commands:
+@>
+
+#------------------------------------------------------------------------------
+Event ID: 086
+Event Name: Item
+(X,Y): (050,005)
+
+Page #1
+Conditions
+None
+
+Graphic: Items Amigento-Discs 2
+
+Autonomous Movement
+Type: Fixed
+Speed: 3: Slow
+Freq: 3: Low
+Options Enabled
+Move Animation
+Direction Fix
+Trigger: Action Button
+
+List of Event Commands:
+@>Conditional Branch: Script: pbItemBall(:EXPCANDYXL)
+ @>Control Self Switch: A =ON
+ @>
+: Branch End
+@>
+
+Page #2
+Conditions
+Self Switch A is ON
+
+Autonomous Movement
+Type: Fixed
+Speed: 3: Slow
+Freq: 3: Low
+Options Enabled
+Move Animation
+Trigger: Action Button
+
+List of Event Commands:
+@>
+
+#------------------------------------------------------------------------------
+Event ID: 087
+Event Name: Item
+(X,Y): (055,046)
+
+Page #1
+Conditions
+None
+
+Graphic: Items Amigento-Discs 2
+
+Autonomous Movement
+Type: Fixed
+Speed: 3: Slow
+Freq: 3: Low
+Options Enabled
+Move Animation
+Direction Fix
+Trigger: Action Button
+
+List of Event Commands:
+@>Conditional Branch: Script: pbItemBall(:EXPCANDYXL)
+ @>Control Self Switch: A =ON
+ @>
+: Branch End
+@>
+
+Page #2
+Conditions
+Self Switch A is ON
+
+Autonomous Movement
+Type: Fixed
+Speed: 3: Slow
+Freq: 3: Low
+Options Enabled
+Move Animation
+Trigger: Action Button
+
+List of Event Commands:
+@>
+
+#------------------------------------------------------------------------------
 
 #==============================================================================
 Map ID: 423
@@ -328178,6 +330178,90 @@ List of Event Commands:
 @>Transfer Player:[423: Rechts], (059,026), Down, No Fade
 @>Change Screen Color Tone: (0,0,0,0), @6
 @>Wait: 8 frame(s)
+@>
+
+#------------------------------------------------------------------------------
+Event ID: 062
+Event Name: Item
+(X,Y): (050,006)
+
+Page #1
+Conditions
+None
+
+Graphic: Items Amigento-Discs 2
+
+Autonomous Movement
+Type: Fixed
+Speed: 3: Slow
+Freq: 3: Low
+Options Enabled
+Move Animation
+Direction Fix
+Trigger: Action Button
+
+List of Event Commands:
+@>Conditional Branch: Script: pbItemBall(:EXPCANDYXL)
+ @>Control Self Switch: A =ON
+ @>
+: Branch End
+@>
+
+Page #2
+Conditions
+Self Switch A is ON
+
+Autonomous Movement
+Type: Fixed
+Speed: 3: Slow
+Freq: 3: Low
+Options Enabled
+Move Animation
+Trigger: Action Button
+
+List of Event Commands:
+@>
+
+#------------------------------------------------------------------------------
+Event ID: 063
+Event Name: Item
+(X,Y): (021,006)
+
+Page #1
+Conditions
+None
+
+Graphic: Items Amigento-Discs 2
+
+Autonomous Movement
+Type: Fixed
+Speed: 3: Slow
+Freq: 3: Low
+Options Enabled
+Move Animation
+Direction Fix
+Trigger: Action Button
+
+List of Event Commands:
+@>Conditional Branch: Script: pbItemBall(:EXPCANDYXL)
+ @>Control Self Switch: A =ON
+ @>
+: Branch End
+@>
+
+Page #2
+Conditions
+Self Switch A is ON
+
+Autonomous Movement
+Type: Fixed
+Speed: 3: Slow
+Freq: 3: Low
+Options Enabled
+Move Animation
+Trigger: Action Button
+
+List of Event Commands:
 @>
 
 #------------------------------------------------------------------------------
@@ -345682,6 +347766,48 @@ List of Event Commands:
 @>
 
 #------------------------------------------------------------------------------
+Event ID: 004
+Event Name: Item
+(X,Y): (020,006)
+
+Page #1
+Conditions
+None
+
+Graphic: Items Amigento-Discs 2
+
+Autonomous Movement
+Type: Fixed
+Speed: 3: Slow
+Freq: 3: Low
+Options Enabled
+Move Animation
+Direction Fix
+Trigger: Action Button
+
+List of Event Commands:
+@>Conditional Branch: Script: pbItemBall(:EXPCANDYXL)
+ @>Control Self Switch: A =ON
+ @>
+: Branch End
+@>
+
+Page #2
+Conditions
+Self Switch A is ON
+
+Autonomous Movement
+Type: Fixed
+Speed: 3: Slow
+Freq: 3: Low
+Options Enabled
+Move Animation
+Trigger: Action Button
+
+List of Event Commands:
+@>
+
+#------------------------------------------------------------------------------
 
 #==============================================================================
 Map ID: 441
@@ -349414,6 +351540,48 @@ List of Event Commands:
 @>
 
 #------------------------------------------------------------------------------
+Event ID: 037
+Event Name: Item
+(X,Y): (013,062)
+
+Page #1
+Conditions
+None
+
+Graphic: Items Amigento-Discs 2
+
+Autonomous Movement
+Type: Fixed
+Speed: 3: Slow
+Freq: 3: Low
+Options Enabled
+Move Animation
+Direction Fix
+Trigger: Action Button
+
+List of Event Commands:
+@>Conditional Branch: Script: pbItemBall(:EXPCANDYL)
+ @>Control Self Switch: A =ON
+ @>
+: Branch End
+@>
+
+Page #2
+Conditions
+Self Switch A is ON
+
+Autonomous Movement
+Type: Fixed
+Speed: 3: Slow
+Freq: 3: Low
+Options Enabled
+Move Animation
+Trigger: Action Button
+
+List of Event Commands:
+@>
+
+#------------------------------------------------------------------------------
 
 #==============================================================================
 Map ID: 443
@@ -350689,6 +352857,90 @@ Trigger: Parallel Process
 
 List of Event Commands:
 @>Play BGS: 'PR - Temple Ambience', 80, 100
+@>
+
+#------------------------------------------------------------------------------
+Event ID: 010
+Event Name: Item
+(X,Y): (003,011)
+
+Page #1
+Conditions
+None
+
+Graphic: Items1
+
+Autonomous Movement
+Type: Fixed
+Speed: 3: Slow
+Freq: 3: Low
+Options Enabled
+Move Animation
+Direction Fix
+Trigger: Action Button
+
+List of Event Commands:
+@>Conditional Branch: Script: pbItemBall(:METALCOAT)
+ @>Control Self Switch: A =ON
+ @>
+: Branch End
+@>
+
+Page #2
+Conditions
+Self Switch A is ON
+
+Autonomous Movement
+Type: Fixed
+Speed: 3: Slow
+Freq: 3: Low
+Options Enabled
+Move Animation
+Trigger: Action Button
+
+List of Event Commands:
+@>
+
+#------------------------------------------------------------------------------
+Event ID: 011
+Event Name: Item
+(X,Y): (014,007)
+
+Page #1
+Conditions
+None
+
+Graphic: Items Amigento-Discs 2
+
+Autonomous Movement
+Type: Fixed
+Speed: 3: Slow
+Freq: 3: Low
+Options Enabled
+Move Animation
+Direction Fix
+Trigger: Action Button
+
+List of Event Commands:
+@>Conditional Branch: Script: pbItemBall(:EXPCANDYXL)
+ @>Control Self Switch: A =ON
+ @>
+: Branch End
+@>
+
+Page #2
+Conditions
+Self Switch A is ON
+
+Autonomous Movement
+Type: Fixed
+Speed: 3: Slow
+Freq: 3: Low
+Options Enabled
+Move Animation
+Trigger: Action Button
+
+List of Event Commands:
 @>
 
 #------------------------------------------------------------------------------
@@ -353616,6 +355868,48 @@ List of Event Commands:
 @>
 
 #------------------------------------------------------------------------------
+Event ID: 011
+Event Name: Item
+(X,Y): (009,019)
+
+Page #1
+Conditions
+None
+
+Graphic: Items Amigento-Discs 2
+
+Autonomous Movement
+Type: Fixed
+Speed: 3: Slow
+Freq: 3: Low
+Options Enabled
+Move Animation
+Direction Fix
+Trigger: Action Button
+
+List of Event Commands:
+@>Conditional Branch: Script: pbItemBall(:EXPCANDYL)
+ @>Control Self Switch: A =ON
+ @>
+: Branch End
+@>
+
+Page #2
+Conditions
+Self Switch A is ON
+
+Autonomous Movement
+Type: Fixed
+Speed: 3: Slow
+Freq: 3: Low
+Options Enabled
+Move Animation
+Trigger: Action Button
+
+List of Event Commands:
+@>
+
+#------------------------------------------------------------------------------
 
 #==============================================================================
 Map ID: 450
@@ -355795,6 +358089,48 @@ Trigger: Action Button
 
 List of Event Commands:
 @>Text: Route 13
+@>
+
+#------------------------------------------------------------------------------
+Event ID: 047
+Event Name: Item
+(X,Y): (004,040)
+
+Page #1
+Conditions
+None
+
+Graphic: Items Amigento-Discs 2
+
+Autonomous Movement
+Type: Fixed
+Speed: 3: Slow
+Freq: 3: Low
+Options Enabled
+Move Animation
+Direction Fix
+Trigger: Action Button
+
+List of Event Commands:
+@>Conditional Branch: Script: pbItemBall(:EXPCANDYL)
+ @>Control Self Switch: A =ON
+ @>
+: Branch End
+@>
+
+Page #2
+Conditions
+Self Switch A is ON
+
+Autonomous Movement
+Type: Fixed
+Speed: 3: Slow
+Freq: 3: Low
+Options Enabled
+Move Animation
+Trigger: Action Button
+
+List of Event Commands:
 @>
 
 #------------------------------------------------------------------------------
@@ -358568,6 +360904,48 @@ List of Event Commands:
 Page #2
 Conditions
 Switch 0383: Reshiram + Zekrom Ende is ON
+
+Autonomous Movement
+Type: Fixed
+Speed: 3: Slow
+Freq: 3: Low
+Options Enabled
+Move Animation
+Trigger: Action Button
+
+List of Event Commands:
+@>
+
+#------------------------------------------------------------------------------
+Event ID: 054
+Event Name: Item
+(X,Y): (031,008)
+
+Page #1
+Conditions
+None
+
+Graphic: Items Amigento-Discs 2
+
+Autonomous Movement
+Type: Fixed
+Speed: 3: Slow
+Freq: 3: Low
+Options Enabled
+Move Animation
+Direction Fix
+Trigger: Action Button
+
+List of Event Commands:
+@>Conditional Branch: Script: pbItemBall(:EXPCANDYL)
+ @>Control Self Switch: A =ON
+ @>
+: Branch End
+@>
+
+Page #2
+Conditions
+Self Switch A is ON
 
 Autonomous Movement
 Type: Fixed
@@ -367950,6 +370328,48 @@ List of Event Commands:
 @>
 
 #------------------------------------------------------------------------------
+Event ID: 021
+Event Name: Item
+(X,Y): (003,020)
+
+Page #1
+Conditions
+None
+
+Graphic: ITEM Fossile
+
+Autonomous Movement
+Type: Fixed
+Speed: 3: Slow
+Freq: 3: Low
+Options Enabled
+Move Animation
+Direction Fix
+Trigger: Action Button
+
+List of Event Commands:
+@>Conditional Branch: Script: pbItemBall(:SAILFOSSIL)
+ @>Control Self Switch: A =ON
+ @>
+: Branch End
+@>
+
+Page #2
+Conditions
+Self Switch A is ON
+
+Autonomous Movement
+Type: Fixed
+Speed: 3: Slow
+Freq: 3: Low
+Options Enabled
+Move Animation
+Trigger: Action Button
+
+List of Event Commands:
+@>
+
+#------------------------------------------------------------------------------
 
 #==============================================================================
 Map ID: 467
@@ -374297,6 +376717,48 @@ List of Event Commands:
  :              : $>Through OFF
  :              : $>Change Speed: 3
 @>Wait: 6 frame(s)
+@>
+
+#------------------------------------------------------------------------------
+Event ID: 004
+Event Name: Item
+(X,Y): (032,010)
+
+Page #1
+Conditions
+None
+
+Graphic: Items Amigento-Discs 2
+
+Autonomous Movement
+Type: Fixed
+Speed: 3: Slow
+Freq: 3: Low
+Options Enabled
+Move Animation
+Direction Fix
+Trigger: Action Button
+
+List of Event Commands:
+@>Conditional Branch: Script: pbItemBall(:EXPCANDYL)
+ @>Control Self Switch: A =ON
+ @>
+: Branch End
+@>
+
+Page #2
+Conditions
+Self Switch A is ON
+
+Autonomous Movement
+Type: Fixed
+Speed: 3: Slow
+Freq: 3: Low
+Options Enabled
+Move Animation
+Trigger: Action Button
+
+List of Event Commands:
 @>
 
 #------------------------------------------------------------------------------
@@ -392706,6 +395168,48 @@ List of Event Commands:
 @>
 
 #------------------------------------------------------------------------------
+Event ID: 011
+Event Name: Item
+(X,Y): (008,012)
+
+Page #1
+Conditions
+None
+
+Graphic: Items Amigento-Discs 2
+
+Autonomous Movement
+Type: Fixed
+Speed: 3: Slow
+Freq: 3: Low
+Options Enabled
+Move Animation
+Direction Fix
+Trigger: Action Button
+
+List of Event Commands:
+@>Conditional Branch: Script: pbItemBall(:EXPCANDYXL)
+ @>Control Self Switch: A =ON
+ @>
+: Branch End
+@>
+
+Page #2
+Conditions
+Self Switch A is ON
+
+Autonomous Movement
+Type: Fixed
+Speed: 3: Slow
+Freq: 3: Low
+Options Enabled
+Move Animation
+Trigger: Action Button
+
+List of Event Commands:
+@>
+
+#------------------------------------------------------------------------------
 
 #==============================================================================
 Map ID: 507
@@ -395570,6 +398074,48 @@ List of Event Commands:
 Page #3
 Conditions
 Self Switch B is ON
+
+Autonomous Movement
+Type: Fixed
+Speed: 3: Slow
+Freq: 3: Low
+Options Enabled
+Move Animation
+Trigger: Action Button
+
+List of Event Commands:
+@>
+
+#------------------------------------------------------------------------------
+Event ID: 015
+Event Name: Item
+(X,Y): (011,004)
+
+Page #1
+Conditions
+None
+
+Graphic: Items Amigento-Discs 2
+
+Autonomous Movement
+Type: Fixed
+Speed: 3: Slow
+Freq: 3: Low
+Options Enabled
+Move Animation
+Direction Fix
+Trigger: Action Button
+
+List of Event Commands:
+@>Conditional Branch: Script: pbItemBall(:EXPCANDYXL)
+ @>Control Self Switch: A =ON
+ @>
+: Branch End
+@>
+
+Page #2
+Conditions
+Self Switch A is ON
 
 Autonomous Movement
 Type: Fixed
@@ -409988,6 +412534,90 @@ List of Event Commands:
 @>
 
 #------------------------------------------------------------------------------
+Event ID: 081
+Event Name: Item
+(X,Y): (029,063)
+
+Page #1
+Conditions
+None
+
+Graphic: Items Amigento-Discs 2
+
+Autonomous Movement
+Type: Fixed
+Speed: 3: Slow
+Freq: 3: Low
+Options Enabled
+Move Animation
+Direction Fix
+Trigger: Action Button
+
+List of Event Commands:
+@>Conditional Branch: Script: pbItemBall(:EXPCANDYL)
+ @>Control Self Switch: A =ON
+ @>
+: Branch End
+@>
+
+Page #2
+Conditions
+Self Switch A is ON
+
+Autonomous Movement
+Type: Fixed
+Speed: 3: Slow
+Freq: 3: Low
+Options Enabled
+Move Animation
+Trigger: Action Button
+
+List of Event Commands:
+@>
+
+#------------------------------------------------------------------------------
+Event ID: 082
+Event Name: Item
+(X,Y): (068,012)
+
+Page #1
+Conditions
+None
+
+Graphic: Items Amigento-Discs 2
+
+Autonomous Movement
+Type: Fixed
+Speed: 3: Slow
+Freq: 3: Low
+Options Enabled
+Move Animation
+Direction Fix
+Trigger: Action Button
+
+List of Event Commands:
+@>Conditional Branch: Script: pbItemBall(:EXPCANDYL)
+ @>Control Self Switch: A =ON
+ @>
+: Branch End
+@>
+
+Page #2
+Conditions
+Self Switch A is ON
+
+Autonomous Movement
+Type: Fixed
+Speed: 3: Slow
+Freq: 3: Low
+Options Enabled
+Move Animation
+Trigger: Action Button
+
+List of Event Commands:
+@>
+
+#------------------------------------------------------------------------------
 
 #==============================================================================
 Map ID: 519
@@ -410621,7 +413251,7 @@ Page #1
 Conditions
 None
 
-Graphic: Items Amigento-Discs 1
+Graphic: Item017
 
 Autonomous Movement
 Type: Fixed
@@ -410633,7 +413263,7 @@ Direction Fix
 Trigger: Action Button
 
 List of Event Commands:
-@>Conditional Branch: Script: pbItemBall(:ROCKMEMORY)
+@>Conditional Branch: Script: pbItemBall(:TM176)
  @>Control Self Switch: A =ON
  @>
 : Branch End
@@ -417907,6 +420537,48 @@ List of Event Commands:
 @>
 
 #------------------------------------------------------------------------------
+Event ID: 030
+Event Name: Item
+(X,Y): (025,012)
+
+Page #1
+Conditions
+None
+
+Graphic: Items91
+
+Autonomous Movement
+Type: Fixed
+Speed: 3: Slow
+Freq: 3: Low
+Options Enabled
+Move Animation
+Direction Fix
+Trigger: Action Button
+
+List of Event Commands:
+@>Conditional Branch: Script: pbItemBall(:TWISTEDSPOON)
+ @>Control Self Switch: A =ON
+ @>
+: Branch End
+@>
+
+Page #2
+Conditions
+Self Switch A is ON
+
+Autonomous Movement
+Type: Fixed
+Speed: 3: Slow
+Freq: 3: Low
+Options Enabled
+Move Animation
+Trigger: Action Button
+
+List of Event Commands:
+@>
+
+#------------------------------------------------------------------------------
 
 #==============================================================================
 Map ID: 553
@@ -421604,6 +424276,90 @@ List of Event Commands:
 @>
 
 #------------------------------------------------------------------------------
+Event ID: 071
+Event Name: Item
+(X,Y): (020,067)
+
+Page #1
+Conditions
+None
+
+Graphic: Items Amigento-Discs 2
+
+Autonomous Movement
+Type: Fixed
+Speed: 3: Slow
+Freq: 3: Low
+Options Enabled
+Move Animation
+Direction Fix
+Trigger: Action Button
+
+List of Event Commands:
+@>Conditional Branch: Script: pbItemBall(:EXPCANDYL)
+ @>Control Self Switch: A =ON
+ @>
+: Branch End
+@>
+
+Page #2
+Conditions
+Self Switch A is ON
+
+Autonomous Movement
+Type: Fixed
+Speed: 3: Slow
+Freq: 3: Low
+Options Enabled
+Move Animation
+Trigger: Action Button
+
+List of Event Commands:
+@>
+
+#------------------------------------------------------------------------------
+Event ID: 072
+Event Name: Item
+(X,Y): (071,018)
+
+Page #1
+Conditions
+None
+
+Graphic: Items Amigento-Discs 2
+
+Autonomous Movement
+Type: Fixed
+Speed: 3: Slow
+Freq: 3: Low
+Options Enabled
+Move Animation
+Direction Fix
+Trigger: Action Button
+
+List of Event Commands:
+@>Conditional Branch: Script: pbItemBall(:EXPCANDYL)
+ @>Control Self Switch: A =ON
+ @>
+: Branch End
+@>
+
+Page #2
+Conditions
+Self Switch A is ON
+
+Autonomous Movement
+Type: Fixed
+Speed: 3: Slow
+Freq: 3: Low
+Options Enabled
+Move Animation
+Trigger: Action Button
+
+List of Event Commands:
+@>
+
+#------------------------------------------------------------------------------
 Event ID: 080
 Event Name: Fukano
 (X,Y): (002,037)
@@ -424721,6 +427477,48 @@ Trigger: Action Button
 List of Event Commands:
 @>Text: Wer die Wahrheit verleugnet, wird den weißen 
  :    : Drachen niemals erblicken.
+@>
+
+#------------------------------------------------------------------------------
+Event ID: 018
+Event Name: Item
+(X,Y): (009,014)
+
+Page #1
+Conditions
+None
+
+Graphic: Items Amigento-Discs 2
+
+Autonomous Movement
+Type: Fixed
+Speed: 3: Slow
+Freq: 3: Low
+Options Enabled
+Move Animation
+Direction Fix
+Trigger: Action Button
+
+List of Event Commands:
+@>Conditional Branch: Script: pbItemBall(:EXPCANDYL)
+ @>Control Self Switch: A =ON
+ @>
+: Branch End
+@>
+
+Page #2
+Conditions
+Self Switch A is ON
+
+Autonomous Movement
+Type: Fixed
+Speed: 3: Slow
+Freq: 3: Low
+Options Enabled
+Move Animation
+Trigger: Action Button
+
+List of Event Commands:
 @>
 
 #------------------------------------------------------------------------------
@@ -442888,6 +445686,90 @@ List of Event Commands:
 @>
 
 #------------------------------------------------------------------------------
+Event ID: 009
+Event Name: Item
+(X,Y): (015,006)
+
+Page #1
+Conditions
+None
+
+Graphic: Items Amigento-Discs 2
+
+Autonomous Movement
+Type: Fixed
+Speed: 3: Slow
+Freq: 3: Low
+Options Enabled
+Move Animation
+Direction Fix
+Trigger: Action Button
+
+List of Event Commands:
+@>Conditional Branch: Script: pbItemBall(:EXPCANDYXL)
+ @>Control Self Switch: A =ON
+ @>
+: Branch End
+@>
+
+Page #2
+Conditions
+Self Switch A is ON
+
+Autonomous Movement
+Type: Fixed
+Speed: 3: Slow
+Freq: 3: Low
+Options Enabled
+Move Animation
+Trigger: Action Button
+
+List of Event Commands:
+@>
+
+#------------------------------------------------------------------------------
+Event ID: 010
+Event Name: Item
+(X,Y): (022,006)
+
+Page #1
+Conditions
+None
+
+Graphic: Items Amigento-Discs 2
+
+Autonomous Movement
+Type: Fixed
+Speed: 3: Slow
+Freq: 3: Low
+Options Enabled
+Move Animation
+Direction Fix
+Trigger: Action Button
+
+List of Event Commands:
+@>Conditional Branch: Script: pbItemBall(:EXPCANDYXL)
+ @>Control Self Switch: A =ON
+ @>
+: Branch End
+@>
+
+Page #2
+Conditions
+Self Switch A is ON
+
+Autonomous Movement
+Type: Fixed
+Speed: 3: Slow
+Freq: 3: Low
+Options Enabled
+Move Animation
+Trigger: Action Button
+
+List of Event Commands:
+@>
+
+#------------------------------------------------------------------------------
 
 #==============================================================================
 Map ID: 608
@@ -444542,6 +447424,48 @@ List of Event Commands:
 @>
 
 #------------------------------------------------------------------------------
+Event ID: 006
+Event Name: Item
+(X,Y): (012,007)
+
+Page #1
+Conditions
+None
+
+Graphic: Items Amigento-Discs 2
+
+Autonomous Movement
+Type: Fixed
+Speed: 3: Slow
+Freq: 3: Low
+Options Enabled
+Move Animation
+Direction Fix
+Trigger: Action Button
+
+List of Event Commands:
+@>Conditional Branch: Script: pbItemBall(:EXPCANDYL)
+ @>Control Self Switch: A =ON
+ @>
+: Branch End
+@>
+
+Page #2
+Conditions
+Self Switch A is ON
+
+Autonomous Movement
+Type: Fixed
+Speed: 3: Slow
+Freq: 3: Low
+Options Enabled
+Move Animation
+Trigger: Action Button
+
+List of Event Commands:
+@>
+
+#------------------------------------------------------------------------------
 
 #==============================================================================
 Map ID: 613
@@ -444903,6 +447827,48 @@ Freq: 1: Lowest
 Options Enabled
 Move Animation
 Stop Animation
+Trigger: Action Button
+
+List of Event Commands:
+@>
+
+#------------------------------------------------------------------------------
+Event ID: 016
+Event Name: Item
+(X,Y): (044,052)
+
+Page #1
+Conditions
+None
+
+Graphic: Items Amigento-Discs 2
+
+Autonomous Movement
+Type: Fixed
+Speed: 3: Slow
+Freq: 3: Low
+Options Enabled
+Move Animation
+Direction Fix
+Trigger: Action Button
+
+List of Event Commands:
+@>Conditional Branch: Script: pbItemBall(:EXPCANDYL)
+ @>Control Self Switch: A =ON
+ @>
+: Branch End
+@>
+
+Page #2
+Conditions
+Self Switch A is ON
+
+Autonomous Movement
+Type: Fixed
+Speed: 3: Slow
+Freq: 3: Low
+Options Enabled
+Move Animation
 Trigger: Action Button
 
 List of Event Commands:
@@ -445347,6 +448313,48 @@ List of Event Commands:
 Page #3
 Conditions
 Self Switch B is ON
+
+Autonomous Movement
+Type: Fixed
+Speed: 3: Slow
+Freq: 3: Low
+Options Enabled
+Move Animation
+Trigger: Action Button
+
+List of Event Commands:
+@>
+
+#------------------------------------------------------------------------------
+Event ID: 007
+Event Name: Item
+(X,Y): (022,016)
+
+Page #1
+Conditions
+None
+
+Graphic: Items Amigento-Discs 2
+
+Autonomous Movement
+Type: Fixed
+Speed: 3: Slow
+Freq: 3: Low
+Options Enabled
+Move Animation
+Direction Fix
+Trigger: Action Button
+
+List of Event Commands:
+@>Conditional Branch: Script: pbItemBall(:EXPCANDYXL)
+ @>Control Self Switch: A =ON
+ @>
+: Branch End
+@>
+
+Page #2
+Conditions
+Self Switch A is ON
 
 Autonomous Movement
 Type: Fixed
@@ -447608,6 +450616,48 @@ List of Event Commands:
 @>
 
 #------------------------------------------------------------------------------
+Event ID: 004
+Event Name: Item
+(X,Y): (018,012)
+
+Page #1
+Conditions
+None
+
+Graphic: Items Amigento-Discs 2
+
+Autonomous Movement
+Type: Fixed
+Speed: 3: Slow
+Freq: 3: Low
+Options Enabled
+Move Animation
+Direction Fix
+Trigger: Action Button
+
+List of Event Commands:
+@>Conditional Branch: Script: pbItemBall(:EXPCANDYXL)
+ @>Control Self Switch: A =ON
+ @>
+: Branch End
+@>
+
+Page #2
+Conditions
+Self Switch A is ON
+
+Autonomous Movement
+Type: Fixed
+Speed: 3: Slow
+Freq: 3: Low
+Options Enabled
+Move Animation
+Trigger: Action Button
+
+List of Event Commands:
+@>
+
+#------------------------------------------------------------------------------
 
 #==============================================================================
 Map ID: 628
@@ -448139,6 +451189,90 @@ Freq: 1: Lowest
 Options Enabled
 Move Animation
 Stop Animation
+Trigger: Action Button
+
+List of Event Commands:
+@>
+
+#------------------------------------------------------------------------------
+Event ID: 016
+Event Name: Item
+(X,Y): (027,016)
+
+Page #1
+Conditions
+None
+
+Graphic: Items6
+
+Autonomous Movement
+Type: Fixed
+Speed: 3: Slow
+Freq: 3: Low
+Options Enabled
+Move Animation
+Direction Fix
+Trigger: Action Button
+
+List of Event Commands:
+@>Conditional Branch: Script: pbItemBall(:DRAGONFANG)
+ @>Control Self Switch: A =ON
+ @>
+: Branch End
+@>
+
+Page #2
+Conditions
+Self Switch A is ON
+
+Autonomous Movement
+Type: Fixed
+Speed: 3: Slow
+Freq: 3: Low
+Options Enabled
+Move Animation
+Trigger: Action Button
+
+List of Event Commands:
+@>
+
+#------------------------------------------------------------------------------
+Event ID: 017
+Event Name: Item
+(X,Y): (024,022)
+
+Page #1
+Conditions
+None
+
+Graphic: Items91
+
+Autonomous Movement
+Type: Fixed
+Speed: 3: Slow
+Freq: 3: Low
+Options Enabled
+Move Animation
+Direction Fix
+Trigger: Action Button
+
+List of Event Commands:
+@>Conditional Branch: Script: pbItemBall(:WAVEINCENSE)
+ @>Control Self Switch: A =ON
+ @>
+: Branch End
+@>
+
+Page #2
+Conditions
+Self Switch A is ON
+
+Autonomous Movement
+Type: Fixed
+Speed: 3: Slow
+Freq: 3: Low
+Options Enabled
+Move Animation
 Trigger: Action Button
 
 List of Event Commands:
@@ -448832,6 +451966,174 @@ Trigger: Player Touch
 
 List of Event Commands:
 @>Script: pbBridgeOn
+@>
+
+#------------------------------------------------------------------------------
+Event ID: 026
+Event Name: Item
+(X,Y): (001,038)
+
+Page #1
+Conditions
+None
+
+Graphic: ITEM Fossile
+
+Autonomous Movement
+Type: Fixed
+Speed: 3: Slow
+Freq: 3: Low
+Options Enabled
+Move Animation
+Direction Fix
+Trigger: Action Button
+
+List of Event Commands:
+@>Conditional Branch: Script: pbItemBall(:FOSSILIZEDDRAKE)
+ @>Control Self Switch: A =ON
+ @>
+: Branch End
+@>
+
+Page #2
+Conditions
+Self Switch A is ON
+
+Autonomous Movement
+Type: Fixed
+Speed: 3: Slow
+Freq: 3: Low
+Options Enabled
+Move Animation
+Trigger: Action Button
+
+List of Event Commands:
+@>
+
+#------------------------------------------------------------------------------
+Event ID: 027
+Event Name: Item
+(X,Y): (005,065)
+
+Page #1
+Conditions
+None
+
+Graphic: Items Amigento-Discs 2
+
+Autonomous Movement
+Type: Fixed
+Speed: 3: Slow
+Freq: 3: Low
+Options Enabled
+Move Animation
+Direction Fix
+Trigger: Action Button
+
+List of Event Commands:
+@>Conditional Branch: Script: pbItemBall(:EXPCANDYL)
+ @>Control Self Switch: A =ON
+ @>
+: Branch End
+@>
+
+Page #2
+Conditions
+Self Switch A is ON
+
+Autonomous Movement
+Type: Fixed
+Speed: 3: Slow
+Freq: 3: Low
+Options Enabled
+Move Animation
+Trigger: Action Button
+
+List of Event Commands:
+@>
+
+#------------------------------------------------------------------------------
+Event ID: 028
+Event Name: Item
+(X,Y): (048,009)
+
+Page #1
+Conditions
+None
+
+Graphic: Items Amigento-Discs 2
+
+Autonomous Movement
+Type: Fixed
+Speed: 3: Slow
+Freq: 3: Low
+Options Enabled
+Move Animation
+Direction Fix
+Trigger: Action Button
+
+List of Event Commands:
+@>Conditional Branch: Script: pbItemBall(:EXPCANDYL)
+ @>Control Self Switch: A =ON
+ @>
+: Branch End
+@>
+
+Page #2
+Conditions
+Self Switch A is ON
+
+Autonomous Movement
+Type: Fixed
+Speed: 3: Slow
+Freq: 3: Low
+Options Enabled
+Move Animation
+Trigger: Action Button
+
+List of Event Commands:
+@>
+
+#------------------------------------------------------------------------------
+Event ID: 029
+Event Name: Item
+(X,Y): (021,029)
+
+Page #1
+Conditions
+None
+
+Graphic: Items Amigento-Discs 2
+
+Autonomous Movement
+Type: Fixed
+Speed: 3: Slow
+Freq: 3: Low
+Options Enabled
+Move Animation
+Direction Fix
+Trigger: Action Button
+
+List of Event Commands:
+@>Conditional Branch: Script: pbItemBall(:EXPCANDYL)
+ @>Control Self Switch: A =ON
+ @>
+: Branch End
+@>
+
+Page #2
+Conditions
+Self Switch A is ON
+
+Autonomous Movement
+Type: Fixed
+Speed: 3: Slow
+Freq: 3: Low
+Options Enabled
+Move Animation
+Trigger: Action Button
+
+List of Event Commands:
 @>
 
 #------------------------------------------------------------------------------
@@ -449766,6 +453068,71 @@ List of Event Commands:
  :    : das irgendwann etwas war.
 @>Set Move Route: This event
  :              : $>Turn Right
+@>
+
+#------------------------------------------------------------------------------
+Event ID: 022
+Event Name: Seempos .sl
+(X,Y): (047,036)
+
+Page #1
+Conditions
+None
+
+Graphic: SPHEAL Museum
+
+Autonomous Movement
+Type: Fixed
+Speed: 3: Slow
+Freq: 3: Low
+Options Enabled
+Move Animation
+Always on Top
+Trigger: Action Button
+
+List of Event Commands:
+@>
+
+#------------------------------------------------------------------------------
+Event ID: 023
+Event Name: Item
+(X,Y): (050,068)
+
+Page #1
+Conditions
+None
+
+Graphic: Items91
+
+Autonomous Movement
+Type: Fixed
+Speed: 3: Slow
+Freq: 3: Low
+Options Enabled
+Move Animation
+Direction Fix
+Trigger: Action Button
+
+List of Event Commands:
+@>Conditional Branch: Script: pbItemBall(:SEAINCENSE)
+ @>Control Self Switch: A =ON
+ @>
+: Branch End
+@>
+
+Page #2
+Conditions
+Self Switch A is ON
+
+Autonomous Movement
+Type: Fixed
+Speed: 3: Slow
+Freq: 3: Low
+Options Enabled
+Move Animation
+Trigger: Action Button
+
+List of Event Commands:
 @>
 
 #------------------------------------------------------------------------------
