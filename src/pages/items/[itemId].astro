@@ -1,6 +1,7 @@
 ---
 import Layout from "../../layouts/Layout.astro";
 import PageHeader from "../../components/PageHeader.astro";
+import TypeBadge from "../../components/TypeBadge.astro";
 import { items, slugify, moveById } from "../../lib/data";
 import { pocketName } from "../../lib/itemPockets";
 import { ITEM_CATEGORIES } from "../../lib/itemCategories";
@@ -32,6 +33,9 @@ const locationsByPlace = Object.groupBy
   <table>
     {i.move && (
       <tr><th>Name</th><td>{i.name}</td></tr>
+    )}
+    {i.move && moveById.get(i.move) && (
+      <tr><th>Typ</th><td><TypeBadge type={moveById.get(i.move)!.type} link /></td></tr>
     )}
     {i.pocket !== 8 && (
       <tr><th>Preis</th><td>{i.price !== null ? `${i.price} ₽` : "nicht käuflich"}</td></tr>
