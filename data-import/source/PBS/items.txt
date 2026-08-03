@@ -7592,69 +7592,6 @@ Description = Dieser Stein ermöglicht Melmetal eine Mega-Entwicklung.
 #Price = 0
 #Flags = KeyItem
 #Description = A record of the Heath's expedition on the Great Crater of Paldea. It has the name "Turo" written on it.
-#-------------------------------Besonderer Shop
-[HEALTHMOCHI]
-Name = Heil-Mochi
-NamePlural = Health Mochi
-Pocket = 2
-Price = 250
-FieldUse = OnPokemon
-Flags = Fling_20
-Description = Der Heil-Mochi erhöht die LP-Basispunkte eines Pokémon um 10. 
-#-------------------------------Besonderer Shop
-[MUSCLEMOCHI]
-Name = Kraft-Mochi
-NamePlural = Muscle Mochi
-Pocket = 2
-Price = 250
-FieldUse = OnPokemon
-Flags = Fling_20
-Description = Der Kraft-Mochi erhöht die Angriffs-Basispunkte eines Pokémon um 10. 
-#-------------------------------Besonderer Shop
-[RESISTMOCHI]
-Name = Abwehr-Mochi
-NamePlural = Resist Mochi
-Pocket = 2
-Price = 250
-FieldUse = OnPokemon
-Flags = Fling_20
-Description = Der Abwehr-Mochi erhöht die Verteidigungs-Basispunkte eines Pokémon um 10. 
-#-------------------------------Besonderer Shop
-[GENIUSMOCHI]
-Name = Genie-Mochi
-NamePlural = Genius Mochi
-Pocket = 2
-Price = 250
-FieldUse = OnPokemon
-Flags = Fling_20
-Description = Der Genie-Mochi erhöht die Spezial-Angriffs-Basispunkte eines Pokémon um 10. 
-#-------------------------------Besonderer Shop
-[CLEVERMOCHI]
-Name = Esprit-Mochi
-NamePlural = Clever Mochi
-Pocket = 2
-Price = 250
-FieldUse = OnPokemon
-Flags = Fling_20
-Description = Der Esprit-Mochi erhöht die Spezial-Verteidigungs-Basispunkte eines Pokémon um 10. 
-#-------------------------------Besonderer Shop
-[SWIFTMOCHI]
-Name = Flink-Mochi
-NamePlural = Swift Mochi
-Pocket = 2
-Price = 250
-FieldUse = OnPokemon
-Flags = Fling_20
-Description = Der Flink-Mochi erhöht die Initiative-Basispunkte eines Pokémon um 10. 
-#-------------------------------Besonderer Shop
-[FRESHSTARTMOCHI]
-Name = Neuanfangs-Mochi
-NamePlural = Fresh-Start Mochi
-Pocket = 2
-Price = 250
-FieldUse = OnPokemon
-Flags = Fling_20
-Description = Der Neuanfangs-Mochi setzt alle Basispunkte eines Pokémon zurück. 
 #-------------------------------
 #[BRIARSBOOK]
 #Name = Briar's Book
