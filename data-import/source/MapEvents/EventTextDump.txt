@@ -11912,6 +11912,89 @@ List of Event Commands:
 @>
 
 #------------------------------------------------------------------------------
+Event ID: 051
+Event Name: HoneyTree(0) size(2,1)
+(X,Y): (042,049)
+
+Page #1
+Conditions
+None
+
+Graphic: Honigbaum
+
+Autonomous Movement
+Type: Fixed
+Speed: 3: Slow
+Freq: 3: Low
+Options Enabled
+Move Animation
+Trigger: Action Button
+
+List of Event Commands:
+@>
+
+#------------------------------------------------------------------------------
+Event ID: 052
+Event Name: Info
+(X,Y): (043,050)
+
+Page #1
+Conditions
+None
+
+Graphic: NPC_Junge 7
+
+Autonomous Movement
+Type: Fixed
+Speed: 3: Slow
+Freq: 3: Low
+Options Enabled
+Move Animation
+Trigger: Action Button
+
+List of Event Commands:
+@>Text: Das hier ist ein Honigbaum.
+@>Text: Davon gibt es insgesamt 21 Stück, in ganz Chronoria.
+@>Text: Du kannst Honig an seine Rinde schmieren und so 
+ :    : wilde Pokémon anlocken.
+@>Script: pbReceiveItem(:HONEY)
+@>Text: Probiere es doch gleich hier aus.
+@>Text: Nachdem du ein Pokémon angelockt hast, dauert es 
+ :    : ungefähr 24 Stunden, bis du es erneut versuchen 
+ :    : kannst.
+@>Set Move Route: This event
+ :              : $>Turn Up
+@>Control Self Switch: A =ON
+@>
+
+Page #2
+Conditions
+Self Switch A is ON
+
+Graphic: NPC_Junge 7
+
+Autonomous Movement
+Type: Fixed
+Speed: 3: Slow
+Freq: 3: Low
+Options Enabled
+Move Animation
+Trigger: Action Button
+
+List of Event Commands:
+@>Text: Das hier ist ein Honigbaum.
+@>Text: Davon gibt es insgesamt 21 Stück, in ganz Chronoria.
+@>Text: Du kannst Honig an seine Rinde schmieren und so 
+ :    : wilde Pokémon anlocken.
+@>Text: Man muss nur ein wenig warten.
+@>Text: Nachdem du ein Pokémon angelockt hast, dauert es 
+ :    : ungefähr 24 Stunden, bis du es erneut versuchen 
+ :    : kannst.
+@>Set Move Route: This event
+ :              : $>Turn Up
+@>
+
+#------------------------------------------------------------------------------
 Event ID: 053
 Event Name: Blockevent
 (X,Y): (040,059)
@@ -47269,6 +47352,28 @@ List of Event Commands:
 @>
 
 #------------------------------------------------------------------------------
+Event ID: 088
+Event Name: HoneyTree(1) size(2,1)
+(X,Y): (013,029)
+
+Page #1
+Conditions
+None
+
+Graphic: Honigbaum
+
+Autonomous Movement
+Type: Fixed
+Speed: 3: Slow
+Freq: 3: Low
+Options Enabled
+Move Animation
+Trigger: Action Button
+
+List of Event Commands:
+@>
+
+#------------------------------------------------------------------------------
 
 #==============================================================================
 Map ID: 088
@@ -66312,6 +66417,7 @@ List of Event Commands:
  @>Text: \xn[Camp-Leiterin]Es wird bei dir sicherlich gut
   :    : aufgehoben sein.
  @>Script: pkmn = Pokemon.new(:PICHU_1, 10)
+ :       : pkmn.item = :LIGHTBALL
  :       : pkmn.shiny = true
  :       : pkmn.calc_stats
  :       : pbAddPokemon(pkmn)
@@ -67414,6 +67520,28 @@ List of Event Commands:
 Page #3
 Conditions
 Switch 0080: Pichu Ende is ON
+
+Autonomous Movement
+Type: Fixed
+Speed: 3: Slow
+Freq: 3: Low
+Options Enabled
+Move Animation
+Trigger: Action Button
+
+List of Event Commands:
+@>
+
+#------------------------------------------------------------------------------
+Event ID: 055
+Event Name: HoneyTree(2) size(2,1)
+(X,Y): (040,012)
+
+Page #1
+Conditions
+None
+
+Graphic: Honigbaum
 
 Autonomous Movement
 Type: Fixed
@@ -84204,6 +84332,28 @@ List of Event Commands:
 @>
 
 #------------------------------------------------------------------------------
+Event ID: 053
+Event Name: HoneyTree(8) size(2,1)
+(X,Y): (036,011)
+
+Page #1
+Conditions
+None
+
+Graphic: Honigbaum
+
+Autonomous Movement
+Type: Fixed
+Speed: 3: Slow
+Freq: 3: Low
+Options Enabled
+Move Animation
+Trigger: Action Button
+
+List of Event Commands:
+@>
+
+#------------------------------------------------------------------------------
 
 #==============================================================================
 Map ID: 140
@@ -100322,7 +100472,7 @@ List of Event Commands:
 #------------------------------------------------------------------------------
 Event ID: 017
 Event Name: Item
-(X,Y): (134,014)
+(X,Y): (137,011)
 
 Page #1
 Conditions
@@ -104509,6 +104659,196 @@ Move Animation
 Trigger: Action Button
 
 List of Event Commands:
+@>
+
+#------------------------------------------------------------------------------
+Event ID: 124
+Event Name: EV124
+(X,Y): (133,015)
+
+Page #1
+Conditions
+None
+
+Graphic: ELECTRIKE
+
+Autonomous Movement
+Type: Fixed
+Speed: 3: Slow
+Freq: 1: Lowest
+Options Enabled
+Move Animation
+Stop Animation
+Trigger: Action Button
+
+List of Event Commands:
+@>Text: Das Frizelbliz möchte sich dir anschließen, möchtest 
+ :    : du es mitnehmen?
+@>Show Choices: Ja, Nein
+(When Cancel: Choice 2)
+: When [Ja]
+ @>Show Animation: This event, [Happy bubble]
+ @>Wait: 24 frame(s)
+ @>Script: pbAddPokemon(:ELECTRIKE, 15)
+ @>Control Self Switch: A =ON
+ @>
+: When [Nein]
+ @>Show Animation: This event, [Sad bubble]
+ @>Wait: 24 frame(s)
+ @>
+: Branch End
+@>
+
+Page #2
+Conditions
+Self Switch A is ON
+
+Autonomous Movement
+Type: Fixed
+Speed: 3: Slow
+Freq: 3: Low
+Options Enabled
+Move Animation
+Trigger: Action Button
+
+List of Event Commands:
+@>
+
+#------------------------------------------------------------------------------
+Event ID: 125
+Event Name: EV125
+(X,Y): (132,013)
+
+Page #1
+Conditions
+None
+
+Graphic: TIMBURR
+
+Autonomous Movement
+Type: Fixed
+Speed: 3: Slow
+Freq: 3: Low
+Options Enabled
+Move Animation
+Stop Animation
+Direction Fix
+Trigger: Action Button
+
+List of Event Commands:
+@>
+
+Page #2
+Conditions
+Self Switch A is ON
+
+Autonomous Movement
+Type: Fixed
+Speed: 3: Slow
+Freq: 3: Low
+Options Enabled
+Move Animation
+Trigger: Action Button
+
+List of Event Commands:
+@>
+
+#------------------------------------------------------------------------------
+Event ID: 126
+Event Name: EV126
+(X,Y): (134,013)
+
+Page #1
+Conditions
+None
+
+Graphic: TIMBURR
+
+Autonomous Movement
+Type: Fixed
+Speed: 3: Slow
+Freq: 3: Low
+Options Enabled
+Move Animation
+Stop Animation
+Direction Fix
+Trigger: Action Button
+
+List of Event Commands:
+@>
+
+Page #2
+Conditions
+Self Switch A is ON
+
+Autonomous Movement
+Type: Fixed
+Speed: 3: Slow
+Freq: 3: Low
+Options Enabled
+Move Animation
+Trigger: Action Button
+
+List of Event Commands:
+@>
+
+#------------------------------------------------------------------------------
+Event ID: 127
+Event Name: EV127
+(X,Y): (133,013)
+
+Page #1
+Conditions
+None
+
+Autonomous Movement
+Type: Fixed
+Speed: 3: Slow
+Freq: 3: Low
+Options Enabled
+Move Animation
+Trigger: Event Touch
+
+List of Event Commands:
+@>Wait: 10 frame(s)
+@>Show Animation: [EV125], [Exclaim bubble]
+@>Show Animation: [EV126], [Exclaim bubble]
+@>Wait: 12 frame(s)
+@>Set Move Route: [EV125]
+ :              : $>Turn Right
+@>Set Move Route: [EV126]
+ :              : $>Turn Left
+@>Script: setBattleRule("1v2")
+:       : setBattleRule("outcome",48)
+:       : WildBattle.start(:TIMBURR, 15, 
+:       : :TIMBURR, 15)
+@>Conditional Branch: Variable [0048: Kampf-Ergebnis] == 2
+ @>Exit Event Processing
+ @>
+: Else
+ @>Script: pbSetSelfSwitch(125,"A",true)
+ @>Script: pbSetSelfSwitch(126,"A",true)
+ @>Wait: 10 frame(s)
+ @>Set Move Route: [EV124]
+  :              : $>1 Step Forward
+ @>Wait: 10 frame(s)
+ @>Text: Das Frizelbliz möchte sich dir anschließen, möchtest 
+  :    : du es mitnehmen?
+ @>Show Choices: Ja, Nein
+ (When Cancel: Choice 2)
+ : When [Ja]
+  @>Show Animation: [EV124], [Happy bubble]
+  @>Wait: 24 frame(s)
+  @>Script: pbAddPokemon(:ELECTRIKE, 15)
+  @>Script: pbSetSelfSwitch(124,"A",true)
+  @>
+ : When [Nein]
+  @>Show Animation: [EV124], [Sad bubble]
+  @>Wait: 24 frame(s)
+  @>
+ : Branch End
+ @>
+: Branch End
 @>
 
 #------------------------------------------------------------------------------
@@ -110940,6 +111280,28 @@ List of Event Commands:
 Page #2
 Conditions
 Self Switch A is ON
+
+Autonomous Movement
+Type: Fixed
+Speed: 3: Slow
+Freq: 3: Low
+Options Enabled
+Move Animation
+Trigger: Action Button
+
+List of Event Commands:
+@>
+
+#------------------------------------------------------------------------------
+Event ID: 092
+Event Name: HoneyTree(3) size(2,1)
+(X,Y): (015,037)
+
+Page #1
+Conditions
+None
+
+Graphic: Honigbaum
 
 Autonomous Movement
 Type: Fixed
@@ -138890,6 +139252,48 @@ List of Event Commands:
 @>
 
 #------------------------------------------------------------------------------
+Event ID: 073
+Event Name: Item
+(X,Y): (014,011)
+
+Page #1
+Conditions
+None
+
+Graphic: Items Amigento-Discs 2
+
+Autonomous Movement
+Type: Fixed
+Speed: 3: Slow
+Freq: 3: Low
+Options Enabled
+Move Animation
+Direction Fix
+Trigger: Action Button
+
+List of Event Commands:
+@>Conditional Branch: Script: pbItemBall(:CELLBATTERY)
+ @>Control Self Switch: A =ON
+ @>
+: Branch End
+@>
+
+Page #2
+Conditions
+Self Switch A is ON
+
+Autonomous Movement
+Type: Fixed
+Speed: 3: Slow
+Freq: 3: Low
+Options Enabled
+Move Animation
+Trigger: Action Button
+
+List of Event Commands:
+@>
+
+#------------------------------------------------------------------------------
 Event ID: 074
 Event Name: EV074
 (X,Y): (060,003)
@@ -140402,6 +140806,48 @@ List of Event Commands:
 @>
 
 #------------------------------------------------------------------------------
+Event ID: 125
+Event Name: Item
+(X,Y): (055,038)
+
+Page #1
+Conditions
+None
+
+Graphic: Items Amigento-Discs 2
+
+Autonomous Movement
+Type: Fixed
+Speed: 3: Slow
+Freq: 3: Low
+Options Enabled
+Move Animation
+Direction Fix
+Trigger: Action Button
+
+List of Event Commands:
+@>Conditional Branch: Script: pbItemBall(:CELLBATTERY)
+ @>Control Self Switch: A =ON
+ @>
+: Branch End
+@>
+
+Page #2
+Conditions
+Self Switch A is ON
+
+Autonomous Movement
+Type: Fixed
+Speed: 3: Slow
+Freq: 3: Low
+Options Enabled
+Move Animation
+Trigger: Action Button
+
+List of Event Commands:
+@>
+
+#------------------------------------------------------------------------------
 Event ID: 126
 Event Name: EV126
 (X,Y): (018,045)
@@ -140802,25 +141248,29 @@ List of Event Commands:
 
 #------------------------------------------------------------------------------
 Event ID: 140
-Event Name: EV140
-(X,Y): (014,017)
+Event Name: Item
+(X,Y): (043,064)
 
 Page #1
 Conditions
 None
 
+Graphic: Items Amigento-Discs 2
+
 Autonomous Movement
 Type: Fixed
-Speed: 1: Slowest
-Freq: 1: Lowest
+Speed: 3: Slow
+Freq: 3: Low
 Options Enabled
+Move Animation
 Direction Fix
-Trigger: Player Touch
+Trigger: Action Button
 
 List of Event Commands:
-@>Play SE: 'STUNFISK', 80, 100
-@>Script: WildBattle.start(:STUNFISK, 35)
-@>Control Self Switch: A =ON
+@>Conditional Branch: Script: pbItemBall(:CELLBATTERY)
+ @>Control Self Switch: A =ON
+ @>
+: Branch End
 @>
 
 Page #2
@@ -144290,6 +144740,90 @@ List of Event Commands:
 @>
 
 #------------------------------------------------------------------------------
+Event ID: 050
+Event Name: Item
+(X,Y): (008,010)
+
+Page #1
+Conditions
+None
+
+Graphic: Items Amigento-Discs 2
+
+Autonomous Movement
+Type: Fixed
+Speed: 3: Slow
+Freq: 3: Low
+Options Enabled
+Move Animation
+Direction Fix
+Trigger: Action Button
+
+List of Event Commands:
+@>Conditional Branch: Script: pbItemBall(:CELLBATTERY)
+ @>Control Self Switch: A =ON
+ @>
+: Branch End
+@>
+
+Page #2
+Conditions
+Self Switch A is ON
+
+Autonomous Movement
+Type: Fixed
+Speed: 3: Slow
+Freq: 3: Low
+Options Enabled
+Move Animation
+Trigger: Action Button
+
+List of Event Commands:
+@>
+
+#------------------------------------------------------------------------------
+Event ID: 051
+Event Name: Item
+(X,Y): (039,016)
+
+Page #1
+Conditions
+None
+
+Graphic: Items Amigento-Discs 2
+
+Autonomous Movement
+Type: Fixed
+Speed: 3: Slow
+Freq: 3: Low
+Options Enabled
+Move Animation
+Direction Fix
+Trigger: Action Button
+
+List of Event Commands:
+@>Conditional Branch: Script: pbItemBall(:CELLBATTERY)
+ @>Control Self Switch: A =ON
+ @>
+: Branch End
+@>
+
+Page #2
+Conditions
+Self Switch A is ON
+
+Autonomous Movement
+Type: Fixed
+Speed: 3: Slow
+Freq: 3: Low
+Options Enabled
+Move Animation
+Trigger: Action Button
+
+List of Event Commands:
+@>
+
+#------------------------------------------------------------------------------
 
 #==============================================================================
 Map ID: 188
@@ -145791,6 +146325,90 @@ Trigger: Action Button
 
 List of Event Commands:
 @>Text: Finger weg!
+@>
+
+#------------------------------------------------------------------------------
+Event ID: 043
+Event Name: Item
+(X,Y): (027,025)
+
+Page #1
+Conditions
+None
+
+Graphic: Items Amigento-Discs 2
+
+Autonomous Movement
+Type: Fixed
+Speed: 3: Slow
+Freq: 3: Low
+Options Enabled
+Move Animation
+Direction Fix
+Trigger: Action Button
+
+List of Event Commands:
+@>Conditional Branch: Script: pbItemBall(:CELLBATTERY)
+ @>Control Self Switch: A =ON
+ @>
+: Branch End
+@>
+
+Page #2
+Conditions
+Self Switch A is ON
+
+Autonomous Movement
+Type: Fixed
+Speed: 3: Slow
+Freq: 3: Low
+Options Enabled
+Move Animation
+Trigger: Action Button
+
+List of Event Commands:
+@>
+
+#------------------------------------------------------------------------------
+Event ID: 044
+Event Name: Item
+(X,Y): (019,011)
+
+Page #1
+Conditions
+None
+
+Graphic: Items Amigento-Discs 2
+
+Autonomous Movement
+Type: Fixed
+Speed: 3: Slow
+Freq: 3: Low
+Options Enabled
+Move Animation
+Direction Fix
+Trigger: Action Button
+
+List of Event Commands:
+@>Conditional Branch: Script: pbItemBall(:CELLBATTERY)
+ @>Control Self Switch: A =ON
+ @>
+: Branch End
+@>
+
+Page #2
+Conditions
+Self Switch A is ON
+
+Autonomous Movement
+Type: Fixed
+Speed: 3: Slow
+Freq: 3: Low
+Options Enabled
+Move Animation
+Trigger: Action Button
+
+List of Event Commands:
 @>
 
 #------------------------------------------------------------------------------
@@ -150022,6 +150640,48 @@ Trigger: Action Button
 
 List of Event Commands:
 @>Text: Finger weg!
+@>
+
+#------------------------------------------------------------------------------
+Event ID: 113
+Event Name: Item
+(X,Y): (040,025)
+
+Page #1
+Conditions
+None
+
+Graphic: Items Amigento-Discs 2
+
+Autonomous Movement
+Type: Fixed
+Speed: 3: Slow
+Freq: 3: Low
+Options Enabled
+Move Animation
+Direction Fix
+Trigger: Action Button
+
+List of Event Commands:
+@>Conditional Branch: Script: pbItemBall(:CELLBATTERY)
+ @>Control Self Switch: A =ON
+ @>
+: Branch End
+@>
+
+Page #2
+Conditions
+Self Switch A is ON
+
+Autonomous Movement
+Type: Fixed
+Speed: 3: Slow
+Freq: 3: Low
+Options Enabled
+Move Animation
+Trigger: Action Button
+
+List of Event Commands:
 @>
 
 #------------------------------------------------------------------------------
@@ -167429,6 +168089,28 @@ List of Event Commands:
 Page #2
 Conditions
 Self Switch A is ON
+
+Autonomous Movement
+Type: Fixed
+Speed: 3: Slow
+Freq: 3: Low
+Options Enabled
+Move Animation
+Trigger: Action Button
+
+List of Event Commands:
+@>
+
+#------------------------------------------------------------------------------
+Event ID: 101
+Event Name: HoneyTree(4) size(2,1)
+(X,Y): (039,031)
+
+Page #1
+Conditions
+None
+
+Graphic: Honigbaum
 
 Autonomous Movement
 Type: Fixed
@@ -213120,6 +213802,28 @@ List of Event Commands:
 @>
 
 #------------------------------------------------------------------------------
+Event ID: 077
+Event Name: HoneyTree(5) size(2,1)
+(X,Y): (026,003)
+
+Page #1
+Conditions
+None
+
+Graphic: Honigbaum
+
+Autonomous Movement
+Type: Fixed
+Speed: 3: Slow
+Freq: 3: Low
+Options Enabled
+Move Animation
+Trigger: Action Button
+
+List of Event Commands:
+@>
+
+#------------------------------------------------------------------------------
 
 #==============================================================================
 Map ID: 274
@@ -248395,6 +249099,28 @@ List of Event Commands:
 @>
 
 #------------------------------------------------------------------------------
+Event ID: 103
+Event Name: HoneyTree(6) size(2,1)
+(X,Y): (082,027)
+
+Page #1
+Conditions
+None
+
+Graphic: Honigbaum
+
+Autonomous Movement
+Type: Fixed
+Speed: 3: Slow
+Freq: 3: Low
+Options Enabled
+Move Animation
+Trigger: Action Button
+
+List of Event Commands:
+@>
+
+#------------------------------------------------------------------------------
 
 #==============================================================================
 Map ID: 343
@@ -252801,6 +253527,48 @@ Trigger: Action Button
 
 List of Event Commands:
 @>Text: Route 9
+@>
+
+#------------------------------------------------------------------------------
+Event ID: 103
+Event Name: Item
+(X,Y): (050,033)
+
+Page #1
+Conditions
+None
+
+Graphic: Items Amigento-Discs 2
+
+Autonomous Movement
+Type: Fixed
+Speed: 3: Slow
+Freq: 3: Low
+Options Enabled
+Move Animation
+Direction Fix
+Trigger: Action Button
+
+List of Event Commands:
+@>Conditional Branch: Script: pbItemBall(:CELLBATTERY)
+ @>Control Self Switch: A =ON
+ @>
+: Branch End
+@>
+
+Page #2
+Conditions
+Self Switch A is ON
+
+Autonomous Movement
+Type: Fixed
+Speed: 3: Slow
+Freq: 3: Low
+Options Enabled
+Move Animation
+Trigger: Action Button
+
+List of Event Commands:
 @>
 
 #------------------------------------------------------------------------------
@@ -358134,6 +358902,28 @@ List of Event Commands:
 @>
 
 #------------------------------------------------------------------------------
+Event ID: 048
+Event Name: HoneyTree(7) size(2,1)
+(X,Y): (014,002)
+
+Page #1
+Conditions
+None
+
+Graphic: Honigbaum
+
+Autonomous Movement
+Type: Fixed
+Speed: 3: Slow
+Freq: 3: Low
+Options Enabled
+Move Animation
+Trigger: Action Button
+
+List of Event Commands:
+@>
+
+#------------------------------------------------------------------------------
 
 #==============================================================================
 Map ID: 452
@@ -361317,6 +362107,28 @@ Freq: 1: Lowest
 Options Enabled
 Move Animation
 Stop Animation
+Trigger: Action Button
+
+List of Event Commands:
+@>
+
+#------------------------------------------------------------------------------
+Event ID: 063
+Event Name: HoneyTree(9) size(2,1)
+(X,Y): (016,019)
+
+Page #1
+Conditions
+None
+
+Graphic: Honigbaum
+
+Autonomous Movement
+Type: Fixed
+Speed: 3: Slow
+Freq: 3: Low
+Options Enabled
+Move Animation
 Trigger: Action Button
 
 List of Event Commands:
