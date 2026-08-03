@@ -11954,7 +11954,7 @@ Trigger: Action Button
 
 List of Event Commands:
 @>Text: Das hier ist ein Honigbaum.
-@>Text: Davon gibt es insgesamt 21 Stück, in ganz Chronoria.
+@>Text: Davon gibt es insgesamt 11 Stück, in ganz Chronoria.
 @>Text: Du kannst Honig an seine Rinde schmieren und so 
  :    : wilde Pokémon anlocken.
 @>Script: pbReceiveItem(:HONEY)
@@ -11962,6 +11962,8 @@ List of Event Commands:
 @>Text: Nachdem du ein Pokémon angelockt hast, dauert es 
  :    : ungefähr 24 Stunden, bis du es erneut versuchen 
  :    : kannst.
+@>Text: Du erkennst sie ganz leicht an ihrer honiggelben 
+ :    : Färbung.
 @>Set Move Route: This event
  :              : $>Turn Up
 @>Control Self Switch: A =ON
@@ -11983,13 +11985,15 @@ Trigger: Action Button
 
 List of Event Commands:
 @>Text: Das hier ist ein Honigbaum.
-@>Text: Davon gibt es insgesamt 21 Stück, in ganz Chronoria.
+@>Text: Davon gibt es insgesamt 11 Stück, in ganz Chronoria.
 @>Text: Du kannst Honig an seine Rinde schmieren und so 
  :    : wilde Pokémon anlocken.
 @>Text: Man muss nur ein wenig warten.
 @>Text: Nachdem du ein Pokémon angelockt hast, dauert es 
  :    : ungefähr 24 Stunden, bis du es erneut versuchen 
  :    : kannst.
+@>Text: Du erkennst sie ganz leicht an ihrer honiggelben 
+ :    : Färbung.
 @>Set Move Route: This event
  :              : $>Turn Up
 @>
@@ -13033,6 +13037,127 @@ List of Event Commands:
 @>
 
 #------------------------------------------------------------------------------
+Event ID: 084
+Event Name: Item .sl.hidden
+(X,Y): (037,014)
+
+Page #1
+Conditions
+None
+
+Autonomous Movement
+Type: Fixed
+Speed: 3: Slow
+Freq: 3: Low
+Options Enabled
+Move Animation
+Direction Fix
+Trigger: Action Button
+
+List of Event Commands:
+@>Conditional Branch: Script: pbItemBall(:HEAVYBALL)
+ @>Script: pbUnlist(@event_id)
+ @>Control Self Switch: A =ON
+ @>
+: Branch End
+@>
+
+Page #2
+Conditions
+Self Switch A is ON
+
+Autonomous Movement
+Type: Fixed
+Speed: 3: Slow
+Freq: 3: Low
+Options Enabled
+Move Animation
+Trigger: Action Button
+
+List of Event Commands:
+@>
+
+#------------------------------------------------------------------------------
+Event ID: 085
+Event Name: EV085
+(X,Y): (037,024)
+
+Page #1
+Conditions
+None
+
+Graphic: apricot-pokemon-33
+
+Autonomous Movement
+Type: Fixed
+Speed: 1: Slowest
+Freq: 6: Highest
+Options Enabled
+Move Animation
+Stop Animation
+Direction Fix
+Trigger: Action Button
+
+List of Event Commands:
+@>Set Move Route: This event
+ :              : $>Graphic: "apricot-pokemon-33', 0, 4, 2
+@>Script: apricorns = [
+:       :   :REDAPRICORN,
+:       :   :YELLOWAPRICORN,
+:       :   :BLUEAPRICORN,
+:       :   :GREENAPRICORN,
+:       :   :PINKAPRICORN,
+:       :   :WHITEAPRICORN,
+:       :   :BLACKAPRICORN
+:       : ]
+@>Script: random_item = apricorns.sample
+:       : pbItemBall(random_item)
+@>Script: pbSetEventTime
+@>
+
+Page #2
+Conditions
+Self Switch A is ON
+
+Graphic: apricot-pokemon-33
+
+Autonomous Movement
+Type: Fixed
+Speed: 1: Slowest
+Freq: 5: Higher
+Options Enabled
+Move Animation
+Stop Animation
+Direction Fix
+Trigger: Action Button
+
+List of Event Commands:
+@>Text: Versuch es doch morgen nochmal.
+@>
+
+Page #3
+Conditions
+Switch 0023: s:cooledDown?(86400) is ON
+Self Switch A is ON
+
+Graphic: apricot-pokemon-33
+
+Autonomous Movement
+Type: Fixed
+Speed: 1: Slowest
+Freq: 5: Higher
+Options Enabled
+Move Animation
+Stop Animation
+Direction Fix
+Trigger: Autorun
+
+List of Event Commands:
+@>Control Self Switch: A =OFF
+@>Script: setTempSwitchOn("A")
+@>
+
+#------------------------------------------------------------------------------
 Event ID: 086
 Event Name: Vater
 (X,Y): (004,074)
@@ -13078,6 +13203,86 @@ Trigger: Action Button
 List of Event Commands:
 @>Text: \xn[Mutter]Zum Glück geht es dir gut!
 @>Text: \xn[Mutter]Ich habe mir solche Sorgen gemacht.
+@>
+
+#------------------------------------------------------------------------------
+Event ID: 088
+Event Name: EV088
+(X,Y): (039,026)
+
+Page #1
+Conditions
+None
+
+Graphic: apricot-pokemon-33
+
+Autonomous Movement
+Type: Fixed
+Speed: 1: Slowest
+Freq: 6: Highest
+Options Enabled
+Move Animation
+Stop Animation
+Direction Fix
+Trigger: Action Button
+
+List of Event Commands:
+@>Set Move Route: This event
+ :              : $>Graphic: "apricot-pokemon-33', 0, 4, 2
+@>Script: apricorns = [
+:       :   :REDAPRICORN,
+:       :   :YELLOWAPRICORN,
+:       :   :BLUEAPRICORN,
+:       :   :GREENAPRICORN,
+:       :   :PINKAPRICORN,
+:       :   :WHITEAPRICORN,
+:       :   :BLACKAPRICORN
+:       : ]
+@>Script: random_item = apricorns.sample
+:       : pbItemBall(random_item)
+@>Script: pbSetEventTime
+@>
+
+Page #2
+Conditions
+Self Switch A is ON
+
+Graphic: apricot-pokemon-33
+
+Autonomous Movement
+Type: Fixed
+Speed: 1: Slowest
+Freq: 5: Higher
+Options Enabled
+Move Animation
+Stop Animation
+Direction Fix
+Trigger: Action Button
+
+List of Event Commands:
+@>Text: Versuch es doch morgen nochmal.
+@>
+
+Page #3
+Conditions
+Switch 0023: s:cooledDown?(86400) is ON
+Self Switch A is ON
+
+Graphic: apricot-pokemon-33
+
+Autonomous Movement
+Type: Fixed
+Speed: 1: Slowest
+Freq: 5: Higher
+Options Enabled
+Move Animation
+Stop Animation
+Direction Fix
+Trigger: Autorun
+
+List of Event Commands:
+@>Control Self Switch: A =OFF
+@>Script: setTempSwitchOn("A")
 @>
 
 #------------------------------------------------------------------------------
@@ -13249,6 +13454,86 @@ Move Animation
 Trigger: Action Button
 
 List of Event Commands:
+@>
+
+#------------------------------------------------------------------------------
+Event ID: 091
+Event Name: EV091
+(X,Y): (039,031)
+
+Page #1
+Conditions
+None
+
+Graphic: apricot-pokemon-33
+
+Autonomous Movement
+Type: Fixed
+Speed: 1: Slowest
+Freq: 6: Highest
+Options Enabled
+Move Animation
+Stop Animation
+Direction Fix
+Trigger: Action Button
+
+List of Event Commands:
+@>Set Move Route: This event
+ :              : $>Graphic: "apricot-pokemon-33', 0, 4, 2
+@>Script: apricorns = [
+:       :   :REDAPRICORN,
+:       :   :YELLOWAPRICORN,
+:       :   :BLUEAPRICORN,
+:       :   :GREENAPRICORN,
+:       :   :PINKAPRICORN,
+:       :   :WHITEAPRICORN,
+:       :   :BLACKAPRICORN
+:       : ]
+@>Script: random_item = apricorns.sample
+:       : pbItemBall(random_item)
+@>Script: pbSetEventTime
+@>
+
+Page #2
+Conditions
+Self Switch A is ON
+
+Graphic: apricot-pokemon-33
+
+Autonomous Movement
+Type: Fixed
+Speed: 1: Slowest
+Freq: 5: Higher
+Options Enabled
+Move Animation
+Stop Animation
+Direction Fix
+Trigger: Action Button
+
+List of Event Commands:
+@>Text: Versuch es doch morgen nochmal.
+@>
+
+Page #3
+Conditions
+Switch 0023: s:cooledDown?(86400) is ON
+Self Switch A is ON
+
+Graphic: apricot-pokemon-33
+
+Autonomous Movement
+Type: Fixed
+Speed: 1: Slowest
+Freq: 5: Higher
+Options Enabled
+Move Animation
+Stop Animation
+Direction Fix
+Trigger: Autorun
+
+List of Event Commands:
+@>Control Self Switch: A =OFF
+@>Script: setTempSwitchOn("A")
 @>
 
 #------------------------------------------------------------------------------
@@ -42552,7 +42837,7 @@ List of Event Commands:
 
 #------------------------------------------------------------------------------
 Event ID: 022
-Event Name: Item.sl
+Event Name: Item.sl.hidden
 (X,Y): (020,007)
 
 Page #1
@@ -42572,6 +42857,7 @@ Trigger: Action Button
 
 List of Event Commands:
 @>Conditional Branch: Script: pbItemBall(:FULLRESTORE)
+ @>Script: pbUnlist(@event_id)
  @>Control Self Switch: A =ON
  @>
 : Branch End
@@ -43151,7 +43437,7 @@ List of Event Commands:
 
 #------------------------------------------------------------------------------
 Event ID: 017
-Event Name: Item
+Event Name: Item.hidden
 (X,Y): (015,027)
 
 Page #1
@@ -43171,6 +43457,7 @@ Trigger: Action Button
 
 List of Event Commands:
 @>Conditional Branch: Script: pbItemBall(:FULLHEAL)
+ @>Script: pbUnlist(@event_id)
  @>Control Self Switch: A =ON
  @>
 : Branch End
@@ -47419,6 +47706,269 @@ Trigger: Action Button
 
 List of Event Commands:
 @>Script: pbHeadbutt
+@>
+
+#------------------------------------------------------------------------------
+Event ID: 091
+Event Name: Quest 85
+(X,Y): (051,003)
+
+Page #1
+Conditions
+None
+
+Graphic: NPC_Frau 8
+
+Autonomous Movement
+Type: Fixed
+Speed: 3: Slow
+Freq: 3: Low
+Options Enabled
+Move Animation
+Trigger: Action Button
+
+List of Event Commands:
+@>Text: \xn[Thea]Ach, hallo!
+@>Text: \xn[Thea]Weißt du, ich glaube ja, dass man an den 
+ :    : Augen eines Pokémon ablesen kann,
+@>Text: \xn[Thea]wie sehr es seinen Trainer liebt.
+@>Script: activateQuest(:Quest86)
+@>Script: pbSetSelfSwitch(92,"A",true)
+@>Text: \xn[Thea]Zeig mir doch mal eines deiner Pokémon.
+@>Text: \xn[Thea]Ich bin gespannt, wie eure Bindung ist.
+@>Show Choices: Zeigen, Nein
+(When Cancel: Choice 2)
+: When [Zeigen]
+ @>Script: pbChooseAblePokemon(1, 2)
+ @>Conditional Branch: Script: pbGetPokemon(1).happiness >= 200
+  @>Text: \xn[Thea]Oh, wie wundervoll!
+  @>Text: \xn[Thea]\v[2] strahlt vor Zuneigung zu dir!
+  @>Text: \xn[Thea]Das sieht man selten.
+  @>Text: \xn[Thea]Hier, als Dank möchte ich dir etwas 
+   :    : schenken.
+  @>Script: pbReceiveItem(:FRIENDBALL,10)
+  @>Script: completeQuest(:Quest86)
+  @>Script: pbSetSelfSwitch(92,"B",true)
+  @>Control Self Switch: B =ON
+  @>
+ : Else
+  @>Text: \xn[Thea]Schade, das Pokémon scheint sich noch 
+   :    : etwas an dich gewöhnen zu müssen.
+  @>Control Self Switch: A =ON
+  @>
+ : Branch End
+ @>
+: When [Nein]
+ @>Text: \xn[Thea]Schade, ein andermal vielleicht.
+ @>Control Self Switch: A =ON
+ @>
+: Branch End
+@>
+
+Page #2
+Conditions
+Self Switch A is ON
+
+Graphic: NPC_Frau 8
+
+Autonomous Movement
+Type: Fixed
+Speed: 3: Slow
+Freq: 3: Low
+Options Enabled
+Move Animation
+Trigger: Action Button
+
+List of Event Commands:
+@>Text: \xn[Thea]Zeig mir doch mal eines deiner Pokémon.
+@>Text: \xn[Thea]Ich bin gespannt, wie eure Bindung ist.
+@>Show Choices: Zeigen, Nein
+(When Cancel: Choice 2)
+: When [Zeigen]
+ @>Script: pbChooseAblePokemon(1, 2)
+ @>Conditional Branch: Script: pbGetPokemon(1).happiness >= 200
+  @>Text: \xn[Thea]Oh, wie wundervoll!
+  @>Text: \xn[Thea]\v[2] strahlt vor Zuneigung zu dir!
+  @>Text: \xn[Thea]Das sieht man selten.
+  @>Text: \xn[Thea]Hier, als Dank möchte ich dir etwas 
+   :    : schenken.
+  @>Script: pbReceiveItem(:FRIENDBALL,10)
+  @>Script: completeQuest(:Quest86)
+  @>Script: pbSetSelfSwitch(92,"B",true)
+  @>Control Self Switch: B =ON
+  @>
+ : Else
+  @>Text: \xn[Thea]Schade, das Pokémon scheint sich noch 
+   :    : etwas an dich gewöhnen zu müssen.
+  @>
+ : Branch End
+ @>
+: When [Nein]
+ @>Text: \xn[Thea]Schade, ein andermal vielleicht.
+ @>
+: Branch End
+@>
+
+Page #3
+Conditions
+Self Switch B is ON
+
+Graphic: NPC_Frau 8
+
+Autonomous Movement
+Type: Fixed
+Speed: 3: Slow
+Freq: 3: Low
+Options Enabled
+Move Animation
+Trigger: Action Button
+
+List of Event Commands:
+@>Text: \xn[Thea]Hmm...
+@>Text: \xn[Thea]\v[2] und du, ihr habt sicher noch eine tolle 
+ :    : Zeit vor euch.
+@>
+
+#------------------------------------------------------------------------------
+Event ID: 092
+Event Name: EV092
+(X,Y): (051,002)
+
+Page #1
+Conditions
+None
+
+Graphic: Quest Symbol
+
+Autonomous Movement
+Type: Fixed
+Speed: 2: Slower
+Freq: 6: Highest
+Options Enabled
+Move Animation
+Stop Animation
+Direction Fix
+Through
+Always on Top
+Trigger: Action Button
+
+List of Event Commands:
+@>
+
+Page #2
+Conditions
+Self Switch A is ON
+
+Graphic: Quest Symbol Solved
+
+Autonomous Movement
+Type: Fixed
+Speed: 2: Slower
+Freq: 6: Highest
+Options Enabled
+Move Animation
+Stop Animation
+Direction Fix
+Through
+Always on Top
+Trigger: Action Button
+
+List of Event Commands:
+@>
+
+Page #3
+Conditions
+Self Switch B is ON
+
+Autonomous Movement
+Type: Fixed
+Speed: 3: Slow
+Freq: 3: Low
+Options Enabled
+Move Animation
+Trigger: Action Button
+
+List of Event Commands:
+@>
+
+#------------------------------------------------------------------------------
+Event ID: 093
+Event Name: EV093
+(X,Y): (057,028)
+
+Page #1
+Conditions
+None
+
+Graphic: apricot-pokemon-33
+
+Autonomous Movement
+Type: Fixed
+Speed: 1: Slowest
+Freq: 6: Highest
+Options Enabled
+Move Animation
+Stop Animation
+Direction Fix
+Trigger: Action Button
+
+List of Event Commands:
+@>Set Move Route: This event
+ :              : $>Graphic: "apricot-pokemon-33', 0, 4, 2
+@>Script: apricorns = [
+:       :   :REDAPRICORN,
+:       :   :YELLOWAPRICORN,
+:       :   :BLUEAPRICORN,
+:       :   :GREENAPRICORN,
+:       :   :PINKAPRICORN,
+:       :   :WHITEAPRICORN,
+:       :   :BLACKAPRICORN
+:       : ]
+@>Script: random_item = apricorns.sample
+:       : pbItemBall(random_item)
+@>Script: pbSetEventTime
+@>
+
+Page #2
+Conditions
+Self Switch A is ON
+
+Graphic: apricot-pokemon-33
+
+Autonomous Movement
+Type: Fixed
+Speed: 1: Slowest
+Freq: 5: Higher
+Options Enabled
+Move Animation
+Stop Animation
+Direction Fix
+Trigger: Action Button
+
+List of Event Commands:
+@>Text: Versuch es doch morgen nochmal.
+@>
+
+Page #3
+Conditions
+Switch 0023: s:cooledDown?(86400) is ON
+Self Switch A is ON
+
+Graphic: apricot-pokemon-33
+
+Autonomous Movement
+Type: Fixed
+Speed: 1: Slowest
+Freq: 5: Higher
+Options Enabled
+Move Animation
+Stop Animation
+Direction Fix
+Trigger: Autorun
+
+List of Event Commands:
+@>Control Self Switch: A =OFF
+@>Script: setTempSwitchOn("A")
 @>
 
 #------------------------------------------------------------------------------
@@ -54749,6 +55299,86 @@ Trigger: Action Button
 
 List of Event Commands:
 @>Script: pbHeadbutt
+@>
+
+#------------------------------------------------------------------------------
+Event ID: 092
+Event Name: EV092
+(X,Y): (062,030)
+
+Page #1
+Conditions
+None
+
+Graphic: apricot-pokemon-33
+
+Autonomous Movement
+Type: Fixed
+Speed: 1: Slowest
+Freq: 6: Highest
+Options Enabled
+Move Animation
+Stop Animation
+Direction Fix
+Trigger: Action Button
+
+List of Event Commands:
+@>Set Move Route: This event
+ :              : $>Graphic: "apricot-pokemon-33', 0, 4, 2
+@>Script: apricorns = [
+:       :   :REDAPRICORN,
+:       :   :YELLOWAPRICORN,
+:       :   :BLUEAPRICORN,
+:       :   :GREENAPRICORN,
+:       :   :PINKAPRICORN,
+:       :   :WHITEAPRICORN,
+:       :   :BLACKAPRICORN
+:       : ]
+@>Script: random_item = apricorns.sample
+:       : pbItemBall(random_item)
+@>Script: pbSetEventTime
+@>
+
+Page #2
+Conditions
+Self Switch A is ON
+
+Graphic: apricot-pokemon-33
+
+Autonomous Movement
+Type: Fixed
+Speed: 1: Slowest
+Freq: 5: Higher
+Options Enabled
+Move Animation
+Stop Animation
+Direction Fix
+Trigger: Action Button
+
+List of Event Commands:
+@>Text: Versuch es doch morgen nochmal.
+@>
+
+Page #3
+Conditions
+Switch 0023: s:cooledDown?(86400) is ON
+Self Switch A is ON
+
+Graphic: apricot-pokemon-33
+
+Autonomous Movement
+Type: Fixed
+Speed: 1: Slowest
+Freq: 5: Higher
+Options Enabled
+Move Animation
+Stop Animation
+Direction Fix
+Trigger: Autorun
+
+List of Event Commands:
+@>Control Self Switch: A =OFF
+@>Script: setTempSwitchOn("A")
 @>
 
 #------------------------------------------------------------------------------
@@ -72107,6 +72737,86 @@ List of Event Commands:
 @>
 
 #------------------------------------------------------------------------------
+Event ID: 137
+Event Name: EV137
+(X,Y): (083,023)
+
+Page #1
+Conditions
+None
+
+Graphic: apricot-pokemon-33
+
+Autonomous Movement
+Type: Fixed
+Speed: 1: Slowest
+Freq: 6: Highest
+Options Enabled
+Move Animation
+Stop Animation
+Direction Fix
+Trigger: Action Button
+
+List of Event Commands:
+@>Set Move Route: This event
+ :              : $>Graphic: "apricot-pokemon-33', 0, 4, 2
+@>Script: apricorns = [
+:       :   :REDAPRICORN,
+:       :   :YELLOWAPRICORN,
+:       :   :BLUEAPRICORN,
+:       :   :GREENAPRICORN,
+:       :   :PINKAPRICORN,
+:       :   :WHITEAPRICORN,
+:       :   :BLACKAPRICORN
+:       : ]
+@>Script: random_item = apricorns.sample
+:       : pbItemBall(random_item)
+@>Script: pbSetEventTime
+@>
+
+Page #2
+Conditions
+Self Switch A is ON
+
+Graphic: apricot-pokemon-33
+
+Autonomous Movement
+Type: Fixed
+Speed: 1: Slowest
+Freq: 5: Higher
+Options Enabled
+Move Animation
+Stop Animation
+Direction Fix
+Trigger: Action Button
+
+List of Event Commands:
+@>Text: Versuch es doch morgen nochmal.
+@>
+
+Page #3
+Conditions
+Switch 0023: s:cooledDown?(86400) is ON
+Self Switch A is ON
+
+Graphic: apricot-pokemon-33
+
+Autonomous Movement
+Type: Fixed
+Speed: 1: Slowest
+Freq: 5: Higher
+Options Enabled
+Move Animation
+Stop Animation
+Direction Fix
+Trigger: Autorun
+
+List of Event Commands:
+@>Control Self Switch: A =OFF
+@>Script: setTempSwitchOn("A")
+@>
+
+#------------------------------------------------------------------------------
 
 #==============================================================================
 Map ID: 111
@@ -84522,6 +85232,246 @@ List of Event Commands:
 @>
 
 #------------------------------------------------------------------------------
+Event ID: 058
+Event Name: EV058
+(X,Y): (003,031)
+
+Page #1
+Conditions
+None
+
+Graphic: apricot-pokemon-33
+
+Autonomous Movement
+Type: Fixed
+Speed: 1: Slowest
+Freq: 6: Highest
+Options Enabled
+Move Animation
+Stop Animation
+Direction Fix
+Trigger: Action Button
+
+List of Event Commands:
+@>Set Move Route: This event
+ :              : $>Graphic: "apricot-pokemon-33', 0, 4, 2
+@>Script: apricorns = [
+:       :   :REDAPRICORN,
+:       :   :YELLOWAPRICORN,
+:       :   :BLUEAPRICORN,
+:       :   :GREENAPRICORN,
+:       :   :PINKAPRICORN,
+:       :   :WHITEAPRICORN,
+:       :   :BLACKAPRICORN
+:       : ]
+@>Script: random_item = apricorns.sample
+:       : pbItemBall(random_item)
+@>Script: pbSetEventTime
+@>
+
+Page #2
+Conditions
+Self Switch A is ON
+
+Graphic: apricot-pokemon-33
+
+Autonomous Movement
+Type: Fixed
+Speed: 1: Slowest
+Freq: 5: Higher
+Options Enabled
+Move Animation
+Stop Animation
+Direction Fix
+Trigger: Action Button
+
+List of Event Commands:
+@>Text: Versuch es doch morgen nochmal.
+@>
+
+Page #3
+Conditions
+Switch 0023: s:cooledDown?(86400) is ON
+Self Switch A is ON
+
+Graphic: apricot-pokemon-33
+
+Autonomous Movement
+Type: Fixed
+Speed: 1: Slowest
+Freq: 5: Higher
+Options Enabled
+Move Animation
+Stop Animation
+Direction Fix
+Trigger: Autorun
+
+List of Event Commands:
+@>Control Self Switch: A =OFF
+@>Script: setTempSwitchOn("A")
+@>
+
+#------------------------------------------------------------------------------
+Event ID: 059
+Event Name: EV059
+(X,Y): (017,026)
+
+Page #1
+Conditions
+None
+
+Graphic: apricot-pokemon-33
+
+Autonomous Movement
+Type: Fixed
+Speed: 1: Slowest
+Freq: 6: Highest
+Options Enabled
+Move Animation
+Stop Animation
+Direction Fix
+Trigger: Action Button
+
+List of Event Commands:
+@>Set Move Route: This event
+ :              : $>Graphic: "apricot-pokemon-33', 0, 4, 2
+@>Script: apricorns = [
+:       :   :REDAPRICORN,
+:       :   :YELLOWAPRICORN,
+:       :   :BLUEAPRICORN,
+:       :   :GREENAPRICORN,
+:       :   :PINKAPRICORN,
+:       :   :WHITEAPRICORN,
+:       :   :BLACKAPRICORN
+:       : ]
+@>Script: random_item = apricorns.sample
+:       : pbItemBall(random_item)
+@>Script: pbSetEventTime
+@>
+
+Page #2
+Conditions
+Self Switch A is ON
+
+Graphic: apricot-pokemon-33
+
+Autonomous Movement
+Type: Fixed
+Speed: 1: Slowest
+Freq: 5: Higher
+Options Enabled
+Move Animation
+Stop Animation
+Direction Fix
+Trigger: Action Button
+
+List of Event Commands:
+@>Text: Versuch es doch morgen nochmal.
+@>
+
+Page #3
+Conditions
+Switch 0023: s:cooledDown?(86400) is ON
+Self Switch A is ON
+
+Graphic: apricot-pokemon-33
+
+Autonomous Movement
+Type: Fixed
+Speed: 1: Slowest
+Freq: 5: Higher
+Options Enabled
+Move Animation
+Stop Animation
+Direction Fix
+Trigger: Autorun
+
+List of Event Commands:
+@>Control Self Switch: A =OFF
+@>Script: setTempSwitchOn("A")
+@>
+
+#------------------------------------------------------------------------------
+Event ID: 060
+Event Name: EV060
+(X,Y): (037,005)
+
+Page #1
+Conditions
+None
+
+Graphic: apricot-pokemon-33
+
+Autonomous Movement
+Type: Fixed
+Speed: 1: Slowest
+Freq: 6: Highest
+Options Enabled
+Move Animation
+Stop Animation
+Direction Fix
+Trigger: Action Button
+
+List of Event Commands:
+@>Set Move Route: This event
+ :              : $>Graphic: "apricot-pokemon-33', 0, 4, 2
+@>Script: apricorns = [
+:       :   :REDAPRICORN,
+:       :   :YELLOWAPRICORN,
+:       :   :BLUEAPRICORN,
+:       :   :GREENAPRICORN,
+:       :   :PINKAPRICORN,
+:       :   :WHITEAPRICORN,
+:       :   :BLACKAPRICORN
+:       : ]
+@>Script: random_item = apricorns.sample
+:       : pbItemBall(random_item)
+@>Script: pbSetEventTime
+@>
+
+Page #2
+Conditions
+Self Switch A is ON
+
+Graphic: apricot-pokemon-33
+
+Autonomous Movement
+Type: Fixed
+Speed: 1: Slowest
+Freq: 5: Higher
+Options Enabled
+Move Animation
+Stop Animation
+Direction Fix
+Trigger: Action Button
+
+List of Event Commands:
+@>Text: Versuch es doch morgen nochmal.
+@>
+
+Page #3
+Conditions
+Switch 0023: s:cooledDown?(86400) is ON
+Self Switch A is ON
+
+Graphic: apricot-pokemon-33
+
+Autonomous Movement
+Type: Fixed
+Speed: 1: Slowest
+Freq: 5: Higher
+Options Enabled
+Move Animation
+Stop Animation
+Direction Fix
+Trigger: Autorun
+
+List of Event Commands:
+@>Control Self Switch: A =OFF
+@>Script: setTempSwitchOn("A")
+@>
+
+#------------------------------------------------------------------------------
 
 #==============================================================================
 Map ID: 140
@@ -89281,6 +90231,207 @@ Trigger: Action Button
 
 List of Event Commands:
 @>Script: pbHeadbutt
+@>
+
+#------------------------------------------------------------------------------
+Event ID: 091
+Event Name: Item .sl.hidden
+(X,Y): (023,004)
+
+Page #1
+Conditions
+None
+
+Autonomous Movement
+Type: Fixed
+Speed: 3: Slow
+Freq: 3: Low
+Options Enabled
+Move Animation
+Direction Fix
+Trigger: Action Button
+
+List of Event Commands:
+@>Conditional Branch: Script: pbItemBall(:HEAVYBALL)
+ @>Script: pbUnlist(@event_id)
+ @>Control Self Switch: A =ON
+ @>
+: Branch End
+@>
+
+Page #2
+Conditions
+Self Switch A is ON
+
+Autonomous Movement
+Type: Fixed
+Speed: 3: Slow
+Freq: 3: Low
+Options Enabled
+Move Animation
+Trigger: Action Button
+
+List of Event Commands:
+@>
+
+#------------------------------------------------------------------------------
+Event ID: 092
+Event Name: EV092
+(X,Y): (036,032)
+
+Page #1
+Conditions
+None
+
+Graphic: apricot-pokemon-33
+
+Autonomous Movement
+Type: Fixed
+Speed: 1: Slowest
+Freq: 6: Highest
+Options Enabled
+Move Animation
+Stop Animation
+Direction Fix
+Trigger: Action Button
+
+List of Event Commands:
+@>Set Move Route: This event
+ :              : $>Graphic: "apricot-pokemon-33', 0, 4, 2
+@>Script: apricorns = [
+:       :   :REDAPRICORN,
+:       :   :YELLOWAPRICORN,
+:       :   :BLUEAPRICORN,
+:       :   :GREENAPRICORN,
+:       :   :PINKAPRICORN,
+:       :   :WHITEAPRICORN,
+:       :   :BLACKAPRICORN
+:       : ]
+@>Script: random_item = apricorns.sample
+:       : pbItemBall(random_item)
+@>Script: pbSetEventTime
+@>
+
+Page #2
+Conditions
+Self Switch A is ON
+
+Graphic: apricot-pokemon-33
+
+Autonomous Movement
+Type: Fixed
+Speed: 1: Slowest
+Freq: 5: Higher
+Options Enabled
+Move Animation
+Stop Animation
+Direction Fix
+Trigger: Action Button
+
+List of Event Commands:
+@>Text: Versuch es doch morgen nochmal.
+@>
+
+Page #3
+Conditions
+Switch 0023: s:cooledDown?(86400) is ON
+Self Switch A is ON
+
+Graphic: apricot-pokemon-33
+
+Autonomous Movement
+Type: Fixed
+Speed: 1: Slowest
+Freq: 5: Higher
+Options Enabled
+Move Animation
+Stop Animation
+Direction Fix
+Trigger: Autorun
+
+List of Event Commands:
+@>Control Self Switch: A =OFF
+@>Script: setTempSwitchOn("A")
+@>
+
+#------------------------------------------------------------------------------
+Event ID: 093
+Event Name: EV093
+(X,Y): (041,032)
+
+Page #1
+Conditions
+None
+
+Graphic: apricot-pokemon-33
+
+Autonomous Movement
+Type: Fixed
+Speed: 1: Slowest
+Freq: 6: Highest
+Options Enabled
+Move Animation
+Stop Animation
+Direction Fix
+Trigger: Action Button
+
+List of Event Commands:
+@>Set Move Route: This event
+ :              : $>Graphic: "apricot-pokemon-33', 0, 4, 2
+@>Script: apricorns = [
+:       :   :REDAPRICORN,
+:       :   :YELLOWAPRICORN,
+:       :   :BLUEAPRICORN,
+:       :   :GREENAPRICORN,
+:       :   :PINKAPRICORN,
+:       :   :WHITEAPRICORN,
+:       :   :BLACKAPRICORN
+:       : ]
+@>Script: random_item = apricorns.sample
+:       : pbItemBall(random_item)
+@>Script: pbSetEventTime
+@>
+
+Page #2
+Conditions
+Self Switch A is ON
+
+Graphic: apricot-pokemon-33
+
+Autonomous Movement
+Type: Fixed
+Speed: 1: Slowest
+Freq: 5: Higher
+Options Enabled
+Move Animation
+Stop Animation
+Direction Fix
+Trigger: Action Button
+
+List of Event Commands:
+@>Text: Versuch es doch morgen nochmal.
+@>
+
+Page #3
+Conditions
+Switch 0023: s:cooledDown?(86400) is ON
+Self Switch A is ON
+
+Graphic: apricot-pokemon-33
+
+Autonomous Movement
+Type: Fixed
+Speed: 1: Slowest
+Freq: 5: Higher
+Options Enabled
+Move Animation
+Stop Animation
+Direction Fix
+Trigger: Autorun
+
+List of Event Commands:
+@>Control Self Switch: A =OFF
+@>Script: setTempSwitchOn("A")
 @>
 
 #------------------------------------------------------------------------------
@@ -104732,7 +105883,7 @@ List of Event Commands:
 
 #------------------------------------------------------------------------------
 Event ID: 119
-Event Name: EV119 .hidden
+Event Name: Item .hidden
 (X,Y): (051,034)
 
 Page #1
@@ -105209,6 +106360,322 @@ Trigger: Action Button
 
 List of Event Commands:
 @>Script: pbHeadbutt
+@>
+
+#------------------------------------------------------------------------------
+Event ID: 134
+Event Name: EV134
+(X,Y): (097,014)
+
+Page #1
+Conditions
+None
+
+Graphic: apricot-pokemon-33
+
+Autonomous Movement
+Type: Fixed
+Speed: 1: Slowest
+Freq: 6: Highest
+Options Enabled
+Move Animation
+Stop Animation
+Direction Fix
+Trigger: Action Button
+
+List of Event Commands:
+@>Set Move Route: This event
+ :              : $>Graphic: "apricot-pokemon-33', 0, 4, 2
+@>Script: apricorns = [
+:       :   :REDAPRICORN,
+:       :   :YELLOWAPRICORN,
+:       :   :BLUEAPRICORN,
+:       :   :GREENAPRICORN,
+:       :   :PINKAPRICORN,
+:       :   :WHITEAPRICORN,
+:       :   :BLACKAPRICORN
+:       : ]
+@>Script: random_item = apricorns.sample
+:       : pbItemBall(random_item)
+@>Script: pbSetEventTime
+@>
+
+Page #2
+Conditions
+Self Switch A is ON
+
+Graphic: apricot-pokemon-33
+
+Autonomous Movement
+Type: Fixed
+Speed: 1: Slowest
+Freq: 5: Higher
+Options Enabled
+Move Animation
+Stop Animation
+Direction Fix
+Trigger: Action Button
+
+List of Event Commands:
+@>Text: Versuch es doch morgen nochmal.
+@>
+
+Page #3
+Conditions
+Switch 0023: s:cooledDown?(86400) is ON
+Self Switch A is ON
+
+Graphic: apricot-pokemon-33
+
+Autonomous Movement
+Type: Fixed
+Speed: 1: Slowest
+Freq: 5: Higher
+Options Enabled
+Move Animation
+Stop Animation
+Direction Fix
+Trigger: Autorun
+
+List of Event Commands:
+@>Control Self Switch: A =OFF
+@>Script: setTempSwitchOn("A")
+@>
+
+#------------------------------------------------------------------------------
+Event ID: 135
+Event Name: EV135
+(X,Y): (134,011)
+
+Page #1
+Conditions
+None
+
+Graphic: apricot-pokemon-33
+
+Autonomous Movement
+Type: Fixed
+Speed: 1: Slowest
+Freq: 6: Highest
+Options Enabled
+Move Animation
+Stop Animation
+Direction Fix
+Trigger: Action Button
+
+List of Event Commands:
+@>Set Move Route: This event
+ :              : $>Graphic: "apricot-pokemon-33', 0, 4, 2
+@>Script: apricorns = [
+:       :   :REDAPRICORN,
+:       :   :YELLOWAPRICORN,
+:       :   :BLUEAPRICORN,
+:       :   :GREENAPRICORN,
+:       :   :PINKAPRICORN,
+:       :   :WHITEAPRICORN,
+:       :   :BLACKAPRICORN
+:       : ]
+@>Script: random_item = apricorns.sample
+:       : pbItemBall(random_item)
+@>Script: pbSetEventTime
+@>
+
+Page #2
+Conditions
+Self Switch A is ON
+
+Graphic: apricot-pokemon-33
+
+Autonomous Movement
+Type: Fixed
+Speed: 1: Slowest
+Freq: 5: Higher
+Options Enabled
+Move Animation
+Stop Animation
+Direction Fix
+Trigger: Action Button
+
+List of Event Commands:
+@>Text: Versuch es doch morgen nochmal.
+@>
+
+Page #3
+Conditions
+Switch 0023: s:cooledDown?(86400) is ON
+Self Switch A is ON
+
+Graphic: apricot-pokemon-33
+
+Autonomous Movement
+Type: Fixed
+Speed: 1: Slowest
+Freq: 5: Higher
+Options Enabled
+Move Animation
+Stop Animation
+Direction Fix
+Trigger: Autorun
+
+List of Event Commands:
+@>Control Self Switch: A =OFF
+@>Script: setTempSwitchOn("A")
+@>
+
+#------------------------------------------------------------------------------
+Event ID: 136
+Event Name: EV136
+(X,Y): (138,043)
+
+Page #1
+Conditions
+None
+
+Graphic: apricot-pokemon-33
+
+Autonomous Movement
+Type: Fixed
+Speed: 1: Slowest
+Freq: 6: Highest
+Options Enabled
+Move Animation
+Stop Animation
+Direction Fix
+Trigger: Action Button
+
+List of Event Commands:
+@>Set Move Route: This event
+ :              : $>Graphic: "apricot-pokemon-33', 0, 4, 2
+@>Script: apricorns = [
+:       :   :REDAPRICORN,
+:       :   :YELLOWAPRICORN,
+:       :   :BLUEAPRICORN,
+:       :   :GREENAPRICORN,
+:       :   :PINKAPRICORN,
+:       :   :WHITEAPRICORN,
+:       :   :BLACKAPRICORN
+:       : ]
+@>Script: random_item = apricorns.sample
+:       : pbItemBall(random_item)
+@>Script: pbSetEventTime
+@>
+
+Page #2
+Conditions
+Self Switch A is ON
+
+Graphic: apricot-pokemon-33
+
+Autonomous Movement
+Type: Fixed
+Speed: 1: Slowest
+Freq: 5: Higher
+Options Enabled
+Move Animation
+Stop Animation
+Direction Fix
+Trigger: Action Button
+
+List of Event Commands:
+@>Text: Versuch es doch morgen nochmal.
+@>
+
+Page #3
+Conditions
+Switch 0023: s:cooledDown?(86400) is ON
+Self Switch A is ON
+
+Graphic: apricot-pokemon-33
+
+Autonomous Movement
+Type: Fixed
+Speed: 1: Slowest
+Freq: 5: Higher
+Options Enabled
+Move Animation
+Stop Animation
+Direction Fix
+Trigger: Autorun
+
+List of Event Commands:
+@>Control Self Switch: A =OFF
+@>Script: setTempSwitchOn("A")
+@>
+
+#------------------------------------------------------------------------------
+Event ID: 137
+Event Name: Item.hidden
+(X,Y): (130,041)
+
+Page #1
+Conditions
+None
+
+Autonomous Movement
+Type: Fixed
+Speed: 3: Slow
+Freq: 3: Low
+Options Enabled
+Move Animation
+Trigger: Action Button
+
+List of Event Commands:
+@>Script: pbReceiveItem(:LUCKBALL)
+@>Script: pbUnlist(@event_id)
+@>Control Self Switch: A =ON
+@>
+
+Page #2
+Conditions
+Self Switch A is ON
+
+Autonomous Movement
+Type: Fixed
+Speed: 3: Slow
+Freq: 3: Low
+Options Enabled
+Move Animation
+Trigger: Action Button
+
+List of Event Commands:
+@>
+
+#------------------------------------------------------------------------------
+Event ID: 138
+Event Name: Item .hidden
+(X,Y): (012,033)
+
+Page #1
+Conditions
+None
+
+Autonomous Movement
+Type: Fixed
+Speed: 3: Slow
+Freq: 3: Low
+Options Enabled
+Move Animation
+Trigger: Action Button
+
+List of Event Commands:
+@>Script: pbReceiveItem(:MINUSBALL)
+@>Script: pbUnlist(@event_id)
+@>Control Self Switch: A =ON
+@>
+
+Page #2
+Conditions
+Self Switch A is ON
+
+Autonomous Movement
+Type: Fixed
+Speed: 3: Slow
+Freq: 3: Low
+Options Enabled
+Move Animation
+Trigger: Action Button
+
+List of Event Commands:
 @>
 
 #------------------------------------------------------------------------------
@@ -111723,6 +113190,209 @@ List of Event Commands:
 @>
 
 #------------------------------------------------------------------------------
+Event ID: 095
+Event Name: Item .sl
+(X,Y): (046,019)
+
+Page #1
+Conditions
+None
+
+Graphic: ITEM BALLS 1 normal
+
+Autonomous Movement
+Type: Fixed
+Speed: 3: Slow
+Freq: 3: Low
+Options Enabled
+Move Animation
+Direction Fix
+Trigger: Action Button
+
+List of Event Commands:
+@>Conditional Branch: Script: pbItemBall(:HEAVYBALL)
+ @>Script: pbUnlist(@event_id)
+ @>Control Self Switch: A =ON
+ @>
+: Branch End
+@>
+
+Page #2
+Conditions
+Self Switch A is ON
+
+Autonomous Movement
+Type: Fixed
+Speed: 3: Slow
+Freq: 3: Low
+Options Enabled
+Move Animation
+Trigger: Action Button
+
+List of Event Commands:
+@>
+
+#------------------------------------------------------------------------------
+Event ID: 096
+Event Name: EV096
+(X,Y): (042,052)
+
+Page #1
+Conditions
+None
+
+Graphic: apricot-pokemon-33
+
+Autonomous Movement
+Type: Fixed
+Speed: 1: Slowest
+Freq: 6: Highest
+Options Enabled
+Move Animation
+Stop Animation
+Direction Fix
+Trigger: Action Button
+
+List of Event Commands:
+@>Set Move Route: This event
+ :              : $>Graphic: "apricot-pokemon-33', 0, 4, 2
+@>Script: apricorns = [
+:       :   :REDAPRICORN,
+:       :   :YELLOWAPRICORN,
+:       :   :BLUEAPRICORN,
+:       :   :GREENAPRICORN,
+:       :   :PINKAPRICORN,
+:       :   :WHITEAPRICORN,
+:       :   :BLACKAPRICORN
+:       : ]
+@>Script: random_item = apricorns.sample
+:       : pbItemBall(random_item)
+@>Script: pbSetEventTime
+@>
+
+Page #2
+Conditions
+Self Switch A is ON
+
+Graphic: apricot-pokemon-33
+
+Autonomous Movement
+Type: Fixed
+Speed: 1: Slowest
+Freq: 5: Higher
+Options Enabled
+Move Animation
+Stop Animation
+Direction Fix
+Trigger: Action Button
+
+List of Event Commands:
+@>Text: Versuch es doch morgen nochmal.
+@>
+
+Page #3
+Conditions
+Switch 0023: s:cooledDown?(86400) is ON
+Self Switch A is ON
+
+Graphic: apricot-pokemon-33
+
+Autonomous Movement
+Type: Fixed
+Speed: 1: Slowest
+Freq: 5: Higher
+Options Enabled
+Move Animation
+Stop Animation
+Direction Fix
+Trigger: Autorun
+
+List of Event Commands:
+@>Control Self Switch: A =OFF
+@>Script: setTempSwitchOn("A")
+@>
+
+#------------------------------------------------------------------------------
+Event ID: 097
+Event Name: EV097
+(X,Y): (069,015)
+
+Page #1
+Conditions
+None
+
+Graphic: apricot-pokemon-33
+
+Autonomous Movement
+Type: Fixed
+Speed: 1: Slowest
+Freq: 6: Highest
+Options Enabled
+Move Animation
+Stop Animation
+Direction Fix
+Trigger: Action Button
+
+List of Event Commands:
+@>Set Move Route: This event
+ :              : $>Graphic: "apricot-pokemon-33', 0, 4, 2
+@>Script: apricorns = [
+:       :   :REDAPRICORN,
+:       :   :YELLOWAPRICORN,
+:       :   :BLUEAPRICORN,
+:       :   :GREENAPRICORN,
+:       :   :PINKAPRICORN,
+:       :   :WHITEAPRICORN,
+:       :   :BLACKAPRICORN
+:       : ]
+@>Script: random_item = apricorns.sample
+:       : pbItemBall(random_item)
+@>Script: pbSetEventTime
+@>
+
+Page #2
+Conditions
+Self Switch A is ON
+
+Graphic: apricot-pokemon-33
+
+Autonomous Movement
+Type: Fixed
+Speed: 1: Slowest
+Freq: 5: Higher
+Options Enabled
+Move Animation
+Stop Animation
+Direction Fix
+Trigger: Action Button
+
+List of Event Commands:
+@>Text: Versuch es doch morgen nochmal.
+@>
+
+Page #3
+Conditions
+Switch 0023: s:cooledDown?(86400) is ON
+Self Switch A is ON
+
+Graphic: apricot-pokemon-33
+
+Autonomous Movement
+Type: Fixed
+Speed: 1: Slowest
+Freq: 5: Higher
+Options Enabled
+Move Animation
+Stop Animation
+Direction Fix
+Trigger: Autorun
+
+List of Event Commands:
+@>Control Self Switch: A =OFF
+@>Script: setTempSwitchOn("A")
+@>
+
+#------------------------------------------------------------------------------
 
 #==============================================================================
 Map ID: 162
@@ -113606,6 +115276,566 @@ Trigger: Action Button
 
 List of Event Commands:
 @>Script: pbHeadbutt
+@>
+
+#------------------------------------------------------------------------------
+Event ID: 040
+Event Name: EV040
+(X,Y): (091,069)
+
+Page #1
+Conditions
+None
+
+Graphic: apricot-pokemon-33
+
+Autonomous Movement
+Type: Fixed
+Speed: 1: Slowest
+Freq: 6: Highest
+Options Enabled
+Move Animation
+Stop Animation
+Direction Fix
+Trigger: Action Button
+
+List of Event Commands:
+@>Set Move Route: This event
+ :              : $>Graphic: "apricot-pokemon-33', 0, 4, 2
+@>Script: apricorns = [
+:       :   :REDAPRICORN,
+:       :   :YELLOWAPRICORN,
+:       :   :BLUEAPRICORN,
+:       :   :GREENAPRICORN,
+:       :   :PINKAPRICORN,
+:       :   :WHITEAPRICORN,
+:       :   :BLACKAPRICORN
+:       : ]
+@>Script: random_item = apricorns.sample
+:       : pbItemBall(random_item)
+@>Script: pbSetEventTime
+@>
+
+Page #2
+Conditions
+Self Switch A is ON
+
+Graphic: apricot-pokemon-33
+
+Autonomous Movement
+Type: Fixed
+Speed: 1: Slowest
+Freq: 5: Higher
+Options Enabled
+Move Animation
+Stop Animation
+Direction Fix
+Trigger: Action Button
+
+List of Event Commands:
+@>Text: Versuch es doch morgen nochmal.
+@>
+
+Page #3
+Conditions
+Switch 0023: s:cooledDown?(86400) is ON
+Self Switch A is ON
+
+Graphic: apricot-pokemon-33
+
+Autonomous Movement
+Type: Fixed
+Speed: 1: Slowest
+Freq: 5: Higher
+Options Enabled
+Move Animation
+Stop Animation
+Direction Fix
+Trigger: Autorun
+
+List of Event Commands:
+@>Control Self Switch: A =OFF
+@>Script: setTempSwitchOn("A")
+@>
+
+#------------------------------------------------------------------------------
+Event ID: 041
+Event Name: EV041
+(X,Y): (080,070)
+
+Page #1
+Conditions
+None
+
+Graphic: apricot-pokemon-33
+
+Autonomous Movement
+Type: Fixed
+Speed: 1: Slowest
+Freq: 6: Highest
+Options Enabled
+Move Animation
+Stop Animation
+Direction Fix
+Trigger: Action Button
+
+List of Event Commands:
+@>Set Move Route: This event
+ :              : $>Graphic: "apricot-pokemon-33', 0, 4, 2
+@>Script: apricorns = [
+:       :   :REDAPRICORN,
+:       :   :YELLOWAPRICORN,
+:       :   :BLUEAPRICORN,
+:       :   :GREENAPRICORN,
+:       :   :PINKAPRICORN,
+:       :   :WHITEAPRICORN,
+:       :   :BLACKAPRICORN
+:       : ]
+@>Script: random_item = apricorns.sample
+:       : pbItemBall(random_item)
+@>Script: pbSetEventTime
+@>
+
+Page #2
+Conditions
+Self Switch A is ON
+
+Graphic: apricot-pokemon-33
+
+Autonomous Movement
+Type: Fixed
+Speed: 1: Slowest
+Freq: 5: Higher
+Options Enabled
+Move Animation
+Stop Animation
+Direction Fix
+Trigger: Action Button
+
+List of Event Commands:
+@>Text: Versuch es doch morgen nochmal.
+@>
+
+Page #3
+Conditions
+Switch 0023: s:cooledDown?(86400) is ON
+Self Switch A is ON
+
+Graphic: apricot-pokemon-33
+
+Autonomous Movement
+Type: Fixed
+Speed: 1: Slowest
+Freq: 5: Higher
+Options Enabled
+Move Animation
+Stop Animation
+Direction Fix
+Trigger: Autorun
+
+List of Event Commands:
+@>Control Self Switch: A =OFF
+@>Script: setTempSwitchOn("A")
+@>
+
+#------------------------------------------------------------------------------
+Event ID: 042
+Event Name: EV042
+(X,Y): (077,054)
+
+Page #1
+Conditions
+None
+
+Graphic: apricot-pokemon-33
+
+Autonomous Movement
+Type: Fixed
+Speed: 1: Slowest
+Freq: 6: Highest
+Options Enabled
+Move Animation
+Stop Animation
+Direction Fix
+Trigger: Action Button
+
+List of Event Commands:
+@>Set Move Route: This event
+ :              : $>Graphic: "apricot-pokemon-33', 0, 4, 2
+@>Script: apricorns = [
+:       :   :REDAPRICORN,
+:       :   :YELLOWAPRICORN,
+:       :   :BLUEAPRICORN,
+:       :   :GREENAPRICORN,
+:       :   :PINKAPRICORN,
+:       :   :WHITEAPRICORN,
+:       :   :BLACKAPRICORN
+:       : ]
+@>Script: random_item = apricorns.sample
+:       : pbItemBall(random_item)
+@>Script: pbSetEventTime
+@>
+
+Page #2
+Conditions
+Self Switch A is ON
+
+Graphic: apricot-pokemon-33
+
+Autonomous Movement
+Type: Fixed
+Speed: 1: Slowest
+Freq: 5: Higher
+Options Enabled
+Move Animation
+Stop Animation
+Direction Fix
+Trigger: Action Button
+
+List of Event Commands:
+@>Text: Versuch es doch morgen nochmal.
+@>
+
+Page #3
+Conditions
+Switch 0023: s:cooledDown?(86400) is ON
+Self Switch A is ON
+
+Graphic: apricot-pokemon-33
+
+Autonomous Movement
+Type: Fixed
+Speed: 1: Slowest
+Freq: 5: Higher
+Options Enabled
+Move Animation
+Stop Animation
+Direction Fix
+Trigger: Autorun
+
+List of Event Commands:
+@>Control Self Switch: A =OFF
+@>Script: setTempSwitchOn("A")
+@>
+
+#------------------------------------------------------------------------------
+Event ID: 043
+Event Name: EV043
+(X,Y): (068,049)
+
+Page #1
+Conditions
+None
+
+Graphic: apricot-pokemon-33
+
+Autonomous Movement
+Type: Fixed
+Speed: 1: Slowest
+Freq: 6: Highest
+Options Enabled
+Move Animation
+Stop Animation
+Direction Fix
+Trigger: Action Button
+
+List of Event Commands:
+@>Set Move Route: This event
+ :              : $>Graphic: "apricot-pokemon-33', 0, 4, 2
+@>Script: apricorns = [
+:       :   :REDAPRICORN,
+:       :   :YELLOWAPRICORN,
+:       :   :BLUEAPRICORN,
+:       :   :GREENAPRICORN,
+:       :   :PINKAPRICORN,
+:       :   :WHITEAPRICORN,
+:       :   :BLACKAPRICORN
+:       : ]
+@>Script: random_item = apricorns.sample
+:       : pbItemBall(random_item)
+@>Script: pbSetEventTime
+@>
+
+Page #2
+Conditions
+Self Switch A is ON
+
+Graphic: apricot-pokemon-33
+
+Autonomous Movement
+Type: Fixed
+Speed: 1: Slowest
+Freq: 5: Higher
+Options Enabled
+Move Animation
+Stop Animation
+Direction Fix
+Trigger: Action Button
+
+List of Event Commands:
+@>Text: Versuch es doch morgen nochmal.
+@>
+
+Page #3
+Conditions
+Switch 0023: s:cooledDown?(86400) is ON
+Self Switch A is ON
+
+Graphic: apricot-pokemon-33
+
+Autonomous Movement
+Type: Fixed
+Speed: 1: Slowest
+Freq: 5: Higher
+Options Enabled
+Move Animation
+Stop Animation
+Direction Fix
+Trigger: Autorun
+
+List of Event Commands:
+@>Control Self Switch: A =OFF
+@>Script: setTempSwitchOn("A")
+@>
+
+#------------------------------------------------------------------------------
+Event ID: 044
+Event Name: EV044
+(X,Y): (039,046)
+
+Page #1
+Conditions
+None
+
+Graphic: apricot-pokemon-33
+
+Autonomous Movement
+Type: Fixed
+Speed: 1: Slowest
+Freq: 6: Highest
+Options Enabled
+Move Animation
+Stop Animation
+Direction Fix
+Trigger: Action Button
+
+List of Event Commands:
+@>Set Move Route: This event
+ :              : $>Graphic: "apricot-pokemon-33', 0, 4, 2
+@>Script: apricorns = [
+:       :   :REDAPRICORN,
+:       :   :YELLOWAPRICORN,
+:       :   :BLUEAPRICORN,
+:       :   :GREENAPRICORN,
+:       :   :PINKAPRICORN,
+:       :   :WHITEAPRICORN,
+:       :   :BLACKAPRICORN
+:       : ]
+@>Script: random_item = apricorns.sample
+:       : pbItemBall(random_item)
+@>Script: pbSetEventTime
+@>
+
+Page #2
+Conditions
+Self Switch A is ON
+
+Graphic: apricot-pokemon-33
+
+Autonomous Movement
+Type: Fixed
+Speed: 1: Slowest
+Freq: 5: Higher
+Options Enabled
+Move Animation
+Stop Animation
+Direction Fix
+Trigger: Action Button
+
+List of Event Commands:
+@>Text: Versuch es doch morgen nochmal.
+@>
+
+Page #3
+Conditions
+Switch 0023: s:cooledDown?(86400) is ON
+Self Switch A is ON
+
+Graphic: apricot-pokemon-33
+
+Autonomous Movement
+Type: Fixed
+Speed: 1: Slowest
+Freq: 5: Higher
+Options Enabled
+Move Animation
+Stop Animation
+Direction Fix
+Trigger: Autorun
+
+List of Event Commands:
+@>Control Self Switch: A =OFF
+@>Script: setTempSwitchOn("A")
+@>
+
+#------------------------------------------------------------------------------
+Event ID: 045
+Event Name: EV045
+(X,Y): (004,055)
+
+Page #1
+Conditions
+None
+
+Graphic: apricot-pokemon-33
+
+Autonomous Movement
+Type: Fixed
+Speed: 1: Slowest
+Freq: 6: Highest
+Options Enabled
+Move Animation
+Stop Animation
+Direction Fix
+Trigger: Action Button
+
+List of Event Commands:
+@>Set Move Route: This event
+ :              : $>Graphic: "apricot-pokemon-33', 0, 4, 2
+@>Script: apricorns = [
+:       :   :REDAPRICORN,
+:       :   :YELLOWAPRICORN,
+:       :   :BLUEAPRICORN,
+:       :   :GREENAPRICORN,
+:       :   :PINKAPRICORN,
+:       :   :WHITEAPRICORN,
+:       :   :BLACKAPRICORN
+:       : ]
+@>Script: random_item = apricorns.sample
+:       : pbItemBall(random_item)
+@>Script: pbSetEventTime
+@>
+
+Page #2
+Conditions
+Self Switch A is ON
+
+Graphic: apricot-pokemon-33
+
+Autonomous Movement
+Type: Fixed
+Speed: 1: Slowest
+Freq: 5: Higher
+Options Enabled
+Move Animation
+Stop Animation
+Direction Fix
+Trigger: Action Button
+
+List of Event Commands:
+@>Text: Versuch es doch morgen nochmal.
+@>
+
+Page #3
+Conditions
+Switch 0023: s:cooledDown?(86400) is ON
+Self Switch A is ON
+
+Graphic: apricot-pokemon-33
+
+Autonomous Movement
+Type: Fixed
+Speed: 1: Slowest
+Freq: 5: Higher
+Options Enabled
+Move Animation
+Stop Animation
+Direction Fix
+Trigger: Autorun
+
+List of Event Commands:
+@>Control Self Switch: A =OFF
+@>Script: setTempSwitchOn("A")
+@>
+
+#------------------------------------------------------------------------------
+Event ID: 046
+Event Name: EV046
+(X,Y): (033,035)
+
+Page #1
+Conditions
+None
+
+Graphic: apricot-pokemon-33
+
+Autonomous Movement
+Type: Fixed
+Speed: 1: Slowest
+Freq: 6: Highest
+Options Enabled
+Move Animation
+Stop Animation
+Direction Fix
+Trigger: Action Button
+
+List of Event Commands:
+@>Set Move Route: This event
+ :              : $>Graphic: "apricot-pokemon-33', 0, 4, 2
+@>Script: apricorns = [
+:       :   :REDAPRICORN,
+:       :   :YELLOWAPRICORN,
+:       :   :BLUEAPRICORN,
+:       :   :GREENAPRICORN,
+:       :   :PINKAPRICORN,
+:       :   :WHITEAPRICORN,
+:       :   :BLACKAPRICORN
+:       : ]
+@>Script: random_item = apricorns.sample
+:       : pbItemBall(random_item)
+@>Script: pbSetEventTime
+@>
+
+Page #2
+Conditions
+Self Switch A is ON
+
+Graphic: apricot-pokemon-33
+
+Autonomous Movement
+Type: Fixed
+Speed: 1: Slowest
+Freq: 5: Higher
+Options Enabled
+Move Animation
+Stop Animation
+Direction Fix
+Trigger: Action Button
+
+List of Event Commands:
+@>Text: Versuch es doch morgen nochmal.
+@>
+
+Page #3
+Conditions
+Switch 0023: s:cooledDown?(86400) is ON
+Self Switch A is ON
+
+Graphic: apricot-pokemon-33
+
+Autonomous Movement
+Type: Fixed
+Speed: 1: Slowest
+Freq: 5: Higher
+Options Enabled
+Move Animation
+Stop Animation
+Direction Fix
+Trigger: Autorun
+
+List of Event Commands:
+@>Control Self Switch: A =OFF
+@>Script: setTempSwitchOn("A")
 @>
 
 #------------------------------------------------------------------------------
@@ -128623,6 +130853,406 @@ List of Event Commands:
 @>
 
 #------------------------------------------------------------------------------
+Event ID: 044
+Event Name: EV044
+(X,Y): (091,106)
+
+Page #1
+Conditions
+None
+
+Graphic: apricot-pokemon-33
+
+Autonomous Movement
+Type: Fixed
+Speed: 1: Slowest
+Freq: 6: Highest
+Options Enabled
+Move Animation
+Stop Animation
+Direction Fix
+Trigger: Action Button
+
+List of Event Commands:
+@>Set Move Route: This event
+ :              : $>Graphic: "apricot-pokemon-33', 0, 4, 2
+@>Script: apricorns = [
+:       :   :REDAPRICORN,
+:       :   :YELLOWAPRICORN,
+:       :   :BLUEAPRICORN,
+:       :   :GREENAPRICORN,
+:       :   :PINKAPRICORN,
+:       :   :WHITEAPRICORN,
+:       :   :BLACKAPRICORN
+:       : ]
+@>Script: random_item = apricorns.sample
+:       : pbItemBall(random_item)
+@>Script: pbSetEventTime
+@>
+
+Page #2
+Conditions
+Self Switch A is ON
+
+Graphic: apricot-pokemon-33
+
+Autonomous Movement
+Type: Fixed
+Speed: 1: Slowest
+Freq: 5: Higher
+Options Enabled
+Move Animation
+Stop Animation
+Direction Fix
+Trigger: Action Button
+
+List of Event Commands:
+@>Text: Versuch es doch morgen nochmal.
+@>
+
+Page #3
+Conditions
+Switch 0023: s:cooledDown?(86400) is ON
+Self Switch A is ON
+
+Graphic: apricot-pokemon-33
+
+Autonomous Movement
+Type: Fixed
+Speed: 1: Slowest
+Freq: 5: Higher
+Options Enabled
+Move Animation
+Stop Animation
+Direction Fix
+Trigger: Autorun
+
+List of Event Commands:
+@>Control Self Switch: A =OFF
+@>Script: setTempSwitchOn("A")
+@>
+
+#------------------------------------------------------------------------------
+Event ID: 045
+Event Name: EV045
+(X,Y): (105,101)
+
+Page #1
+Conditions
+None
+
+Graphic: apricot-pokemon-33
+
+Autonomous Movement
+Type: Fixed
+Speed: 1: Slowest
+Freq: 6: Highest
+Options Enabled
+Move Animation
+Stop Animation
+Direction Fix
+Trigger: Action Button
+
+List of Event Commands:
+@>Set Move Route: This event
+ :              : $>Graphic: "apricot-pokemon-33', 0, 4, 2
+@>Script: apricorns = [
+:       :   :REDAPRICORN,
+:       :   :YELLOWAPRICORN,
+:       :   :BLUEAPRICORN,
+:       :   :GREENAPRICORN,
+:       :   :PINKAPRICORN,
+:       :   :WHITEAPRICORN,
+:       :   :BLACKAPRICORN
+:       : ]
+@>Script: random_item = apricorns.sample
+:       : pbItemBall(random_item)
+@>Script: pbSetEventTime
+@>
+
+Page #2
+Conditions
+Self Switch A is ON
+
+Graphic: apricot-pokemon-33
+
+Autonomous Movement
+Type: Fixed
+Speed: 1: Slowest
+Freq: 5: Higher
+Options Enabled
+Move Animation
+Stop Animation
+Direction Fix
+Trigger: Action Button
+
+List of Event Commands:
+@>Text: Versuch es doch morgen nochmal.
+@>
+
+Page #3
+Conditions
+Switch 0023: s:cooledDown?(86400) is ON
+Self Switch A is ON
+
+Graphic: apricot-pokemon-33
+
+Autonomous Movement
+Type: Fixed
+Speed: 1: Slowest
+Freq: 5: Higher
+Options Enabled
+Move Animation
+Stop Animation
+Direction Fix
+Trigger: Autorun
+
+List of Event Commands:
+@>Control Self Switch: A =OFF
+@>Script: setTempSwitchOn("A")
+@>
+
+#------------------------------------------------------------------------------
+Event ID: 046
+Event Name: EV046
+(X,Y): (113,084)
+
+Page #1
+Conditions
+None
+
+Graphic: apricot-pokemon-33
+
+Autonomous Movement
+Type: Fixed
+Speed: 1: Slowest
+Freq: 6: Highest
+Options Enabled
+Move Animation
+Stop Animation
+Direction Fix
+Trigger: Action Button
+
+List of Event Commands:
+@>Set Move Route: This event
+ :              : $>Graphic: "apricot-pokemon-33', 0, 4, 2
+@>Script: apricorns = [
+:       :   :REDAPRICORN,
+:       :   :YELLOWAPRICORN,
+:       :   :BLUEAPRICORN,
+:       :   :GREENAPRICORN,
+:       :   :PINKAPRICORN,
+:       :   :WHITEAPRICORN,
+:       :   :BLACKAPRICORN
+:       : ]
+@>Script: random_item = apricorns.sample
+:       : pbItemBall(random_item)
+@>Script: pbSetEventTime
+@>
+
+Page #2
+Conditions
+Self Switch A is ON
+
+Graphic: apricot-pokemon-33
+
+Autonomous Movement
+Type: Fixed
+Speed: 1: Slowest
+Freq: 5: Higher
+Options Enabled
+Move Animation
+Stop Animation
+Direction Fix
+Trigger: Action Button
+
+List of Event Commands:
+@>Text: Versuch es doch morgen nochmal.
+@>
+
+Page #3
+Conditions
+Switch 0023: s:cooledDown?(86400) is ON
+Self Switch A is ON
+
+Graphic: apricot-pokemon-33
+
+Autonomous Movement
+Type: Fixed
+Speed: 1: Slowest
+Freq: 5: Higher
+Options Enabled
+Move Animation
+Stop Animation
+Direction Fix
+Trigger: Autorun
+
+List of Event Commands:
+@>Control Self Switch: A =OFF
+@>Script: setTempSwitchOn("A")
+@>
+
+#------------------------------------------------------------------------------
+Event ID: 047
+Event Name: EV047
+(X,Y): (072,048)
+
+Page #1
+Conditions
+None
+
+Graphic: apricot-pokemon-33
+
+Autonomous Movement
+Type: Fixed
+Speed: 1: Slowest
+Freq: 6: Highest
+Options Enabled
+Move Animation
+Stop Animation
+Direction Fix
+Trigger: Action Button
+
+List of Event Commands:
+@>Set Move Route: This event
+ :              : $>Graphic: "apricot-pokemon-33', 0, 4, 2
+@>Script: apricorns = [
+:       :   :REDAPRICORN,
+:       :   :YELLOWAPRICORN,
+:       :   :BLUEAPRICORN,
+:       :   :GREENAPRICORN,
+:       :   :PINKAPRICORN,
+:       :   :WHITEAPRICORN,
+:       :   :BLACKAPRICORN
+:       : ]
+@>Script: random_item = apricorns.sample
+:       : pbItemBall(random_item)
+@>Script: pbSetEventTime
+@>
+
+Page #2
+Conditions
+Self Switch A is ON
+
+Graphic: apricot-pokemon-33
+
+Autonomous Movement
+Type: Fixed
+Speed: 1: Slowest
+Freq: 5: Higher
+Options Enabled
+Move Animation
+Stop Animation
+Direction Fix
+Trigger: Action Button
+
+List of Event Commands:
+@>Text: Versuch es doch morgen nochmal.
+@>
+
+Page #3
+Conditions
+Switch 0023: s:cooledDown?(86400) is ON
+Self Switch A is ON
+
+Graphic: apricot-pokemon-33
+
+Autonomous Movement
+Type: Fixed
+Speed: 1: Slowest
+Freq: 5: Higher
+Options Enabled
+Move Animation
+Stop Animation
+Direction Fix
+Trigger: Autorun
+
+List of Event Commands:
+@>Control Self Switch: A =OFF
+@>Script: setTempSwitchOn("A")
+@>
+
+#------------------------------------------------------------------------------
+Event ID: 048
+Event Name: EV048
+(X,Y): (075,039)
+
+Page #1
+Conditions
+None
+
+Graphic: apricot-pokemon-33
+
+Autonomous Movement
+Type: Fixed
+Speed: 1: Slowest
+Freq: 6: Highest
+Options Enabled
+Move Animation
+Stop Animation
+Direction Fix
+Trigger: Action Button
+
+List of Event Commands:
+@>Set Move Route: This event
+ :              : $>Graphic: "apricot-pokemon-33', 0, 4, 2
+@>Script: apricorns = [
+:       :   :REDAPRICORN,
+:       :   :YELLOWAPRICORN,
+:       :   :BLUEAPRICORN,
+:       :   :GREENAPRICORN,
+:       :   :PINKAPRICORN,
+:       :   :WHITEAPRICORN,
+:       :   :BLACKAPRICORN
+:       : ]
+@>Script: random_item = apricorns.sample
+:       : pbItemBall(random_item)
+@>Script: pbSetEventTime
+@>
+
+Page #2
+Conditions
+Self Switch A is ON
+
+Graphic: apricot-pokemon-33
+
+Autonomous Movement
+Type: Fixed
+Speed: 1: Slowest
+Freq: 5: Higher
+Options Enabled
+Move Animation
+Stop Animation
+Direction Fix
+Trigger: Action Button
+
+List of Event Commands:
+@>Text: Versuch es doch morgen nochmal.
+@>
+
+Page #3
+Conditions
+Switch 0023: s:cooledDown?(86400) is ON
+Self Switch A is ON
+
+Graphic: apricot-pokemon-33
+
+Autonomous Movement
+Type: Fixed
+Speed: 1: Slowest
+Freq: 5: Higher
+Options Enabled
+Move Animation
+Stop Animation
+Direction Fix
+Trigger: Autorun
+
+List of Event Commands:
+@>Control Self Switch: A =OFF
+@>Script: setTempSwitchOn("A")
+@>
+
+#------------------------------------------------------------------------------
 
 #==============================================================================
 Map ID: 178
@@ -134394,6 +137024,86 @@ List of Event Commands:
 @>
 
 #------------------------------------------------------------------------------
+Event ID: 063
+Event Name: EV063
+(X,Y): (017,006)
+
+Page #1
+Conditions
+None
+
+Graphic: apricot-pokemon-33
+
+Autonomous Movement
+Type: Fixed
+Speed: 1: Slowest
+Freq: 6: Highest
+Options Enabled
+Move Animation
+Stop Animation
+Direction Fix
+Trigger: Action Button
+
+List of Event Commands:
+@>Set Move Route: This event
+ :              : $>Graphic: "apricot-pokemon-33', 0, 4, 2
+@>Script: apricorns = [
+:       :   :REDAPRICORN,
+:       :   :YELLOWAPRICORN,
+:       :   :BLUEAPRICORN,
+:       :   :GREENAPRICORN,
+:       :   :PINKAPRICORN,
+:       :   :WHITEAPRICORN,
+:       :   :BLACKAPRICORN
+:       : ]
+@>Script: random_item = apricorns.sample
+:       : pbItemBall(random_item)
+@>Script: pbSetEventTime
+@>
+
+Page #2
+Conditions
+Self Switch A is ON
+
+Graphic: apricot-pokemon-33
+
+Autonomous Movement
+Type: Fixed
+Speed: 1: Slowest
+Freq: 5: Higher
+Options Enabled
+Move Animation
+Stop Animation
+Direction Fix
+Trigger: Action Button
+
+List of Event Commands:
+@>Text: Versuch es doch morgen nochmal.
+@>
+
+Page #3
+Conditions
+Switch 0023: s:cooledDown?(86400) is ON
+Self Switch A is ON
+
+Graphic: apricot-pokemon-33
+
+Autonomous Movement
+Type: Fixed
+Speed: 1: Slowest
+Freq: 5: Higher
+Options Enabled
+Move Animation
+Stop Animation
+Direction Fix
+Trigger: Autorun
+
+List of Event Commands:
+@>Control Self Switch: A =OFF
+@>Script: setTempSwitchOn("A")
+@>
+
+#------------------------------------------------------------------------------
 Event ID: 064
 Event Name: EV064
 (X,Y): (045,071)
@@ -136657,6 +139367,86 @@ List of Event Commands:
 @>
 
 #------------------------------------------------------------------------------
+Event ID: 123
+Event Name: EV123
+(X,Y): (018,006)
+
+Page #1
+Conditions
+None
+
+Graphic: apricot-pokemon-33
+
+Autonomous Movement
+Type: Fixed
+Speed: 1: Slowest
+Freq: 6: Highest
+Options Enabled
+Move Animation
+Stop Animation
+Direction Fix
+Trigger: Action Button
+
+List of Event Commands:
+@>Set Move Route: This event
+ :              : $>Graphic: "apricot-pokemon-33', 0, 4, 2
+@>Script: apricorns = [
+:       :   :REDAPRICORN,
+:       :   :YELLOWAPRICORN,
+:       :   :BLUEAPRICORN,
+:       :   :GREENAPRICORN,
+:       :   :PINKAPRICORN,
+:       :   :WHITEAPRICORN,
+:       :   :BLACKAPRICORN
+:       : ]
+@>Script: random_item = apricorns.sample
+:       : pbItemBall(random_item)
+@>Script: pbSetEventTime
+@>
+
+Page #2
+Conditions
+Self Switch A is ON
+
+Graphic: apricot-pokemon-33
+
+Autonomous Movement
+Type: Fixed
+Speed: 1: Slowest
+Freq: 5: Higher
+Options Enabled
+Move Animation
+Stop Animation
+Direction Fix
+Trigger: Action Button
+
+List of Event Commands:
+@>Text: Versuch es doch morgen nochmal.
+@>
+
+Page #3
+Conditions
+Switch 0023: s:cooledDown?(86400) is ON
+Self Switch A is ON
+
+Graphic: apricot-pokemon-33
+
+Autonomous Movement
+Type: Fixed
+Speed: 1: Slowest
+Freq: 5: Higher
+Options Enabled
+Move Animation
+Stop Animation
+Direction Fix
+Trigger: Autorun
+
+List of Event Commands:
+@>Control Self Switch: A =OFF
+@>Script: setTempSwitchOn("A")
+@>
+
+#------------------------------------------------------------------------------
 Event ID: 124
 Event Name: EV124
 (X,Y): (026,073)
@@ -136675,6 +139465,166 @@ Trigger: Action Button
 
 List of Event Commands:
 @>Text: Route 5
+@>
+
+#------------------------------------------------------------------------------
+Event ID: 125
+Event Name: EV125
+(X,Y): (028,058)
+
+Page #1
+Conditions
+None
+
+Graphic: apricot-pokemon-33
+
+Autonomous Movement
+Type: Fixed
+Speed: 1: Slowest
+Freq: 6: Highest
+Options Enabled
+Move Animation
+Stop Animation
+Direction Fix
+Trigger: Action Button
+
+List of Event Commands:
+@>Set Move Route: This event
+ :              : $>Graphic: "apricot-pokemon-33', 0, 4, 2
+@>Script: apricorns = [
+:       :   :REDAPRICORN,
+:       :   :YELLOWAPRICORN,
+:       :   :BLUEAPRICORN,
+:       :   :GREENAPRICORN,
+:       :   :PINKAPRICORN,
+:       :   :WHITEAPRICORN,
+:       :   :BLACKAPRICORN
+:       : ]
+@>Script: random_item = apricorns.sample
+:       : pbItemBall(random_item)
+@>Script: pbSetEventTime
+@>
+
+Page #2
+Conditions
+Self Switch A is ON
+
+Graphic: apricot-pokemon-33
+
+Autonomous Movement
+Type: Fixed
+Speed: 1: Slowest
+Freq: 5: Higher
+Options Enabled
+Move Animation
+Stop Animation
+Direction Fix
+Trigger: Action Button
+
+List of Event Commands:
+@>Text: Versuch es doch morgen nochmal.
+@>
+
+Page #3
+Conditions
+Switch 0023: s:cooledDown?(86400) is ON
+Self Switch A is ON
+
+Graphic: apricot-pokemon-33
+
+Autonomous Movement
+Type: Fixed
+Speed: 1: Slowest
+Freq: 5: Higher
+Options Enabled
+Move Animation
+Stop Animation
+Direction Fix
+Trigger: Autorun
+
+List of Event Commands:
+@>Control Self Switch: A =OFF
+@>Script: setTempSwitchOn("A")
+@>
+
+#------------------------------------------------------------------------------
+Event ID: 126
+Event Name: EV126
+(X,Y): (022,070)
+
+Page #1
+Conditions
+None
+
+Graphic: apricot-pokemon-33
+
+Autonomous Movement
+Type: Fixed
+Speed: 1: Slowest
+Freq: 6: Highest
+Options Enabled
+Move Animation
+Stop Animation
+Direction Fix
+Trigger: Action Button
+
+List of Event Commands:
+@>Set Move Route: This event
+ :              : $>Graphic: "apricot-pokemon-33', 0, 4, 2
+@>Script: apricorns = [
+:       :   :REDAPRICORN,
+:       :   :YELLOWAPRICORN,
+:       :   :BLUEAPRICORN,
+:       :   :GREENAPRICORN,
+:       :   :PINKAPRICORN,
+:       :   :WHITEAPRICORN,
+:       :   :BLACKAPRICORN
+:       : ]
+@>Script: random_item = apricorns.sample
+:       : pbItemBall(random_item)
+@>Script: pbSetEventTime
+@>
+
+Page #2
+Conditions
+Self Switch A is ON
+
+Graphic: apricot-pokemon-33
+
+Autonomous Movement
+Type: Fixed
+Speed: 1: Slowest
+Freq: 5: Higher
+Options Enabled
+Move Animation
+Stop Animation
+Direction Fix
+Trigger: Action Button
+
+List of Event Commands:
+@>Text: Versuch es doch morgen nochmal.
+@>
+
+Page #3
+Conditions
+Switch 0023: s:cooledDown?(86400) is ON
+Self Switch A is ON
+
+Graphic: apricot-pokemon-33
+
+Autonomous Movement
+Type: Fixed
+Speed: 1: Slowest
+Freq: 5: Higher
+Options Enabled
+Move Animation
+Stop Animation
+Direction Fix
+Trigger: Autorun
+
+List of Event Commands:
+@>Control Self Switch: A =OFF
+@>Script: setTempSwitchOn("A")
 @>
 
 #------------------------------------------------------------------------------
@@ -182222,6 +185172,49 @@ List of Event Commands:
 @>
 
 #------------------------------------------------------------------------------
+Event ID: 078
+Event Name: Item
+(X,Y): (037,014)
+
+Page #1
+Conditions
+None
+
+Graphic: ITEM BALLS 1 normal
+
+Autonomous Movement
+Type: Fixed
+Speed: 3: Slow
+Freq: 3: Low
+Options Enabled
+Move Animation
+Direction Fix
+Trigger: Action Button
+
+List of Event Commands:
+@>Conditional Branch: Script: pbItemBall(:HEAVYBALL)
+ @>Script: pbUnlist(@event_id)
+ @>Control Self Switch: A =ON
+ @>
+: Branch End
+@>
+
+Page #2
+Conditions
+Self Switch A is ON
+
+Autonomous Movement
+Type: Fixed
+Speed: 3: Slow
+Freq: 3: Low
+Options Enabled
+Move Animation
+Trigger: Action Button
+
+List of Event Commands:
+@>
+
+#------------------------------------------------------------------------------
 
 #==============================================================================
 Map ID: 232
@@ -214458,6 +217451,289 @@ List of Event Commands:
 @>
 
 #------------------------------------------------------------------------------
+Event ID: 080
+Event Name: Item
+(X,Y): (017,036)
+
+Page #1
+Conditions
+None
+
+Graphic: ITEM BALLS 1
+
+Autonomous Movement
+Type: Fixed
+Speed: 3: Slow
+Freq: 3: Low
+Options Enabled
+Move Animation
+Direction Fix
+Trigger: Action Button
+
+List of Event Commands:
+@>Conditional Branch: Script: pbItemBall(:HEAVYBALL)
+ @>Script: pbUnlist(@event_id)
+ @>Control Self Switch: A =ON
+ @>
+: Branch End
+@>
+
+Page #2
+Conditions
+Self Switch A is ON
+
+Autonomous Movement
+Type: Fixed
+Speed: 3: Slow
+Freq: 3: Low
+Options Enabled
+Move Animation
+Trigger: Action Button
+
+List of Event Commands:
+@>
+
+#------------------------------------------------------------------------------
+Event ID: 081
+Event Name: EV081
+(X,Y): (010,046)
+
+Page #1
+Conditions
+None
+
+Graphic: apricot-pokemon-33
+
+Autonomous Movement
+Type: Fixed
+Speed: 1: Slowest
+Freq: 6: Highest
+Options Enabled
+Move Animation
+Stop Animation
+Direction Fix
+Trigger: Action Button
+
+List of Event Commands:
+@>Set Move Route: This event
+ :              : $>Graphic: "apricot-pokemon-33', 0, 4, 2
+@>Script: apricorns = [
+:       :   :REDAPRICORN,
+:       :   :YELLOWAPRICORN,
+:       :   :BLUEAPRICORN,
+:       :   :GREENAPRICORN,
+:       :   :PINKAPRICORN,
+:       :   :WHITEAPRICORN,
+:       :   :BLACKAPRICORN
+:       : ]
+@>Script: random_item = apricorns.sample
+:       : pbItemBall(random_item)
+@>Script: pbSetEventTime
+@>
+
+Page #2
+Conditions
+Self Switch A is ON
+
+Graphic: apricot-pokemon-33
+
+Autonomous Movement
+Type: Fixed
+Speed: 1: Slowest
+Freq: 5: Higher
+Options Enabled
+Move Animation
+Stop Animation
+Direction Fix
+Trigger: Action Button
+
+List of Event Commands:
+@>Text: Versuch es doch morgen nochmal.
+@>
+
+Page #3
+Conditions
+Switch 0023: s:cooledDown?(86400) is ON
+Self Switch A is ON
+
+Graphic: apricot-pokemon-33
+
+Autonomous Movement
+Type: Fixed
+Speed: 1: Slowest
+Freq: 5: Higher
+Options Enabled
+Move Animation
+Stop Animation
+Direction Fix
+Trigger: Autorun
+
+List of Event Commands:
+@>Control Self Switch: A =OFF
+@>Script: setTempSwitchOn("A")
+@>
+
+#------------------------------------------------------------------------------
+Event ID: 082
+Event Name: EV082
+(X,Y): (024,065)
+
+Page #1
+Conditions
+None
+
+Graphic: apricot-pokemon-33
+
+Autonomous Movement
+Type: Fixed
+Speed: 1: Slowest
+Freq: 6: Highest
+Options Enabled
+Move Animation
+Stop Animation
+Direction Fix
+Trigger: Action Button
+
+List of Event Commands:
+@>Set Move Route: This event
+ :              : $>Graphic: "apricot-pokemon-33', 0, 4, 2
+@>Script: apricorns = [
+:       :   :REDAPRICORN,
+:       :   :YELLOWAPRICORN,
+:       :   :BLUEAPRICORN,
+:       :   :GREENAPRICORN,
+:       :   :PINKAPRICORN,
+:       :   :WHITEAPRICORN,
+:       :   :BLACKAPRICORN
+:       : ]
+@>Script: random_item = apricorns.sample
+:       : pbItemBall(random_item)
+@>Script: pbSetEventTime
+@>
+
+Page #2
+Conditions
+Self Switch A is ON
+
+Graphic: apricot-pokemon-33
+
+Autonomous Movement
+Type: Fixed
+Speed: 1: Slowest
+Freq: 5: Higher
+Options Enabled
+Move Animation
+Stop Animation
+Direction Fix
+Trigger: Action Button
+
+List of Event Commands:
+@>Text: Versuch es doch morgen nochmal.
+@>
+
+Page #3
+Conditions
+Switch 0023: s:cooledDown?(86400) is ON
+Self Switch A is ON
+
+Graphic: apricot-pokemon-33
+
+Autonomous Movement
+Type: Fixed
+Speed: 1: Slowest
+Freq: 5: Higher
+Options Enabled
+Move Animation
+Stop Animation
+Direction Fix
+Trigger: Autorun
+
+List of Event Commands:
+@>Control Self Switch: A =OFF
+@>Script: setTempSwitchOn("A")
+@>
+
+#------------------------------------------------------------------------------
+Event ID: 083
+Event Name: EV083
+(X,Y): (038,026)
+
+Page #1
+Conditions
+None
+
+Graphic: apricot-pokemon-33
+
+Autonomous Movement
+Type: Fixed
+Speed: 1: Slowest
+Freq: 6: Highest
+Options Enabled
+Move Animation
+Stop Animation
+Direction Fix
+Trigger: Action Button
+
+List of Event Commands:
+@>Set Move Route: This event
+ :              : $>Graphic: "apricot-pokemon-33', 0, 4, 2
+@>Script: apricorns = [
+:       :   :REDAPRICORN,
+:       :   :YELLOWAPRICORN,
+:       :   :BLUEAPRICORN,
+:       :   :GREENAPRICORN,
+:       :   :PINKAPRICORN,
+:       :   :WHITEAPRICORN,
+:       :   :BLACKAPRICORN
+:       : ]
+@>Script: random_item = apricorns.sample
+:       : pbItemBall(random_item)
+@>Script: pbSetEventTime
+@>
+
+Page #2
+Conditions
+Self Switch A is ON
+
+Graphic: apricot-pokemon-33
+
+Autonomous Movement
+Type: Fixed
+Speed: 1: Slowest
+Freq: 5: Higher
+Options Enabled
+Move Animation
+Stop Animation
+Direction Fix
+Trigger: Action Button
+
+List of Event Commands:
+@>Text: Versuch es doch morgen nochmal.
+@>
+
+Page #3
+Conditions
+Switch 0023: s:cooledDown?(86400) is ON
+Self Switch A is ON
+
+Graphic: apricot-pokemon-33
+
+Autonomous Movement
+Type: Fixed
+Speed: 1: Slowest
+Freq: 5: Higher
+Options Enabled
+Move Animation
+Stop Animation
+Direction Fix
+Trigger: Autorun
+
+List of Event Commands:
+@>Control Self Switch: A =OFF
+@>Script: setTempSwitchOn("A")
+@>
+
+#------------------------------------------------------------------------------
 
 #==============================================================================
 Map ID: 274
@@ -216660,6 +219936,86 @@ Trigger: Action Button
 
 List of Event Commands:
 @>Script: pbHeadbutt
+@>
+
+#------------------------------------------------------------------------------
+Event ID: 048
+Event Name: EV048
+(X,Y): (046,026)
+
+Page #1
+Conditions
+None
+
+Graphic: apricot-pokemon-33
+
+Autonomous Movement
+Type: Fixed
+Speed: 1: Slowest
+Freq: 6: Highest
+Options Enabled
+Move Animation
+Stop Animation
+Direction Fix
+Trigger: Action Button
+
+List of Event Commands:
+@>Set Move Route: This event
+ :              : $>Graphic: "apricot-pokemon-33', 0, 4, 2
+@>Script: apricorns = [
+:       :   :REDAPRICORN,
+:       :   :YELLOWAPRICORN,
+:       :   :BLUEAPRICORN,
+:       :   :GREENAPRICORN,
+:       :   :PINKAPRICORN,
+:       :   :WHITEAPRICORN,
+:       :   :BLACKAPRICORN
+:       : ]
+@>Script: random_item = apricorns.sample
+:       : pbItemBall(random_item)
+@>Script: pbSetEventTime
+@>
+
+Page #2
+Conditions
+Self Switch A is ON
+
+Graphic: apricot-pokemon-33
+
+Autonomous Movement
+Type: Fixed
+Speed: 1: Slowest
+Freq: 5: Higher
+Options Enabled
+Move Animation
+Stop Animation
+Direction Fix
+Trigger: Action Button
+
+List of Event Commands:
+@>Text: Versuch es doch morgen nochmal.
+@>
+
+Page #3
+Conditions
+Switch 0023: s:cooledDown?(86400) is ON
+Self Switch A is ON
+
+Graphic: apricot-pokemon-33
+
+Autonomous Movement
+Type: Fixed
+Speed: 1: Slowest
+Freq: 5: Higher
+Options Enabled
+Move Animation
+Stop Animation
+Direction Fix
+Trigger: Autorun
+
+List of Event Commands:
+@>Control Self Switch: A =OFF
+@>Script: setTempSwitchOn("A")
 @>
 
 #------------------------------------------------------------------------------
@@ -227916,7 +231272,7 @@ List of Event Commands:
 
 #------------------------------------------------------------------------------
 Event ID: 034
-Event Name: Item
+Event Name: Item.hidden
 (X,Y): (047,031)
 
 Page #1
@@ -227936,6 +231292,7 @@ Trigger: Action Button
 
 List of Event Commands:
 @>Conditional Branch: Script: pbItemBall(:FULLHEAL)
+ @>Script: pbUnlist(@event_id)
  @>Control Self Switch: A =ON
  @>
 : Branch End
@@ -240167,12 +243524,12 @@ List of Event Commands:
 @>Script: pbPokemonMart([
 :       :   :POKEBALL, :GREATBALL,     
 :       :   :ULTRABALL, :TIMERBALL, :NETBALL,
-:       :   :SLOWBALL, :FASTBALL, :MAGMARBALL,
+:       :   :SLOWBALL, :FASTBALL, :HEAVYBALL,
 :       :   :ELECTRICBALL, :LUXURYBALL,
 :       :   :PENALTYBALL, :LEVELBALL,
 :       :   :LUREBALL, :LUCKBALL,
 :       :   :REPEATBALL, :QUICKBALL,
-:       :   :DUSKBALL, :LOCKBALL, :MYSTICBALL,
+:       :   :DUSKBALL, :LOCKBALL, :FRIENDBALL,
 :       :   :MINUSBALL, :VALUEBALL, :SHINYBALL
 :       : ])
 @>
@@ -249947,6 +253304,566 @@ List of Event Commands:
 @>
 
 #------------------------------------------------------------------------------
+Event ID: 108
+Event Name: EV108
+(X,Y): (029,025)
+
+Page #1
+Conditions
+None
+
+Graphic: apricot-pokemon-33
+
+Autonomous Movement
+Type: Fixed
+Speed: 1: Slowest
+Freq: 6: Highest
+Options Enabled
+Move Animation
+Stop Animation
+Direction Fix
+Trigger: Action Button
+
+List of Event Commands:
+@>Set Move Route: This event
+ :              : $>Graphic: "apricot-pokemon-33', 0, 4, 2
+@>Script: apricorns = [
+:       :   :REDAPRICORN,
+:       :   :YELLOWAPRICORN,
+:       :   :BLUEAPRICORN,
+:       :   :GREENAPRICORN,
+:       :   :PINKAPRICORN,
+:       :   :WHITEAPRICORN,
+:       :   :BLACKAPRICORN
+:       : ]
+@>Script: random_item = apricorns.sample
+:       : pbItemBall(random_item)
+@>Script: pbSetEventTime
+@>
+
+Page #2
+Conditions
+Self Switch A is ON
+
+Graphic: apricot-pokemon-33
+
+Autonomous Movement
+Type: Fixed
+Speed: 1: Slowest
+Freq: 5: Higher
+Options Enabled
+Move Animation
+Stop Animation
+Direction Fix
+Trigger: Action Button
+
+List of Event Commands:
+@>Text: Versuch es doch morgen nochmal.
+@>
+
+Page #3
+Conditions
+Switch 0023: s:cooledDown?(86400) is ON
+Self Switch A is ON
+
+Graphic: apricot-pokemon-33
+
+Autonomous Movement
+Type: Fixed
+Speed: 1: Slowest
+Freq: 5: Higher
+Options Enabled
+Move Animation
+Stop Animation
+Direction Fix
+Trigger: Autorun
+
+List of Event Commands:
+@>Control Self Switch: A =OFF
+@>Script: setTempSwitchOn("A")
+@>
+
+#------------------------------------------------------------------------------
+Event ID: 109
+Event Name: EV109
+(X,Y): (041,027)
+
+Page #1
+Conditions
+None
+
+Graphic: apricot-pokemon-33
+
+Autonomous Movement
+Type: Fixed
+Speed: 1: Slowest
+Freq: 6: Highest
+Options Enabled
+Move Animation
+Stop Animation
+Direction Fix
+Trigger: Action Button
+
+List of Event Commands:
+@>Set Move Route: This event
+ :              : $>Graphic: "apricot-pokemon-33', 0, 4, 2
+@>Script: apricorns = [
+:       :   :REDAPRICORN,
+:       :   :YELLOWAPRICORN,
+:       :   :BLUEAPRICORN,
+:       :   :GREENAPRICORN,
+:       :   :PINKAPRICORN,
+:       :   :WHITEAPRICORN,
+:       :   :BLACKAPRICORN
+:       : ]
+@>Script: random_item = apricorns.sample
+:       : pbItemBall(random_item)
+@>Script: pbSetEventTime
+@>
+
+Page #2
+Conditions
+Self Switch A is ON
+
+Graphic: apricot-pokemon-33
+
+Autonomous Movement
+Type: Fixed
+Speed: 1: Slowest
+Freq: 5: Higher
+Options Enabled
+Move Animation
+Stop Animation
+Direction Fix
+Trigger: Action Button
+
+List of Event Commands:
+@>Text: Versuch es doch morgen nochmal.
+@>
+
+Page #3
+Conditions
+Switch 0023: s:cooledDown?(86400) is ON
+Self Switch A is ON
+
+Graphic: apricot-pokemon-33
+
+Autonomous Movement
+Type: Fixed
+Speed: 1: Slowest
+Freq: 5: Higher
+Options Enabled
+Move Animation
+Stop Animation
+Direction Fix
+Trigger: Autorun
+
+List of Event Commands:
+@>Control Self Switch: A =OFF
+@>Script: setTempSwitchOn("A")
+@>
+
+#------------------------------------------------------------------------------
+Event ID: 110
+Event Name: EV110
+(X,Y): (037,037)
+
+Page #1
+Conditions
+None
+
+Graphic: apricot-pokemon-33
+
+Autonomous Movement
+Type: Fixed
+Speed: 1: Slowest
+Freq: 6: Highest
+Options Enabled
+Move Animation
+Stop Animation
+Direction Fix
+Trigger: Action Button
+
+List of Event Commands:
+@>Set Move Route: This event
+ :              : $>Graphic: "apricot-pokemon-33', 0, 4, 2
+@>Script: apricorns = [
+:       :   :REDAPRICORN,
+:       :   :YELLOWAPRICORN,
+:       :   :BLUEAPRICORN,
+:       :   :GREENAPRICORN,
+:       :   :PINKAPRICORN,
+:       :   :WHITEAPRICORN,
+:       :   :BLACKAPRICORN
+:       : ]
+@>Script: random_item = apricorns.sample
+:       : pbItemBall(random_item)
+@>Script: pbSetEventTime
+@>
+
+Page #2
+Conditions
+Self Switch A is ON
+
+Graphic: apricot-pokemon-33
+
+Autonomous Movement
+Type: Fixed
+Speed: 1: Slowest
+Freq: 5: Higher
+Options Enabled
+Move Animation
+Stop Animation
+Direction Fix
+Trigger: Action Button
+
+List of Event Commands:
+@>Text: Versuch es doch morgen nochmal.
+@>
+
+Page #3
+Conditions
+Switch 0023: s:cooledDown?(86400) is ON
+Self Switch A is ON
+
+Graphic: apricot-pokemon-33
+
+Autonomous Movement
+Type: Fixed
+Speed: 1: Slowest
+Freq: 5: Higher
+Options Enabled
+Move Animation
+Stop Animation
+Direction Fix
+Trigger: Autorun
+
+List of Event Commands:
+@>Control Self Switch: A =OFF
+@>Script: setTempSwitchOn("A")
+@>
+
+#------------------------------------------------------------------------------
+Event ID: 111
+Event Name: EV111
+(X,Y): (034,023)
+
+Page #1
+Conditions
+None
+
+Graphic: apricot-pokemon-33
+
+Autonomous Movement
+Type: Fixed
+Speed: 1: Slowest
+Freq: 6: Highest
+Options Enabled
+Move Animation
+Stop Animation
+Direction Fix
+Trigger: Action Button
+
+List of Event Commands:
+@>Set Move Route: This event
+ :              : $>Graphic: "apricot-pokemon-33', 0, 4, 2
+@>Script: apricorns = [
+:       :   :REDAPRICORN,
+:       :   :YELLOWAPRICORN,
+:       :   :BLUEAPRICORN,
+:       :   :GREENAPRICORN,
+:       :   :PINKAPRICORN,
+:       :   :WHITEAPRICORN,
+:       :   :BLACKAPRICORN
+:       : ]
+@>Script: random_item = apricorns.sample
+:       : pbItemBall(random_item)
+@>Script: pbSetEventTime
+@>
+
+Page #2
+Conditions
+Self Switch A is ON
+
+Graphic: apricot-pokemon-33
+
+Autonomous Movement
+Type: Fixed
+Speed: 1: Slowest
+Freq: 5: Higher
+Options Enabled
+Move Animation
+Stop Animation
+Direction Fix
+Trigger: Action Button
+
+List of Event Commands:
+@>Text: Versuch es doch morgen nochmal.
+@>
+
+Page #3
+Conditions
+Switch 0023: s:cooledDown?(86400) is ON
+Self Switch A is ON
+
+Graphic: apricot-pokemon-33
+
+Autonomous Movement
+Type: Fixed
+Speed: 1: Slowest
+Freq: 5: Higher
+Options Enabled
+Move Animation
+Stop Animation
+Direction Fix
+Trigger: Autorun
+
+List of Event Commands:
+@>Control Self Switch: A =OFF
+@>Script: setTempSwitchOn("A")
+@>
+
+#------------------------------------------------------------------------------
+Event ID: 112
+Event Name: EV112
+(X,Y): (024,002)
+
+Page #1
+Conditions
+None
+
+Graphic: apricot-pokemon-33
+
+Autonomous Movement
+Type: Fixed
+Speed: 1: Slowest
+Freq: 6: Highest
+Options Enabled
+Move Animation
+Stop Animation
+Direction Fix
+Trigger: Action Button
+
+List of Event Commands:
+@>Set Move Route: This event
+ :              : $>Graphic: "apricot-pokemon-33', 0, 4, 2
+@>Script: apricorns = [
+:       :   :REDAPRICORN,
+:       :   :YELLOWAPRICORN,
+:       :   :BLUEAPRICORN,
+:       :   :GREENAPRICORN,
+:       :   :PINKAPRICORN,
+:       :   :WHITEAPRICORN,
+:       :   :BLACKAPRICORN
+:       : ]
+@>Script: random_item = apricorns.sample
+:       : pbItemBall(random_item)
+@>Script: pbSetEventTime
+@>
+
+Page #2
+Conditions
+Self Switch A is ON
+
+Graphic: apricot-pokemon-33
+
+Autonomous Movement
+Type: Fixed
+Speed: 1: Slowest
+Freq: 5: Higher
+Options Enabled
+Move Animation
+Stop Animation
+Direction Fix
+Trigger: Action Button
+
+List of Event Commands:
+@>Text: Versuch es doch morgen nochmal.
+@>
+
+Page #3
+Conditions
+Switch 0023: s:cooledDown?(86400) is ON
+Self Switch A is ON
+
+Graphic: apricot-pokemon-33
+
+Autonomous Movement
+Type: Fixed
+Speed: 1: Slowest
+Freq: 5: Higher
+Options Enabled
+Move Animation
+Stop Animation
+Direction Fix
+Trigger: Autorun
+
+List of Event Commands:
+@>Control Self Switch: A =OFF
+@>Script: setTempSwitchOn("A")
+@>
+
+#------------------------------------------------------------------------------
+Event ID: 113
+Event Name: EV113
+(X,Y): (033,012)
+
+Page #1
+Conditions
+None
+
+Graphic: apricot-pokemon-33
+
+Autonomous Movement
+Type: Fixed
+Speed: 1: Slowest
+Freq: 6: Highest
+Options Enabled
+Move Animation
+Stop Animation
+Direction Fix
+Trigger: Action Button
+
+List of Event Commands:
+@>Set Move Route: This event
+ :              : $>Graphic: "apricot-pokemon-33', 0, 4, 2
+@>Script: apricorns = [
+:       :   :REDAPRICORN,
+:       :   :YELLOWAPRICORN,
+:       :   :BLUEAPRICORN,
+:       :   :GREENAPRICORN,
+:       :   :PINKAPRICORN,
+:       :   :WHITEAPRICORN,
+:       :   :BLACKAPRICORN
+:       : ]
+@>Script: random_item = apricorns.sample
+:       : pbItemBall(random_item)
+@>Script: pbSetEventTime
+@>
+
+Page #2
+Conditions
+Self Switch A is ON
+
+Graphic: apricot-pokemon-33
+
+Autonomous Movement
+Type: Fixed
+Speed: 1: Slowest
+Freq: 5: Higher
+Options Enabled
+Move Animation
+Stop Animation
+Direction Fix
+Trigger: Action Button
+
+List of Event Commands:
+@>Text: Versuch es doch morgen nochmal.
+@>
+
+Page #3
+Conditions
+Switch 0023: s:cooledDown?(86400) is ON
+Self Switch A is ON
+
+Graphic: apricot-pokemon-33
+
+Autonomous Movement
+Type: Fixed
+Speed: 1: Slowest
+Freq: 5: Higher
+Options Enabled
+Move Animation
+Stop Animation
+Direction Fix
+Trigger: Autorun
+
+List of Event Commands:
+@>Control Self Switch: A =OFF
+@>Script: setTempSwitchOn("A")
+@>
+
+#------------------------------------------------------------------------------
+Event ID: 114
+Event Name: EV114
+(X,Y): (015,024)
+
+Page #1
+Conditions
+None
+
+Graphic: apricot-pokemon-33
+
+Autonomous Movement
+Type: Fixed
+Speed: 1: Slowest
+Freq: 6: Highest
+Options Enabled
+Move Animation
+Stop Animation
+Direction Fix
+Trigger: Action Button
+
+List of Event Commands:
+@>Set Move Route: This event
+ :              : $>Graphic: "apricot-pokemon-33', 0, 4, 2
+@>Script: apricorns = [
+:       :   :REDAPRICORN,
+:       :   :YELLOWAPRICORN,
+:       :   :BLUEAPRICORN,
+:       :   :GREENAPRICORN,
+:       :   :PINKAPRICORN,
+:       :   :WHITEAPRICORN,
+:       :   :BLACKAPRICORN
+:       : ]
+@>Script: random_item = apricorns.sample
+:       : pbItemBall(random_item)
+@>Script: pbSetEventTime
+@>
+
+Page #2
+Conditions
+Self Switch A is ON
+
+Graphic: apricot-pokemon-33
+
+Autonomous Movement
+Type: Fixed
+Speed: 1: Slowest
+Freq: 5: Higher
+Options Enabled
+Move Animation
+Stop Animation
+Direction Fix
+Trigger: Action Button
+
+List of Event Commands:
+@>Text: Versuch es doch morgen nochmal.
+@>
+
+Page #3
+Conditions
+Switch 0023: s:cooledDown?(86400) is ON
+Self Switch A is ON
+
+Graphic: apricot-pokemon-33
+
+Autonomous Movement
+Type: Fixed
+Speed: 1: Slowest
+Freq: 5: Higher
+Options Enabled
+Move Animation
+Stop Animation
+Direction Fix
+Trigger: Autorun
+
+List of Event Commands:
+@>Control Self Switch: A =OFF
+@>Script: setTempSwitchOn("A")
+@>
+
+#------------------------------------------------------------------------------
 
 #==============================================================================
 Map ID: 343
@@ -259125,6 +263042,166 @@ List of Event Commands:
 @>Change Screen Color Tone: (0,0,0,0), @6
 @>Script: $PokemonGlobal.encounter_version = 0
 @>Wait: 8 frame(s)
+@>
+
+#------------------------------------------------------------------------------
+Event ID: 053
+Event Name: EV053
+(X,Y): (008,069)
+
+Page #1
+Conditions
+None
+
+Graphic: apricot-pokemon-33
+
+Autonomous Movement
+Type: Fixed
+Speed: 1: Slowest
+Freq: 6: Highest
+Options Enabled
+Move Animation
+Stop Animation
+Direction Fix
+Trigger: Action Button
+
+List of Event Commands:
+@>Set Move Route: This event
+ :              : $>Graphic: "apricot-pokemon-33', 0, 4, 2
+@>Script: apricorns = [
+:       :   :REDAPRICORN,
+:       :   :YELLOWAPRICORN,
+:       :   :BLUEAPRICORN,
+:       :   :GREENAPRICORN,
+:       :   :PINKAPRICORN,
+:       :   :WHITEAPRICORN,
+:       :   :BLACKAPRICORN
+:       : ]
+@>Script: random_item = apricorns.sample
+:       : pbItemBall(random_item)
+@>Script: pbSetEventTime
+@>
+
+Page #2
+Conditions
+Self Switch A is ON
+
+Graphic: apricot-pokemon-33
+
+Autonomous Movement
+Type: Fixed
+Speed: 1: Slowest
+Freq: 5: Higher
+Options Enabled
+Move Animation
+Stop Animation
+Direction Fix
+Trigger: Action Button
+
+List of Event Commands:
+@>Text: Versuch es doch morgen nochmal.
+@>
+
+Page #3
+Conditions
+Switch 0023: s:cooledDown?(86400) is ON
+Self Switch A is ON
+
+Graphic: apricot-pokemon-33
+
+Autonomous Movement
+Type: Fixed
+Speed: 1: Slowest
+Freq: 5: Higher
+Options Enabled
+Move Animation
+Stop Animation
+Direction Fix
+Trigger: Autorun
+
+List of Event Commands:
+@>Control Self Switch: A =OFF
+@>Script: setTempSwitchOn("A")
+@>
+
+#------------------------------------------------------------------------------
+Event ID: 054
+Event Name: EV054
+(X,Y): (047,077)
+
+Page #1
+Conditions
+None
+
+Graphic: apricot-pokemon-33
+
+Autonomous Movement
+Type: Fixed
+Speed: 1: Slowest
+Freq: 6: Highest
+Options Enabled
+Move Animation
+Stop Animation
+Direction Fix
+Trigger: Action Button
+
+List of Event Commands:
+@>Set Move Route: This event
+ :              : $>Graphic: "apricot-pokemon-33', 0, 4, 2
+@>Script: apricorns = [
+:       :   :REDAPRICORN,
+:       :   :YELLOWAPRICORN,
+:       :   :BLUEAPRICORN,
+:       :   :GREENAPRICORN,
+:       :   :PINKAPRICORN,
+:       :   :WHITEAPRICORN,
+:       :   :BLACKAPRICORN
+:       : ]
+@>Script: random_item = apricorns.sample
+:       : pbItemBall(random_item)
+@>Script: pbSetEventTime
+@>
+
+Page #2
+Conditions
+Self Switch A is ON
+
+Graphic: apricot-pokemon-33
+
+Autonomous Movement
+Type: Fixed
+Speed: 1: Slowest
+Freq: 5: Higher
+Options Enabled
+Move Animation
+Stop Animation
+Direction Fix
+Trigger: Action Button
+
+List of Event Commands:
+@>Text: Versuch es doch morgen nochmal.
+@>
+
+Page #3
+Conditions
+Switch 0023: s:cooledDown?(86400) is ON
+Self Switch A is ON
+
+Graphic: apricot-pokemon-33
+
+Autonomous Movement
+Type: Fixed
+Speed: 1: Slowest
+Freq: 5: Higher
+Options Enabled
+Move Animation
+Stop Animation
+Direction Fix
+Trigger: Autorun
+
+List of Event Commands:
+@>Control Self Switch: A =OFF
+@>Script: setTempSwitchOn("A")
 @>
 
 #------------------------------------------------------------------------------
@@ -275867,6 +279944,86 @@ Move Animation
 Trigger: Action Button
 
 List of Event Commands:
+@>
+
+#------------------------------------------------------------------------------
+Event ID: 051
+Event Name: EV051
+(X,Y): (048,010)
+
+Page #1
+Conditions
+None
+
+Graphic: apricot-pokemon-33
+
+Autonomous Movement
+Type: Fixed
+Speed: 1: Slowest
+Freq: 6: Highest
+Options Enabled
+Move Animation
+Stop Animation
+Direction Fix
+Trigger: Action Button
+
+List of Event Commands:
+@>Set Move Route: This event
+ :              : $>Graphic: "apricot-pokemon-33', 0, 4, 2
+@>Script: apricorns = [
+:       :   :REDAPRICORN,
+:       :   :YELLOWAPRICORN,
+:       :   :BLUEAPRICORN,
+:       :   :GREENAPRICORN,
+:       :   :PINKAPRICORN,
+:       :   :WHITEAPRICORN,
+:       :   :BLACKAPRICORN
+:       : ]
+@>Script: random_item = apricorns.sample
+:       : pbItemBall(random_item)
+@>Script: pbSetEventTime
+@>
+
+Page #2
+Conditions
+Self Switch A is ON
+
+Graphic: apricot-pokemon-33
+
+Autonomous Movement
+Type: Fixed
+Speed: 1: Slowest
+Freq: 5: Higher
+Options Enabled
+Move Animation
+Stop Animation
+Direction Fix
+Trigger: Action Button
+
+List of Event Commands:
+@>Text: Versuch es doch morgen nochmal.
+@>
+
+Page #3
+Conditions
+Switch 0023: s:cooledDown?(86400) is ON
+Self Switch A is ON
+
+Graphic: apricot-pokemon-33
+
+Autonomous Movement
+Type: Fixed
+Speed: 1: Slowest
+Freq: 5: Higher
+Options Enabled
+Move Animation
+Stop Animation
+Direction Fix
+Trigger: Autorun
+
+List of Event Commands:
+@>Control Self Switch: A =OFF
+@>Script: setTempSwitchOn("A")
 @>
 
 #------------------------------------------------------------------------------
@@ -372505,6 +376662,166 @@ List of Event Commands:
 @>
 
 #------------------------------------------------------------------------------
+Event ID: 022
+Event Name: EV022
+(X,Y): (042,011)
+
+Page #1
+Conditions
+None
+
+Graphic: apricot-pokemon-33
+
+Autonomous Movement
+Type: Fixed
+Speed: 1: Slowest
+Freq: 6: Highest
+Options Enabled
+Move Animation
+Stop Animation
+Direction Fix
+Trigger: Action Button
+
+List of Event Commands:
+@>Set Move Route: This event
+ :              : $>Graphic: "apricot-pokemon-33', 0, 4, 2
+@>Script: apricorns = [
+:       :   :REDAPRICORN,
+:       :   :YELLOWAPRICORN,
+:       :   :BLUEAPRICORN,
+:       :   :GREENAPRICORN,
+:       :   :PINKAPRICORN,
+:       :   :WHITEAPRICORN,
+:       :   :BLACKAPRICORN
+:       : ]
+@>Script: random_item = apricorns.sample
+:       : pbItemBall(random_item)
+@>Script: pbSetEventTime
+@>
+
+Page #2
+Conditions
+Self Switch A is ON
+
+Graphic: apricot-pokemon-33
+
+Autonomous Movement
+Type: Fixed
+Speed: 1: Slowest
+Freq: 5: Higher
+Options Enabled
+Move Animation
+Stop Animation
+Direction Fix
+Trigger: Action Button
+
+List of Event Commands:
+@>Text: Versuch es doch morgen nochmal.
+@>
+
+Page #3
+Conditions
+Switch 0023: s:cooledDown?(86400) is ON
+Self Switch A is ON
+
+Graphic: apricot-pokemon-33
+
+Autonomous Movement
+Type: Fixed
+Speed: 1: Slowest
+Freq: 5: Higher
+Options Enabled
+Move Animation
+Stop Animation
+Direction Fix
+Trigger: Autorun
+
+List of Event Commands:
+@>Control Self Switch: A =OFF
+@>Script: setTempSwitchOn("A")
+@>
+
+#------------------------------------------------------------------------------
+Event ID: 023
+Event Name: EV023
+(X,Y): (032,008)
+
+Page #1
+Conditions
+None
+
+Graphic: apricot-pokemon-33
+
+Autonomous Movement
+Type: Fixed
+Speed: 1: Slowest
+Freq: 6: Highest
+Options Enabled
+Move Animation
+Stop Animation
+Direction Fix
+Trigger: Action Button
+
+List of Event Commands:
+@>Set Move Route: This event
+ :              : $>Graphic: "apricot-pokemon-33', 0, 4, 2
+@>Script: apricorns = [
+:       :   :REDAPRICORN,
+:       :   :YELLOWAPRICORN,
+:       :   :BLUEAPRICORN,
+:       :   :GREENAPRICORN,
+:       :   :PINKAPRICORN,
+:       :   :WHITEAPRICORN,
+:       :   :BLACKAPRICORN
+:       : ]
+@>Script: random_item = apricorns.sample
+:       : pbItemBall(random_item)
+@>Script: pbSetEventTime
+@>
+
+Page #2
+Conditions
+Self Switch A is ON
+
+Graphic: apricot-pokemon-33
+
+Autonomous Movement
+Type: Fixed
+Speed: 1: Slowest
+Freq: 5: Higher
+Options Enabled
+Move Animation
+Stop Animation
+Direction Fix
+Trigger: Action Button
+
+List of Event Commands:
+@>Text: Versuch es doch morgen nochmal.
+@>
+
+Page #3
+Conditions
+Switch 0023: s:cooledDown?(86400) is ON
+Self Switch A is ON
+
+Graphic: apricot-pokemon-33
+
+Autonomous Movement
+Type: Fixed
+Speed: 1: Slowest
+Freq: 5: Higher
+Options Enabled
+Move Animation
+Stop Animation
+Direction Fix
+Trigger: Autorun
+
+List of Event Commands:
+@>Control Self Switch: A =OFF
+@>Script: setTempSwitchOn("A")
+@>
+
+#------------------------------------------------------------------------------
 
 #==============================================================================
 Map ID: 467
@@ -418707,6 +423024,449 @@ List of Event Commands:
 @>
 
 #------------------------------------------------------------------------------
+Event ID: 034
+Event Name: EV034
+(X,Y): (034,037)
+
+Page #1
+Conditions
+None
+
+Graphic: apricot-pokemon-33
+
+Autonomous Movement
+Type: Fixed
+Speed: 1: Slowest
+Freq: 6: Highest
+Options Enabled
+Move Animation
+Stop Animation
+Direction Fix
+Trigger: Action Button
+
+List of Event Commands:
+@>Set Move Route: This event
+ :              : $>Graphic: "apricot-pokemon-33', 0, 4, 2
+@>Script: apricorns = [
+:       :   :REDAPRICORN,
+:       :   :YELLOWAPRICORN,
+:       :   :BLUEAPRICORN,
+:       :   :GREENAPRICORN,
+:       :   :PINKAPRICORN,
+:       :   :WHITEAPRICORN,
+:       :   :BLACKAPRICORN
+:       : ]
+@>Script: random_item = apricorns.sample
+:       : pbItemBall(random_item)
+@>Script: pbSetEventTime
+@>
+
+Page #2
+Conditions
+Self Switch A is ON
+
+Graphic: apricot-pokemon-33
+
+Autonomous Movement
+Type: Fixed
+Speed: 1: Slowest
+Freq: 5: Higher
+Options Enabled
+Move Animation
+Stop Animation
+Direction Fix
+Trigger: Action Button
+
+List of Event Commands:
+@>Text: Versuch es doch morgen nochmal.
+@>
+
+Page #3
+Conditions
+Switch 0023: s:cooledDown?(86400) is ON
+Self Switch A is ON
+
+Graphic: apricot-pokemon-33
+
+Autonomous Movement
+Type: Fixed
+Speed: 1: Slowest
+Freq: 5: Higher
+Options Enabled
+Move Animation
+Stop Animation
+Direction Fix
+Trigger: Autorun
+
+List of Event Commands:
+@>Control Self Switch: A =OFF
+@>Script: setTempSwitchOn("A")
+@>
+
+#------------------------------------------------------------------------------
+Event ID: 035
+Event Name: EV035
+(X,Y): (036,042)
+
+Page #1
+Conditions
+None
+
+Graphic: apricot-pokemon-33
+
+Autonomous Movement
+Type: Fixed
+Speed: 1: Slowest
+Freq: 6: Highest
+Options Enabled
+Move Animation
+Stop Animation
+Direction Fix
+Trigger: Action Button
+
+List of Event Commands:
+@>Set Move Route: This event
+ :              : $>Graphic: "apricot-pokemon-33', 0, 4, 2
+@>Script: apricorns = [
+:       :   :REDAPRICORN,
+:       :   :YELLOWAPRICORN,
+:       :   :BLUEAPRICORN,
+:       :   :GREENAPRICORN,
+:       :   :PINKAPRICORN,
+:       :   :WHITEAPRICORN,
+:       :   :BLACKAPRICORN
+:       : ]
+@>Script: random_item = apricorns.sample
+:       : pbItemBall(random_item)
+@>Script: pbSetEventTime
+@>
+
+Page #2
+Conditions
+Self Switch A is ON
+
+Graphic: apricot-pokemon-33
+
+Autonomous Movement
+Type: Fixed
+Speed: 1: Slowest
+Freq: 5: Higher
+Options Enabled
+Move Animation
+Stop Animation
+Direction Fix
+Trigger: Action Button
+
+List of Event Commands:
+@>Text: Versuch es doch morgen nochmal.
+@>
+
+Page #3
+Conditions
+Switch 0023: s:cooledDown?(86400) is ON
+Self Switch A is ON
+
+Graphic: apricot-pokemon-33
+
+Autonomous Movement
+Type: Fixed
+Speed: 1: Slowest
+Freq: 5: Higher
+Options Enabled
+Move Animation
+Stop Animation
+Direction Fix
+Trigger: Autorun
+
+List of Event Commands:
+@>Control Self Switch: A =OFF
+@>Script: setTempSwitchOn("A")
+@>
+
+#------------------------------------------------------------------------------
+Event ID: 036
+Event Name: EV036
+(X,Y): (016,041)
+
+Page #1
+Conditions
+None
+
+Graphic: apricot-pokemon-33
+
+Autonomous Movement
+Type: Fixed
+Speed: 1: Slowest
+Freq: 6: Highest
+Options Enabled
+Move Animation
+Stop Animation
+Direction Fix
+Trigger: Action Button
+
+List of Event Commands:
+@>Set Move Route: This event
+ :              : $>Graphic: "apricot-pokemon-33', 0, 4, 2
+@>Script: apricorns = [
+:       :   :REDAPRICORN,
+:       :   :YELLOWAPRICORN,
+:       :   :BLUEAPRICORN,
+:       :   :GREENAPRICORN,
+:       :   :PINKAPRICORN,
+:       :   :WHITEAPRICORN,
+:       :   :BLACKAPRICORN
+:       : ]
+@>Script: random_item = apricorns.sample
+:       : pbItemBall(random_item)
+@>Script: pbSetEventTime
+@>
+
+Page #2
+Conditions
+Self Switch A is ON
+
+Graphic: apricot-pokemon-33
+
+Autonomous Movement
+Type: Fixed
+Speed: 1: Slowest
+Freq: 5: Higher
+Options Enabled
+Move Animation
+Stop Animation
+Direction Fix
+Trigger: Action Button
+
+List of Event Commands:
+@>Text: Versuch es doch morgen nochmal.
+@>
+
+Page #3
+Conditions
+Switch 0023: s:cooledDown?(86400) is ON
+Self Switch A is ON
+
+Graphic: apricot-pokemon-33
+
+Autonomous Movement
+Type: Fixed
+Speed: 1: Slowest
+Freq: 5: Higher
+Options Enabled
+Move Animation
+Stop Animation
+Direction Fix
+Trigger: Autorun
+
+List of Event Commands:
+@>Control Self Switch: A =OFF
+@>Script: setTempSwitchOn("A")
+@>
+
+#------------------------------------------------------------------------------
+Event ID: 037
+Event Name: EV037
+(X,Y): (028,052)
+
+Page #1
+Conditions
+None
+
+Graphic: apricot-pokemon-33
+
+Autonomous Movement
+Type: Fixed
+Speed: 1: Slowest
+Freq: 6: Highest
+Options Enabled
+Move Animation
+Stop Animation
+Direction Fix
+Trigger: Action Button
+
+List of Event Commands:
+@>Set Move Route: This event
+ :              : $>Graphic: "apricot-pokemon-33', 0, 4, 2
+@>Script: apricorns = [
+:       :   :REDAPRICORN,
+:       :   :YELLOWAPRICORN,
+:       :   :BLUEAPRICORN,
+:       :   :GREENAPRICORN,
+:       :   :PINKAPRICORN,
+:       :   :WHITEAPRICORN,
+:       :   :BLACKAPRICORN
+:       : ]
+@>Script: random_item = apricorns.sample
+:       : pbItemBall(random_item)
+@>Script: pbSetEventTime
+@>
+
+Page #2
+Conditions
+Self Switch A is ON
+
+Graphic: apricot-pokemon-33
+
+Autonomous Movement
+Type: Fixed
+Speed: 1: Slowest
+Freq: 5: Higher
+Options Enabled
+Move Animation
+Stop Animation
+Direction Fix
+Trigger: Action Button
+
+List of Event Commands:
+@>Text: Versuch es doch morgen nochmal.
+@>
+
+Page #3
+Conditions
+Switch 0023: s:cooledDown?(86400) is ON
+Self Switch A is ON
+
+Graphic: apricot-pokemon-33
+
+Autonomous Movement
+Type: Fixed
+Speed: 1: Slowest
+Freq: 5: Higher
+Options Enabled
+Move Animation
+Stop Animation
+Direction Fix
+Trigger: Autorun
+
+List of Event Commands:
+@>Control Self Switch: A =OFF
+@>Script: setTempSwitchOn("A")
+@>
+
+#------------------------------------------------------------------------------
+Event ID: 038
+Event Name: EV038
+(X,Y): (042,053)
+
+Page #1
+Conditions
+None
+
+Graphic: apricot-pokemon-33
+
+Autonomous Movement
+Type: Fixed
+Speed: 1: Slowest
+Freq: 6: Highest
+Options Enabled
+Move Animation
+Stop Animation
+Direction Fix
+Trigger: Action Button
+
+List of Event Commands:
+@>Set Move Route: This event
+ :              : $>Graphic: "apricot-pokemon-33', 0, 4, 2
+@>Script: apricorns = [
+:       :   :REDAPRICORN,
+:       :   :YELLOWAPRICORN,
+:       :   :BLUEAPRICORN,
+:       :   :GREENAPRICORN,
+:       :   :PINKAPRICORN,
+:       :   :WHITEAPRICORN,
+:       :   :BLACKAPRICORN
+:       : ]
+@>Script: random_item = apricorns.sample
+:       : pbItemBall(random_item)
+@>Script: pbSetEventTime
+@>
+
+Page #2
+Conditions
+Self Switch A is ON
+
+Graphic: apricot-pokemon-33
+
+Autonomous Movement
+Type: Fixed
+Speed: 1: Slowest
+Freq: 5: Higher
+Options Enabled
+Move Animation
+Stop Animation
+Direction Fix
+Trigger: Action Button
+
+List of Event Commands:
+@>Text: Versuch es doch morgen nochmal.
+@>
+
+Page #3
+Conditions
+Switch 0023: s:cooledDown?(86400) is ON
+Self Switch A is ON
+
+Graphic: apricot-pokemon-33
+
+Autonomous Movement
+Type: Fixed
+Speed: 1: Slowest
+Freq: 5: Higher
+Options Enabled
+Move Animation
+Stop Animation
+Direction Fix
+Trigger: Autorun
+
+List of Event Commands:
+@>Control Self Switch: A =OFF
+@>Script: setTempSwitchOn("A")
+@>
+
+#------------------------------------------------------------------------------
+Event ID: 039
+Event Name: Item
+(X,Y): (001,019)
+
+Page #1
+Conditions
+None
+
+Graphic: ITEM BALLS 2
+
+Autonomous Movement
+Type: Fixed
+Speed: 3: Slow
+Freq: 3: Low
+Options Enabled
+Move Animation
+Direction Fix
+Trigger: Action Button
+
+List of Event Commands:
+@>Conditional Branch: Script: pbItemBall(:MYSTICBALL,5)
+ @>Control Self Switch: A =ON
+ @>
+: Branch End
+@>
+
+Page #2
+Conditions
+Self Switch A is ON
+
+Autonomous Movement
+Type: Fixed
+Speed: 3: Slow
+Freq: 3: Low
+Options Enabled
+Move Animation
+Through
+Trigger: Action Button
+
+List of Event Commands:
+@>
+
+#------------------------------------------------------------------------------
 
 #==============================================================================
 Map ID: 547
@@ -438859,6 +443619,50 @@ List of Event Commands:
  :    : Translucent.
 @>
 
+Page #5
+Conditions
+Variable 0098: Geisterclub Mitglied is 6 or above
+Self Switch B is ON
+
+Graphic: NPC04
+
+Autonomous Movement
+Type: Fixed
+Speed: 3: Slow
+Freq: 3: Low
+Options Enabled
+Move Animation
+Trigger: Action Button
+
+List of Event Commands:
+@>Text: \xn[Geisterjäger Casper]Willkommen zurück!
+@>Text: \xn[Geisterjäger Casper]Wie ich sehe hast du bereits 
+ :    : einige unserer Aufgaben gemeistert.
+@>Text: \xn[Geisterjäger Casper]Von nun an kannst du hier 
+ :    : jederzeit Mystikbälle kaufen.
+@>Control Self Switch: C =ON
+@>
+
+Page #6
+Conditions
+Self Switch C is ON
+
+Graphic: NPC04
+
+Autonomous Movement
+Type: Fixed
+Speed: 3: Slow
+Freq: 3: Low
+Options Enabled
+Move Animation
+Trigger: Action Button
+
+List of Event Commands:
+@>Script: pbPokemonMart([
+:       :   :MYSTICBALL
+:       : ])
+@>
+
 #------------------------------------------------------------------------------
 Event ID: 007
 Event Name: EV007
@@ -449670,6 +454474,406 @@ List of Event Commands:
 @>
 
 #------------------------------------------------------------------------------
+Event ID: 011
+Event Name: EV011
+(X,Y): (001,022)
+
+Page #1
+Conditions
+None
+
+Graphic: apricot-pokemon-33
+
+Autonomous Movement
+Type: Fixed
+Speed: 1: Slowest
+Freq: 6: Highest
+Options Enabled
+Move Animation
+Stop Animation
+Direction Fix
+Trigger: Action Button
+
+List of Event Commands:
+@>Set Move Route: This event
+ :              : $>Graphic: "apricot-pokemon-33', 0, 4, 2
+@>Script: apricorns = [
+:       :   :REDAPRICORN,
+:       :   :YELLOWAPRICORN,
+:       :   :BLUEAPRICORN,
+:       :   :GREENAPRICORN,
+:       :   :PINKAPRICORN,
+:       :   :WHITEAPRICORN,
+:       :   :BLACKAPRICORN
+:       : ]
+@>Script: random_item = apricorns.sample
+:       : pbItemBall(random_item)
+@>Script: pbSetEventTime
+@>
+
+Page #2
+Conditions
+Self Switch A is ON
+
+Graphic: apricot-pokemon-33
+
+Autonomous Movement
+Type: Fixed
+Speed: 1: Slowest
+Freq: 5: Higher
+Options Enabled
+Move Animation
+Stop Animation
+Direction Fix
+Trigger: Action Button
+
+List of Event Commands:
+@>Text: Versuch es doch morgen nochmal.
+@>
+
+Page #3
+Conditions
+Switch 0023: s:cooledDown?(86400) is ON
+Self Switch A is ON
+
+Graphic: apricot-pokemon-33
+
+Autonomous Movement
+Type: Fixed
+Speed: 1: Slowest
+Freq: 5: Higher
+Options Enabled
+Move Animation
+Stop Animation
+Direction Fix
+Trigger: Autorun
+
+List of Event Commands:
+@>Control Self Switch: A =OFF
+@>Script: setTempSwitchOn("A")
+@>
+
+#------------------------------------------------------------------------------
+Event ID: 012
+Event Name: EV012
+(X,Y): (044,041)
+
+Page #1
+Conditions
+None
+
+Graphic: apricot-pokemon-33
+
+Autonomous Movement
+Type: Fixed
+Speed: 1: Slowest
+Freq: 6: Highest
+Options Enabled
+Move Animation
+Stop Animation
+Direction Fix
+Trigger: Action Button
+
+List of Event Commands:
+@>Set Move Route: This event
+ :              : $>Graphic: "apricot-pokemon-33', 0, 4, 2
+@>Script: apricorns = [
+:       :   :REDAPRICORN,
+:       :   :YELLOWAPRICORN,
+:       :   :BLUEAPRICORN,
+:       :   :GREENAPRICORN,
+:       :   :PINKAPRICORN,
+:       :   :WHITEAPRICORN,
+:       :   :BLACKAPRICORN
+:       : ]
+@>Script: random_item = apricorns.sample
+:       : pbItemBall(random_item)
+@>Script: pbSetEventTime
+@>
+
+Page #2
+Conditions
+Self Switch A is ON
+
+Graphic: apricot-pokemon-33
+
+Autonomous Movement
+Type: Fixed
+Speed: 1: Slowest
+Freq: 5: Higher
+Options Enabled
+Move Animation
+Stop Animation
+Direction Fix
+Trigger: Action Button
+
+List of Event Commands:
+@>Text: Versuch es doch morgen nochmal.
+@>
+
+Page #3
+Conditions
+Switch 0023: s:cooledDown?(86400) is ON
+Self Switch A is ON
+
+Graphic: apricot-pokemon-33
+
+Autonomous Movement
+Type: Fixed
+Speed: 1: Slowest
+Freq: 5: Higher
+Options Enabled
+Move Animation
+Stop Animation
+Direction Fix
+Trigger: Autorun
+
+List of Event Commands:
+@>Control Self Switch: A =OFF
+@>Script: setTempSwitchOn("A")
+@>
+
+#------------------------------------------------------------------------------
+Event ID: 013
+Event Name: EV013
+(X,Y): (020,025)
+
+Page #1
+Conditions
+None
+
+Graphic: apricot-pokemon-33
+
+Autonomous Movement
+Type: Fixed
+Speed: 1: Slowest
+Freq: 6: Highest
+Options Enabled
+Move Animation
+Stop Animation
+Direction Fix
+Trigger: Action Button
+
+List of Event Commands:
+@>Set Move Route: This event
+ :              : $>Graphic: "apricot-pokemon-33', 0, 4, 2
+@>Script: apricorns = [
+:       :   :REDAPRICORN,
+:       :   :YELLOWAPRICORN,
+:       :   :BLUEAPRICORN,
+:       :   :GREENAPRICORN,
+:       :   :PINKAPRICORN,
+:       :   :WHITEAPRICORN,
+:       :   :BLACKAPRICORN
+:       : ]
+@>Script: random_item = apricorns.sample
+:       : pbItemBall(random_item)
+@>Script: pbSetEventTime
+@>
+
+Page #2
+Conditions
+Self Switch A is ON
+
+Graphic: apricot-pokemon-33
+
+Autonomous Movement
+Type: Fixed
+Speed: 1: Slowest
+Freq: 5: Higher
+Options Enabled
+Move Animation
+Stop Animation
+Direction Fix
+Trigger: Action Button
+
+List of Event Commands:
+@>Text: Versuch es doch morgen nochmal.
+@>
+
+Page #3
+Conditions
+Switch 0023: s:cooledDown?(86400) is ON
+Self Switch A is ON
+
+Graphic: apricot-pokemon-33
+
+Autonomous Movement
+Type: Fixed
+Speed: 1: Slowest
+Freq: 5: Higher
+Options Enabled
+Move Animation
+Stop Animation
+Direction Fix
+Trigger: Autorun
+
+List of Event Commands:
+@>Control Self Switch: A =OFF
+@>Script: setTempSwitchOn("A")
+@>
+
+#------------------------------------------------------------------------------
+Event ID: 014
+Event Name: EV014
+(X,Y): (028,025)
+
+Page #1
+Conditions
+None
+
+Graphic: apricot-pokemon-33
+
+Autonomous Movement
+Type: Fixed
+Speed: 1: Slowest
+Freq: 6: Highest
+Options Enabled
+Move Animation
+Stop Animation
+Direction Fix
+Trigger: Action Button
+
+List of Event Commands:
+@>Set Move Route: This event
+ :              : $>Graphic: "apricot-pokemon-33', 0, 4, 2
+@>Script: apricorns = [
+:       :   :REDAPRICORN,
+:       :   :YELLOWAPRICORN,
+:       :   :BLUEAPRICORN,
+:       :   :GREENAPRICORN,
+:       :   :PINKAPRICORN,
+:       :   :WHITEAPRICORN,
+:       :   :BLACKAPRICORN
+:       : ]
+@>Script: random_item = apricorns.sample
+:       : pbItemBall(random_item)
+@>Script: pbSetEventTime
+@>
+
+Page #2
+Conditions
+Self Switch A is ON
+
+Graphic: apricot-pokemon-33
+
+Autonomous Movement
+Type: Fixed
+Speed: 1: Slowest
+Freq: 5: Higher
+Options Enabled
+Move Animation
+Stop Animation
+Direction Fix
+Trigger: Action Button
+
+List of Event Commands:
+@>Text: Versuch es doch morgen nochmal.
+@>
+
+Page #3
+Conditions
+Switch 0023: s:cooledDown?(86400) is ON
+Self Switch A is ON
+
+Graphic: apricot-pokemon-33
+
+Autonomous Movement
+Type: Fixed
+Speed: 1: Slowest
+Freq: 5: Higher
+Options Enabled
+Move Animation
+Stop Animation
+Direction Fix
+Trigger: Autorun
+
+List of Event Commands:
+@>Control Self Switch: A =OFF
+@>Script: setTempSwitchOn("A")
+@>
+
+#------------------------------------------------------------------------------
+Event ID: 015
+Event Name: EV015
+(X,Y): (045,020)
+
+Page #1
+Conditions
+None
+
+Graphic: apricot-pokemon-33
+
+Autonomous Movement
+Type: Fixed
+Speed: 1: Slowest
+Freq: 6: Highest
+Options Enabled
+Move Animation
+Stop Animation
+Direction Fix
+Trigger: Action Button
+
+List of Event Commands:
+@>Set Move Route: This event
+ :              : $>Graphic: "apricot-pokemon-33', 0, 4, 2
+@>Script: apricorns = [
+:       :   :REDAPRICORN,
+:       :   :YELLOWAPRICORN,
+:       :   :BLUEAPRICORN,
+:       :   :GREENAPRICORN,
+:       :   :PINKAPRICORN,
+:       :   :WHITEAPRICORN,
+:       :   :BLACKAPRICORN
+:       : ]
+@>Script: random_item = apricorns.sample
+:       : pbItemBall(random_item)
+@>Script: pbSetEventTime
+@>
+
+Page #2
+Conditions
+Self Switch A is ON
+
+Graphic: apricot-pokemon-33
+
+Autonomous Movement
+Type: Fixed
+Speed: 1: Slowest
+Freq: 5: Higher
+Options Enabled
+Move Animation
+Stop Animation
+Direction Fix
+Trigger: Action Button
+
+List of Event Commands:
+@>Text: Versuch es doch morgen nochmal.
+@>
+
+Page #3
+Conditions
+Switch 0023: s:cooledDown?(86400) is ON
+Self Switch A is ON
+
+Graphic: apricot-pokemon-33
+
+Autonomous Movement
+Type: Fixed
+Speed: 1: Slowest
+Freq: 5: Higher
+Options Enabled
+Move Animation
+Stop Animation
+Direction Fix
+Trigger: Autorun
+
+List of Event Commands:
+@>Control Self Switch: A =OFF
+@>Script: setTempSwitchOn("A")
+@>
+
+#------------------------------------------------------------------------------
 
 #==============================================================================
 Map ID: 613
@@ -450175,6 +455379,406 @@ List of Event Commands:
 @>
 
 #------------------------------------------------------------------------------
+Event ID: 021
+Event Name: EV021
+(X,Y): (014,029)
+
+Page #1
+Conditions
+None
+
+Graphic: apricot-pokemon-33
+
+Autonomous Movement
+Type: Fixed
+Speed: 1: Slowest
+Freq: 6: Highest
+Options Enabled
+Move Animation
+Stop Animation
+Direction Fix
+Trigger: Action Button
+
+List of Event Commands:
+@>Set Move Route: This event
+ :              : $>Graphic: "apricot-pokemon-33', 0, 4, 2
+@>Script: apricorns = [
+:       :   :REDAPRICORN,
+:       :   :YELLOWAPRICORN,
+:       :   :BLUEAPRICORN,
+:       :   :GREENAPRICORN,
+:       :   :PINKAPRICORN,
+:       :   :WHITEAPRICORN,
+:       :   :BLACKAPRICORN
+:       : ]
+@>Script: random_item = apricorns.sample
+:       : pbItemBall(random_item)
+@>Script: pbSetEventTime
+@>
+
+Page #2
+Conditions
+Self Switch A is ON
+
+Graphic: apricot-pokemon-33
+
+Autonomous Movement
+Type: Fixed
+Speed: 1: Slowest
+Freq: 5: Higher
+Options Enabled
+Move Animation
+Stop Animation
+Direction Fix
+Trigger: Action Button
+
+List of Event Commands:
+@>Text: Versuch es doch morgen nochmal.
+@>
+
+Page #3
+Conditions
+Switch 0023: s:cooledDown?(86400) is ON
+Self Switch A is ON
+
+Graphic: apricot-pokemon-33
+
+Autonomous Movement
+Type: Fixed
+Speed: 1: Slowest
+Freq: 5: Higher
+Options Enabled
+Move Animation
+Stop Animation
+Direction Fix
+Trigger: Autorun
+
+List of Event Commands:
+@>Control Self Switch: A =OFF
+@>Script: setTempSwitchOn("A")
+@>
+
+#------------------------------------------------------------------------------
+Event ID: 022
+Event Name: EV022
+(X,Y): (023,051)
+
+Page #1
+Conditions
+None
+
+Graphic: apricot-pokemon-33
+
+Autonomous Movement
+Type: Fixed
+Speed: 1: Slowest
+Freq: 6: Highest
+Options Enabled
+Move Animation
+Stop Animation
+Direction Fix
+Trigger: Action Button
+
+List of Event Commands:
+@>Set Move Route: This event
+ :              : $>Graphic: "apricot-pokemon-33', 0, 4, 2
+@>Script: apricorns = [
+:       :   :REDAPRICORN,
+:       :   :YELLOWAPRICORN,
+:       :   :BLUEAPRICORN,
+:       :   :GREENAPRICORN,
+:       :   :PINKAPRICORN,
+:       :   :WHITEAPRICORN,
+:       :   :BLACKAPRICORN
+:       : ]
+@>Script: random_item = apricorns.sample
+:       : pbItemBall(random_item)
+@>Script: pbSetEventTime
+@>
+
+Page #2
+Conditions
+Self Switch A is ON
+
+Graphic: apricot-pokemon-33
+
+Autonomous Movement
+Type: Fixed
+Speed: 1: Slowest
+Freq: 5: Higher
+Options Enabled
+Move Animation
+Stop Animation
+Direction Fix
+Trigger: Action Button
+
+List of Event Commands:
+@>Text: Versuch es doch morgen nochmal.
+@>
+
+Page #3
+Conditions
+Switch 0023: s:cooledDown?(86400) is ON
+Self Switch A is ON
+
+Graphic: apricot-pokemon-33
+
+Autonomous Movement
+Type: Fixed
+Speed: 1: Slowest
+Freq: 5: Higher
+Options Enabled
+Move Animation
+Stop Animation
+Direction Fix
+Trigger: Autorun
+
+List of Event Commands:
+@>Control Self Switch: A =OFF
+@>Script: setTempSwitchOn("A")
+@>
+
+#------------------------------------------------------------------------------
+Event ID: 023
+Event Name: EV023
+(X,Y): (059,045)
+
+Page #1
+Conditions
+None
+
+Graphic: apricot-pokemon-33
+
+Autonomous Movement
+Type: Fixed
+Speed: 1: Slowest
+Freq: 6: Highest
+Options Enabled
+Move Animation
+Stop Animation
+Direction Fix
+Trigger: Action Button
+
+List of Event Commands:
+@>Set Move Route: This event
+ :              : $>Graphic: "apricot-pokemon-33', 0, 4, 2
+@>Script: apricorns = [
+:       :   :REDAPRICORN,
+:       :   :YELLOWAPRICORN,
+:       :   :BLUEAPRICORN,
+:       :   :GREENAPRICORN,
+:       :   :PINKAPRICORN,
+:       :   :WHITEAPRICORN,
+:       :   :BLACKAPRICORN
+:       : ]
+@>Script: random_item = apricorns.sample
+:       : pbItemBall(random_item)
+@>Script: pbSetEventTime
+@>
+
+Page #2
+Conditions
+Self Switch A is ON
+
+Graphic: apricot-pokemon-33
+
+Autonomous Movement
+Type: Fixed
+Speed: 1: Slowest
+Freq: 5: Higher
+Options Enabled
+Move Animation
+Stop Animation
+Direction Fix
+Trigger: Action Button
+
+List of Event Commands:
+@>Text: Versuch es doch morgen nochmal.
+@>
+
+Page #3
+Conditions
+Switch 0023: s:cooledDown?(86400) is ON
+Self Switch A is ON
+
+Graphic: apricot-pokemon-33
+
+Autonomous Movement
+Type: Fixed
+Speed: 1: Slowest
+Freq: 5: Higher
+Options Enabled
+Move Animation
+Stop Animation
+Direction Fix
+Trigger: Autorun
+
+List of Event Commands:
+@>Control Self Switch: A =OFF
+@>Script: setTempSwitchOn("A")
+@>
+
+#------------------------------------------------------------------------------
+Event ID: 024
+Event Name: EV024
+(X,Y): (048,019)
+
+Page #1
+Conditions
+None
+
+Graphic: apricot-pokemon-33
+
+Autonomous Movement
+Type: Fixed
+Speed: 1: Slowest
+Freq: 6: Highest
+Options Enabled
+Move Animation
+Stop Animation
+Direction Fix
+Trigger: Action Button
+
+List of Event Commands:
+@>Set Move Route: This event
+ :              : $>Graphic: "apricot-pokemon-33', 0, 4, 2
+@>Script: apricorns = [
+:       :   :REDAPRICORN,
+:       :   :YELLOWAPRICORN,
+:       :   :BLUEAPRICORN,
+:       :   :GREENAPRICORN,
+:       :   :PINKAPRICORN,
+:       :   :WHITEAPRICORN,
+:       :   :BLACKAPRICORN
+:       : ]
+@>Script: random_item = apricorns.sample
+:       : pbItemBall(random_item)
+@>Script: pbSetEventTime
+@>
+
+Page #2
+Conditions
+Self Switch A is ON
+
+Graphic: apricot-pokemon-33
+
+Autonomous Movement
+Type: Fixed
+Speed: 1: Slowest
+Freq: 5: Higher
+Options Enabled
+Move Animation
+Stop Animation
+Direction Fix
+Trigger: Action Button
+
+List of Event Commands:
+@>Text: Versuch es doch morgen nochmal.
+@>
+
+Page #3
+Conditions
+Switch 0023: s:cooledDown?(86400) is ON
+Self Switch A is ON
+
+Graphic: apricot-pokemon-33
+
+Autonomous Movement
+Type: Fixed
+Speed: 1: Slowest
+Freq: 5: Higher
+Options Enabled
+Move Animation
+Stop Animation
+Direction Fix
+Trigger: Autorun
+
+List of Event Commands:
+@>Control Self Switch: A =OFF
+@>Script: setTempSwitchOn("A")
+@>
+
+#------------------------------------------------------------------------------
+Event ID: 025
+Event Name: EV025
+(X,Y): (030,018)
+
+Page #1
+Conditions
+None
+
+Graphic: apricot-pokemon-33
+
+Autonomous Movement
+Type: Fixed
+Speed: 1: Slowest
+Freq: 6: Highest
+Options Enabled
+Move Animation
+Stop Animation
+Direction Fix
+Trigger: Action Button
+
+List of Event Commands:
+@>Set Move Route: This event
+ :              : $>Graphic: "apricot-pokemon-33', 0, 4, 2
+@>Script: apricorns = [
+:       :   :REDAPRICORN,
+:       :   :YELLOWAPRICORN,
+:       :   :BLUEAPRICORN,
+:       :   :GREENAPRICORN,
+:       :   :PINKAPRICORN,
+:       :   :WHITEAPRICORN,
+:       :   :BLACKAPRICORN
+:       : ]
+@>Script: random_item = apricorns.sample
+:       : pbItemBall(random_item)
+@>Script: pbSetEventTime
+@>
+
+Page #2
+Conditions
+Self Switch A is ON
+
+Graphic: apricot-pokemon-33
+
+Autonomous Movement
+Type: Fixed
+Speed: 1: Slowest
+Freq: 5: Higher
+Options Enabled
+Move Animation
+Stop Animation
+Direction Fix
+Trigger: Action Button
+
+List of Event Commands:
+@>Text: Versuch es doch morgen nochmal.
+@>
+
+Page #3
+Conditions
+Switch 0023: s:cooledDown?(86400) is ON
+Self Switch A is ON
+
+Graphic: apricot-pokemon-33
+
+Autonomous Movement
+Type: Fixed
+Speed: 1: Slowest
+Freq: 5: Higher
+Options Enabled
+Move Animation
+Stop Animation
+Direction Fix
+Trigger: Autorun
+
+List of Event Commands:
+@>Control Self Switch: A =OFF
+@>Script: setTempSwitchOn("A")
+@>
+
+#------------------------------------------------------------------------------
 
 #==============================================================================
 Map ID: 614
@@ -450385,6 +455989,166 @@ Trigger: Action Button
 
 List of Event Commands:
 @>Script: pbHeadbutt
+@>
+
+#------------------------------------------------------------------------------
+Event ID: 009
+Event Name: EV009
+(X,Y): (008,019)
+
+Page #1
+Conditions
+None
+
+Graphic: apricot-pokemon-33
+
+Autonomous Movement
+Type: Fixed
+Speed: 1: Slowest
+Freq: 6: Highest
+Options Enabled
+Move Animation
+Stop Animation
+Direction Fix
+Trigger: Action Button
+
+List of Event Commands:
+@>Set Move Route: This event
+ :              : $>Graphic: "apricot-pokemon-33', 0, 4, 2
+@>Script: apricorns = [
+:       :   :REDAPRICORN,
+:       :   :YELLOWAPRICORN,
+:       :   :BLUEAPRICORN,
+:       :   :GREENAPRICORN,
+:       :   :PINKAPRICORN,
+:       :   :WHITEAPRICORN,
+:       :   :BLACKAPRICORN
+:       : ]
+@>Script: random_item = apricorns.sample
+:       : pbItemBall(random_item)
+@>Script: pbSetEventTime
+@>
+
+Page #2
+Conditions
+Self Switch A is ON
+
+Graphic: apricot-pokemon-33
+
+Autonomous Movement
+Type: Fixed
+Speed: 1: Slowest
+Freq: 5: Higher
+Options Enabled
+Move Animation
+Stop Animation
+Direction Fix
+Trigger: Action Button
+
+List of Event Commands:
+@>Text: Versuch es doch morgen nochmal.
+@>
+
+Page #3
+Conditions
+Switch 0023: s:cooledDown?(86400) is ON
+Self Switch A is ON
+
+Graphic: apricot-pokemon-33
+
+Autonomous Movement
+Type: Fixed
+Speed: 1: Slowest
+Freq: 5: Higher
+Options Enabled
+Move Animation
+Stop Animation
+Direction Fix
+Trigger: Autorun
+
+List of Event Commands:
+@>Control Self Switch: A =OFF
+@>Script: setTempSwitchOn("A")
+@>
+
+#------------------------------------------------------------------------------
+Event ID: 010
+Event Name: EV010
+(X,Y): (016,019)
+
+Page #1
+Conditions
+None
+
+Graphic: apricot-pokemon-33
+
+Autonomous Movement
+Type: Fixed
+Speed: 1: Slowest
+Freq: 6: Highest
+Options Enabled
+Move Animation
+Stop Animation
+Direction Fix
+Trigger: Action Button
+
+List of Event Commands:
+@>Set Move Route: This event
+ :              : $>Graphic: "apricot-pokemon-33', 0, 4, 2
+@>Script: apricorns = [
+:       :   :REDAPRICORN,
+:       :   :YELLOWAPRICORN,
+:       :   :BLUEAPRICORN,
+:       :   :GREENAPRICORN,
+:       :   :PINKAPRICORN,
+:       :   :WHITEAPRICORN,
+:       :   :BLACKAPRICORN
+:       : ]
+@>Script: random_item = apricorns.sample
+:       : pbItemBall(random_item)
+@>Script: pbSetEventTime
+@>
+
+Page #2
+Conditions
+Self Switch A is ON
+
+Graphic: apricot-pokemon-33
+
+Autonomous Movement
+Type: Fixed
+Speed: 1: Slowest
+Freq: 5: Higher
+Options Enabled
+Move Animation
+Stop Animation
+Direction Fix
+Trigger: Action Button
+
+List of Event Commands:
+@>Text: Versuch es doch morgen nochmal.
+@>
+
+Page #3
+Conditions
+Switch 0023: s:cooledDown?(86400) is ON
+Self Switch A is ON
+
+Graphic: apricot-pokemon-33
+
+Autonomous Movement
+Type: Fixed
+Speed: 1: Slowest
+Freq: 5: Higher
+Options Enabled
+Move Animation
+Stop Animation
+Direction Fix
+Trigger: Autorun
+
+List of Event Commands:
+@>Control Self Switch: A =OFF
+@>Script: setTempSwitchOn("A")
 @>
 
 #------------------------------------------------------------------------------
@@ -453618,6 +459382,28 @@ List of Event Commands:
 Page #2
 Conditions
 Self Switch A is ON
+
+Autonomous Movement
+Type: Fixed
+Speed: 3: Slow
+Freq: 3: Low
+Options Enabled
+Move Animation
+Trigger: Action Button
+
+List of Event Commands:
+@>
+
+#------------------------------------------------------------------------------
+Event ID: 018
+Event Name: HoneyTree(10) size(2,1)
+(X,Y): (005,009)
+
+Page #1
+Conditions
+None
+
+Graphic: Honigbaum
 
 Autonomous Movement
 Type: Fixed
