@@ -9239,4 +9239,4 @@ NamePlural = Dojo-Schlüssel
 Pocket = 8
 Price = 0
 FieldUse = OnPokemon
-Description = Öffnet eine Tür im Dojo in Solhavenn.
+Description = Öffnet eine Tür im Dojo in Solhaven.
