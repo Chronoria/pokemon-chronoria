@@ -140456,7 +140456,7 @@ Speed: 3: Slow
 Freq: 3: Low
 Options Enabled
 Move Animation
-Trigger: Player Touch
+Trigger: Event Touch
 
 List of Event Commands:
 @>Conditional Branch: Player is facing Up
@@ -171681,6 +171681,34 @@ List of Event Commands:
 @>
 
 #------------------------------------------------------------------------------
+Event ID: 103
+Event Name: Schild size(2,1)
+(X,Y): (064,010)
+
+Page #1
+Conditions
+None
+
+Autonomous Movement
+Type: Fixed
+Speed: 3: Slow
+Freq: 3: Low
+Options Enabled
+Move Animation
+Trigger: Action Button
+
+List of Event Commands:
+@>Conditional Branch: Player is facing Up
+ @>Text: Die Arena von Solhaven.
+ @>Text: Stelle dich Sakura und versuche dir den Shaymin-
+  :    : Orden zu verdienen.
+ @>
+: Else
+ @>
+: Branch End
+@>
+
+#------------------------------------------------------------------------------
 Event ID: 104
 Event Name: Shadow
 (X,Y): (043,024)
@@ -188026,12 +188054,14 @@ List of Event Commands:
 
 #------------------------------------------------------------------------------
 Event ID: 007
-Event Name: EV007
-(X,Y): (033,046)
+Event Name: Dojo Tür
+(X,Y): (034,044)
 
 Page #1
 Conditions
 None
+
+Graphic: Door Dojo
 
 Autonomous Movement
 Type: Fixed
@@ -188039,10 +188069,219 @@ Speed: 3: Slow
 Freq: 3: Low
 Options Enabled
 Move Animation
-Trigger: Event Touch
+Trigger: Player Touch
 
 List of Event Commands:
-@>Text: Die Türe ist verschlossen!
+@>Conditional Branch: Switch [0006: Defeated Gym 3] == ON
+ @>Set Move Route: This event
+                   (Ignore If Can't Move)
+  :              : $>SE: 'Door slide', 100, 50
+  :              : $>Wait: 4 frame(s)
+  :              : $>Turn Left
+  :              : $>Wait: 4 frame(s)
+  :              : $>Turn Right
+  :              : $>Wait: 4 frame(s)
+  :              : $>Turn Up
+  :              : $>Wait: 4 frame(s)
+ @>Wait: 16 frame(s)
+ @>Set Move Route: Player
+                   (Ignore If Can't Move)
+  :              : $>Through ON
+  :              : $>Move Up
+  :              : $>Through OFF
+ @>Wait: 6 frame(s)
+ @>Change Transparent Flag: Transparency
+ @>Script: Followers.follow_into_door
+ @>Wait for Move's Completion
+ @>Set Move Route: This event
+                   (Ignore If Can't Move)
+  :              : $>SE: 'Door slide', 100, 50
+  :              : $>Wait: 4 frame(s)
+  :              : $>Turn Right
+  :              : $>Wait: 4 frame(s)
+  :              : $>Turn Left
+  :              : $>Wait: 4 frame(s)
+  :              : $>Turn Down
+  :              : $>Wait: 4 frame(s)
+ @>Wait: 16 frame(s)
+ @>Change Screen Color Tone: (-255,-255,-255,0), @6
+ @>Wait: 8 frame(s)
+ @>Change Transparent Flag: Normal
+ @>Transfer Player:[490: Dojo], (018,023), Up, No Fade
+ @>Change Screen Color Tone: (0,0,0,0), @6
+ @>Wait: 8 frame(s)
+ @>
+: Else
+ @>Text: Verschlossen.
+ @>
+: Branch End
+@>
+
+Page #2
+Conditions
+Switch 0022: s:tsOff?("A") is ON
+
+Graphic: Door Dojo
+
+Autonomous Movement
+Type: Fixed
+Speed: 3: Slow
+Freq: 3: Low
+Options Enabled
+Move Animation
+Trigger: Autorun
+
+List of Event Commands:
+@>Conditional Branch: Script: get_self.onEvent?
+ @>Change Transparent Flag: Transparency
+ @>Script: Followers.hide_followers
+ @>Set Move Route: This event
+                   (Ignore If Can't Move)
+  :              : $>SE: 'Door slide', 100, 50
+  :              : $>Wait: 4 frame(s)
+  :              : $>Turn Left
+  :              : $>Wait: 4 frame(s)
+  :              : $>Turn Right
+  :              : $>Wait: 4 frame(s)
+  :              : $>Turn Up
+  :              : $>Wait: 4 frame(s)
+ @>Wait: 16 frame(s)
+ @>Change Transparent Flag: Normal
+ @>Set Move Route: Player
+                   (Ignore If Can't Move)
+  :              : $>Through ON
+  :              : $>Move Down
+  :              : $>Through OFF
+ @>Wait: 6 frame(s)
+ @>Script: Followers.put_followers_on_player
+ @>Set Move Route: This event
+                   (Ignore If Can't Move)
+  :              : $>SE: 'Door slide', 100, 50
+  :              : $>Wait: 4 frame(s)
+  :              : $>Turn Right
+  :              : $>Wait: 4 frame(s)
+  :              : $>Turn Left
+  :              : $>Wait: 4 frame(s)
+  :              : $>Turn Down
+  :              : $>Wait: 4 frame(s)
+ @>Wait: 16 frame(s)
+ @>
+: Branch End
+@>Script: setTempSwitchOn("A")
+@>
+
+Page #3
+Conditions
+Switch 0015: s:PBDayNight.isNight? is ON
+
+Graphic: Door Dojo
+
+Autonomous Movement
+Type: Fixed
+Speed: 3: Slow
+Freq: 3: Low
+Options Enabled
+Move Animation
+Trigger: Player Touch
+
+List of Event Commands:
+@>Conditional Branch: Switch [0006: Defeated Gym 3] == ON
+ @>Set Move Route: This event
+                   (Ignore If Can't Move)
+  :              : $>SE: 'Door slide', 100, 50
+  :              : $>Wait: 4 frame(s)
+  :              : $>Turn Left
+  :              : $>Wait: 4 frame(s)
+  :              : $>Turn Right
+  :              : $>Wait: 4 frame(s)
+  :              : $>Turn Up
+  :              : $>Wait: 4 frame(s)
+ @>Wait: 16 frame(s)
+ @>Set Move Route: Player
+                   (Ignore If Can't Move)
+  :              : $>Through ON
+  :              : $>Move Up
+  :              : $>Through OFF
+ @>Wait: 6 frame(s)
+ @>Change Transparent Flag: Transparency
+ @>Script: Followers.follow_into_door
+ @>Wait for Move's Completion
+ @>Set Move Route: This event
+                   (Ignore If Can't Move)
+  :              : $>SE: 'Door slide', 100, 50
+  :              : $>Wait: 4 frame(s)
+  :              : $>Turn Right
+  :              : $>Wait: 4 frame(s)
+  :              : $>Turn Left
+  :              : $>Wait: 4 frame(s)
+  :              : $>Turn Down
+  :              : $>Wait: 4 frame(s)
+ @>Wait: 16 frame(s)
+ @>Change Screen Color Tone: (-255,-255,-255,0), @6
+ @>Wait: 8 frame(s)
+ @>Change Transparent Flag: Normal
+ @>Transfer Player:[490: Dojo], (018,023), Up, No Fade
+ @>Change Screen Color Tone: (0,0,0,0), @6
+ @>Wait: 8 frame(s)
+ @>
+: Else
+ @>Text: Verschlossen.
+ @>
+: Branch End
+@>
+
+Page #4
+Conditions
+Switch 0022: s:tsOff?("A") is ON
+Switch 0015: s:PBDayNight.isNight? is ON
+
+Graphic: Door Dojo
+
+Autonomous Movement
+Type: Fixed
+Speed: 3: Slow
+Freq: 3: Low
+Options Enabled
+Move Animation
+Trigger: Autorun
+
+List of Event Commands:
+@>Conditional Branch: Script: get_self.onEvent?
+ @>Change Transparent Flag: Transparency
+ @>Script: Followers.hide_followers
+ @>Set Move Route: This event
+                   (Ignore If Can't Move)
+  :              : $>SE: 'Door slide', 100, 50
+  :              : $>Wait: 4 frame(s)
+  :              : $>Turn Left
+  :              : $>Wait: 4 frame(s)
+  :              : $>Turn Right
+  :              : $>Wait: 4 frame(s)
+  :              : $>Turn Up
+  :              : $>Wait: 4 frame(s)
+ @>Wait: 16 frame(s)
+ @>Change Transparent Flag: Normal
+ @>Set Move Route: Player
+                   (Ignore If Can't Move)
+  :              : $>Through ON
+  :              : $>Move Down
+  :              : $>Through OFF
+ @>Wait: 6 frame(s)
+ @>Script: Followers.put_followers_on_player
+ @>Set Move Route: This event
+                   (Ignore If Can't Move)
+  :              : $>SE: 'Door slide', 100, 50
+  :              : $>Wait: 4 frame(s)
+  :              : $>Turn Right
+  :              : $>Wait: 4 frame(s)
+  :              : $>Turn Left
+  :              : $>Wait: 4 frame(s)
+  :              : $>Turn Down
+  :              : $>Wait: 4 frame(s)
+ @>Wait: 16 frame(s)
+ @>
+: Branch End
+@>Script: setTempSwitchOn("A")
 @>
 
 #------------------------------------------------------------------------------
@@ -189547,8 +189786,8 @@ Graphic: berrytree_YACHEBERRY
 
 Autonomous Movement
 Type: Fixed
-Speed: 3: Slow
-Freq: 3: Low
+Speed: 1: Slowest
+Freq: 1: Lowest
 Options Enabled
 Stop Animation
 Direction Fix
@@ -189579,7 +189818,7 @@ List of Event Commands:
 #------------------------------------------------------------------------------
 Event ID: 049
 Event Name: EV049
-(X,Y): (037,046)
+(X,Y): (033,052)
 
 Page #1
 Conditions
@@ -190022,6 +190261,33 @@ List of Event Commands:
 @>
 
 #------------------------------------------------------------------------------
+Event ID: 057
+Event Name: Schild size(2,1)
+(X,Y): (039,047)
+
+Page #1
+Conditions
+None
+
+Autonomous Movement
+Type: Fixed
+Speed: 3: Slow
+Freq: 3: Low
+Options Enabled
+Move Animation
+Trigger: Action Button
+
+List of Event Commands:
+@>Conditional Branch: Player is facing Up
+ @>Text: Kampf-Dojo von Solhaven.
+ @>Text: Zutritt nur mit dem Shaymin-Orden erlaubt.
+ @>
+: Else
+ @>
+: Branch End
+@>
+
+#------------------------------------------------------------------------------
 
 #==============================================================================
 Map ID: 237
@@ -190048,7 +190314,7 @@ Move Animation
 Trigger: Player Touch
 
 List of Event Commands:
-@>Play SE: 'Door exit', 80, 100
+@>Play SE: 'Door exit', 100, 100
 @>Change Screen Color Tone: (-255,-255,-255,0), @6
 @>Wait: 8 frame(s)
 @>Script: pbCaveExit
@@ -190056,7 +190322,7 @@ List of Event Commands:
 @>Change Screen Color Tone: (0,0,0,0), @6
 @>Set Move Route: Player
  :              : $>Move Down
-@>Wait for Move's Completion
+@>Wait: 6 frame(s)
 @>
 
 #------------------------------------------------------------------------------
@@ -190750,6 +191016,87 @@ Move Animation
 Trigger: Action Button
 
 List of Event Commands:
+@>
+
+#------------------------------------------------------------------------------
+Event ID: 026
+Event Name: Stair
+(X,Y): (023,041)
+
+Page #1
+Conditions
+None
+
+Autonomous Movement
+Type: Fixed
+Speed: 3: Slow
+Freq: 3: Low
+Options Enabled
+Move Animation
+Trigger: Player Touch
+
+List of Event Commands:
+@>Conditional Branch: Player is facing Right
+ @>Set Move Route: Player
+  :              : $>Through ON
+  :              : $>Move Upper Right
+  :              : $>Through OFF
+ @>
+: Branch End
+@>
+
+#------------------------------------------------------------------------------
+Event ID: 027
+Event Name: Stair
+(X,Y): (017,030)
+
+Page #1
+Conditions
+None
+
+Autonomous Movement
+Type: Fixed
+Speed: 3: Slow
+Freq: 3: Low
+Options Enabled
+Move Animation
+Trigger: Player Touch
+
+List of Event Commands:
+@>Conditional Branch: Player is facing Right
+ @>Set Move Route: Player
+  :              : $>Through ON
+  :              : $>Move Upper Right
+  :              : $>Through OFF
+ @>
+: Branch End
+@>
+
+#------------------------------------------------------------------------------
+Event ID: 028
+Event Name: Stair
+(X,Y): (009,025)
+
+Page #1
+Conditions
+None
+
+Autonomous Movement
+Type: Fixed
+Speed: 3: Slow
+Freq: 3: Low
+Options Enabled
+Move Animation
+Trigger: Player Touch
+
+List of Event Commands:
+@>Conditional Branch: Player is facing Left
+ @>Set Move Route: Player
+  :              : $>Through ON
+  :              : $>Move Upper Left
+  :              : $>Through OFF
+ @>
+: Branch End
 @>
 
 #------------------------------------------------------------------------------
@@ -217765,6 +218112,7 @@ List of Event Commands:
 @>Wait: 8 frame(s)
 @>Transfer Player:[266: Route 7], (036,058), Up, No Fade
 @>Change Screen Color Tone: (0,0,0,0), @6
+@>Wait: 8 frame(s)
 @>
 
 #------------------------------------------------------------------------------
@@ -217789,6 +218137,7 @@ List of Event Commands:
 @>Wait: 8 frame(s)
 @>Transfer Player:[266: Route 7], (035,058), Up, No Fade
 @>Change Screen Color Tone: (0,0,0,0), @6
+@>Wait: 8 frame(s)
 @>
 
 #------------------------------------------------------------------------------
@@ -218333,6 +218682,7 @@ List of Event Commands:
 @>Script: pbCaveEntrance
 @>Transfer Player:[237: Selphar-Gewölbe], (024,009), Up, No Fade
 @>Change Screen Color Tone: (0,0,0,0), @6
+@>Wait: 8 frame(s)
 @>
 
 #------------------------------------------------------------------------------
@@ -292749,6 +293099,7 @@ List of Event Commands:
 @>Wait: 8 frame(s)
 @>Transfer Player:[274: Route 7 (Sternwarte)], (010,001), Down, No Fade
 @>Change Screen Color Tone: (0,0,0,0), @6
+@>Wait: 8 frame(s)
 @>
 
 #------------------------------------------------------------------------------
@@ -292773,6 +293124,7 @@ List of Event Commands:
 @>Wait: 8 frame(s)
 @>Transfer Player:[274: Route 7 (Sternwarte)], (011,001), Down, No Fade
 @>Change Screen Color Tone: (0,0,0,0), @6
+@>Wait: 8 frame(s)
 @>
 
 #------------------------------------------------------------------------------
@@ -306964,7 +307316,7 @@ Move Animation
 Trigger: Event Touch
 
 List of Event Commands:
-@>Script: pbTrainerIntro(:VETERAN)
+@>Script: pbTrainerIntro(:VETERAN_M3)
 @>Script: pbNoticePlayer(get_self)
 @>Text: \xn[Veteran Leonard]Lass mich dir zeigen, was 
  :    : Erfahrung bedeutet.
@@ -311673,7 +312025,7 @@ List of Event Commands:
 @>Script: pbNoticePlayer(get_self)
 @>Text: \xn[Jongleur Sandro]Ich werde dich schwindelig 
  :    : kämpfen!
-@>Conditional Branch: Script: TrainerBattle.start(:COOLTRAINER_F, "Veronika")
+@>Conditional Branch: Script: TrainerBattle.start(:JUGGLER, "Sandro")
  @>Control Self Switch: A =ON
  @>
 : Branch End
@@ -393596,6 +393948,3754 @@ List of Event Commands:
  @>Set Move Route: Player
   :              : $>Move Down
  @>Wait: 6 frame(s)
+ @>
+: Branch End
+@>
+
+#------------------------------------------------------------------------------
+
+#==============================================================================
+Map ID: 490
+Map Name: Dojo
+Tileset: 130: Dojo
+Width: 46, Height: 52
+Auto-Change BGM: SwSh 126 Master Dojo
+
+#------------------------------------------------------------------------------
+Event ID: 001
+Event Name: Exit size(3,1)
+(X,Y): (017,024)
+
+Page #1
+Conditions
+None
+
+Autonomous Movement
+Type: Fixed
+Speed: 3: Slow
+Freq: 3: Low
+Options Enabled
+Move Animation
+Trigger: Player Touch
+
+List of Event Commands:
+@>Play SE: 'Door exit', 100, 100
+@>Change Screen Color Tone: (-255,-255,-255,0), @6
+@>Wait: 8 frame(s)
+@>Change Transparent Flag: Transparency
+@>Transfer Player:[236: Solhaven], (034,044), Down, No Fade
+@>Change Screen Color Tone: (0,0,0,0), @6
+@>Wait: 8 frame(s)
+@>
+
+#------------------------------------------------------------------------------
+Event ID: 002
+Event Name: Leiter
+(X,Y): (018,014)
+
+Page #1
+Conditions
+None
+
+Graphic: BLACKBELT2
+
+Autonomous Movement
+Type: Fixed
+Speed: 3: Slow
+Freq: 3: Low
+Options Enabled
+Move Animation
+Trigger: Action Button
+
+List of Event Commands:
+@>Text: \xn[Sensei Mastrich]Hi, ich bin Mastrich, der Sensei 
+ :    : dieses Dojos.
+@>Text: \xn[Sensei Mastrich]Viele unserer Mitglieder halten 
+ :    : Aufgaben für dich bereit.
+@>Text: \xn[Sensei Mastrich]Auch erfahrene Trainer können 
+ :    : hier noch viel mitnehmen.
+@>Text: \xn[Sensei Mastrich]Wie es aussieht, hast du bereits 
+ :    : den Shaymin-Orden erhalten, herzlichen 
+ :    : Glückwunsch.
+@>Text: \xn[Sensei Mastrich]Sobald du alle unsere Aufgaben 
+ :    : abgeschlossen hast, sag gerne Bescheid.
+@>Set Move Route: This event
+ :              : $>Turn Down
+@>Control Self Switch: A =ON
+@>
+
+Page #2
+Conditions
+Self Switch A is ON
+
+Graphic: BLACKBELT2
+
+Autonomous Movement
+Type: Fixed
+Speed: 3: Slow
+Freq: 3: Low
+Options Enabled
+Move Animation
+Trigger: Action Button
+
+List of Event Commands:
+@>Conditional Branch: Variable [0154: Björn Quest87] == 4
+ @>Conditional Branch: Variable [0156: Rose Quest88] == 4
+  @>Conditional Branch: Variable [0160: Finn Quest89] == 4
+   @>Conditional Branch: Variable [0162: Mira Quest90] == 4
+    @>Conditional Branch: Variable [0164: Falk Quest91] == 4
+     @>Conditional Branch: Variable [0166: Nadja Quest92] == 4
+      @>Conditional Branch: Variable [0151: Rocco Quest93] == 4
+       @>Text: \xn[Sensei Mastrich]Wahnsinn, du hast tatsächlich 
+        :    : alle Aufgaben gemeistert, ich bin beeindruckt.
+       @>Text: \xn[Sensei Mastrich]Als Belohnung gebe ich dir den 
+        :    : Schlüssel zu unserer Kammer für herausragende 
+        :    : Kämpfer.
+       @>Script: pbReceiveItem(:DOJOKEY)
+       @>Text: \xn[Sensei Mastrich]Dort darfst du dich dem dort 
+        :    : wartenden Pokémon stellen.
+       @>Text: \xn[Sensei Mastrich]Solltest du es fangen, darfst du 
+        :    : dir eine der Schriftrollen aussuchen.
+       @>Set Move Route: This event
+        :              : $>Turn Down
+       @>
+      : Else
+       @>Text: \xn[Sensei Mastrich]Sobald du alle unsere Aufgaben 
+        :    : abgeschlossen hast, sag gerne Bescheid.
+       @>Set Move Route: This event
+        :              : $>Turn Down
+       @>
+      : Branch End
+      @>
+     : Else
+      @>Text: \xn[Sensei Mastrich]Sobald du alle unsere Aufgaben 
+       :    : abgeschlossen hast, sag gerne Bescheid.
+      @>Set Move Route: This event
+       :              : $>Turn Down
+      @>
+     : Branch End
+     @>
+    : Else
+     @>Text: \xn[Sensei Mastrich]Sobald du alle unsere Aufgaben 
+      :    : abgeschlossen hast, sag gerne Bescheid.
+     @>Set Move Route: This event
+      :              : $>Turn Down
+     @>
+    : Branch End
+    @>
+   : Else
+    @>Text: \xn[Sensei Mastrich]Sobald du alle unsere Aufgaben 
+     :    : abgeschlossen hast, sag gerne Bescheid.
+    @>Set Move Route: This event
+     :              : $>Turn Down
+    @>
+   : Branch End
+   @>
+  : Else
+   @>Text: \xn[Sensei Mastrich]Sobald du alle unsere Aufgaben 
+    :    : abgeschlossen hast, sag gerne Bescheid.
+   @>Set Move Route: This event
+    :              : $>Turn Down
+   @>
+  : Branch End
+  @>
+ : Else
+  @>Text: \xn[Sensei Mastrich]Sobald du alle unsere Aufgaben 
+   :    : abgeschlossen hast, sag gerne Bescheid.
+  @>Set Move Route: This event
+   :              : $>Turn Down
+  @>
+ : Branch End
+ @>
+: Else
+ @>Text: \xn[Sensei Mastrich]Sobald du alle unsere Aufgaben 
+  :    : abgeschlossen hast, sag gerne Bescheid.
+ @>Set Move Route: This event
+  :              : $>Turn Down
+ @>
+: Branch End
+@>
+
+#------------------------------------------------------------------------------
+Event ID: 003
+Event Name: EV003
+(X,Y): (015,016)
+
+Page #1
+Conditions
+None
+
+Graphic: BLACKBELT
+
+Autonomous Movement
+Type: Fixed
+Speed: 3: Slow
+Freq: 3: Low
+Options Enabled
+Move Animation
+Trigger: Action Button
+
+List of Event Commands:
+@>Text: Ich trainiere hier fast jeden Tag.
+@>Text: Ohne Training kann man nicht besser werden.
+@>Set Move Route: This event
+ :              : $>Turn Right
+@>
+
+#------------------------------------------------------------------------------
+Event ID: 004
+Event Name: EV004
+(X,Y): (021,016)
+
+Page #1
+Conditions
+None
+
+Graphic: trainer_BATTLEGIRL2
+
+Autonomous Movement
+Type: Fixed
+Speed: 3: Slow
+Freq: 3: Low
+Options Enabled
+Move Animation
+Trigger: Action Button
+
+List of Event Commands:
+@>Text: Hast du schon die Aufgaben unserer Mitglieder 
+ :    : versucht?
+@>Text: Manche davon sind verdammt schwer.
+@>Set Move Route: This event
+ :              : $>Turn Left
+@>
+
+#------------------------------------------------------------------------------
+Event ID: 005
+Event Name: EV005
+(X,Y): (017,016)
+
+Page #1
+Conditions
+None
+
+Graphic: LUCARIO
+
+Autonomous Movement
+Type: Fixed
+Speed: 3: Slow
+Freq: 3: Low
+Options Enabled
+Move Animation
+Stop Animation
+Trigger: Action Button
+
+List of Event Commands:
+@>Play SE: 'LUCARIO', 100, 100
+@>Wait: 10 frame(s)
+@>Set Move Route: This event
+ :              : $>Turn Right
+@>
+
+#------------------------------------------------------------------------------
+Event ID: 006
+Event Name: EV006
+(X,Y): (019,016)
+
+Page #1
+Conditions
+None
+
+Graphic: MACHAMP
+
+Autonomous Movement
+Type: Fixed
+Speed: 3: Slow
+Freq: 3: Low
+Options Enabled
+Move Animation
+Stop Animation
+Trigger: Action Button
+
+List of Event Commands:
+@>Play SE: 'MACHAMP', 100, 100
+@>Wait: 10 frame(s)
+@>Set Move Route: This event
+ :              : $>Turn Left
+@>
+
+#------------------------------------------------------------------------------
+Event ID: 007
+Event Name: EV007
+(X,Y): (006,011)
+
+Page #1
+Conditions
+None
+
+Graphic: CHEF
+
+Autonomous Movement
+Type: Fixed
+Speed: 3: Slow
+Freq: 3: Low
+Options Enabled
+Move Animation
+Trigger: Action Button
+
+List of Event Commands:
+@>
+
+#------------------------------------------------------------------------------
+Event ID: 008
+Event Name: Getränkeautomat links size(2,1)
+(X,Y): (022,010)
+
+Page #1
+Conditions
+None
+
+Autonomous Movement
+Type: Fixed
+Speed: 3: Slow
+Freq: 3: Low
+Options Enabled
+Move Animation
+Trigger: Action Button
+
+List of Event Commands:
+@>Text: \GEin Getränkeautomat.
+@>Show Choices: Tafelwasser (200$), Soda Pop (300$), Limonade (350$), Abbrechen
+(When Cancel: Choice 4)
+: When [Tafelwasser (200$)]
+ @>Conditional Branch: Gold 200 or more
+  @>Conditional Branch: Script: $bag.can_add?(:FRESHWATER)
+   @>Play SE: 'Mart buy item', 100, 100
+   @>Change Gold: - 200
+   @>Text: \GEin Tafelwasser kommt heraus.
+   @>Script: pbReceiveItem(:FRESHWATER)
+   @>
+  : Else
+   @>Text: \GDu hast keinen Platz mehr im Beutel.
+   @>
+  : Branch End
+  @>
+ : Else
+  @>Text: \GDu hast nicht genug Geld.
+  @>
+ : Branch End
+ @>
+: When [Soda Pop (300$)]
+ @>Conditional Branch: Gold 300 or more
+  @>Conditional Branch: Script: $bag.can_add?(:SODAPOP)
+   @>Play SE: 'Mart buy item', 100, 100
+   @>Change Gold: - 300
+   @>Text: \GEin Soda Pop kommt heraus.
+   @>Script: pbReceiveItem(:SODAPOP)
+   @>
+  : Else
+   @>Text: \GDu hast keinen Platz mehr im Beutel.
+   @>
+  : Branch End
+  @>
+ : Else
+  @>Text: \GDu hast nicht genug Geld.
+  @>
+ : Branch End
+ @>
+: When [Limonade (350$)]
+ @>Conditional Branch: Gold 350 or more
+  @>Conditional Branch: Script: $bag.can_add?(:LEMONADE)
+   @>Play SE: 'Mart buy item', 100, 100
+   @>Change Gold: - 350
+   @>Text: \GEine Limonade kommt heraus.
+   @>Script: pbReceiveItem(:LEMONADE)
+   @>
+  : Else
+   @>Text: \GDu hast keinen Platz mehr im Beutel.
+   @>
+  : Branch End
+  @>
+ : Else
+  @>Text: \GDu hast nicht genug Geld.
+  @>
+ : Branch End
+ @>
+: When [Abbrechen]
+ @>
+: Branch End
+@>
+
+#------------------------------------------------------------------------------
+Event ID: 009
+Event Name: Getränkeautomat rechts size(2,1)
+(X,Y): (024,010)
+
+Page #1
+Conditions
+None
+
+Autonomous Movement
+Type: Fixed
+Speed: 3: Slow
+Freq: 3: Low
+Options Enabled
+Move Animation
+Trigger: Action Button
+
+List of Event Commands:
+@>Text: \GEin Getränkeautomat.
+@>Show Choices: Tafelwasser (200$), Soda Pop (300$), Limonade (350$), Abbrechen
+(When Cancel: Choice 4)
+: When [Tafelwasser (200$)]
+ @>Conditional Branch: Gold 200 or more
+  @>Conditional Branch: Script: $bag.can_add?(:FRESHWATER)
+   @>Play SE: 'Mart buy item', 100, 100
+   @>Change Gold: - 200
+   @>Text: \GEin Tafelwasser kommt heraus.
+   @>Script: pbReceiveItem(:FRESHWATER)
+   @>
+  : Else
+   @>Text: \GDu hast keinen Platz mehr im Beutel.
+   @>
+  : Branch End
+  @>
+ : Else
+  @>Text: \GDu hast nicht genug Geld.
+  @>
+ : Branch End
+ @>
+: When [Soda Pop (300$)]
+ @>Conditional Branch: Gold 300 or more
+  @>Conditional Branch: Script: $bag.can_add?(:SODAPOP)
+   @>Play SE: 'Mart buy item', 100, 100
+   @>Change Gold: - 300
+   @>Text: \GEin Soda Pop kommt heraus.
+   @>Script: pbReceiveItem(:SODAPOP)
+   @>
+  : Else
+   @>Text: \GDu hast keinen Platz mehr im Beutel.
+   @>
+  : Branch End
+  @>
+ : Else
+  @>Text: \GDu hast nicht genug Geld.
+  @>
+ : Branch End
+ @>
+: When [Limonade (350$)]
+ @>Conditional Branch: Gold 350 or more
+  @>Conditional Branch: Script: $bag.can_add?(:LEMONADE)
+   @>Play SE: 'Mart buy item', 100, 100
+   @>Change Gold: - 350
+   @>Text: \GEine Limonade kommt heraus.
+   @>Script: pbReceiveItem(:LEMONADE)
+   @>
+  : Else
+   @>Text: \GDu hast keinen Platz mehr im Beutel.
+   @>
+  : Branch End
+  @>
+ : Else
+  @>Text: \GDu hast nicht genug Geld.
+  @>
+ : Branch End
+ @>
+: When [Abbrechen]
+ @>
+: Branch End
+@>
+
+#------------------------------------------------------------------------------
+Event ID: 010
+Event Name: "noshadow"
+(X,Y): (009,046)
+
+Page #1
+Conditions
+None
+
+Graphic: defaultShadow (2)
+
+Autonomous Movement
+Type: Fixed
+Speed: 3: Slow
+Freq: 3: Low
+Options Enabled
+Move Animation
+Direction Fix
+Through
+Trigger: Action Button
+
+List of Event Commands:
+@>
+
+#------------------------------------------------------------------------------
+Event ID: 011
+Event Name: "noshadow"
+(X,Y): (015,046)
+
+Page #1
+Conditions
+None
+
+Graphic: defaultShadow (2)
+
+Autonomous Movement
+Type: Fixed
+Speed: 3: Slow
+Freq: 3: Low
+Options Enabled
+Move Animation
+Direction Fix
+Through
+Trigger: Action Button
+
+List of Event Commands:
+@>
+
+#------------------------------------------------------------------------------
+Event ID: 012
+Event Name: "noshadow"
+(X,Y): (015,036)
+
+Page #1
+Conditions
+None
+
+Graphic: defaultShadow (2)
+
+Autonomous Movement
+Type: Fixed
+Speed: 3: Slow
+Freq: 3: Low
+Options Enabled
+Move Animation
+Direction Fix
+Through
+Trigger: Action Button
+
+List of Event Commands:
+@>
+
+#------------------------------------------------------------------------------
+Event ID: 013
+Event Name: "noshadow"
+(X,Y): (009,036)
+
+Page #1
+Conditions
+None
+
+Graphic: defaultShadow (2)
+
+Autonomous Movement
+Type: Fixed
+Speed: 3: Slow
+Freq: 3: Low
+Options Enabled
+Move Animation
+Direction Fix
+Through
+Trigger: Action Button
+
+List of Event Commands:
+@>
+
+#------------------------------------------------------------------------------
+Event ID: 014
+Event Name: "noshadow"
+(X,Y): (018,008)
+
+Page #1
+Conditions
+None
+
+Graphic: defaultShadow (2)
+
+Autonomous Movement
+Type: Fixed
+Speed: 3: Slow
+Freq: 3: Low
+Options Enabled
+Move Animation
+Direction Fix
+Through
+Trigger: Action Button
+
+List of Event Commands:
+@>
+
+#------------------------------------------------------------------------------
+Event ID: 015
+Event Name: Rocco Quest 93
+(X,Y): (034,013)
+
+Page #1
+Conditions
+None
+
+Graphic: NPC_Mann alt 2
+
+Autonomous Movement
+Type: Fixed
+Speed: 3: Slow
+Freq: 3: Low
+Options Enabled
+Move Animation
+Trigger: Action Button
+
+List of Event Commands:
+@>Label: Start
+@>Conditional Branch: Variable [0152: Stufen] == 0
+ @>Text: \xn[Rocco]Weißt du, was die meisten Trainer nie 
+  :    : begreifen?
+ @>Text: \xn[Rocco]Kraft ist oft nicht mehr als nur Lärm.
+ @>Text: \xn[Rocco]Ich habe in meinem Leben genug Kämpfe 
+  :    : gesehen, in denen der eigentlich stärkere Trainer 
+  :    : verloren hat.
+ @>Text: \xn[Rocco]Nur, weil er nie gelernt hat, dem Zufall zu 
+  :    : vertrauen, statt ihn zu fürchten.
+ @>Text: \xn[Rocco]Ein Volltreffer ist aber mehr als nur Zufall.
+ @>Text: \xn[Rocco]Er ist ein Moment, in dem dein Pokémon 
+  :    : und das Schicksal sich für einen Wimpernschlag 
+  :    : einig sind.
+ @>Script: activateQuest(:Quest93)
+ @>Script: pbSetSelfSwitch(16,"A",true)
+ @>Control Variables: [0152: Stufen] = 1
+ @>Jump to Label: Start
+ @>
+: Else
+ @>Text: \xn[Rocco]Na, willst du's drauf ankommen lassen?
+ @>Text: \xn[Rocco]Zeige mir im Kampf einen Volltreffer.
+ @>Show Choices: Ja, Nein
+ (When Cancel: Choice 2)
+ : When [Ja]
+  @>Script: setBattleRule("outcome", 48)
+  :       : setBattleRule("midbattleScript", 
+  :       : :ROCCO_CRIT_TRACKER_1)
+  :       : TrainerBattle.start(:GAMBLER, 
+  :       : "Rocco")
+  @>Conditional Branch: Variable [0048: Kampf-Ergebnis] == 2
+   @>Exit Event Processing
+   @>
+  : Else
+   @>Conditional Branch: Variable [0150: Rocco Volltreffer] >= 1
+    @>Text: \xn[Rocco]Da war ein Volltreffer, ich hab's genau 
+     :    : gesehen!
+    @>Text: \xn[Rocco]Der kurze Blitz, bevor der Treffer saß.
+    @>Text: \xn[Rocco]Viele merken nichtmal, wenn es passiert, 
+     :    : aber du, du hast gelächelt, das gefällt mir.
+    @>Script: pbReceiveItem(:FIGHTINGGEM, 5)
+    @>Script: advanceQuestToStage(:Quest93, 2, nil, 
+    :       : false)
+    @>Set Move Route: This event
+     :              : $>Turn Right
+    @>Script: pbSet(151, 1)
+    @>
+   : Else
+    @>Text: \xn[Rocco]Nichts, kein einziger Volltreffer.
+    @>Text: \xn[Rocco]Na gut, dann eben nicht.
+    @>Text: \xn[Rocco]Man braucht viel Geduld, um Techniken zu 
+     :    : meistern.
+    @>Text: \xn[Rocco]Sag Bescheid, wenn du es nochmal 
+     :    : versuchen möchtest.
+    @>Set Move Route: This event
+     :              : $>Turn Right
+    @>
+   : Branch End
+   @>
+  : Branch End
+  @>
+ : When [Nein]
+  @>Text: \xn[Rocco]Sag Bescheid, wenn du es versuchen 
+   :    : möchtest.
+  @>Set Move Route: This event
+   :              : $>Turn Right
+  @>
+ : Branch End
+ @>
+: Branch End
+@>
+
+Page #2
+Conditions
+Variable 0151: Rocco Quest93 is 1 or above
+
+Graphic: NPC_Mann alt 2
+
+Autonomous Movement
+Type: Fixed
+Speed: 3: Slow
+Freq: 3: Low
+Options Enabled
+Move Animation
+Trigger: Action Button
+
+List of Event Commands:
+@>Text: \xn[Rocco]Ein Volltreffer in einem Kampf, das kann 
+ :    : auch nur Zufall gewesen sein.
+@>Text: \xn[Rocco]Zeige mir zwei Volltreffer in einem 
+ :    : einzigen Kampf.
+@>Text: \xn[Rocco]Vielleicht fange ich dann an zu glauben, 
+ :    : dass da mehr dahintersteckt, als nur Glück.
+@>Show Choices: Kämpfen, Nein
+(When Cancel: Choice 2)
+: When [Kämpfen]
+ @>Script: setBattleRule("outcome", 48)
+ :       : setBattleRule("midbattleScript", 
+ :       : :ROCCO_CRIT_TRACKER_2)
+ :       : TrainerBattle.start(:GAMBLER, 
+ :       : "Rocco",1)
+ @>Conditional Branch: Variable [0048: Kampf-Ergebnis] == 2
+  @>Exit Event Processing
+  @>
+ : Else
+  @>Conditional Branch: Variable [0150: Rocco Volltreffer] >= 2
+   @>Text: \xn[Rocco]Ich habe mitgezählt, es waren genau
+    :    : zwei Volltreffer.
+   @>Text: \xn[Rocco]Ich bin beeindruckt, das hast du dir 
+    :    : verdient.
+   @>Script: pbReceiveItem(:DIREHIT)
+   @>Script: advanceQuestToStage(:Quest93, 3, nil, 
+   :       : false)
+   @>Set Move Route: This event
+    :              : $>Turn Right
+   @>Script: pbSet(151, 2)
+   @>
+  : Else
+   @>Text: \xn[Rocco]Du hast zwar gewonnen, aber es waren 
+    :    : keine zwei Volltreffer dabei.
+   @>Text: \xn[Rocco]Mach dir nichts draus, das Glück kommt 
+    :    : und geht.
+   @>Text: \xn[Rocco]Versuch es nochmal, wenn du so weit 
+    :    : bist.
+   @>Set Move Route: This event
+    :              : $>Turn Right
+   @>
+  : Branch End
+  @>
+ : Branch End
+ @>
+: When [Nein]
+ @>Text: \xn[Rocco]Sag Bescheid, wenn du es versuchen 
+  :    : möchtest.
+ @>Set Move Route: This event
+  :              : $>Turn Right
+ @>
+: Branch End
+@>
+
+Page #3
+Conditions
+Variable 0151: Rocco Quest93 is 2 or above
+
+Graphic: NPC_Mann alt 2
+
+Autonomous Movement
+Type: Fixed
+Speed: 3: Slow
+Freq: 3: Low
+Options Enabled
+Move Animation
+Trigger: Action Button
+
+List of Event Commands:
+@>Text: \xn[Rocco]Ich habe in all den Jahren im Dojo genau 
+ :    : zwei Trainer getroffen,
+@>Text: \xn[Rocco]bei denen ich das Gefühl hatte, das Glücl 
+ :    : selbst hätte sich für sie entschieden.
+@>Text: \xn[Rocco]Und du bist gerade dabei, der dritte zu 
+ :    : werden.
+@>Text: \xn[Rocco]Aber ich lasse mich nicht so leicht 
+ :    : überzeugen.
+@>Text: \xn[Rocco]Drei Volltreffer, ein Kampf, mein Team wird 
+ :    : härter.
+@>Text: \xn[Rocco]Beweise mir, dass es keine Ausrutscher 
+ :    : waren.
+@>Show Choices: Kämpfen, Nein
+(When Cancel: Choice 2)
+: When [Kämpfen]
+ @>Script: setBattleRule("outcome", 48)
+ :       : setBattleRule("midbattleScript", 
+ :       : :ROCCO_CRIT_TRACKER_3)
+ :       : TrainerBattle.start(:GAMBLER, 
+ :       : "Rocco",2)
+ @>Conditional Branch: Variable [0048: Kampf-Ergebnis] == 2
+  @>Exit Event Processing
+  @>
+ : Else
+  @>Conditional Branch: Variable [0150: Rocco Volltreffer] >= 3
+   @>Text: \xn[Rocco]Drei Volltreffer, genau wie angekündigt.
+   @>Text: \xn[Rocco]Das ist kein Zufall mehr, sondern Können.
+   @>Text: \xn[Rocco]Oder ein Pakt mit dem Schicksal selbst.
+   @>Script: pbReceiveItem(:DIREHIT2)
+   @>Script: advanceQuestToStage(:Quest93, 4, nil, 
+   :       : false)
+   @>Set Move Route: This event
+    :              : $>Turn Right
+   @>Script: pbSet(151, 3)
+   @>
+  : Else
+   @>Text: \xn[Rocco]Diesmal hat's nicht gereicht, das Glück ist 
+    :    : wohl launisch.
+   @>Text: \xn[Rocco]Komm' wieder, wenn du bereit bist, mich 
+    :    : nochmal herauszufordern.
+   @>Set Move Route: This event
+    :              : $>Turn Right
+   @>
+  : Branch End
+  @>
+ : Branch End
+ @>
+: When [Nein]
+ @>Text: \xn[Rocco]Sag Bescheid, wenn du es versuchen 
+  :    : möchtest.
+ @>Set Move Route: This event
+  :              : $>Turn Right
+ @>
+: Branch End
+@>
+
+Page #4
+Conditions
+Variable 0151: Rocco Quest93 is 3 or above
+
+Graphic: NPC_Mann alt 2
+
+Autonomous Movement
+Type: Fixed
+Speed: 3: Slow
+Freq: 3: Low
+Options Enabled
+Move Animation
+Trigger: Action Button
+
+List of Event Commands:
+@>Text: \xn[Rocco]Die letzte Prüfung.
+@>Text: \xn[Rocco]Mein ganzes Team, keine Gnade von 
+ :    : meiner Seite.
+@>Text: \xn[Rocco]Solltest du es schaffen, vier Volltreffer in 
+ :    : einem Kampf zu landen, darfst du dich jederzeit bei 
+ :    : mir verstärken.
+@>Show Choices: Kämpfen, Nein
+(When Cancel: Choice 2)
+: When [Kämpfen]
+ @>Script: setBattleRule("outcome", 48)
+ :       : setBattleRule("midbattleScript", 
+ :       : :ROCCO_CRIT_TRACKER_4)
+ :       : TrainerBattle.start(:GAMBLER, 
+ :       : "Rocco",3)
+ @>Conditional Branch: Variable [0048: Kampf-Ergebnis] == 2
+  @>Exit Event Processing
+  @>
+ : Else
+  @>Conditional Branch: Variable [0150: Rocco Volltreffer] >= 4
+   @>Text: \xn[Rocco]...
+   @>Text: \xn[Rocco]vier Volltreffer!
+   @>Text: \xn[Rocco]Ich weiß nicht, ob ich gerade einen 
+    :    : außergewöhnlichen Trainer,
+   @>Text: \xn[Rocco]oder das personifizierte Glück selbst vor 
+    :    : mir stehen habe.
+   @>Text: \xn[Rocco]Ehrlich gesagt, spielt das keine Rolle.
+   @>Text: \xn[Rocco]Manche Menschen suchen ihr ganzes 
+    :    : Leben nach einem Zeichen, dass das Schicksal sie 
+    :    : mag.
+   @>Text: \xn[Rocco]Du hast vier Volltreffer in einem Kampf 
+    :    : gelandet, lass auch etwas Glück für die anderen 
+    :    : übrig.
+   @>Text: \xn[Rocco]Das hier ist für dich.
+   @>Script: pbReceiveItem(:DIREHIT3)
+   @>Script: completeQuest(:Quest93)
+   @>Script: pbSetSelfSwitch(16,"B",true)
+   @>Text: \xn[Rocco]Ab jetzt kannst du bei mir jederzeit deine 
+    :    : Vorräte an X-Volltreffer auffüllen.
+   @>Control Variables: [0152: Stufen] = 0
+   @>Set Move Route: This event
+    :              : $>Turn Right
+   @>Script: pbSet(151, 4)
+   @>
+  : Else
+   @>Text: \xn[Rocco]Noch nicht ganz, aber ich sehe es in 
+    :    : deinen Augen.
+   @>Text: \xn[Rocco]Du wirst es erneut versuchen und dein 
+    :    : Schicksal herausfordern.
+   @>Set Move Route: This event
+    :              : $>Turn Right
+   @>
+  : Branch End
+  @>
+ : Branch End
+ @>
+: When [Nein]
+ @>Text: \xn[Rocco]Sag Bescheid, wenn du es versuchen 
+  :    : möchtest.
+ @>Set Move Route: This event
+  :              : $>Turn Right
+ @>
+: Branch End
+@>
+
+Page #5
+Conditions
+Variable 0151: Rocco Quest93 is 4 or above
+
+Graphic: NPC_Mann alt 2
+
+Autonomous Movement
+Type: Fixed
+Speed: 3: Slow
+Freq: 3: Low
+Options Enabled
+Move Animation
+Trigger: Action Button
+
+List of Event Commands:
+@>Script: pbPokemonMart([
+:       :   :DIREHIT,
+:       :   :DIREHIT2,
+:       :   :DIREHIT3
+:       : ])
+@>Set Move Route: This event
+ :              : $>Turn Right
+@>
+
+#------------------------------------------------------------------------------
+Event ID: 016
+Event Name: EV016
+(X,Y): (034,012)
+
+Page #1
+Conditions
+None
+
+Graphic: Quest Symbol
+
+Autonomous Movement
+Type: Fixed
+Speed: 2: Slower
+Freq: 6: Highest
+Options Enabled
+Move Animation
+Stop Animation
+Direction Fix
+Through
+Always on Top
+Trigger: Action Button
+
+List of Event Commands:
+@>
+
+Page #2
+Conditions
+Self Switch A is ON
+
+Graphic: Quest Symbol Solved
+
+Autonomous Movement
+Type: Fixed
+Speed: 2: Slower
+Freq: 6: Highest
+Options Enabled
+Move Animation
+Stop Animation
+Direction Fix
+Through
+Always on Top
+Trigger: Action Button
+
+List of Event Commands:
+@>
+
+Page #3
+Conditions
+Self Switch B is ON
+
+Autonomous Movement
+Type: Fixed
+Speed: 3: Slow
+Freq: 3: Low
+Options Enabled
+Move Animation
+Trigger: Action Button
+
+List of Event Commands:
+@>
+
+#------------------------------------------------------------------------------
+Event ID: 017
+Event Name: Rose Quest 88
+(X,Y): (011,013)
+
+Page #1
+Conditions
+None
+
+Graphic: trainer_BATTLEGIRL
+
+Autonomous Movement
+Type: Fixed
+Speed: 3: Slow
+Freq: 3: Low
+Options Enabled
+Move Animation
+Trigger: Action Button
+
+List of Event Commands:
+@>Label: Start
+@>Conditional Branch: Variable [0152: Stufen] == 0
+ @>Text: \xn[Rose]Ich habe mal einem Trainer zugesehen, der 
+  :    : seine ganze Strategie auf einen einzigen perfekten 
+  :    : Moment aufgebaut hat.
+ @>Text: \xn[Rose]Das hat auch funktioniert, aber nur ein Mal.
+ @>Text: \xn[Rose]Danach hatte er nichts mehr, worauf er 
+  :    : sich verlassen konnte.
+ @>Text: \xn[Rose]Ich baue lieber auf das, was auch beim 
+  :    : zehnten Mal noch funktioniert.
+ @>Script: activateQuest(:Quest88)
+ @>Script: pbSetSelfSwitch(20,"A",true)
+ @>Control Variables: [0152: Stufen] = 1
+ @>Jump to Label: Start
+ @>
+: Else
+ @>Text: \xn[Rose]Also gut, fünf Runden.
+ @>Text: \xn[Rose]Kein Pokémon darf in dieser Zeit besiegt 
+  :    : werden.
+ @>Text: \xn[Rose]Das wäre die erste Aufgabe.
+ @>Show Choices: Ja, Nein
+ (When Cancel: Choice 2)
+ : When [Ja]
+  @>Script: setBattleRule("outcome", 48)
+  :       : setBattleRule("midbattleScript", 
+  :       : :ROSE_ENDURANCE_TRACKER_1)
+  :       : TrainerBattle.start(:BATTLEGIRL, 
+  :       : "Rose")
+  @>Conditional Branch: Variable [0048: Kampf-Ergebnis] == 2
+   @>Exit Event Processing
+   @>
+  : Else
+   @>Conditional Branch: Variable [0155: Rose Erfolg] >= 1
+    @>Text: \xn[Rose]Fünf Runden und keine Ausfälle.
+    @>Text: \xn[Rose]Nicht spektakulär, aber genau das ist der 
+     :    : Punkt.
+    @>Script: pbReceiveItem(:XDEFENSE)
+    @>Script: advanceQuestToStage(:Quest88, 2, nil, 
+    :       : false)
+    @>Set Move Route: This event
+     :              : $>Turn Right
+    @>Script: pbSet(156, 1)
+    @>
+   : Else
+    @>Text: \xn[Rose]Ein Pokémon ist gefallen, denk nochmal über 
+     :    : dein Team nach, dann reden wir weiter.
+    @>Set Move Route: This event
+     :              : $>Turn Right
+    @>
+   : Branch End
+   @>
+  : Branch End
+  @>
+ : When [Nein]
+  @>Text: \xn[Rose]Kein Problem, ich laufe nicht davon.
+  @>Set Move Route: This event
+   :              : $>Turn Right
+  @>
+ : Branch End
+ @>
+: Branch End
+@>
+
+Page #2
+Conditions
+Variable 0156: Rose Quest88 is 1 or above
+
+Graphic: trainer_BATTLEGIRL
+
+Autonomous Movement
+Type: Fixed
+Speed: 3: Slow
+Freq: 3: Low
+Options Enabled
+Move Animation
+Trigger: Action Button
+
+List of Event Commands:
+@>Text: \xn[Rose]Fünf Runden ohne Ausfall waren nur der 
+ :    : Anfang.
+@>Text: \xn[Rose]Wir verdoppeln den Einsatz, zehn Runden 
+ :    : ohne Verluste.
+@>Show Choices: Kämpfen, Warte
+(When Cancel: Choice 2)
+: When [Kämpfen]
+ @>Script: setBattleRule("outcome", 48)
+ :       : setBattleRule("midbattleScript", 
+ :       : :ROSE_ENDURANCE_TRACKER_2)
+ :       : TrainerBattle.start(:BATTLEGIRL, 
+ :       : "Rose",1)
+ @>Conditional Branch: Variable [0048: Kampf-Ergebnis] == 2
+  @>Exit Event Processing
+  @>
+ : Else
+  @>Conditional Branch: Variable [0155: Rose Erfolg] >= 1
+   @>Text: \xn[Rose]Zehn Runden, so langsam hast du meinen 
+    :    : Respekt verdient.
+   @>Script: pbReceiveItem(:XDEFENSE2)
+   @>Script: advanceQuestToStage(:Quest88, 3, nil, 
+   :       : false)
+   @>Set Move Route: This event
+    :              : $>Turn Right
+   @>Script: pbSet(156, 2)
+   @>
+  : Else
+   @>Text: \xn[Rose]Das kann passieren, komm wieder, wenn 
+    :    : die Lücke geschlossen ist.
+   @>Set Move Route: This event
+    :              : $>Turn Right
+   @>
+  : Branch End
+  @>
+ : Branch End
+ @>
+: When [Warte]
+ @>Text: \xn[Rose]Wie du meinst.
+ @>Set Move Route: This event
+  :              : $>Turn Right
+ @>
+: Branch End
+@>
+
+Page #3
+Conditions
+Variable 0156: Rose Quest88 is 2 or above
+
+Graphic: trainer_BATTLEGIRL
+
+Autonomous Movement
+Type: Fixed
+Speed: 3: Slow
+Freq: 3: Low
+Options Enabled
+Move Animation
+Trigger: Action Button
+
+List of Event Commands:
+@>Text: \xn[Rose]Durchhalten kann man lernen, das hast du 
+ :    : bewiesen.
+@>Text: \xn[Rose]Aber Durchhalten und Kontrolle sind zwei 
+ :    : unterschiedliche Dinge.
+@>Text: \xn[Rose]Diesmal musst du nicht überstehen.
+@>Text: \xn[Rose]Du musst gewinnen, ohne dass die LP 
+ :    : eines deiner Pokémon, unter 50% fallen.
+@>Show Choices: Kämpfen, Nein
+(When Cancel: Choice 2)
+: When [Kämpfen]
+ @>Script: setBattleRule("outcome", 48)
+ :       : setBattleRule("midbattleScript", 
+ :       : :ROSE_ENDURANCE_TRACKER_3)
+ :       : TrainerBattle.start(:BATTLEGIRL, 
+ :       : "Rose",2)
+ @>Conditional Branch: Variable [0048: Kampf-Ergebnis] == 2
+  @>Exit Event Processing
+  @>
+ : Else
+  @>Conditional Branch: Variable [0155: Rose Erfolg] >= 1
+   @>Text: \xn[Rose]Du hast gewonnen und keines deiner 
+    :    : Pokémon war wirklich in Gefahr.
+   @>Text: \xn[Rose]Das ist Handwerk vom Feinsten.
+   @>Script: pbReceiveItem(:XDEFENSE3)
+   @>Script: advanceQuestToStage(:Quest88, 4, nil, 
+   :       : false)
+   @>Set Move Route: This event
+    :              : $>Turn Right
+   @>Script: pbSet(156, 3)
+   @>
+  : Else
+   @>Text: \xn[Rose]Das war wohl nichts.
+   @>Text: \xn[Rose]Nächstes Mal vorsichtiger sein.
+   @>Set Move Route: This event
+    :              : $>Turn Right
+   @>
+  : Branch End
+  @>
+ : Branch End
+ @>
+: When [Nein]
+ @>Text: \xn[Rose]Keine Eile.
+ @>Set Move Route: This event
+  :              : $>Turn Right
+ @>
+: Branch End
+@>
+
+Page #4
+Conditions
+Variable 0156: Rose Quest88 is 3 or above
+
+Graphic: trainer_BATTLEGIRL
+
+Autonomous Movement
+Type: Fixed
+Speed: 3: Slow
+Freq: 3: Low
+Options Enabled
+Move Animation
+Trigger: Action Button
+
+List of Event Commands:
+@>Text: \xn[Rose]Als ich angefangen habe zu trainieren, hat 
+ :    : man mir gesagt, ein Team sei nur so stark, wie sein 
+ :    : schwächstes Glied.
+@>Text: \xn[Rose]Ich habe nie ganz daran geglaubt.
+@>Text: \xn[Rose]Ein einzelnes Pokémon, das wirklich trägt, 
+ :    : ist mehr Wert als sechs, die nicht zusammenarbeiten 
+ :    : können.
+@>Text: \xn[Rose]Wähle mit bedacht eines deiner Pokémon 
+ :    : aus, welches gegen mein Team antreten soll.
+@>Show Choices: Kämpfen, Nein
+(When Cancel: Choice 2)
+: When [Kämpfen]
+ @>Script: pbChooseAblePokemon(157,158)
+ @>Conditional Branch: Variable [0157: Gewähltes Pokémon] == -1
+  @>Text: \xn[Rose]Noch nicht sicher?
+  @>Text: \xn[Rose]Kein Problem.
+  @>
+ : Else
+  @>Script: setBattleRule("tempParty", 
+  :       : [$player.party[$game_variables
+  :       : [157]]])
+  :       : setBattleRule("outcome", 48)
+  :       : setBattleRule("midbattleScript", 
+  :       : :ROSE_ENDURANCE_TRACKER_4)
+  :       : TrainerBattle.start(:BATTLEGIRL, 
+  :       : "Rose",3)
+  @>Conditional Branch: Variable [0048: Kampf-Ergebnis] == 2
+   @>Exit Event Processing
+   @>
+  : Else
+   @>Conditional Branch: Variable [0155: Rose Erfolg] >= 1
+    @>Text: \xn[Rose]Du hast es tatsächlich geschafft mein 
+     :    : ganzes Team zu besiegen.
+    @>Text: \xn[Rose]Ich glaube, ich muss meine alte Regel doch 
+     :    : nochmal überdenken.
+    @>Script: pbReceiveItem(:XDEFENSE6)
+    @>Script: completeQuest(:Quest88)
+    @>Script: pbSetSelfSwitch(20,"B",true)
+    @>Text: \xn[Rose]Ab jetzt kannst du bei mir jederzeit deine 
+     :    : Vorräte an X-Verteidigung auffüllen.
+    @>Control Variables: [0152: Stufen] = 0
+    @>Set Move Route: This event
+     :              : $>Turn Right
+    @>Script: pbSet(156, 4)
+    @>
+   : Else
+    @>Text: \xn[Rose]Nah dran. Aber "nah dran" fällt trotzdem 
+     :    : um.
+    @>Text: \xn[Rose]Komm' zurück, wenn du wirklich bereit 
+     :    : bist.
+    @>Set Move Route: This event
+     :              : $>Turn Right
+    @>
+   : Branch End
+   @>
+  : Branch End
+  @>
+ : Branch End
+ @>
+: When [Nein]
+ @>Text: \xn[Rose]Sag Bescheid, wenn du soweit bist.
+ @>Set Move Route: This event
+  :              : $>Turn Right
+ @>
+: Branch End
+@>
+
+Page #5
+Conditions
+Variable 0156: Rose Quest88 is 4 or above
+
+Graphic: trainer_BATTLEGIRL
+
+Autonomous Movement
+Type: Fixed
+Speed: 3: Slow
+Freq: 3: Low
+Options Enabled
+Move Animation
+Trigger: Action Button
+
+List of Event Commands:
+@>Script: pbPokemonMart([
+:       :   :XDEFENSE,
+:       :   :XDEFENSE2,
+:       :   :XDEFENSE3,
+:       :   :XDEFENSE6
+:       : ])
+@>Set Move Route: This event
+ :              : $>Turn Right
+@>
+
+#------------------------------------------------------------------------------
+Event ID: 018
+Event Name: Björn Quest 87
+(X,Y): (025,012)
+
+Page #1
+Conditions
+None
+
+Graphic: BLACKBELT
+
+Autonomous Movement
+Type: Fixed
+Speed: 3: Slow
+Freq: 3: Low
+Options Enabled
+Move Animation
+Trigger: Action Button
+
+List of Event Commands:
+@>Label: Start
+@>Conditional Branch: Variable [0152: Stufen] == 0
+ @>Text: \xn[Björn]Weißt du, was ich an den meisten 
+  :    : Kämpfen hier nicht ausstehen kann?
+ @>Text: \xn[Björn]Dieses ewige Herumtänzeln.
+ @>Text: \xn[Björn]Status hier, Buff da, drei Runden 
+  :    : Vorbereitung, bevor überhaupt etwas passiert.
+ @>Text: \xn[Björn]Ich habe keine Geduld für sowas.
+ @>Text: \xn[Björn]Ein guter Treffer kann aussagekräftiger 
+  :    : sein, als zehn Runden taktisches Geplänkel.
+ @>Script: activateQuest(:Quest87)
+ @>Script: pbSetSelfSwitch(19,"A",true)
+ @>Control Variables: [0152: Stufen] = 1
+ @>Jump to Label: Start
+ @>
+: Else
+ @>Text: \xn[Björn]Lass uns kämpfen.
+ @>Text: \xn[Björn]Zieh' einem meiner Pokémon mindestens 
+  :    : 50% seiner gesamten LP mit nur einer Attacke ab.
+ @>Text: \xn[Björn]Mehr will ich gar nicht sehen.
+ @>Show Choices: Ja, Nein
+ (When Cancel: Choice 2)
+ : When [Ja]
+  @>Script: setBattleRule("outcome", 48)
+  :       : setBattleRule("midbattleScript", 
+  :       : :BJORN_POWER_TRACKER_1)
+  :       : TrainerBattle.start(:BLACKBELT, 
+  :       : "Björn")
+  @>Conditional Branch: Variable [0048: Kampf-Ergebnis] == 2
+   @>Exit Event Processing
+   @>
+  : Else
+   @>Conditional Branch: Variable [0153: Björn Erfolg] >= 1
+    @>Text: \xn[Björn]Die Hälfte weg, mit einem Schlag.
+    @>Text: \xn[Björn]Nicht übel!
+    @>Script: pbReceiveItem(:XATTACK)
+    @>Script: advanceQuestToStage(:Quest87, 2, nil, 
+    :       : false)
+    @>Set Move Route: This event
+     :              : $>Turn Left
+    @>Script: pbSet(154, 1)
+    @>
+   : Else
+    @>Text: \xn[Björn]Da war kein nennenswerter Angriff dabei.
+    @>Text: \xn[Björn]Komm wieder, wenn dein Pokémon wirklich 
+     :    : zuschlagen kann.
+    @>Set Move Route: This event
+     :              : $>Turn Left
+    @>
+   : Branch End
+   @>
+  : Branch End
+  @>
+ : When [Nein]
+  @>Text: \xn[Björn]Wie du willst, ich habe Zeit, mein Pokémon 
+   :    : auch.
+  @>Set Move Route: This event
+   :              : $>Turn Left
+  @>
+ : Branch End
+ @>
+: Branch End
+@>
+
+Page #2
+Conditions
+Variable 0154: Björn Quest87 is 1 or above
+
+Graphic: BLACKBELT
+
+Autonomous Movement
+Type: Fixed
+Speed: 3: Slow
+Freq: 3: Low
+Options Enabled
+Move Animation
+Trigger: Action Button
+
+List of Event Commands:
+@>Text: \xn[Björn]Die Hälfte der LP sind noch kein Beweis, 
+ :    : dass dein Pokémon weiß, wovon ich rede.
+@>Text: \xn[Björn]Das schafft auch ein Pokémon, das einfach 
+ :    : nur zufällig einen guten Tag hat.
+@>Text: \xn[Björn]Ich will mehr sehen und du kannst dir 
+ :    : dadurch mehr verdienen.
+@>Text: \xn[Björn]Zwei Drittel der LP mit nur einem Treffer.
+@>Show Choices: Kämpfen, Warte
+(When Cancel: Choice 2)
+: When [Kämpfen]
+ @>Script: setBattleRule("outcome", 48)
+ :       : setBattleRule("midbattleScript", 
+ :       : :BJORN_POWER_TRACKER_2)
+ :       : TrainerBattle.start(:BLACKBELT, 
+ :       : "Björn",1)
+ @>Conditional Branch: Variable [0048: Kampf-Ergebnis] == 2
+  @>Exit Event Processing
+  @>
+ : Else
+  @>Conditional Branch: Variable [0153: Björn Erfolg] >= 1
+   @>Text: \xn[Björn]Zwei Drittel weg, mit nur einem Schlag, das 
+    :    : sah schon aus, wie Absicht.
+   @>Text: \xn[Björn]Das hast du dir verdient.
+   @>Script: pbReceiveItem(:XATTACK2)
+   @>Script: advanceQuestToStage(:Quest87, 3, nil, 
+   :       : false)
+   @>Set Move Route: This event
+    :              : $>Turn Left
+   @>Script: pbSet(154, 2)
+   @>
+  : Else
+   @>Text: \xn[Björn]Diesmal hat es nicht gereicht.
+   @>Text: \xn[Björn]Versuch' es doch nochmal, wenn du bereit 
+    :    : bist.
+   @>Set Move Route: This event
+    :              : $>Turn Left
+   @>
+  : Branch End
+  @>
+ : Branch End
+ @>
+: When [Warte]
+ @>Text: \xn[Björn]Kein Problem, ich warte.
+ @>Set Move Route: This event
+  :              : $>Turn Left
+ @>
+: Branch End
+@>
+
+Page #3
+Conditions
+Variable 0154: Björn Quest87 is 2 or above
+
+Graphic: BLACKBELT
+
+Autonomous Movement
+Type: Fixed
+Speed: 3: Slow
+Freq: 3: Low
+Options Enabled
+Move Animation
+Trigger: Action Button
+
+List of Event Commands:
+@>Text: \xn[Björn]80% der LP, ein einziger Treffer.
+@>Text: \xn[Björn]Das ist die Schwelle, an der die meisten 
+ :    : Trainer anfangen zu zögern.
+@>Text: \xn[Björn]Du nicht, hoffe ich.
+@>Text: \xn[Björn]Möchtest du es versuchen?
+@>Show Choices: Kämpfen, Nein
+(When Cancel: Choice 2)
+: When [Kämpfen]
+ @>Script: setBattleRule("outcome", 48)
+ :       : setBattleRule("midbattleScript", 
+ :       : :BJORN_POWER_TRACKER_3)
+ :       : TrainerBattle.start(:BLACKBELT, 
+ :       : "Björn",2)
+ @>Conditional Branch: Variable [0048: Kampf-Ergebnis] == 2
+  @>Exit Event Processing
+  @>
+ : Else
+  @>Conditional Branch: Variable [0153: Björn Erfolg] >= 1
+   @>Text: \xn[Björn]Über vier Fünftel weg...
+   @>Text: \xn[Björn]Selten habe ich ein Pokémon gesehen, das 
+    :    : so viel kraft in einen einzigen Moment packen kann.
+   @>Script: pbReceiveItem(:XATTACK3)
+   @>Script: advanceQuestToStage(:Quest87, 4, nil, 
+   :       : false)
+   @>Set Move Route: This event
+    :              : $>Turn Left
+   @>Script: pbSet(154, 3)
+   @>
+  : Else
+   @>Text: \xn[Björn]Das war nicht genug.
+   @>Text: \xn[Björn]Komm' wieder, wenn du bereit bist.
+   @>Set Move Route: This event
+    :              : $>Turn Left
+   @>
+  : Branch End
+  @>
+ : Branch End
+ @>
+: When [Nein]
+ @>Text: \xn[Björn]Ich warte, so lange es dauert.
+ @>Set Move Route: This event
+  :              : $>Turn Left
+ @>
+: Branch End
+@>
+
+Page #4
+Conditions
+Variable 0154: Björn Quest87 is 3 or above
+
+Graphic: BLACKBELT
+
+Autonomous Movement
+Type: Fixed
+Speed: 3: Slow
+Freq: 3: Low
+Options Enabled
+Move Animation
+Trigger: Action Button
+
+List of Event Commands:
+@>Text: \xn[Björn]Jetzt kommt meine Ehrenrunde.
+@>Text: \xn[Björn]Ich setze nur mein stärkstes Pokémon ein, 
+ :    : vollständig geboostet.
+@>Text: \xn[Björn]Keine halben Sachen.
+@>Text: \xn[Björn]Und trotzdem soll ein einziger Treffer 
+ :    : reichen, um es komplett auszuschalten.
+@>Text: \xn[Björn]Wenn du das schaffst, hast du nichts mehr 
+ :    : zu beweisen.
+@>Show Choices: Kämpfen, Nein
+(When Cancel: Choice 2)
+: When [Kämpfen]
+ @>Script: setBattleRule("outcome", 48)
+ :       : setBattleRule("midbattleScript", 
+ :       : :BJORN_POWER_TRACKER_4)
+ :       : TrainerBattle.start(:BLACKBELT, 
+ :       : "Björn",3)
+ @>Conditional Branch: Variable [0048: Kampf-Ergebnis] == 2
+  @>Exit Event Processing
+  @>
+ : Else
+  @>Conditional Branch: Variable [0153: Björn Erfolg] >= 1
+   @>Text: \xn[Björn]...
+   @>Text: \xn[Björn]du hast mein stärkstes Pokémon, mit allem, 
+    :    : was ich draufpacken konnte...
+   @>Text: \xn[Björn]ich glaube nicht, dass ich schonmal so viel 
+    :    : Kraft in einem Moment erlebt habe.
+   @>Text: \xn[Björn]Ich bin gerade etwas sprachlos.
+   @>Text: \xn[Björn]Du weißt vermutlich bereits mehr als ich, 
+    :    : sodass ich dir nichts mehr beibringen kann.
+   @>Script: pbReceiveItem(:XATTACK6)
+   @>Script: completeQuest(:Quest87)
+   @>Script: pbSetSelfSwitch(19,"B",true)
+   @>Text: \xn[Björn]Ab jetzt kannst du bei mir jederzeit deine 
+    :    : Vorräte an X-Angriff auffüllen.
+   @>Control Variables: [0152: Stufen] = 0
+   @>Set Move Route: This event
+    :              : $>Turn Left
+   @>Script: pbSet(154, 4)
+   @>
+  : Else
+   @>Text: \xn[Björn]Fast, aber "fast" reicht mir nicht.
+   @>Text: \xn[Björn]Komm' wieder, wenn du wirklich bereit bist.
+   @>Set Move Route: This event
+    :              : $>Turn Left
+   @>
+  : Branch End
+  @>
+ : Branch End
+ @>
+: When [Nein]
+ @>Text: \xn[Björn]Sag Bescheid, wenn du es versuchen 
+  :    : möchtest.
+ @>Set Move Route: This event
+  :              : $>Turn Left
+ @>
+: Branch End
+@>
+
+Page #5
+Conditions
+Variable 0154: Björn Quest87 is 4 or above
+
+Graphic: BLACKBELT
+
+Autonomous Movement
+Type: Fixed
+Speed: 3: Slow
+Freq: 3: Low
+Options Enabled
+Move Animation
+Trigger: Action Button
+
+List of Event Commands:
+@>Script: pbPokemonMart([
+:       :   :XATTACK,
+:       :   :XATTACK2,
+:       :   :XATTACK3,
+:       :   :XATTACK6
+:       : ])
+@>Set Move Route: This event
+ :              : $>Turn Left
+@>
+
+#------------------------------------------------------------------------------
+Event ID: 019
+Event Name: EV019
+(X,Y): (025,011)
+
+Page #1
+Conditions
+None
+
+Graphic: Quest Symbol
+
+Autonomous Movement
+Type: Fixed
+Speed: 2: Slower
+Freq: 6: Highest
+Options Enabled
+Move Animation
+Stop Animation
+Direction Fix
+Through
+Always on Top
+Trigger: Action Button
+
+List of Event Commands:
+@>
+
+Page #2
+Conditions
+Self Switch A is ON
+
+Graphic: Quest Symbol Solved
+
+Autonomous Movement
+Type: Fixed
+Speed: 2: Slower
+Freq: 6: Highest
+Options Enabled
+Move Animation
+Stop Animation
+Direction Fix
+Through
+Always on Top
+Trigger: Action Button
+
+List of Event Commands:
+@>
+
+Page #3
+Conditions
+Self Switch B is ON
+
+Autonomous Movement
+Type: Fixed
+Speed: 3: Slow
+Freq: 3: Low
+Options Enabled
+Move Animation
+Trigger: Action Button
+
+List of Event Commands:
+@>
+
+#------------------------------------------------------------------------------
+Event ID: 020
+Event Name: EV020
+(X,Y): (011,012)
+
+Page #1
+Conditions
+None
+
+Graphic: Quest Symbol
+
+Autonomous Movement
+Type: Fixed
+Speed: 2: Slower
+Freq: 6: Highest
+Options Enabled
+Move Animation
+Stop Animation
+Direction Fix
+Through
+Always on Top
+Trigger: Action Button
+
+List of Event Commands:
+@>
+
+Page #2
+Conditions
+Self Switch A is ON
+
+Graphic: Quest Symbol Solved
+
+Autonomous Movement
+Type: Fixed
+Speed: 2: Slower
+Freq: 6: Highest
+Options Enabled
+Move Animation
+Stop Animation
+Direction Fix
+Through
+Always on Top
+Trigger: Action Button
+
+List of Event Commands:
+@>
+
+Page #3
+Conditions
+Self Switch B is ON
+
+Autonomous Movement
+Type: Fixed
+Speed: 3: Slow
+Freq: 3: Low
+Options Enabled
+Move Animation
+Trigger: Action Button
+
+List of Event Commands:
+@>
+
+#------------------------------------------------------------------------------
+Event ID: 021
+Event Name: Finn Quest 89
+(X,Y): (002,011)
+
+Page #1
+Conditions
+None
+
+Graphic: JOGGER
+
+Autonomous Movement
+Type: Fixed
+Speed: 3: Slow
+Freq: 3: Low
+Options Enabled
+Move Animation
+Stop Animation
+Trigger: Action Button
+
+List of Event Commands:
+@>Label: Start
+@>Conditional Branch: Variable [0152: Stufen] == 0
+ @>Text: \xn[Finn]Keine langen Vorreden, ja?
+ @>Text: \xn[Finn]Ich werde schon unruhig, wenn ich zu lange 
+  :    : stillstehe.
+ @>Text: \xn[Finn]Für mich zählt nur eins: Wer zuerst da ist, 
+  :    : gewinnt.
+ @>Text: \xn[Finn]Alles andere ist Zeitverschwendung.
+ @>Text: \xn[Finn]Zeig' mir, dass dein Team nicht nur stark ist, 
+  :    : sondern auch schnell genug, das auszunutzen.
+ @>Script: activateQuest(:Quest89)
+ @>Script: pbSetSelfSwitch(22,"A",true)
+ @>Control Variables: [0152: Stufen] = 1
+ @>Jump to Label: Start
+ @>
+: Else
+ @>Text: \xn[Finn]Ich habe nur ein Pokémon, aber das muss 
+  :    : in der ersten Runde fallen.
+ @>Show Choices: Ja, Nein
+ (When Cancel: Choice 2)
+ : When [Ja]
+  @>Script: setBattleRule("outcome", 48)
+  :       : setBattleRule("midbattleScript", 
+  :       : :FINN_INITIATIVE_TRACKER_1)
+  :       : TrainerBattle.start(:JOGGER, 
+  :       : "Finn")
+  @>Conditional Branch: Variable [0048: Kampf-Ergebnis] == 2
+   @>Exit Event Processing
+   @>
+  : Else
+   @>Conditional Branch: Variable [0159: Finn Erfolg] >= 1
+    @>Text: \xn[Finn]Das war sauber und ohne Umwege, 
+     :    : genau so mag ich das.
+    @>Script: pbReceiveItem(:XSPEED)
+    @>Script: advanceQuestToStage(:Quest89, 2, nil, 
+    :       : false)
+    @>Set Move Route: This event
+     :              : $>Turn Down
+    @>Script: pbSet(160, 1)
+    @>
+   : Else
+    @>Text: \xn[Finn]Du hast mich zum Zug kommen lassen.
+    @>Text: \xn[Finn]Nächstes Mal bist du hoffentlich schneller.
+    @>Set Move Route: This event
+     :              : $>Turn Down
+    @>
+   : Branch End
+   @>
+  : Branch End
+  @>
+ : When [Nein]
+  @>Text: \xn[Finn]Ich werde auch später genug Energie 
+   :    : haben.
+  @>Set Move Route: This event
+   :              : $>Turn Down
+  @>
+ : Branch End
+ @>
+: Branch End
+@>
+
+Page #2
+Conditions
+Variable 0160: Finn Quest89 is 1 or above
+
+Graphic: JOGGER
+
+Autonomous Movement
+Type: Fixed
+Speed: 3: Slow
+Freq: 3: Low
+Options Enabled
+Move Animation
+Trigger: Action Button
+
+List of Event Commands:
+@>Text: \xn[Finn]Ein Pokémon zu besiegen war nur der 
+ :    : Anfang.
+@>Text: \xn[Finn]Diesmal drehen wir den Spieß um, 
+ :    : Bizarroraum.
+@>Text: \xn[Finn]Wer langsam ist, handelt zuerst.
+@>Text: \xn[Finn]Ich weiß, das ist eigentlich das Gegenteil 
+ :    : von allem, wofür ich stehe.
+@>Text: \xn[Finn]Aber auch hier musst du dich irgendwann 
+ :    : beweisen.
+@>Show Choices: Kämpfen, Jetzt nicht
+(When Cancel: Choice 2)
+: When [Kämpfen]
+ @>Script: setBattleRule("outcome", 48)
+ :       : setBattleRule("midbattleScript", 
+ :       : :FINN_INITIATIVE_TRACKER_2)
+ :       : TrainerBattle.start(:JOGGER, 
+ :       : "Finn",1)
+ @>Conditional Branch: Variable [0048: Kampf-Ergebnis] == 2
+  @>Exit Event Processing
+  @>
+ : Else
+  @>Conditional Branch: Variable [0159: Finn Erfolg] >= 1
+   @>Text: \xn[Finn]Selbst mit umgedrehten Regeln bist du zuerst 
+    :    : da, nicht schlecht.
+   @>Script: pbReceiveItem(:XSPEED2)
+   @>Script: advanceQuestToStage(:Quest89, 3, nil, 
+   :       : false)
+   @>Set Move Route: This event
+    :              : $>Turn Down
+   @>Script: pbSet(160, 2)
+   @>
+  : Else
+   @>Text: \xn[Finn]Hat der Bizarroraum dich erwischt?
+   @>Text: \xn[Finn]Kann passieren.
+   @>Set Move Route: This event
+    :              : $>Turn Down
+   @>
+  : Branch End
+  @>
+ : Branch End
+ @>
+: When [Jetzt nicht]
+ @>Text: \xn[Finn]Ich bleibe so lange in Bewegung.
+ @>Set Move Route: This event
+  :              : $>Turn Down
+ @>
+: Branch End
+@>
+
+Page #3
+Conditions
+Variable 0160: Finn Quest89 is 2 or above
+
+Graphic: JOGGER
+
+Autonomous Movement
+Type: Fixed
+Speed: 3: Slow
+Freq: 3: Low
+Options Enabled
+Move Animation
+Trigger: Action Button
+
+List of Event Commands:
+@>Text: \xn[Finn]Zurück zur Normalität.
+@>Text: \xn[Finn]Diesmal habe ich aber zwei Pokémon im 
+ :    : Team.
+@>Text: \xn[Finn]Mal sehen, ob du auch gegen ein 
+ :    : schnelleres Team noch zuerst zuschlägst.
+@>Show Choices: Kämpfen, Nein
+(When Cancel: Choice 2)
+: When [Kämpfen]
+ @>Script: setBattleRule("outcome", 48)
+ :       : setBattleRule("midbattleScript", 
+ :       : :FINN_INITIATIVE_TRACKER_3)
+ :       : TrainerBattle.start(:JOGGER, 
+ :       : "Finn",2)
+ @>Conditional Branch: Variable [0048: Kampf-Ergebnis] == 2
+  @>Exit Event Processing
+  @>
+ : Else
+  @>Conditional Branch: Variable [0159: Finn Erfolg] >= 1
+   @>Text: \xn[Finn]Zwei blitzsaubere K.O.s.
+   @>Text: \xn[Finn]Vielleicht hast du verstanden, was ich 
+    :    : versuche dir zu vermitteln.
+   @>Script: pbReceiveItem(:XSPEED3)
+   @>Script: advanceQuestToStage(:Quest89, 4, nil, 
+   :       : false)
+   @>Set Move Route: This event
+    :              : $>Turn Down
+   @>Script: pbSet(160, 3)
+   @>
+  : Else
+   @>Text: \xn[Finn]Eines meiner Pokémon hat zuschlagen 
+    :    : können.
+   @>Text: \xn[Finn]Kein Grund aufzugeben.
+   @>Set Move Route: This event
+    :              : $>Turn Down
+   @>
+  : Branch End
+  @>
+ : Branch End
+ @>
+: When [Nein]
+ @>Text: \xn[Finn]Na gut, ich bin trotzdem schon aufgewärmt.
+ @>Set Move Route: This event
+  :              : $>Turn Down
+ @>
+: Branch End
+@>
+
+Page #4
+Conditions
+Variable 0160: Finn Quest89 is 3 or above
+
+Graphic: JOGGER
+
+Autonomous Movement
+Type: Fixed
+Speed: 3: Slow
+Freq: 3: Low
+Options Enabled
+Move Animation
+Trigger: Action Button
+
+List of Event Commands:
+@>Text: \xn[Finn]Das hier ist die Königsdisziplin.
+@>Text: \xn[Finn]Zwei Pokémon, beide im ersten Anlauf 
+ :    : besiegen und diesmal wieder im Bizarroraum.
+@>Text: \xn[Finn]Jetzt wird es interessant.
+@>Text: \xn[Finn]Solltest du das schaffen, war ich nie 
+ :    : wirklich im Kampf.
+@>Show Choices: Kämpfen, Nein
+(When Cancel: Choice 2)
+: When [Kämpfen]
+ @>Script: setBattleRule("outcome", 48)
+ :       : setBattleRule("midbattleScript", 
+ :       : :FINN_INITIATIVE_TRACKER_4)
+ :       : TrainerBattle.start(:JOGGER, 
+ :       : "Finn",3)
+ @>Conditional Branch: Variable [0048: Kampf-Ergebnis] == 2
+  @>Exit Event Processing
+  @>
+ : Else
+  @>Conditional Branch: Variable [0159: Finn Erfolg] >= 1
+   @>Text: \xn[Finn]Beide K.O.s im ersten Anlauf, auch mit 
+    :    : Bizarroraum.
+   @>Text: \xn[Finn]Ich ziehe meinen nicht vorhandenen Hut.
+   @>Script: pbReceiveItem(:XSPEED6)
+   @>Script: completeQuest(:Quest89)
+   @>Script: pbSetSelfSwitch(22,"B",true)
+   @>Text: \xn[Finn]Ab jetzt kannst du bei mir jederzeit deine 
+    :    : Vorräte an X-Initiative auffüllen.
+   @>Control Variables: [0152: Stufen] = 0
+   @>Set Move Route: This event
+    :              : $>Turn Down
+   @>Script: pbSet(160, 4)
+   @>
+  : Else
+   @>Text: \xn[Finn]Nächstes Mal erwischt du sie beide.
+   @>Set Move Route: This event
+    :              : $>Turn Down
+   @>
+  : Branch End
+  @>
+ : Branch End
+ @>
+: When [Nein]
+ @>Text: \xn[Finn]Sag Bescheid, wenn du bereit bist.
+ @>Set Move Route: This event
+  :              : $>Turn Down
+ @>
+: Branch End
+@>
+
+Page #5
+Conditions
+Variable 0160: Finn Quest89 is 4 or above
+
+Graphic: JOGGER
+
+Autonomous Movement
+Type: Fixed
+Speed: 3: Slow
+Freq: 3: Low
+Options Enabled
+Move Animation
+Stop Animation
+Trigger: Action Button
+
+List of Event Commands:
+@>Script: pbPokemonMart([
+:       :   :XSPEED,
+:       :   :XSPEED2,
+:       :   :XSPEED3,
+:       :   :XSPEED6
+:       : ])
+@>Set Move Route: This event
+ :              : $>Turn Down
+@>
+
+#------------------------------------------------------------------------------
+Event ID: 022
+Event Name: EV022
+(X,Y): (002,010)
+
+Page #1
+Conditions
+None
+
+Graphic: Quest Symbol
+
+Autonomous Movement
+Type: Fixed
+Speed: 2: Slower
+Freq: 6: Highest
+Options Enabled
+Move Animation
+Stop Animation
+Direction Fix
+Through
+Always on Top
+Trigger: Action Button
+
+List of Event Commands:
+@>
+
+Page #2
+Conditions
+Self Switch A is ON
+
+Graphic: Quest Symbol Solved
+
+Autonomous Movement
+Type: Fixed
+Speed: 2: Slower
+Freq: 6: Highest
+Options Enabled
+Move Animation
+Stop Animation
+Direction Fix
+Through
+Always on Top
+Trigger: Action Button
+
+List of Event Commands:
+@>
+
+Page #3
+Conditions
+Self Switch B is ON
+
+Autonomous Movement
+Type: Fixed
+Speed: 3: Slow
+Freq: 3: Low
+Options Enabled
+Move Animation
+Trigger: Action Button
+
+List of Event Commands:
+@>
+
+#------------------------------------------------------------------------------
+Event ID: 023
+Event Name: Mira Quest 90
+(X,Y): (006,035)
+
+Page #1
+Conditions
+None
+
+Graphic: PSYCHIC_F
+
+Autonomous Movement
+Type: Fixed
+Speed: 3: Slow
+Freq: 3: Low
+Options Enabled
+Move Animation
+Stop Animation
+Trigger: Action Button
+
+List of Event Commands:
+@>Label: Start
+@>Conditional Branch: Variable [0152: Stufen] == 0
+ @>Text: \xn[Mira]Die meisten Kämpfe sind beendet, bevor sie 
+  :    : überhaupt begonnen haben.
+ @>Text: \xn[Mira]Die meisten Trainer verlassen sich blind auf 
+  :    : Typenvorteile.
+ @>Text: \xn[Mira]Sie glauben, das sei die ganze Wahrheit.
+ @>Text: \xn[Mira]Rohe Kraft kann auch durchschlagen, wo es 
+  :    : eigentlich keine Chance haben sollte.
+ @>Script: activateQuest(:Quest90)
+ @>Script: pbSetSelfSwitch(24,"A",true)
+ @>Control Variables: [0152: Stufen] = 1
+ @>Jump to Label: Start
+ @>
+: Else
+ @>Text: \xn[Mira]Ich habe bloß ein Pokémon und eine 
+  :    : Bedingung.
+ @>Text: \xn[Mira]Besiege es mit einer Attacke, gegen die mein 
+  :    : Pokémon resistent ist.
+ @>Show Choices: Ja, Nein
+ (When Cancel: Choice 2)
+ : When [Ja]
+  @>Script: setBattleRule("outcome", 48)
+  :       : setBattleRule("midbattleScript", 
+  :       : :MIRA_RESISTANCE_TRACKER_1)
+  :       : TrainerBattle.start(:PSYCHIC_F, 
+  :       : "Mira")
+  @>Conditional Branch: Variable [0048: Kampf-Ergebnis] == 2
+   @>Exit Event Processing
+   @>
+  : Else
+   @>Conditional Branch: Variable [0161: Mira Erfolg] >= 1
+    @>Text: \xn[Mira]Du hast es also vollbracht.
+    @>Text: \xn[Mira]Aber das war noch garnichts.
+    @>Text: \xn[Mira]Die kommenden Übungen werden schwerer.
+    @>Script: pbReceiveItem(:XSPATK)
+    @>Script: advanceQuestToStage(:Quest90, 2, nil, 
+    :       : false)
+    @>Set Move Route: This event
+     :              : $>Turn Down
+    @>Script: pbSet(162, 1)
+    @>
+   : Else
+    @>Text: \xn[Mira]Genau das habe ich erwartet, die Resistenz 
+     :    : hat gehalten.
+    @>Text: \xn[Mira]Komme wieder, wenn du glaubst, dass deine 
+     :    : Kraft mehr durchschlägt.
+    @>Set Move Route: This event
+     :              : $>Turn Down
+    @>
+   : Branch End
+   @>
+  : Branch End
+  @>
+ : When [Nein]
+  @>Text: \xn[Mira]Wie du möchtest.
+  @>Set Move Route: This event
+   :              : $>Turn Down
+  @>
+ : Branch End
+ @>
+: Branch End
+@>
+
+Page #2
+Conditions
+Variable 0162: Mira Quest90 is 1 or above
+
+Graphic: PSYCHIC_F
+
+Autonomous Movement
+Type: Fixed
+Speed: 3: Slow
+Freq: 3: Low
+Options Enabled
+Move Animation
+Trigger: Action Button
+
+List of Event Commands:
+@>Text: \xn[Mira]Diesmal habe ich zwei Pokémon und beide 
+ :    : sollen mit einer Attacke besiegt werden,
+@>Text: \xn[Mira]gegen die meine Pokémon resistent sind.
+@>Text: \xn[Mira]Glaubst du, du bekommst das hin?
+@>Show Choices: Klar, Jetzt nicht
+(When Cancel: Choice 2)
+: When [Klar]
+ @>Script: setBattleRule("outcome", 48)
+ :       : setBattleRule("midbattleScript", 
+ :       : :MIRA_RESISTANCE_TRACKER_2)
+ :       : TrainerBattle.start(:PSYCHIC_F, 
+ :       : "Mira",1)
+ @>Conditional Branch: Variable [0048: Kampf-Ergebnis] == 2
+  @>Exit Event Processing
+  @>
+ : Else
+  @>Conditional Branch: Variable [0161: Mira Erfolg] >= 1
+   @>Text: \xn[Mira]Das war in der Tat beeindruckend.
+   @>Text: \xn[Mira]Hier, das könnte sicherlich nützlich sein.
+   @>Script: pbReceiveItem(:XSPATK2)
+   @>Script: advanceQuestToStage(:Quest90, 3, nil, 
+   :       : false)
+   @>Set Move Route: This event
+    :              : $>Turn Down
+   @>Script: pbSet(162, 2)
+   @>
+  : Else
+   @>Text: \xn[Mira]Die Resistenz ist entscheidend, achte beim 
+    :    : nächsten Mal darauf.
+   @>Set Move Route: This event
+    :              : $>Turn Down
+   @>
+  : Branch End
+  @>
+ : Branch End
+ @>
+: When [Jetzt nicht]
+ @>Text: \xn[Mira]Ich warte und beobachte.
+ @>Set Move Route: This event
+  :              : $>Turn Down
+ @>
+: Branch End
+@>
+
+Page #3
+Conditions
+Variable 0162: Mira Quest90 is 2 or above
+
+Graphic: PSYCHIC_F
+
+Autonomous Movement
+Type: Fixed
+Speed: 3: Slow
+Freq: 3: Low
+Options Enabled
+Move Animation
+Trigger: Action Button
+
+List of Event Commands:
+@>Text: \xn[Mira]Bei dieser Übung habe ich wieder nur ein 
+ :    : Pokémon, gegen das du antreten musst.
+@>Text: \xn[Mira]Allerdings darfst du dir auch nur ein 
+ :    : Pokémon aussuchen.
+@>Text: \xn[Mira]Dieses muss eine echte Typenschwäche 
+ :    : gegemüber meinem Pokémon haben.
+@>Text: \xn[Mira]Der finale Schlag muss erneut mit einer nicht 
+ :    : sehr effektiven Attacke ausgeführt werden.
+@>Text: \xn[Mira]Möchtest du es probieren?
+@>Show Choices: Ja, Nein
+(When Cancel: Choice 2)
+: When [Ja]
+ @>Script: setBattleRule("outcome", 48)
+ :       : setBattleRule("midbattleScript", 
+ :       : :MIRA_RESISTANCE_TRACKER_3)
+ :       : TrainerBattle.start(:PSYCHIC_F, 
+ :       : "Mira",2)
+ @>Conditional Branch: Variable [0048: Kampf-Ergebnis] == 2
+  @>Exit Event Processing
+  @>
+ : Else
+  @>Conditional Branch: Variable [0161: Mira Erfolg] >= 1
+   @>Text: \xn[Mira]Im Nachteil und trotzdem gewonnen.
+   @>Text: \xn[Mira]Das hatte ich nicht erwartet.
+   @>Script: pbReceiveItem(:XSPATK3)
+   @>Script: advanceQuestToStage(:Quest90, 4, nil, 
+   :       : false)
+   @>Script: pbSet(162, 3)
+   @>Set Move Route: This event
+    :              : $>Turn Down
+   @>
+  : Else
+   @>Text: \xn[Mira]Die Schwäche konnte sich diesmal nicht 
+    :    : durchsetzen.
+   @>Text: \xn[Mira]Komm' zurück, wenn du stärker bist.
+   @>Set Move Route: This event
+    :              : $>Turn Down
+   @>
+  : Branch End
+  @>
+ : Branch End
+ @>
+: When [Nein]
+ @>Text: \xn[Mira]Ganz, wie du möchtest.
+ @>Set Move Route: This event
+  :              : $>Turn Down
+ @>
+: Branch End
+@>
+
+Page #4
+Conditions
+Variable 0162: Mira Quest90 is 3 or above
+
+Graphic: PSYCHIC_F
+
+Autonomous Movement
+Type: Fixed
+Speed: 3: Slow
+Freq: 3: Low
+Options Enabled
+Move Animation
+Trigger: Action Button
+
+List of Event Commands:
+@>Text: \xn[Mira]Diesmal trittst du gegen zwei Pokémon an.
+@>Text: \xn[Mira]Gleiche Bedingungen, wie vorher auch.
+@>Text: \xn[Mira]Deine Pokémon brauchen eine echte 
+ :    : Typenschwäche gegen meine Pokémon.
+@>Show Choices: Kämpfen, Nein
+(When Cancel: Choice 2)
+: When [Kämpfen]
+ @>Script: setBattleRule("outcome", 48)
+ :       : setBattleRule("midbattleScript", 
+ :       : :MIRA_RESISTANCE_TRACKER_4)
+ :       : TrainerBattle.start(:PSYCHIC_F, 
+ :       : "Mira",3)
+ @>Conditional Branch: Variable [0048: Kampf-Ergebnis] == 2
+  @>Exit Event Processing
+  @>
+ : Else
+  @>Conditional Branch: Variable [0161: Mira Erfolg] >= 1
+   @>Text: \xn[Mira]Beide Pokémon trotz Typennachteil besiegt.
+   @>Text: \xn[Mira]Das war sehr beeindruckend.
+   @>Script: pbReceiveItem(:XSPATK6)
+   @>Script: completeQuest(:Quest90)
+   @>Script: pbSetSelfSwitch(24,"B",true)
+   @>Text: \xn[Mira]Ab jetzt kannst du bei mir jederzeit deine 
+    :    : Vorräte an X-Sp.-Angr. auffüllen.
+   @>Control Variables: [0152: Stufen] = 0
+   @>Set Move Route: This event
+    :              : $>Turn Down
+   @>Script: pbSet(162, 4)
+   @>
+  : Else
+   @>Text: \xn[Mira]Komme wieder, wenn du wirklich begriffen 
+    :    : hast.
+   @>Set Move Route: This event
+    :              : $>Turn Down
+   @>
+  : Branch End
+  @>
+ : Branch End
+ @>
+: When [Nein]
+ @>Text: \xn[Mira]Sag einfach Bescheid, wenn du soweit bist.
+ @>Set Move Route: This event
+  :              : $>Turn Down
+ @>
+: Branch End
+@>
+
+Page #5
+Conditions
+Variable 0162: Mira Quest90 is 4 or above
+
+Graphic: PSYCHIC_F
+
+Autonomous Movement
+Type: Fixed
+Speed: 3: Slow
+Freq: 3: Low
+Options Enabled
+Move Animation
+Stop Animation
+Trigger: Action Button
+
+List of Event Commands:
+@>Script: pbPokemonMart([
+:       :   :XSPATK,
+:       :   :XSPATK2,
+:       :   :XSPATK3,
+:       :   :XSPATK6
+:       : ])
+@>Set Move Route: This event
+ :              : $>Turn Down
+@>
+
+#------------------------------------------------------------------------------
+Event ID: 024
+Event Name: EV024
+(X,Y): (006,034)
+
+Page #1
+Conditions
+None
+
+Graphic: Quest Symbol
+
+Autonomous Movement
+Type: Fixed
+Speed: 2: Slower
+Freq: 6: Highest
+Options Enabled
+Move Animation
+Stop Animation
+Direction Fix
+Through
+Always on Top
+Trigger: Action Button
+
+List of Event Commands:
+@>
+
+Page #2
+Conditions
+Self Switch A is ON
+
+Graphic: Quest Symbol Solved
+
+Autonomous Movement
+Type: Fixed
+Speed: 2: Slower
+Freq: 6: Highest
+Options Enabled
+Move Animation
+Stop Animation
+Direction Fix
+Through
+Always on Top
+Trigger: Action Button
+
+List of Event Commands:
+@>
+
+Page #3
+Conditions
+Self Switch B is ON
+
+Autonomous Movement
+Type: Fixed
+Speed: 3: Slow
+Freq: 3: Low
+Options Enabled
+Move Animation
+Trigger: Action Button
+
+List of Event Commands:
+@>
+
+#------------------------------------------------------------------------------
+Event ID: 025
+Event Name: Falk Quest 91
+(X,Y): (018,035)
+
+Page #1
+Conditions
+None
+
+Graphic: GENTLEMAN
+
+Autonomous Movement
+Type: Fixed
+Speed: 3: Slow
+Freq: 3: Low
+Options Enabled
+Move Animation
+Trigger: Action Button
+
+List of Event Commands:
+@>Label: Start
+@>Conditional Branch: Variable [0152: Stufen] == 0
+ @>Text: \xn[Falk]Wissen Sie, was die meisten Trainer 
+  :    : unterschätzen?
+ @>Text: \xn[Falk]Nicht die Kraft des eigenen Angriffs.
+ @>Text: \xn[Falk]Sondern die Gelassenheit, Angriffe 
+  :    : auszuhalten.
+ @>Text: \xn[Falk]Wer bei jedem harten Treffer ins Wanken 
+  :    : gerät, hat den Kampf schon verloren.
+ @>Text: \xn[Falk]Ich würde gerne sehen, wie unerschütterlich 
+  :    : Ihr Team ist.
+ @>Script: activateQuest(:Quest91)
+ @>Script: pbSetSelfSwitch(26,"A",true)
+ @>Control Variables: [0152: Stufen] = 1
+ @>Jump to Label: Start
+ @>
+: Else
+ @>Text: \xn[Falk]Wir kämpfen fünf Runden lang.
+ @>Text: \xn[Falk]Keines Ihrer Pokémon darf dabei besiegt 
+  :    : werden.
+ @>Show Choices: Ja, Nein
+ (When Cancel: Choice 2)
+ : When [Ja]
+  @>Script: setBattleRule("outcome", 48)
+  :       : setBattleRule("midbattleScript", 
+  :       : :FALK_RESILIENCE_TRACKER_1)
+  :       : TrainerBattle.start(:GENTLEMAN, 
+  :       : "Falk")
+  @>Conditional Branch: Variable [0048: Kampf-Ergebnis] == 2
+   @>Exit Event Processing
+   @>
+  : Else
+   @>Conditional Branch: Variable [0163: Falk Erfolg] >= 1
+    @>Text: \xn[Falk]Das war bloß die erste Aufgabe.
+    @>Text: \xn[Falk]Aber ich muss Ihnen lassen, das haben Sie 
+     :    : hervorragend gemacht.
+    @>Script: pbReceiveItem(:XSPDEF)
+    @>Script: advanceQuestToStage(:Quest91, 2, nil, 
+    :       : false)
+    @>Set Move Route: This event
+     :              : $>Turn Down
+    @>Script: pbSet(164, 1)
+    @>
+   : Else
+    @>Text: \xn[Falk]Eines Ihrer Pokémon wurde besiegt.
+    @>Text: \xn[Falk]Sie dürfen aber gerne wieder kommen, 
+     :    : wenn Ihr Team bereit ist.
+    @>Set Move Route: This event
+     :              : $>Turn Down
+    @>
+   : Branch End
+   @>
+  : Branch End
+  @>
+ : When [Nein]
+  @>Text: \xn[Falk]Wie Sie wünschen.
+  @>Set Move Route: This event
+   :              : $>Turn Down
+  @>
+ : Branch End
+ @>
+: Branch End
+@>
+
+Page #2
+Conditions
+Variable 0164: Falk Quest91 is 1 or above
+
+Graphic: GENTLEMAN
+
+Autonomous Movement
+Type: Fixed
+Speed: 3: Slow
+Freq: 3: Low
+Options Enabled
+Move Animation
+Trigger: Action Button
+
+List of Event Commands:
+@>Text: \xn[Falk]Nachdem wir uns aufgewärmt haben, 
+ :    : verdoppeln wir den Einsatz.
+@>Text: \xn[Falk]Schaffen Sie es, zehn Runden gegen mich 
+ :    : zu überstehen, ohne ein Pokémon zu verlieren?
+@>Show Choices: Klar, Später
+(When Cancel: Choice 2)
+: When [Klar]
+ @>Script: setBattleRule("outcome", 48)
+ :       : setBattleRule("midbattleScript", 
+ :       : :FALK_RESILIENCE_TRACKER_2)
+ :       : TrainerBattle.start(:GENTLEMAN, 
+ :       : "Falk",1)
+ @>Conditional Branch: Variable [0048: Kampf-Ergebnis] == 2
+  @>Exit Event Processing
+  @>
+ : Else
+  @>Conditional Branch: Variable [0163: Falk Erfolg] >= 1
+   @>Text: \xn[Falk]Alle zehn Runden ohne Verluste 
+    :    : überstanden.
+   @>Text: \xn[Falk]Das ist Charakter.
+   @>Script: pbReceiveItem(:XSPDEF2)
+   @>Script: advanceQuestToStage(:Quest91, 3, nil, 
+   :       : false)
+   @>Set Move Route: This event
+    :              : $>Turn Down
+   @>Script: pbSet(164, 2)
+   @>
+  : Else
+   @>Text: \xn[Falk]Irgendwann hat es Sie doch erwischt.
+   @>Text: \xn[Falk]Kommen Sie gerne wieder, wenn Sie 
+    :    : glauben, dass Sie bereit sind.
+   @>Set Move Route: This event
+    :              : $>Turn Down
+   @>
+  : Branch End
+  @>
+ : Branch End
+ @>
+: When [Später]
+ @>Text: \xn[Falk]So sei es.
+ @>Set Move Route: This event
+  :              : $>Turn Down
+ @>
+: Branch End
+@>
+
+Page #3
+Conditions
+Variable 0164: Falk Quest91 is 2 or above
+
+Graphic: GENTLEMAN
+
+Autonomous Movement
+Type: Fixed
+Speed: 3: Slow
+Freq: 3: Low
+Options Enabled
+Move Animation
+Trigger: Action Button
+
+List of Event Commands:
+@>Text: \xn[Falk]Bis hier hin haben Sie außerordentliches 
+ :    : Durchhaltevermögen bewiesen.
+@>Text: \xn[Falk]Können Sie auch herausragende Leistungen 
+ :    : vollbringen?
+@>Text: \xn[Falk]Gewinnen Sie diesen Kampf, doch keines 
+ :    : Ihrer Pokémon darf unter 50% der LP fallen.
+@>Show Choices: Kämpfen, Nein
+(When Cancel: Choice 2)
+: When [Kämpfen]
+ @>Script: setBattleRule("outcome", 48)
+ :       : setBattleRule("midbattleScript", 
+ :       : :FALK_RESILIENCE_TRACKER_3)
+ :       : TrainerBattle.start(:GENTLEMAN, 
+ :       : "Falk",2)
+ @>Conditional Branch: Variable [0048: Kampf-Ergebnis] == 2
+  @>Exit Event Processing
+  @>
+ : Else
+  @>Conditional Branch: Variable [0163: Falk Erfolg] >= 1
+   @>Text: \xn[Falk]Gewonnen, ohne dass eines Ihrer Pokémon 
+    :    : überhaupt in Bedrängnis geraten ist.
+   @>Text: \xn[Falk]Sie haben wahre Kontrolle gezeigt.
+   @>Script: pbReceiveItem(:XSPDEF3)
+   @>Script: advanceQuestToStage(:Quest91, 4, nil, 
+   :       : false)
+   @>Set Move Route: This event
+    :              : $>Turn Down
+   @>Script: pbSet(164, 3)
+   @>
+  : Else
+   @>Text: \xn[Falk]Das haben Sie schonmal besser 
+    :    : hinbekommen.
+   @>Text: \xn[Falk]Kann vorkommen, aber geben Sie nicht auf.
+   @>Text: \xn[Falk]Ich warte hier auf Sie.
+   @>Set Move Route: This event
+    :              : $>Turn Down
+   @>
+  : Branch End
+  @>
+ : Branch End
+ @>
+: When [Nein]
+ @>Text: \xn[Falk]Wie Sie möchten, ich bin nicht in Eile.
+ @>Set Move Route: This event
+  :              : $>Turn Down
+ @>
+: Branch End
+@>
+
+Page #4
+Conditions
+Variable 0164: Falk Quest91 is 3 or above
+
+Graphic: GENTLEMAN
+
+Autonomous Movement
+Type: Fixed
+Speed: 3: Slow
+Freq: 3: Low
+Options Enabled
+Move Animation
+Trigger: Action Button
+
+List of Event Commands:
+@>Text: \xn[Falk]Glauben Sie, dass eines Ihrer Pokémon stark 
+ :    : genug ist, um es mit meinem gesamtem Team 
+ :    : aufzunehmen?
+@>Text: \xn[Falk]Ich werfe Mal ein kleines "nein" in den Raum.
+@>Text: \xn[Falk]Aber Sie dürfen mich gerne vom Gegenteil 
+ :    : überzeugen.
+@>Text: \xn[Falk]Wählen Sie weise.
+@>Show Choices: Kämpfen, Nein
+(When Cancel: Choice 2)
+: When [Kämpfen]
+ @>Script: pbChooseAblePokemon(157,158)
+ @>Conditional Branch: Variable [0157: Gewähltes Pokémon] == -1
+  @>Text: \xn[Falk]Noch nicht sicher?
+  @>Text: \xn[Falk]Kein Problem, ich warte hier.
+  @>
+ : Else
+  @>Script: setBattleRule("tempParty", 
+  :       : [$player.party[$game_variables
+  :       : [157]]])
+  :       : setBattleRule("outcome", 48)
+  :       : setBattleRule("midbattleScript", 
+  :       : :FALK_RESILIENCE_TRACKER_4)
+  :       : TrainerBattle.start(:GENTLEMAN, 
+  :       : "Falk",3)
+  @>Conditional Branch: Variable [0048: Kampf-Ergebnis] == 2
+   @>Exit Event Processing
+   @>
+  : Else
+   @>Conditional Branch: Variable [0163: Falk Erfolg] >= 1
+    @>Text: \xn[Falk]Ich bin wahrlich entzückt.
+    @>Text: \xn[Falk]Das war eine absolute Meisterleistung, 
+     :    : absolut filmreif.
+    @>Script: pbReceiveItem(:XSPDEF6)
+    @>Script: completeQuest(:Quest91)
+    @>Script: pbSetSelfSwitch(26,"B",true)
+    @>Text: \xn[Falk]Ab jetzt biete ich jederzeit alle X-
+     :    : Sp.Vert.-Items an.
+    @>Text: \xn[Falk]Kommen Sie gerne vorbei.
+    @>Control Variables: [0152: Stufen] = 0
+    @>Set Move Route: This event
+     :              : $>Turn Down
+    @>Script: pbSet(164, 4)
+    @>
+   : Else
+    @>Text: \xn[Falk]Wie gesagt, dran geglaubt hat keiner.
+    @>Text: \xn[Falk]Aber Sie dürfen es gerne erneut versuchen.
+    @>Set Move Route: This event
+     :              : $>Turn Down
+    @>
+   : Branch End
+   @>
+  : Branch End
+  @>
+ : Branch End
+ @>
+: When [Nein]
+ @>Text: \xn[Falk]Sagen Sie Bescheid, sobald Sie sich bereit 
+  :    : fühlen.
+ @>Set Move Route: This event
+  :              : $>Turn Down
+ @>
+: Branch End
+@>
+
+Page #5
+Conditions
+Variable 0164: Falk Quest91 is 4 or above
+
+Graphic: GENTLEMAN
+
+Autonomous Movement
+Type: Fixed
+Speed: 3: Slow
+Freq: 3: Low
+Options Enabled
+Move Animation
+Trigger: Action Button
+
+List of Event Commands:
+@>Script: pbPokemonMart([
+:       :   :XSPDEF,
+:       :   :XSPDEF2,
+:       :   :XSPDEF3,
+:       :   :XSPDEF6
+:       : ])
+@>Set Move Route: This event
+ :              : $>Turn Down
+@>
+
+#------------------------------------------------------------------------------
+Event ID: 026
+Event Name: EV026
+(X,Y): (018,034)
+
+Page #1
+Conditions
+None
+
+Graphic: Quest Symbol
+
+Autonomous Movement
+Type: Fixed
+Speed: 2: Slower
+Freq: 6: Highest
+Options Enabled
+Move Animation
+Stop Animation
+Direction Fix
+Through
+Always on Top
+Trigger: Action Button
+
+List of Event Commands:
+@>
+
+Page #2
+Conditions
+Self Switch A is ON
+
+Graphic: Quest Symbol Solved
+
+Autonomous Movement
+Type: Fixed
+Speed: 2: Slower
+Freq: 6: Highest
+Options Enabled
+Move Animation
+Stop Animation
+Direction Fix
+Through
+Always on Top
+Trigger: Action Button
+
+List of Event Commands:
+@>
+
+Page #3
+Conditions
+Self Switch B is ON
+
+Autonomous Movement
+Type: Fixed
+Speed: 3: Slow
+Freq: 3: Low
+Options Enabled
+Move Animation
+Trigger: Action Button
+
+List of Event Commands:
+@>
+
+#------------------------------------------------------------------------------
+Event ID: 027
+Event Name: Nadja Quest 92
+(X,Y): (039,019)
+
+Page #1
+Conditions
+None
+
+Graphic: RANGER_F
+
+Autonomous Movement
+Type: Fixed
+Speed: 3: Slow
+Freq: 3: Low
+Options Enabled
+Move Animation
+Trigger: Action Button
+
+List of Event Commands:
+@>Label: Start
+@>Conditional Branch: Variable [0152: Stufen] == 0
+ @>Text: \xn[Nadja]Kraft ist ohne Zielsicherheit völlig wertlos.
+ @>Text: \xn[Nadja]Ich habe Trainer gesehen, deren Pokémon 
+  :    : gewaltige Attacken beherrschen.
+ @>Text: \xn[Nadja]Am Ende haben sie trotzdem verloren, weil 
+  :    : sie einfach nicht getroffen haben.
+ @>Script: activateQuest(:Quest92)
+ @>Script: pbSetSelfSwitch(28,"A",true)
+ @>Control Variables: [0152: Stufen] = 1
+ @>Jump to Label: Start
+ @>
+: Else
+ @>Text: \xn[Nadja]Wir kämpfen und du darfst dir keinen 
+  :    : Fehlschlag erlauben.
+ @>Text: \xn[Nadja]Das heißt, wenn auch nur eine deiner 
+  :    : Attacken daneben geht, ist der Kampf vorbei.
+ @>Text: \xn[Nadja]Was sagst du dazu?
+ @>Show Choices: Ja, Nein
+ (When Cancel: Choice 2)
+ : When [Ja]
+  @>Script: setBattleRule("outcome", 48)
+  :       : setBattleRule("midbattleScript", 
+  :       : :NADJA_ACCURACY_TRACKER_1)
+  :       : TrainerBattle.start(:POKEMONRANGER_F, 
+  :       : "Nadja")
+  @>Conditional Branch: Variable [0048: Kampf-Ergebnis] == 2
+   @>Exit Event Processing
+   @>
+  : Else
+   @>Conditional Branch: Variable [0165: Nadja Erfolg] >= 1
+    @>Text: \xn[Nadja]Dein Blick war geschärft.
+    @>Text: \xn[Nadja]Keine Attacke ging daneben, das ist selten.
+    @>Script: pbReceiveItem(:XACCURACY)
+    @>Script: advanceQuestToStage(:Quest92, 2, nil, 
+    :       : false)
+    @>Set Move Route: This event
+     :              : $>Turn Right
+    @>Script: pbSet(166, 1)
+    @>
+   : Else
+    @>Text: \xn[Nadja]Ein wenig mehr Zielwasser, dann wird das 
+     :    : schon.
+    @>Set Move Route: This event
+     :              : $>Turn Right
+    @>
+   : Branch End
+   @>
+  : Branch End
+  @>
+ : When [Nein]
+  @>Text: \xn[Nadja]Alles klar!
+  @>Set Move Route: This event
+   :              : $>Turn Right
+  @>
+ : Branch End
+ @>
+: Branch End
+@>
+
+Page #2
+Conditions
+Variable 0166: Nadja Quest92 is 1 or above
+
+Graphic: RANGER_F
+
+Autonomous Movement
+Type: Fixed
+Speed: 3: Slow
+Freq: 3: Low
+Options Enabled
+Move Animation
+Trigger: Action Button
+
+List of Event Commands:
+@>Text: \xn[Nadja]Beim ersten Kampf warst du makellos.
+@>Text: \xn[Nadja]Aber ich habe noch ein paar Asse im 
+ :    : Ärmel.
+@>Text: \xn[Nadja]Versuche diesmal diese Pokémon zu 
+ :    : treffen.
+@>Text: \xn[Nadja]Nicht vergessen, ein Fehlschlag und der 
+ :    : Kampof ist zu Ende.
+@>Show Choices: Kämpfen, Später
+(When Cancel: Choice 2)
+: When [Kämpfen]
+ @>Script: setBattleRule("outcome", 48)
+ :       : setBattleRule("midbattleScript", 
+ :       : :NADJA_ACCURACY_TRACKER_2)
+ :       : TrainerBattle.start(:POKEMONRANGER_F, 
+ :       : "Nadja",1)
+ @>Conditional Branch: Variable [0048: Kampf-Ergebnis] == 2
+  @>Exit Event Processing
+  @>
+ : Else
+  @>Conditional Branch: Variable [0165: Nadja Erfolg] >= 1
+   @>Text: \xn[Nadja]Selbst meine flinksten Pokémon hast du 
+    :    : getroffen, unglaublich.
+   @>Text: \xn[Nadja]Hier, nimm das.
+   @>Script: pbReceiveItem(:XACCURACY2)
+   @>Script: advanceQuestToStage(:Quest92, 3, nil, 
+   :       : false)
+   @>Set Move Route: This event
+    :              : $>Turn Right
+   @>Script: pbSet(166, 2)
+   @>
+  : Else
+   @>Text: \xn[Nadja]Meine Ausweichmanöver haben dich 
+    :    : bezwungen.
+   @>Set Move Route: This event
+    :              : $>Turn Right
+   @>
+  : Branch End
+  @>
+ : Branch End
+ @>
+: When [Später]
+ @>Text: \xn[Nadja]Wie du willst.
+ @>Set Move Route: This event
+  :              : $>Turn Right
+ @>
+: Branch End
+@>
+
+Page #3
+Conditions
+Variable 0166: Nadja Quest92 is 2 or above
+
+Graphic: RANGER_F
+
+Autonomous Movement
+Type: Fixed
+Speed: 3: Slow
+Freq: 3: Low
+Options Enabled
+Move Animation
+Trigger: Action Button
+
+List of Event Commands:
+@>Text: \xn[Nadja]Du hast bereits dein Können bewiesen.
+@>Text: \xn[Nadja]Aber ich habe weitere Herausforderungen 
+ :    : für dich.
+@>Text: \xn[Nadja]Diesmal musst du drei unsichere Attacken 
+ :    : in Folge treffen, ohne einen einzigen Ausrutscher.
+@>Show Choices: Kämpfen, Nein
+(When Cancel: Choice 2)
+: When [Kämpfen]
+ @>Script: setBattleRule("outcome", 48)
+ :       : setBattleRule("midbattleScript", 
+ :       : :NADJA_ACCURACY_TRACKER_3)
+ :       : TrainerBattle.start(:POKEMONRANGER_F, 
+ :       : "Nadja",2)
+ @>Conditional Branch: Variable [0048: Kampf-Ergebnis] == 2
+  @>Exit Event Processing
+  @>
+ : Else
+  @>Conditional Branch: Variable [0165: Nadja Erfolg] >= 1
+   @>Text: \xn[Nadja]Drei Riskante Treffer und keiner ging 
+    :    : daneben.
+   @>Text: \xn[Nadja]Du scheinst das Glück wirklich gepachtet 
+    :    : zu haben.
+   @>Script: pbReceiveItem(:XACCURACY3)
+   @>Script: advanceQuestToStage(:Quest92, 4, nil, 
+   :       : false)
+   @>Set Move Route: This event
+    :              : $>Turn Right
+   @>Script: pbSet(166, 3)
+   @>
+  : Else
+   @>Text: \xn[Nadja]Da ging wohl was daneben.
+   @>Text: \xn[Nadja]Wir fangen nochmal von vorne an, wenn 
+    :    : du bereit bist.
+   @>Set Move Route: This event
+    :              : $>Turn Right
+   @>
+  : Branch End
+  @>
+ : Branch End
+ @>
+: When [Nein]
+ @>Text: \xn[Nadja]In Ordnung.
+ @>Set Move Route: This event
+  :              : $>Turn Right
+ @>
+: Branch End
+@>
+
+Page #4
+Conditions
+Variable 0166: Nadja Quest92 is 3 or above
+
+Graphic: RANGER_F
+
+Autonomous Movement
+Type: Fixed
+Speed: 3: Slow
+Freq: 3: Low
+Options Enabled
+Move Animation
+Trigger: Action Button
+
+List of Event Commands:
+@>Text: \xn[Nadja]Als letzte Aufgabe hätte ich ein ganzes 
+ :    : Team im angebot.
+@>Text: \xn[Nadja]Und du triffst trotzdem jedes Mal.
+@>Text: \xn[Nadja]Ansonsten ist der Kampf vorbei.
+@>Show Choices: Kämpfen, Nein
+(When Cancel: Choice 2)
+: When [Kämpfen]
+ @>Script: setBattleRule("outcome", 48)
+ :       : setBattleRule("midbattleScript", 
+ :       : :NADJA_ACCURACY_TRACKER_4)
+ :       : TrainerBattle.start(:POKEMONRANGER_F, 
+ :       : "Nadja",3)
+ @>Conditional Branch: Variable [0048: Kampf-Ergebnis] == 2
+  @>Exit Event Processing
+  @>
+ : Else
+  @>Conditional Branch: Variable [0155: Rose Erfolg] >= 1
+   @>Text: \xn[Nadja]Das...
+   @>Text: \xn[Nadja]war...
+   @>Text: \xn[Nadja]makellos.
+   @>Text: \xn[Nadja]Ohne auch nur eine Attacke zu verfehlen, 
+    :    : was ist dein Geheimnis?
+   @>Text: \xn[Nadja]Ich habe noch nie jemanden gesehen, der 
+    :    : so präzise kämpft.
+   @>Script: pbReceiveItem(:XACCURACY6)
+   @>Script: completeQuest(:Quest92)
+   @>Script: pbSetSelfSwitch(28,"B",true)
+   @>Text: \xn[Nadja]Ab jetzt kannst du bei mir jederzeit deine 
+    :    : Vorräte an X-Genauigkeit auffüllen.
+   @>Control Variables: [0152: Stufen] = 0
+   @>Set Move Route: This event
+    :              : $>Turn Right
+   @>Script: pbSet(166, 4)
+   @>
+  : Else
+   @>Text: \xn[Nadja]Das war nicht einwandfrei.
+   @>Text: \xn[NadjaKomm' zurück, wenn du wirklich zielen 
+    :    : kannst.
+   @>Set Move Route: This event
+    :              : $>Turn Right
+   @>
+  : Branch End
+  @>
+ : Branch End
+ @>
+: When [Nein]
+ @>Text: \xn[Nadja]Melde dich, wenn du soweit bist.
+ @>Set Move Route: This event
+  :              : $>Turn Right
+ @>
+: Branch End
+@>
+
+Page #5
+Conditions
+Variable 0166: Nadja Quest92 is 4 or above
+
+Graphic: RANGER_F
+
+Autonomous Movement
+Type: Fixed
+Speed: 3: Slow
+Freq: 3: Low
+Options Enabled
+Move Animation
+Trigger: Action Button
+
+List of Event Commands:
+@>Script: pbPokemonMart([
+:       :   :XACCURACY,
+:       :   :XACCURACY2,
+:       :   :XACCURACY3,
+:       :   :XACCURACY6
+:       : ])
+@>Set Move Route: This event
+ :              : $>Turn Right
+@>
+
+#------------------------------------------------------------------------------
+Event ID: 028
+Event Name: EV028
+(X,Y): (039,018)
+
+Page #1
+Conditions
+None
+
+Graphic: Quest Symbol
+
+Autonomous Movement
+Type: Fixed
+Speed: 2: Slower
+Freq: 6: Highest
+Options Enabled
+Move Animation
+Stop Animation
+Direction Fix
+Through
+Always on Top
+Trigger: Action Button
+
+List of Event Commands:
+@>
+
+Page #2
+Conditions
+Self Switch A is ON
+
+Graphic: Quest Symbol Solved
+
+Autonomous Movement
+Type: Fixed
+Speed: 2: Slower
+Freq: 6: Highest
+Options Enabled
+Move Animation
+Stop Animation
+Direction Fix
+Through
+Always on Top
+Trigger: Action Button
+
+List of Event Commands:
+@>
+
+Page #3
+Conditions
+Self Switch B is ON
+
+Autonomous Movement
+Type: Fixed
+Speed: 3: Slow
+Freq: 3: Low
+Options Enabled
+Move Animation
+Trigger: Action Button
+
+List of Event Commands:
+@>
+
+#------------------------------------------------------------------------------
+Event ID: 029
+Event Name: Unlicht-Schriftrolle
+(X,Y): (035,034)
+
+Page #1
+Conditions
+Variable 0129: Dakuma Event is 1 or above
+
+Graphic: Items Amigento-Discs 2
+
+Autonomous Movement
+Type: Fixed
+Speed: 3: Slow
+Freq: 3: Low
+Options Enabled
+Move Animation
+Direction Fix
+Trigger: Action Button
+
+List of Event Commands:
+@>Text: Eine Unlicht-Schriftrolle.
+@>Text: Möchtest du sie aufheben?
+@>Show Choices: Ja, Nein
+(When Cancel: Choice 2)
+: When [Ja]
+ @>Conditional Branch: Script: pbItemBall(:SCROLLOFDARKNESS)
+  @>Play SE: 'PRSFX- Wind', 100, 95
+  @>Set Move Route: [Wasser-Schriftrolle]
+   :              : $>Wait: 4 frame(s)
+   :              : $>Change Opacity: 240
+   :              : $>Wait: 4 frame(s)
+   :              : $>Change Opacity: 220
+   :              : $>Wait: 4 frame(s)
+   :              : $>Change Opacity: 200
+   :              : $>Wait: 4 frame(s)
+   :              : $>Change Opacity: 180
+   :              : $>Wait: 4 frame(s)
+   :              : $>Change Opacity: 160
+   :              : $>Wait: 4 frame(s)
+   :              : $>Change Opacity: 140
+   :              : $>Wait: 4 frame(s)
+   :              : $>Change Opacity: 120
+   :              : $>Wait: 4 frame(s)
+   :              : $>Change Opacity: 100
+  @>Wait: 20 frame(s)
+  @>Show Animation: [Wasser-Schriftrolle], [Smoke2]
+  @>Wait: 8 frame(s)
+  @>Control Switches: [0390: Dakuma Event] = ON
+  @>Control Self Switch: A =ON
+  @>
+ : Branch End
+ @>
+: When [Nein]
+ @>
+: Branch End
+@>
+
+Page #2
+Conditions
+Self Switch A is ON
+
+Autonomous Movement
+Type: Fixed
+Speed: 3: Slow
+Freq: 3: Low
+Options Enabled
+Move Animation
+Trigger: Action Button
+
+List of Event Commands:
+@>
+
+Page #3
+Conditions
+Variable 0129: Dakuma Event is 2 or above
+
+Graphic: Items Amigento-Discs 2
+
+Autonomous Movement
+Type: Fixed
+Speed: 3: Slow
+Freq: 3: Low
+Options Enabled
+Move Animation
+Trigger: Action Button
+
+List of Event Commands:
+@>
+
+#------------------------------------------------------------------------------
+Event ID: 030
+Event Name: "noshadow"
+(X,Y): (034,036)
+
+Page #1
+Conditions
+None
+
+Graphic: defaultShadow (2)
+
+Autonomous Movement
+Type: Fixed
+Speed: 3: Slow
+Freq: 3: Low
+Options Enabled
+Move Animation
+Direction Fix
+Through
+Trigger: Action Button
+
+List of Event Commands:
+@>
+
+#------------------------------------------------------------------------------
+Event ID: 031
+Event Name: "noshadow"
+(X,Y): (037,036)
+
+Page #1
+Conditions
+None
+
+Graphic: defaultShadow (2)
+
+Autonomous Movement
+Type: Fixed
+Speed: 3: Slow
+Freq: 3: Low
+Options Enabled
+Move Animation
+Direction Fix
+Through
+Trigger: Action Button
+
+List of Event Commands:
+@>
+
+#------------------------------------------------------------------------------
+Event ID: 032
+Event Name: Dakuma size(2,1)
+(X,Y): (035,035)
+
+Page #1
+Conditions
+None
+
+Graphic: KUBFU EVENT
+
+Autonomous Movement
+Type: Fixed
+Speed: 1: Slowest
+Freq: 1: Lowest
+Options Enabled
+Move Animation
+Stop Animation
+Trigger: Action Button
+
+List of Event Commands:
+@>Conditional Branch: Player is facing Up
+ @>Script: setBattleRule("outcome",48)
+ :       : WildBattle.start(:KUBFU, 50)
+ @>Conditional Branch: Variable [0048: Kampf-Ergebnis] == 4
+  @>Control Variables: [0129: Dakuma Event] += 1
+  @>Control Self Switch: A =ON
+  @>
+ : Else
+  @>
+ : Branch End
+ @>
+: Else
+ @>
+: Branch End
+@>
+
+Page #2
+Conditions
+Self Switch A is ON
+
+Autonomous Movement
+Type: Fixed
+Speed: 3: Slow
+Freq: 3: Low
+Options Enabled
+Move Animation
+Trigger: Action Button
+
+List of Event Commands:
+@>
+
+#------------------------------------------------------------------------------
+Event ID: 033
+Event Name: Wasser-Schriftrolle
+(X,Y): (036,034)
+
+Page #1
+Conditions
+Variable 0129: Dakuma Event is 1 or above
+
+Graphic: Items Amigento-Discs 2
+
+Autonomous Movement
+Type: Fixed
+Speed: 3: Slow
+Freq: 3: Low
+Options Enabled
+Move Animation
+Direction Fix
+Trigger: Action Button
+
+List of Event Commands:
+@>Text: Eine Wasser-Schriftrolle.
+@>Text: Möchtest du sie aufheben?
+@>Show Choices: Ja, Nein
+(When Cancel: Choice 2)
+: When [Ja]
+ @>Conditional Branch: Script: pbItemBall(:SCROLLOFWATERS)
+  @>Play SE: 'PRSFX- Wind', 100, 95
+  @>Set Move Route: [Unlicht-Schriftrolle]
+   :              : $>Wait: 4 frame(s)
+   :              : $>Change Opacity: 240
+   :              : $>Wait: 4 frame(s)
+   :              : $>Change Opacity: 220
+   :              : $>Wait: 4 frame(s)
+   :              : $>Change Opacity: 200
+   :              : $>Wait: 4 frame(s)
+   :              : $>Change Opacity: 180
+   :              : $>Wait: 4 frame(s)
+   :              : $>Change Opacity: 160
+   :              : $>Wait: 4 frame(s)
+   :              : $>Change Opacity: 140
+   :              : $>Wait: 4 frame(s)
+   :              : $>Change Opacity: 120
+   :              : $>Wait: 4 frame(s)
+   :              : $>Change Opacity: 100
+  @>Wait: 20 frame(s)
+  @>Show Animation: [Unlicht-Schriftrolle], [Smoke2]
+  @>Wait: 8 frame(s)
+  @>Control Variables: [0129: Dakuma Event] += 1
+  @>Control Self Switch: A =ON
+  @>
+ : Branch End
+ @>
+: When [Nein]
+ @>
+: Branch End
+@>
+
+Page #2
+Conditions
+Self Switch A is ON
+
+Autonomous Movement
+Type: Fixed
+Speed: 3: Slow
+Freq: 3: Low
+Options Enabled
+Move Animation
+Trigger: Action Button
+
+List of Event Commands:
+@>
+
+Page #3
+Conditions
+Switch 0390: Dakuma Event is ON
+
+Graphic: Items Amigento-Discs 2
+
+Autonomous Movement
+Type: Fixed
+Speed: 3: Slow
+Freq: 3: Low
+Options Enabled
+Move Animation
+Trigger: Action Button
+
+List of Event Commands:
+@>
+
+#------------------------------------------------------------------------------
+Event ID: 034
+Event Name: Exit size(2,1)
+(X,Y): (035,040)
+
+Page #1
+Conditions
+None
+
+Autonomous Movement
+Type: Fixed
+Speed: 3: Slow
+Freq: 3: Low
+Options Enabled
+Move Animation
+Trigger: Player Touch
+
+List of Event Commands:
+@>Play SE: 'Door exit', 100, 100
+@>Change Screen Color Tone: (-255,-255,-255,0), @6
+@>Wait: 8 frame(s)
+@>Change Transparent Flag: Transparency
+@>Transfer Player:[490: Dojo], (028,018), Down, No Fade
+@>Change Screen Color Tone: (0,0,0,0), @6
+@>Wait: 8 frame(s)
+@>
+
+#------------------------------------------------------------------------------
+Event ID: 035
+Event Name: Dojo Tür
+(X,Y): (028,018)
+
+Page #1
+Conditions
+None
+
+Graphic: Door Dojo 2
+
+Autonomous Movement
+Type: Fixed
+Speed: 3: Slow
+Freq: 3: Low
+Options Enabled
+Move Animation
+Trigger: Player Touch
+
+List of Event Commands:
+@>Conditional Branch: Script: $bag.has?(:DOJOKEY)
+ @>Set Move Route: This event
+                   (Ignore If Can't Move)
+  :              : $>SE: 'Door enter', 100, 100
+  :              : $>Wait: 2 frame(s)
+  :              : $>Turn Left
+  :              : $>Wait: 2 frame(s)
+  :              : $>Turn Right
+  :              : $>Wait: 2 frame(s)
+  :              : $>Turn Up
+  :              : $>Wait: 2 frame(s)
+ @>Wait: 8 frame(s)
+ @>Set Move Route: Player
+                   (Ignore If Can't Move)
+  :              : $>Through ON
+  :              : $>Move Up
+  :              : $>Through OFF
+ @>Wait: 6 frame(s)
+ @>Change Transparent Flag: Transparency
+ @>Script: Followers.follow_into_door
+ @>Wait for Move's Completion
+ @>Set Move Route: This event
+                   (Ignore If Can't Move)
+  :              : $>SE: 'Door enter', 100, 80
+  :              : $>Wait: 2 frame(s)
+  :              : $>Turn Right
+  :              : $>Wait: 2 frame(s)
+  :              : $>Turn Left
+  :              : $>Wait: 2 frame(s)
+  :              : $>Turn Down
+  :              : $>Wait: 2 frame(s)
+ @>Wait: 8 frame(s)
+ @>Change Screen Color Tone: (-255,-255,-255,0), @6
+ @>Wait: 8 frame(s)
+ @>Change Transparent Flag: Normal
+ @>Transfer Player:[490: Dojo], (035,038), Up, No Fade
+ @>Change Screen Color Tone: (0,0,0,0), @6
+ @>Wait: 8 frame(s)
+ @>
+: Else
+ @>Text: Verschlossen.
+ @>
+: Branch End
+@>
+
+Page #2
+Conditions
+Switch 0022: s:tsOff?("A") is ON
+
+Graphic: Door Dojo 2
+
+Autonomous Movement
+Type: Fixed
+Speed: 3: Slow
+Freq: 3: Low
+Options Enabled
+Move Animation
+Trigger: Autorun
+
+List of Event Commands:
+@>Conditional Branch: Script: get_self.onEvent?
+ @>Change Transparent Flag: Transparency
+ @>Script: Followers.hide_followers
+ @>Set Move Route: This event
+                   (Ignore If Can't Move)
+  :              : $>SE: 'Door enter', 100, 100
+  :              : $>Wait: 2 frame(s)
+  :              : $>Turn Left
+  :              : $>Wait: 2 frame(s)
+  :              : $>Turn Right
+  :              : $>Wait: 2 frame(s)
+  :              : $>Turn Up
+  :              : $>Wait: 2 frame(s)
+ @>Wait: 8 frame(s)
+ @>Change Transparent Flag: Normal
+ @>Set Move Route: Player
+                   (Ignore If Can't Move)
+  :              : $>Through ON
+  :              : $>Move Down
+  :              : $>Through OFF
+ @>Wait: 6 frame(s)
+ @>Script: Followers.put_followers_on_player
+ @>Set Move Route: This event
+                   (Ignore If Can't Move)
+  :              : $>SE: 'Door enter', 100, 80
+  :              : $>Wait: 2 frame(s)
+  :              : $>Turn Right
+  :              : $>Wait: 2 frame(s)
+  :              : $>Turn Left
+  :              : $>Wait: 2 frame(s)
+  :              : $>Turn Down
+  :              : $>Wait: 2 frame(s)
+ @>Wait: 8 frame(s)
+ @>
+: Branch End
+@>Script: setTempSwitchOn("A")
+@>
+
+#------------------------------------------------------------------------------
+Event ID: 036
+Event Name: Treppe
+(X,Y): (016,005)
+
+Page #1
+Conditions
+None
+
+Autonomous Movement
+Type: Fixed
+Speed: 3: Slow
+Freq: 3: Low
+Options Enabled
+Move Animation
+Trigger: Event Touch
+
+List of Event Commands:
+@>Conditional Branch: Player is facing Left
+ @>Set Move Route: Player
+  :              : $>Through ON
+  :              : $>Move Upper Left
+  :              : $>Through OFF
+ @>Play SE: 'Door exit', 100, 100
+ @>Change Screen Color Tone: (-255,-255,-255,0), @6
+ @>Wait: 10 frame(s)
+ @>Transfer Player:[490: Dojo], (006,045), Right, No Fade
+ @>Set Move Route: Player
+  :              : $>Through ON
+  :              : $>Move Right
+  :              : $>Through OFF
+ @>Change Screen Color Tone: (0,0,0,0), @6
+ @>Wait: 8 frame(s)
+ @>
+: Else
+ @>
+: Branch End
+@>
+
+#------------------------------------------------------------------------------
+Event ID: 037
+Event Name: Treppe
+(X,Y): (020,005)
+
+Page #1
+Conditions
+None
+
+Autonomous Movement
+Type: Fixed
+Speed: 3: Slow
+Freq: 3: Low
+Options Enabled
+Move Animation
+Trigger: Event Touch
+
+List of Event Commands:
+@>Conditional Branch: Player is facing Right
+ @>Set Move Route: Player
+  :              : $>Through ON
+  :              : $>Move Upper Right
+  :              : $>Through OFF
+ @>Play SE: 'Door exit', 100, 100
+ @>Change Screen Color Tone: (-255,-255,-255,0), @6
+ @>Wait: 10 frame(s)
+ @>Transfer Player:[490: Dojo], (018,045), Left, No Fade
+ @>Set Move Route: Player
+  :              : $>Through ON
+  :              : $>Move Left
+  :              : $>Through OFF
+ @>Change Screen Color Tone: (0,0,0,0), @6
+ @>Wait: 8 frame(s)
+ @>
+: Else
+ @>
+: Branch End
+@>
+
+#------------------------------------------------------------------------------
+Event ID: 038
+Event Name: Treppe
+(X,Y): (006,045)
+
+Page #1
+Conditions
+None
+
+Autonomous Movement
+Type: Fixed
+Speed: 3: Slow
+Freq: 3: Low
+Options Enabled
+Move Animation
+Trigger: Event Touch
+
+List of Event Commands:
+@>Conditional Branch: Player is facing Left
+ @>Set Move Route: Player
+  :              : $>Through ON
+  :              : $>Move Lower Left
+  :              : $>Through OFF
+ @>Play SE: 'Door exit', 100, 100
+ @>Change Screen Color Tone: (-255,-255,-255,0), @6
+ @>Wait: 10 frame(s)
+ @>Transfer Player:[490: Dojo], (016,005), Right, No Fade
+ @>Set Move Route: Player
+  :              : $>Through ON
+  :              : $>Move Right
+  :              : $>Through OFF
+ @>Change Screen Color Tone: (0,0,0,0), @6
+ @>Wait: 8 frame(s)
+ @>
+: Else
+ @>
+: Branch End
+@>
+
+#------------------------------------------------------------------------------
+Event ID: 039
+Event Name: Treppe
+(X,Y): (018,045)
+
+Page #1
+Conditions
+None
+
+Autonomous Movement
+Type: Fixed
+Speed: 3: Slow
+Freq: 3: Low
+Options Enabled
+Move Animation
+Trigger: Event Touch
+
+List of Event Commands:
+@>Conditional Branch: Player is facing Right
+ @>Set Move Route: Player
+  :              : $>Through ON
+  :              : $>Move Lower Right
+  :              : $>Through OFF
+ @>Play SE: 'Door exit', 100, 100
+ @>Change Screen Color Tone: (-255,-255,-255,0), @6
+ @>Wait: 10 frame(s)
+ @>Transfer Player:[490: Dojo], (020,005), Left, No Fade
+ @>Set Move Route: Player
+  :              : $>Through ON
+  :              : $>Move Left
+  :              : $>Through OFF
+ @>Change Screen Color Tone: (0,0,0,0), @6
+ @>Wait: 8 frame(s)
+ @>
+: Else
  @>
 : Branch End
 @>

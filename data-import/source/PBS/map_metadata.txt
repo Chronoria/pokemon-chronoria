@@ -513,8 +513,8 @@ Flags = Levels
 Name = Pokécenter Route 1
 ShowArea = true
 Bicycle = true
-MapPosition = 0,2,16
 HealingSpot = 369,39,18
+MapPosition = 0,2,16
 SnapEdges = true
 Environment = None
 #-------------------------------
@@ -1387,7 +1387,7 @@ BattleBack = beach
 WildBattleBGM = Battle! (Wild Pokémon)_7
 Flags = Levels
 #-------------------------------
-[207]   # MAP207
+[207]   # Häuser
 Name = Tonishi
 MapPosition = 0,7,13
 SnapEdges = true
@@ -3094,6 +3094,30 @@ SnapEdges = true
 BattleBack = gym2
 Environment = Rock
 #-------------------------------
+[458]   # Vogelfänger-Club
+Name = Vogelfängerclub
+ShowArea = true
+MapPosition = 0,12,9
+SnapEdges = true
+#-------------------------------
+[459]   # Vogelfänger-Club
+Name = Vogelfängerclub
+ShowArea = true
+MapPosition = 0,12,9
+SnapEdges = true
+#-------------------------------
+[460]   # Vogelfänger-Club
+Name = Vogelfängerclub
+ShowArea = true
+MapPosition = 0,12,9
+SnapEdges = true
+#-------------------------------
+[461]   # Vogelfänger-Club
+Name = Vogelfängerclub
+ShowArea = true
+MapPosition = 0,12,9
+SnapEdges = true
+#-------------------------------
 [462]   # Insel
 Name = Knowhere-Insel
 Outdoor = true
@@ -3294,29 +3318,23 @@ DarkMap = true
 SnapEdges = true
 Flags = Levels
 #-------------------------------
-[458]   # Vogelfängerclub
-Name = Vogelfängerclub
+[490]   # Dojo
+Name = Dojo
 ShowArea = true
-MapPosition = 0,12,9
+MapPosition = 0,11,8
 SnapEdges = true
+BattleBack = dojo
+WildCaptureME = SwSh 137 Kubfu_s Training Complete!
+WildBattleBGM = Battle Legendary (5)
+Flags = Levels
 #-------------------------------
-[459]   # Vogelfängerclub
-Name = Vogelfängerclub
+[494]   # Center
+Name = Pokécenter Tonishi
 ShowArea = true
-MapPosition = 0,12,9
+HealingSpot = 633,44,61
+MapPosition = 0,9,14
 SnapEdges = true
-#-------------------------------
-[460]   # Vogelfängerclub
-Name = Vogelfängerclub
-ShowArea = true
-MapPosition = 0,12,9
-SnapEdges = true
-#-------------------------------
-[461]   # Vogelfängerclub
-Name = Vogelfängerclub
-ShowArea = true
-MapPosition = 0,12,9
-SnapEdges = true
+Environment = None
 #-------------------------------
 [497]   # Lone Beach Pokécenter
 Name = Lone Beach Pokécenter
@@ -4153,11 +4171,3 @@ ShowArea = true
 MapPosition = 0,9,14
 SnapEdges = true
 Flags = Levels
-#-------------------------------
-[494]   # Tonishi Center
-Name = Pokécenter Tonishi
-ShowArea = true
-HealingSpot = 633,44,61
-MapPosition = 0,9,14
-SnapEdges = true
-Environment = None

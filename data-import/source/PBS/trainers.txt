@@ -1,75 +1,5 @@
 ﻿# See the documentation on the wiki to learn how to edit this file.
 #-------------------------------
-[GAMBLER,Rocco]
-LoseText = Haha... na gut, das Glück war heute wohl ganz auf deiner Seite!
-Pokemon = ZANGOOSE,25
-    Moves = SLASH,NIGHTSLASH,SWORDSDANCE,XSCISSOR
-    Nature = ADAMANT
-    Item = RAZORCLAW
-Pokemon = KABUTOPS,25
-    Moves = NIGHTSLASH,STONEEDGE,AQUAJET,ANCIENTPOWER
-    Nature = ADAMANT
-    AbilityIndex = 1
-    Item = SCOPELENS
-#-------------------------------
-[GAMBLER,Rocco,1]
-LoseText = Haha... na gut, das Glück war heute wohl ganz auf deiner Seite!
-Pokemon = SCIZOR,30
-    Moves = SLASH,BULLETPUNCH,FOCUSENERGY,XSCISSOR
-    Nature = ADAMANT
-    AbilityIndex = 1
-    Item = SCOPELENS
-Pokemon = WEAVILE,30
-    Moves = NIGHTSLASH,ICESHARD,HONECLAWS,DARKPULSE
-    Nature = JOLLY
-    Item = RAZORCLAW
-Pokemon = HONEDGE,30
-    Moves = NIGHTSLASH,SHADOWSNEAK,SWORDSDANCE,IRONHEAD
-    Nature = ADAMANT
-#-------------------------------
-[GAMBLER,Rocco,2]
-LoseText = Haha... na gut, das Glück war heute wohl ganz auf deiner Seite!
-Pokemon = KINGLER,35
-    Moves = CRABHAMMER,SWORDSDANCE,RAZORSHELL,GUILLOTINE
-    Nature = ADAMANT
-    AbilityIndex = 0
-    Item = RAZORCLAW
-Pokemon = GALLADE,35
-    Moves = NIGHTSLASH,PSYCHOCUT,CLOSECOMBAT,SWORDSDANCE
-    Nature = JOLLY
-    Item = SCOPELENS
-Pokemon = ABSOL,35
-    Moves = NIGHTSLASH,SLASH,FOCUSENERGY,SUCKERPUNCH
-    Nature = JOLLY
-    AbilityIndex = 1
-Pokemon = AEGISLASH,35
-    Moves = NIGHTSLASH,SACREDSWORD,IRONHEAD,KINGSSHIELD
-    Nature = ADAMANT
-#-------------------------------
-[GAMBLER,Rocco,3]
-LoseText = Haha... na gut, das Glück war heute wohl ganz auf deiner Seite!
-Pokemon = KINGLER,40
-    Moves = CRABHAMMER,SWORDSDANCE,RAZORSHELL,GUILLOTINE
-    Nature = ADAMANT
-    AbilityIndex = 0
-    Item = RAZORCLAW
-Pokemon = GALLADE,40
-    Moves = NIGHTSLASH,PSYCHOCUT,CLOSECOMBAT,SWORDSDANCE
-    Nature = JOLLY
-    Item = SCOPELENS
-Pokemon = AEGISLASH,40
-    Moves = NIGHTSLASH,SACREDSWORD,IRONHEAD,KINGSSHIELD
-    Nature = ADAMANT
-Pokemon = ABSOL,40
-    Moves = NIGHTSLASH,SLASH,FOCUSENERGY,SUCKERPUNCH
-    Nature = JOLLY
-    AbilityIndex = 1
-    Item = SCOPELENS
-Pokemon = SIRFETCHD,40
-    Moves = LEAFBLADE,SWORDSDANCE,KNOCKOFF,BRICKBREAK
-    Nature = ADAMANT
-    Item = LEEK
-#-------------------------------
 [CAMPER_M,Liam]
 LoseText = A very good battle, indeed!
 Pokemon = DIGLETT,10
@@ -3243,3 +3173,356 @@ Pokemon = LAPRAS,60
     AbilityIndex = 1
     Gender = female
     Ball = POKEBALL
+#-------------------------------
+[BLACKBELT,Björn]
+LoseText = ...Ein Treffer. Mehr hat's nicht gebraucht. Respekt.
+Pokemon = MACHOKE,25
+    Moves = CROSSCHOP,DYNAMICPUNCH,BULKUP,KNOCKOFF
+    Nature = ADAMANT
+Pokemon = KROOKODILE,25
+    Moves = EARTHQUAKE,CRUNCH,OUTRAGE,HONECLAWS
+    Nature = ADAMANT
+    AbilityIndex = 1
+#-------------------------------
+[BLACKBELT,Björn,1]
+LoseText = ...Ein Treffer. Mehr hat's nicht gebraucht. Respekt.
+Pokemon = HARIYAMA,30
+    Moves = CLOSECOMBAT,BELLYDRUM,HEAVYSLAM,REVERSAL
+    Nature = ADAMANT
+    AbilityIndex = 1
+Pokemon = URSARING,30
+    Moves = HAMMERARM,THRASH,HIGHHORSEPOWER,SLASH
+    Nature = ADAMANT
+Pokemon = RHYPERIOR,30
+    Moves = EARTHQUAKE,STONEEDGE,MEGAHORN,HAMMERARM
+    Nature = ADAMANT
+    AbilityIndex = 1
+#-------------------------------
+[BLACKBELT,Björn,2]
+LoseText = ...Ein Treffer. Mehr hat's nicht gebraucht. Respekt.
+Pokemon = MACHAMP,35
+    Moves = CROSSCHOP,DYNAMICPUNCH,KNOCKOFF,BULKUP
+    Nature = ADAMANT
+    AbilityIndex = 1
+Pokemon = CONKELDURR,35
+    Moves = SUPERPOWER,FOCUSPUNCH,HAMMERARM,STONEEDGE
+    Nature = ADAMANT
+Pokemon = KROOKODILE,35
+    Moves = EARTHQUAKE,CRUNCH,OUTRAGE,SANDSTORM
+    Nature = ADAMANT
+    AbilityIndex = 1
+Pokemon = RHYPERIOR,35
+    Moves = EARTHQUAKE,STONEEDGE,MEGAHORN,HAMMERARM
+    Nature = ADAMANT
+    AbilityIndex = 1
+#-------------------------------
+[BLACKBELT,Björn,3]
+LoseText = ...Ein Treffer. Mehr hat's nicht gebraucht. Respekt.
+Pokemon = HAXORUS,40
+    Moves = DRAGONCLAW,OUTRAGE,DRAGONDANCE,CRUNCH
+    Nature = ADAMANT
+    AbilityIndex = 1
+#-------------------------------
+[BATTLEGIRL,Rose]
+LoseText = Auch die härtesten Felsen bröckeln irgendwann... Aber ich stehe wieder auf!
+Pokemon = SKARMORY,25
+    Moves = SPIKES,IRONDEFENSE,STEELWING,DRILLPECK
+    Nature = IMPISH
+    AbilityIndex = 1
+Pokemon = UMBREON,25
+    Moves = MOONLIGHT,CONFUSERAY,ASSURANCE,DARKPULSE
+    Nature = CALM
+#-------------------------------
+[BATTLEGIRL,Rose,1]
+LoseText = Auch die härtesten Felsen bröckeln irgendwann... Aber ich stehe wieder auf!
+Pokemon = CHANSEY,30
+    Moves = SING,HEALPULSE,LIGHTSCREEN,SOFTBOILED
+    Nature = CALM
+Pokemon = BASTIODON,30
+    Moves = WIDEGUARD,IRONDEFENSE,PROTECT,METALBURST
+    Nature = IMPISH
+Pokemon = MANTINE,30
+    Moves = ROOST,WIDEGUARD,AQUARING,HYDROPUMP
+    Nature = CALM
+    AbilityIndex = 1
+#-------------------------------
+[BATTLEGIRL,Rose,2]
+LoseText = Auch die härtesten Felsen bröckeln irgendwann... Aber ich stehe wieder auf!
+Pokemon = FERROTHORN,35
+    Moves = IRONDEFENSE,CURSE,GYROBALL,POWERWHIP
+    Nature = IMPISH
+Pokemon = TOXAPEX,35
+    Moves = WIDEGUARD,RECOVER,TOXICSPIKES,LIQUIDATION
+    Nature = CALM
+    AbilityIndex = 1
+Pokemon = REGISTEEL,35
+    Moves = IRONDEFENSE,AMNESIA,CURSE,FLASHCANNON
+    Nature = CAREFUL
+Pokemon = COFAGRIGUS,35
+    Moves = PROTECT,WILLOWISP,CURSE,SHADOWBALL
+    Nature = CALM
+#-------------------------------
+[BATTLEGIRL,Rose,3]
+LoseText = Auch die härtesten Felsen bröckeln irgendwann... Aber ich stehe wieder auf!
+Pokemon = STEELIX,40
+    Moves = CURSE,IRONTAIL,STONEEDGE,DOUBLEEDGE
+    Nature = IMPISH
+    AbilityIndex = 1
+Pokemon = BLISSEY,40
+    Moves = SOFTBOILED,LIGHTSCREEN,HEALPULSE,SING
+    Nature = CALM
+Pokemon = ALOMOMOLA,40
+    Moves = WISH,PROTECT,AQUARING,HYDROPUMP
+    Nature = CALM
+    AbilityIndex = 1
+Pokemon = HITMONCHAN,40
+    Moves = DRAINPUNCH,MACHPUNCH,DETECT,FOCUSPUNCH
+    Nature = ADAMANT
+    AbilityIndex = 1
+#-------------------------------
+[GAMBLER,Rocco]
+LoseText = Haha... na gut, das Glück war heute wohl ganz auf deiner Seite!
+Pokemon = ZANGOOSE,25
+    Moves = SLASH,NIGHTSLASH,SWORDSDANCE,XSCISSOR
+    Nature = ADAMANT
+    Item = RAZORCLAW
+Pokemon = KABUTOPS,25
+    Moves = NIGHTSLASH,STONEEDGE,AQUAJET,ANCIENTPOWER
+    Nature = ADAMANT
+    AbilityIndex = 1
+    Item = SCOPELENS
+#-------------------------------
+[GAMBLER,Rocco,1]
+LoseText = Haha... na gut, das Glück war heute wohl ganz auf deiner Seite!
+Pokemon = SCIZOR,30
+    Moves = SLASH,BULLETPUNCH,FOCUSENERGY,XSCISSOR
+    Nature = ADAMANT
+    AbilityIndex = 1
+    Item = SCOPELENS
+Pokemon = WEAVILE,30
+    Moves = NIGHTSLASH,ICESHARD,HONECLAWS,DARKPULSE
+    Nature = JOLLY
+    Item = RAZORCLAW
+Pokemon = HONEDGE,30
+    Moves = NIGHTSLASH,SHADOWSNEAK,SWORDSDANCE,IRONHEAD
+    Nature = ADAMANT
+#-------------------------------
+[GAMBLER,Rocco,2]
+LoseText = Haha... na gut, das Glück war heute wohl ganz auf deiner Seite!
+Pokemon = KINGLER,35
+    Moves = CRABHAMMER,SWORDSDANCE,RAZORSHELL,GUILLOTINE
+    Nature = ADAMANT
+    AbilityIndex = 0
+    Item = RAZORCLAW
+Pokemon = GALLADE,35
+    Moves = NIGHTSLASH,PSYCHOCUT,CLOSECOMBAT,SWORDSDANCE
+    Nature = JOLLY
+    Item = SCOPELENS
+Pokemon = ABSOL,35
+    Moves = NIGHTSLASH,SLASH,FOCUSENERGY,SUCKERPUNCH
+    Nature = JOLLY
+    AbilityIndex = 1
+Pokemon = AEGISLASH,35
+    Moves = NIGHTSLASH,SACREDSWORD,IRONHEAD,KINGSSHIELD
+    Nature = ADAMANT
+#-------------------------------
+[GAMBLER,Rocco,3]
+LoseText = Haha... na gut, das Glück war heute wohl ganz auf deiner Seite!
+Pokemon = KINGLER,40
+    Moves = CRABHAMMER,SWORDSDANCE,RAZORSHELL,GUILLOTINE
+    Nature = ADAMANT
+    AbilityIndex = 0
+    Item = RAZORCLAW
+Pokemon = GALLADE,40
+    Moves = NIGHTSLASH,PSYCHOCUT,CLOSECOMBAT,SWORDSDANCE
+    Nature = JOLLY
+    Item = SCOPELENS
+Pokemon = AEGISLASH,40
+    Moves = NIGHTSLASH,SACREDSWORD,IRONHEAD,KINGSSHIELD
+    Nature = ADAMANT
+Pokemon = ABSOL,40
+    Moves = NIGHTSLASH,SLASH,FOCUSENERGY,SUCKERPUNCH
+    Nature = JOLLY
+    AbilityIndex = 1
+    Item = SCOPELENS
+Pokemon = SIRFETCHD,40
+    Moves = LEAFBLADE,SWORDSDANCE,KNOCKOFF,BRICKBREAK
+    Nature = ADAMANT
+    Item = LEEK
+#-------------------------------
+[JOGGER,Finn]
+LoseText = Schneller als ich gedacht - das muss ich anerkennen!
+Pokemon = PERSIAN,25
+    Moves = CRUNCH,SLASH,TAUNT,ASSURANCE
+    Nature = JOLLY
+#-------------------------------
+[JOGGER,Finn,1]
+LoseText = Schneller als ich gedacht - das muss ich anerkennen!
+Pokemon = JOLTEON,30
+    Moves = QUICKATTACK,AGILITY,DISCHARGE,THUNDER
+    Nature = TIMID
+#-------------------------------
+[JOGGER,Finn,2]
+LoseText = Schneller als ich gedacht - das muss ich anerkennen!
+Pokemon = NINJASK,35
+    Moves = AGILITY,SWORDSDANCE,XSCISSOR,AERIALACE
+    Nature = JOLLY
+Pokemon = TALONFLAME,35
+    Moves = AGILITY,FLAREBLITZ,BRAVEBIRD,ACROBATICS
+    Nature = JOLLY
+#-------------------------------
+[JOGGER,Finn,3]
+LoseText = Schneller als ich gedacht - das muss ich anerkennen!
+Pokemon = DRAGAPULT,40
+    Moves = DRAGONDARTS,DRAGONDANCE,PHANTOMFORCE,UTURN
+    Nature = JOLLY
+    AbilityIndex = 1
+Pokemon = CROBAT,40
+    Moves = AIRSLASH,CONFUSERAY,TAILWIND,QUICKGUARD
+    Nature = TIMID
+#-------------------------------
+[PSYCHIC_F,Mira]
+LoseText = Deine Kraft... beeindruckend. Ich hab sie nicht kommen sehen.
+Pokemon = ESPEON,25
+    Moves = PSYBEAM,SWIFT,MORNINGSUN,PSYCHIC
+    Nature = MODEST
+#-------------------------------
+[PSYCHIC_F,Mira,1]
+LoseText = Deine Kraft... beeindruckend. Ich hab sie nicht kommen sehen.
+Pokemon = ALAKAZAM,30
+    Moves = PSYBEAM,PSYCHIC,CALMMIND,FUTURESIGHT
+    Nature = MODEST
+    AbilityIndex = 1
+Pokemon = TOGEKISS,30
+    Moves = AIRSLASH,AURASPHERE,TRIATTACK,ANCIENTPOWER
+    Nature = MODEST
+    AbilityIndex = 1
+#-------------------------------
+[PSYCHIC_F,Mira,2]
+LoseText = Deine Kraft... beeindruckend. Ich hab sie nicht kommen sehen.
+Pokemon = GENGAR,35
+    Moves = SHADOWBALL,DARKPULSE,HEX,HYPNOSIS
+    Nature = MODEST
+#-------------------------------
+[PSYCHIC_F,Mira,3]
+LoseText = Deine Kraft... beeindruckend. Ich hab sie nicht kommen sehen.
+Pokemon = HYDREIGON,40
+    Moves = DRAGONPULSE,HYPERVOICE,NASTYPLOT,TRIATTACK
+    Nature = MODEST
+Pokemon = VOLCARONA,40
+    Moves = BUGBUZZ,HEATWAVE,QUIVERDANCE,FIREBLAST
+    Nature = MODEST
+#-------------------------------
+[GENTLEMAN,Falk]
+LoseText = Selbst eine Niederlage nehme ich mit Fassung. Respekt, das war beeindruckend.
+Pokemon = SLOWKING,25
+    Moves = NASTYPLOT,PSYCHIC,SURF,HEALPULSE
+    Nature = MODEST
+    AbilityIndex = 1
+Pokemon = VAPOREON,25
+    Moves = HYDROPUMP,ACIDARMOR,MUDDYWATER,HAZE
+    Nature = CALM
+#-------------------------------
+[GENTLEMAN,Falk,1]
+LoseText = Selbst eine Niederlage nehme ich mit Fassung. Respekt, das war beeindruckend.
+Pokemon = LAPRAS,30
+    Moves = ICEBEAM,HYDROPUMP,CONFUSERAY,SING
+    Nature = CALM
+    AbilityIndex = 1
+Pokemon = BRONZONG,30
+    Moves = FUTURESIGHT,GYROBALL,IRONDEFENSE,PAYBACK
+    Nature = SASSY
+Pokemon = MISMAGIUS,30
+    Moves = PHANTOMFORCE,POWERGEM,MYSTICALFIRE,ASTONISH
+    Nature = TIMID
+#-------------------------------
+[GENTLEMAN,Falk,2]
+LoseText = Selbst eine Niederlage nehme ich mit Fassung. Respekt, das war beeindruckend.
+Pokemon = GOODRA,35
+    Moves = CURSE,MUDDYWATER,POWERWHIP,RAINDANCE
+    Nature = CALM
+    AbilityIndex = 1
+Pokemon = NOIVERN,35
+    Moves = AIRSLASH,HURRICANE,TAILWIND,DRAGONPULSE
+    Nature = TIMID
+    AbilityIndex = 1
+Pokemon = WEEZING,35
+    Moves = SLUDGEBOMB,HEATWAVE,HAZE,TOXIC
+    Nature = CALM
+Pokemon = SIGILYPH,35
+    Moves = PSYCHIC,AIRSLASH,COSMICPOWER,LIGHTSCREEN
+    Nature = MODEST
+    AbilityIndex = 1
+#-------------------------------
+[GENTLEMAN,Falk,3]
+LoseText = Selbst eine Niederlage nehme ich mit Fassung. Respekt, das war beeindruckend.
+Pokemon = DUSKNOIR,40
+    Moves = SHADOWBALL,WILLOWISP,CURSE,FUTURESIGHT
+    Nature = CALM
+Pokemon = JYNX,40
+    Moves = BLIZZARD,LOVELYKISS,PERISHSONG,MEANLOOK
+    Nature = MODEST
+    AbilityIndex = 1
+Pokemon = EXPLOUD,40
+    Moves = HYPERVOICE,BOOMBURST,SCREECH,UPROAR
+    Nature = MODEST
+Pokemon = FROSLASS,40
+    Moves = SHADOWBALL,BLIZZARD,CONFUSERAY,WILLOWISP
+    Nature = TIMID
+#-------------------------------
+[POKEMONRANGER_F,Nadja]
+LoseText = Selbst die schärfste Zielsicherheit schützt nicht vor einem überlegenen Gegner. Respekt.
+Pokemon = FEAROW,25
+    Moves = DRILLPECK,DRILLRUN,FOCUSENERGY,ROOST
+    Nature = JOLLY
+Pokemon = LUCARIO,25
+    Moves = AURASPHERE,CLOSECOMBAT,EXTREMESPEED,SWORDSDANCE
+    Nature = JOLLY
+    AbilityIndex = 1
+#-------------------------------
+[POKEMONRANGER_F,Nadja,1]
+LoseText = Selbst die schärfste Zielsicherheit schützt nicht vor einem überlegenen Gegner. Respekt.
+Pokemon = STARAPTOR,30
+    Moves = DOUBLETEAM,BRAVEBIRD,CLOSECOMBAT,AGILITY
+    Nature = JOLLY
+Pokemon = ZOROARK,30
+    Moves = NASTYPLOT,NIGHTDAZE,FOULPLAY,AGILITY
+    Nature = TIMID
+Pokemon = TAUROS,30
+    Moves = DOUBLEEDGE,RAGINGBULL,ZENHEADBUTT,WORKUP
+    Nature = JOLLY
+#-------------------------------
+[POKEMONRANGER_F,Nadja,2]
+LoseText = Selbst die schärfste Zielsicherheit schützt nicht vor einem überlegenen Gegner. Respekt.
+Pokemon = ARCANINE,35
+    Moves = FLAREBLITZ,EXTREMESPEED,CRUNCH,FLAMETHROWER
+    Nature = JOLLY
+    AbilityIndex = 1
+Pokemon = SANDSLASH,35
+    Moves = EARTHQUAKE,SWORDSDANCE,SLASH,RAPIDSPIN
+    Nature = ADAMANT
+Pokemon = DODRIO,35
+    Moves = DRILLPECK,SWORDSDANCE,AGILITY,ENDEAVOR
+    Nature = JOLLY
+    AbilityIndex = 1
+Pokemon = HAWLUCHA,35
+    Moves = SWORDSDANCE,FLYINGPRESS,HIGHJUMPKICK,ROOST
+    Nature = JOLLY
+    AbilityIndex = 1
+#-------------------------------
+[POKEMONRANGER_F,Nadja,3]
+LoseText = Selbst die schärfste Zielsicherheit schützt nicht vor einem überlegenen Gegner. Respekt.
+Pokemon = SCYTHER,40
+    Moves = DOUBLETEAM,SWORDSDANCE,XSCISSOR,AIRSLASH
+    Nature = JOLLY
+    AbilityIndex = 1
+Pokemon = STARAPTOR,40
+    Moves = DOUBLETEAM,BRAVEBIRD,CLOSECOMBAT,AGILITY
+    Nature = JOLLY
+Pokemon = ZOROARK,40
+    Moves = NASTYPLOT,NIGHTDAZE,FOULPLAY,AGILITY
+    Nature = TIMID
+Pokemon = ARCANINE,40
+    Moves = FLAREBLITZ,EXTREMESPEED,CRUNCH,FLAMETHROWER
+    Nature = JOLLY
+    AbilityIndex = 1
