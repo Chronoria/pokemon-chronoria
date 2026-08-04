@@ -394243,6 +394243,12 @@ Move Animation
 Trigger: Action Button
 
 List of Event Commands:
+@>Text: Man muss gestärkt sein, um Großes leisten zu 
+ :    : können.
+@>Text: Deshalb sorge ich hier immer für die nötigen 
+ :    : Rationen.
+@>Set Move Route: This event
+ :              : $>Turn Up
 @>
 
 #------------------------------------------------------------------------------
@@ -396995,7 +397001,7 @@ List of Event Commands:
   @>Exit Event Processing
   @>
  : Else
-  @>Conditional Branch: Variable [0155: Rose Erfolg] >= 1
+  @>Conditional Branch: Variable [0165: Nadja Erfolg] >= 1
    @>Text: \xn[Nadja]Das...
    @>Text: \xn[Nadja]war...
    @>Text: \xn[Nadja]makellos.
@@ -397015,7 +397021,7 @@ List of Event Commands:
    @>
   : Else
    @>Text: \xn[Nadja]Das war nicht einwandfrei.
-   @>Text: \xn[NadjaKomm' zurück, wenn du wirklich zielen 
+   @>Text: \xn[Nadja]Komm' zurück, wenn du wirklich zielen 
     :    : kannst.
    @>Set Move Route: This event
     :              : $>Turn Right
@@ -397204,9 +397210,11 @@ Speed: 3: Slow
 Freq: 3: Low
 Options Enabled
 Move Animation
+Direction Fix
 Trigger: Action Button
 
 List of Event Commands:
+@>Text: Du hast die andere Schriftrolle bereits aufgehoben.
 @>
 
 #------------------------------------------------------------------------------
@@ -397275,17 +397283,28 @@ Freq: 1: Lowest
 Options Enabled
 Move Animation
 Stop Animation
+Direction Fix
 Trigger: Action Button
 
 List of Event Commands:
 @>Conditional Branch: Player is facing Up
+ @>Control Switches: [0032: Fateful encounters] = ON
+ @>Play SE: 'KUBFU', 100, 100
+ @>Wait: 15 frame(s)
+ @>Script: $game_temp.vs_transition_bg
+ @>Script: $game_temp.vs_transition_bg = 
+ :       : "Dakuma"
  @>Script: setBattleRule("outcome",48)
- :       : WildBattle.start(:KUBFU, 50)
+ @>Script: pkmn = Pokemon.new(:KUBFU, 50)
+ :       : pkmn.calc_stats
+ :       : WildBattle.start(pkmn)
+ @>Control Switches: [0032: Fateful encounters] = OFF
  @>Conditional Branch: Variable [0048: Kampf-Ergebnis] == 4
   @>Control Variables: [0129: Dakuma Event] += 1
   @>Control Self Switch: A =ON
   @>
  : Else
+  @>Exit Event Processing
   @>
  : Branch End
  @>
@@ -397394,9 +397413,11 @@ Speed: 3: Slow
 Freq: 3: Low
 Options Enabled
 Move Animation
+Direction Fix
 Trigger: Action Button
 
 List of Event Commands:
+@>Text: Du hast die andere Schriftrolle bereits aufgehoben.
 @>
 
 #------------------------------------------------------------------------------

@@ -9236,7 +9236,7 @@ Description = Die Zeitflöte kann Celebi herbeirufen, um ein Shadow-Pokémon zu 
 [DOJOKEY]
 Name = Dojo-Schlüssel
 NamePlural = Dojo-Schlüssel
-Pocket = 1
+Pocket = 8
 Price = 0
 FieldUse = OnPokemon
 Description = Öffnet eine Tür im Dojo in Solhavenn.
