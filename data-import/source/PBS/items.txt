@@ -8181,36 +8181,36 @@ Flags = Fling_30
 Description = Das Canary-Brot füllt die KP eines Pokémon um 100 Punkte auf oder nutze es für Rezepte.
 #-------------------------------Rezept
 [LUMIOSIANBUTTER]
-Name = Illumina-Butter
-NamePlural = Illumina-Butter
+Name = Tonishi-Butter
+NamePlural = Tonishi-Butter
 Pocket = 5
 Price = 10
 Description = Kann für bestimmte Rezepte verwendet werden.
 #-------------------------------Rezept
 [NICEBUTTER]
-Name = Superbutter
-NamePlural = Superbutter
+Name = Super-Butter
+NamePlural = Super-Butter
 Pocket = 5
 Price = 50
 Description = Kann für bestimmte Rezepte verwendet werden.
 #-------------------------------Rezept
 [GREATBUTTER]
-Name = Hyperbutter
-NamePlural = Hyperbutter
+Name = Spezial-Butter
+NamePlural = Spezial-Butter
 Pocket = 5
 Price = 100
 Description = Kann für bestimmte Rezepte verwendet werden.
 #-------------------------------Rezept
 [AMAZINGBUTTER]
-Name = Ultrabutter
-NamePlural = Ultrabutter
+Name = Ultra-Butter
+NamePlural = Ultra-Butter
 Pocket = 5
 Price = 200
 Description = Kann für bestimmte Rezepte verwendet werden.
 #-------------------------------Rezept
 [SUPREMEBUTTER]
-Name = Meisterbutter
-NamePlural = Meisterbutter
+Name = Meister-Butter
+NamePlural = Meister-Butter
 Pocket = 5
 Price = 500
 Description = Kann für bestimmte Rezepte verwendet werden.
@@ -8223,8 +8223,8 @@ Price = 1000
 Description = Kann für bestimmte Rezepte verwendet werden.
 #-------------------------------Rezept
 [HOENNIANSALT]
-Name = Hoenn-Steinsalz
-NamePlural = Hoenn-Steinsalz
+Name = Ariduna-Steinsalz
+NamePlural = Ariduna-Steinsalz
 Pocket = 5
 Price = 200
 Description = Kann für bestimmte Rezepte verwendet werden.

@@ -174471,7 +174471,8 @@ List of Event Commands:
 :       :   :IAPAPABERRY, :POMEGBERRY,
 :       :   :KELPSYBERRY, :QUALOTBERRY,   
 :       :   :HONDEWBERRY,  :GREPABERRY,  
-:       :   :TAMATOBERRY, :HOPOBERRY
+:       :   :TAMATOBERRY, :HOPOBERRY,
+:       :   :ARBOLIVAOIL
 :       : ])
 @>
 
@@ -396051,6 +396052,26 @@ List of Event Commands:
 @>
 
 #------------------------------------------------------------------------------
+Event ID: 002
+Event Name: EV002
+(X,Y): (009,015)
+
+Page #1
+Conditions
+None
+
+Autonomous Movement
+Type: Fixed
+Speed: 3: Slow
+Freq: 3: Low
+Options Enabled
+Move Animation
+Trigger: Action Button
+
+List of Event Commands:
+@>
+
+#------------------------------------------------------------------------------
 Event ID: 003
 Event Name: EV003
 (X,Y): (001,024)
@@ -462788,7 +462809,7 @@ List of Event Commands:
 #------------------------------------------------------------------------------
 Event ID: 016
 Event Name: Mart
-(X,Y): (028,068)
+(X,Y): (032,053)
 
 Page #1
 Conditions
@@ -463025,6 +463046,36 @@ Move Animation
 Trigger: Action Button
 
 List of Event Commands:
+@>
+
+#------------------------------------------------------------------------------
+Event ID: 024
+Event Name: Mart
+(X,Y): (028,068)
+
+Page #1
+Conditions
+None
+
+Graphic: NPCClerk
+
+Autonomous Movement
+Type: Fixed
+Speed: 3: Slow
+Freq: 3: Low
+Options Enabled
+Move Animation
+Trigger: Action Button
+
+List of Event Commands:
+@>Script: pbPokemonMart([
+:       :   :CANARIBREAD, :LUMIOSIANBUTTER,
+:       :   :NICEBUTTER, :GREATBUTTER,   
+:       :   :AMAZINGBUTTER, :SUPREMEBUTTER,
+:       :   :HYPERSPACEBUTTER, :HOENNIANSALT,   
+:       :   :EPICENOIRE
+:       : 
+:       : ])
 @>
 
 #------------------------------------------------------------------------------
