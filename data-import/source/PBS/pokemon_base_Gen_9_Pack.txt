@@ -3324,9 +3324,9 @@ Category = Apple Hydra
 Pokedex = Seven syrpents live inside an apple made of syrup. The syrpent in the center is the commander.
 Generation = 9
 RaidRanks = 4,5
-WildItemCommon = HYPERLUMBERRY
-WildItemUncommon = HYPERORANBERRY
-WildItemRare = HYPERSITRUSBERRY
+WildItemCommon = CORNNBERRY
+WildItemUncommon = CORNNBERRY
+WildItemRare = CORNNBERRY
 #-------------------------------
 [GOUGINGFIRE]
 Name = Keilflamme

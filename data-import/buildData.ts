@@ -150,13 +150,10 @@ async function main() {
   // parseMapLocations.ts has no way to see it. Added by hand instead - keep this list in sync
   // with the plugin's ITEM_POOL if it's ever changed there. Not tied to a single map (any of the
   // game's Headbutt trees can drop these), hence the synthetic "HEADBUTT" location.
-  // NOTE: the HYPERxxxBERRY ids all display in-game as "Dimensions-<Beere>" (items.txt Name
-  // field), not "Hyper-<Beere>" - the ids just happen to look like a "Hyper" prefix.
+  // NOTE: the HYPERxxxBERRY "recipe berries" that used to be mixed into this pool have been
+  // removed from the game entirely (and the recipes.txt entries that needed them reworked), so
+  // the pool is back to just the 10 ordinary status-cure/Sitrus/Lum berries.
   const HEADBUTT_ITEM_POOL = [
-    "HYPERCHERIBERRY", "HYPERCHESTOBERRY", "HYPERPECHABERRY", "HYPERRAWSTBERRY",
-    "HYPERASPEARBERRY", "HYPERPERSIMBERRY", "HYPERORANBERRY", "HYPERSITRUSBERRY",
-    "HYPERLUMBERRY", "HYPERCHARTIBERRY", "HYPERCOBABERRY", "HYPERYACHEBERRY",
-    "HYPERROSELIBERRY", "HYPERBABIRIBERRY",
     "CHERIBERRY", "CHESTOBERRY", "PECHABERRY", "RAWSTBERRY", "ASPEARBERRY",
     "ORANBERRY", "LEPPABERRY", "PERSIMBERRY", "SITRUSBERRY", "LUMBERRY",
   ];

@@ -41920,7 +41920,7 @@ Auto-Change BGM: DPPT 040 Floaroma Town (Night)
 
 #------------------------------------------------------------------------------
 Event ID: 001
-Event Name: Mart
+Event Name: Beerenladen
 (X,Y): (010,006)
 
 Page #1
@@ -41938,32 +41938,25 @@ Move Animation
 Trigger: Action Button
 
 List of Event Commands:
-@>Conditional Branch: Script: $player.badge_count >= 3
+@>Conditional Branch: Script: $player.badge_count >= 1
  @>Script: pbPokemonMart([
  :       :   :ORANBERRY, :CHERIBERRY,
  :       :   :CHESTOBERRY, :PECHABERRY,
  :       :   :RAWSTBERRY, :ASPEARBERRY,
- :       :   :PERSIMBERRY, :SITRUSBERRY,
- :       :   :SYRUPYAPPLE, :TARTAPPLE,
- :       :   :SWEETAPPLE
+ :       :   :LEPPABERRY, :PERSIMBERRY,   
+ :       :   :SITRUSBERRY,  :SYRUPYAPPLE,  
+ :       :   :TARTAPPLE, :SWEETAPPLE
  :       : ])
- @>Exit Event Processing
  @>
-: Branch End
-@>Conditional Branch: Script: $player.badge_count >= 1
+: Else
  @>Script: pbPokemonMart([
- :       :   :ORANBERRY,
- :       :   :SYRUPYAPPLE, :TARTAPPLE,
- :       :   :SWEETAPPLE
+ :       :   :ORANBERRY, :CHERIBERRY,
+ :       :   :CHESTOBERRY, :PECHABERRY,
+ :       :   :RAWSTBERRY, :ASPEARBERRY,
+ :       :   :LEPPABERRY, :PERSIMBERRY
  :       : ])
- @>Exit Event Processing
  @>
 : Branch End
-@>Script: pbPokemonMart([
-:       :   :ORANBERRY, :CHERIBERRY,
-:       :   :CHESTOBERRY, :PECHABERRY,
-:       :   :RAWSTBERRY, :ASPEARBERRY
-:       : ])
 @>
 
 #------------------------------------------------------------------------------
@@ -42334,7 +42327,7 @@ List of Event Commands:
 
 #------------------------------------------------------------------------------
 Event ID: 013
-Event Name: EV013
+Event Name: Rezepteladen
 (X,Y): (011,006)
 
 Page #1
@@ -166403,18 +166396,19 @@ List of Event Commands:
  :              : $>Wait: 2 frame(s)
  :              : $>Turn Up
  :              : $>Wait: 2 frame(s)
-@>Wait for Move's Completion
+@>Wait: 8 frame(s)
 @>Set Move Route: Player
                   (Ignore If Can't Move)
  :              : $>Through ON
  :              : $>Move Up
  :              : $>Through OFF
-@>Wait for Move's Completion
+@>Wait: 8 frame(s)
 @>Change Transparent Flag: Transparency
 @>Script: Followers.follow_into_door
-@>Wait for Move's Completion
+@>Wait: 8 frame(s)
 @>Set Move Route: This event
                   (Ignore If Can't Move)
+ :              : $>SE: 'Door slide', 100, 80
  :              : $>Graphic: "Door Stadt 5', 0, 8, 0
  :              : $>Wait: 2 frame(s)
  :              : $>Turn Right
@@ -166423,12 +166417,13 @@ List of Event Commands:
  :              : $>Wait: 2 frame(s)
  :              : $>Turn Down
  :              : $>Wait: 2 frame(s)
-@>Wait for Move's Completion
+@>Wait: 8 frame(s)
 @>Change Screen Color Tone: (-255,-255,-255,0), @6
 @>Wait: 8 frame(s)
 @>Change Transparent Flag: Normal
 @>Transfer Player:[227: Arena 3], (023,046), Up, No Fade
 @>Change Screen Color Tone: (0,0,0,0), @6
+@>Wait: 8 frame(s)
 @>
 
 Page #2
@@ -166460,15 +166455,18 @@ List of Event Commands:
   :              : $>Turn Up
   :              : $>Wait: 2 frame(s)
   :              : $>Graphic: "Door Stadt 5', 0, 2, 1
- @>Wait for Move's Completion
+ @>Wait: 8 frame(s)
  @>Change Transparent Flag: Normal
  @>Set Move Route: Player
                    (Ignore If Can't Move)
+  :              : $>Through ON
   :              : $>Move Down
- @>Wait for Move's Completion
+  :              : $>Through OFF
+ @>Wait: 8 frame(s)
  @>Script: Followers.put_followers_on_player
  @>Set Move Route: This event
                    (Ignore If Can't Move)
+  :              : $>SE: 'Door slide', 100, 80
   :              : $>Graphic: "Door Stadt 5', 0, 8, 0
   :              : $>Wait: 2 frame(s)
   :              : $>Turn Right
@@ -166477,7 +166475,7 @@ List of Event Commands:
   :              : $>Wait: 2 frame(s)
   :              : $>Turn Down
   :              : $>Wait: 2 frame(s)
- @>Wait for Move's Completion
+ @>Wait: 8 frame(s)
  @>
 : Branch End
 @>Script: setTempSwitchOn("A")
@@ -166505,7 +166503,7 @@ Trigger: Player Touch
 List of Event Commands:
 @>Set Move Route: This event
                   (Ignore If Can't Move)
- :              : $>SE: 'Center Door', 100, 100
+ :              : $>SE: 'Door enter', 100, 100
  :              : $>Wait: 2 frame(s)
  :              : $>Turn Left
  :              : $>Wait: 2 frame(s)
@@ -166513,15 +166511,16 @@ List of Event Commands:
  :              : $>Wait: 2 frame(s)
  :              : $>Turn Up
  :              : $>Wait: 2 frame(s)
-@>Wait for Move's Completion
+@>Wait: 8 frame(s)
 @>Set Move Route: Player
                   (Ignore If Can't Move)
  :              : $>Through ON
  :              : $>Move Up
  :              : $>Through OFF
-@>Wait for Move's Completion
+@>Wait: 8 frame(s)
 @>Change Transparent Flag: Transparency
 @>Script: Followers.follow_into_door
+@>Wait: 8 frame(s)
 @>Wait for Move's Completion
 @>Set Move Route: This event
                   (Ignore If Can't Move)
@@ -166532,12 +166531,13 @@ List of Event Commands:
  :              : $>Wait: 2 frame(s)
  :              : $>Turn Down
  :              : $>Wait: 2 frame(s)
-@>Wait for Move's Completion
+@>Wait: 8 frame(s)
 @>Change Screen Color Tone: (-255,-255,-255,0), @6
 @>Wait: 8 frame(s)
 @>Change Transparent Flag: Normal
 @>Transfer Player:[211: Solhaven], (009,018), Up, No Fade
 @>Change Screen Color Tone: (0,0,0,0), @6
+@>Wait: 8 frame(s)
 @>
 
 Page #2
@@ -166560,7 +166560,7 @@ List of Event Commands:
  @>Script: Followers.hide_followers
  @>Set Move Route: This event
                    (Ignore If Can't Move)
-  :              : $>SE: 'Center Door', 100, 100
+  :              : $>SE: 'Door enter', 100, 100
   :              : $>Wait: 2 frame(s)
   :              : $>Turn Left
   :              : $>Wait: 2 frame(s)
@@ -166568,12 +166568,14 @@ List of Event Commands:
   :              : $>Wait: 2 frame(s)
   :              : $>Turn Up
   :              : $>Wait: 2 frame(s)
- @>Wait for Move's Completion
+ @>Wait: 8 frame(s)
  @>Change Transparent Flag: Normal
  @>Set Move Route: Player
                    (Ignore If Can't Move)
+  :              : $>Through ON
   :              : $>Move Down
- @>Wait for Move's Completion
+  :              : $>Through OFF
+ @>Wait: 8 frame(s)
  @>Script: Followers.put_followers_on_player
  @>Set Move Route: This event
                    (Ignore If Can't Move)
@@ -166583,7 +166585,7 @@ List of Event Commands:
   :              : $>Wait: 2 frame(s)
   :              : $>Turn Down
   :              : $>Wait: 2 frame(s)
- @>Wait for Move's Completion
+ @>Wait: 8 frame(s)
  @>
 : Branch End
 @>Script: setTempSwitchOn("A")
@@ -166606,7 +166608,7 @@ Trigger: Player Touch
 List of Event Commands:
 @>Set Move Route: This event
                   (Ignore If Can't Move)
- :              : $>SE: 'Center Door', 100, 100
+ :              : $>SE: 'Door enter', 100, 100
  :              : $>Wait: 2 frame(s)
  :              : $>Turn Left
  :              : $>Wait: 2 frame(s)
@@ -166614,15 +166616,16 @@ List of Event Commands:
  :              : $>Wait: 2 frame(s)
  :              : $>Turn Up
  :              : $>Wait: 2 frame(s)
-@>Wait for Move's Completion
+@>Wait: 8 frame(s)
 @>Set Move Route: Player
                   (Ignore If Can't Move)
  :              : $>Through ON
  :              : $>Move Up
  :              : $>Through OFF
-@>Wait for Move's Completion
+@>Wait: 8 frame(s)
 @>Change Transparent Flag: Transparency
 @>Script: Followers.follow_into_door
+@>Wait: 8 frame(s)
 @>Wait for Move's Completion
 @>Set Move Route: This event
                   (Ignore If Can't Move)
@@ -166633,12 +166636,13 @@ List of Event Commands:
  :              : $>Wait: 2 frame(s)
  :              : $>Turn Down
  :              : $>Wait: 2 frame(s)
-@>Wait for Move's Completion
+@>Wait: 8 frame(s)
 @>Change Screen Color Tone: (-255,-255,-255,0), @6
 @>Wait: 8 frame(s)
 @>Change Transparent Flag: Normal
 @>Transfer Player:[211: Solhaven], (009,018), Up, No Fade
 @>Change Screen Color Tone: (0,0,0,0), @6
+@>Wait: 8 frame(s)
 @>
 
 Page #4
@@ -166662,7 +166666,7 @@ List of Event Commands:
  @>Script: Followers.hide_followers
  @>Set Move Route: This event
                    (Ignore If Can't Move)
-  :              : $>SE: 'Center Door', 100, 100
+  :              : $>SE: 'Door enter', 100, 100
   :              : $>Wait: 2 frame(s)
   :              : $>Turn Left
   :              : $>Wait: 2 frame(s)
@@ -166670,12 +166674,14 @@ List of Event Commands:
   :              : $>Wait: 2 frame(s)
   :              : $>Turn Up
   :              : $>Wait: 2 frame(s)
- @>Wait for Move's Completion
+ @>Wait: 8 frame(s)
  @>Change Transparent Flag: Normal
  @>Set Move Route: Player
                    (Ignore If Can't Move)
+  :              : $>Through ON
   :              : $>Move Down
- @>Wait for Move's Completion
+  :              : $>Through OFF
+ @>Wait: 8 frame(s)
  @>Script: Followers.put_followers_on_player
  @>Set Move Route: This event
                    (Ignore If Can't Move)
@@ -166685,7 +166691,7 @@ List of Event Commands:
   :              : $>Wait: 2 frame(s)
   :              : $>Turn Down
   :              : $>Wait: 2 frame(s)
- @>Wait for Move's Completion
+ @>Wait: 8 frame(s)
  @>
 : Branch End
 @>Script: setTempSwitchOn("A")
@@ -166713,7 +166719,7 @@ Trigger: Player Touch
 List of Event Commands:
 @>Set Move Route: This event
                   (Ignore If Can't Move)
- :              : $>SE: 'Center Door', 100, 100
+ :              : $>SE: 'Door enter', 100, 100
  :              : $>Wait: 2 frame(s)
  :              : $>Turn Left
  :              : $>Wait: 2 frame(s)
@@ -166721,16 +166727,16 @@ List of Event Commands:
  :              : $>Wait: 2 frame(s)
  :              : $>Turn Up
  :              : $>Wait: 2 frame(s)
-@>Wait for Move's Completion
+@>Wait: 8 frame(s)
 @>Set Move Route: Player
                   (Ignore If Can't Move)
  :              : $>Through ON
  :              : $>Move Up
  :              : $>Through OFF
-@>Wait for Move's Completion
+@>Wait: 8 frame(s)
 @>Change Transparent Flag: Transparency
 @>Script: Followers.follow_into_door
-@>Wait for Move's Completion
+@>Wait: 8 frame(s)
 @>Set Move Route: This event
                   (Ignore If Can't Move)
  :              : $>Wait: 2 frame(s)
@@ -166746,6 +166752,7 @@ List of Event Commands:
 @>Change Transparent Flag: Normal
 @>Transfer Player:[213: Solhaven], (009,018), Up, No Fade
 @>Change Screen Color Tone: (0,0,0,0), @6
+@>Wait: 8 frame(s)
 @>
 
 Page #2
@@ -166768,7 +166775,7 @@ List of Event Commands:
  @>Script: Followers.hide_followers
  @>Set Move Route: This event
                    (Ignore If Can't Move)
-  :              : $>SE: 'Center Door', 100, 100
+  :              : $>SE: 'Door enter', 100, 100
   :              : $>Wait: 2 frame(s)
   :              : $>Turn Left
   :              : $>Wait: 2 frame(s)
@@ -166776,12 +166783,14 @@ List of Event Commands:
   :              : $>Wait: 2 frame(s)
   :              : $>Turn Up
   :              : $>Wait: 2 frame(s)
- @>Wait for Move's Completion
+ @>Wait: 8 frame(s)
  @>Change Transparent Flag: Normal
  @>Set Move Route: Player
                    (Ignore If Can't Move)
+  :              : $>Through ON
   :              : $>Move Down
- @>Wait for Move's Completion
+  :              : $>Through OFF
+ @>Wait: 8 frame(s)
  @>Script: Followers.put_followers_on_player
  @>Set Move Route: This event
                    (Ignore If Can't Move)
@@ -166791,9 +166800,10 @@ List of Event Commands:
   :              : $>Wait: 2 frame(s)
   :              : $>Turn Down
   :              : $>Wait: 2 frame(s)
- @>Wait for Move's Completion
+ @>Wait: 8 frame(s)
  @>
 : Branch End
+@>Script: setTempSwitchOn("A")
 @>Script: setTempSwitchOn("A")
 @>
 
@@ -166814,7 +166824,7 @@ Trigger: Player Touch
 List of Event Commands:
 @>Set Move Route: This event
                   (Ignore If Can't Move)
- :              : $>SE: 'Center Door', 100, 100
+ :              : $>SE: 'Door enter', 100, 100
  :              : $>Wait: 2 frame(s)
  :              : $>Turn Left
  :              : $>Wait: 2 frame(s)
@@ -166822,16 +166832,16 @@ List of Event Commands:
  :              : $>Wait: 2 frame(s)
  :              : $>Turn Up
  :              : $>Wait: 2 frame(s)
-@>Wait for Move's Completion
+@>Wait: 8 frame(s)
 @>Set Move Route: Player
                   (Ignore If Can't Move)
  :              : $>Through ON
  :              : $>Move Up
  :              : $>Through OFF
-@>Wait for Move's Completion
+@>Wait: 8 frame(s)
 @>Change Transparent Flag: Transparency
 @>Script: Followers.follow_into_door
-@>Wait for Move's Completion
+@>Wait: 8 frame(s)
 @>Set Move Route: This event
                   (Ignore If Can't Move)
  :              : $>Wait: 2 frame(s)
@@ -166841,12 +166851,13 @@ List of Event Commands:
  :              : $>Wait: 2 frame(s)
  :              : $>Turn Down
  :              : $>Wait: 2 frame(s)
-@>Wait for Move's Completion
+@>Wait: 8 frame(s)
 @>Change Screen Color Tone: (-255,-255,-255,0), @6
 @>Wait: 8 frame(s)
 @>Change Transparent Flag: Normal
 @>Transfer Player:[213: Solhaven], (009,018), Up, No Fade
 @>Change Screen Color Tone: (0,0,0,0), @6
+@>Wait: 8 frame(s)
 @>
 
 Page #4
@@ -166870,7 +166881,7 @@ List of Event Commands:
  @>Script: Followers.hide_followers
  @>Set Move Route: This event
                    (Ignore If Can't Move)
-  :              : $>SE: 'Center Door', 100, 100
+  :              : $>SE: 'Door enter', 100, 100
   :              : $>Wait: 2 frame(s)
   :              : $>Turn Left
   :              : $>Wait: 2 frame(s)
@@ -166878,12 +166889,14 @@ List of Event Commands:
   :              : $>Wait: 2 frame(s)
   :              : $>Turn Up
   :              : $>Wait: 2 frame(s)
- @>Wait for Move's Completion
+ @>Wait: 8 frame(s)
  @>Change Transparent Flag: Normal
  @>Set Move Route: Player
                    (Ignore If Can't Move)
+  :              : $>Through ON
   :              : $>Move Down
- @>Wait for Move's Completion
+  :              : $>Through OFF
+ @>Wait: 8 frame(s)
  @>Script: Followers.put_followers_on_player
  @>Set Move Route: This event
                    (Ignore If Can't Move)
@@ -166893,9 +166906,10 @@ List of Event Commands:
   :              : $>Wait: 2 frame(s)
   :              : $>Turn Down
   :              : $>Wait: 2 frame(s)
- @>Wait for Move's Completion
+ @>Wait: 8 frame(s)
  @>
 : Branch End
+@>Script: setTempSwitchOn("A")
 @>Script: setTempSwitchOn("A")
 @>
 
@@ -166921,7 +166935,7 @@ Trigger: Player Touch
 List of Event Commands:
 @>Set Move Route: This event
                   (Ignore If Can't Move)
- :              : $>SE: 'Center Door', 100, 100
+ :              : $>SE: 'Door enter', 100, 100
  :              : $>Wait: 2 frame(s)
  :              : $>Turn Left
  :              : $>Wait: 2 frame(s)
@@ -166929,16 +166943,16 @@ List of Event Commands:
  :              : $>Wait: 2 frame(s)
  :              : $>Turn Up
  :              : $>Wait: 2 frame(s)
-@>Wait for Move's Completion
+@>Wait: 8 frame(s)
 @>Set Move Route: Player
                   (Ignore If Can't Move)
  :              : $>Through ON
  :              : $>Move Up
  :              : $>Through OFF
-@>Wait for Move's Completion
+@>Wait: 8 frame(s)
 @>Change Transparent Flag: Transparency
 @>Script: Followers.follow_into_door
-@>Wait for Move's Completion
+@>Wait: 8 frame(s)
 @>Set Move Route: This event
                   (Ignore If Can't Move)
  :              : $>Wait: 2 frame(s)
@@ -166948,12 +166962,13 @@ List of Event Commands:
  :              : $>Wait: 2 frame(s)
  :              : $>Turn Down
  :              : $>Wait: 2 frame(s)
-@>Wait for Move's Completion
+@>Wait: 8 frame(s)
 @>Change Screen Color Tone: (-255,-255,-255,0), @6
 @>Wait: 8 frame(s)
 @>Change Transparent Flag: Normal
 @>Transfer Player:[215: Solhaven], (009,018), Up, No Fade
 @>Change Screen Color Tone: (0,0,0,0), @6
+@>Wait: 8 frame(s)
 @>
 
 Page #2
@@ -166976,7 +166991,7 @@ List of Event Commands:
  @>Script: Followers.hide_followers
  @>Set Move Route: This event
                    (Ignore If Can't Move)
-  :              : $>SE: 'Center Door', 100, 100
+  :              : $>SE: 'Door enter', 100, 100
   :              : $>Wait: 2 frame(s)
   :              : $>Turn Left
   :              : $>Wait: 2 frame(s)
@@ -166984,12 +166999,14 @@ List of Event Commands:
   :              : $>Wait: 2 frame(s)
   :              : $>Turn Up
   :              : $>Wait: 2 frame(s)
- @>Wait for Move's Completion
+ @>Wait: 8 frame(s)
  @>Change Transparent Flag: Normal
  @>Set Move Route: Player
                    (Ignore If Can't Move)
+  :              : $>Through ON
   :              : $>Move Down
- @>Wait for Move's Completion
+  :              : $>Through OFF
+ @>Wait: 8 frame(s)
  @>Script: Followers.put_followers_on_player
  @>Set Move Route: This event
                    (Ignore If Can't Move)
@@ -166999,9 +167016,10 @@ List of Event Commands:
   :              : $>Wait: 2 frame(s)
   :              : $>Turn Down
   :              : $>Wait: 2 frame(s)
- @>Wait for Move's Completion
+ @>Wait: 8 frame(s)
  @>
 : Branch End
+@>Script: setTempSwitchOn("A")
 @>Script: setTempSwitchOn("A")
 @>
 
@@ -167022,7 +167040,7 @@ Trigger: Player Touch
 List of Event Commands:
 @>Set Move Route: This event
                   (Ignore If Can't Move)
- :              : $>SE: 'Center Door', 100, 100
+ :              : $>SE: 'Door enter', 100, 100
  :              : $>Wait: 2 frame(s)
  :              : $>Turn Left
  :              : $>Wait: 2 frame(s)
@@ -167030,16 +167048,16 @@ List of Event Commands:
  :              : $>Wait: 2 frame(s)
  :              : $>Turn Up
  :              : $>Wait: 2 frame(s)
-@>Wait for Move's Completion
+@>Wait: 8 frame(s)
 @>Set Move Route: Player
                   (Ignore If Can't Move)
  :              : $>Through ON
  :              : $>Move Up
  :              : $>Through OFF
-@>Wait for Move's Completion
+@>Wait: 8 frame(s)
 @>Change Transparent Flag: Transparency
 @>Script: Followers.follow_into_door
-@>Wait for Move's Completion
+@>Wait: 8 frame(s)
 @>Set Move Route: This event
                   (Ignore If Can't Move)
  :              : $>Wait: 2 frame(s)
@@ -167049,12 +167067,13 @@ List of Event Commands:
  :              : $>Wait: 2 frame(s)
  :              : $>Turn Down
  :              : $>Wait: 2 frame(s)
-@>Wait for Move's Completion
+@>Wait: 8 frame(s)
 @>Change Screen Color Tone: (-255,-255,-255,0), @6
 @>Wait: 8 frame(s)
 @>Change Transparent Flag: Normal
 @>Transfer Player:[215: Solhaven], (009,018), Up, No Fade
 @>Change Screen Color Tone: (0,0,0,0), @6
+@>Wait: 8 frame(s)
 @>
 
 Page #4
@@ -167078,7 +167097,7 @@ List of Event Commands:
  @>Script: Followers.hide_followers
  @>Set Move Route: This event
                    (Ignore If Can't Move)
-  :              : $>SE: 'Center Door', 100, 100
+  :              : $>SE: 'Door enter', 100, 100
   :              : $>Wait: 2 frame(s)
   :              : $>Turn Left
   :              : $>Wait: 2 frame(s)
@@ -167086,12 +167105,14 @@ List of Event Commands:
   :              : $>Wait: 2 frame(s)
   :              : $>Turn Up
   :              : $>Wait: 2 frame(s)
- @>Wait for Move's Completion
+ @>Wait: 8 frame(s)
  @>Change Transparent Flag: Normal
  @>Set Move Route: Player
                    (Ignore If Can't Move)
+  :              : $>Through ON
   :              : $>Move Down
- @>Wait for Move's Completion
+  :              : $>Through OFF
+ @>Wait: 8 frame(s)
  @>Script: Followers.put_followers_on_player
  @>Set Move Route: This event
                    (Ignore If Can't Move)
@@ -167101,9 +167122,10 @@ List of Event Commands:
   :              : $>Wait: 2 frame(s)
   :              : $>Turn Down
   :              : $>Wait: 2 frame(s)
- @>Wait for Move's Completion
+ @>Wait: 8 frame(s)
  @>
 : Branch End
+@>Script: setTempSwitchOn("A")
 @>Script: setTempSwitchOn("A")
 @>
 
@@ -167129,7 +167151,7 @@ Trigger: Player Touch
 List of Event Commands:
 @>Set Move Route: This event
                   (Ignore If Can't Move)
- :              : $>SE: 'Center Door', 100, 100
+ :              : $>SE: 'Door enter', 100, 100
  :              : $>Wait: 2 frame(s)
  :              : $>Turn Left
  :              : $>Wait: 2 frame(s)
@@ -167137,16 +167159,16 @@ List of Event Commands:
  :              : $>Wait: 2 frame(s)
  :              : $>Turn Up
  :              : $>Wait: 2 frame(s)
-@>Wait for Move's Completion
+@>Wait: 8 frame(s)
 @>Set Move Route: Player
                   (Ignore If Can't Move)
  :              : $>Through ON
  :              : $>Move Up
  :              : $>Through OFF
-@>Wait for Move's Completion
+@>Wait: 8 frame(s)
 @>Change Transparent Flag: Transparency
 @>Script: Followers.follow_into_door
-@>Wait for Move's Completion
+@>Wait: 8 frame(s)
 @>Set Move Route: This event
                   (Ignore If Can't Move)
  :              : $>Wait: 2 frame(s)
@@ -167156,12 +167178,13 @@ List of Event Commands:
  :              : $>Wait: 2 frame(s)
  :              : $>Turn Down
  :              : $>Wait: 2 frame(s)
-@>Wait for Move's Completion
+@>Wait: 8 frame(s)
 @>Change Screen Color Tone: (-255,-255,-255,0), @6
 @>Wait: 8 frame(s)
 @>Change Transparent Flag: Normal
 @>Transfer Player:[217: Solhaven], (009,018), Up, No Fade
 @>Change Screen Color Tone: (0,0,0,0), @6
+@>Wait: 8 frame(s)
 @>
 
 Page #2
@@ -167184,7 +167207,7 @@ List of Event Commands:
  @>Script: Followers.hide_followers
  @>Set Move Route: This event
                    (Ignore If Can't Move)
-  :              : $>SE: 'Center Door', 100, 100
+  :              : $>SE: 'Door enter', 100, 100
   :              : $>Wait: 2 frame(s)
   :              : $>Turn Left
   :              : $>Wait: 2 frame(s)
@@ -167192,12 +167215,14 @@ List of Event Commands:
   :              : $>Wait: 2 frame(s)
   :              : $>Turn Up
   :              : $>Wait: 2 frame(s)
- @>Wait for Move's Completion
+ @>Wait: 8 frame(s)
  @>Change Transparent Flag: Normal
  @>Set Move Route: Player
                    (Ignore If Can't Move)
+  :              : $>Through ON
   :              : $>Move Down
- @>Wait for Move's Completion
+  :              : $>Through OFF
+ @>Wait: 8 frame(s)
  @>Script: Followers.put_followers_on_player
  @>Set Move Route: This event
                    (Ignore If Can't Move)
@@ -167207,7 +167232,7 @@ List of Event Commands:
   :              : $>Wait: 2 frame(s)
   :              : $>Turn Down
   :              : $>Wait: 2 frame(s)
- @>Wait for Move's Completion
+ @>Wait: 8 frame(s)
  @>
 : Branch End
 @>Script: setTempSwitchOn("A")
@@ -167230,7 +167255,7 @@ Trigger: Player Touch
 List of Event Commands:
 @>Set Move Route: This event
                   (Ignore If Can't Move)
- :              : $>SE: 'Center Door', 100, 100
+ :              : $>SE: 'Door enter', 100, 100
  :              : $>Wait: 2 frame(s)
  :              : $>Turn Left
  :              : $>Wait: 2 frame(s)
@@ -167238,16 +167263,16 @@ List of Event Commands:
  :              : $>Wait: 2 frame(s)
  :              : $>Turn Up
  :              : $>Wait: 2 frame(s)
-@>Wait for Move's Completion
+@>Wait: 8 frame(s)
 @>Set Move Route: Player
                   (Ignore If Can't Move)
  :              : $>Through ON
  :              : $>Move Up
  :              : $>Through OFF
-@>Wait for Move's Completion
+@>Wait: 8 frame(s)
 @>Change Transparent Flag: Transparency
 @>Script: Followers.follow_into_door
-@>Wait for Move's Completion
+@>Wait: 8 frame(s)
 @>Set Move Route: This event
                   (Ignore If Can't Move)
  :              : $>Wait: 2 frame(s)
@@ -167257,12 +167282,13 @@ List of Event Commands:
  :              : $>Wait: 2 frame(s)
  :              : $>Turn Down
  :              : $>Wait: 2 frame(s)
-@>Wait for Move's Completion
+@>Wait: 8 frame(s)
 @>Change Screen Color Tone: (-255,-255,-255,0), @6
 @>Wait: 8 frame(s)
 @>Change Transparent Flag: Normal
 @>Transfer Player:[217: Solhaven], (009,018), Up, No Fade
 @>Change Screen Color Tone: (0,0,0,0), @6
+@>Wait: 8 frame(s)
 @>
 
 Page #4
@@ -167286,7 +167312,7 @@ List of Event Commands:
  @>Script: Followers.hide_followers
  @>Set Move Route: This event
                    (Ignore If Can't Move)
-  :              : $>SE: 'Center Door', 100, 100
+  :              : $>SE: 'Door enter', 100, 100
   :              : $>Wait: 2 frame(s)
   :              : $>Turn Left
   :              : $>Wait: 2 frame(s)
@@ -167294,12 +167320,14 @@ List of Event Commands:
   :              : $>Wait: 2 frame(s)
   :              : $>Turn Up
   :              : $>Wait: 2 frame(s)
- @>Wait for Move's Completion
+ @>Wait: 8 frame(s)
  @>Change Transparent Flag: Normal
  @>Set Move Route: Player
                    (Ignore If Can't Move)
+  :              : $>Through ON
   :              : $>Move Down
- @>Wait for Move's Completion
+  :              : $>Through OFF
+ @>Wait: 8 frame(s)
  @>Script: Followers.put_followers_on_player
  @>Set Move Route: This event
                    (Ignore If Can't Move)
@@ -167309,7 +167337,7 @@ List of Event Commands:
   :              : $>Wait: 2 frame(s)
   :              : $>Turn Down
   :              : $>Wait: 2 frame(s)
- @>Wait for Move's Completion
+ @>Wait: 8 frame(s)
  @>
 : Branch End
 @>Script: setTempSwitchOn("A")
@@ -167337,7 +167365,7 @@ Trigger: Player Touch
 List of Event Commands:
 @>Set Move Route: This event
                   (Ignore If Can't Move)
- :              : $>SE: 'Center Door', 100, 100
+ :              : $>SE: 'Door enter', 100, 100
  :              : $>Wait: 2 frame(s)
  :              : $>Turn Left
  :              : $>Wait: 2 frame(s)
@@ -167345,16 +167373,16 @@ List of Event Commands:
  :              : $>Wait: 2 frame(s)
  :              : $>Turn Up
  :              : $>Wait: 2 frame(s)
-@>Wait for Move's Completion
+@>Wait: 8 frame(s)
 @>Set Move Route: Player
                   (Ignore If Can't Move)
  :              : $>Through ON
  :              : $>Move Up
  :              : $>Through OFF
-@>Wait for Move's Completion
+@>Wait: 8 frame(s)
 @>Change Transparent Flag: Transparency
 @>Script: Followers.follow_into_door
-@>Wait for Move's Completion
+@>Wait: 8 frame(s)
 @>Set Move Route: This event
                   (Ignore If Can't Move)
  :              : $>Wait: 2 frame(s)
@@ -167364,12 +167392,13 @@ List of Event Commands:
  :              : $>Wait: 2 frame(s)
  :              : $>Turn Down
  :              : $>Wait: 2 frame(s)
-@>Wait for Move's Completion
+@>Wait: 8 frame(s)
 @>Change Screen Color Tone: (-255,-255,-255,0), @6
 @>Wait: 8 frame(s)
 @>Change Transparent Flag: Normal
 @>Transfer Player:[219: Solhaven], (009,018), Up, No Fade
 @>Change Screen Color Tone: (0,0,0,0), @6
+@>Wait: 8 frame(s)
 @>
 
 Page #2
@@ -167392,7 +167421,7 @@ List of Event Commands:
  @>Script: Followers.hide_followers
  @>Set Move Route: This event
                    (Ignore If Can't Move)
-  :              : $>SE: 'Center Door', 100, 100
+  :              : $>SE: 'Door enter', 100, 100
   :              : $>Wait: 2 frame(s)
   :              : $>Turn Left
   :              : $>Wait: 2 frame(s)
@@ -167400,12 +167429,14 @@ List of Event Commands:
   :              : $>Wait: 2 frame(s)
   :              : $>Turn Up
   :              : $>Wait: 2 frame(s)
- @>Wait for Move's Completion
+ @>Wait: 8 frame(s)
  @>Change Transparent Flag: Normal
  @>Set Move Route: Player
                    (Ignore If Can't Move)
+  :              : $>Through ON
   :              : $>Move Down
- @>Wait for Move's Completion
+  :              : $>Through OFF
+ @>Wait: 8 frame(s)
  @>Script: Followers.put_followers_on_player
  @>Set Move Route: This event
                    (Ignore If Can't Move)
@@ -167415,7 +167446,7 @@ List of Event Commands:
   :              : $>Wait: 2 frame(s)
   :              : $>Turn Down
   :              : $>Wait: 2 frame(s)
- @>Wait for Move's Completion
+ @>Wait: 8 frame(s)
  @>
 : Branch End
 @>Script: setTempSwitchOn("A")
@@ -167438,7 +167469,7 @@ Trigger: Player Touch
 List of Event Commands:
 @>Set Move Route: This event
                   (Ignore If Can't Move)
- :              : $>SE: 'Center Door', 100, 100
+ :              : $>SE: 'Door enter', 100, 100
  :              : $>Wait: 2 frame(s)
  :              : $>Turn Left
  :              : $>Wait: 2 frame(s)
@@ -167446,16 +167477,16 @@ List of Event Commands:
  :              : $>Wait: 2 frame(s)
  :              : $>Turn Up
  :              : $>Wait: 2 frame(s)
-@>Wait for Move's Completion
+@>Wait: 8 frame(s)
 @>Set Move Route: Player
                   (Ignore If Can't Move)
  :              : $>Through ON
  :              : $>Move Up
  :              : $>Through OFF
-@>Wait for Move's Completion
+@>Wait: 8 frame(s)
 @>Change Transparent Flag: Transparency
 @>Script: Followers.follow_into_door
-@>Wait for Move's Completion
+@>Wait: 8 frame(s)
 @>Set Move Route: This event
                   (Ignore If Can't Move)
  :              : $>Wait: 2 frame(s)
@@ -167465,12 +167496,13 @@ List of Event Commands:
  :              : $>Wait: 2 frame(s)
  :              : $>Turn Down
  :              : $>Wait: 2 frame(s)
-@>Wait for Move's Completion
+@>Wait: 8 frame(s)
 @>Change Screen Color Tone: (-255,-255,-255,0), @6
 @>Wait: 8 frame(s)
 @>Change Transparent Flag: Normal
 @>Transfer Player:[219: Solhaven], (009,018), Up, No Fade
 @>Change Screen Color Tone: (0,0,0,0), @6
+@>Wait: 8 frame(s)
 @>
 
 Page #4
@@ -167494,7 +167526,7 @@ List of Event Commands:
  @>Script: Followers.hide_followers
  @>Set Move Route: This event
                    (Ignore If Can't Move)
-  :              : $>SE: 'Center Door', 100, 100
+  :              : $>SE: 'Door enter', 100, 100
   :              : $>Wait: 2 frame(s)
   :              : $>Turn Left
   :              : $>Wait: 2 frame(s)
@@ -167502,12 +167534,14 @@ List of Event Commands:
   :              : $>Wait: 2 frame(s)
   :              : $>Turn Up
   :              : $>Wait: 2 frame(s)
- @>Wait for Move's Completion
+ @>Wait: 8 frame(s)
  @>Change Transparent Flag: Normal
  @>Set Move Route: Player
                    (Ignore If Can't Move)
+  :              : $>Through ON
   :              : $>Move Down
- @>Wait for Move's Completion
+  :              : $>Through OFF
+ @>Wait: 8 frame(s)
  @>Script: Followers.put_followers_on_player
  @>Set Move Route: This event
                    (Ignore If Can't Move)
@@ -167517,7 +167551,7 @@ List of Event Commands:
   :              : $>Wait: 2 frame(s)
   :              : $>Turn Down
   :              : $>Wait: 2 frame(s)
- @>Wait for Move's Completion
+ @>Wait: 8 frame(s)
  @>
 : Branch End
 @>Script: setTempSwitchOn("A")
@@ -167545,7 +167579,7 @@ Trigger: Player Touch
 List of Event Commands:
 @>Set Move Route: This event
                   (Ignore If Can't Move)
- :              : $>SE: 'Center Door', 100, 100
+ :              : $>SE: 'Door enter', 100, 100
  :              : $>Wait: 2 frame(s)
  :              : $>Turn Left
  :              : $>Wait: 2 frame(s)
@@ -167553,16 +167587,16 @@ List of Event Commands:
  :              : $>Wait: 2 frame(s)
  :              : $>Turn Up
  :              : $>Wait: 2 frame(s)
-@>Wait for Move's Completion
+@>Wait: 8 frame(s)
 @>Set Move Route: Player
                   (Ignore If Can't Move)
  :              : $>Through ON
  :              : $>Move Up
  :              : $>Through OFF
-@>Wait for Move's Completion
+@>Wait: 8 frame(s)
 @>Change Transparent Flag: Transparency
 @>Script: Followers.follow_into_door
-@>Wait for Move's Completion
+@>Wait: 8 frame(s)
 @>Set Move Route: This event
                   (Ignore If Can't Move)
  :              : $>Wait: 2 frame(s)
@@ -167572,12 +167606,13 @@ List of Event Commands:
  :              : $>Wait: 2 frame(s)
  :              : $>Turn Down
  :              : $>Wait: 2 frame(s)
-@>Wait for Move's Completion
+@>Wait: 8 frame(s)
 @>Change Screen Color Tone: (-255,-255,-255,0), @6
 @>Wait: 8 frame(s)
 @>Change Transparent Flag: Normal
 @>Transfer Player:[221: Solhaven], (009,018), Up, No Fade
 @>Change Screen Color Tone: (0,0,0,0), @6
+@>Wait: 8 frame(s)
 @>
 
 Page #2
@@ -167600,7 +167635,7 @@ List of Event Commands:
  @>Script: Followers.hide_followers
  @>Set Move Route: This event
                    (Ignore If Can't Move)
-  :              : $>SE: 'Center Door', 100, 100
+  :              : $>SE: 'Door enter', 100, 100
   :              : $>Wait: 2 frame(s)
   :              : $>Turn Left
   :              : $>Wait: 2 frame(s)
@@ -167608,12 +167643,14 @@ List of Event Commands:
   :              : $>Wait: 2 frame(s)
   :              : $>Turn Up
   :              : $>Wait: 2 frame(s)
- @>Wait for Move's Completion
+ @>Wait: 8 frame(s)
  @>Change Transparent Flag: Normal
  @>Set Move Route: Player
                    (Ignore If Can't Move)
+  :              : $>Through ON
   :              : $>Move Down
- @>Wait for Move's Completion
+  :              : $>Through OFF
+ @>Wait: 8 frame(s)
  @>Script: Followers.put_followers_on_player
  @>Set Move Route: This event
                    (Ignore If Can't Move)
@@ -167623,7 +167660,7 @@ List of Event Commands:
   :              : $>Wait: 2 frame(s)
   :              : $>Turn Down
   :              : $>Wait: 2 frame(s)
- @>Wait for Move's Completion
+ @>Wait: 8 frame(s)
  @>
 : Branch End
 @>Script: setTempSwitchOn("A")
@@ -167646,7 +167683,7 @@ Trigger: Player Touch
 List of Event Commands:
 @>Set Move Route: This event
                   (Ignore If Can't Move)
- :              : $>SE: 'Center Door', 100, 100
+ :              : $>SE: 'Door enter', 100, 100
  :              : $>Wait: 2 frame(s)
  :              : $>Turn Left
  :              : $>Wait: 2 frame(s)
@@ -167654,16 +167691,16 @@ List of Event Commands:
  :              : $>Wait: 2 frame(s)
  :              : $>Turn Up
  :              : $>Wait: 2 frame(s)
-@>Wait for Move's Completion
+@>Wait: 8 frame(s)
 @>Set Move Route: Player
                   (Ignore If Can't Move)
  :              : $>Through ON
  :              : $>Move Up
  :              : $>Through OFF
-@>Wait for Move's Completion
+@>Wait: 8 frame(s)
 @>Change Transparent Flag: Transparency
 @>Script: Followers.follow_into_door
-@>Wait for Move's Completion
+@>Wait: 8 frame(s)
 @>Set Move Route: This event
                   (Ignore If Can't Move)
  :              : $>Wait: 2 frame(s)
@@ -167673,12 +167710,13 @@ List of Event Commands:
  :              : $>Wait: 2 frame(s)
  :              : $>Turn Down
  :              : $>Wait: 2 frame(s)
-@>Wait for Move's Completion
+@>Wait: 8 frame(s)
 @>Change Screen Color Tone: (-255,-255,-255,0), @6
 @>Wait: 8 frame(s)
 @>Change Transparent Flag: Normal
 @>Transfer Player:[221: Solhaven], (009,018), Up, No Fade
 @>Change Screen Color Tone: (0,0,0,0), @6
+@>Wait: 8 frame(s)
 @>
 
 Page #4
@@ -167702,7 +167740,7 @@ List of Event Commands:
  @>Script: Followers.hide_followers
  @>Set Move Route: This event
                    (Ignore If Can't Move)
-  :              : $>SE: 'Center Door', 100, 100
+  :              : $>SE: 'Door enter', 100, 100
   :              : $>Wait: 2 frame(s)
   :              : $>Turn Left
   :              : $>Wait: 2 frame(s)
@@ -167710,12 +167748,14 @@ List of Event Commands:
   :              : $>Wait: 2 frame(s)
   :              : $>Turn Up
   :              : $>Wait: 2 frame(s)
- @>Wait for Move's Completion
+ @>Wait: 8 frame(s)
  @>Change Transparent Flag: Normal
  @>Set Move Route: Player
                    (Ignore If Can't Move)
+  :              : $>Through ON
   :              : $>Move Down
- @>Wait for Move's Completion
+  :              : $>Through OFF
+ @>Wait: 8 frame(s)
  @>Script: Followers.put_followers_on_player
  @>Set Move Route: This event
                    (Ignore If Can't Move)
@@ -167725,7 +167765,7 @@ List of Event Commands:
   :              : $>Wait: 2 frame(s)
   :              : $>Turn Down
   :              : $>Wait: 2 frame(s)
- @>Wait for Move's Completion
+ @>Wait: 8 frame(s)
  @>
 : Branch End
 @>Script: setTempSwitchOn("A")
@@ -167761,16 +167801,16 @@ List of Event Commands:
  :              : $>Wait: 2 frame(s)
  :              : $>Turn Up
  :              : $>Wait: 2 frame(s)
-@>Wait for Move's Completion
+@>Wait: 8 frame(s)
 @>Set Move Route: Player
                   (Ignore If Can't Move)
  :              : $>Through ON
  :              : $>Move Up
  :              : $>Through OFF
-@>Wait for Move's Completion
+@>Wait: 8 frame(s)
 @>Change Transparent Flag: Transparency
 @>Script: Followers.follow_into_door
-@>Wait for Move's Completion
+@>Wait: 8 frame(s)
 @>Set Move Route: This event
                   (Ignore If Can't Move)
  :              : $>Wait: 2 frame(s)
@@ -167780,12 +167820,13 @@ List of Event Commands:
  :              : $>Wait: 2 frame(s)
  :              : $>Turn Down
  :              : $>Wait: 2 frame(s)
-@>Wait for Move's Completion
+@>Wait: 8 frame(s)
 @>Change Screen Color Tone: (-255,-255,-255,0), @6
 @>Wait: 8 frame(s)
 @>Change Transparent Flag: Normal
 @>Transfer Player:[225: Solhaven Center], (012,018), Up, No Fade
 @>Change Screen Color Tone: (0,0,0,0), @6
+@>Wait: 8 frame(s)
 @>
 
 Page #2
@@ -167808,7 +167849,7 @@ List of Event Commands:
  @>Script: Followers.hide_followers
  @>Set Move Route: This event
                    (Ignore If Can't Move)
-  :              : $>SE: 'Door slide', 85, 100
+  :              : $>SE: 'Door slide', 100, 100
   :              : $>Wait: 2 frame(s)
   :              : $>Turn Left
   :              : $>Wait: 2 frame(s)
@@ -167816,22 +167857,26 @@ List of Event Commands:
   :              : $>Wait: 2 frame(s)
   :              : $>Turn Up
   :              : $>Wait: 2 frame(s)
- @>Wait for Move's Completion
+ @>Wait: 8 frame(s)
  @>Change Transparent Flag: Normal
  @>Set Move Route: Player
                    (Ignore If Can't Move)
+  :              : $>Through ON
   :              : $>Move Down
- @>Wait for Move's Completion
+  :              : $>Through OFF
+ @>Wait: 8 frame(s)
  @>Script: Followers.put_followers_on_player
  @>Set Move Route: This event
                    (Ignore If Can't Move)
-  :              : $>Turn Right
+  :              : $>SE: 'Door slide', 100, 80
   :              : $>Wait: 2 frame(s)
   :              : $>Turn Left
   :              : $>Wait: 2 frame(s)
-  :              : $>Turn Down
+  :              : $>Turn Right
   :              : $>Wait: 2 frame(s)
- @>Wait for Move's Completion
+  :              : $>Turn Up
+  :              : $>Wait: 2 frame(s)
+ @>Wait: 8 frame(s)
  @>
 : Branch End
 @>Script: setTempSwitchOn("A")
@@ -167862,16 +167907,16 @@ List of Event Commands:
  :              : $>Wait: 2 frame(s)
  :              : $>Turn Up
  :              : $>Wait: 2 frame(s)
-@>Wait for Move's Completion
+@>Wait: 8 frame(s)
 @>Set Move Route: Player
                   (Ignore If Can't Move)
  :              : $>Through ON
  :              : $>Move Up
  :              : $>Through OFF
-@>Wait for Move's Completion
+@>Wait: 8 frame(s)
 @>Change Transparent Flag: Transparency
 @>Script: Followers.follow_into_door
-@>Wait for Move's Completion
+@>Wait: 8 frame(s)
 @>Set Move Route: This event
                   (Ignore If Can't Move)
  :              : $>Wait: 2 frame(s)
@@ -167881,12 +167926,13 @@ List of Event Commands:
  :              : $>Wait: 2 frame(s)
  :              : $>Turn Down
  :              : $>Wait: 2 frame(s)
-@>Wait for Move's Completion
+@>Wait: 8 frame(s)
 @>Change Screen Color Tone: (-255,-255,-255,0), @6
 @>Wait: 8 frame(s)
 @>Change Transparent Flag: Normal
 @>Transfer Player:[225: Solhaven Center], (012,018), Up, No Fade
 @>Change Screen Color Tone: (0,0,0,0), @6
+@>Wait: 8 frame(s)
 @>
 
 Page #4
@@ -167910,7 +167956,7 @@ List of Event Commands:
  @>Script: Followers.hide_followers
  @>Set Move Route: This event
                    (Ignore If Can't Move)
-  :              : $>SE: 'Door slide', 85, 100
+  :              : $>SE: 'Door slide', 100, 100
   :              : $>Wait: 2 frame(s)
   :              : $>Turn Left
   :              : $>Wait: 2 frame(s)
@@ -167918,22 +167964,26 @@ List of Event Commands:
   :              : $>Wait: 2 frame(s)
   :              : $>Turn Up
   :              : $>Wait: 2 frame(s)
- @>Wait for Move's Completion
+ @>Wait: 8 frame(s)
  @>Change Transparent Flag: Normal
  @>Set Move Route: Player
                    (Ignore If Can't Move)
+  :              : $>Through ON
   :              : $>Move Down
- @>Wait for Move's Completion
+  :              : $>Through OFF
+ @>Wait: 8 frame(s)
  @>Script: Followers.put_followers_on_player
  @>Set Move Route: This event
                    (Ignore If Can't Move)
-  :              : $>Turn Right
+  :              : $>SE: 'Door slide', 100, 80
   :              : $>Wait: 2 frame(s)
   :              : $>Turn Left
   :              : $>Wait: 2 frame(s)
-  :              : $>Turn Down
+  :              : $>Turn Right
   :              : $>Wait: 2 frame(s)
- @>Wait for Move's Completion
+  :              : $>Turn Up
+  :              : $>Wait: 2 frame(s)
+ @>Wait: 8 frame(s)
  @>
 : Branch End
 @>Script: setTempSwitchOn("A")
@@ -167969,16 +168019,16 @@ List of Event Commands:
  :              : $>Wait: 2 frame(s)
  :              : $>Turn Up
  :              : $>Wait: 2 frame(s)
-@>Wait for Move's Completion
+@>Wait: 8 frame(s)
 @>Set Move Route: Player
                   (Ignore If Can't Move)
  :              : $>Through ON
  :              : $>Move Up
  :              : $>Through OFF
-@>Wait for Move's Completion
+@>Wait: 8 frame(s)
 @>Change Transparent Flag: Transparency
 @>Script: Followers.follow_into_door
-@>Wait for Move's Completion
+@>Wait: 8 frame(s)
 @>Set Move Route: This event
                   (Ignore If Can't Move)
  :              : $>Wait: 2 frame(s)
@@ -167988,12 +168038,13 @@ List of Event Commands:
  :              : $>Wait: 2 frame(s)
  :              : $>Turn Down
  :              : $>Wait: 2 frame(s)
-@>Wait for Move's Completion
+@>Wait: 8 frame(s)
 @>Change Screen Color Tone: (-255,-255,-255,0), @6
 @>Wait: 8 frame(s)
 @>Change Transparent Flag: Normal
 @>Transfer Player:[226: Solhaven Markt], (012,018), Up, No Fade
 @>Change Screen Color Tone: (0,0,0,0), @6
+@>Wait: 8 frame(s)
 @>
 
 Page #2
@@ -168016,7 +168067,7 @@ List of Event Commands:
  @>Script: Followers.hide_followers
  @>Set Move Route: This event
                    (Ignore If Can't Move)
-  :              : $>SE: 'Door slide', 85, 100
+  :              : $>SE: 'Door slide', 100, 100
   :              : $>Wait: 2 frame(s)
   :              : $>Turn Left
   :              : $>Wait: 2 frame(s)
@@ -168024,22 +168075,26 @@ List of Event Commands:
   :              : $>Wait: 2 frame(s)
   :              : $>Turn Up
   :              : $>Wait: 2 frame(s)
- @>Wait for Move's Completion
+ @>Wait: 8 frame(s)
  @>Change Transparent Flag: Normal
  @>Set Move Route: Player
                    (Ignore If Can't Move)
+  :              : $>Through ON
   :              : $>Move Down
- @>Wait for Move's Completion
+  :              : $>Through OFF
+ @>Wait: 8 frame(s)
  @>Script: Followers.put_followers_on_player
  @>Set Move Route: This event
                    (Ignore If Can't Move)
-  :              : $>Turn Right
+  :              : $>SE: 'Door slide', 100, 80
   :              : $>Wait: 2 frame(s)
   :              : $>Turn Left
   :              : $>Wait: 2 frame(s)
-  :              : $>Turn Down
+  :              : $>Turn Right
   :              : $>Wait: 2 frame(s)
- @>Wait for Move's Completion
+  :              : $>Turn Up
+  :              : $>Wait: 2 frame(s)
+ @>Wait: 8 frame(s)
  @>
 : Branch End
 @>Script: setTempSwitchOn("A")
@@ -168070,16 +168125,16 @@ List of Event Commands:
  :              : $>Wait: 2 frame(s)
  :              : $>Turn Up
  :              : $>Wait: 2 frame(s)
-@>Wait for Move's Completion
+@>Wait: 8 frame(s)
 @>Set Move Route: Player
                   (Ignore If Can't Move)
  :              : $>Through ON
  :              : $>Move Up
  :              : $>Through OFF
-@>Wait for Move's Completion
+@>Wait: 8 frame(s)
 @>Change Transparent Flag: Transparency
 @>Script: Followers.follow_into_door
-@>Wait for Move's Completion
+@>Wait: 8 frame(s)
 @>Set Move Route: This event
                   (Ignore If Can't Move)
  :              : $>Wait: 2 frame(s)
@@ -168089,12 +168144,13 @@ List of Event Commands:
  :              : $>Wait: 2 frame(s)
  :              : $>Turn Down
  :              : $>Wait: 2 frame(s)
-@>Wait for Move's Completion
+@>Wait: 8 frame(s)
 @>Change Screen Color Tone: (-255,-255,-255,0), @6
 @>Wait: 8 frame(s)
 @>Change Transparent Flag: Normal
 @>Transfer Player:[226: Solhaven Markt], (012,018), Up, No Fade
 @>Change Screen Color Tone: (0,0,0,0), @6
+@>Wait: 8 frame(s)
 @>
 
 Page #4
@@ -168118,7 +168174,7 @@ List of Event Commands:
  @>Script: Followers.hide_followers
  @>Set Move Route: This event
                    (Ignore If Can't Move)
-  :              : $>SE: 'Door slide', 85, 100
+  :              : $>SE: 'Door slide', 100, 100
   :              : $>Wait: 2 frame(s)
   :              : $>Turn Left
   :              : $>Wait: 2 frame(s)
@@ -168126,22 +168182,26 @@ List of Event Commands:
   :              : $>Wait: 2 frame(s)
   :              : $>Turn Up
   :              : $>Wait: 2 frame(s)
- @>Wait for Move's Completion
+ @>Wait: 8 frame(s)
  @>Change Transparent Flag: Normal
  @>Set Move Route: Player
                    (Ignore If Can't Move)
+  :              : $>Through ON
   :              : $>Move Down
- @>Wait for Move's Completion
+  :              : $>Through OFF
+ @>Wait: 8 frame(s)
  @>Script: Followers.put_followers_on_player
  @>Set Move Route: This event
                    (Ignore If Can't Move)
-  :              : $>Turn Right
+  :              : $>SE: 'Door slide', 100, 80
   :              : $>Wait: 2 frame(s)
   :              : $>Turn Left
   :              : $>Wait: 2 frame(s)
-  :              : $>Turn Down
+  :              : $>Turn Right
   :              : $>Wait: 2 frame(s)
- @>Wait for Move's Completion
+  :              : $>Turn Up
+  :              : $>Wait: 2 frame(s)
+ @>Wait: 8 frame(s)
  @>
 : Branch End
 @>Script: setTempSwitchOn("A")
@@ -168169,7 +168229,7 @@ Trigger: Player Touch
 List of Event Commands:
 @>Set Move Route: This event
                   (Ignore If Can't Move)
- :              : $>SE: 'Door slide', 85, 100
+ :              : $>SE: 'Door slide', 100, 100
  :              : $>Wait: 2 frame(s)
  :              : $>Turn Left
  :              : $>Wait: 2 frame(s)
@@ -168177,7 +168237,7 @@ List of Event Commands:
  :              : $>Wait: 2 frame(s)
  :              : $>Turn Up
  :              : $>Wait: 2 frame(s)
-@>Wait for Move's Completion
+@>Wait: 8 frame(s)
 @>Set Move Route: Player
                   (Ignore If Can't Move)
  :              : $>Through ON
@@ -168186,22 +168246,24 @@ List of Event Commands:
 @>Wait for Move's Completion
 @>Change Transparent Flag: Transparency
 @>Script: Followers.follow_into_door
-@>Wait for Move's Completion
+@>Wait: 8 frame(s)
 @>Set Move Route: This event
                   (Ignore If Can't Move)
- :              : $>Wait: 2 frame(s)
- :              : $>Turn Right
+ :              : $>SE: 'Door slide', 100, 80
  :              : $>Wait: 2 frame(s)
  :              : $>Turn Left
  :              : $>Wait: 2 frame(s)
- :              : $>Turn Down
+ :              : $>Turn Right
  :              : $>Wait: 2 frame(s)
-@>Wait for Move's Completion
+ :              : $>Turn Up
+ :              : $>Wait: 2 frame(s)
+@>Wait: 8 frame(s)
 @>Change Screen Color Tone: (-255,-255,-255,0), @6
 @>Wait: 8 frame(s)
 @>Change Transparent Flag: Normal
 @>Transfer Player:[223: Labor], (012,018), Up, No Fade
 @>Change Screen Color Tone: (0,0,0,0), @6
+@>Wait: 8 frame(s)
 @>
 
 Page #2
@@ -168224,7 +168286,7 @@ List of Event Commands:
  @>Script: Followers.hide_followers
  @>Set Move Route: This event
                    (Ignore If Can't Move)
-  :              : $>SE: 'Door slide', 85, 100
+  :              : $>SE: 'Door slide', 100, 100
   :              : $>Wait: 2 frame(s)
   :              : $>Turn Left
   :              : $>Wait: 2 frame(s)
@@ -168232,22 +168294,26 @@ List of Event Commands:
   :              : $>Wait: 2 frame(s)
   :              : $>Turn Up
   :              : $>Wait: 2 frame(s)
- @>Wait for Move's Completion
+ @>Wait: 8 frame(s)
  @>Change Transparent Flag: Normal
  @>Set Move Route: Player
                    (Ignore If Can't Move)
+  :              : $>Through ON
   :              : $>Move Down
- @>Wait for Move's Completion
+  :              : $>Through OFF
+ @>Wait: 8 frame(s)
  @>Script: Followers.put_followers_on_player
  @>Set Move Route: This event
                    (Ignore If Can't Move)
-  :              : $>Turn Right
+  :              : $>SE: 'Door slide', 100, 80
   :              : $>Wait: 2 frame(s)
   :              : $>Turn Left
   :              : $>Wait: 2 frame(s)
-  :              : $>Turn Down
+  :              : $>Turn Right
   :              : $>Wait: 2 frame(s)
- @>Wait for Move's Completion
+  :              : $>Turn Up
+  :              : $>Wait: 2 frame(s)
+ @>Wait: 8 frame(s)
  @>
 : Branch End
 @>Script: setTempSwitchOn("A")
@@ -168270,7 +168336,7 @@ Trigger: Player Touch
 List of Event Commands:
 @>Set Move Route: This event
                   (Ignore If Can't Move)
- :              : $>SE: 'Door slide', 85, 100
+ :              : $>SE: 'Door slide', 100, 100
  :              : $>Wait: 2 frame(s)
  :              : $>Turn Left
  :              : $>Wait: 2 frame(s)
@@ -168278,31 +168344,33 @@ List of Event Commands:
  :              : $>Wait: 2 frame(s)
  :              : $>Turn Up
  :              : $>Wait: 2 frame(s)
-@>Wait for Move's Completion
+@>Wait: 8 frame(s)
 @>Set Move Route: Player
                   (Ignore If Can't Move)
  :              : $>Through ON
  :              : $>Move Up
  :              : $>Through OFF
-@>Wait for Move's Completion
+@>Wait: 8 frame(s)
 @>Change Transparent Flag: Transparency
 @>Script: Followers.follow_into_door
-@>Wait for Move's Completion
+@>Wait: 8 frame(s)
 @>Set Move Route: This event
                   (Ignore If Can't Move)
- :              : $>Wait: 2 frame(s)
- :              : $>Turn Right
+ :              : $>SE: 'Door slide', 100, 80
  :              : $>Wait: 2 frame(s)
  :              : $>Turn Left
  :              : $>Wait: 2 frame(s)
- :              : $>Turn Down
+ :              : $>Turn Right
  :              : $>Wait: 2 frame(s)
-@>Wait for Move's Completion
+ :              : $>Turn Up
+ :              : $>Wait: 2 frame(s)
+@>Wait: 8 frame(s)
 @>Change Screen Color Tone: (-255,-255,-255,0), @6
 @>Wait: 8 frame(s)
 @>Change Transparent Flag: Normal
 @>Transfer Player:[223: Labor], (012,018), Up, No Fade
 @>Change Screen Color Tone: (0,0,0,0), @6
+@>Wait: 8 frame(s)
 @>
 
 Page #4
@@ -168326,7 +168394,7 @@ List of Event Commands:
  @>Script: Followers.hide_followers
  @>Set Move Route: This event
                    (Ignore If Can't Move)
-  :              : $>SE: 'Door slide', 85, 100
+  :              : $>SE: 'Door slide', 100, 100
   :              : $>Wait: 2 frame(s)
   :              : $>Turn Left
   :              : $>Wait: 2 frame(s)
@@ -168334,22 +168402,26 @@ List of Event Commands:
   :              : $>Wait: 2 frame(s)
   :              : $>Turn Up
   :              : $>Wait: 2 frame(s)
- @>Wait for Move's Completion
+ @>Wait: 8 frame(s)
  @>Change Transparent Flag: Normal
  @>Set Move Route: Player
                    (Ignore If Can't Move)
+  :              : $>Through ON
   :              : $>Move Down
- @>Wait for Move's Completion
+  :              : $>Through OFF
+ @>Wait: 8 frame(s)
  @>Script: Followers.put_followers_on_player
  @>Set Move Route: This event
                    (Ignore If Can't Move)
-  :              : $>Turn Right
+  :              : $>SE: 'Door slide', 100, 80
   :              : $>Wait: 2 frame(s)
   :              : $>Turn Left
   :              : $>Wait: 2 frame(s)
-  :              : $>Turn Down
+  :              : $>Turn Right
   :              : $>Wait: 2 frame(s)
- @>Wait for Move's Completion
+  :              : $>Turn Up
+  :              : $>Wait: 2 frame(s)
+ @>Wait: 8 frame(s)
  @>
 : Branch End
 @>Script: setTempSwitchOn("A")
@@ -168983,9 +169055,10 @@ List of Event Commands:
  @>Script: Followers.hide_followers
  @>Set Move Route: Player
                    (Ignore If Can't Move)
-  :              : $>SE: 'Door exit', 80, 100
+  :              : $>Through ON
   :              : $>Move Down
- @>Wait for Move's Completion
+  :              : $>Through OFF
+ @>Wait: 8 frame(s)
  @>Script: Followers.put_followers_on_player
  @>
 : Branch End
@@ -169042,8 +169115,10 @@ List of Event Commands:
  @>Script: Followers.hide_followers
  @>Set Move Route: Player
                    (Ignore If Can't Move)
-  :              : $>SE: 'Door exit', 80, 100
+  :              : $>Through ON
   :              : $>Move Down
+  :              : $>Through OFF
+ @>Wait: 8 frame(s)
  @>Wait for Move's Completion
  @>Script: Followers.put_followers_on_player
  @>
@@ -169397,16 +169472,15 @@ Speed: 3: Slow
 Freq: 3: Low
 Options Enabled
 Move Animation
-Trigger: Player Touch
+Trigger: Event Touch
 
 List of Event Commands:
-@>Play SE: 'Door exit', 80, 100
+@>Play SE: 'Door exit', 100, 100
 @>Change Screen Color Tone: (255,255,255,255), @6
 @>Wait: 8 frame(s)
-@>Script: pbCaveEntrance
 @>Transfer Player:[232: Arena 3], (029,032), Up, No Fade
 @>Change Screen Color Tone: (0,0,0,0), @6
-@>Wait for Move's Completion
+@>Wait: 8 frame(s)
 @>
 
 Page #2
@@ -169426,9 +169500,10 @@ List of Event Commands:
  @>Script: Followers.hide_followers
  @>Set Move Route: Player
                    (Ignore If Can't Move)
-  :              : $>SE: 'Door exit', 80, 100
+  :              : $>Through ON
   :              : $>Move Down
- @>Wait for Move's Completion
+  :              : $>Through OFF
+ @>Wait: 8 frame(s)
  @>Script: Followers.put_followers_on_player
  @>
 : Branch End
@@ -171559,15 +171634,16 @@ Speed: 3: Slow
 Freq: 3: Low
 Options Enabled
 Move Animation
-Trigger: Player Touch
+Trigger: Event Touch
 
 List of Event Commands:
-@>Play SE: 'Door exit', 80, 100
+@>Play SE: 'Door exit', 100, 100
 @>Change Screen Color Tone: (255,255,255,255), @6
 @>Wait: 8 frame(s)
 @>Script: pbCaveEntrance
 @>Transfer Player:[197: Gesteinsschlund], (079,031), Up, No Fade
 @>Change Screen Color Tone: (0,0,0,0), @6
+@>Wait: 8 frame(s)
 @>
 
 Page #2
@@ -171587,8 +171663,10 @@ List of Event Commands:
  @>Script: Followers.hide_followers
  @>Set Move Route: Player
                    (Ignore If Can't Move)
+  :              : $>Through ON
   :              : $>Move Down
- @>Wait for Move's Completion
+  :              : $>Through OFF
+ @>Wait: 8 frame(s)
  @>Script: Followers.put_followers_on_player
  @>
 : Branch End
@@ -172910,6 +172988,7 @@ List of Event Commands:
 @>Play SE: 'Door exit', 100, 100
 @>Change Screen Color Tone: (-255,-255,-255,0), @6
 @>Wait: 8 frame(s)
+@>Change Transparent Flag: Transparency
 @>Transfer Player:[208: Solhaven], (021,024), Down, No Fade
 @>Change Screen Color Tone: (0,0,0,0), @6
 @>Wait: 8 frame(s)
@@ -172957,7 +173036,7 @@ List of Event Commands:
 @>Conditional Branch: Player is facing Down
  @>Set Move Route: Player
   :              : $>Move Down
- @>Wait for Move's Completion
+ @>Wait: 8 frame(s)
  @>
 : Else
  @>Play SE: 'Door exit', 100, 100
@@ -173276,7 +173355,7 @@ List of Event Commands:
 @>Conditional Branch: Player is facing Down
  @>Set Move Route: Player
   :              : $>Move Down
- @>Wait for Move's Completion
+ @>Wait: 8 frame(s)
  @>
 : Else
  @>Play SE: 'Door exit', 100, 100
@@ -173373,48 +173452,6 @@ List of Event Commands:
 @>
 
 #------------------------------------------------------------------------------
-Event ID: 005
-Event Name: EV005
-(X,Y): (006,014)
-
-Page #1
-Conditions
-None
-
-Autonomous Movement
-Type: Fixed
-Speed: 3: Slow
-Freq: 3: Low
-Options Enabled
-Move Animation
-Trigger: Action Button
-
-List of Event Commands:
-@>Text: Verschiedene Bücher.
-@>
-
-#------------------------------------------------------------------------------
-Event ID: 006
-Event Name: EV006
-(X,Y): (007,014)
-
-Page #1
-Conditions
-None
-
-Autonomous Movement
-Type: Fixed
-Speed: 3: Slow
-Freq: 3: Low
-Options Enabled
-Move Animation
-Trigger: Action Button
-
-List of Event Commands:
-@>Text: Verschiedene Bücher.
-@>
-
-#------------------------------------------------------------------------------
 Event ID: 007
 Event Name: EV007
 (X,Y): (018,017)
@@ -173454,132 +173491,6 @@ Trigger: Action Button
 
 List of Event Commands:
 @>Text: Der PC ist ausgeschaltet.
-@>
-
-#------------------------------------------------------------------------------
-Event ID: 009
-Event Name: EV009
-(X,Y): (009,014)
-
-Page #1
-Conditions
-None
-
-Autonomous Movement
-Type: Fixed
-Speed: 3: Slow
-Freq: 3: Low
-Options Enabled
-Move Animation
-Trigger: Action Button
-
-List of Event Commands:
-@>Text: Der Fernseher ist ausgeschaltet.
-@>
-
-#------------------------------------------------------------------------------
-Event ID: 010
-Event Name: EV010
-(X,Y): (012,007)
-
-Page #1
-Conditions
-None
-
-Autonomous Movement
-Type: Fixed
-Speed: 3: Slow
-Freq: 3: Low
-Options Enabled
-Move Animation
-Trigger: Action Button
-
-List of Event Commands:
-@>Text: Ein paar Klamotten.
-@>
-
-#------------------------------------------------------------------------------
-Event ID: 011
-Event Name: EV011
-(X,Y): (013,007)
-
-Page #1
-Conditions
-None
-
-Autonomous Movement
-Type: Fixed
-Speed: 3: Slow
-Freq: 3: Low
-Options Enabled
-Move Animation
-Trigger: Action Button
-
-List of Event Commands:
-@>Text: Ein paar Klamotten.
-@>
-
-#------------------------------------------------------------------------------
-Event ID: 012
-Event Name: EV012
-(X,Y): (017,007)
-
-Page #1
-Conditions
-None
-
-Autonomous Movement
-Type: Fixed
-Speed: 3: Slow
-Freq: 3: Low
-Options Enabled
-Move Animation
-Trigger: Action Button
-
-List of Event Commands:
-@>Text: Ein paar Klamotten.
-@>
-
-#------------------------------------------------------------------------------
-Event ID: 013
-Event Name: EV013
-(X,Y): (018,007)
-
-Page #1
-Conditions
-None
-
-Autonomous Movement
-Type: Fixed
-Speed: 3: Slow
-Freq: 3: Low
-Options Enabled
-Move Animation
-Trigger: Action Button
-
-List of Event Commands:
-@>Text: Ein paar Klamotten.
-@>
-
-#------------------------------------------------------------------------------
-Event ID: 014
-Event Name: EV014
-(X,Y): (010,014)
-
-Page #1
-Conditions
-None
-
-Autonomous Movement
-Type: Fixed
-Speed: 3: Slow
-Freq: 3: Low
-Options Enabled
-Move Animation
-Trigger: Action Button
-
-List of Event Commands:
-@>Text: Nichts besonderes.
 @>
 
 #------------------------------------------------------------------------------
@@ -173660,6 +173571,7 @@ List of Event Commands:
 @>Play SE: 'Door exit', 100, 100
 @>Change Screen Color Tone: (-255,-255,-255,0), @6
 @>Wait: 8 frame(s)
+@>Change Transparent Flag: Transparency
 @>Transfer Player:[208: Solhaven], (027,024), Down, No Fade
 @>Change Screen Color Tone: (0,0,0,0), @6
 @>Wait: 8 frame(s)
@@ -173707,7 +173619,7 @@ List of Event Commands:
 @>Conditional Branch: Player is facing Down
  @>Set Move Route: Player
   :              : $>Move Down
- @>Wait for Move's Completion
+ @>Wait: 8 frame(s)
  @>
 : Else
  @>Play SE: 'Door exit', 100, 100
@@ -173763,38 +173675,14 @@ Move Animation
 Trigger: Action Button
 
 List of Event Commands:
-@>Conditional Branch: Script: $player.badge_count >= 4
- @>Script: pbPokemonMart([
- :       :   :ORANBERRY, :CHERIBERRY,
- :       :   :CHESTOBERRY, :PECHABERRY,
- :       :   :RAWSTBERRY, :ASPEARBERRY,
- :       :   :PERSIMBERRY, :SITRUSBERRY,
- :       :   :LIECHIBERRY, :GANLONBERRY,
- :       :   :SALACBERRY, :PETAYABERRY,
- :       :   :APICOTBERRY, :LANSATBERRY,
- :       :   :STARFBERRY, :MICLEBERRY
- :       :   :CUSTAPBERRY
- :       : ])
- @>Exit Event Processing
- @>
-: Branch End
-@>Conditional Branch: Script: $player.badge_count >= 2
- @>Script: pbPokemonMart([
- :       :   :ORANBERRY, :CHERIBERRY,
- :       :   :CHESTOBERRY, :PECHABERRY,
- :       :   :RAWSTBERRY, :ASPEARBERRY,
- :       :   :PERSIMBERRY, :SITRUSBERRY,
- :       :   :LIECHIBERRY, :GANLONBERRY,
- :       :   :SALACBERRY, :PETAYABERRY,
- :       :   :APICOTBERRY, :LANSATBERRY
- :       : ])
- @>Exit Event Processing
- @>
-: Branch End
 @>Script: pbPokemonMart([
-:       :   :ORANBERRY, :CHERIBERRY,
-:       :   :CHESTOBERRY, :PECHABERRY,
-:       :   :RAWSTBERRY, :ASPEARBERRY
+:       :   :RAZZBERRY, :BLUKBERRY,
+:       :   :NANABBERRY, :WEPEARBERRY,
+:       :   :PINAPBERRY, :CORNNBERRY,
+:       :   :MAGOSTBERRY, :RABUTABERRY,
+:       :   :NOMELBERRY, :SPELONBERRY,
+:       :   :PAMTREBERRY, :WATMELBERRY,
+:       :   :DURINBERRY, :BELUEBERRY
 :       : ])
 @>
 
@@ -173885,6 +173773,37 @@ List of Event Commands:
 @>
 
 #------------------------------------------------------------------------------
+Event ID: 009
+Event Name: Beerenladen
+(X,Y): (008,015)
+
+Page #1
+Conditions
+None
+
+Graphic: NPC_Frau 18
+
+Autonomous Movement
+Type: Fixed
+Speed: 3: Slow
+Freq: 3: Low
+Options Enabled
+Move Animation
+Trigger: Action Button
+
+List of Event Commands:
+@>Script: pbPokemonMart([
+:       :   :LIECHIBERRY, :GANLONBERRY,
+:       :   :SALACBERRY, :PETAYABERRY,
+:       :   :APICOTBERRY, :LANSATBERRY,
+:       :   :STARFBERRY, :MICLEBERRY,   
+:       :   :CUSTAPBERRY,  :JABOCABERRY,  
+:       :   :ROWAPBERRY, :KEEBERRY,
+:       :   :MARANGABERRY
+:       : ])
+@>
+
+#------------------------------------------------------------------------------
 
 #==============================================================================
 Map ID: 214
@@ -173914,7 +173833,7 @@ List of Event Commands:
 @>Conditional Branch: Player is facing Down
  @>Set Move Route: Player
   :              : $>Move Down
- @>Wait for Move's Completion
+ @>Wait: 8 frame(s)
  @>
 : Else
  @>Play SE: 'Door exit', 100, 100
@@ -174034,48 +173953,6 @@ List of Event Commands:
 @>
 
 #------------------------------------------------------------------------------
-Event ID: 006
-Event Name: EV006
-(X,Y): (006,014)
-
-Page #1
-Conditions
-None
-
-Autonomous Movement
-Type: Fixed
-Speed: 3: Slow
-Freq: 3: Low
-Options Enabled
-Move Animation
-Trigger: Action Button
-
-List of Event Commands:
-@>Text: Verschiedene Bücher.
-@>
-
-#------------------------------------------------------------------------------
-Event ID: 007
-Event Name: EV007
-(X,Y): (007,014)
-
-Page #1
-Conditions
-None
-
-Autonomous Movement
-Type: Fixed
-Speed: 3: Slow
-Freq: 3: Low
-Options Enabled
-Move Animation
-Trigger: Action Button
-
-List of Event Commands:
-@>Text: Verschiedene Bücher.
-@>
-
-#------------------------------------------------------------------------------
 Event ID: 008
 Event Name: EV008
 (X,Y): (014,007)
@@ -174094,153 +173971,6 @@ Trigger: Action Button
 
 List of Event Commands:
 @>Text: Der PC ist ausgeschaltet.
-@>
-
-#------------------------------------------------------------------------------
-Event ID: 009
-Event Name: EV009
-(X,Y): (009,014)
-
-Page #1
-Conditions
-None
-
-Autonomous Movement
-Type: Fixed
-Speed: 3: Slow
-Freq: 3: Low
-Options Enabled
-Move Animation
-Trigger: Action Button
-
-List of Event Commands:
-@>Text: Der Fernseher ist ausgeschaltet.
-@>
-
-#------------------------------------------------------------------------------
-Event ID: 010
-Event Name: EV010
-(X,Y): (010,014)
-
-Page #1
-Conditions
-None
-
-Autonomous Movement
-Type: Fixed
-Speed: 3: Slow
-Freq: 3: Low
-Options Enabled
-Move Animation
-Trigger: Action Button
-
-List of Event Commands:
-@>Text: Eine große Space Marine Sammlung.
-@>
-
-#------------------------------------------------------------------------------
-Event ID: 011
-Event Name: EV011
-(X,Y): (011,014)
-
-Page #1
-Conditions
-None
-
-Autonomous Movement
-Type: Fixed
-Speed: 3: Slow
-Freq: 3: Low
-Options Enabled
-Move Animation
-Trigger: Action Button
-
-List of Event Commands:
-@>Text: Eine große Space Marine Sammlung.
-@>
-
-#------------------------------------------------------------------------------
-Event ID: 012
-Event Name: EV012
-(X,Y): (012,007)
-
-Page #1
-Conditions
-None
-
-Autonomous Movement
-Type: Fixed
-Speed: 3: Slow
-Freq: 3: Low
-Options Enabled
-Move Animation
-Trigger: Action Button
-
-List of Event Commands:
-@>Text: Ein paar Klamotten.
-@>
-
-#------------------------------------------------------------------------------
-Event ID: 013
-Event Name: EV013
-(X,Y): (013,007)
-
-Page #1
-Conditions
-None
-
-Autonomous Movement
-Type: Fixed
-Speed: 3: Slow
-Freq: 3: Low
-Options Enabled
-Move Animation
-Trigger: Action Button
-
-List of Event Commands:
-@>Text: Ein paar Klamotten.
-@>
-
-#------------------------------------------------------------------------------
-Event ID: 014
-Event Name: EV014
-(X,Y): (018,007)
-
-Page #1
-Conditions
-None
-
-Autonomous Movement
-Type: Fixed
-Speed: 3: Slow
-Freq: 3: Low
-Options Enabled
-Move Animation
-Trigger: Action Button
-
-List of Event Commands:
-@>Text: Ein paar Klamotten.
-@>
-
-#------------------------------------------------------------------------------
-Event ID: 015
-Event Name: EV015
-(X,Y): (017,007)
-
-Page #1
-Conditions
-None
-
-Autonomous Movement
-Type: Fixed
-Speed: 3: Slow
-Freq: 3: Low
-Options Enabled
-Move Animation
-Trigger: Action Button
-
-List of Event Commands:
-@>Text: Ein paar Klamotten.
 @>
 
 #------------------------------------------------------------------------------
@@ -174321,6 +174051,7 @@ List of Event Commands:
 @>Play SE: 'Door exit', 100, 100
 @>Change Screen Color Tone: (-255,-255,-255,0), @6
 @>Wait: 8 frame(s)
+@>Change Transparent Flag: Transparency
 @>Transfer Player:[208: Solhaven], (033,024), Down, No Fade
 @>Change Screen Color Tone: (0,0,0,0), @6
 @>Wait: 8 frame(s)
@@ -174385,7 +174116,7 @@ List of Event Commands:
 @>Conditional Branch: Player is facing Down
  @>Set Move Route: Player
   :              : $>Move Down
- @>Wait for Move's Completion
+ @>Wait: 8 frame(s)
  @>
 : Else
  @>Play SE: 'Door exit', 100, 100
@@ -174492,7 +174223,7 @@ Move Animation
 Trigger: Action Button
 
 List of Event Commands:
-@>Text: Schade, dass das Hotel soweit weg ist.
+@>Text: Schade, dass das Hotel so weit weg ist.
 @>Set Move Route: [Tourist 3]
  :              : $>Turn Right
 @>
@@ -174646,6 +174377,8 @@ Trigger: Action Button
 
 List of Event Commands:
 @>Text: Meine Frau bedient draußen die Gäste.
+@>Set Move Route: This event
+ :              : $>Turn Up
 @>
 
 #------------------------------------------------------------------------------
@@ -174713,6 +174446,36 @@ List of Event Commands:
 @>
 
 #------------------------------------------------------------------------------
+Event ID: 015
+Event Name: Beerenladen
+(X,Y): (007,015)
+
+Page #1
+Conditions
+None
+
+Graphic: NPC_Frau 19
+
+Autonomous Movement
+Type: Fixed
+Speed: 3: Slow
+Freq: 3: Low
+Options Enabled
+Move Animation
+Trigger: Action Button
+
+List of Event Commands:
+@>Script: pbPokemonMart([
+:       :   :FIGYBERRY, :WIKIBERRY,
+:       :   :MAGOBERRY, :AGUAVBERRY,
+:       :   :IAPAPABERRY, :POMEGBERRY,
+:       :   :KELPSYBERRY, :QUALOTBERRY,   
+:       :   :HONDEWBERRY,  :GREPABERRY,  
+:       :   :TAMATOBERRY, :HOPOBERRY
+:       : ])
+@>
+
+#------------------------------------------------------------------------------
 
 #==============================================================================
 Map ID: 216
@@ -174742,7 +174505,7 @@ List of Event Commands:
 @>Conditional Branch: Player is facing Down
  @>Set Move Route: Player
   :              : $>Move Down
- @>Wait for Move's Completion
+ @>Wait: 8 frame(s)
  @>
 : Else
  @>Play SE: 'Door exit', 100, 100
@@ -174819,48 +174582,6 @@ List of Event Commands:
 @>
 
 #------------------------------------------------------------------------------
-Event ID: 005
-Event Name: EV005
-(X,Y): (013,014)
-
-Page #1
-Conditions
-None
-
-Autonomous Movement
-Type: Fixed
-Speed: 3: Slow
-Freq: 3: Low
-Options Enabled
-Move Animation
-Trigger: Action Button
-
-List of Event Commands:
-@>Text: Verschiedene Bücher über Warhammer 40K.
-@>
-
-#------------------------------------------------------------------------------
-Event ID: 006
-Event Name: EV006
-(X,Y): (014,014)
-
-Page #1
-Conditions
-None
-
-Autonomous Movement
-Type: Fixed
-Speed: 3: Slow
-Freq: 3: Low
-Options Enabled
-Move Animation
-Trigger: Action Button
-
-List of Event Commands:
-@>Text: Verschiedene Bücher über Warhammer 40K.
-@>
-
-#------------------------------------------------------------------------------
 Event ID: 007
 Event Name: EV007
 (X,Y): (018,017)
@@ -174882,239 +174603,8 @@ List of Event Commands:
 @>
 
 #------------------------------------------------------------------------------
-Event ID: 008
-Event Name: EV008
-(X,Y): (009,014)
-
-Page #1
-Conditions
-None
-
-Autonomous Movement
-Type: Fixed
-Speed: 3: Slow
-Freq: 3: Low
-Options Enabled
-Move Animation
-Trigger: Action Button
-
-List of Event Commands:
-@>Text: Der Fernseher ist ausgeschaltet.
-@>
-
-#------------------------------------------------------------------------------
-Event ID: 009
-Event Name: EV009
-(X,Y): (006,014)
-
-Page #1
-Conditions
-None
-
-Autonomous Movement
-Type: Fixed
-Speed: 3: Slow
-Freq: 3: Low
-Options Enabled
-Move Animation
-Trigger: Action Button
-
-List of Event Commands:
-@>Text: Eine riesige Tyraniden Sammlung.
-@>
-
-#------------------------------------------------------------------------------
-Event ID: 010
-Event Name: EV010
-(X,Y): (007,014)
-
-Page #1
-Conditions
-None
-
-Autonomous Movement
-Type: Fixed
-Speed: 3: Slow
-Freq: 3: Low
-Options Enabled
-Move Animation
-Trigger: Action Button
-
-List of Event Commands:
-@>Text: Eine riesige Tyraniden Sammlung.
-@>
-
-#------------------------------------------------------------------------------
-Event ID: 011
-Event Name: EV011
-(X,Y): (010,014)
-
-Page #1
-Conditions
-None
-
-Autonomous Movement
-Type: Fixed
-Speed: 3: Slow
-Freq: 3: Low
-Options Enabled
-Move Animation
-Trigger: Action Button
-
-List of Event Commands:
-@>Text: Eine riesige Tyraniden Sammlung.
-@>
-
-#------------------------------------------------------------------------------
-Event ID: 012
-Event Name: EV012
-(X,Y): (011,014)
-
-Page #1
-Conditions
-None
-
-Autonomous Movement
-Type: Fixed
-Speed: 3: Slow
-Freq: 3: Low
-Options Enabled
-Move Animation
-Trigger: Action Button
-
-List of Event Commands:
-@>Text: Eine riesige Tyraniden Sammlung.
-@>
-
-#------------------------------------------------------------------------------
-Event ID: 013
-Event Name: EV013
-(X,Y): (013,007)
-
-Page #1
-Conditions
-None
-
-Autonomous Movement
-Type: Fixed
-Speed: 3: Slow
-Freq: 3: Low
-Options Enabled
-Move Animation
-Trigger: Action Button
-
-List of Event Commands:
-@>Text: Ein paar Klamotten.
-@>
-
-#------------------------------------------------------------------------------
-Event ID: 014
-Event Name: EV014
-(X,Y): (014,007)
-
-Page #1
-Conditions
-None
-
-Autonomous Movement
-Type: Fixed
-Speed: 3: Slow
-Freq: 3: Low
-Options Enabled
-Move Animation
-Trigger: Action Button
-
-List of Event Commands:
-@>Text: Ein paar Klamotten.
-@>
-
-#------------------------------------------------------------------------------
-Event ID: 015
-Event Name: EV015
-(X,Y): (015,007)
-
-Page #1
-Conditions
-None
-
-Autonomous Movement
-Type: Fixed
-Speed: 3: Slow
-Freq: 3: Low
-Options Enabled
-Move Animation
-Trigger: Action Button
-
-List of Event Commands:
-@>Text: Damen Unterwäsche.
-@>
-
-#------------------------------------------------------------------------------
-Event ID: 016
-Event Name: EV016
-(X,Y): (016,007)
-
-Page #1
-Conditions
-None
-
-Autonomous Movement
-Type: Fixed
-Speed: 3: Slow
-Freq: 3: Low
-Options Enabled
-Move Animation
-Trigger: Action Button
-
-List of Event Commands:
-@>Text: Ein paar Klamotten.
-@>
-
-#------------------------------------------------------------------------------
-Event ID: 017
-Event Name: EV017
-(X,Y): (017,007)
-
-Page #1
-Conditions
-None
-
-Autonomous Movement
-Type: Fixed
-Speed: 3: Slow
-Freq: 3: Low
-Options Enabled
-Move Animation
-Trigger: Action Button
-
-List of Event Commands:
-@>Text: Ein paar Klamotten.
-@>
-
-#------------------------------------------------------------------------------
-Event ID: 018
-Event Name: EV018
-(X,Y): (018,007)
-
-Page #1
-Conditions
-None
-
-Autonomous Movement
-Type: Fixed
-Speed: 3: Slow
-Freq: 3: Low
-Options Enabled
-Move Animation
-Trigger: Action Button
-
-List of Event Commands:
-@>Text: Ein paar Klamotten.
-@>
-
-#------------------------------------------------------------------------------
 Event ID: 019
-Event Name: EV019
+Event Name: Molunk size(2,1)
 (X,Y): (009,007)
 
 Page #1
@@ -175166,6 +174656,7 @@ List of Event Commands:
 @>Play SE: 'Door exit', 100, 100
 @>Change Screen Color Tone: (-255,-255,-255,0), @6
 @>Wait: 8 frame(s)
+@>Change Transparent Flag: Transparency
 @>Transfer Player:[208: Solhaven], (046,049), Down, No Fade
 @>Change Screen Color Tone: (0,0,0,0), @6
 @>Wait: 8 frame(s)
@@ -175230,7 +174721,7 @@ List of Event Commands:
 @>Conditional Branch: Player is facing Down
  @>Set Move Route: Player
   :              : $>Move Down
- @>Wait for Move's Completion
+ @>Wait: 8 frame(s)
  @>
 : Else
  @>Play SE: 'Door exit', 100, 100
@@ -175606,7 +175097,7 @@ List of Event Commands:
 @>Conditional Branch: Player is facing Down
  @>Set Move Route: Player
   :              : $>Move Down
- @>Wait for Move's Completion
+ @>Wait: 8 frame(s)
  @>
 : Else
  @>Play SE: 'Door exit', 100, 100
@@ -175726,69 +175217,6 @@ List of Event Commands:
 @>
 
 #------------------------------------------------------------------------------
-Event ID: 006
-Event Name: EV006
-(X,Y): (006,014)
-
-Page #1
-Conditions
-None
-
-Autonomous Movement
-Type: Fixed
-Speed: 3: Slow
-Freq: 3: Low
-Options Enabled
-Move Animation
-Trigger: Action Button
-
-List of Event Commands:
-@>Text: Die Bücher sehen sehr alt aus.
-@>
-
-#------------------------------------------------------------------------------
-Event ID: 007
-Event Name: EV007
-(X,Y): (007,014)
-
-Page #1
-Conditions
-None
-
-Autonomous Movement
-Type: Fixed
-Speed: 3: Slow
-Freq: 3: Low
-Options Enabled
-Move Animation
-Trigger: Action Button
-
-List of Event Commands:
-@>Text: Die Bücher sehen sehr alt aus.
-@>
-
-#------------------------------------------------------------------------------
-Event ID: 008
-Event Name: EV008
-(X,Y): (010,014)
-
-Page #1
-Conditions
-None
-
-Autonomous Movement
-Type: Fixed
-Speed: 3: Slow
-Freq: 3: Low
-Options Enabled
-Move Animation
-Trigger: Action Button
-
-List of Event Commands:
-@>Text: Verschiedene Bücher.
-@>
-
-#------------------------------------------------------------------------------
 Event ID: 009
 Event Name: EV009
 (X,Y): (014,007)
@@ -175807,111 +175235,6 @@ Trigger: Action Button
 
 List of Event Commands:
 @>Text: Der PC ist ausgeschaltet.
-@>
-
-#------------------------------------------------------------------------------
-Event ID: 010
-Event Name: EV010
-(X,Y): (009,014)
-
-Page #1
-Conditions
-None
-
-Autonomous Movement
-Type: Fixed
-Speed: 3: Slow
-Freq: 3: Low
-Options Enabled
-Move Animation
-Trigger: Action Button
-
-List of Event Commands:
-@>Text: Der Fernseher ist ausgeschaltet.
-@>
-
-#------------------------------------------------------------------------------
-Event ID: 011
-Event Name: EV011
-(X,Y): (012,007)
-
-Page #1
-Conditions
-None
-
-Autonomous Movement
-Type: Fixed
-Speed: 3: Slow
-Freq: 3: Low
-Options Enabled
-Move Animation
-Trigger: Action Button
-
-List of Event Commands:
-@>Text: Ein paar Klamotten.
-@>
-
-#------------------------------------------------------------------------------
-Event ID: 012
-Event Name: EV012
-(X,Y): (013,007)
-
-Page #1
-Conditions
-None
-
-Autonomous Movement
-Type: Fixed
-Speed: 3: Slow
-Freq: 3: Low
-Options Enabled
-Move Animation
-Trigger: Action Button
-
-List of Event Commands:
-@>Text: Ein paar Klamotten.
-@>
-
-#------------------------------------------------------------------------------
-Event ID: 013
-Event Name: EV013
-(X,Y): (018,007)
-
-Page #1
-Conditions
-None
-
-Autonomous Movement
-Type: Fixed
-Speed: 3: Slow
-Freq: 3: Low
-Options Enabled
-Move Animation
-Trigger: Action Button
-
-List of Event Commands:
-@>Text: Ein paar Klamotten.
-@>
-
-#------------------------------------------------------------------------------
-Event ID: 014
-Event Name: EV014
-(X,Y): (017,007)
-
-Page #1
-Conditions
-None
-
-Autonomous Movement
-Type: Fixed
-Speed: 3: Slow
-Freq: 3: Low
-Options Enabled
-Move Animation
-Trigger: Action Button
-
-List of Event Commands:
-@>Text: Ein paar Klamotten.
 @>
 
 #------------------------------------------------------------------------------
@@ -176035,6 +175358,7 @@ List of Event Commands:
 @>Play SE: 'Door exit', 100, 100
 @>Change Screen Color Tone: (-255,-255,-255,0), @6
 @>Wait: 8 frame(s)
+@>Change Transparent Flag: Transparency
 @>Transfer Player:[208: Solhaven], (052,049), Down, No Fade
 @>Change Screen Color Tone: (0,0,0,0), @6
 @>Wait: 8 frame(s)
@@ -176099,7 +175423,7 @@ List of Event Commands:
 @>Conditional Branch: Player is facing Down
  @>Set Move Route: Player
   :              : $>Move Down
- @>Wait for Move's Completion
+ @>Wait: 8 frame(s)
  @>
 : Else
  @>Play SE: 'Door exit', 100, 100
@@ -176362,7 +175686,7 @@ List of Event Commands:
 @>Conditional Branch: Player is facing Down
  @>Set Move Route: Player
   :              : $>Move Down
- @>Wait for Move's Completion
+ @>Wait: 8 frame(s)
  @>
 : Else
  @>Play SE: 'Door exit', 100, 100
@@ -176459,69 +175783,6 @@ List of Event Commands:
 @>
 
 #------------------------------------------------------------------------------
-Event ID: 005
-Event Name: EV005
-(X,Y): (007,014)
-
-Page #1
-Conditions
-None
-
-Autonomous Movement
-Type: Fixed
-Speed: 3: Slow
-Freq: 3: Low
-Options Enabled
-Move Animation
-Trigger: Action Button
-
-List of Event Commands:
-@>Text: Eine stolze Blue-Ray-Sammlung.
-@>
-
-#------------------------------------------------------------------------------
-Event ID: 006
-Event Name: EV006
-(X,Y): (010,014)
-
-Page #1
-Conditions
-None
-
-Autonomous Movement
-Type: Fixed
-Speed: 3: Slow
-Freq: 3: Low
-Options Enabled
-Move Animation
-Trigger: Action Button
-
-List of Event Commands:
-@>Text: Eine stolze Blue-Ray-Sammlung.
-@>
-
-#------------------------------------------------------------------------------
-Event ID: 007
-Event Name: EV007
-(X,Y): (006,014)
-
-Page #1
-Conditions
-None
-
-Autonomous Movement
-Type: Fixed
-Speed: 3: Slow
-Freq: 3: Low
-Options Enabled
-Move Animation
-Trigger: Action Button
-
-List of Event Commands:
-@>Text: Eine stolze Blue-Ray-Sammlung.
-@>
-
-#------------------------------------------------------------------------------
 Event ID: 008
 Event Name: EV008
 (X,Y): (018,017)
@@ -176585,111 +175846,6 @@ List of Event Commands:
 @>
 
 #------------------------------------------------------------------------------
-Event ID: 011
-Event Name: EV011
-(X,Y): (009,014)
-
-Page #1
-Conditions
-None
-
-Autonomous Movement
-Type: Fixed
-Speed: 3: Slow
-Freq: 3: Low
-Options Enabled
-Move Animation
-Trigger: Action Button
-
-List of Event Commands:
-@>Text: Der Fernseher ist ausgeschaltet.
-@>
-
-#------------------------------------------------------------------------------
-Event ID: 012
-Event Name: EV012
-(X,Y): (016,007)
-
-Page #1
-Conditions
-None
-
-Autonomous Movement
-Type: Fixed
-Speed: 3: Slow
-Freq: 3: Low
-Options Enabled
-Move Animation
-Trigger: Action Button
-
-List of Event Commands:
-@>Text: Ein paar Klamotten.
-@>
-
-#------------------------------------------------------------------------------
-Event ID: 013
-Event Name: EV013
-(X,Y): (015,007)
-
-Page #1
-Conditions
-None
-
-Autonomous Movement
-Type: Fixed
-Speed: 3: Slow
-Freq: 3: Low
-Options Enabled
-Move Animation
-Trigger: Action Button
-
-List of Event Commands:
-@>Text: Ein paar Klamotten.
-@>
-
-#------------------------------------------------------------------------------
-Event ID: 014
-Event Name: EV014
-(X,Y): (017,007)
-
-Page #1
-Conditions
-None
-
-Autonomous Movement
-Type: Fixed
-Speed: 3: Slow
-Freq: 3: Low
-Options Enabled
-Move Animation
-Trigger: Action Button
-
-List of Event Commands:
-@>Text: Ein paar Angel-Klamotten.
-@>
-
-#------------------------------------------------------------------------------
-Event ID: 015
-Event Name: EV015
-(X,Y): (018,007)
-
-Page #1
-Conditions
-None
-
-Autonomous Movement
-Type: Fixed
-Speed: 3: Slow
-Freq: 3: Low
-Options Enabled
-Move Animation
-Trigger: Action Button
-
-List of Event Commands:
-@>Text: Ein paar Angel-Klamotten.
-@>
-
-#------------------------------------------------------------------------------
 Event ID: 016
 Event Name: EV016
 (X,Y): (016,009)
@@ -176742,6 +175898,7 @@ List of Event Commands:
 @>Play SE: 'Door exit', 100, 100
 @>Change Screen Color Tone: (-255,-255,-255,0), @6
 @>Wait: 8 frame(s)
+@>Change Transparent Flag: Transparency
 @>Transfer Player:[208: Solhaven], (059,052), Down, No Fade
 @>Change Screen Color Tone: (0,0,0,0), @6
 @>Wait: 8 frame(s)
@@ -176806,7 +175963,7 @@ List of Event Commands:
 @>Conditional Branch: Player is facing Down
  @>Set Move Route: Player
   :              : $>Move Down
- @>Wait for Move's Completion
+ @>Wait: 8 frame(s)
  @>
 : Else
  @>Play SE: 'Door exit', 100, 100
@@ -177128,7 +176285,7 @@ List of Event Commands:
 @>Conditional Branch: Player is facing Down
  @>Set Move Route: Player
   :              : $>Move Down
- @>Wait for Move's Completion
+ @>Wait: 8 frame(s)
  @>
 : Else
  @>Play SE: 'Door exit', 100, 100
@@ -177245,195 +176402,6 @@ List of Event Commands:
 @>
 
 #------------------------------------------------------------------------------
-Event ID: 006
-Event Name: EV006
-(X,Y): (009,014)
-
-Page #1
-Conditions
-None
-
-Autonomous Movement
-Type: Fixed
-Speed: 3: Slow
-Freq: 3: Low
-Options Enabled
-Move Animation
-Trigger: Action Button
-
-List of Event Commands:
-@>Text: Der Fernseher ist ausgeschaltet.
-@>
-
-#------------------------------------------------------------------------------
-Event ID: 007
-Event Name: EV007
-(X,Y): (013,007)
-
-Page #1
-Conditions
-None
-
-Autonomous Movement
-Type: Fixed
-Speed: 3: Slow
-Freq: 3: Low
-Options Enabled
-Move Animation
-Trigger: Action Button
-
-List of Event Commands:
-@>Text: Ein paar Klamotten.
-@>
-
-#------------------------------------------------------------------------------
-Event ID: 008
-Event Name: EV008
-(X,Y): (014,007)
-
-Page #1
-Conditions
-None
-
-Autonomous Movement
-Type: Fixed
-Speed: 3: Slow
-Freq: 3: Low
-Options Enabled
-Move Animation
-Trigger: Action Button
-
-List of Event Commands:
-@>Text: Ein paar Klamotten.
-@>
-
-#------------------------------------------------------------------------------
-Event ID: 009
-Event Name: EV009
-(X,Y): (015,007)
-
-Page #1
-Conditions
-None
-
-Autonomous Movement
-Type: Fixed
-Speed: 3: Slow
-Freq: 3: Low
-Options Enabled
-Move Animation
-Trigger: Action Button
-
-List of Event Commands:
-@>Text: Ein paar Klamotten.
-@>
-
-#------------------------------------------------------------------------------
-Event ID: 010
-Event Name: EV010
-(X,Y): (016,007)
-
-Page #1
-Conditions
-None
-
-Autonomous Movement
-Type: Fixed
-Speed: 3: Slow
-Freq: 3: Low
-Options Enabled
-Move Animation
-Trigger: Action Button
-
-List of Event Commands:
-@>Text: Ein paar Klamotten.
-@>
-
-#------------------------------------------------------------------------------
-Event ID: 011
-Event Name: EV011
-(X,Y): (007,014)
-
-Page #1
-Conditions
-None
-
-Autonomous Movement
-Type: Fixed
-Speed: 3: Slow
-Freq: 3: Low
-Options Enabled
-Move Animation
-Trigger: Action Button
-
-List of Event Commands:
-@>Text: Nichts besonderes.
-@>
-
-#------------------------------------------------------------------------------
-Event ID: 012
-Event Name: EV012
-(X,Y): (006,014)
-
-Page #1
-Conditions
-None
-
-Autonomous Movement
-Type: Fixed
-Speed: 3: Slow
-Freq: 3: Low
-Options Enabled
-Move Animation
-Trigger: Action Button
-
-List of Event Commands:
-@>Text: Nichts besonderes.
-@>
-
-#------------------------------------------------------------------------------
-Event ID: 013
-Event Name: EV013
-(X,Y): (010,014)
-
-Page #1
-Conditions
-None
-
-Autonomous Movement
-Type: Fixed
-Speed: 3: Slow
-Freq: 3: Low
-Options Enabled
-Move Animation
-Trigger: Action Button
-
-List of Event Commands:
-@>Text: Nichts besonderes.
-@>
-
-#------------------------------------------------------------------------------
-Event ID: 014
-Event Name: EV014
-(X,Y): (011,014)
-
-Page #1
-Conditions
-None
-
-Autonomous Movement
-Type: Fixed
-Speed: 3: Slow
-Freq: 3: Low
-Options Enabled
-Move Animation
-Trigger: Action Button
-
-List of Event Commands:
-@>Text: Nichts besonderes.
-@>
-
-#------------------------------------------------------------------------------
 Event ID: 015
 Event Name: EV015
 (X,Y): (018,017)
@@ -177484,6 +176452,7 @@ List of Event Commands:
 @>Play SE: 'Door exit', 100, 100
 @>Change Screen Color Tone: (-255,-255,-255,0), @6
 @>Wait: 8 frame(s)
+@>Change Transparent Flag: Transparency
 @>Transfer Player:[208: Solhaven], (047,019), Down, No Fade
 @>Change Screen Color Tone: (0,0,0,0), @6
 @>Wait: 8 frame(s)
@@ -177531,7 +176500,7 @@ List of Event Commands:
 @>Conditional Branch: Player is facing Down
  @>Set Move Route: Player
   :              : $>Move Down
- @>Wait for Move's Completion
+ @>Wait: 8 frame(s)
  @>
 : Else
  @>Play SE: 'Door exit', 100, 100
@@ -178032,174 +177001,6 @@ List of Event Commands:
 @>
 
 #------------------------------------------------------------------------------
-Event ID: 022
-Event Name: EV022
-(X,Y): (017,014)
-
-Page #1
-Conditions
-None
-
-Autonomous Movement
-Type: Fixed
-Speed: 3: Slow
-Freq: 3: Low
-Options Enabled
-Move Animation
-Trigger: Action Button
-
-List of Event Commands:
-@>Text: Abgeschlossen.
-@>
-
-#------------------------------------------------------------------------------
-Event ID: 023
-Event Name: EV023
-(X,Y): (018,014)
-
-Page #1
-Conditions
-None
-
-Autonomous Movement
-Type: Fixed
-Speed: 3: Slow
-Freq: 3: Low
-Options Enabled
-Move Animation
-Trigger: Action Button
-
-List of Event Commands:
-@>Text: Abgeschlossen.
-@>
-
-#------------------------------------------------------------------------------
-Event ID: 024
-Event Name: EV024
-(X,Y): (032,017)
-
-Page #1
-Conditions
-None
-
-Autonomous Movement
-Type: Fixed
-Speed: 3: Slow
-Freq: 3: Low
-Options Enabled
-Move Animation
-Trigger: Action Button
-
-List of Event Commands:
-@>Text: Abgeschlossen.
-@>
-
-#------------------------------------------------------------------------------
-Event ID: 025
-Event Name: EV025
-(X,Y): (033,017)
-
-Page #1
-Conditions
-None
-
-Autonomous Movement
-Type: Fixed
-Speed: 3: Slow
-Freq: 3: Low
-Options Enabled
-Move Animation
-Trigger: Action Button
-
-List of Event Commands:
-@>Text: Abgeschlossen.
-@>
-
-#------------------------------------------------------------------------------
-Event ID: 026
-Event Name: EV026
-(X,Y): (019,017)
-
-Page #1
-Conditions
-None
-
-Autonomous Movement
-Type: Fixed
-Speed: 3: Slow
-Freq: 3: Low
-Options Enabled
-Move Animation
-Trigger: Action Button
-
-List of Event Commands:
-@>Text: Verschiedene Schul-Bücher.
-@>
-
-#------------------------------------------------------------------------------
-Event ID: 027
-Event Name: EV027
-(X,Y): (020,017)
-
-Page #1
-Conditions
-None
-
-Autonomous Movement
-Type: Fixed
-Speed: 3: Slow
-Freq: 3: Low
-Options Enabled
-Move Animation
-Trigger: Action Button
-
-List of Event Commands:
-@>Text: Verschiedene Schul-Bücher.
-@>
-
-#------------------------------------------------------------------------------
-Event ID: 028
-Event Name: EV028
-(X,Y): (021,017)
-
-Page #1
-Conditions
-None
-
-Autonomous Movement
-Type: Fixed
-Speed: 3: Slow
-Freq: 3: Low
-Options Enabled
-Move Animation
-Trigger: Action Button
-
-List of Event Commands:
-@>Text: Verschiedene Schul-Bücher.
-@>
-
-#------------------------------------------------------------------------------
-Event ID: 029
-Event Name: EV029
-(X,Y): (022,017)
-
-Page #1
-Conditions
-None
-
-Autonomous Movement
-Type: Fixed
-Speed: 3: Slow
-Freq: 3: Low
-Options Enabled
-Move Animation
-Trigger: Action Button
-
-List of Event Commands:
-@>Text: Verschiedene Schul-Bücher.
-@>
-
-#------------------------------------------------------------------------------
 Event ID: 030
 Event Name: EV030
 (X,Y): (012,006)
@@ -178358,7 +177159,7 @@ List of Event Commands:
 @>Conditional Branch: Player is facing Down
  @>Set Move Route: Player
   :              : $>Move Down
- @>Wait for Move's Completion
+ @>Wait: 8 frame(s)
  @>
 : Else
  @>Play SE: 'Door exit', 80, 100
@@ -178827,237 +177628,6 @@ List of Event Commands:
 @>
 
 #------------------------------------------------------------------------------
-Event ID: 017
-Event Name: EV017
-(X,Y): (006,014)
-
-Page #1
-Conditions
-None
-
-Autonomous Movement
-Type: Fixed
-Speed: 3: Slow
-Freq: 3: Low
-Options Enabled
-Move Animation
-Trigger: Action Button
-
-List of Event Commands:
-@>Text: Abgeschlossen.
-@>
-
-#------------------------------------------------------------------------------
-Event ID: 018
-Event Name: EV018
-(X,Y): (007,014)
-
-Page #1
-Conditions
-None
-
-Autonomous Movement
-Type: Fixed
-Speed: 3: Slow
-Freq: 3: Low
-Options Enabled
-Move Animation
-Trigger: Action Button
-
-List of Event Commands:
-@>Text: Abgeschlossen.
-@>
-
-#------------------------------------------------------------------------------
-Event ID: 019
-Event Name: EV019
-(X,Y): (008,014)
-
-Page #1
-Conditions
-None
-
-Autonomous Movement
-Type: Fixed
-Speed: 3: Slow
-Freq: 3: Low
-Options Enabled
-Move Animation
-Trigger: Action Button
-
-List of Event Commands:
-@>Text: Abgeschlossen.
-@>
-
-#------------------------------------------------------------------------------
-Event ID: 020
-Event Name: EV020
-(X,Y): (009,014)
-
-Page #1
-Conditions
-None
-
-Autonomous Movement
-Type: Fixed
-Speed: 3: Slow
-Freq: 3: Low
-Options Enabled
-Move Animation
-Trigger: Action Button
-
-List of Event Commands:
-@>Text: Abgeschlossen.
-@>
-
-#------------------------------------------------------------------------------
-Event ID: 021
-Event Name: EV021
-(X,Y): (010,014)
-
-Page #1
-Conditions
-None
-
-Autonomous Movement
-Type: Fixed
-Speed: 3: Slow
-Freq: 3: Low
-Options Enabled
-Move Animation
-Trigger: Action Button
-
-List of Event Commands:
-@>Text: Abgeschlossen.
-@>
-
-#------------------------------------------------------------------------------
-Event ID: 022
-Event Name: EV022
-(X,Y): (017,014)
-
-Page #1
-Conditions
-None
-
-Autonomous Movement
-Type: Fixed
-Speed: 3: Slow
-Freq: 3: Low
-Options Enabled
-Move Animation
-Trigger: Action Button
-
-List of Event Commands:
-@>Text: Abgeschlossen.
-@>
-
-#------------------------------------------------------------------------------
-Event ID: 023
-Event Name: EV023
-(X,Y): (018,014)
-
-Page #1
-Conditions
-None
-
-Autonomous Movement
-Type: Fixed
-Speed: 3: Slow
-Freq: 3: Low
-Options Enabled
-Move Animation
-Trigger: Action Button
-
-List of Event Commands:
-@>Text: Abgeschlossen.
-@>
-
-#------------------------------------------------------------------------------
-Event ID: 024
-Event Name: EV024
-(X,Y): (019,017)
-
-Page #1
-Conditions
-None
-
-Autonomous Movement
-Type: Fixed
-Speed: 3: Slow
-Freq: 3: Low
-Options Enabled
-Move Animation
-Trigger: Action Button
-
-List of Event Commands:
-@>Text: Verschiedene Schul-Bücher.
-@>
-
-#------------------------------------------------------------------------------
-Event ID: 025
-Event Name: EV025
-(X,Y): (020,017)
-
-Page #1
-Conditions
-None
-
-Autonomous Movement
-Type: Fixed
-Speed: 3: Slow
-Freq: 3: Low
-Options Enabled
-Move Animation
-Trigger: Action Button
-
-List of Event Commands:
-@>Text: Verschiedene Schul-Bücher.
-@>
-
-#------------------------------------------------------------------------------
-Event ID: 026
-Event Name: EV026
-(X,Y): (021,017)
-
-Page #1
-Conditions
-None
-
-Autonomous Movement
-Type: Fixed
-Speed: 3: Slow
-Freq: 3: Low
-Options Enabled
-Move Animation
-Trigger: Action Button
-
-List of Event Commands:
-@>Text: Verschiedene Schul-Bücher.
-@>
-
-#------------------------------------------------------------------------------
-Event ID: 027
-Event Name: EV027
-(X,Y): (022,017)
-
-Page #1
-Conditions
-None
-
-Autonomous Movement
-Type: Fixed
-Speed: 3: Slow
-Freq: 3: Low
-Options Enabled
-Move Animation
-Trigger: Action Button
-
-List of Event Commands:
-@>Text: Verschiedene Schul-Bücher.
-@>
-
-#------------------------------------------------------------------------------
 Event ID: 028
 Event Name: EV028
 (X,Y): (011,006)
@@ -179450,6 +178020,7 @@ List of Event Commands:
 @>Play SE: 'Door exit', 100, 100
 @>Change Screen Color Tone: (-255,-255,-255,0), @6
 @>Wait: 8 frame(s)
+@>Change Transparent Flag: Transparency
 @>Transfer Player:[208: Solhaven], (015,053), Down, No Fade
 @>Change Screen Color Tone: (0,0,0,0), @6
 @>Wait: 8 frame(s)
@@ -179959,6 +178530,7 @@ List of Event Commands:
 @>Play SE: 'Door exit', 100, 100
 @>Change Screen Color Tone: (-255,-255,-255,0), @6
 @>Wait: 8 frame(s)
+@>Change Transparent Flag: Transparency
 @>Transfer Player:[208: Solhaven], (026,053), Down, No Fade
 @>Change Screen Color Tone: (0,0,0,0), @6
 @>Wait: 8 frame(s)
@@ -180181,6 +178753,7 @@ List of Event Commands:
 @>Play SE: 'Door exit', 100, 100
 @>Change Screen Color Tone: (-255,-255,-255,0), @6
 @>Wait: 8 frame(s)
+@>Change Transparent Flag: Transparency
 @>Transfer Player:[208: Solhaven], (062,009), Down, No Fade
 @>Change Screen Color Tone: (0,0,0,0), @6
 @>Wait: 8 frame(s)
@@ -181010,13 +179583,12 @@ Speed: 3: Slow
 Freq: 3: Low
 Options Enabled
 Move Animation
-Trigger: Player Touch
+Trigger: Event Touch
 
 List of Event Commands:
 @>Play SE: 'Door exit', 100, 100
 @>Change Screen Color Tone: (255,255,255,255), @6
 @>Wait: 8 frame(s)
-@>Script: pbCaveEntrance
 @>Transfer Player:[232: Arena 3], (016,032), Up, No Fade
 @>Change Screen Color Tone: (0,0,0,0), @6
 @>Wait: 8 frame(s)
@@ -181039,9 +179611,10 @@ List of Event Commands:
  @>Script: Followers.hide_followers
  @>Set Move Route: Player
                    (Ignore If Can't Move)
-  :              : $>SE: 'Door exit', 80, 100
+  :              : $>Through ON
   :              : $>Move Down
- @>Wait for Move's Completion
+  :              : $>Through OFF
+ @>Wait: 8 frame(s)
  @>Script: Followers.put_followers_on_player
  @>
 : Branch End
@@ -185273,12 +183846,9 @@ List of Event Commands:
 @>Play SE: 'Door exit', 100, 100
 @>Change Screen Color Tone: (255,255,255,255), @6
 @>Wait: 8 frame(s)
-@>Script: pbCaveEntrance
 @>Transfer Player:[228: Arena 3], (023,028), Down, No Fade
 @>Change Screen Color Tone: (0,0,0,0), @6
-@>Set Move Route: Player
- :              : $>Move Down
-@>Wait for Move's Completion
+@>Wait: 8 frame(s)
 @>
 
 #------------------------------------------------------------------------------
@@ -186676,8 +185246,8 @@ Auto-Change BGM: ORAS 054 Fortree City
 
 #------------------------------------------------------------------------------
 Event ID: 001
-Event Name: Exit
-(X,Y): (014,012)
+Event Name: Exit size(3,1)
+(X,Y): (013,012)
 
 Page #1
 Conditions
@@ -186692,36 +185262,13 @@ Move Animation
 Trigger: Player Touch
 
 List of Event Commands:
-@>Play SE: 'Door exit', 80, 100
+@>Play SE: 'Door exit', 100, 100
 @>Change Screen Color Tone: (-255,-255,-255,0), @6
 @>Wait: 8 frame(s)
+@>Change Transparent Flag: Transparency
 @>Transfer Player:[236: Solhaven], (019,020), Down, No Fade
 @>Change Screen Color Tone: (0,0,0,0), @6
-@>
-
-#------------------------------------------------------------------------------
-Event ID: 002
-Event Name: Exit
-(X,Y): (010,012)
-
-Page #1
-Conditions
-None
-
-Autonomous Movement
-Type: Fixed
-Speed: 3: Slow
-Freq: 3: Low
-Options Enabled
-Move Animation
-Trigger: Player Touch
-
-List of Event Commands:
-@>Play SE: 'Door exit', 80, 100
-@>Change Screen Color Tone: (-255,-255,-255,0), @6
 @>Wait: 8 frame(s)
-@>Transfer Player:[236: Solhaven], (018,020), Down, No Fade
-@>Change Screen Color Tone: (0,0,0,0), @6
 @>
 
 #------------------------------------------------------------------------------
@@ -186838,7 +185385,7 @@ List of Event Commands:
 
 #------------------------------------------------------------------------------
 Event ID: 004
-Event Name: EV004
+Event Name: Anmeldung
 (X,Y): (012,005)
 
 Page #1
@@ -186861,7 +185408,7 @@ List of Event Commands:
 
 #------------------------------------------------------------------------------
 Event ID: 005
-Event Name: Exit
+Event Name: Exit size(3,1)
 (X,Y): (009,012)
 
 Page #1
@@ -186877,86 +185424,13 @@ Move Animation
 Trigger: Player Touch
 
 List of Event Commands:
-@>Play SE: 'Door exit', 80, 100
+@>Play SE: 'Door exit', 100, 100
 @>Change Screen Color Tone: (-255,-255,-255,0), @6
 @>Wait: 8 frame(s)
+@>Change Transparent Flag: Transparency
 @>Transfer Player:[236: Solhaven], (018,020), Down, No Fade
 @>Change Screen Color Tone: (0,0,0,0), @6
-@>
-
-#------------------------------------------------------------------------------
-Event ID: 006
-Event Name: Exit
-(X,Y): (011,012)
-
-Page #1
-Conditions
-None
-
-Autonomous Movement
-Type: Fixed
-Speed: 3: Slow
-Freq: 3: Low
-Options Enabled
-Move Animation
-Trigger: Player Touch
-
-List of Event Commands:
-@>Play SE: 'Door exit', 80, 100
-@>Change Screen Color Tone: (-255,-255,-255,0), @6
 @>Wait: 8 frame(s)
-@>Transfer Player:[236: Solhaven], (018,020), Down, No Fade
-@>Change Screen Color Tone: (0,0,0,0), @6
-@>
-
-#------------------------------------------------------------------------------
-Event ID: 007
-Event Name: Exit
-(X,Y): (013,012)
-
-Page #1
-Conditions
-None
-
-Autonomous Movement
-Type: Fixed
-Speed: 3: Slow
-Freq: 3: Low
-Options Enabled
-Move Animation
-Trigger: Player Touch
-
-List of Event Commands:
-@>Play SE: 'Door exit', 80, 100
-@>Change Screen Color Tone: (-255,-255,-255,0), @6
-@>Wait: 8 frame(s)
-@>Transfer Player:[236: Solhaven], (019,020), Down, No Fade
-@>Change Screen Color Tone: (0,0,0,0), @6
-@>
-
-#------------------------------------------------------------------------------
-Event ID: 008
-Event Name: Exit
-(X,Y): (015,012)
-
-Page #1
-Conditions
-None
-
-Autonomous Movement
-Type: Fixed
-Speed: 3: Slow
-Freq: 3: Low
-Options Enabled
-Move Animation
-Trigger: Player Touch
-
-List of Event Commands:
-@>Play SE: 'Door exit', 80, 100
-@>Change Screen Color Tone: (-255,-255,-255,0), @6
-@>Wait: 8 frame(s)
-@>Transfer Player:[236: Solhaven], (019,020), Down, No Fade
-@>Change Screen Color Tone: (0,0,0,0), @6
 @>
 
 #------------------------------------------------------------------------------
@@ -187190,7 +185664,7 @@ Trigger: Player Touch
 List of Event Commands:
 @>Set Move Route: This event
                   (Ignore If Can't Move)
- :              : $>SE: 'Door slide', 80, 100
+ :              : $>SE: 'Door slide', 100, 100
  :              : $>Wait: 2 frame(s)
  :              : $>Turn Left
  :              : $>Wait: 2 frame(s)
@@ -187198,18 +185672,19 @@ List of Event Commands:
  :              : $>Wait: 2 frame(s)
  :              : $>Turn Up
  :              : $>Wait: 2 frame(s)
-@>Wait for Move's Completion
+@>Wait: 8 frame(s)
 @>Set Move Route: Player
                   (Ignore If Can't Move)
  :              : $>Through ON
  :              : $>Move Up
  :              : $>Through OFF
-@>Wait for Move's Completion
+@>Wait: 8 frame(s)
 @>Change Transparent Flag: Transparency
 @>Script: Followers.follow_into_door
-@>Wait for Move's Completion
+@>Wait: 8 frame(s)
 @>Set Move Route: This event
                   (Ignore If Can't Move)
+ :              : $>SE: 'Door slide', 100, 80
  :              : $>Wait: 2 frame(s)
  :              : $>Turn Right
  :              : $>Wait: 2 frame(s)
@@ -187217,12 +185692,13 @@ List of Event Commands:
  :              : $>Wait: 2 frame(s)
  :              : $>Turn Down
  :              : $>Wait: 2 frame(s)
-@>Wait for Move's Completion
+@>Wait: 8 frame(s)
 @>Change Screen Color Tone: (-255,-255,-255,0), @6
 @>Wait: 8 frame(s)
 @>Change Transparent Flag: Normal
 @>Transfer Player:[235: Hotel 1], (010,011), Up, No Fade
 @>Change Screen Color Tone: (0,0,0,0), @6
+@>Wait: 8 frame(s)
 @>
 
 Page #2
@@ -187253,22 +185729,26 @@ List of Event Commands:
   :              : $>Wait: 2 frame(s)
   :              : $>Turn Up
   :              : $>Wait: 2 frame(s)
- @>Wait for Move's Completion
+ @>Wait: 8 frame(s)
  @>Change Transparent Flag: Normal
  @>Set Move Route: Player
                    (Ignore If Can't Move)
+  :              : $>Through ON
   :              : $>Move Down
- @>Wait for Move's Completion
+  :              : $>Through OFF
+ @>Wait: 8 frame(s)
  @>Script: Followers.put_followers_on_player
  @>Set Move Route: This event
                    (Ignore If Can't Move)
+  :              : $>SE: 'Door slide', 100, 80
+  :              : $>Wait: 2 frame(s)
   :              : $>Turn Right
   :              : $>Wait: 2 frame(s)
   :              : $>Turn Left
   :              : $>Wait: 2 frame(s)
   :              : $>Turn Down
   :              : $>Wait: 2 frame(s)
- @>Wait for Move's Completion
+ @>Wait: 8 frame(s)
  @>
 : Branch End
 @>Script: setTempSwitchOn("A")
@@ -187291,7 +185771,7 @@ Trigger: Player Touch
 List of Event Commands:
 @>Set Move Route: This event
                   (Ignore If Can't Move)
- :              : $>SE: 'Door slide', 80, 100
+ :              : $>SE: 'Door slide', 100, 100
  :              : $>Wait: 2 frame(s)
  :              : $>Turn Left
  :              : $>Wait: 2 frame(s)
@@ -187299,18 +185779,19 @@ List of Event Commands:
  :              : $>Wait: 2 frame(s)
  :              : $>Turn Up
  :              : $>Wait: 2 frame(s)
-@>Wait for Move's Completion
+@>Wait: 8 frame(s)
 @>Set Move Route: Player
                   (Ignore If Can't Move)
  :              : $>Through ON
  :              : $>Move Up
  :              : $>Through OFF
-@>Wait for Move's Completion
+@>Wait: 8 frame(s)
 @>Change Transparent Flag: Transparency
 @>Script: Followers.follow_into_door
-@>Wait for Move's Completion
+@>Wait: 8 frame(s)
 @>Set Move Route: This event
                   (Ignore If Can't Move)
+ :              : $>SE: 'Door slide', 100, 80
  :              : $>Wait: 2 frame(s)
  :              : $>Turn Right
  :              : $>Wait: 2 frame(s)
@@ -187318,12 +185799,13 @@ List of Event Commands:
  :              : $>Wait: 2 frame(s)
  :              : $>Turn Down
  :              : $>Wait: 2 frame(s)
-@>Wait for Move's Completion
+@>Wait: 8 frame(s)
 @>Change Screen Color Tone: (-255,-255,-255,0), @6
 @>Wait: 8 frame(s)
 @>Change Transparent Flag: Normal
 @>Transfer Player:[235: Hotel 1], (010,011), Up, No Fade
 @>Change Screen Color Tone: (0,0,0,0), @6
+@>Wait: 8 frame(s)
 @>
 
 Page #4
@@ -187355,22 +185837,26 @@ List of Event Commands:
   :              : $>Wait: 2 frame(s)
   :              : $>Turn Up
   :              : $>Wait: 2 frame(s)
- @>Wait for Move's Completion
+ @>Wait: 8 frame(s)
  @>Change Transparent Flag: Normal
  @>Set Move Route: Player
                    (Ignore If Can't Move)
+  :              : $>Through ON
   :              : $>Move Down
- @>Wait for Move's Completion
+  :              : $>Through OFF
+ @>Wait: 8 frame(s)
  @>Script: Followers.put_followers_on_player
  @>Set Move Route: This event
                    (Ignore If Can't Move)
+  :              : $>SE: 'Door slide', 100, 80
+  :              : $>Wait: 2 frame(s)
   :              : $>Turn Right
   :              : $>Wait: 2 frame(s)
   :              : $>Turn Left
   :              : $>Wait: 2 frame(s)
   :              : $>Turn Down
   :              : $>Wait: 2 frame(s)
- @>Wait for Move's Completion
+ @>Wait: 8 frame(s)
  @>
 : Branch End
 @>Script: setTempSwitchOn("A")
@@ -187398,7 +185884,7 @@ Trigger: Player Touch
 List of Event Commands:
 @>Set Move Route: This event
                   (Ignore If Can't Move)
- :              : $>SE: 'Door slide', 80, 100
+ :              : $>SE: 'Door slide', 100, 100
  :              : $>Wait: 2 frame(s)
  :              : $>Turn Left
  :              : $>Wait: 2 frame(s)
@@ -187406,18 +185892,19 @@ List of Event Commands:
  :              : $>Wait: 2 frame(s)
  :              : $>Turn Up
  :              : $>Wait: 2 frame(s)
-@>Wait for Move's Completion
+@>Wait: 8 frame(s)
 @>Set Move Route: Player
                   (Ignore If Can't Move)
  :              : $>Through ON
  :              : $>Move Up
  :              : $>Through OFF
-@>Wait for Move's Completion
+@>Wait: 8 frame(s)
 @>Change Transparent Flag: Transparency
 @>Script: Followers.follow_into_door
-@>Wait for Move's Completion
+@>Wait: 8 frame(s)
 @>Set Move Route: This event
                   (Ignore If Can't Move)
+ :              : $>SE: 'Door slide', 100, 80
  :              : $>Wait: 2 frame(s)
  :              : $>Turn Right
  :              : $>Wait: 2 frame(s)
@@ -187425,12 +185912,13 @@ List of Event Commands:
  :              : $>Wait: 2 frame(s)
  :              : $>Turn Down
  :              : $>Wait: 2 frame(s)
-@>Wait for Move's Completion
+@>Wait: 8 frame(s)
 @>Change Screen Color Tone: (-255,-255,-255,0), @6
 @>Wait: 8 frame(s)
 @>Change Transparent Flag: Normal
 @>Transfer Player:[235: Hotel 1], (014,011), Up, No Fade
 @>Change Screen Color Tone: (0,0,0,0), @6
+@>Wait: 8 frame(s)
 @>
 
 Page #2
@@ -187461,22 +185949,26 @@ List of Event Commands:
   :              : $>Wait: 2 frame(s)
   :              : $>Turn Up
   :              : $>Wait: 2 frame(s)
- @>Wait for Move's Completion
+ @>Wait: 8 frame(s)
  @>Change Transparent Flag: Normal
  @>Set Move Route: Player
                    (Ignore If Can't Move)
+  :              : $>Through ON
   :              : $>Move Down
- @>Wait for Move's Completion
+  :              : $>Through OFF
+ @>Wait: 8 frame(s)
  @>Script: Followers.put_followers_on_player
  @>Set Move Route: This event
                    (Ignore If Can't Move)
+  :              : $>SE: 'Door slide', 100, 80
+  :              : $>Wait: 2 frame(s)
   :              : $>Turn Right
   :              : $>Wait: 2 frame(s)
   :              : $>Turn Left
   :              : $>Wait: 2 frame(s)
   :              : $>Turn Down
   :              : $>Wait: 2 frame(s)
- @>Wait for Move's Completion
+ @>Wait: 8 frame(s)
  @>
 : Branch End
 @>Script: setTempSwitchOn("A")
@@ -187499,7 +185991,7 @@ Trigger: Player Touch
 List of Event Commands:
 @>Set Move Route: This event
                   (Ignore If Can't Move)
- :              : $>SE: 'Door slide', 80, 100
+ :              : $>SE: 'Door slide', 100, 100
  :              : $>Wait: 2 frame(s)
  :              : $>Turn Left
  :              : $>Wait: 2 frame(s)
@@ -187507,18 +185999,19 @@ List of Event Commands:
  :              : $>Wait: 2 frame(s)
  :              : $>Turn Up
  :              : $>Wait: 2 frame(s)
-@>Wait for Move's Completion
+@>Wait: 8 frame(s)
 @>Set Move Route: Player
                   (Ignore If Can't Move)
  :              : $>Through ON
  :              : $>Move Up
  :              : $>Through OFF
-@>Wait for Move's Completion
+@>Wait: 8 frame(s)
 @>Change Transparent Flag: Transparency
 @>Script: Followers.follow_into_door
-@>Wait for Move's Completion
+@>Wait: 8 frame(s)
 @>Set Move Route: This event
                   (Ignore If Can't Move)
+ :              : $>SE: 'Door slide', 100, 80
  :              : $>Wait: 2 frame(s)
  :              : $>Turn Right
  :              : $>Wait: 2 frame(s)
@@ -187526,12 +186019,13 @@ List of Event Commands:
  :              : $>Wait: 2 frame(s)
  :              : $>Turn Down
  :              : $>Wait: 2 frame(s)
-@>Wait for Move's Completion
+@>Wait: 8 frame(s)
 @>Change Screen Color Tone: (-255,-255,-255,0), @6
 @>Wait: 8 frame(s)
 @>Change Transparent Flag: Normal
 @>Transfer Player:[235: Hotel 1], (014,011), Up, No Fade
 @>Change Screen Color Tone: (0,0,0,0), @6
+@>Wait: 8 frame(s)
 @>
 
 Page #4
@@ -187563,22 +186057,26 @@ List of Event Commands:
   :              : $>Wait: 2 frame(s)
   :              : $>Turn Up
   :              : $>Wait: 2 frame(s)
- @>Wait for Move's Completion
+ @>Wait: 8 frame(s)
  @>Change Transparent Flag: Normal
  @>Set Move Route: Player
                    (Ignore If Can't Move)
+  :              : $>Through ON
   :              : $>Move Down
- @>Wait for Move's Completion
+  :              : $>Through OFF
+ @>Wait: 8 frame(s)
  @>Script: Followers.put_followers_on_player
  @>Set Move Route: This event
                    (Ignore If Can't Move)
+  :              : $>SE: 'Door slide', 100, 80
+  :              : $>Wait: 2 frame(s)
   :              : $>Turn Right
   :              : $>Wait: 2 frame(s)
   :              : $>Turn Left
   :              : $>Wait: 2 frame(s)
   :              : $>Turn Down
   :              : $>Wait: 2 frame(s)
- @>Wait for Move's Completion
+ @>Wait: 8 frame(s)
  @>
 : Branch End
 @>Script: setTempSwitchOn("A")
@@ -187586,215 +186084,7 @@ List of Event Commands:
 
 #------------------------------------------------------------------------------
 Event ID: 003
-Event Name: Hotel 2 Tür rechts
-(X,Y): (034,020)
-
-Page #1
-Conditions
-None
-
-Graphic: Doors Stadt 5 Center Markt
-
-Autonomous Movement
-Type: Fixed
-Speed: 3: Slow
-Freq: 3: Low
-Options Enabled
-Move Animation
-Trigger: Player Touch
-
-List of Event Commands:
-@>Set Move Route: This event
-                  (Ignore If Can't Move)
- :              : $>SE: 'Door slide', 80, 100
- :              : $>Wait: 2 frame(s)
- :              : $>Turn Left
- :              : $>Wait: 2 frame(s)
- :              : $>Turn Right
- :              : $>Wait: 2 frame(s)
- :              : $>Turn Up
- :              : $>Wait: 2 frame(s)
-@>Wait for Move's Completion
-@>Set Move Route: Player
-                  (Ignore If Can't Move)
- :              : $>Through ON
- :              : $>Move Up
- :              : $>Through OFF
-@>Wait for Move's Completion
-@>Change Transparent Flag: Transparency
-@>Script: Followers.follow_into_door
-@>Wait for Move's Completion
-@>Set Move Route: This event
-                  (Ignore If Can't Move)
- :              : $>Wait: 2 frame(s)
- :              : $>Turn Right
- :              : $>Wait: 2 frame(s)
- :              : $>Turn Left
- :              : $>Wait: 2 frame(s)
- :              : $>Turn Down
- :              : $>Wait: 2 frame(s)
-@>Wait for Move's Completion
-@>Change Screen Color Tone: (-255,-255,-255,0), @6
-@>Wait: 8 frame(s)
-@>Change Transparent Flag: Normal
-@>Transfer Player:[238: Hotel 2], (014,011), Up, No Fade
-@>Change Screen Color Tone: (0,0,0,0), @6
-@>
-
-Page #2
-Conditions
-Switch 0022: s:tsOff?("A") is ON
-
-Graphic: Doors Stadt 5 Center Markt
-
-Autonomous Movement
-Type: Fixed
-Speed: 3: Slow
-Freq: 3: Low
-Options Enabled
-Move Animation
-Trigger: Autorun
-
-List of Event Commands:
-@>Conditional Branch: Script: get_self.onEvent?
- @>Change Transparent Flag: Transparency
- @>Script: Followers.hide_followers
- @>Set Move Route: This event
-                   (Ignore If Can't Move)
-  :              : $>SE: 'Door slide', 80, 100
-  :              : $>Wait: 2 frame(s)
-  :              : $>Turn Left
-  :              : $>Wait: 2 frame(s)
-  :              : $>Turn Right
-  :              : $>Wait: 2 frame(s)
-  :              : $>Turn Up
-  :              : $>Wait: 2 frame(s)
- @>Wait for Move's Completion
- @>Change Transparent Flag: Normal
- @>Set Move Route: Player
-                   (Ignore If Can't Move)
-  :              : $>Move Down
- @>Wait for Move's Completion
- @>Script: Followers.put_followers_on_player
- @>Set Move Route: This event
-                   (Ignore If Can't Move)
-  :              : $>Turn Right
-  :              : $>Wait: 2 frame(s)
-  :              : $>Turn Left
-  :              : $>Wait: 2 frame(s)
-  :              : $>Turn Down
-  :              : $>Wait: 2 frame(s)
- @>Wait for Move's Completion
- @>
-: Branch End
-@>Script: setTempSwitchOn("A")
-@>
-
-Page #3
-Conditions
-Switch 0015: s:PBDayNight.isNight? is ON
-
-Graphic: Doors Stadt 5 Center Markt
-
-Autonomous Movement
-Type: Fixed
-Speed: 3: Slow
-Freq: 3: Low
-Options Enabled
-Move Animation
-Trigger: Player Touch
-
-List of Event Commands:
-@>Set Move Route: This event
-                  (Ignore If Can't Move)
- :              : $>SE: 'Door slide', 80, 100
- :              : $>Wait: 2 frame(s)
- :              : $>Turn Left
- :              : $>Wait: 2 frame(s)
- :              : $>Turn Right
- :              : $>Wait: 2 frame(s)
- :              : $>Turn Up
- :              : $>Wait: 2 frame(s)
-@>Wait for Move's Completion
-@>Set Move Route: Player
-                  (Ignore If Can't Move)
- :              : $>Through ON
- :              : $>Move Up
- :              : $>Through OFF
-@>Wait for Move's Completion
-@>Change Transparent Flag: Transparency
-@>Script: Followers.follow_into_door
-@>Wait for Move's Completion
-@>Set Move Route: This event
-                  (Ignore If Can't Move)
- :              : $>Wait: 2 frame(s)
- :              : $>Turn Right
- :              : $>Wait: 2 frame(s)
- :              : $>Turn Left
- :              : $>Wait: 2 frame(s)
- :              : $>Turn Down
- :              : $>Wait: 2 frame(s)
-@>Wait for Move's Completion
-@>Change Screen Color Tone: (-255,-255,-255,0), @6
-@>Wait: 8 frame(s)
-@>Change Transparent Flag: Normal
-@>Transfer Player:[238: Hotel 2], (014,011), Up, No Fade
-@>Change Screen Color Tone: (0,0,0,0), @6
-@>
-
-Page #4
-Conditions
-Switch 0022: s:tsOff?("A") is ON
-Switch 0015: s:PBDayNight.isNight? is ON
-
-Graphic: Doors Stadt 5 Center Markt
-
-Autonomous Movement
-Type: Fixed
-Speed: 3: Slow
-Freq: 3: Low
-Options Enabled
-Move Animation
-Trigger: Autorun
-
-List of Event Commands:
-@>Conditional Branch: Script: get_self.onEvent?
- @>Change Transparent Flag: Transparency
- @>Script: Followers.hide_followers
- @>Set Move Route: This event
-                   (Ignore If Can't Move)
-  :              : $>SE: 'Door slide', 80, 100
-  :              : $>Wait: 2 frame(s)
-  :              : $>Turn Left
-  :              : $>Wait: 2 frame(s)
-  :              : $>Turn Right
-  :              : $>Wait: 2 frame(s)
-  :              : $>Turn Up
-  :              : $>Wait: 2 frame(s)
- @>Wait for Move's Completion
- @>Change Transparent Flag: Normal
- @>Set Move Route: Player
-                   (Ignore If Can't Move)
-  :              : $>Move Down
- @>Wait for Move's Completion
- @>Script: Followers.put_followers_on_player
- @>Set Move Route: This event
-                   (Ignore If Can't Move)
-  :              : $>Turn Right
-  :              : $>Wait: 2 frame(s)
-  :              : $>Turn Left
-  :              : $>Wait: 2 frame(s)
-  :              : $>Turn Down
-  :              : $>Wait: 2 frame(s)
- @>Wait for Move's Completion
- @>
-: Branch End
-@>Script: setTempSwitchOn("A")
-@>
-
-#------------------------------------------------------------------------------
-Event ID: 004
-Event Name: Hotel 2 Tür links
+Event Name: Hotel 1 Tür links.noshadow
 (X,Y): (033,020)
 
 Page #1
@@ -187814,7 +186104,7 @@ Trigger: Player Touch
 List of Event Commands:
 @>Set Move Route: This event
                   (Ignore If Can't Move)
- :              : $>SE: 'Door slide', 80, 100
+ :              : $>SE: 'Door slide', 100, 100
  :              : $>Wait: 2 frame(s)
  :              : $>Turn Left
  :              : $>Wait: 2 frame(s)
@@ -187822,18 +186112,19 @@ List of Event Commands:
  :              : $>Wait: 2 frame(s)
  :              : $>Turn Up
  :              : $>Wait: 2 frame(s)
-@>Wait for Move's Completion
+@>Wait: 8 frame(s)
 @>Set Move Route: Player
                   (Ignore If Can't Move)
  :              : $>Through ON
  :              : $>Move Up
  :              : $>Through OFF
-@>Wait for Move's Completion
+@>Wait: 8 frame(s)
 @>Change Transparent Flag: Transparency
 @>Script: Followers.follow_into_door
-@>Wait for Move's Completion
+@>Wait: 8 frame(s)
 @>Set Move Route: This event
                   (Ignore If Can't Move)
+ :              : $>SE: 'Door slide', 100, 80
  :              : $>Wait: 2 frame(s)
  :              : $>Turn Right
  :              : $>Wait: 2 frame(s)
@@ -187841,12 +186132,13 @@ List of Event Commands:
  :              : $>Wait: 2 frame(s)
  :              : $>Turn Down
  :              : $>Wait: 2 frame(s)
-@>Wait for Move's Completion
+@>Wait: 8 frame(s)
 @>Change Screen Color Tone: (-255,-255,-255,0), @6
 @>Wait: 8 frame(s)
 @>Change Transparent Flag: Normal
 @>Transfer Player:[238: Hotel 2], (010,011), Up, No Fade
 @>Change Screen Color Tone: (0,0,0,0), @6
+@>Wait: 8 frame(s)
 @>
 
 Page #2
@@ -187877,22 +186169,26 @@ List of Event Commands:
   :              : $>Wait: 2 frame(s)
   :              : $>Turn Up
   :              : $>Wait: 2 frame(s)
- @>Wait for Move's Completion
+ @>Wait: 8 frame(s)
  @>Change Transparent Flag: Normal
  @>Set Move Route: Player
                    (Ignore If Can't Move)
+  :              : $>Through ON
   :              : $>Move Down
- @>Wait for Move's Completion
+  :              : $>Through OFF
+ @>Wait: 8 frame(s)
  @>Script: Followers.put_followers_on_player
  @>Set Move Route: This event
                    (Ignore If Can't Move)
+  :              : $>SE: 'Door slide', 100, 80
+  :              : $>Wait: 2 frame(s)
   :              : $>Turn Right
   :              : $>Wait: 2 frame(s)
   :              : $>Turn Left
   :              : $>Wait: 2 frame(s)
   :              : $>Turn Down
   :              : $>Wait: 2 frame(s)
- @>Wait for Move's Completion
+ @>Wait: 8 frame(s)
  @>
 : Branch End
 @>Script: setTempSwitchOn("A")
@@ -187915,7 +186211,7 @@ Trigger: Player Touch
 List of Event Commands:
 @>Set Move Route: This event
                   (Ignore If Can't Move)
- :              : $>SE: 'Door slide', 80, 100
+ :              : $>SE: 'Door slide', 100, 100
  :              : $>Wait: 2 frame(s)
  :              : $>Turn Left
  :              : $>Wait: 2 frame(s)
@@ -187923,18 +186219,19 @@ List of Event Commands:
  :              : $>Wait: 2 frame(s)
  :              : $>Turn Up
  :              : $>Wait: 2 frame(s)
-@>Wait for Move's Completion
+@>Wait: 8 frame(s)
 @>Set Move Route: Player
                   (Ignore If Can't Move)
  :              : $>Through ON
  :              : $>Move Up
  :              : $>Through OFF
-@>Wait for Move's Completion
+@>Wait: 8 frame(s)
 @>Change Transparent Flag: Transparency
 @>Script: Followers.follow_into_door
-@>Wait for Move's Completion
+@>Wait: 8 frame(s)
 @>Set Move Route: This event
                   (Ignore If Can't Move)
+ :              : $>SE: 'Door slide', 100, 80
  :              : $>Wait: 2 frame(s)
  :              : $>Turn Right
  :              : $>Wait: 2 frame(s)
@@ -187942,12 +186239,13 @@ List of Event Commands:
  :              : $>Wait: 2 frame(s)
  :              : $>Turn Down
  :              : $>Wait: 2 frame(s)
-@>Wait for Move's Completion
+@>Wait: 8 frame(s)
 @>Change Screen Color Tone: (-255,-255,-255,0), @6
 @>Wait: 8 frame(s)
 @>Change Transparent Flag: Normal
 @>Transfer Player:[238: Hotel 2], (010,011), Up, No Fade
 @>Change Screen Color Tone: (0,0,0,0), @6
+@>Wait: 8 frame(s)
 @>
 
 Page #4
@@ -187979,22 +186277,246 @@ List of Event Commands:
   :              : $>Wait: 2 frame(s)
   :              : $>Turn Up
   :              : $>Wait: 2 frame(s)
- @>Wait for Move's Completion
+ @>Wait: 8 frame(s)
  @>Change Transparent Flag: Normal
  @>Set Move Route: Player
                    (Ignore If Can't Move)
+  :              : $>Through ON
   :              : $>Move Down
- @>Wait for Move's Completion
+  :              : $>Through OFF
+ @>Wait: 8 frame(s)
  @>Script: Followers.put_followers_on_player
  @>Set Move Route: This event
                    (Ignore If Can't Move)
+  :              : $>SE: 'Door slide', 100, 80
+  :              : $>Wait: 2 frame(s)
   :              : $>Turn Right
   :              : $>Wait: 2 frame(s)
   :              : $>Turn Left
   :              : $>Wait: 2 frame(s)
   :              : $>Turn Down
   :              : $>Wait: 2 frame(s)
- @>Wait for Move's Completion
+ @>Wait: 8 frame(s)
+ @>
+: Branch End
+@>Script: setTempSwitchOn("A")
+@>
+
+#------------------------------------------------------------------------------
+Event ID: 004
+Event Name: Hotel 1 Tür rechts
+(X,Y): (034,020)
+
+Page #1
+Conditions
+None
+
+Graphic: Doors Stadt 5 Center Markt
+
+Autonomous Movement
+Type: Fixed
+Speed: 3: Slow
+Freq: 3: Low
+Options Enabled
+Move Animation
+Trigger: Player Touch
+
+List of Event Commands:
+@>Set Move Route: This event
+                  (Ignore If Can't Move)
+ :              : $>SE: 'Door slide', 100, 100
+ :              : $>Wait: 2 frame(s)
+ :              : $>Turn Left
+ :              : $>Wait: 2 frame(s)
+ :              : $>Turn Right
+ :              : $>Wait: 2 frame(s)
+ :              : $>Turn Up
+ :              : $>Wait: 2 frame(s)
+@>Wait: 8 frame(s)
+@>Set Move Route: Player
+                  (Ignore If Can't Move)
+ :              : $>Through ON
+ :              : $>Move Up
+ :              : $>Through OFF
+@>Wait: 8 frame(s)
+@>Change Transparent Flag: Transparency
+@>Script: Followers.follow_into_door
+@>Wait: 8 frame(s)
+@>Set Move Route: This event
+                  (Ignore If Can't Move)
+ :              : $>SE: 'Door slide', 100, 80
+ :              : $>Wait: 2 frame(s)
+ :              : $>Turn Right
+ :              : $>Wait: 2 frame(s)
+ :              : $>Turn Left
+ :              : $>Wait: 2 frame(s)
+ :              : $>Turn Down
+ :              : $>Wait: 2 frame(s)
+@>Wait: 8 frame(s)
+@>Change Screen Color Tone: (-255,-255,-255,0), @6
+@>Wait: 8 frame(s)
+@>Change Transparent Flag: Normal
+@>Transfer Player:[238: Hotel 2], (014,011), Up, No Fade
+@>Change Screen Color Tone: (0,0,0,0), @6
+@>Wait: 8 frame(s)
+@>
+
+Page #2
+Conditions
+Switch 0022: s:tsOff?("A") is ON
+
+Graphic: Doors Stadt 5 Center Markt
+
+Autonomous Movement
+Type: Fixed
+Speed: 3: Slow
+Freq: 3: Low
+Options Enabled
+Move Animation
+Trigger: Autorun
+
+List of Event Commands:
+@>Conditional Branch: Script: get_self.onEvent?
+ @>Change Transparent Flag: Transparency
+ @>Script: Followers.hide_followers
+ @>Set Move Route: This event
+                   (Ignore If Can't Move)
+  :              : $>SE: 'Door slide', 80, 100
+  :              : $>Wait: 2 frame(s)
+  :              : $>Turn Left
+  :              : $>Wait: 2 frame(s)
+  :              : $>Turn Right
+  :              : $>Wait: 2 frame(s)
+  :              : $>Turn Up
+  :              : $>Wait: 2 frame(s)
+ @>Wait: 8 frame(s)
+ @>Change Transparent Flag: Normal
+ @>Set Move Route: Player
+                   (Ignore If Can't Move)
+  :              : $>Through ON
+  :              : $>Move Down
+  :              : $>Through OFF
+ @>Wait: 8 frame(s)
+ @>Script: Followers.put_followers_on_player
+ @>Set Move Route: This event
+                   (Ignore If Can't Move)
+  :              : $>SE: 'Door slide', 100, 80
+  :              : $>Wait: 2 frame(s)
+  :              : $>Turn Right
+  :              : $>Wait: 2 frame(s)
+  :              : $>Turn Left
+  :              : $>Wait: 2 frame(s)
+  :              : $>Turn Down
+  :              : $>Wait: 2 frame(s)
+ @>Wait: 8 frame(s)
+ @>
+: Branch End
+@>Script: setTempSwitchOn("A")
+@>
+
+Page #3
+Conditions
+Switch 0015: s:PBDayNight.isNight? is ON
+
+Graphic: Doors Stadt 5 Center Markt
+
+Autonomous Movement
+Type: Fixed
+Speed: 3: Slow
+Freq: 3: Low
+Options Enabled
+Move Animation
+Trigger: Player Touch
+
+List of Event Commands:
+@>Set Move Route: This event
+                  (Ignore If Can't Move)
+ :              : $>SE: 'Door slide', 100, 100
+ :              : $>Wait: 2 frame(s)
+ :              : $>Turn Left
+ :              : $>Wait: 2 frame(s)
+ :              : $>Turn Right
+ :              : $>Wait: 2 frame(s)
+ :              : $>Turn Up
+ :              : $>Wait: 2 frame(s)
+@>Wait: 8 frame(s)
+@>Set Move Route: Player
+                  (Ignore If Can't Move)
+ :              : $>Through ON
+ :              : $>Move Up
+ :              : $>Through OFF
+@>Wait: 8 frame(s)
+@>Change Transparent Flag: Transparency
+@>Script: Followers.follow_into_door
+@>Wait: 8 frame(s)
+@>Set Move Route: This event
+                  (Ignore If Can't Move)
+ :              : $>SE: 'Door slide', 100, 80
+ :              : $>Wait: 2 frame(s)
+ :              : $>Turn Right
+ :              : $>Wait: 2 frame(s)
+ :              : $>Turn Left
+ :              : $>Wait: 2 frame(s)
+ :              : $>Turn Down
+ :              : $>Wait: 2 frame(s)
+@>Wait: 8 frame(s)
+@>Change Screen Color Tone: (-255,-255,-255,0), @6
+@>Wait: 8 frame(s)
+@>Change Transparent Flag: Normal
+@>Transfer Player:[238: Hotel 2], (014,011), Up, No Fade
+@>Change Screen Color Tone: (0,0,0,0), @6
+@>Wait: 8 frame(s)
+@>
+
+Page #4
+Conditions
+Switch 0022: s:tsOff?("A") is ON
+Switch 0015: s:PBDayNight.isNight? is ON
+
+Graphic: Doors Stadt 5 Center Markt
+
+Autonomous Movement
+Type: Fixed
+Speed: 3: Slow
+Freq: 3: Low
+Options Enabled
+Move Animation
+Trigger: Autorun
+
+List of Event Commands:
+@>Conditional Branch: Script: get_self.onEvent?
+ @>Change Transparent Flag: Transparency
+ @>Script: Followers.hide_followers
+ @>Set Move Route: This event
+                   (Ignore If Can't Move)
+  :              : $>SE: 'Door slide', 80, 100
+  :              : $>Wait: 2 frame(s)
+  :              : $>Turn Left
+  :              : $>Wait: 2 frame(s)
+  :              : $>Turn Right
+  :              : $>Wait: 2 frame(s)
+  :              : $>Turn Up
+  :              : $>Wait: 2 frame(s)
+ @>Wait: 8 frame(s)
+ @>Change Transparent Flag: Normal
+ @>Set Move Route: Player
+                   (Ignore If Can't Move)
+  :              : $>Through ON
+  :              : $>Move Down
+  :              : $>Through OFF
+ @>Wait: 8 frame(s)
+ @>Script: Followers.put_followers_on_player
+ @>Set Move Route: This event
+                   (Ignore If Can't Move)
+  :              : $>SE: 'Door slide', 100, 80
+  :              : $>Wait: 2 frame(s)
+  :              : $>Turn Right
+  :              : $>Wait: 2 frame(s)
+  :              : $>Turn Left
+  :              : $>Wait: 2 frame(s)
+  :              : $>Turn Down
+  :              : $>Wait: 2 frame(s)
+ @>Wait: 8 frame(s)
  @>
 : Branch End
 @>Script: setTempSwitchOn("A")
@@ -188757,7 +187279,7 @@ List of Event Commands:
  :              : $>Move Right
  :              : $>Move Up
 @>Wait for Move's Completion
-@>Set Move Route: [Hotel 2 Tür links]
+@>Set Move Route: [Hotel 1 Tür rechts]
                   (Ignore If Can't Move)
  :              : $>SE: 'Door slide', 80, 100
  :              : $>Wait: 2 frame(s)
@@ -188775,7 +187297,7 @@ List of Event Commands:
  :              : $>Through OFF
 @>Wait for Move's Completion
 @>Set Event Location: This event,(063,001)
-@>Set Move Route: [Hotel 2 Tür links]
+@>Set Move Route: [Hotel 1 Tür rechts]
                   (Ignore If Can't Move)
  :              : $>Wait: 2 frame(s)
  :              : $>Turn Right
@@ -189426,7 +187948,7 @@ List of Event Commands:
  :              : $>Move Right
  :              : $>Move Up
 @>Wait for Move's Completion
-@>Set Move Route: [Hotel 2 Tür links]
+@>Set Move Route: [Hotel 1 Tür rechts]
                   (Ignore If Can't Move)
  :              : $>SE: 'Door slide', 80, 100
  :              : $>Wait: 2 frame(s)
@@ -189444,7 +187966,7 @@ List of Event Commands:
  :              : $>Through OFF
 @>Wait for Move's Completion
 @>Set Event Location: [Elisa],(063,001)
-@>Set Move Route: [Hotel 2 Tür links]
+@>Set Move Route: [Hotel 1 Tür rechts]
                   (Ignore If Can't Move)
  :              : $>Wait: 2 frame(s)
  :              : $>Turn Right
@@ -189508,7 +188030,7 @@ List of Event Commands:
  :              : $>Move Right
  :              : $>Move Up
 @>Wait for Move's Completion
-@>Set Move Route: [Hotel 2 Tür links]
+@>Set Move Route: [Hotel 1 Tür rechts]
                   (Ignore If Can't Move)
  :              : $>SE: 'Door slide', 80, 100
  :              : $>Wait: 2 frame(s)
@@ -189526,7 +188048,7 @@ List of Event Commands:
  :              : $>Through OFF
 @>Wait for Move's Completion
 @>Set Event Location: [Elisa],(063,001)
-@>Set Move Route: [Hotel 2 Tür links]
+@>Set Move Route: [Hotel 1 Tür rechts]
                   (Ignore If Can't Move)
  :              : $>Wait: 2 frame(s)
  :              : $>Turn Right
@@ -189615,7 +188137,7 @@ List of Event Commands:
 @>Set Event Location: [Matteo],(036,024), Up
 @>Change Transparent Flag: Transparency
 @>Script: Followers.hide_followers
-@>Set Move Route: [Hotel 2 Tür links]
+@>Set Move Route: [Hotel 1 Tür rechts]
                   (Ignore If Can't Move)
  :              : $>SE: 'Door slide', 80, 100
  :              : $>Wait: 2 frame(s)
@@ -189632,7 +188154,7 @@ List of Event Commands:
  :              : $>Move Down
 @>Wait for Move's Completion
 @>Script: Followers.put_followers_on_player
-@>Set Move Route: [Hotel 2 Tür links]
+@>Set Move Route: [Hotel 1 Tür rechts]
                   (Ignore If Can't Move)
  :              : $>Turn Right
  :              : $>Wait: 2 frame(s)
@@ -191110,8 +189632,8 @@ Auto-Change BGM: ORAS 054 Fortree City
 
 #------------------------------------------------------------------------------
 Event ID: 001
-Event Name: Exit
-(X,Y): (014,012)
+Event Name: Exit size(3,1)
+(X,Y): (013,012)
 
 Page #1
 Conditions
@@ -191127,26 +189649,28 @@ Trigger: Player Touch
 
 List of Event Commands:
 @>Conditional Branch: Switch [0208: Versammlung Ende] == ON
- @>Play SE: 'Door exit', 80, 100
+ @>Play SE: 'Door exit', 100, 100
  @>Change Screen Color Tone: (-255,-255,-255,0), @6
  @>Wait: 8 frame(s)
  @>Transfer Player:[236: Solhaven], (033,020), Down, No Fade
  @>Change Screen Color Tone: (0,0,0,0), @6
+ @>Wait: 8 frame(s)
  @>
 : Else
- @>Play SE: 'Door exit', 80, 100
+ @>Play SE: 'Door exit', 100, 100
  @>Change Screen Color Tone: (-255,-255,-255,0), @6
  @>Wait: 8 frame(s)
  @>Transfer Player:[236: Solhaven], (034,020), Down, No Fade
  @>Change Screen Color Tone: (0,0,0,0), @6
+ @>Wait: 8 frame(s)
  @>
 : Branch End
 @>
 
 #------------------------------------------------------------------------------
 Event ID: 002
-Event Name: Exit
-(X,Y): (010,012)
+Event Name: Exit size(3,1)
+(X,Y): (009,012)
 
 Page #1
 Conditions
@@ -191161,11 +189685,13 @@ Move Animation
 Trigger: Player Touch
 
 List of Event Commands:
-@>Play SE: 'Door exit', 80, 100
+@>Play SE: 'Door exit', 100, 100
 @>Change Screen Color Tone: (-255,-255,-255,0), @6
 @>Wait: 8 frame(s)
+@>Change Transparent Flag: Transparency
 @>Transfer Player:[236: Solhaven], (033,020), Down, No Fade
 @>Change Screen Color Tone: (0,0,0,0), @6
+@>Wait: 8 frame(s)
 @>
 
 #------------------------------------------------------------------------------
@@ -191304,126 +189830,6 @@ List of Event Commands:
  :    : Solhaven.
 @>Text: \xn[Hotelangestellter]Der Buchclub fällt heute leider 
  :    : aus!
-@>
-
-#------------------------------------------------------------------------------
-Event ID: 005
-Event Name: Exit
-(X,Y): (011,012)
-
-Page #1
-Conditions
-None
-
-Autonomous Movement
-Type: Fixed
-Speed: 3: Slow
-Freq: 3: Low
-Options Enabled
-Move Animation
-Trigger: Player Touch
-
-List of Event Commands:
-@>Play SE: 'Door exit', 80, 100
-@>Change Screen Color Tone: (-255,-255,-255,0), @6
-@>Wait: 8 frame(s)
-@>Transfer Player:[236: Solhaven], (033,020), Down, No Fade
-@>Change Screen Color Tone: (0,0,0,0), @6
-@>
-
-#------------------------------------------------------------------------------
-Event ID: 006
-Event Name: Exit
-(X,Y): (009,012)
-
-Page #1
-Conditions
-None
-
-Autonomous Movement
-Type: Fixed
-Speed: 3: Slow
-Freq: 3: Low
-Options Enabled
-Move Animation
-Trigger: Player Touch
-
-List of Event Commands:
-@>Play SE: 'Door exit', 80, 100
-@>Change Screen Color Tone: (-255,-255,-255,0), @6
-@>Wait: 8 frame(s)
-@>Transfer Player:[236: Solhaven], (033,020), Down, No Fade
-@>Change Screen Color Tone: (0,0,0,0), @6
-@>
-
-#------------------------------------------------------------------------------
-Event ID: 007
-Event Name: Exit
-(X,Y): (013,012)
-
-Page #1
-Conditions
-None
-
-Autonomous Movement
-Type: Fixed
-Speed: 3: Slow
-Freq: 3: Low
-Options Enabled
-Move Animation
-Trigger: Player Touch
-
-List of Event Commands:
-@>Conditional Branch: Switch [0208: Versammlung Ende] == ON
- @>Play SE: 'Door exit', 80, 100
- @>Change Screen Color Tone: (-255,-255,-255,0), @6
- @>Wait: 8 frame(s)
- @>Transfer Player:[236: Solhaven], (033,020), Down, No Fade
- @>Change Screen Color Tone: (0,0,0,0), @6
- @>
-: Else
- @>Play SE: 'Door exit', 80, 100
- @>Change Screen Color Tone: (-255,-255,-255,0), @6
- @>Wait: 8 frame(s)
- @>Transfer Player:[236: Solhaven], (034,020), Down, No Fade
- @>Change Screen Color Tone: (0,0,0,0), @6
- @>
-: Branch End
-@>
-
-#------------------------------------------------------------------------------
-Event ID: 008
-Event Name: Exit
-(X,Y): (015,012)
-
-Page #1
-Conditions
-None
-
-Autonomous Movement
-Type: Fixed
-Speed: 3: Slow
-Freq: 3: Low
-Options Enabled
-Move Animation
-Trigger: Player Touch
-
-List of Event Commands:
-@>Conditional Branch: Switch [0208: Versammlung Ende] == ON
- @>Play SE: 'Door exit', 80, 100
- @>Change Screen Color Tone: (-255,-255,-255,0), @6
- @>Wait: 8 frame(s)
- @>Transfer Player:[236: Solhaven], (033,020), Down, No Fade
- @>Change Screen Color Tone: (0,0,0,0), @6
- @>
-: Else
- @>Play SE: 'Door exit', 80, 100
- @>Change Screen Color Tone: (-255,-255,-255,0), @6
- @>Wait: 8 frame(s)
- @>Transfer Player:[236: Solhaven], (034,020), Down, No Fade
- @>Change Screen Color Tone: (0,0,0,0), @6
- @>
-: Branch End
 @>
 
 #------------------------------------------------------------------------------
@@ -191911,90 +190317,6 @@ List of Event Commands:
 @>
 
 #------------------------------------------------------------------------------
-Event ID: 005
-Event Name: EV005
-(X,Y): (010,005)
-
-Page #1
-Conditions
-None
-
-Autonomous Movement
-Type: Fixed
-Speed: 3: Slow
-Freq: 3: Low
-Options Enabled
-Move Animation
-Trigger: Action Button
-
-List of Event Commands:
-@>Text: Ein paar Klamotten.
-@>
-
-#------------------------------------------------------------------------------
-Event ID: 006
-Event Name: EV006
-(X,Y): (011,005)
-
-Page #1
-Conditions
-None
-
-Autonomous Movement
-Type: Fixed
-Speed: 3: Slow
-Freq: 3: Low
-Options Enabled
-Move Animation
-Trigger: Action Button
-
-List of Event Commands:
-@>Text: Ein paar Klamotten.
-@>
-
-#------------------------------------------------------------------------------
-Event ID: 007
-Event Name: EV007
-(X,Y): (019,008)
-
-Page #1
-Conditions
-None
-
-Autonomous Movement
-Type: Fixed
-Speed: 3: Slow
-Freq: 3: Low
-Options Enabled
-Move Animation
-Trigger: Action Button
-
-List of Event Commands:
-@>Text: Ist dir langweilig?
-@>
-
-#------------------------------------------------------------------------------
-Event ID: 008
-Event Name: EV008
-(X,Y): (020,008)
-
-Page #1
-Conditions
-None
-
-Autonomous Movement
-Type: Fixed
-Speed: 3: Slow
-Freq: 3: Low
-Options Enabled
-Move Animation
-Trigger: Action Button
-
-List of Event Commands:
-@>Text: Ist dir langweilig?
-@>
-
-#------------------------------------------------------------------------------
 Event ID: 009
 Event Name: EV009
 (X,Y): (009,010)
@@ -192159,90 +190481,6 @@ List of Event Commands:
 @>
 
 #------------------------------------------------------------------------------
-Event ID: 003
-Event Name: EV003
-(X,Y): (010,005)
-
-Page #1
-Conditions
-None
-
-Autonomous Movement
-Type: Fixed
-Speed: 3: Slow
-Freq: 3: Low
-Options Enabled
-Move Animation
-Trigger: Action Button
-
-List of Event Commands:
-@>Text: Ein paar Klamotten.
-@>
-
-#------------------------------------------------------------------------------
-Event ID: 004
-Event Name: EV004
-(X,Y): (011,005)
-
-Page #1
-Conditions
-None
-
-Autonomous Movement
-Type: Fixed
-Speed: 3: Slow
-Freq: 3: Low
-Options Enabled
-Move Animation
-Trigger: Action Button
-
-List of Event Commands:
-@>Text: Ein paar Klamotten.
-@>
-
-#------------------------------------------------------------------------------
-Event ID: 005
-Event Name: EV005
-(X,Y): (019,008)
-
-Page #1
-Conditions
-None
-
-Autonomous Movement
-Type: Fixed
-Speed: 3: Slow
-Freq: 3: Low
-Options Enabled
-Move Animation
-Trigger: Action Button
-
-List of Event Commands:
-@>Text: Es gibt bessere Hobbys.
-@>
-
-#------------------------------------------------------------------------------
-Event ID: 006
-Event Name: EV006
-(X,Y): (020,008)
-
-Page #1
-Conditions
-None
-
-Autonomous Movement
-Type: Fixed
-Speed: 3: Slow
-Freq: 3: Low
-Options Enabled
-Move Animation
-Trigger: Action Button
-
-List of Event Commands:
-@>Text: Es gibt bessere Hobbys.
-@>
-
-#------------------------------------------------------------------------------
 Event ID: 007
 Event Name: EV007
 (X,Y): (009,010)
@@ -192287,7 +190525,7 @@ List of Event Commands:
 
 #------------------------------------------------------------------------------
 Event ID: 009
-Event Name: EV009
+Event Name: Mauzi
 (X,Y): (015,006)
 
 Page #1
@@ -192303,6 +190541,7 @@ Freq: 2: Lower
 Options Enabled
 Move Animation
 Stop Animation
+Direction Fix
 Trigger: Action Button
 
 List of Event Commands:
@@ -192467,14 +190706,15 @@ Graphic: SPHEAL
 
 Autonomous Movement
 Type: Random
-Speed: 3: Slow
-Freq: 4: High
+Speed: 1: Slowest
+Freq: 1: Lowest
 Options Enabled
 Move Animation
+Stop Animation
 Trigger: Action Button
 
 List of Event Commands:
-@>Play SE: 'SPHEAL', 80, 100
+@>Play SE: 'SPHEAL', 100, 100
 @>
 
 #------------------------------------------------------------------------------
@@ -192496,112 +190736,6 @@ Trigger: Parallel Process
 
 List of Event Commands:
 @>Erase Picture: 1
-@>
-
-#------------------------------------------------------------------------------
-Event ID: 005
-Event Name: Item
-(X,Y): (011,005)
-
-Page #1
-Conditions
-None
-
-Autonomous Movement
-Type: Fixed
-Speed: 3: Slow
-Freq: 3: Low
-Options Enabled
-Move Animation
-Direction Fix
-Through
-Always on Top
-Trigger: Action Button
-
-List of Event Commands:
-@>Conditional Branch: Script: pbItemBall(:TM34)
- @>Control Self Switch: A =ON
- @>
-: Branch End
-@>
-
-Page #2
-Conditions
-Self Switch A is ON
-
-Autonomous Movement
-Type: Fixed
-Speed: 3: Slow
-Freq: 3: Low
-Options Enabled
-Move Animation
-Trigger: Action Button
-
-List of Event Commands:
-@>Text: Nicht nützliches.
-@>
-
-#------------------------------------------------------------------------------
-Event ID: 006
-Event Name: EV006
-(X,Y): (010,005)
-
-Page #1
-Conditions
-None
-
-Autonomous Movement
-Type: Fixed
-Speed: 3: Slow
-Freq: 3: Low
-Options Enabled
-Move Animation
-Trigger: Action Button
-
-List of Event Commands:
-@>Text: Nichts nützliches.
-@>
-
-#------------------------------------------------------------------------------
-Event ID: 007
-Event Name: EV007
-(X,Y): (020,008)
-
-Page #1
-Conditions
-None
-
-Autonomous Movement
-Type: Fixed
-Speed: 3: Slow
-Freq: 3: Low
-Options Enabled
-Move Animation
-Trigger: Action Button
-
-List of Event Commands:
-@>Text: Warum schaust du dir das an?
-@>
-
-#------------------------------------------------------------------------------
-Event ID: 008
-Event Name: EV008
-(X,Y): (019,008)
-
-Page #1
-Conditions
-None
-
-Autonomous Movement
-Type: Fixed
-Speed: 3: Slow
-Freq: 3: Low
-Options Enabled
-Move Animation
-Trigger: Action Button
-
-List of Event Commands:
-@>Text: Warum schaust du dir das an?
 @>
 
 #------------------------------------------------------------------------------
@@ -192766,90 +190900,6 @@ Trigger: Parallel Process
 
 List of Event Commands:
 @>Erase Picture: 1
-@>
-
-#------------------------------------------------------------------------------
-Event ID: 003
-Event Name: EV003
-(X,Y): (010,005)
-
-Page #1
-Conditions
-None
-
-Autonomous Movement
-Type: Fixed
-Speed: 3: Slow
-Freq: 3: Low
-Options Enabled
-Move Animation
-Trigger: Action Button
-
-List of Event Commands:
-@>Text: Ein paar Klamotten.
-@>
-
-#------------------------------------------------------------------------------
-Event ID: 004
-Event Name: EV004
-(X,Y): (011,005)
-
-Page #1
-Conditions
-None
-
-Autonomous Movement
-Type: Fixed
-Speed: 3: Slow
-Freq: 3: Low
-Options Enabled
-Move Animation
-Trigger: Action Button
-
-List of Event Commands:
-@>Text: Ein paar Klamotten.
-@>
-
-#------------------------------------------------------------------------------
-Event ID: 005
-Event Name: EV005
-(X,Y): (019,008)
-
-Page #1
-Conditions
-None
-
-Autonomous Movement
-Type: Fixed
-Speed: 3: Slow
-Freq: 3: Low
-Options Enabled
-Move Animation
-Trigger: Action Button
-
-List of Event Commands:
-@>Text: So dumm kann keiner sein.
-@>
-
-#------------------------------------------------------------------------------
-Event ID: 006
-Event Name: EV006
-(X,Y): (020,008)
-
-Page #1
-Conditions
-None
-
-Autonomous Movement
-Type: Fixed
-Speed: 3: Slow
-Freq: 3: Low
-Options Enabled
-Move Animation
-Trigger: Action Button
-
-List of Event Commands:
-@>Text: So dumm kann keiner sein.
 @>
 
 #------------------------------------------------------------------------------
@@ -193099,6 +191149,7 @@ List of Event Commands:
 @>Text: Das hier kannst du haben.
 @>Script: pbReceiveItem(:LUXURYBALL)
 @>Text: Davon habe ich eh genug.
+@>Control Self Switch: A =ON
 @>
 
 Page #2
@@ -193139,90 +191190,6 @@ Trigger: Parallel Process
 
 List of Event Commands:
 @>Erase Picture: 1
-@>
-
-#------------------------------------------------------------------------------
-Event ID: 004
-Event Name: EV004
-(X,Y): (010,005)
-
-Page #1
-Conditions
-None
-
-Autonomous Movement
-Type: Fixed
-Speed: 3: Slow
-Freq: 3: Low
-Options Enabled
-Move Animation
-Trigger: Action Button
-
-List of Event Commands:
-@>Text: Feine Anzüge.
-@>
-
-#------------------------------------------------------------------------------
-Event ID: 005
-Event Name: EV005
-(X,Y): (011,005)
-
-Page #1
-Conditions
-None
-
-Autonomous Movement
-Type: Fixed
-Speed: 3: Slow
-Freq: 3: Low
-Options Enabled
-Move Animation
-Trigger: Action Button
-
-List of Event Commands:
-@>Text: Feine Anzüge.
-@>
-
-#------------------------------------------------------------------------------
-Event ID: 006
-Event Name: EV006
-(X,Y): (019,008)
-
-Page #1
-Conditions
-None
-
-Autonomous Movement
-Type: Fixed
-Speed: 3: Slow
-Freq: 3: Low
-Options Enabled
-Move Animation
-Trigger: Action Button
-
-List of Event Commands:
-@>Text: Was erhofst du dir davon?
-@>
-
-#------------------------------------------------------------------------------
-Event ID: 007
-Event Name: EV007
-(X,Y): (020,008)
-
-Page #1
-Conditions
-None
-
-Autonomous Movement
-Type: Fixed
-Speed: 3: Slow
-Freq: 3: Low
-Options Enabled
-Move Animation
-Trigger: Action Button
-
-List of Event Commands:
-@>Text: Was erhofst du dir davon?
 @>
 
 #------------------------------------------------------------------------------
@@ -193695,27 +191662,6 @@ List of Event Commands:
 @>
 
 #------------------------------------------------------------------------------
-Event ID: 013
-Event Name: EV013
-(X,Y): (010,005)
-
-Page #1
-Conditions
-None
-
-Autonomous Movement
-Type: Fixed
-Speed: 3: Slow
-Freq: 3: Low
-Options Enabled
-Move Animation
-Trigger: Action Button
-
-List of Event Commands:
-@>Text: Ein paar Fotos für die Gewinner.
-@>
-
-#------------------------------------------------------------------------------
 Event ID: 014
 Event Name: EV014
 (X,Y): (020,007)
@@ -193755,90 +191701,6 @@ Trigger: Action Button
 
 List of Event Commands:
 @>Text: Auf dem Bild ist die Live-Übertragung zu sehen.
-@>
-
-#------------------------------------------------------------------------------
-Event ID: 016
-Event Name: EV016
-(X,Y): (013,011)
-
-Page #1
-Conditions
-None
-
-Autonomous Movement
-Type: Fixed
-Speed: 3: Slow
-Freq: 3: Low
-Options Enabled
-Move Animation
-Trigger: Action Button
-
-List of Event Commands:
-@>Text: Ein Buch über den BMI.
-@>
-
-#------------------------------------------------------------------------------
-Event ID: 017
-Event Name: EV017
-(X,Y): (014,011)
-
-Page #1
-Conditions
-None
-
-Autonomous Movement
-Type: Fixed
-Speed: 3: Slow
-Freq: 3: Low
-Options Enabled
-Move Animation
-Trigger: Action Button
-
-List of Event Commands:
-@>Text: Ein Flyer der Show.
-@>
-
-#------------------------------------------------------------------------------
-Event ID: 018
-Event Name: EV018
-(X,Y): (016,011)
-
-Page #1
-Conditions
-None
-
-Autonomous Movement
-Type: Fixed
-Speed: 3: Slow
-Freq: 3: Low
-Options Enabled
-Move Animation
-Trigger: Action Button
-
-List of Event Commands:
-@>Text: Der Kaffe ist kalt.
-@>
-
-#------------------------------------------------------------------------------
-Event ID: 019
-Event Name: EV019
-(X,Y): (017,011)
-
-Page #1
-Conditions
-None
-
-Autonomous Movement
-Type: Fixed
-Speed: 3: Slow
-Freq: 3: Low
-Options Enabled
-Move Animation
-Trigger: Action Button
-
-List of Event Commands:
-@>Text: Der Kaffe ist kalt.
 @>
 
 #------------------------------------------------------------------------------
@@ -194359,27 +192221,6 @@ List of Event Commands:
 @>
 
 #------------------------------------------------------------------------------
-Event ID: 011
-Event Name: EV011
-(X,Y): (010,005)
-
-Page #1
-Conditions
-None
-
-Autonomous Movement
-Type: Fixed
-Speed: 3: Slow
-Freq: 3: Low
-Options Enabled
-Move Animation
-Trigger: Action Button
-
-List of Event Commands:
-@>Text: Prospekte über verschiedene Angeln.
-@>
-
-#------------------------------------------------------------------------------
 Event ID: 012
 Event Name: EV012
 (X,Y): (020,007)
@@ -194419,90 +192260,6 @@ Trigger: Action Button
 
 List of Event Commands:
 @>Text: Der Bildschirm ist aus.
-@>
-
-#------------------------------------------------------------------------------
-Event ID: 014
-Event Name: EV014
-(X,Y): (013,011)
-
-Page #1
-Conditions
-None
-
-Autonomous Movement
-Type: Fixed
-Speed: 3: Slow
-Freq: 3: Low
-Options Enabled
-Move Animation
-Trigger: Action Button
-
-List of Event Commands:
-@>Text: Flyer über die neue Angel.
-@>
-
-#------------------------------------------------------------------------------
-Event ID: 015
-Event Name: EV015
-(X,Y): (014,011)
-
-Page #1
-Conditions
-None
-
-Autonomous Movement
-Type: Fixed
-Speed: 3: Slow
-Freq: 3: Low
-Options Enabled
-Move Animation
-Trigger: Action Button
-
-List of Event Commands:
-@>Text: Flyer über die neue Angel.
-@>
-
-#------------------------------------------------------------------------------
-Event ID: 016
-Event Name: EV016
-(X,Y): (017,011)
-
-Page #1
-Conditions
-None
-
-Autonomous Movement
-Type: Fixed
-Speed: 3: Slow
-Freq: 3: Low
-Options Enabled
-Move Animation
-Trigger: Action Button
-
-List of Event Commands:
-@>Text: Flyer über die neue Angel.
-@>
-
-#------------------------------------------------------------------------------
-Event ID: 017
-Event Name: EV017
-(X,Y): (016,011)
-
-Page #1
-Conditions
-None
-
-Autonomous Movement
-Type: Fixed
-Speed: 3: Slow
-Freq: 3: Low
-Options Enabled
-Move Animation
-Trigger: Action Button
-
-List of Event Commands:
-@>Text: Du solltest auf deine Figur achten.
 @>
 
 #------------------------------------------------------------------------------
@@ -194786,49 +192543,6 @@ List of Event Commands:
 @>
 
 #------------------------------------------------------------------------------
-Event ID: 008
-Event Name: Item
-(X,Y): (010,005)
-
-Page #1
-Conditions
-None
-
-Autonomous Movement
-Type: Fixed
-Speed: 3: Slow
-Freq: 3: Low
-Options Enabled
-Move Animation
-Direction Fix
-Through
-Always on Top
-Trigger: Action Button
-
-List of Event Commands:
-@>Conditional Branch: Script: pbItemBall(:WISEGLASSES)
- @>Control Self Switch: A =ON
- @>
-: Branch End
-@>
-
-Page #2
-Conditions
-Self Switch A is ON
-
-Autonomous Movement
-Type: Fixed
-Speed: 3: Slow
-Freq: 3: Low
-Options Enabled
-Move Animation
-Trigger: Action Button
-
-List of Event Commands:
-@>Text: Nicht nützliches.
-@>
-
-#------------------------------------------------------------------------------
 Event ID: 009
 Event Name: EV009
 (X,Y): (020,008)
@@ -194868,48 +192582,6 @@ Trigger: Action Button
 
 List of Event Commands:
 @>Text: Der Bildschirm ist aus.
-@>
-
-#------------------------------------------------------------------------------
-Event ID: 011
-Event Name: EV011
-(X,Y): (013,011)
-
-Page #1
-Conditions
-None
-
-Autonomous Movement
-Type: Fixed
-Speed: 3: Slow
-Freq: 3: Low
-Options Enabled
-Move Animation
-Trigger: Action Button
-
-List of Event Commands:
-@>Text: Es blubbert.
-@>
-
-#------------------------------------------------------------------------------
-Event ID: 012
-Event Name: EV012
-(X,Y): (016,011)
-
-Page #1
-Conditions
-None
-
-Autonomous Movement
-Type: Fixed
-Speed: 3: Slow
-Freq: 3: Low
-Options Enabled
-Move Animation
-Trigger: Action Button
-
-List of Event Commands:
-@>Text: Es blubbert.
 @>
 
 #------------------------------------------------------------------------------
@@ -195073,27 +192745,6 @@ Trigger: Parallel Process
 
 List of Event Commands:
 @>Erase Picture: 1
-@>
-
-#------------------------------------------------------------------------------
-Event ID: 004
-Event Name: EV004
-(X,Y): (010,005)
-
-Page #1
-Conditions
-None
-
-Autonomous Movement
-Type: Fixed
-Speed: 3: Slow
-Freq: 3: Low
-Options Enabled
-Move Animation
-Trigger: Action Button
-
-List of Event Commands:
-@>Text: Leer.
 @>
 
 #------------------------------------------------------------------------------
@@ -195600,27 +193251,6 @@ Trigger: Action Button
 
 List of Event Commands:
 @>Text: Der Bildschirm ist aus.
-@>
-
-#------------------------------------------------------------------------------
-Event ID: 011
-Event Name: EV011
-(X,Y): (010,005)
-
-Page #1
-Conditions
-None
-
-Autonomous Movement
-Type: Fixed
-Speed: 3: Slow
-Freq: 3: Low
-Options Enabled
-Move Animation
-Trigger: Action Button
-
-List of Event Commands:
-@>Text: Nichts interessantes.
 @>
 
 #------------------------------------------------------------------------------
@@ -264681,7 +262311,7 @@ List of Event Commands:
 
 #------------------------------------------------------------------------------
 Event ID: 126
-Event Name: EV126
+Event Name: NPC
 (X,Y): (031,062)
 
 Page #1
@@ -264699,10 +262329,8 @@ Move Animation
 Trigger: Action Button
 
 List of Event Commands:
-@>Text: Wusstest du, dass Top-Tränke auch super gegen 
- :    : müde Beine helfen?
-@>Text: Ich mein… nicht offiziell.
-@>Text: Aber probier’s mal.
+@>Text: Wie bist du an das Starter-Pokémon 
+ :    : herangekommen?
 @>
 
 #------------------------------------------------------------------------------
@@ -279595,7 +277223,7 @@ Page #1
 Conditions
 None
 
-Graphic: berrytree_ORANBERRY
+Graphic: berrytree_LUMBERRY
 
 Autonomous Movement
 Type: Fixed
@@ -279607,7 +277235,7 @@ Direction Fix
 Trigger: Action Button
 
 List of Event Commands:
-@>Script: pbPickBerry(:ORANBERRY, 2)
+@>Script: pbPickBerry(:LUMBERRY, 1)
 @>
 
 Page #2
@@ -291531,6 +289159,7 @@ List of Event Commands:
 @>Play SE: 'Door exit', 100, 100
 @>Change Screen Color Tone: (-255,-255,-255,0), @6
 @>Wait: 8 frame(s)
+@>Change Transparent Flag: Transparency
 @>Transfer Player:[208: Solhaven], (012,076), Down, No Fade
 @>Change Screen Color Tone: (0,0,0,0), @6
 @>Wait: 8 frame(s)
@@ -291557,6 +289186,7 @@ List of Event Commands:
 @>Play SE: 'Door exit', 100, 100
 @>Change Screen Color Tone: (-255,-255,-255,0), @6
 @>Wait: 8 frame(s)
+@>Change Transparent Flag: Transparency
 @>Transfer Player:[208: Solhaven], (012,076), Down, No Fade
 @>Change Screen Color Tone: (0,0,0,0), @6
 @>Wait: 8 frame(s)
@@ -397151,7 +394781,7 @@ List of Event Commands:
 @>Show Choices: Ja, Nein
 (When Cancel: Choice 2)
 : When [Ja]
- @>Conditional Branch: Script: pbItemBall(:SCROLLOFDARKNESS)
+ @>Conditional Branch: Script: pbReceiveItem(:SCROLLOFDARKNESS)
   @>Play SE: 'PRSFX- Wind', 100, 95
   @>Set Move Route: [Wasser-Schriftrolle]
    :              : $>Wait: 4 frame(s)
@@ -397354,7 +394984,7 @@ List of Event Commands:
 @>Show Choices: Ja, Nein
 (When Cancel: Choice 2)
 : When [Ja]
- @>Conditional Branch: Script: pbItemBall(:SCROLLOFWATERS)
+ @>Conditional Branch: Script: pbReceiveItem(:SCROLLOFWATERS)
   @>Play SE: 'PRSFX- Wind', 100, 95
   @>Set Move Route: [Unlicht-Schriftrolle]
    :              : $>Wait: 4 frame(s)
