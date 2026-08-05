@@ -236278,7 +236278,7 @@ List of Event Commands:
  @>Text: \xn[Lewis]Brian wird dadurch hoffentlich merken, 
   :    : dass er nicht einfach machen kann, was er will.
  @>Text: \xn[Lewis]Das hier hast du dir redlich verdient.
- @>Script: pbReceiveItem(:DUSKBALL,20)
+ @>Script: pbReceiveItem(:DUSKBALL,25)
  @>Script: completeQuest(:Quest85)
  @>Script: pbSetSelfSwitch(8,"B",true)
  @>Set Move Route: This event
@@ -240943,9 +240943,9 @@ Trigger: Action Button
 
 List of Event Commands:
 @>Script: pbPokemonMart([
-:       :   :HEALFEATHER, :MUSCLEFEATHER,
+:       :   :HEALTHFEATHER, :MUSCLEFEATHER,
 :       :   :RESISTFEATHER, :GENIUSFEATHER,
-:       :   :CELVERFEATHER, :SWIFTFEATHER
+:       :   :CLEVERFEATHER, :SWIFTFEATHER
 :       : ])
 @>
 
@@ -245317,7 +245317,7 @@ List of Event Commands:
 #------------------------------------------------------------------------------
 Event ID: 044
 Event Name: EV044
-(X,Y): (030,020)
+(X,Y): (047,000)
 
 Page #1
 Conditions
@@ -246338,6 +246338,34 @@ Move Animation
 Trigger: Action Button
 
 List of Event Commands:
+@>
+
+#------------------------------------------------------------------------------
+Event ID: 065
+Event Name: EV065
+(X,Y): (031,020)
+
+Page #1
+Conditions
+None
+
+Graphic: NPC07
+
+Autonomous Movement
+Type: Fixed
+Speed: 3: Slow
+Freq: 3: Low
+Options Enabled
+Move Animation
+Trigger: Action Button
+
+List of Event Commands:
+@>Script: pbPokemonMart([
+:       :   :BLUEFLUTE, :REDFLUTE, 
+:       :   :YELLOWFLUTE, :POKETOY,
+:       :   :RESETURGE, :ABILITYURGE,
+:       :   :ITEMURGE, :ITEMDROP
+:       : ])
 @>
 
 #------------------------------------------------------------------------------
