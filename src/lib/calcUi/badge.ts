@@ -6,7 +6,7 @@
 //
 // typeColors.ts and typeIcons.ts are safe to share verbatim - they have no imports of their own.
 // Only the German type name has to come from the calculator's own payload instead.
-import { mixColor, textColorFor, typeColor } from "../typeColors.ts";
+import { mixColor, textColorFor, typeColor, OMNI_GRADIENT } from "../typeColors.ts";
 import { typeIcon } from "../typeIcons.ts";
 import { typeName } from "../calc/data.ts";
 
@@ -15,8 +15,10 @@ export function typeBadgeHtml(type: string): string {
   const color = typeColor(type);
   const ink = textColorFor(type);
   const textShadow = ink === "#ffffff" ? "0 1px 2px rgba(0,0,0,0.45)" : "0 1px 0 rgba(255,255,255,0.35)";
+  const background =
+    type === "OMNI" ? OMNI_GRADIENT : `linear-gradient(155deg, ${mixColor(color, 25)}, ${mixColor(color, -35)})`;
   const style =
-    `background:linear-gradient(155deg, ${mixColor(color, 25)}, ${mixColor(color, -35)}); ` +
+    `background:${background}; ` +
     `box-shadow: 0 4px 14px -3px ${color}99, inset 0 1px 0 rgba(255,255,255,0.14); ` +
     `color: ${ink}; text-shadow: ${textShadow};`;
   return (

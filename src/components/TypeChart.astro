@@ -11,6 +11,14 @@ const chartTypes = types.filter((t) => t.id !== "QMARKS");
 type ChartType = (typeof chartTypes)[number];
 
 function multiplier(attackerId: string, defender: ChartType): number {
+  // SHADOW bypasses the normal Weaknesses/Resistances/Immunities lookup entirely in Essentials
+  // (pbCalcTypeMod) - it's simply super effective against everything, which is why it has no
+  // entries of its own in types.txt. The one exception is not very effective against a Pokémon
+  // that's itself currently a caught Shadow Pokémon (a per-catch instance flag, not something
+  // this species-level chart can otherwise represent) - approximated here as the SHADOW-vs-SHADOW
+  // cell specifically, since that's the closest this static type-vs-type matrix can get. See
+  // src/lib/calc/typechart.ts for the same note.
+  if (attackerId === "SHADOW") return defender.id === "SHADOW" ? 0.5 : 2;
   if (defender.immunities.includes(attackerId)) return 0;
   if (defender.weaknesses.includes(attackerId)) return 2;
   if (defender.resistances.includes(attackerId)) return 0.5;

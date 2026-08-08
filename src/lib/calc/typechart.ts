@@ -15,8 +15,18 @@ export function singleTypeMod(attackingType: string, defender: CalcType): number
   return 1;
 }
 
-/** Combined effectiveness against a (possibly dual-typed) defender. */
+/** Combined effectiveness against a (possibly dual-typed) defender.
+ *
+ *  SHADOW is special-cased to match Essentials' pbCalcTypeMod: it completely bypasses the normal
+ *  per-type Weaknesses/Resistances/Immunities lookup (types.txt has none for SHADOW - that's
+ *  correct, not a data gap) and is simply super effective against everything. The one exception
+ *  in core - not very effective against a Pokémon that is *itself* currently a caught Shadow
+ *  Pokémon (`shadowPokemon?`) - is a per-catch instance flag set at capture time (see e.g.
+ *  `pbGetPokemon(1).shadowPokemon?` in the game's own event scripts), not species census data, so
+ *  this calculator can't know it in general. Approximated as best it can be here: a defender whose
+ *  own listed type is SHADOW gets the not-very-effective case instead. */
 export function typeMod(attackingType: string, defenderTypes: string[], typeById: Map<string, CalcType>): number {
+  if (attackingType === "SHADOW") return defenderTypes.includes("SHADOW") ? 0.5 : 2;
   let mod = 1;
   for (const t of defenderTypes) {
     const def = typeById.get(t);

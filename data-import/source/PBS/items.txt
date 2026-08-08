@@ -2262,119 +2262,126 @@ Name = Feuer-Disc
 NamePlural = Feuer-Discs
 Pocket = 1
 Flags = Fling_50
-Description = Ändert den Typen von Amigento und seine Attacke Multi-Angriff zu Feuer.
+Description = Verstärkt diesen Typen von Amigento und ändert seine Attacke Multi-Angriff zu Feuer.
 #-------------------------------Einzigartig
 [WATERMEMORY]
 Name = Wasser-Disc
 NamePlural = Wasser-Discs
 Pocket = 1
 Flags = Fling_50
-Description = Ändert den Typen von Amigento und seine Attacke Multi-Angriff zu Wasser.
+Description = Verstärkt diesen Typen von Amigento und ändert seine Attacke Multi-Angriff zu Wasser.
 #-------------------------------Einzigartig
 [ELECTRICMEMORY]
 Name = Elektro-Disc
 NamePlural = Elektro-Discs
 Pocket = 1
 Flags = Fling_50
-Description = Ändert den Typen von Amigento und seine Attacke Multi-Angriff zu Elektro.
+Description = Verstärkt diesen Typen von Amigento und ändert seine Attacke Multi-Angriff zu Elektro.
 #-------------------------------Einzigartig
 [GRASSMEMORY]
 Name = Pflanzen-Disc
 NamePlural = Pflanzen-Discs
 Pocket = 1
 Flags = Fling_50
-Description = Ändert den Typen von Amigento und seine Attacke Multi-Angriff zu Pflanze.
+Description = Verstärkt diesen Typen von Amigento und ändert seine Attacke Multi-Angriff zu Pflanze.
 #-------------------------------Einzigartig
 [ICEMEMORY]
 Name = Eis-Disc
 NamePlural = Eis-Discs
 Pocket = 1
 Flags = Fling_50
-Description = Ändert den Typen von Amigento und seine Attacke Multi-Angriff zu Eis.
+Description = Verstärkt diesen Typen von Amigento und ändert seine Attacke Multi-Angriff zu Eis.
 #-------------------------------Einzigartig
 [FIGHTINGMEMORY]
 Name = Kampf-Disc
 NamePlural = Kampf-Discs
 Pocket = 1
 Flags = Fling_50
-Description = Ändert den Typen von Amigento und seine Attacke Multi-Angriff zu Kampf.
+Description = Verstärkt diesen Typen von Amigento und ändert seine Attacke Multi-Angriff zu Kampf.
 #-------------------------------Einzigartig
 [POISONMEMORY]
 Name = Gift-Disc
 NamePlural = Gift-Discs
 Pocket = 1
 Flags = Fling_50
-Description = Ändert den Typen von Amigento und seine Attacke Multi-Angriff zu Gift.
+Description = Verstärkt diesen Typen von Amigento und ändert seine Attacke Multi-Angriff zu Gift.
 #-------------------------------Einzigartig
 [GROUNDMEMORY]
 Name = Boden-Disc
 NamePlural = Boden-Discs
 Pocket = 1
 Flags = Fling_50
-Description = Ändert den Typen von Amigento und seine Attacke Multi-Angriff zu Boden.
+Description = Verstärkt diesen Typen von Amigento und ändert seine Attacke Multi-Angriff zu Boden.
 #-------------------------------Einzigartig
 [FLYINGMEMORY]
 Name = Wind-Disc
 NamePlural = Wind-Discs
 Pocket = 1
 Flags = Fling_50
-Description = Ändert den Typen von Amigento und seine Attacke Multi-Angriff zu Wind.
+Description = Verstärkt diesen Typen von Amigento und ändert seine Attacke Multi-Angriff zu Wind.
 #-------------------------------Einzigartig
 [PSYCHICMEMORY]
 Name = Psycho-Disc
 NamePlural = Psycho-Discs
 Pocket = 1
 Flags = Fling_50
-Description = Ändert den Typen von Amigento und seine Attacke Multi-Angriff zu Psycho.
+Description = Verstärkt diesen Typen von Amigento und ändert seine Attacke Multi-Angriff zu Psycho.
 #-------------------------------Einzigartig
 [BUGMEMORY]
 Name = Käfer-Disc
 NamePlural = Käfer-Disc
 Pocket = 1
 Flags = Fling_50
-Description = Ändert den Typen von Amigento und seine Attacke Multi-Angriff zu Käfer.
+Description = Verstärkt diesen Typen von Amigento und ändert seine Attacke Multi-Angriff zu Käfer.
 #-------------------------------Einzigartig
 [ROCKMEMORY]
 Name = Gesteins-Disc
 NamePlural = Gesteins-Discs
 Pocket = 1
 Flags = Fling_50
-Description = Ändert den Typen von Amigento und seine Attacke Multi-Angriff zu Gestein.
+Description = Verstärkt diesen Typen von Amigento und ändert seine Attacke Multi-Angriff zu Gestein.
 #-------------------------------Einzigartig
 [GHOSTMEMORY]
 Name = Geister-Disc
 NamePlural = Geister-Discs
 Pocket = 1
 Flags = Fling_50
-Description = Ändert den Typen von Amigento und seine Attacke Multi-Angriff zu Geist.
+Description = Verstärkt diesen Typen von Amigento und ändert seine Attacke Multi-Angriff zu Geist.
 #-------------------------------Einzigartig
 [DRAGONMEMORY]
 Name = Drachen-Disc
 NamePlural = Drachen-Discs
 Pocket = 1
 Flags = Fling_50
-Description = Ändert den Typen von Amigento und seine Attacke Multi-Angriff zu Drache.
+Description = Verstärkt diesen Typen von Amigento und ändert seine Attacke Multi-Angriff zu Drache.
 #-------------------------------Einzigartig
 [DARKMEMORY]
 Name = Unlicht-Disc
 NamePlural = Unlicht-Discs
 Pocket = 1
 Flags = Fling_50
-Description = Ändert den Typen von Amigento und seine Attacke Multi-Angriff zu Unlicht.
+Description = Verstärkt diesen Typen von Amigento und ändert seine Attacke Multi-Angriff zu Unlicht.
 #-------------------------------Einzigartig
 [STEELMEMORY]
 Name = Stahl-Disc
 NamePlural = Stahl-Discs
 Pocket = 1
 Flags = Fling_50
-Description = Ändert den Typen von Amigento und seine Attacke Multi-Angriff zu Stahl.
+Description = Verstärkt diesen Typen von Amigento und ändert seine Attacke Multi-Angriff zu Stahl.
+#-------------------------------Einzigartig
+[NORMALMEMORY]
+Name = Normal-Disc
+NamePlural = Normal-Discs
+Pocket = 1
+Flags = Fling_50
+Description = Verstärkt diesen Typen von Amigento und ändert seine Attacke Multi-Angriff zu Normal.
 #-------------------------------Einzigartig
 [FAIRYMEMORY]
 Name = Feen-Disc
 NamePlural = Feen-Discs
 Pocket = 1
 Flags = Fling_50
-Description = Ändert den Typen von Amigento und seine Attacke Multi-Angriff zu Fee.
+Description = Verstärkt diesen Typen von Amigento und ändert seine Attacke Multi-Angriff zu Fee.
 #-------------------------------Mining
 [FLAMEPLATE]
 Name = Feuertafel

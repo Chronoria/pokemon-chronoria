@@ -20,7 +20,17 @@ export const TYPE_COLORS: Record<string, string> = {
   DARK: "#4E4545",
   FAIRY: "#EC8FE6",
   QMARKS: "#68A090",
+  // OMNI's real look is a rainbow gradient (see OMNI_GRADIENT below) - this flat value is only
+  // a fallback for spots that can't use the gradient (e.g. plain-text contexts needing one color).
+  OMNI: "#8A5FD1",
+  SHADOW: "#2E1F3D",
 };
+
+/** OMNI owns every type at once, so a single base color (the usual mixColor lighten/darken
+ *  recipe) can't represent it - badge call sites special-case this type and use a real
+ *  multi-stop rainbow instead. Same hue order/spirit as the in-game icon repaint. */
+export const OMNI_GRADIENT =
+  "linear-gradient(135deg, #ff3b3b, #ff9f1c, #ffe135, #4ade80, #22c1e0, #4361ee, #c026d3)";
 
 export function typeColor(type: string): string {
   return TYPE_COLORS[type] ?? "#68A090";

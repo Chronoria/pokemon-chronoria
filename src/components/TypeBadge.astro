@@ -1,5 +1,5 @@
 ---
-import { typeColor, mixColor, textColorFor } from "../lib/typeColors";
+import { typeColor, mixColor, textColorFor, OMNI_GRADIENT } from "../lib/typeColors";
 import { typeIcon } from "../lib/typeIcons";
 import { typeNameById } from "../lib/data";
 import { href } from "../lib/url";
@@ -19,7 +19,8 @@ const color = typeColor(type);
 const ink = textColorFor(type);
 const textShadow =
   ink === "#ffffff" ? "0 1px 2px rgba(0,0,0,0.45)" : "0 1px 0 rgba(255,255,255,0.35)";
-const style = `background:linear-gradient(155deg, ${mixColor(color, 25)}, ${mixColor(color, -35)}); box-shadow: 0 4px 14px -3px ${color}99, inset 0 1px 0 rgba(255,255,255,0.14); color: ${ink}; text-shadow: ${textShadow};`;
+const background = type === "OMNI" ? OMNI_GRADIENT : `linear-gradient(155deg, ${mixColor(color, 25)}, ${mixColor(color, -35)})`;
+const style = `background:${background}; box-shadow: 0 4px 14px -3px ${color}99, inset 0 1px 0 rgba(255,255,255,0.14); color: ${ink}; text-shadow: ${textShadow};`;
 ---
 
 {link ? (

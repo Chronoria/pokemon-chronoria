@@ -30,6 +30,11 @@ const TYPE_ICONS: Record<string, string> = {
   DARK: '<path d="M9.5 1.8A5.8 5.8 0 1 0 9.5 12.2 6.8 6.8 0 0 1 9.5 1.8Z" fill="currentColor"/>',
   FAIRY:
     '<path d="M7 0.5c.3 2.6 1 3.3 3.6 3.6C7.9 4.4 7.3 5.1 7 7.7 6.7 5.1 6 4.4 3.4 4.1 6 3.8 6.7 3.1 7 0.5Z" fill="currentColor"/><path d="M11.8 7.2c.16 1.3.5 1.7 1.85 1.85-1.35.15-1.7.5-1.85 1.85-.16-1.35-.5-1.7-1.85-1.85 1.35-.15 1.7-.5 1.85-1.85Z" fill="currentColor"/>',
+  // Owns every type at once - a bold central sparkle/burst rather than any single-element glyph.
+  OMNI: '<path d="M7 0.5c.5 3.5 1.5 4.5 5 5-3.5.5-4.5 1.5-5 5-.5-3.5-1.5-4.5-5-5 3.5-.5 4.5-1.5 5-5Z" fill="currentColor"/>',
+  // A dim corona around a solid disc (eclipse), kept visually distinct from DARK's crescent.
+  SHADOW:
+    '<circle cx="7" cy="7" r="4.2" fill="currentColor"/><circle cx="7" cy="7" r="5.8" fill="none" stroke="currentColor" stroke-width="0.8" opacity="0.4"/>',
 };
 
 const FALLBACK_ICON = '<circle cx="7" cy="7" r="3.5" fill="currentColor"/>';
