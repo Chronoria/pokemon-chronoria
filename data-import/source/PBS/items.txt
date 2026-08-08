@@ -667,7 +667,7 @@ NamePlural = Domfossile
 Pocket = 1
 Price = 7000
 Flags = Fossil,Fling_100
-Description = Ein Fossil eines Kabuto
+Description = Ein Fossil eines Kabuto.
 #-------------------------------Map / Mining
 [OLDAMBER]
 Name = Altbernstein
@@ -800,7 +800,7 @@ Description = Ein kleiner Pilz, der verkauft werden kann.
 Name = Riesenpilz
 NamePlural = Riesenpilze
 Pocket = 1
-Price = 5000
+Price = 1000
 Flags = Fling_30
 Description = Ein großer Pilz, der verkauft werden kann.
 #-------------------------------Verkauf
@@ -808,7 +808,7 @@ Description = Ein großer Pilz, der verkauft werden kann.
 Name = Duftpilz
 NamePlural = Duftpilze
 Pocket = 1
-Price = 15000
+Price = 1500
 Flags = Fling_30
 Description = Ein duftender Pilz, der verkauft werden kann.
 #-------------------------------Verkauf
@@ -869,7 +869,7 @@ Flags = Fling_30
 Description = Es zählt zu den wertvollsten Items überhaupt. 
 #-------------------------------Verkauf
 [BIGNUGGET]
-Name = Riesenugget
+Name = Riesennugget
 NamePlural = Riesennuggets
 Pocket = 1
 Price = 40000
@@ -1027,7 +1027,7 @@ Price = 20000
 SellPrice = 5000
 BPPrice = 10
 Flags = Fling_10
-Description = Projeziert den Status "Verliebt" auf den Gegner.
+Description = Projiziert den Status "Verliebt" auf den Gegner.
 #-------------------------------Einzigartig
 [ROCKYHELMET]
 Name = Beulenhelm
@@ -1047,7 +1047,7 @@ Price = 50000
 SellPrice = 12500
 BPPrice = 25
 Flags = Fling_80
-Description = Erhöht die Sp. Verteidigung um 50% verhindert aber den Einsatz von Status-Attacken.
+Description = Erhöht die Sp. Verteidigung um 50%, verhindert aber den Einsatz von Status-Attacken.
 #-------------------------------Einzigartig
 [SAFETYGOGGLES]
 Name = Schutzbrille
@@ -1627,7 +1627,7 @@ Price = 15000
 SellPrice = 3750
 BPPrice = 16
 Flags = Fling_30
-Description = Vergiftet den Träger am Ender der Runde schwer.
+Description = Vergiftet den Träger am Ende der Runde schwer.
 #-------------------------------Einzigartig
 [STICKYBARB]
 Name = Klettdorn
@@ -1714,7 +1714,7 @@ NamePlural = Neutralschmuck
 Pocket = 1
 Price = 30000
 Flags = Fling_30
-Description = Verhindert, dass die eigenen Satuswerte gesenkt werden.
+Description = Verhindert, dass die eigenen Statuswerte gesenkt werden.
 #-------------------------------Einzigartig
 [MIRRORHERB]
 Name = Kopierkraut
@@ -1758,8 +1758,8 @@ Flags = Fling_60
 Description = Träger erhält mehr EP, aber seine Initiative wird gesenkt.
 #-------------------------------Einzigartig
 [POWERWEIGHT]
-Name = Kraftgewicht
-NamePlural = Power Weights
+Name = Machtgewicht
+NamePlural = Machtgewichte
 Pocket = 1
 Price = 10000
 SellPrice = 2500
@@ -1768,8 +1768,8 @@ Flags = Fling_70
 Description = Träger erhält beim Level-Up mehr LP zurück, aber seine Initiative wird gesenkt.
 #-------------------------------Einzigartig
 [POWERBRACER]
-Name = Kraftreif
-NamePlural = Power Bracers
+Name = Machtreif
+NamePlural = Machtreife
 Pocket = 1
 Price = 10000
 SellPrice = 2500
@@ -1778,8 +1778,8 @@ Flags = Fling_70
 Description = Träger erhält beim Level-Up mehr Attacken-Werte, aber seine Initiative wird gesenkt.
 #-------------------------------Einzigartig
 [POWERBELT]
-Name = Power Belt
-NamePlural = Power Belts
+Name = Machtgurt
+NamePlural = Machtgurte
 Pocket = 1
 Price = 10000
 SellPrice = 2500
@@ -1788,8 +1788,8 @@ Flags = Fling_70
 Description = Träger erhält beim Level-Up mehr Vert.-Werte, aber seine Initiative wird gesenkt.
 #-------------------------------Einzigartig
 [POWERLENS]
-Name = Power Lens
-NamePlural = Power Lenses
+Name = Machtlinse
+NamePlural = Machtlinsen
 Pocket = 1
 Price = 10000
 SellPrice = 2500
@@ -1798,8 +1798,8 @@ Flags = Fling_70
 Description = Träger erhält beim Level-Up mehr Sp.Ang.-Werte, aber seine Initiative wird gesenkt.
 #-------------------------------Einzigartig
 [POWERBAND]
-Name = Power Band
-NamePlural = Power Bands
+Name = Machtband
+NamePlural = Machtbänder
 Pocket = 1
 Price = 10000
 SellPrice = 2500
@@ -1808,8 +1808,8 @@ Flags = Fling_70
 Description = Träger erhält beim Level-Up mehr Sp.Vert.-Werte, aber seine Initiative wird gesenkt.
 #-------------------------------Einzigartig
 [POWERANKLET]
-Name = Power Anklet
-NamePlural = Power Anklets
+Name = Machtkette
+NamePlural = Machtketten
 Pocket = 1
 Price = 10000
 SellPrice = 2500
@@ -2140,7 +2140,7 @@ Price = 300
 SellPrice = 75
 FieldUse = OnPokemon
 Flags = Fling_10
-Description = Wird der Rote Nektar auf ein Choreogel angewandt, so ändert sich dessen Stil zum Flamenco-Stil. 
+Description = Wird der rote Nektar auf ein Choreogel angewandt, so ändert sich dessen Stil zum Flamenco-Stil.
 #-------------------------------Shop
 [YELLOWNECTAR]
 Name = Gelber Nektar
@@ -4338,7 +4338,7 @@ Price = 400
 FieldUse = TM
 Move = SLEEPTALK
 Flags = Fling_10
-Description = Der Anwender benutztm, wenn es schläft, zufällig eine seiner übrigen Attacken.
+Description = Der Anwender benutzt, wenn es schläft, zufällig eine seiner übrigen Attacken.
 #-------------------------------
 [TM71]
 Name = TM71
@@ -4368,7 +4368,7 @@ Price = 8000
 FieldUse = TM
 Move = DRAINPUNCH
 Flags = Fling_75
-Description = Die KP des Anwenders werden um die Hälfte des verursachten Schadens aufgefüllt
+Description = Die KP des Anwenders werden um die Hälfte des verursachten Schadens aufgefüllt.
 #-------------------------------
 [TM74]
 Name = TM74
@@ -5955,7 +5955,7 @@ Price = 1000
 SellPrice = 250
 BattleUse = OnBattler
 Flags = Fling_30
-Description = Es erhöht den Angriff eines Pokémon um 1 Stufe, bis es ausgwechselt wird.
+Description = Es erhöht den Angriff eines Pokémon um 1 Stufe, bis es ausgewechselt wird.
 #-------------------------------Rezept
 [XATTACK2]
 Name = X-Angriff 2
@@ -5964,7 +5964,7 @@ Pocket = 7
 Price = 2000
 BattleUse = OnBattler
 Flags = Fling_30
-Description = Es erhöht den Angriff eines Pokémon um 2 Stufen, bis es ausgwechselt wird.
+Description = Es erhöht den Angriff eines Pokémon um 2 Stufen, bis es ausgewechselt wird.
 #-------------------------------Rezept
 [XATTACK3]
 Name = X-Angriff 3
@@ -5973,7 +5973,7 @@ Pocket = 7
 Price = 3000
 BattleUse = OnBattler
 Flags = Fling_30
-Description = Es erhöht den Angriff eines Pokémon um 3 Stufen, bis es ausgwechselt wird.
+Description = Es erhöht den Angriff eines Pokémon um 3 Stufen, bis es ausgewechselt wird.
 #-------------------------------Rezept
 [XATTACK6]
 Name = X-Angriff 6
@@ -5982,7 +5982,7 @@ Pocket = 7
 Price = 6000
 BattleUse = OnBattler
 Flags = Fling_30
-Description = Es erhöht den Angriff eines Pokémon um 6 Stufen, bis es ausgwechselt wird.
+Description = Es erhöht den Angriff eines Pokémon um 6 Stufen, bis es ausgewechselt wird.
 #-------------------------------Rezept / Shop
 [XDEFENSE]
 Name = X-Verteidigung
@@ -5992,7 +5992,7 @@ Price = 2000
 SellPrice = 250
 BattleUse = OnBattler
 Flags = Fling_30
-Description = Es erhöht die Vert. eines Pokémon um 1 Stufe, bis es ausgwechselt wird.
+Description = Es erhöht die Vert. eines Pokémon um 1 Stufe, bis es ausgewechselt wird.
 #-------------------------------Rezept
 [XDEFENSE2]
 Name = X-Verteidigung 2
@@ -6001,7 +6001,7 @@ Pocket = 7
 Price = 4000
 BattleUse = OnBattler
 Flags = Fling_30
-Description = Es erhöht die Vert. eines Pokémon um 2 Stufen, bis es ausgwechselt wird.
+Description = Es erhöht die Vert. eines Pokémon um 2 Stufen, bis es ausgewechselt wird.
 #-------------------------------Rezept
 [XDEFENSE3]
 Name = X-Verteidigung 3
@@ -6010,7 +6010,7 @@ Pocket = 7
 Price = 6000
 BattleUse = OnBattler
 Flags = Fling_30
-Description = Es erhöht die Vert. eines Pokémon um 3 Stufen, bis es ausgwechselt wird.
+Description = Es erhöht die Vert. eines Pokémon um 3 Stufen, bis es ausgewechselt wird.
 #-------------------------------Rezept
 [XDEFENSE6]
 Name = X-Verteidigung 6
@@ -6019,7 +6019,7 @@ Pocket = 7
 Price = 12000
 BattleUse = OnBattler
 Flags = Fling_30
-Description = Es erhöht die Vert. eines Pokémon um 6 Stufen, bis es ausgwechselt wird.
+Description = Es erhöht die Vert. eines Pokémon um 6 Stufen, bis es ausgewechselt wird.
 #-------------------------------Rezept / Shop
 [XSPATK]
 Name = X-Sp.-Angr.
@@ -6029,7 +6029,7 @@ Price = 1000
 SellPrice = 250
 BattleUse = OnBattler
 Flags = Fling_30
-Description = Es erhöht den Spezial-Angr. eines Pokémon um 1 Stufe, bis es ausgwechselt wird.
+Description = Es erhöht den Spezial-Angr. eines Pokémon um 1 Stufe, bis es ausgewechselt wird.
 #-------------------------------Rezept
 [XSPATK2]
 Name = X-Sp.-Angr. 2
@@ -6038,7 +6038,7 @@ Pocket = 7
 Price = 2000
 BattleUse = OnBattler
 Flags = Fling_30
-Description = Es erhöht den Spezial-Angr. eines Pokémon um 2 Stufen, bis es ausgwechselt wird.
+Description = Es erhöht den Spezial-Angr. eines Pokémon um 2 Stufen, bis es ausgewechselt wird.
 #-------------------------------Rezept
 [XSPATK3]
 Name = X-Sp.-Angr. 3
@@ -6047,7 +6047,7 @@ Pocket = 7
 Price = 3000
 BattleUse = OnBattler
 Flags = Fling_30
-Description = Es erhöht den Spezial-Angr. eines Pokémon um 3 Stufen, bis es ausgwechselt wird.
+Description = Es erhöht den Spezial-Angr. eines Pokémon um 3 Stufen, bis es ausgewechselt wird.
 #-------------------------------Rezept
 [XSPATK6]
 Name = X-Sp.-Angr. 6
@@ -6056,7 +6056,7 @@ Pocket = 7
 Price = 6000
 BattleUse = OnBattler
 Flags = Fling_30
-Description = Es erhöht den Spezial-Angr. eines Pokémon um 6 Stufen, bis es ausgwechselt wird.
+Description = Es erhöht den Spezial-Angr. eines Pokémon um 6 Stufen, bis es ausgewechselt wird.
 #-------------------------------Rezept / Shop
 [XSPDEF]
 Name = X-Sp.-Vert.
@@ -6066,7 +6066,7 @@ Price = 2000
 SellPrice = 250
 BattleUse = OnBattler
 Flags = Fling_30
-Description = Es erhöht die Spezial-Vert. eines Pokémon um 1 Stufen, bis es ausgwechselt wird.
+Description = Es erhöht die Spezial-Vert. eines Pokémon um 1 Stufen, bis es ausgewechselt wird.
 #-------------------------------Rezept
 [XSPDEF2]
 Name = X-Sp.-Vert. 2
@@ -6075,7 +6075,7 @@ Pocket = 7
 Price = 4000
 BattleUse = OnBattler
 Flags = Fling_30
-Description = Es erhöht die Spezial-Vert. eines Pokémon um 2 Stufen, bis es ausgwechselt wird.
+Description = Es erhöht die Spezial-Vert. eines Pokémon um 2 Stufen, bis es ausgewechselt wird.
 #-------------------------------Rezept
 [XSPDEF3]
 Name = X-Sp.-Vert. 3
@@ -6084,7 +6084,7 @@ Pocket = 7
 Price = 6000
 BattleUse = OnBattler
 Flags = Fling_30
-Description = Es erhöht die Spezial-Vert. eines Pokémon um 3 Stufen, bis es ausgwechselt wird.
+Description = Es erhöht die Spezial-Vert. eines Pokémon um 3 Stufen, bis es ausgewechselt wird.
 #-------------------------------Rezept
 [XSPDEF6]
 Name = X-Sp.-Vert. 6
@@ -6093,7 +6093,7 @@ Pocket = 7
 Price = 12000
 BattleUse = OnBattler
 Flags = Fling_30
-Description = Es erhöht die Spezial-Vert. eines Pokémon um 6 Stufen, bis es ausgwechselt wird.
+Description = Es erhöht die Spezial-Vert. eines Pokémon um 6 Stufen, bis es ausgewechselt wird.
 #-------------------------------Rezept / Shop
 [XSPEED]
 Name = X-Initiative
@@ -6103,7 +6103,7 @@ Price = 1000
 SellPrice = 250
 BattleUse = OnBattler
 Flags = Fling_30
-Description = Es erhöht die Initiative eines Pokémon um 1 Stufe, bis es ausgwechselt wird.
+Description = Es erhöht die Initiative eines Pokémon um 1 Stufe, bis es ausgewechselt wird.
 #-------------------------------Rezept
 [XSPEED2]
 Name = X-Initiative 2
@@ -6112,7 +6112,7 @@ Pocket = 7
 Price = 2000
 BattleUse = OnBattler
 Flags = Fling_30
-Description = Es erhöht die Initiative eines Pokémon um 2 Stufen, bis es ausgwechselt wird.
+Description = Es erhöht die Initiative eines Pokémon um 2 Stufen, bis es ausgewechselt wird.
 #-------------------------------Rezept
 [XSPEED3]
 Name = X-Initiative 3
@@ -6121,7 +6121,7 @@ Pocket = 7
 Price = 3000
 BattleUse = OnBattler
 Flags = Fling_30
-Description = Es erhöht die Initiative eines Pokémon um 3 Stufen, bis es ausgwechselt wird.
+Description = Es erhöht die Initiative eines Pokémon um 3 Stufen, bis es ausgewechselt wird.
 #-------------------------------Rezept
 [XSPEED6]
 Name = X-Initiative 6
@@ -6130,7 +6130,7 @@ Pocket = 7
 Price = 6000
 BattleUse = OnBattler
 Flags = Fling_30
-Description = Es erhöht die Initiative eines Pokémon um 6 Stufen, bis es ausgwechselt wird.
+Description = Es erhöht die Initiative eines Pokémon um 6 Stufen, bis es ausgewechselt wird.
 #-------------------------------Rezept / Shop
 [XACCURACY]
 Name = X-Genauigkeit
@@ -6140,7 +6140,7 @@ Price = 1000
 SellPrice = 250
 BattleUse = OnBattler
 Flags = Fling_30
-Description = Description = Es erhöht die Genauigkeit eines Pokémon um 1 Stufe, bis es ausgwechselt wird.
+Description = Es erhöht die Genauigkeit eines Pokémon um 1 Stufe, bis es ausgewechselt wird.
 #-------------------------------Rezept
 [XACCURACY2]
 Name = X-Genauigkeit 2
@@ -6149,7 +6149,7 @@ Pocket = 7
 Price = 2000
 BattleUse = OnBattler
 Flags = Fling_30
-Description = Es erhöht die Genauigkeit eines Pokémon um 2 Stufen, bis es ausgwechselt wird.
+Description = Es erhöht die Genauigkeit eines Pokémon um 2 Stufen, bis es ausgewechselt wird.
 #-------------------------------Rezept
 [XACCURACY3]
 Name = X-Genauigkeit 3
@@ -6158,7 +6158,7 @@ Pocket = 7
 Price = 3000
 BattleUse = OnBattler
 Flags = Fling_30
-Description = Es erhöht die Genauigkeit eines Pokémon um 3 Stufen, bis es ausgwechselt wird.
+Description = Es erhöht die Genauigkeit eines Pokémon um 3 Stufen, bis es ausgewechselt wird.
 #-------------------------------Rezept
 [XACCURACY6]
 Name = X-Genauigkeit 6
@@ -6167,7 +6167,7 @@ Pocket = 7
 Price = 6000
 BattleUse = OnBattler
 Flags = Fling_30
-Description = Es erhöht die Genauigkeit eines Pokémon um 6 Stufen, bis es ausgwechselt wird.
+Description = Es erhöht die Genauigkeit eines Pokémon um 6 Stufen, bis es ausgewechselt wird.
 #-------------------------------Rezept / Shop
 [DIREHIT]
 Name = X-Volltreffer
@@ -6177,7 +6177,7 @@ Price = 1000
 SellPrice = 250
 BattleUse = OnBattler
 Flags = Fling_30
-Description = Es erhöht die Volltrefferquote eines Pokémon um 1 Stufe, bis es ausgwechselt wird.
+Description = Es erhöht die Volltrefferquote eines Pokémon um 1 Stufe, bis es ausgewechselt wird.
 #-------------------------------Rezept
 [DIREHIT2]
 Name = X-Volltreffer 2
@@ -6186,7 +6186,7 @@ Pocket = 7
 Price = 2000
 BattleUse = OnBattler
 Flags = Fling_30
-Description = Es erhöht die Volltrefferquote eines Pokémon um 2 Stufen, bis es ausgwechselt wird.
+Description = Es erhöht die Volltrefferquote eines Pokémon um 2 Stufen, bis es ausgewechselt wird.
 #-------------------------------Rezept
 [DIREHIT3]
 Name = X-Volltreffer 3
@@ -6195,7 +6195,7 @@ Pocket = 7
 Price = 3000
 BattleUse = OnBattler
 Flags = Fling_30
-Description = Es erhöht die Volltrefferquote eines Pokémon um 3 Stufen, bis es ausgwechselt wird.
+Description = Es erhöht die Volltrefferquote eines Pokémon um 3 Stufen, bis es ausgewechselt wird.
 #-------------------------------Shop
 [GUARDSPEC]
 Name = Megablock
@@ -6808,7 +6808,7 @@ Description = Dieser Stein ermöglicht Panferno eine Mega-Entwicklung.
 Name = Pixinit
 NamePlural = Pixinite
 Pocket = 6
-Price = 0
+Price = 10000
 BPPrice = 50
 Flags = MegaStone,Fling_80
 Description = Dieser Stein ermöglicht Pixi eine Mega-Entwicklung.
@@ -6817,7 +6817,7 @@ Description = Dieser Stein ermöglicht Pixi eine Mega-Entwicklung.
 Name = Sarzenianit
 NamePlural = Sarzenianite
 Pocket = 6
-Price = 0
+Price = 10000
 BPPrice = 50
 Flags = MegaStone,Fling_80
 Description = Dieser Stein ermöglicht Sarzenia eine Mega-Entwicklung.
@@ -7652,7 +7652,7 @@ Flags = Berry,Fling_10,NaturalGift_ICE_80
 Description = Taut gefrorene Pokémon wieder auf.
 #-------------------------------
 [LEPPABERRY]
-Name = Jonagobeere	
+Name = Jonagobeere
 NamePlural = Jonagobeeren
 Pocket = 5
 Price = 40
@@ -7730,7 +7730,7 @@ NamePlural = Gauvebeeren
 Pocket = 5
 Price = 40
 Flags = Berry,Fling_10,NaturalGift_DRAGON_80
-Description = Heilt 33 % der KP wenn diese unter 25 % fallen, aber verwirrt Pokémon, die ein Sp. Vert.. (-) Wesen haben.
+Description = Heilt 33 % der KP wenn diese unter 25 % fallen, aber verwirrt Pokémon, die ein Sp. Vert. (-) Wesen haben.
 #-------------------------------
 [IAPAPABERRY]
 Name = Yapabeere
@@ -7796,7 +7796,7 @@ Pocket = 5
 Price = 40
 FieldUse = OnPokemon
 Flags = Berry,Fling_10,NaturalGift_FIGHTING_90
-Description = Senkt d Basis-Angriff um 10 und erhöht die Freundschaft um 10.
+Description = Senkt den Basis-Angriff um 10 und erhöht die Freundschaft um 10.
 #-------------------------------
 [QUALOTBERRY]
 Name = Qualotbeere
@@ -7936,7 +7936,7 @@ NamePlural = Grindobeeren
 Pocket = 5
 Price = 40
 Flags = Berry,Fling_10,NaturalGift_GRASS_80
-Description = Schwächt eine sehr effektive Pflanzen-Attacke des Gegners ab
+Description = Schwächt eine sehr effektive Pflanzen-Attacke des Gegners ab.
 #-------------------------------
 [YACHEBERRY]
 Name = Kiroyabeere
@@ -8096,7 +8096,7 @@ NamePlural = Lansatbeeren
 Pocket = 5
 Price = 40
 Flags = Berry,Fling_10,NaturalGift_FLYING_100
-Description =  	Erhöht die Volltrefferquote, wenn die KP unter 25 % fallen.
+Description = Erhöht die Volltrefferquote, wenn die KP unter 25 % fallen.
 #-------------------------------
 [STARFBERRY]
 Name = Krambobeere
@@ -8110,7 +8110,7 @@ Description = Erhöht einen zufälligen Statuswert stark, wenn die KP unter 25 %
 Name = Enigmabeere
 NamePlural = Enigmabeeren
 Pocket = 5
-Price = 40
+Price = 200
 Flags = Berry,Fling_10,NaturalGift_BUG_100
 Description = Heilt die KP um 25 %, wenn von einer sehr effektiven Attacke getroffen.
 #-------------------------------
@@ -8174,7 +8174,7 @@ Description = Frischt die Angriffspunkte eines Pokémon auf.
 Name = Canary-Brot
 NamePlural = Canary-Brote
 Pocket = 5
-Price = 0
+Price = 1300
 FieldUse = OnPokemon
 BattleUse = OnPokemon
 Flags = Fling_30
@@ -8417,7 +8417,7 @@ NamePlural = Schiggykannen
 Pocket = 8
 Price = 0
 Flags = KeyItem
-Description = Eine Gießkanne,geformt wie ein Schiggy.
+Description = Eine Gießkanne, geformt wie ein Schiggy.
 #-------------------------------Einzigartig
 [SPRINKLOTAD]
 Name = Loturzelkanne
@@ -8548,7 +8548,7 @@ Pocket = 8
 Price = 0
 FieldUse = Direct
 Flags = KeyItem
-Description = Damit zerberchen gefrorene Felsen mit Leichtigkeit.
+Description = Damit zerbrechen gefrorene Felsen mit Leichtigkeit.
 #-------------------------------------------------------------------------------Einzigartig
 [WATERFALLITEM]
 Name = Kaskadeausrüstung

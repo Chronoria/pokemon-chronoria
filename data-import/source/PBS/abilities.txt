@@ -428,11 +428,11 @@ Description = Schadet Angreifer, der die finale Attacke landet.
 #-------------------------------
 [ANTICIPATION]
 Name = Vorahnung
-Description = Senses a foe's dangerous moves.
+Description = Ahnt gefährliche Attacken des Gegners voraus.
 #-------------------------------
 [FOREWARN]
 Name = Vorwarnung
-Description = Ahnt gefährliche Attacken des Gegners voraus.
+Description = Gibt Auskunft über die stärkste gegnerische Attacke.
 #-------------------------------
 [UNAWARE]
 Name = Unkenntnis
@@ -1069,8 +1069,12 @@ Description = Steigert den Sp. Angriff, wenn es ein Pokémon besiegt.
 #-------------------------------
 [ASONECHILLINGNEIGH]
 Name = Reitgespann
-Description = Kombiniert Anspannung und Helles Wiehern
+Description = Kombiniert Anspannung und Helles Wiehern.
 #-------------------------------
 [ASONEGRIMNEIGH]
 Name = Reitgespann
-Description = Kombiniert Anspannung und Dunkles Wiehern
+Description = Kombiniert Anspannung und Dunkles Wiehern.
+#-------------------------------
+[RAWPOWER]
+Name = Rohkraft
+Description = Verstärkt alle eigenen Attacken um 20%.

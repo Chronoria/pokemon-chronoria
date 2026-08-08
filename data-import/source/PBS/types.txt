@@ -128,7 +128,14 @@ Weaknesses = POISON,STEEL
 Resistances = FIGHTING,BUG,DARK
 Immunities = DRAGON
 #-------------------------------
+[OMNI]
+Name = Omni
+IconPosition = 19
+IsSpecialType = true
+Weaknesses = ROCK,GROUND,FIGHTING
+Resistances = DARK,STEEL,GRASS,BUG,GHOST,POISON
+#-------------------------------
 [SHADOW]
 Name = Shadow
-IconPosition = 19
+IconPosition = 20
 IsSpecialType = true

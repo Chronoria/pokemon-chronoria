@@ -45594,7 +45594,7 @@ List of Event Commands:
 #------------------------------------------------------------------------------
 Event ID: 024
 Event Name: StrengthBoulder
-(X,Y): (006,014)
+(X,Y): (005,014)
 
 Page #1
 Conditions
@@ -106173,14 +106173,31 @@ List of Event Commands:
   @>Wait: 24 frame(s)
   @>Script: pbAddPokemon(:ELECTRIKE, 15)
   @>Script: pbSetSelfSwitch(124,"A",true)
+  @>Control Self Switch: A =ON
   @>
  : When [Nein]
   @>Show Animation: [EV124], [Sad bubble]
   @>Wait: 24 frame(s)
+  @>Control Self Switch: A =ON
   @>
  : Branch End
  @>
 : Branch End
+@>
+
+Page #2
+Conditions
+Self Switch A is ON
+
+Autonomous Movement
+Type: Fixed
+Speed: 3: Slow
+Freq: 3: Low
+Options Enabled
+Move Animation
+Trigger: Action Button
+
+List of Event Commands:
 @>
 
 #------------------------------------------------------------------------------
@@ -106282,7 +106299,7 @@ List of Event Commands:
 #------------------------------------------------------------------------------
 Event ID: 132
 Event Name: HeadbuttTree size(2,2)
-(X,Y): (116,015)
+(X,Y): (116,014)
 
 Page #1
 Conditions
@@ -160368,7 +160385,7 @@ List of Event Commands:
 #------------------------------------------------------------------------------
 Event ID: 008
 Event Name: Stair
-(X,Y): (025,013)
+(X,Y): (025,011)
 
 Page #1
 Conditions
@@ -160383,20 +160400,18 @@ Move Animation
 Trigger: Player Touch
 
 List of Event Commands:
-@>Conditional Branch: Player is facing Right
+@>Conditional Branch: Player is facing Left
  @>Set Move Route: Player
   :              : $>Change Speed: 2
   :              : $>Through ON
-  :              : $>Move Upper Right
-  :              : $>Move Right
+  :              : $>Move Lower Left
   :              : $>Through OFF
   :              : $>Change Speed: 3
  @>Script: follower_move_route
- @>Set Move Route: Player
+ @>Set Move Route: This event
   :              : $>Change Speed: 2
   :              : $>Through ON
-  :              : $>Move Upper Right
-  :              : $>Move Right
+  :              : $>Move Lower Left
   :              : $>Through OFF
   :              : $>Change Speed: 3
  @>
@@ -160425,7 +160440,6 @@ List of Event Commands:
  @>Set Move Route: Player
   :              : $>Change Speed: 2
   :              : $>Through ON
-  :              : $>Move Left
   :              : $>Move Lower Left
   :              : $>Through OFF
   :              : $>Change Speed: 3
@@ -160433,7 +160447,6 @@ List of Event Commands:
  @>Set Move Route: This event
   :              : $>Change Speed: 2
   :              : $>Through ON
-  :              : $>Move Left
   :              : $>Move Lower Left
   :              : $>Through OFF
   :              : $>Change Speed: 3
@@ -160443,7 +160456,6 @@ List of Event Commands:
   :              : $>Change Speed: 2
   :              : $>Through ON
   :              : $>Move Upper Right
-  :              : $>Move Right
   :              : $>Through OFF
   :              : $>Change Speed: 3
  @>Script: follower_move_route
@@ -160451,7 +160463,6 @@ List of Event Commands:
   :              : $>Change Speed: 2
   :              : $>Through ON
   :              : $>Move Upper Right
-  :              : $>Move Right
   :              : $>Through OFF
   :              : $>Change Speed: 3
  @>
@@ -160480,7 +160491,6 @@ List of Event Commands:
  @>Set Move Route: Player
   :              : $>Change Speed: 2
   :              : $>Through ON
-  :              : $>Move Left
   :              : $>Move Lower Left
   :              : $>Through OFF
   :              : $>Change Speed: 3
@@ -160488,7 +160498,6 @@ List of Event Commands:
  @>Set Move Route: This event
   :              : $>Change Speed: 2
   :              : $>Through ON
-  :              : $>Move Left
   :              : $>Move Lower Left
   :              : $>Through OFF
   :              : $>Change Speed: 3
@@ -160518,7 +160527,6 @@ List of Event Commands:
  @>Set Move Route: Player
   :              : $>Change Speed: 2
   :              : $>Through ON
-  :              : $>Move Left
   :              : $>Move Lower Left
   :              : $>Through OFF
   :              : $>Change Speed: 3
@@ -160526,7 +160534,6 @@ List of Event Commands:
  @>Set Move Route: This event
   :              : $>Change Speed: 2
   :              : $>Through ON
-  :              : $>Move Left
   :              : $>Move Lower Left
   :              : $>Through OFF
   :              : $>Change Speed: 3
@@ -160536,7 +160543,6 @@ List of Event Commands:
   :              : $>Change Speed: 2
   :              : $>Through ON
   :              : $>Move Upper Right
-  :              : $>Move Right
   :              : $>Through OFF
   :              : $>Change Speed: 3
  @>Script: follower_move_route
@@ -160544,7 +160550,6 @@ List of Event Commands:
   :              : $>Change Speed: 2
   :              : $>Through ON
   :              : $>Move Upper Right
-  :              : $>Move Right
   :              : $>Through OFF
   :              : $>Change Speed: 3
  @>
@@ -160574,7 +160579,6 @@ List of Event Commands:
   :              : $>Change Speed: 2
   :              : $>Through ON
   :              : $>Move Upper Right
-  :              : $>Move Right
   :              : $>Through OFF
   :              : $>Change Speed: 3
  @>Script: follower_move_route
@@ -160582,7 +160586,6 @@ List of Event Commands:
   :              : $>Change Speed: 2
   :              : $>Through ON
   :              : $>Move Upper Right
-  :              : $>Move Right
   :              : $>Through OFF
   :              : $>Change Speed: 3
  @>
@@ -160592,7 +160595,7 @@ List of Event Commands:
 #------------------------------------------------------------------------------
 Event ID: 013
 Event Name: Stair
-(X,Y): (025,011)
+(X,Y): (025,013)
 
 Page #1
 Conditions
@@ -160607,20 +160610,18 @@ Move Animation
 Trigger: Player Touch
 
 List of Event Commands:
-@>Conditional Branch: Player is facing Left
+@>Conditional Branch: Player is facing Right
  @>Set Move Route: Player
   :              : $>Change Speed: 2
   :              : $>Through ON
-  :              : $>Move Left
-  :              : $>Move Lower Left
+  :              : $>Move Upper Right
   :              : $>Through OFF
   :              : $>Change Speed: 3
  @>Script: follower_move_route
- @>Set Move Route: This event
+ @>Set Move Route: Player
   :              : $>Change Speed: 2
   :              : $>Through ON
-  :              : $>Move Left
-  :              : $>Move Lower Left
+  :              : $>Move Upper Right
   :              : $>Through OFF
   :              : $>Change Speed: 3
  @>
@@ -162030,7 +162031,7 @@ List of Event Commands:
 #------------------------------------------------------------------------------
 Event ID: 040
 Event Name: Stair
-(X,Y): (039,087)
+(X,Y): (039,086)
 
 Page #1
 Conditions
@@ -162051,7 +162052,6 @@ List of Event Commands:
   :              : $>Through ON
   :              : $>Move Upper Left
   :              : $>Move Upper Left
-  :              : $>Move Left
   :              : $>Through OFF
   :              : $>Change Speed: 3
  @>Script: follower_move_route
@@ -162060,7 +162060,6 @@ List of Event Commands:
   :              : $>Through ON
   :              : $>Move Upper Left
   :              : $>Move Upper Left
-  :              : $>Move Left
   :              : $>Through OFF
   :              : $>Change Speed: 3
  @>
@@ -162091,7 +162090,6 @@ List of Event Commands:
  @>Set Move Route: Player
   :              : $>Change Speed: 2
   :              : $>Through ON
-  :              : $>Move Right
   :              : $>Move Lower Right
   :              : $>Move Lower Right
   :              : $>Through OFF
@@ -162100,7 +162098,6 @@ List of Event Commands:
  @>Set Move Route: Player
   :              : $>Change Speed: 2
   :              : $>Through ON
-  :              : $>Move Right
   :              : $>Move Lower Right
   :              : $>Move Lower Right
   :              : $>Through OFF
@@ -162113,48 +162110,6 @@ List of Event Commands:
 
 #------------------------------------------------------------------------------
 Event ID: 042
-Event Name: Stair
-(X,Y): (039,086)
-
-Page #1
-Conditions
-None
-
-Autonomous Movement
-Type: Fixed
-Speed: 3: Slow
-Freq: 3: Low
-Options Enabled
-Move Animation
-Trigger: Player Touch
-
-List of Event Commands:
-@>Conditional Branch: Player is facing Left
- @>Set Move Route: Player
-  :              : $>Change Speed: 2
-  :              : $>Through ON
-  :              : $>Move Upper Left
-  :              : $>Move Upper Left
-  :              : $>Move Left
-  :              : $>Through OFF
-  :              : $>Change Speed: 3
- @>Script: follower_move_route
- @>Set Move Route: Player
-  :              : $>Change Speed: 2
-  :              : $>Through ON
-  :              : $>Move Upper Left
-  :              : $>Move Upper Left
-  :              : $>Move Left
-  :              : $>Through OFF
-  :              : $>Change Speed: 3
- @>
-: Else
- @>
-: Branch End
-@>
-
-#------------------------------------------------------------------------------
-Event ID: 043
 Event Name: Stair
 (X,Y): (038,085)
 
@@ -162175,7 +162130,6 @@ List of Event Commands:
  @>Set Move Route: Player
   :              : $>Change Speed: 2
   :              : $>Through ON
-  :              : $>Move Right
   :              : $>Move Lower Right
   :              : $>Move Lower Right
   :              : $>Through OFF
@@ -162184,7 +162138,6 @@ List of Event Commands:
  @>Set Move Route: Player
   :              : $>Change Speed: 2
   :              : $>Through ON
-  :              : $>Move Right
   :              : $>Move Lower Right
   :              : $>Move Lower Right
   :              : $>Through OFF
@@ -162217,7 +162170,6 @@ List of Event Commands:
  @>Set Move Route: Player
   :              : $>Change Speed: 2
   :              : $>Through ON
-  :              : $>Move Right
   :              : $>Move Lower Right
   :              : $>Move Lower Right
   :              : $>Through OFF
@@ -162226,7 +162178,6 @@ List of Event Commands:
  @>Set Move Route: Player
   :              : $>Change Speed: 2
   :              : $>Through ON
-  :              : $>Move Right
   :              : $>Move Lower Right
   :              : $>Move Lower Right
   :              : $>Through OFF
@@ -162240,7 +162191,7 @@ List of Event Commands:
 #------------------------------------------------------------------------------
 Event ID: 045
 Event Name: Stair
-(X,Y): (075,052)
+(X,Y): (076,053)
 
 Page #1
 Conditions
@@ -162255,22 +162206,20 @@ Move Animation
 Trigger: Player Touch
 
 List of Event Commands:
-@>Conditional Branch: Player is facing Right
+@>Conditional Branch: Player is facing Left
  @>Set Move Route: Player
   :              : $>Change Speed: 2
   :              : $>Through ON
-  :              : $>Move Right
-  :              : $>Move Lower Right
-  :              : $>Move Lower Right
+  :              : $>Move Upper Left
+  :              : $>Move Upper Left
   :              : $>Through OFF
   :              : $>Change Speed: 3
  @>Script: follower_move_route
  @>Set Move Route: Player
   :              : $>Change Speed: 2
   :              : $>Through ON
-  :              : $>Move Right
-  :              : $>Move Lower Right
-  :              : $>Move Lower Right
+  :              : $>Move Upper Left
+  :              : $>Move Upper Left
   :              : $>Through OFF
   :              : $>Change Speed: 3
  @>
@@ -162432,7 +162381,6 @@ List of Event Commands:
  @>Set Move Route: Player
   :              : $>Change Speed: 2
   :              : $>Through ON
-  :              : $>Move Left
   :              : $>Move Lower Left
   :              : $>Through OFF
   :              : $>Change Speed: 3
@@ -162440,7 +162388,6 @@ List of Event Commands:
  @>Set Move Route: This event
   :              : $>Change Speed: 2
   :              : $>Through ON
-  :              : $>Move Left
   :              : $>Move Lower Left
   :              : $>Through OFF
   :              : $>Change Speed: 3
@@ -162470,7 +162417,6 @@ List of Event Commands:
  @>Set Move Route: Player
   :              : $>Change Speed: 2
   :              : $>Through ON
-  :              : $>Move Left
   :              : $>Move Lower Left
   :              : $>Through OFF
   :              : $>Change Speed: 3
@@ -162478,7 +162424,6 @@ List of Event Commands:
  @>Set Move Route: This event
   :              : $>Change Speed: 2
   :              : $>Through ON
-  :              : $>Move Left
   :              : $>Move Lower Left
   :              : $>Through OFF
   :              : $>Change Speed: 3
@@ -162488,7 +162433,6 @@ List of Event Commands:
   :              : $>Change Speed: 2
   :              : $>Through ON
   :              : $>Move Upper Right
-  :              : $>Move Right
   :              : $>Through OFF
   :              : $>Change Speed: 3
  @>Script: follower_move_route
@@ -162496,7 +162440,6 @@ List of Event Commands:
   :              : $>Change Speed: 2
   :              : $>Through ON
   :              : $>Move Upper Right
-  :              : $>Move Right
   :              : $>Through OFF
   :              : $>Change Speed: 3
  @>
@@ -162526,7 +162469,6 @@ List of Event Commands:
   :              : $>Change Speed: 2
   :              : $>Through ON
   :              : $>Move Upper Right
-  :              : $>Move Right
   :              : $>Through OFF
   :              : $>Change Speed: 3
  @>Script: follower_move_route
@@ -162534,7 +162476,6 @@ List of Event Commands:
   :              : $>Change Speed: 2
   :              : $>Through ON
   :              : $>Move Upper Right
-  :              : $>Move Right
   :              : $>Through OFF
   :              : $>Change Speed: 3
  @>
@@ -162544,7 +162485,7 @@ List of Event Commands:
 #------------------------------------------------------------------------------
 Event ID: 052
 Event Name: Stair
-(X,Y): (076,053)
+(X,Y): (075,052)
 
 Page #1
 Conditions
@@ -162559,64 +162500,20 @@ Move Animation
 Trigger: Player Touch
 
 List of Event Commands:
-@>Conditional Branch: Player is facing Left
+@>Conditional Branch: Player is facing Right
  @>Set Move Route: Player
   :              : $>Change Speed: 2
   :              : $>Through ON
-  :              : $>Move Upper Left
-  :              : $>Move Upper Left
-  :              : $>Move Left
+  :              : $>Move Lower Right
+  :              : $>Move Lower Right
   :              : $>Through OFF
   :              : $>Change Speed: 3
  @>Script: follower_move_route
  @>Set Move Route: Player
   :              : $>Change Speed: 2
   :              : $>Through ON
-  :              : $>Move Upper Left
-  :              : $>Move Upper Left
-  :              : $>Move Left
-  :              : $>Through OFF
-  :              : $>Change Speed: 3
- @>
-: Else
- @>
-: Branch End
-@>
-
-#------------------------------------------------------------------------------
-Event ID: 053
-Event Name: Stair
-(X,Y): (076,054)
-
-Page #1
-Conditions
-None
-
-Autonomous Movement
-Type: Fixed
-Speed: 3: Slow
-Freq: 3: Low
-Options Enabled
-Move Animation
-Trigger: Player Touch
-
-List of Event Commands:
-@>Conditional Branch: Player is facing Left
- @>Set Move Route: Player
-  :              : $>Change Speed: 2
-  :              : $>Through ON
-  :              : $>Move Upper Left
-  :              : $>Move Upper Left
-  :              : $>Move Left
-  :              : $>Through OFF
-  :              : $>Change Speed: 3
- @>Script: follower_move_route
- @>Set Move Route: Player
-  :              : $>Change Speed: 2
-  :              : $>Through ON
-  :              : $>Move Upper Left
-  :              : $>Move Upper Left
-  :              : $>Move Left
+  :              : $>Move Lower Right
+  :              : $>Move Lower Right
   :              : $>Through OFF
   :              : $>Change Speed: 3
  @>
@@ -162649,7 +162546,6 @@ List of Event Commands:
   :              : $>Through ON
   :              : $>Move Upper Left
   :              : $>Move Upper Left
-  :              : $>Move Left
   :              : $>Through OFF
   :              : $>Change Speed: 3
  @>Script: follower_move_route
@@ -162658,49 +162554,6 @@ List of Event Commands:
   :              : $>Through ON
   :              : $>Move Upper Left
   :              : $>Move Upper Left
-  :              : $>Move Left
-  :              : $>Through OFF
-  :              : $>Change Speed: 3
- @>
-: Else
- @>
-: Branch End
-@>
-
-#------------------------------------------------------------------------------
-Event ID: 055
-Event Name: Stair
-(X,Y): (041,069)
-
-Page #1
-Conditions
-None
-
-Autonomous Movement
-Type: Fixed
-Speed: 3: Slow
-Freq: 3: Low
-Options Enabled
-Move Animation
-Trigger: Player Touch
-
-List of Event Commands:
-@>Conditional Branch: Player is facing Left
- @>Set Move Route: Player
-  :              : $>Change Speed: 2
-  :              : $>Through ON
-  :              : $>Move Upper Left
-  :              : $>Move Upper Left
-  :              : $>Move Left
-  :              : $>Through OFF
-  :              : $>Change Speed: 3
- @>Script: follower_move_route
- @>Set Move Route: Player
-  :              : $>Change Speed: 2
-  :              : $>Through ON
-  :              : $>Move Upper Left
-  :              : $>Move Upper Left
-  :              : $>Move Left
   :              : $>Through OFF
   :              : $>Change Speed: 3
  @>
@@ -162731,7 +162584,6 @@ List of Event Commands:
  @>Set Move Route: Player
   :              : $>Change Speed: 2
   :              : $>Through ON
-  :              : $>Move Right
   :              : $>Move Lower Right
   :              : $>Move Lower Right
   :              : $>Through OFF
@@ -162740,7 +162592,6 @@ List of Event Commands:
  @>Set Move Route: Player
   :              : $>Change Speed: 2
   :              : $>Through ON
-  :              : $>Move Right
   :              : $>Move Lower Right
   :              : $>Move Lower Right
   :              : $>Through OFF
@@ -162773,7 +162624,6 @@ List of Event Commands:
  @>Set Move Route: Player
   :              : $>Change Speed: 2
   :              : $>Through ON
-  :              : $>Move Right
   :              : $>Move Lower Right
   :              : $>Move Lower Right
   :              : $>Through OFF
@@ -162782,7 +162632,6 @@ List of Event Commands:
  @>Set Move Route: Player
   :              : $>Change Speed: 2
   :              : $>Through ON
-  :              : $>Move Right
   :              : $>Move Lower Right
   :              : $>Move Lower Right
   :              : $>Through OFF
@@ -162815,7 +162664,6 @@ List of Event Commands:
  @>Set Move Route: Player
   :              : $>Change Speed: 2
   :              : $>Through ON
-  :              : $>Move Left
   :              : $>Move Lower Left
   :              : $>Through OFF
   :              : $>Change Speed: 3
@@ -162823,7 +162671,6 @@ List of Event Commands:
  @>Set Move Route: This event
   :              : $>Change Speed: 2
   :              : $>Through ON
-  :              : $>Move Left
   :              : $>Move Lower Left
   :              : $>Through OFF
   :              : $>Change Speed: 3
@@ -162853,7 +162700,6 @@ List of Event Commands:
  @>Set Move Route: Player
   :              : $>Change Speed: 2
   :              : $>Through ON
-  :              : $>Move Left
   :              : $>Move Lower Left
   :              : $>Through OFF
   :              : $>Change Speed: 3
@@ -162861,7 +162707,6 @@ List of Event Commands:
  @>Set Move Route: This event
   :              : $>Change Speed: 2
   :              : $>Through ON
-  :              : $>Move Left
   :              : $>Move Lower Left
   :              : $>Through OFF
   :              : $>Change Speed: 3
@@ -162871,7 +162716,6 @@ List of Event Commands:
   :              : $>Change Speed: 2
   :              : $>Through ON
   :              : $>Move Upper Right
-  :              : $>Move Right
   :              : $>Through OFF
   :              : $>Change Speed: 3
  @>Script: follower_move_route
@@ -162879,7 +162723,6 @@ List of Event Commands:
   :              : $>Change Speed: 2
   :              : $>Through ON
   :              : $>Move Upper Right
-  :              : $>Move Right
   :              : $>Through OFF
   :              : $>Change Speed: 3
  @>
@@ -162909,7 +162752,6 @@ List of Event Commands:
   :              : $>Change Speed: 2
   :              : $>Through ON
   :              : $>Move Upper Right
-  :              : $>Move Right
   :              : $>Through OFF
   :              : $>Change Speed: 3
  @>Script: follower_move_route
@@ -162917,7 +162759,6 @@ List of Event Commands:
   :              : $>Change Speed: 2
   :              : $>Through ON
   :              : $>Move Upper Right
-  :              : $>Move Right
   :              : $>Through OFF
   :              : $>Change Speed: 3
  @>
@@ -162947,7 +162788,6 @@ List of Event Commands:
   :              : $>Change Speed: 2
   :              : $>Through ON
   :              : $>Move Upper Left
-  :              : $>Move Left
   :              : $>Through OFF
   :              : $>Change Speed: 3
  @>Script: follower_move_route
@@ -162955,7 +162795,6 @@ List of Event Commands:
   :              : $>Change Speed: 2
   :              : $>Through ON
   :              : $>Move Upper Left
-  :              : $>Move Left
   :              : $>Through OFF
   :              : $>Change Speed: 3
  @>
@@ -162984,7 +162823,6 @@ List of Event Commands:
  @>Set Move Route: Player
   :              : $>Change Speed: 2
   :              : $>Through ON
-  :              : $>Move Right
   :              : $>Move Lower Right
   :              : $>Through OFF
   :              : $>Change Speed: 3
@@ -162992,7 +162830,6 @@ List of Event Commands:
  @>Set Move Route: Player
   :              : $>Change Speed: 2
   :              : $>Through ON
-  :              : $>Move Right
   :              : $>Move Lower Right
   :              : $>Through OFF
   :              : $>Change Speed: 3
@@ -163002,7 +162839,6 @@ List of Event Commands:
   :              : $>Change Speed: 2
   :              : $>Through ON
   :              : $>Move Upper Left
-  :              : $>Move Left
   :              : $>Through OFF
   :              : $>Change Speed: 3
  @>Script: follower_move_route
@@ -163010,7 +162846,6 @@ List of Event Commands:
   :              : $>Change Speed: 2
   :              : $>Through ON
   :              : $>Move Upper Left
-  :              : $>Move Left
   :              : $>Through OFF
   :              : $>Change Speed: 3
  @>
@@ -163039,7 +162874,6 @@ List of Event Commands:
  @>Set Move Route: Player
   :              : $>Change Speed: 2
   :              : $>Through ON
-  :              : $>Move Right
   :              : $>Move Lower Right
   :              : $>Through OFF
   :              : $>Change Speed: 3
@@ -163047,7 +162881,6 @@ List of Event Commands:
  @>Set Move Route: This event
   :              : $>Change Speed: 2
   :              : $>Through ON
-  :              : $>Move Right
   :              : $>Move Lower Right
   :              : $>Through OFF
   :              : $>Change Speed: 3
@@ -365553,6 +365386,30 @@ List of Event Commands:
 @>
 
 #------------------------------------------------------------------------------
+Event ID: 067
+Event Name: EV067
+(X,Y): (037,021)
+
+Page #1
+Conditions
+None
+
+Graphic: NPC_Mann 6
+
+Autonomous Movement
+Type: Random
+Speed: 3: Slow
+Freq: 3: Low
+Options Enabled
+Move Animation
+Trigger: Action Button
+
+List of Event Commands:
+@>Text: Dieser Wald ist verzaubert.
+@>Text: Das erzählt man hier überall zumindest.
+@>
+
+#------------------------------------------------------------------------------
 Event ID: 068
 Event Name: HeadbuttTree size(2,2)
 (X,Y): (040,016)
@@ -365957,6 +365814,46 @@ Trigger: Action Button
 
 List of Event Commands:
 @>Script: pbHeadbutt
+@>
+
+#------------------------------------------------------------------------------
+Event ID: 085
+Event Name: Wächter
+(X,Y): (012,034)
+
+Page #1
+Conditions
+None
+
+Graphic: trainer_BACKERS_F
+
+Autonomous Movement
+Type: Random
+Speed: 3: Slow
+Freq: 3: Low
+Options Enabled
+Move Animation
+Trigger: Action Button
+
+List of Event Commands:
+@>Text: irgendwas geht hier vor sich.
+@>Text: Die wächter sind alle nervös und lassen einen nicht 
+ :    : zu Route 17.
+@>
+
+Page #2
+Conditions
+Switch 0383: Reshiram + Zekrom Ende is ON
+
+Autonomous Movement
+Type: Fixed
+Speed: 3: Slow
+Freq: 3: Low
+Options Enabled
+Move Animation
+Trigger: Action Button
+
+List of Event Commands:
 @>
 
 #------------------------------------------------------------------------------
@@ -376653,6 +376550,7 @@ Speed: 3: Slow
 Freq: 3: Low
 Options Enabled
 Direction Fix
+Through
 Trigger: Action Button
 
 List of Event Commands:
@@ -376752,6 +376650,7 @@ Speed: 3: Slow
 Freq: 3: Low
 Options Enabled
 Move Animation
+Through
 Trigger: Event Touch
 
 List of Event Commands:
@@ -376776,6 +376675,7 @@ Speed: 3: Slow
 Freq: 3: Low
 Options Enabled
 Move Animation
+Through
 Trigger: Action Button
 
 List of Event Commands:
@@ -389937,9 +389837,9 @@ List of Event Commands:
 @>Wait: 20 frame(s)
 @>Change Screen Color Tone: (-255,-255,-255,0), @6
 @>Wait: 8 frame(s)
-@>Transfer Player:[469: Arena 4], (005,009), Left
 @>Control Self Switch: A =ON
 @>Change Transparent Flag: Normal
+@>Transfer Player:[469: Arena 4], (005,009), Left
 @>Change Screen Color Tone: (0,0,0,0), @6
 @>Wait: 8 frame(s)
 @>
@@ -389984,9 +389884,9 @@ List of Event Commands:
 @>Wait: 20 frame(s)
 @>Change Screen Color Tone: (-255,-255,-255,0), @6
 @>Wait: 8 frame(s)
-@>Transfer Player:[470: Arena 4], (015,016), Right
 @>Control Self Switch: A =ON
 @>Change Transparent Flag: Normal
+@>Transfer Player:[470: Arena 4], (015,016), Right
 @>Change Screen Color Tone: (0,0,0,0), @6
 @>Wait: 8 frame(s)
 @>
@@ -390031,9 +389931,9 @@ List of Event Commands:
 @>Wait: 20 frame(s)
 @>Change Screen Color Tone: (-255,-255,-255,0), @6
 @>Wait: 8 frame(s)
-@>Transfer Player:[478: Arena 4], (007,011), Left
 @>Control Self Switch: A =ON
 @>Change Transparent Flag: Normal
+@>Transfer Player:[478: Arena 4], (007,011), Left
 @>Change Screen Color Tone: (0,0,0,0), @6
 @>Wait: 8 frame(s)
 @>
@@ -390078,10 +389978,10 @@ List of Event Commands:
 @>Wait: 20 frame(s)
 @>Change Screen Color Tone: (-255,-255,-255,0), @6
 @>Wait: 8 frame(s)
-@>Transfer Player:[482: Arena 4], (016,013), Right
 @>Control Switches: [0283: Strom 4] = OFF
 @>Control Self Switch: A =ON
 @>Change Transparent Flag: Normal
+@>Transfer Player:[482: Arena 4], (016,013), Right
 @>Change Screen Color Tone: (0,0,0,0), @6
 @>Wait: 8 frame(s)
 @>
@@ -390228,9 +390128,6 @@ List of Event Commands:
  @>Wait: 5 frame(s)
  @>Play SE: 'CLAYDOL', 100, 100
  @>Wait: 20 frame(s)
- @>Set Move Route: [EV020]
-  :              : $>Graphic: (None)
- @>Set Event Location: [EV020],(034,001), Right
  @>Script: setBattleRule("midbattleScript", 
  :       : :ARENALEITER_MARVIN)
  @>Conditional Branch: Script: TrainerBattle.start(:LEADER_Marvin, "Marvin",1)
@@ -395095,7 +394992,7 @@ Speed: 3: Slow
 Freq: 3: Low
 Options Enabled
 Move Animation
-Trigger: Player Touch
+Trigger: Event Touch
 
 List of Event Commands:
 @>Conditional Branch: Script: $bag.has?(:DOJOKEY)
@@ -428024,6 +427921,7 @@ Event Name: Knogga (Alola)
 Page #1
 Conditions
 Switch 0364: Knogga Event is ON
+Switch 0015: s:PBDayNight.isNight? is ON
 
 Graphic: MAROWAK_1
 
@@ -429076,6 +428974,30 @@ Move Animation
 Trigger: Action Button
 
 List of Event Commands:
+@>
+
+#------------------------------------------------------------------------------
+Event ID: 031
+Event Name: Wächter
+(X,Y): (018,006)
+
+Page #1
+Conditions
+None
+
+Graphic: trainer_HIKER
+
+Autonomous Movement
+Type: Random
+Speed: 3: Slow
+Freq: 3: Low
+Options Enabled
+Move Animation
+Trigger: Action Button
+
+List of Event Commands:
+@>Text: Manchmal taucht hier ein seltsames Pokémon auf.
+@>Text: Hast du es schon gesehen?
 @>
 
 #------------------------------------------------------------------------------
@@ -432499,6 +432421,8 @@ List of Event Commands:
  :    : Flammen bereits entfacht sind.
 @>Text: \xn[Wächter]Gehe anschließend zum Stein der 
  :    : Wahrheit.
+@>Set Move Route: This event
+ :              : $>Turn Down
 @>
 
 Page #2
@@ -432977,6 +432901,53 @@ Trigger: Action Button
 
 List of Event Commands:
 @>Script: pbHeadbutt
+@>
+
+#------------------------------------------------------------------------------
+Event ID: 078
+Event Name: EV078
+(X,Y): (056,040)
+
+Page #1
+Conditions
+None
+
+Graphic: trainer_BEAUTY5
+
+Autonomous Movement
+Type: Random
+Speed: 3: Slow
+Freq: 3: Low
+Options Enabled
+Move Animation
+Trigger: Action Button
+
+List of Event Commands:
+@>Text: Manche Pokémon tarnen sich als andere Pokémon.
+@>Text: Das ist ganz schön gruselig.
+@>
+
+#------------------------------------------------------------------------------
+Event ID: 079
+Event Name: EV079
+(X,Y): (031,019)
+
+Page #1
+Conditions
+None
+
+Graphic: trainer_LASS
+
+Autonomous Movement
+Type: Random
+Speed: 3: Slow
+Freq: 3: Low
+Options Enabled
+Move Animation
+Trigger: Action Button
+
+List of Event Commands:
+@>Text: Ich hasse Spinnen-Pokémon.
 @>
 
 #------------------------------------------------------------------------------
@@ -433593,6 +433564,105 @@ Stop Animation
 Trigger: Action Button
 
 List of Event Commands:
+@>
+
+#------------------------------------------------------------------------------
+Event ID: 106
+Event Name: Paras size(2,1)
+(X,Y): (000,067)
+
+Page #1
+Conditions
+None
+
+Graphic: PARAS
+
+Autonomous Movement
+Type: Fixed
+Speed: 1: Slowest
+Freq: 1: Lowest
+Options Enabled
+Move Animation
+Stop Animation
+Trigger: Action Button
+
+List of Event Commands:
+@>
+
+#------------------------------------------------------------------------------
+Event ID: 107
+Event Name: Paras size(2,1)
+(X,Y): (057,049)
+
+Page #1
+Conditions
+None
+
+Graphic: PARAS
+
+Autonomous Movement
+Type: Fixed
+Speed: 1: Slowest
+Freq: 1: Lowest
+Options Enabled
+Move Animation
+Stop Animation
+Trigger: Action Button
+
+List of Event Commands:
+@>
+
+#------------------------------------------------------------------------------
+Event ID: 108
+Event Name: EV108
+(X,Y): (031,053)
+
+Page #1
+Conditions
+None
+
+Graphic: trainer_BIRDKEEPER_F
+
+Autonomous Movement
+Type: Random
+Speed: 3: Slow
+Freq: 3: Low
+Options Enabled
+Move Animation
+Trigger: Action Button
+
+List of Event Commands:
+@>Text: Bei dem richtigen Licht sieht es hier richtig magisch 
+ :    : aus.
+@>Set Move Route: This event
+ :              : $>Turn Right
+@>
+
+#------------------------------------------------------------------------------
+Event ID: 109
+Event Name: EV109
+(X,Y): (031,052)
+
+Page #1
+Conditions
+None
+
+Graphic: EXPLOUD
+
+Autonomous Movement
+Type: Fixed
+Speed: 1: Slowest
+Freq: 1: Lowest
+Options Enabled
+Move Animation
+Stop Animation
+Trigger: Action Button
+
+List of Event Commands:
+@>Play SE: 'EXPLOUD', 100, 100
+@>Wait: 15 frame(s)
+@>Set Move Route: This event
+ :              : $>Turn Right
 @>
 
 #------------------------------------------------------------------------------
@@ -434406,6 +434476,21 @@ Trigger: Action Button
 List of Event Commands:
 @>Text: Diese ganzen Erdbeben, ständige Unruhe...
 @>Text: Ich kann so nicht arbeiten!
+@>
+
+Page #2
+Conditions
+Switch 0383: Reshiram + Zekrom Ende is ON
+
+Autonomous Movement
+Type: Fixed
+Speed: 3: Slow
+Freq: 3: Low
+Options Enabled
+Move Animation
+Trigger: Action Button
+
+List of Event Commands:
 @>
 
 #------------------------------------------------------------------------------
@@ -466205,6 +466290,18 @@ List of Event Commands:
 @>
 
 #------------------------------------------------------------------------------
+
+#==============================================================================
+Map ID: 634
+Map Name: Registeel
+Tileset: 131: Registeel
+Width: 40, Height: 37
+
+#==============================================================================
+Map ID: 635
+Map Name: MAP635
+Tileset: 132: Registeel 2
+Width: 140, Height: 80
 
 #==============================================================================
 

@@ -1,10 +1,5 @@
 ﻿# See the documentation on the wiki to learn how to edit this file.
 #-------------------------------
-[CAMPER_M,Liam]
-LoseText = A very good battle, indeed!
-Pokemon = DIGLETT,10
-Pokemon = BONSLY,11
-#-------------------------------
 [LEADER_Arena2,Isaac]
 Items = SUPERPOTION,SUPERPOTION
 LoseText = Der Wind hat sich gelegt, die See ist ruhig geworden.
@@ -13,12 +8,13 @@ Pokemon = FLAMIGO,21
     AbilityIndex = 1
     Item = BLACKBELT
     Gender = male
+	Ball = VALUEBALL
 Pokemon = VAPOREON,22
     Moves = WATERPULSE,ICYWIND,FLIPTURN,RAINDANCE
     AbilityIndex = 1
     Item = LEFTOVERS
     Gender = female
-    Ball = HEAVYBALL
+    Ball = NETBALL
 Pokemon = SKARMORY,21
     Moves = METALCLAW,AERIALACE,SWORDSDANCE,SANDATTACK
     AbilityIndex = 1
@@ -31,112 +27,13 @@ Pokemon = GYARADOS,24
     Item = SITRUSBERRY
     Gender = male
     Shiny = true
-    Ball = HEAVYBALL
-#-------------------------------
-[TEAMROCKET_M,Grunt,1]
-LoseText = You're too good for me!
-Pokemon = WEEPINBELL,21
-    Shadow = true
-#-------------------------------
-[TEAMROCKET_F,Grunt,1]
-LoseText = You're too good for me!
-Pokemon = BURMY,19
-Pokemon = WINGULL,19
-Pokemon = ELECTABUZZ,20
-    Shadow = true
+    Ball = TIMERBALL
 #-------------------------------
 [YOUNGSTER,Ben]
 LoseText = ...
-Pokemon = EKANS,6
-#-------------------------------
-[CAMPER_M,Jeff]
-LoseText = A very good battle, indeed!
-Pokemon = SPEAROW,16
-Pokemon = SENTRET,16
-#-------------------------------
-[CAMPER_M,Jeff,1]
-LoseText = You beat me again!
-Pokemon = FEAROW,29
-Pokemon = FURRET,29
-#-------------------------------
-[PICNICKER,Susie]
-LoseText = Defeated! Oh my!
-Pokemon = MEOWTH,18
-#-------------------------------
-[PICNICKER,Susie,1]
-LoseText = Defeated! Oh my!
-Pokemon = PERSIAN,32
-#-------------------------------
-[HIKER,Ford]
-LoseText = You're too good for me!
-Pokemon = MACHOP,19
-#-------------------------------
-[FISHERMAN,Andrew]
-LoseText = Washed out!
-Pokemon = MAGIKARP,14
-Pokemon = MAGIKARP,18
-#-------------------------------
-[BEAUTY,Bridget]
-LoseText = My Skitty!
-Pokemon = SKITTY,18
-#-------------------------------
-[LASS,Crissy]
-LoseText = You didn't have to win so convincingly!
-Pokemon = PLUSLE,17
-Pokemon = MINUN,17
-#-------------------------------
-[COOLCOUPLE,Alice & Bob]
-LoseText = Our teamwork failed!
-Pokemon = TURTWIG,19
-Pokemon = CHIMCHAR,19
-#-------------------------------
-[POKEMONTRAINER_May,May]
-LoseText = ...
-Pokemon = COMBUSKEN,19
-#-------------------------------
-[SWIMMER2_F,Ariel]
-LoseText = Washed out!
-Pokemon = STARYU,15
-Pokemon = GOLDEEN,11
-#-------------------------------
-[RIVAL1,Blue]
-LoseText = Not too shabby.
-Pokemon = PIDGEOTTO,17
-Pokemon = RATTATA,15
-Pokemon = BULBASAUR,18
-#-------------------------------
-[RIVAL1,Blue,1]
-LoseText = Not too shabby.
-Pokemon = PIDGEOTTO,17
-Pokemon = RATTATA,15
-Pokemon = CHARMANDER,18
-#-------------------------------
-[RIVAL1,Blue,2]
-LoseText = Not too shabby.
-Pokemon = PIDGEOTTO,17
-Pokemon = RATTATA,15
-Pokemon = SQUIRTLE,18
-#-------------------------------
-[CHAMPION,Blue]
-LoseText = A good battle indeed!
-Pokemon = VENUSAUR,63
-    Item = SITRUSBERRY
-Pokemon = CHARIZARD,63
-    Item = SITRUSBERRY
-Pokemon = BLASTOISE,63
-    Item = SITRUSBERRY
-#-------------------------------
-[SHINYHUNTER,Morty]
-LoseText = ...
-Pokemon = BULBASAUR,6
-#-------------------------------
-[SHINYHUNTER,Morty,1]
-LoseText = ...
-Pokemon = SQUIRTLE,6
-#-------------------------------
-[SHINYHUNTER,Morty,2]
-LoseText = ...
-Pokemon = CHARMANDER,6
+Pokemon = EKANS,5
+	Moves = WRAP,LEER,POISONSTING
+    Ball = FRIENDBALL
 #-------------------------------
 [LEADER_Jil,Jil]
 LoseText = ...
@@ -166,104 +63,181 @@ Pokemon = MAGIKARP,5
 	Moves = SPLASH
 	AbilityIndex = 0
 	Nature = RELAXED
+	Ball = NETBALL
 Pokemon = MAGIKARP,5
 	Moves = SPLASH
 	AbilityIndex = 0
 	Nature = RELAXED
+	Ball = NETBALL
 Pokemon = MAGIKARP,5
 	Moves = SPLASH
 	AbilityIndex = 0
 	Nature = RELAXED
+	Ball = NETBALL
 Pokemon = MAGIKARP,5
 	Moves = SPLASH
 	AbilityIndex = 0
 	Nature = RELAXED
+	Ball = NETBALL
 Pokemon = MAGIKARP,5
 	Moves = SPLASH
 	AbilityIndex = 0
 	Nature = RELAXED
+	Ball = NETBALL
 Pokemon = MAGIKARP,5
 	Moves = SPLASH
 	AbilityIndex = 0
-	Nature = RELAXED	
+	Nature = RELAXED
+	Ball = NETBALL
 #-------------------------------
 [BUGCATCHER,Tom]
 LoseText = Ich sollte wohl noch ein bisschen trainieren...
 Pokemon = LEDYBA,4
+	Moves = TACKLE
+	AbilityIndex = 2
+	Ball = PREMIERBALL
 Pokemon = KAKUNA,7
+	Moves = POISONSTING,STRINGSHOT,HARDEN
+	Ball = NETBALL
 #-------------------------------
 [BUGCATCHER,Bernd]
 LoseText = Blasphemie!
 Pokemon = BIDOOF,6
+	Moves = TACKLE,GROWL,DEFENSECURL
+	AbilityIndex = 1
+	Ball = LUREBALL
 Pokemon = CATERPIE,7
+	Moves = TACKLE,STRINGSHOT
+	AbilityIndex = 0
+	Ball = NETBALL
 #-------------------------------
 [BIRDKEEPER_M,Jonathan]
 LoseText = Einigen wir uns auf Unentschieden...
 Pokemon = ROOKIDEE,6
+	Moves = LEER,PECK,POWERTRIP
+	AbilityIndex = 0
+	Ball = POKEBALL
 Pokemon = SPEAROW,7
+	Moves = PECK,GROWL,LEER
+	Form = 1
+	Ball = POKEBALL
 #-------------------------------
 [LADY2,Susi]
 LoseText = Wieso bist du so gemein?
 Pokemon = SMEARGLE,10
+	Moves = SKETCH
+	AbilityIndex = 0
+	Ball = GREATBALL
 #-------------------------------
 [LADY,Clarissa]
 LoseText = Meine Pokémon sind trotzdem schöner, ätsch!
 Pokemon = FURFROU,11
+	Moves = HEADBUTT,TACKLE,GROWL,TAILWHIP
+	Ball = LUXURYBALL
 Pokemon = CLAMPERL,12
+	Moves = WATERGUN,WHIRLPOOL,IRONDEFENSE
+	Ball = LUXURYBALL
 #-------------------------------
 [TAMER,Robin]
 LoseText = KUUUUUUUUUFT!
 Pokemon = BUDEW,11
+	Moves = ABSORB,GROWTH,STUNSPORE,CHARM
+	AbilityIndex = 1
+	Ball = SAFARIBALL
 Pokemon = ROSELIA,12
+	Moves = ABSORB,POISONSTING,STUNSPORE,GROWTH
+	AbilityIndex = 1
+	Ball = SAFARIBALL
 Pokemon = ROSERADE,13
+	Moves = MORTALSPIN,POISONSTING,ABSORB,LEECHSEED
+	AbilityIndex = 0
+	Ball = SAFARIBALL
 #-------------------------------
 [HIKER,Bernhard]
 LoseText = Ich bin vom Weg abgekommen.
 Pokemon = CUBONE,11
+	Moves = TACKLE,GROWL,LEER,FALSESWIPE
+	AbilityIndex = 1
+	Ball = LUCKBALL
 #-------------------------------
 [SWIMMER_F5,Kate]
 LoseText = Du kannst mir also auch nicht weiterhelfen.
 Pokemon = GOLDEEN,11
+	Moves = PECK,TAILWHIP,SUPERSONIC,WATERPULSE
+	AbilityIndex = 1
+	Ball = NETBALL
 #-------------------------------
 [YOUNGSTER2,Peter]
 LoseText = Der Traum vom Champ ist verflogen.
 Pokemon = WOOBAT,8
+	Moves = GUST,ATTRACT,CONFUSION
+	AbilityIndex = 0
+	Ball = POKEBALL
 Pokemon = MINCCINO,9
+	Moves = POUND,BABYDOLLEYES,HELPINGHAND,ECHOEDVOICE
+	AbilityIndex = 0
+	Ball = POKEBALL
 #-------------------------------
 [YOUNGSTER3,Jake]
 LoseText = Das war nix...
 Pokemon = NICKIT,8
+	Moves = TAILWHIP,QUICKATTACK
+	Ball = PENALTYBALL
 Pokemon = PIDGEY,9
+	Moves = TACKLE,SANDATTACK,GUST
+	Form = 1
+	Ball = POKEBALL
 #-------------------------------
 [POKEKID,Marlon]
 LoseText = Ach, leck mich!
 Pokemon = HELIOPTILE,15
+	Moves = QUICKATTACK,THUNDERSHOCK,THUNDERWAVE,SWIFT
+	Ball = ELECTRICBALL
 Pokemon = PIKACHU,16
+	Moves = THUNDERWAVE,DOUBLETEAM,ELECTROBALL,FEINT
+	AbilityIndex = 1
+	Ball = ELECTRICBALL
 #-------------------------------
 [YOUNGSTER3,Andy]
 LoseText = Nach der Höhle kommt zum Glück ein Poké-Center.
 Pokemon = RATTATA,9
+	Moves = TACKLE,TAILWHIP,QUICKATTACK,FOCUSENERGY
+	AbilityIndex = 1
 Pokemon = SPEAROW,10
+	Moves = PECK,GROWL,LEER,ASSURANCE
 #-------------------------------
 [BLACKBELT,Achim]
 LoseText = Manchmal ist Verteidigung die bessere Verteidigung.
 Pokemon = TYROGUE,13
+	Moves = TACKLE,FOCUSENERGY,FAKEOUT,HELPINGHAND
+	AbilityIndex = 1
+	Ball = LOCKBALL
 #-------------------------------
 [FISHERMAN2,Arnold]
 LoseText = Ich brauche bessere Köder.
 Pokemon = GOLDEEN,15
+	Moves = PECK,SUPERSONIC,WATERPULSE,HORNATTACK
+	AbilityIndex = 0
+	Ball = NETBALL
 Pokemon = FEEBAS,17
+	Moves = SPLASH,TACKLE
+	AbilityIndex = 1
+	Ball = NETBALL
 #-------------------------------
 [HIKER,Herbert]
 LoseText = Das Leben ist immer im Wandel.
 Pokemon = NUMEL,19
+	Moves = FOCUSENERGY,BULLDOZE,INCINERATE,AMNESIA
+	AbilityIndex = 1
+	Ball = MAGMARBALL
 #-------------------------------
 [BUGCATCHER,Liam]
 LoseText = Ich dachte du wärst ein shiny Pokémon.
 Pokemon = SPINARAK,15
     Ball = FRIENDBALL
 Pokemon = SPINARAK,15
-    Ball = SAFARIBALL
+	Form = 1
+    Ball = ELECTRICBALL
 #-------------------------------
 [JOGGER,Clemens]
 LoseText = Ich muss noch mehr laufen.
@@ -295,7 +269,7 @@ Pokemon = GREAVARD,14
 Pokemon = ESPURR,16
 #-------------------------------
 [GENTLEMAN5,Carlo]
-LoseText = Danke fr den erlesenen Kampf.
+LoseText = Danke für den erlesenen Kampf.
 Pokemon = NIDORANfE,14
 Pokemon = NIDORANmA,14
 Pokemon = GIMMIGHOUL,15
@@ -368,7 +342,7 @@ Pokemon = VIVILLON,17
 Pokemon = SKORUPI,18
 #-------------------------------
 [BIRDKEEPER_F,Esther]
-LoseText = Ich knnte wegfliegen.
+LoseText = Ich könnte wegfliegen.
 Pokemon = FEAROW,20
 #-------------------------------
 [ARTIST,Heino]

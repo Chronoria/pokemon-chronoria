@@ -1901,6 +1901,7 @@ MapPosition = 0,5,9
 [288]   # VM-Testmap
 Name = VM-Testmap
 MapPosition = 1,10,7
+DiveMap = 70
 #-------------------------------
 [289]   # Moostiefen
 Name = Moostiefen
@@ -3324,8 +3325,8 @@ ShowArea = true
 MapPosition = 0,11,8
 SnapEdges = true
 BattleBack = dojo
-WildCaptureME = SwSh 137 Kubfu_s Training Complete!
 WildBattleBGM = Battle Legendary (5)
+WildCaptureME = SwSh 137 Kubfu_s Training Complete!
 Flags = Levels
 #-------------------------------
 [494]   # Center

@@ -146,7 +146,7 @@ Description = Erhöht die Initiative.
 #-------------------------------
 [EMBODYASPECT_1]
 Name = Erinnerungskraft
-Description = Erhöht die Spezial Verteidigung.
+Description = Erhöht die Spezial-Verteidigung.
 #-------------------------------
 [EMBODYASPECT_2]
 Name = Erinnerungskraft
@@ -161,13 +161,13 @@ Name = Giftpuppenspiel
 Description = Attacken, die vergiften, verwirren zusätzlich.
 #-------------------------------
 [TERASHIFT]
-Name = Tera Shift
-Description = Enters Terastal Form when sent out.
+Name = Tera-Wandel
+Description = Bei Kampfantritt absorbiert das Pokémon Energie in seiner Umgebung und nimmt die Terakristall-Form an.
 #-------------------------------
 [TERASHELL]
-Name = Tera Shell
+Name = Tera-Panzer
 Description = Bei vollen LP kann es nicht sehr effektiv getroffen werden.
 #-------------------------------
 [TERAFORMZERO]
-Name = Teraform Zero
-Description = Negiert alle Wetter und Feld-Effekte.
+Name = Teraforming Null
+Description = Eliminiert bei Annahme der Stellarform sämtliche Wettereffekte und Felder.

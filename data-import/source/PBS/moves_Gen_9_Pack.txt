@@ -304,9 +304,10 @@ Power = 70
 Accuracy = 100
 TotalPP = 20
 Target = NearOther
-FunctionCode = None
+FunctionCode = FloodTarget
+EffectChance = 20
 Flags = CanProtect,CanMirrorMove,Slicing,HighCriticalHitRate
-Description = Schädigt den Gegner und hat eine um eine Stufe erhöhte Volltrefferquote.
+Description = Erhöhte Volltrefferquote, 20% Chance, das Ziel zu fluten.
 #-------------------------------
 [AQUASTEP]
 Name = Wogentanz
@@ -548,9 +549,10 @@ Accuracy = 100
 TotalPP = 15
 Target = NearOther
 Priority = 1
-FunctionCode = None
+FunctionCode = FloodTarget
+EffectChance = 10
 Flags = Contact,CanProtect,CanMirrorMove,CannotMetronome,Punching
-Description = Verursacht Schaden und besitzt eine erhöhte Priorität von +1.
+Description = Erhöhte Priorität von +1, 10% Chance, das Ziel zu fluten.
 #-------------------------------
 [KOWTOWCLEAVE]
 Name = Kniefallspalter
