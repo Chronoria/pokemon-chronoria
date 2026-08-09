@@ -136,6 +136,6 @@ Weaknesses = ROCK,GROUND,FIGHTING
 Resistances = DARK,STEEL,GRASS,BUG,GHOST,POISON
 #-------------------------------
 [SHADOW]
-Name = Shadow
+Name = Crypto
 IconPosition = 20
 IsSpecialType = true

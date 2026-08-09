@@ -274434,6 +274434,28 @@ List of Event Commands:
 @>
 
 #------------------------------------------------------------------------------
+Event ID: 017
+Event Name: EV017
+(X,Y): (022,004)
+
+Page #1
+Conditions
+None
+
+Autonomous Movement
+Type: Fixed
+Speed: 3: Slow
+Freq: 3: Low
+Options Enabled
+Move Animation
+Trigger: Action Button
+
+List of Event Commands:
+@>Script: pbAddPokemonSilent(:SILVALLY,15)
+@>Script: $bag.add(:FIGHTINGMEMORY, 5)
+@>
+
+#------------------------------------------------------------------------------
 Event ID: 018
 Event Name: EV018
 (X,Y): (000,006)
@@ -460185,6 +460207,59 @@ List of Event Commands:
 @>Transfer Player:[546: Route 15], (013,015), Down, No Fade
 @>Change Screen Color Tone: (0,0,0,0), @6
 @>Wait: 8 frame(s)
+@>
+
+#------------------------------------------------------------------------------
+Event ID: 002
+Event Name: Purifikation size(2,1)
+(X,Y): (008,009)
+
+Page #1
+Conditions
+None
+
+Autonomous Movement
+Type: Fixed
+Speed: 3: Slow
+Freq: 3: Low
+Options Enabled
+Move Animation
+Trigger: Action Button
+
+List of Event Commands:
+@>Script: $player.seen_purify_chamber = true
+:       : pbPurifyChamber
+@>
+
+#------------------------------------------------------------------------------
+Event ID: 003
+Event Name: Techniker Cryptorbis
+(X,Y): (011,010)
+
+Page #1
+Conditions
+None
+
+Graphic: Professor
+
+Autonomous Movement
+Type: Fixed
+Speed: 3: Slow
+Freq: 3: Low
+Options Enabled
+Move Animation
+Trigger: Action Button
+
+List of Event Commands:
+@>Text: Ah, ein Trainer! Ich gehöre zum Team
+ :    : von Professor Klein.
+ :    : Wir erforschen hier den Cryptorbis.
+@>Text: Er nutzt die positive Aura erlöster
+ :    : Pokémon, um die Seelen von Cryptopokémon
+ :    : zu reinigen.
+@>Text: Im Inneren warten neun Foren. In jedem
+ :    : stehen vier erlöste Pokémon im Kreis
+ :    : um ein Cryptopokémon in der Mitte.
 @>
 
 #------------------------------------------------------------------------------

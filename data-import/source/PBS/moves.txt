@@ -8761,3 +8761,215 @@ TotalPP = 40
 Target = User
 FunctionCode = RaiseUserDefense1
 Description = Erhöht die Verteidigung des Anwenders um eine Stufe.
+#-------------------------------
+[SHADOWEND]
+Name = Cryptoretour
+Type = SHADOW
+Category = Special
+Power = 120
+Accuracy = 60
+TotalPP = 0
+Target = NearOther
+FunctionCode = UserLosesHalfHP
+Flags = Contact,CanProtect
+Description = Dunkle Ramm-Attacke. Schädigt auch den Anwender.
+#-------------------------------
+[SHADOWSTORM]
+Name = Cryptosturm
+Type = SHADOW
+Category = Special
+Power = 95
+Accuracy = 100
+TotalPP = 0
+Target = AllFoes
+FunctionCode = DoublePowerIfTargetUnderwater
+Flags = CanProtect
+Description = Ein dunkler Tornado fegt über den Gegner hinweg.
+#-------------------------------
+[SHADOWBLAST]
+Name = Cryptostrahl
+Type = SHADOW
+Category = Special
+Power = 80
+Accuracy = 100
+TotalPP = 0
+Target = NearOther
+FunctionCode = None
+Flags = CanProtect,HighCriticalHitRate
+Description = Ein finsterer Strahl der den Gegner schädigt.
+#-------------------------------
+[SHADOWBOLT]
+Name = Cryptoblitz
+Type = SHADOW
+Category = Special
+Power = 65
+Accuracy = 100
+TotalPP = 0
+Target = NearOther
+FunctionCode = ParalyzeTarget
+Flags = CanProtect
+EffectChance = 10
+Description = Ein finsterer Blitz trifft den Gegner und paralysiert ihn evtl.
+#-------------------------------
+[SHADOWBREAK]
+Name = Cryptohieb
+Type = SHADOW
+Category = Physical
+Power = 55
+Accuracy = 100
+TotalPP = 0
+Target = NearOther
+FunctionCode = None
+Flags = Contact,CanProtect
+Description = Ramm-Attacke begleitet von einer dunklen Aura.
+#-------------------------------
+[SHADOWCHILL]
+Name = Cryptofrost
+Type = SHADOW
+Category = Special
+Power = 45
+Accuracy = 100
+TotalPP = 0
+Target = NearOther
+FunctionCode = FreezeTarget
+Flags = CanProtect
+EffectChance = 10
+Description = Ein finsterer Eisstrahl trifft den Gegner und friert ihn evtl. ein.
+#-------------------------------
+[SHADOWFIRE]
+Name = Cryptofeuer
+Type = SHADOW
+Category = Special
+Power = 75
+Accuracy = 100
+TotalPP = 0
+Target = NearOther
+FunctionCode = BurnTarget
+Flags = CanProtect
+EffectChance = 10
+Description = Ein finsteres Feuer trifft den Gegner und verbrennt ihn evtl.
+#-------------------------------
+[SHADOWRAVE]
+Name = Cryptobeben
+Type = SHADOW
+Category = Special
+Power = 40
+Accuracy = 100
+TotalPP = 0
+Target = AllFoes
+FunctionCode = None
+Flags = CanProtect
+Description = Beben reißt Boden auf, dunkle Fontänen schießen empor.
+#-------------------------------
+[SHADOWRUSH]
+Name = Cryptoschlag
+Type = SHADOW
+Category = Physical
+Power = 30
+Accuracy = 100
+TotalPP = 0
+Target = NearOther
+FunctionCode = None
+Flags = Contact,CanProtect
+Description = Ein Schlag, bei dem der Anwender Rückstoßschaden erleidet.
+#-------------------------------
+[SHADOWWAVE]
+Name = Cryptowelle
+Type = SHADOW
+Category = Special
+Power = 30
+Accuracy = 100
+TotalPP = 0
+Target = AllFoes
+FunctionCode = None
+Flags = CanProtect
+Description = Eine dunkle Welle trifft den Gegner.
+#-------------------------------
+[SHADOWBLITZ]
+Name = Cryptoknall
+Type = SHADOW
+Category = Physical
+Power = 20
+Accuracy = 100
+TotalPP = 0
+Target = NearOther
+FunctionCode = None
+Flags = Contact,CanProtect
+Description = Extrem schneller Schlag von dunkler Aura umgeben.
+#-------------------------------
+[SHADOWDOWN]
+Name = Cryptobann
+Type = SHADOW
+Category = Status
+Accuracy = 100
+TotalPP = 0
+Target = AllFoes
+FunctionCode = LowerTargetDefense2
+Flags = CanProtect
+Description = Dunkle Aura senkt gegn. vert-Wert deutlich.
+#-------------------------------
+[SHADOWHALF]
+Name = Cryptozorn
+Type = SHADOW
+Category = Status
+Accuracy = 100
+TotalPP = 0
+Target = AllBattlers
+FunctionCode = AllBattlersLoseHalfHPUserSkipsNextTurn
+Flags = CanProtect
+Description = Dunkle Energiestrahlen reduzieren KP aller um die Hälfte.
+#-------------------------------
+[SHADOWHOLD]
+Name = Cryptofessel
+Type = SHADOW
+Category = Status
+Accuracy = 80
+TotalPP = 0
+Target = AllFoes
+FunctionCode = TrapTargetInBattle
+Flags = CanProtect
+Description = Eine dunkle Aura hindert Gegner an der Flucht.
+#-------------------------------
+[SHADOWMIST]
+Name = Cryptodunst
+Type = SHADOW
+Category = Status
+Accuracy = 100
+TotalPP = 0
+Target = AllFoes
+FunctionCode = LowerTargetEvasion2
+Flags = CanProtect
+Description = Dunkler Nebel senkt gegn. Fluchtwert deutlich.
+#-------------------------------
+[SHADOWPANIC]
+Name = Cryptochaos
+Type = SHADOW
+Category = Status
+Accuracy = 60
+TotalPP = 0
+Target = AllFoes
+FunctionCode = ConfuseTarget
+Flags = CanProtect,Sound
+Description = Dunkle Strahlen bewirken Verwirrung beim Gegner.
+#-------------------------------
+[SHADOWSHED]
+Name = Cryptobruch
+Type = SHADOW
+Category = Status
+Accuracy = 100
+TotalPP = 0
+Target = BothSides
+FunctionCode = RemoveAllScreens
+Flags = CanProtect
+Description = Dunkle Aura hebt Reflektor und ähnliche Attacken auf.
+#-------------------------------
+[SHADOWSKY]
+Name = Cryptowetter
+Type = SHADOW
+Category = Status
+Accuracy = 100
+TotalPP = 0
+Target = BothSides
+FunctionCode = StartShadowSkyWeather
+Flags = CanProtect
+Description = Dunkler Regen schädigt 5 Rd. alle außer Crypto Pokémon.

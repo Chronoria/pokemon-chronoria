@@ -4938,15 +4938,11 @@ RaidRanks = 5
 
 FormName = Typ: Kampf
 
-Types = FIGHTING
-
 #-------------------------------
 
 [SILVALLY,2]
 
 FormName = Typ: Wind
-
-Types = FLYING
 
 #-------------------------------
 
@@ -4954,15 +4950,11 @@ Types = FLYING
 
 FormName = Typ: Gift
 
-Types = POISON
-
 #-------------------------------
 
 [SILVALLY,4]
 
 FormName = Typ: Boden
-
-Types = GROUND
 
 #-------------------------------
 
@@ -4970,15 +4962,11 @@ Types = GROUND
 
 FormName = Typ: Gestein
 
-Types = ROCK
-
 #-------------------------------
 
 [SILVALLY,6]
 
 FormName = Typ: Käfer
-
-Types = BUG
 
 #-------------------------------
 
@@ -4986,15 +4974,11 @@ Types = BUG
 
 FormName = Typ: Geist
 
-Types = GHOST
-
 #-------------------------------
 
 [SILVALLY,8]
 
 FormName = Typ: Stahl
-
-Types = STEEL
 
 #-------------------------------
 
@@ -5002,15 +4986,11 @@ Types = STEEL
 
 FormName = Typ: Unbekannt
 
-Types = QMARKS
-
 #-------------------------------
 
 [SILVALLY,10]
 
 FormName = Typ: Feuer
-
-Types = FIRE
 
 #-------------------------------
 
@@ -5018,15 +4998,11 @@ Types = FIRE
 
 FormName = Typ: Wasser
 
-Types = WATER
-
 #-------------------------------
 
 [SILVALLY,12]
 
 FormName = Typ: Pflanze
-
-Types = GRASS
 
 #-------------------------------
 
@@ -5034,15 +5010,11 @@ Types = GRASS
 
 FormName = Typ: Elektro
 
-Types = ELECTRIC
-
 #-------------------------------
 
 [SILVALLY,14]
 
 FormName = Typ: Psycho
-
-Types = PSYCHIC
 
 #-------------------------------
 
@@ -5050,15 +5022,11 @@ Types = PSYCHIC
 
 FormName = Typ: Eis
 
-Types = ICE
-
 #-------------------------------
 
 [SILVALLY,16]
 
 FormName = Typ: Drache
-
-Types = DRAGON
 
 #-------------------------------
 
@@ -5066,15 +5034,11 @@ Types = DRAGON
 
 FormName = Typ: Unlicht
 
-Types = DARK
-
 #-------------------------------
 
 [SILVALLY,18]
 
 FormName = Typ: Fee
-
-Types = FAIRY
 
 #-------------------------------
 
