@@ -100,6 +100,9 @@ export interface Pokemon {
   evolvesFrom: string | null; // filled in by buildData.ts
   generation: number | null;
   forms: PokemonForm[];
+  /** Crypto-Meter gauge size (PBS shadow_pokemon.txt "GaugeSize"), or null if this species never
+   *  appears as a Shadow Pokémon in trainers.txt. Filled in by buildData.ts. */
+  cryptoMeter: number | null;
   // reverse index, filled in by buildData.ts
   foundIn: EncounterRef[];
 }

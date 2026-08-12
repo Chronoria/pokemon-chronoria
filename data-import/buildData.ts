@@ -15,6 +15,7 @@ import { parseEncounters } from "./parseEncounters.ts";
 import { parseTypes } from "./parseTypes.ts";
 import { parseMedals } from "./parseMedals.ts";
 import { parseMapLocations } from "./parseMapLocations.ts";
+import { parseShadowPokemon } from "./parseShadowPokemon.ts";
 import { CATEGORY_IDS, isItemEvolutionMethod } from "./itemCategoryRules.ts";
 import { buildCalcData } from "./exportCalcData.ts";
 import { exportItemListXlsx } from "./exportItemList.ts";
@@ -44,6 +45,7 @@ async function main() {
   const types = parseTypes(ctx);
   const medals = parseMedals();
   const mapLocations = parseMapLocations();
+  const shadowGaugeById = parseShadowPokemon();
 
   console.log("Baue Querverweise...");
   const pokemonById = new Map(pokemon.map((p) => [p.id, p]));
@@ -58,6 +60,13 @@ async function main() {
       const target = pokemonById.get(evo.target);
       if (target) target.evolvesFrom = p.id;
     }
+  }
+
+  // Crypto-Meter (shadow_pokemon.txt) -> pokemon.cryptoMeter
+  for (const [speciesId, gaugeSize] of shadowGaugeById) {
+    const species = pokemonById.get(speciesId);
+    if (species) species.cryptoMeter = gaugeSize;
+    else console.warn(`[Crypto-Meter] Unbekannte Spezies-ID in shadow_pokemon.txt: ${speciesId}`);
   }
 
   // move <-> pokemon (level-up, tutor/egg)

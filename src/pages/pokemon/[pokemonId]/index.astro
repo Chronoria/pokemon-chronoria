@@ -166,6 +166,18 @@ const nextPokemon = pokemon[(dexIndex + 1) % pokemon.length];
       {p.raidRanks.length > 0 && (
         <tr><th>Raid-Rang</th><td>{Math.min(...p.raidRanks)}{p.raidRanks.length > 1 ? `–${Math.max(...p.raidRanks)}` : ""} ⭐</td></tr>
       )}
+      {p.cryptoMeter !== null && (
+        <tr>
+          <th>
+            Crypto-Meter
+            <details class="th-help">
+              <summary aria-label="Erklärung anzeigen"><span class="th-help-icon">i</span></summary>
+              <p>Als Shadow-Pokémon gefangen, muss die Reinheitsanzeige um diesen Wert geleert werden, um es zu läutern.</p>
+            </details>
+          </th>
+          <td>{p.cryptoMeter}</td>
+        </tr>
+      )}
     </table>
 
     <h2>Fähigkeiten</h2>

@@ -114,6 +114,7 @@ function blockToPokemon(
     generation: r.Generation ? Number(r.Generation) : null,
     forms: [],
     foundIn: [],
+    cryptoMeter: null, // filled in by buildData.ts
   };
 }
 

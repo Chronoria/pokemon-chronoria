@@ -2103,7 +2103,7 @@ Pokemon = KLANG,44
     Shadow = true
     Ball = SHADOWBALL
 #-------------------------------
-[RUINMANIAC2,FRIDOLIN]
+[RUINMANIAC2,Fridolin]
 LoseText = Du hast die Spuren verwischt.
 Pokemon = RHYDON,44
     Moves = DRILLRUN,ROCKBLAST,TAKEDOWN,BRICKBREAK

@@ -1,0 +1,329 @@
+# See the documentation on the wiki to learn how to edit this file.
+#-------------------------------
+[MIGHTYENA]
+GaugeSize = 4000
+Moves = SHADOWRUSH,SHADOWMIST,SHADOWBLITZ,SHADOWSKY
+#-------------------------------
+[ABOMASNOW]
+GaugeSize = 7000
+Moves = SHADOWRUSH,SHADOWDOWN,SHADOWBLITZ,SHADOWHALF
+#-------------------------------
+[AEGISLASH]
+GaugeSize = 7000
+Moves = SHADOWRAVE,SHADOWDOWN,SHADOWWAVE,SHADOWHOLD
+#-------------------------------
+[AGGRON]
+GaugeSize = 8000
+Moves = SHADOWRUSH,SHADOWDOWN,SHADOWBLITZ,SHADOWMIST
+#-------------------------------
+[AMOONGUSS]
+GaugeSize = 6000
+Moves = SHADOWRUSH,SHADOWDOWN,SHADOWBLITZ,SHADOWPANIC
+#-------------------------------
+[ARBOK]
+GaugeSize = 5000
+Moves = SHADOWRUSH,SHADOWDOWN,SHADOWBLITZ,SHADOWSHED
+#-------------------------------
+[ARCANINE]
+GaugeSize = 9000
+Moves = SHADOWRUSH,SHADOWDOWN,SHADOWBLITZ,SHADOWSKY
+#-------------------------------
+[BASCULEGION]
+GaugeSize = 8000
+Moves = SHADOWRUSH,SHADOWHALF,SHADOWBLITZ,SHADOWHOLD
+#-------------------------------
+[BEHEEYEM]
+GaugeSize = 6500
+Moves = SHADOWRUSH,SHADOWHALF,SHADOWBLITZ,SHADOWMIST
+#-------------------------------
+[BISHARP]
+GaugeSize = 6500
+Moves = SHADOWRUSH,SHADOWHALF,SHADOWBLITZ,SHADOWPANIC
+#-------------------------------
+[BOLTUND]
+GaugeSize = 6500
+Moves = SHADOWRAVE,SHADOWHALF,SHADOWWAVE,SHADOWSHED
+#-------------------------------
+[BOMBIRDIER]
+GaugeSize = 6500
+Moves = SHADOWRUSH,SHADOWHALF,SHADOWBLITZ,SHADOWSKY
+#-------------------------------
+[BRAMBLEGHAST]
+GaugeSize = 6500
+Moves = SHADOWRUSH,SHADOWHOLD,SHADOWBLITZ,SHADOWMIST
+#-------------------------------
+[BRONZONG]
+GaugeSize = 7000
+Moves = SHADOWRUSH,SHADOWHOLD,SHADOWBLITZ,SHADOWPANIC
+#-------------------------------
+[BRUTEBONNET]
+GaugeSize = 9500
+Moves = SHADOWRUSH,SHADOWHOLD,SHADOWBLITZ,SHADOWSHED
+#-------------------------------
+[CAMERUPT]
+GaugeSize = 5500
+Moves = SHADOWRUSH,SHADOWHOLD,SHADOWBLITZ,SHADOWSKY
+#-------------------------------
+[CETITAN]
+GaugeSize = 8000
+Moves = SHADOWRUSH,SHADOWMIST,SHADOWBLITZ,SHADOWPANIC
+#-------------------------------
+[CRABOMINABLE]
+GaugeSize = 6500
+Moves = SHADOWRUSH,SHADOWMIST,SHADOWBLITZ,SHADOWSHED
+#-------------------------------
+[CRUSTLE]
+GaugeSize = 6500
+Moves = SHADOWRUSH,SHADOWMIST,SHADOWBLITZ,SHADOWSKY
+#-------------------------------
+[DECIDUEYE]
+GaugeSize = 8000
+Moves = SHADOWRUSH,SHADOWPANIC,SHADOWBLITZ,SHADOWSHED
+#-------------------------------
+[DIGGERSBY]
+GaugeSize = 4500
+Moves = SHADOWRAVE,SHADOWPANIC,SHADOWWAVE,SHADOWSKY
+#-------------------------------
+[DRAPION]
+GaugeSize = 7000
+Moves = SHADOWRAVE,SHADOWSHED,SHADOWWAVE,SHADOWSKY
+#-------------------------------
+[DRIFBLIM]
+GaugeSize = 7000
+Moves = SHADOWRUSH,SHADOWDOWN,SHADOWBLITZ,SHADOWHALF
+#-------------------------------
+[DUGTRIO]
+GaugeSize = 5000
+Moves = SHADOWRAVE,SHADOWDOWN,SHADOWWAVE,SHADOWHOLD
+#-------------------------------
+[DUSTOX]
+GaugeSize = 3000
+Moves = SHADOWRAVE,SHADOWDOWN,SHADOWWAVE,SHADOWMIST
+#-------------------------------
+[ENAMORUS]
+GaugeSize = 10000
+Moves = SHADOWRUSH,SHADOWDOWN,SHADOWBLITZ,SHADOWPANIC
+#-------------------------------
+[ESCAVALIER]
+GaugeSize = 7000
+Moves = SHADOWRUSH,SHADOWDOWN,SHADOWBLITZ,SHADOWSHED
+#-------------------------------
+[EXCADRILL]
+GaugeSize = 7500
+Moves = SHADOWRUSH,SHADOWDOWN,SHADOWBLITZ,SHADOWSKY
+#-------------------------------
+[FARIGIRAF]
+GaugeSize = 8000
+Moves = SHADOWRUSH,SHADOWHALF,SHADOWBLITZ,SHADOWHOLD
+#-------------------------------
+[FEAROW]
+GaugeSize = 5000
+Moves = SHADOWRAVE,SHADOWHALF,SHADOWWAVE,SHADOWMIST
+#-------------------------------
+[FERROTHORN]
+GaugeSize = 6500
+Moves = SHADOWRUSH,SHADOWHALF,SHADOWBLITZ,SHADOWPANIC
+#-------------------------------
+[FORRETRESS]
+GaugeSize = 6000
+Moves = SHADOWRUSH,SHADOWHALF,SHADOWBLITZ,SHADOWSHED
+#-------------------------------
+[GLALIE]
+GaugeSize = 6500
+Moves = SHADOWRUSH,SHADOWHALF,SHADOWBLITZ,SHADOWSKY
+#-------------------------------
+[GRANBULL]
+GaugeSize = 6000
+Moves = SHADOWRUSH,SHADOWHOLD,SHADOWBLITZ,SHADOWMIST
+#-------------------------------
+[GRIMMSNARL]
+GaugeSize = 7500
+Moves = SHADOWRUSH,SHADOWHOLD,SHADOWBLITZ,SHADOWPANIC
+#-------------------------------
+[GRUMPIG]
+GaugeSize = 6000
+Moves = SHADOWRAVE,SHADOWHOLD,SHADOWWAVE,SHADOWSHED
+#-------------------------------
+[GYARADOS]
+GaugeSize = 8500
+Moves = SHADOWRUSH,SHADOWHOLD,SHADOWBLITZ,SHADOWSKY
+#-------------------------------
+[HITMONTOP]
+GaugeSize = 6000
+Moves = SHADOWRUSH,SHADOWMIST,SHADOWBLITZ,SHADOWPANIC
+#-------------------------------
+[HONCHKROW]
+GaugeSize = 7500
+Moves = SHADOWRUSH,SHADOWMIST,SHADOWBLITZ,SHADOWSHED
+#-------------------------------
+[HOUNDOOM]
+GaugeSize = 7000
+Moves = SHADOWRAVE,SHADOWMIST,SHADOWWAVE,SHADOWSKY
+#-------------------------------
+[HOUNDSTONE]
+GaugeSize = 6500
+Moves = SHADOWRUSH,SHADOWPANIC,SHADOWBLITZ,SHADOWSHED
+#-------------------------------
+[HYDRAPPLE]
+GaugeSize = 8500
+Moves = SHADOWRUSH,SHADOWPANIC,SHADOWBLITZ,SHADOWSKY
+#-------------------------------
+[INCINEROAR]
+GaugeSize = 8000
+Moves = SHADOWRUSH,SHADOWSHED,SHADOWBLITZ,SHADOWSKY
+#-------------------------------
+[IRONTREADS]
+GaugeSize = 9500
+Moves = SHADOWRUSH,SHADOWDOWN,SHADOWBLITZ,SHADOWHALF
+#-------------------------------
+[KABUTOPS]
+GaugeSize = 7000
+Moves = SHADOWRUSH,SHADOWDOWN,SHADOWBLITZ,SHADOWHOLD
+#-------------------------------
+[KILOWATTREL]
+GaugeSize = 6500
+Moves = SHADOWRAVE,SHADOWDOWN,SHADOWWAVE,SHADOWMIST
+#-------------------------------
+[KINGAMBIT]
+GaugeSize = 9000
+Moves = SHADOWRUSH,SHADOWDOWN,SHADOWBLITZ,SHADOWPANIC
+#-------------------------------
+[KLANG]
+GaugeSize = 5000
+Moves = SHADOWRUSH,SHADOWDOWN,SHADOWBLITZ,SHADOWSHED
+#-------------------------------
+[KLEFKI]
+GaugeSize = 6000
+Moves = SHADOWRUSH,SHADOWDOWN,SHADOWBLITZ,SHADOWSKY
+#-------------------------------
+[KROOKODILE]
+GaugeSize = 7500
+Moves = SHADOWRUSH,SHADOWHALF,SHADOWBLITZ,SHADOWHOLD
+#-------------------------------
+[LIEPARD]
+GaugeSize = 5000
+Moves = SHADOWRAVE,SHADOWHALF,SHADOWWAVE,SHADOWMIST
+#-------------------------------
+[MABOSSTIFF]
+GaugeSize = 7500
+Moves = SHADOWRUSH,SHADOWHALF,SHADOWBLITZ,SHADOWPANIC
+#-------------------------------
+[MAGNETON]
+GaugeSize = 4500
+Moves = SHADOWRAVE,SHADOWHALF,SHADOWWAVE,SHADOWSHED
+#-------------------------------
+[MALAMAR]
+GaugeSize = 6500
+Moves = SHADOWRUSH,SHADOWHALF,SHADOWBLITZ,SHADOWSKY
+#-------------------------------
+[MAWILE]
+GaugeSize = 2500
+Moves = SHADOWRUSH,SHADOWHOLD,SHADOWBLITZ,SHADOWMIST
+#-------------------------------
+[MUDSDALE]
+GaugeSize = 7000
+Moves = SHADOWRUSH,SHADOWHOLD,SHADOWBLITZ,SHADOWPANIC
+#-------------------------------
+[MUK]
+GaugeSize = 7000
+Moves = SHADOWRUSH,SHADOWHOLD,SHADOWBLITZ,SHADOWSHED
+#-------------------------------
+[ORTHWORM]
+GaugeSize = 6500
+Moves = SHADOWRUSH,SHADOWHOLD,SHADOWBLITZ,SHADOWSKY
+#-------------------------------
+[PANGORO]
+GaugeSize = 7000
+Moves = SHADOWRUSH,SHADOWMIST,SHADOWBLITZ,SHADOWPANIC
+#-------------------------------
+[PRIMEAPE]
+GaugeSize = 6000
+Moves = SHADOWRUSH,SHADOWMIST,SHADOWBLITZ,SHADOWSHED
+#-------------------------------
+[PROBOPASS]
+GaugeSize = 8000
+Moves = SHADOWRUSH,SHADOWMIST,SHADOWBLITZ,SHADOWSKY
+#-------------------------------
+[PYROAR]
+GaugeSize = 7500
+Moves = SHADOWRAVE,SHADOWPANIC,SHADOWWAVE,SHADOWSHED
+#-------------------------------
+[REVAVROOM]
+GaugeSize = 7000
+Moves = SHADOWRUSH,SHADOWPANIC,SHADOWBLITZ,SHADOWSKY
+#-------------------------------
+[SABLEYE]
+GaugeSize = 7000
+Moves = SHADOWRUSH,SHADOWSHED,SHADOWBLITZ,SHADOWSKY
+#-------------------------------
+[SANDYSHOCKS]
+GaugeSize = 9500
+Moves = SHADOWRAVE,SHADOWDOWN,SHADOWWAVE,SHADOWHALF
+#-------------------------------
+[SCOLIPEDE]
+GaugeSize = 6500
+Moves = SHADOWRAVE,SHADOWDOWN,SHADOWWAVE,SHADOWHOLD
+#-------------------------------
+[SCRAFTY]
+GaugeSize = 6500
+Moves = SHADOWRUSH,SHADOWDOWN,SHADOWBLITZ,SHADOWMIST
+#-------------------------------
+[SHARPEDO]
+GaugeSize = 5500
+Moves = SHADOWRUSH,SHADOWDOWN,SHADOWBLITZ,SHADOWPANIC
+#-------------------------------
+[SHIFTRY]
+GaugeSize = 6500
+Moves = SHADOWRUSH,SHADOWDOWN,SHADOWBLITZ,SHADOWSHED
+#-------------------------------
+[SKARMORY]
+GaugeSize = 13000
+Moves = SHADOWRUSH,SHADOWDOWN,SHADOWBLITZ,SHADOWSKY
+#-------------------------------
+[SKUNTANK]
+GaugeSize = 6500
+Moves = SHADOWRUSH,SHADOWHALF,SHADOWBLITZ,SHADOWHOLD
+#-------------------------------
+[SNEASLER]
+GaugeSize = 7500
+Moves = SHADOWRUSH,SHADOWHALF,SHADOWBLITZ,SHADOWMIST
+#-------------------------------
+[SWAMPERT]
+GaugeSize = 8500
+Moves = SHADOWRUSH,SHADOWHALF,SHADOWBLITZ,SHADOWPANIC
+#-------------------------------
+[THIEVUL]
+GaugeSize = 5500
+Moves = SHADOWRAVE,SHADOWHALF,SHADOWWAVE,SHADOWSHED
+#-------------------------------
+[TOEDSCRUEL]
+GaugeSize = 7500
+Moves = SHADOWRAVE,SHADOWHALF,SHADOWWAVE,SHADOWSKY
+#-------------------------------
+[TOXICROAK]
+GaugeSize = 6500
+Moves = SHADOWRUSH,SHADOWHOLD,SHADOWBLITZ,SHADOWMIST
+#-------------------------------
+[TURTONATOR]
+GaugeSize = 6500
+Moves = SHADOWRUSH,SHADOWHOLD,SHADOWBLITZ,SHADOWPANIC
+#-------------------------------
+[WUGTRIO]
+GaugeSize = 4500
+Moves = SHADOWRAVE,SHADOWHOLD,SHADOWWAVE,SHADOWSHED
+#-------------------------------
+[XATU]
+GaugeSize = 6000
+Moves = SHADOWRAVE,SHADOWHOLD,SHADOWWAVE,SHADOWSKY
+#-------------------------------
+[YANMEGA]
+GaugeSize = 7500
+Moves = SHADOWRAVE,SHADOWMIST,SHADOWWAVE,SHADOWPANIC
+#-------------------------------
+[ZOROARK]
+GaugeSize = 7500
+Moves = SHADOWRUSH,SHADOWMIST,SHADOWBLITZ,SHADOWSHED
+#-------------------------------
+[ZWEILOUS]
+GaugeSize = 4500
+Moves = SHADOWRUSH,SHADOWMIST,SHADOWBLITZ,SHADOWSKY
