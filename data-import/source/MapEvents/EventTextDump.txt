@@ -85790,6 +85790,90 @@ List of Event Commands:
 @>
 
 #------------------------------------------------------------------------------
+Event ID: 061
+Event Name: Item
+(X,Y): (037,033)
+
+Page #1
+Conditions
+None
+
+Graphic: Item012
+
+Autonomous Movement
+Type: Fixed
+Speed: 3: Slow
+Freq: 3: Low
+Options Enabled
+Move Animation
+Direction Fix
+Trigger: Action Button
+
+List of Event Commands:
+@>Conditional Branch: Script: pbItemBall(:FIREGEM)
+ @>Control Self Switch: A =ON
+ @>
+: Branch End
+@>
+
+Page #2
+Conditions
+Self Switch A is ON
+
+Autonomous Movement
+Type: Fixed
+Speed: 3: Slow
+Freq: 3: Low
+Options Enabled
+Move Animation
+Trigger: Action Button
+
+List of Event Commands:
+@>
+
+#------------------------------------------------------------------------------
+Event ID: 062
+Event Name: Item
+(X,Y): (020,027)
+
+Page #1
+Conditions
+None
+
+Graphic: Item012
+
+Autonomous Movement
+Type: Fixed
+Speed: 3: Slow
+Freq: 3: Low
+Options Enabled
+Move Animation
+Direction Fix
+Trigger: Action Button
+
+List of Event Commands:
+@>Conditional Branch: Script: pbItemBall(:ELECTRICGEM)
+ @>Control Self Switch: A =ON
+ @>
+: Branch End
+@>
+
+Page #2
+Conditions
+Self Switch A is ON
+
+Autonomous Movement
+Type: Fixed
+Speed: 3: Slow
+Freq: 3: Low
+Options Enabled
+Move Animation
+Trigger: Action Button
+
+List of Event Commands:
+@>
+
+#------------------------------------------------------------------------------
 
 #==============================================================================
 Map ID: 140
@@ -131707,6 +131791,56 @@ Trigger: Autorun
 List of Event Commands:
 @>Control Self Switch: A =OFF
 @>Script: setTempSwitchOn("A")
+@>
+
+#------------------------------------------------------------------------------
+Event ID: 049
+Event Name: EV049
+(X,Y): (099,080)
+
+Page #1
+Conditions
+None
+
+Graphic: NPC_Mann 10
+
+Autonomous Movement
+Type: Fixed
+Speed: 3: Slow
+Freq: 3: Low
+Options Enabled
+Move Animation
+Trigger: Action Button
+
+List of Event Commands:
+@>Text: Oh, hallo.
+@>Text: Du interessierst dich also für Crypto-Pokémon?
+@>Text: Dann bist du bei mir genau richtig.
+@>Text: Ich kann deine Pokémon erlösen, sollte das Herz 
+ :    : vollständig geöffnet sein.
+@>Text: Ich verlange lediglich eine Herzschuppe dafür.
+@>Text: Was sagst du dazu?
+@>Show Choices: Ja, Nein
+(When Cancel: Choice 2)
+: When [Ja]
+ @>Script: eligible = $player.party.select { |p| 
+ :       : p.shadowPokemon? && 
+ :       : p.heart_gauge == 0 }
+ @>Script: if eligible.empty?
+ :       :   pbMessage(_INTL("Du hast kein 
+ :       : Crypto-Pokémon dabei, dessen Herz 
+ :       : bereit für die Erlösung ist..."))
+ :       : elsif !$bag.has?(:HEARTSCALE)
+ :       :   pbMessage(_INTL("Dafür würdest du 
+ :       : eine Herzschuppe benötigen..."))
+ :       : else
+ :       : pbRelicStone
+ :       : end
+ @>
+: When [Nein]
+ @>
+: Branch End
+@>Text: Komm' gerne wieder.
 @>
 
 #------------------------------------------------------------------------------
@@ -234533,6 +234667,48 @@ List of Event Commands:
 @>
 
 #------------------------------------------------------------------------------
+Event ID: 003
+Event Name: Item
+(X,Y): (016,024)
+
+Page #1
+Conditions
+None
+
+Graphic: Item012
+
+Autonomous Movement
+Type: Fixed
+Speed: 3: Slow
+Freq: 3: Low
+Options Enabled
+Move Animation
+Direction Fix
+Trigger: Action Button
+
+List of Event Commands:
+@>Conditional Branch: Script: pbItemBall(:ICEGEM)
+ @>Control Self Switch: A =ON
+ @>
+: Branch End
+@>
+
+Page #2
+Conditions
+Self Switch A is ON
+
+Autonomous Movement
+Type: Fixed
+Speed: 3: Slow
+Freq: 3: Low
+Options Enabled
+Move Animation
+Trigger: Action Button
+
+List of Event Commands:
+@>
+
+#------------------------------------------------------------------------------
 Event ID: 004
 Event Name: Trainer(5)
 (X,Y): (031,024)
@@ -235219,6 +235395,132 @@ Trigger: Action Button
 List of Event Commands:
 @>Text: \xn[Käferexperte Ronaldo]Ich suche mir noch ein 
  :    : zweites Pokémon.
+@>
+
+#------------------------------------------------------------------------------
+Event ID: 015
+Event Name: Item
+(X,Y): (053,029)
+
+Page #1
+Conditions
+None
+
+Graphic: Items Amigento-Discs 2
+
+Autonomous Movement
+Type: Fixed
+Speed: 3: Slow
+Freq: 3: Low
+Options Enabled
+Move Animation
+Direction Fix
+Trigger: Action Button
+
+List of Event Commands:
+@>Conditional Branch: Script: pbItemBall(:ICESTONE)
+ @>Control Self Switch: A =ON
+ @>
+: Branch End
+@>
+
+Page #2
+Conditions
+Self Switch A is ON
+
+Autonomous Movement
+Type: Fixed
+Speed: 3: Slow
+Freq: 3: Low
+Options Enabled
+Move Animation
+Trigger: Action Button
+
+List of Event Commands:
+@>
+
+#------------------------------------------------------------------------------
+Event ID: 016
+Event Name: Item
+(X,Y): (016,047)
+
+Page #1
+Conditions
+None
+
+Graphic: Item002
+
+Autonomous Movement
+Type: Fixed
+Speed: 3: Slow
+Freq: 3: Low
+Options Enabled
+Move Animation
+Direction Fix
+Trigger: Action Button
+
+List of Event Commands:
+@>Conditional Branch: Script: pbItemBall(:HYPERPOTION)
+ @>Control Self Switch: A =ON
+ @>
+: Branch End
+@>
+
+Page #2
+Conditions
+Self Switch A is ON
+
+Autonomous Movement
+Type: Fixed
+Speed: 3: Slow
+Freq: 3: Low
+Options Enabled
+Move Animation
+Trigger: Action Button
+
+List of Event Commands:
+@>
+
+#------------------------------------------------------------------------------
+Event ID: 017
+Event Name: Item
+(X,Y): (031,047)
+
+Page #1
+Conditions
+None
+
+Graphic: Item002
+
+Autonomous Movement
+Type: Fixed
+Speed: 3: Slow
+Freq: 3: Low
+Options Enabled
+Move Animation
+Direction Fix
+Trigger: Action Button
+
+List of Event Commands:
+@>Conditional Branch: Script: pbItemBall(:HYPERPOTION)
+ @>Control Self Switch: A =ON
+ @>
+: Branch End
+@>
+
+Page #2
+Conditions
+Self Switch A is ON
+
+Autonomous Movement
+Type: Fixed
+Speed: 3: Slow
+Freq: 3: Low
+Options Enabled
+Move Animation
+Trigger: Action Button
+
+List of Event Commands:
 @>
 
 #------------------------------------------------------------------------------
@@ -237392,6 +237694,48 @@ List of Event Commands:
 @>
 
 #------------------------------------------------------------------------------
+Event ID: 006
+Event Name: Item
+(X,Y): (021,009)
+
+Page #1
+Conditions
+None
+
+Graphic: ITEM BALLS 1 normal
+
+Autonomous Movement
+Type: Fixed
+Speed: 3: Slow
+Freq: 3: Low
+Options Enabled
+Move Animation
+Direction Fix
+Trigger: Action Button
+
+List of Event Commands:
+@>Conditional Branch: Script: pbItemBall(:ULTRABALL)
+ @>Control Self Switch: A =ON
+ @>
+: Branch End
+@>
+
+Page #2
+Conditions
+Self Switch A is ON
+
+Autonomous Movement
+Type: Fixed
+Speed: 3: Slow
+Freq: 3: Low
+Options Enabled
+Move Animation
+Trigger: Action Button
+
+List of Event Commands:
+@>
+
+#------------------------------------------------------------------------------
 
 #==============================================================================
 Map ID: 315
@@ -237477,6 +237821,48 @@ List of Event Commands:
 @>Transfer Player:[619: Lucenhöhle], (010,007), Down, No Fade
 @>Change Screen Color Tone: (0,0,0,0), @6
 @>Wait: 8 frame(s)
+@>
+
+#------------------------------------------------------------------------------
+Event ID: 003
+Event Name: Item
+(X,Y): (026,029)
+
+Page #1
+Conditions
+None
+
+Graphic: Item005
+
+Autonomous Movement
+Type: Fixed
+Speed: 3: Slow
+Freq: 3: Low
+Options Enabled
+Move Animation
+Direction Fix
+Trigger: Action Button
+
+List of Event Commands:
+@>Conditional Branch: Script: pbItemBall(:MAXREPEL)
+ @>Control Self Switch: A =ON
+ @>
+: Branch End
+@>
+
+Page #2
+Conditions
+Self Switch A is ON
+
+Autonomous Movement
+Type: Fixed
+Speed: 3: Slow
+Freq: 3: Low
+Options Enabled
+Move Animation
+Trigger: Action Button
+
+List of Event Commands:
 @>
 
 #------------------------------------------------------------------------------
@@ -280611,6 +280997,24 @@ List of Event Commands:
 @>
 
 #------------------------------------------------------------------------------
+
+#==============================================================================
+Map ID: 371
+Map Name: MAP371
+Tileset: 134: Dracheninsel Stadt
+Width: 65, Height: 76
+
+#==============================================================================
+Map ID: 372
+Map Name: MAP372
+Tileset: 135: Schloss
+Width: 35, Height: 31
+
+#==============================================================================
+Map ID: 373
+Map Name: MAP373
+Tileset: 135: Schloss
+Width: 60, Height: 60
 
 #==============================================================================
 Map ID: 374
@@ -376255,6 +376659,48 @@ List of Event Commands:
 @>
 
 #------------------------------------------------------------------------------
+Event ID: 006
+Event Name: Item
+(X,Y): (007,019)
+
+Page #1
+Conditions
+None
+
+Graphic: ITEM BALLS 1 normal
+
+Autonomous Movement
+Type: Fixed
+Speed: 3: Slow
+Freq: 3: Low
+Options Enabled
+Move Animation
+Direction Fix
+Trigger: Action Button
+
+List of Event Commands:
+@>Conditional Branch: Script: pbItemBall(:ULTRABALL)
+ @>Control Self Switch: A =ON
+ @>
+: Branch End
+@>
+
+Page #2
+Conditions
+Self Switch A is ON
+
+Autonomous Movement
+Type: Fixed
+Speed: 3: Slow
+Freq: 3: Low
+Options Enabled
+Move Animation
+Trigger: Action Button
+
+List of Event Commands:
+@>
+
+#------------------------------------------------------------------------------
 
 #==============================================================================
 Map ID: 469
@@ -381635,6 +382081,132 @@ List of Event Commands:
 @>
 
 #------------------------------------------------------------------------------
+Event ID: 003
+Event Name: Item
+(X,Y): (022,014)
+
+Page #1
+Conditions
+None
+
+Graphic: Item012
+
+Autonomous Movement
+Type: Fixed
+Speed: 3: Slow
+Freq: 3: Low
+Options Enabled
+Move Animation
+Direction Fix
+Trigger: Action Button
+
+List of Event Commands:
+@>Conditional Branch: Script: pbItemBall(:ICEGEM)
+ @>Control Self Switch: A =ON
+ @>
+: Branch End
+@>
+
+Page #2
+Conditions
+Self Switch A is ON
+
+Autonomous Movement
+Type: Fixed
+Speed: 3: Slow
+Freq: 3: Low
+Options Enabled
+Move Animation
+Trigger: Action Button
+
+List of Event Commands:
+@>
+
+#------------------------------------------------------------------------------
+Event ID: 004
+Event Name: Item
+(X,Y): (015,030)
+
+Page #1
+Conditions
+None
+
+Graphic: Item003
+
+Autonomous Movement
+Type: Fixed
+Speed: 3: Slow
+Freq: 3: Low
+Options Enabled
+Move Animation
+Direction Fix
+Trigger: Action Button
+
+List of Event Commands:
+@>Conditional Branch: Script: pbItemBall(:RARECANDY)
+ @>Control Self Switch: A =ON
+ @>
+: Branch End
+@>
+
+Page #2
+Conditions
+Self Switch A is ON
+
+Autonomous Movement
+Type: Fixed
+Speed: 3: Slow
+Freq: 3: Low
+Options Enabled
+Move Animation
+Trigger: Action Button
+
+List of Event Commands:
+@>
+
+#------------------------------------------------------------------------------
+Event ID: 005
+Event Name: Item
+(X,Y): (011,022)
+
+Page #1
+Conditions
+None
+
+Graphic: ITEM BALLS 1 normal
+
+Autonomous Movement
+Type: Fixed
+Speed: 3: Slow
+Freq: 3: Low
+Options Enabled
+Move Animation
+Direction Fix
+Trigger: Action Button
+
+List of Event Commands:
+@>Conditional Branch: Script: pbItemBall(:ULTRABALL)
+ @>Control Self Switch: A =ON
+ @>
+: Branch End
+@>
+
+Page #2
+Conditions
+Self Switch A is ON
+
+Autonomous Movement
+Type: Fixed
+Speed: 3: Slow
+Freq: 3: Low
+Options Enabled
+Move Animation
+Trigger: Action Button
+
+List of Event Commands:
+@>
+
+#------------------------------------------------------------------------------
 
 #==============================================================================
 Map ID: 474
@@ -381761,6 +382333,90 @@ Trigger: Action Button
 
 List of Event Commands:
 @>Conditional Branch: Script: pbItemBall(:EXPCANDYL)
+ @>Control Self Switch: A =ON
+ @>
+: Branch End
+@>
+
+Page #2
+Conditions
+Self Switch A is ON
+
+Autonomous Movement
+Type: Fixed
+Speed: 3: Slow
+Freq: 3: Low
+Options Enabled
+Move Animation
+Trigger: Action Button
+
+List of Event Commands:
+@>
+
+#------------------------------------------------------------------------------
+Event ID: 005
+Event Name: Item
+(X,Y): (025,018)
+
+Page #1
+Conditions
+None
+
+Graphic: Item003
+
+Autonomous Movement
+Type: Fixed
+Speed: 3: Slow
+Freq: 3: Low
+Options Enabled
+Move Animation
+Direction Fix
+Trigger: Action Button
+
+List of Event Commands:
+@>Conditional Branch: Script: pbItemBall(:APUP)
+ @>Control Self Switch: A =ON
+ @>
+: Branch End
+@>
+
+Page #2
+Conditions
+Self Switch A is ON
+
+Autonomous Movement
+Type: Fixed
+Speed: 3: Slow
+Freq: 3: Low
+Options Enabled
+Move Animation
+Trigger: Action Button
+
+List of Event Commands:
+@>
+
+#------------------------------------------------------------------------------
+Event ID: 006
+Event Name: Item
+(X,Y): (026,016)
+
+Page #1
+Conditions
+None
+
+Graphic: Item002
+
+Autonomous Movement
+Type: Fixed
+Speed: 3: Slow
+Freq: 3: Low
+Options Enabled
+Move Animation
+Direction Fix
+Trigger: Action Button
+
+List of Event Commands:
+@>Conditional Branch: Script: pbItemBall(:HYPERPOTION)
  @>Control Self Switch: A =ON
  @>
 : Branch End
@@ -421398,6 +422054,132 @@ List of Event Commands:
 @>
 
 #------------------------------------------------------------------------------
+Event ID: 083
+Event Name: Item.sl
+(X,Y): (054,015)
+
+Page #1
+Conditions
+None
+
+Graphic: ITEM BALLS 1 Sand
+
+Autonomous Movement
+Type: Fixed
+Speed: 3: Slow
+Freq: 3: Low
+Options Enabled
+Move Animation
+Direction Fix
+Trigger: Action Button
+
+List of Event Commands:
+@>Conditional Branch: Script: pbItemBall(:ULTRABALL)
+ @>Control Self Switch: A =ON
+ @>
+: Branch End
+@>
+
+Page #2
+Conditions
+Self Switch A is ON
+
+Autonomous Movement
+Type: Fixed
+Speed: 3: Slow
+Freq: 3: Low
+Options Enabled
+Move Animation
+Trigger: Action Button
+
+List of Event Commands:
+@>
+
+#------------------------------------------------------------------------------
+Event ID: 084
+Event Name: Item.sl
+(X,Y): (064,090)
+
+Page #1
+Conditions
+None
+
+Graphic: ITEM BALLS 1 Sand
+
+Autonomous Movement
+Type: Fixed
+Speed: 3: Slow
+Freq: 3: Low
+Options Enabled
+Move Animation
+Direction Fix
+Trigger: Action Button
+
+List of Event Commands:
+@>Conditional Branch: Script: pbItemBall(:ULTRABALL)
+ @>Control Self Switch: A =ON
+ @>
+: Branch End
+@>
+
+Page #2
+Conditions
+Self Switch A is ON
+
+Autonomous Movement
+Type: Fixed
+Speed: 3: Slow
+Freq: 3: Low
+Options Enabled
+Move Animation
+Trigger: Action Button
+
+List of Event Commands:
+@>
+
+#------------------------------------------------------------------------------
+Event ID: 085
+Event Name: Item.sl
+(X,Y): (008,012)
+
+Page #1
+Conditions
+None
+
+Graphic: ITEM BALLS 1 Sand
+
+Autonomous Movement
+Type: Fixed
+Speed: 3: Slow
+Freq: 3: Low
+Options Enabled
+Move Animation
+Direction Fix
+Trigger: Action Button
+
+List of Event Commands:
+@>Conditional Branch: Script: pbItemBall(:ULTRABALL)
+ @>Control Self Switch: A =ON
+ @>
+: Branch End
+@>
+
+Page #2
+Conditions
+Self Switch A is ON
+
+Autonomous Movement
+Type: Fixed
+Speed: 3: Slow
+Freq: 3: Low
+Options Enabled
+Move Animation
+Trigger: Action Button
+
+List of Event Commands:
+@>
+
+#------------------------------------------------------------------------------
 
 #==============================================================================
 Map ID: 519
@@ -452919,6 +453701,90 @@ List of Event Commands:
 @>
 
 #------------------------------------------------------------------------------
+Event ID: 006
+Event Name: Item
+(X,Y): (010,027)
+
+Page #1
+Conditions
+None
+
+Graphic: Item003
+
+Autonomous Movement
+Type: Fixed
+Speed: 3: Slow
+Freq: 3: Low
+Options Enabled
+Move Animation
+Direction Fix
+Trigger: Action Button
+
+List of Event Commands:
+@>Conditional Branch: Script: pbItemBall(:RARECANDY)
+ @>Control Self Switch: A =ON
+ @>
+: Branch End
+@>
+
+Page #2
+Conditions
+Self Switch A is ON
+
+Autonomous Movement
+Type: Fixed
+Speed: 3: Slow
+Freq: 3: Low
+Options Enabled
+Move Animation
+Trigger: Action Button
+
+List of Event Commands:
+@>
+
+#------------------------------------------------------------------------------
+Event ID: 007
+Event Name: Item
+(X,Y): (022,030)
+
+Page #1
+Conditions
+None
+
+Graphic: Items6
+
+Autonomous Movement
+Type: Fixed
+Speed: 3: Slow
+Freq: 3: Low
+Options Enabled
+Move Animation
+Direction Fix
+Trigger: Action Button
+
+List of Event Commands:
+@>Conditional Branch: Script: pbItemBall(:FOCUSSASH)
+ @>Control Self Switch: A =ON
+ @>
+: Branch End
+@>
+
+Page #2
+Conditions
+Self Switch A is ON
+
+Autonomous Movement
+Type: Fixed
+Speed: 3: Slow
+Freq: 3: Low
+Options Enabled
+Move Animation
+Trigger: Action Button
+
+List of Event Commands:
+@>
+
+#------------------------------------------------------------------------------
 
 #==============================================================================
 Map ID: 603
@@ -457182,6 +458048,174 @@ List of Event Commands:
 @>
 
 #------------------------------------------------------------------------------
+Event ID: 016
+Event Name: Item
+(X,Y): (048,025)
+
+Page #1
+Conditions
+None
+
+Graphic: Item005
+
+Autonomous Movement
+Type: Fixed
+Speed: 3: Slow
+Freq: 3: Low
+Options Enabled
+Move Animation
+Direction Fix
+Trigger: Action Button
+
+List of Event Commands:
+@>Conditional Branch: Script: pbItemBall(:WATERSTONE)
+ @>Control Self Switch: A =ON
+ @>
+: Branch End
+@>
+
+Page #2
+Conditions
+Self Switch A is ON
+
+Autonomous Movement
+Type: Fixed
+Speed: 3: Slow
+Freq: 3: Low
+Options Enabled
+Move Animation
+Trigger: Action Button
+
+List of Event Commands:
+@>
+
+#------------------------------------------------------------------------------
+Event ID: 017
+Event Name: Item
+(X,Y): (006,041)
+
+Page #1
+Conditions
+None
+
+Graphic: Item003
+
+Autonomous Movement
+Type: Fixed
+Speed: 3: Slow
+Freq: 3: Low
+Options Enabled
+Move Animation
+Direction Fix
+Trigger: Action Button
+
+List of Event Commands:
+@>Conditional Branch: Script: pbItemBall(:RARECANDY)
+ @>Control Self Switch: A =ON
+ @>
+: Branch End
+@>
+
+Page #2
+Conditions
+Self Switch A is ON
+
+Autonomous Movement
+Type: Fixed
+Speed: 3: Slow
+Freq: 3: Low
+Options Enabled
+Move Animation
+Trigger: Action Button
+
+List of Event Commands:
+@>
+
+#------------------------------------------------------------------------------
+Event ID: 018
+Event Name: Item
+(X,Y): (035,002)
+
+Page #1
+Conditions
+None
+
+Graphic: ITEM BALLS 2 normal
+
+Autonomous Movement
+Type: Fixed
+Speed: 3: Slow
+Freq: 3: Low
+Options Enabled
+Move Animation
+Direction Fix
+Trigger: Action Button
+
+List of Event Commands:
+@>Conditional Branch: Script: pbItemBall(:MYSTICBALL,10)
+ @>Control Self Switch: A =ON
+ @>
+: Branch End
+@>
+
+Page #2
+Conditions
+Self Switch A is ON
+
+Autonomous Movement
+Type: Fixed
+Speed: 3: Slow
+Freq: 3: Low
+Options Enabled
+Move Animation
+Trigger: Action Button
+
+List of Event Commands:
+@>
+
+#------------------------------------------------------------------------------
+Event ID: 019
+Event Name: Item.sl
+(X,Y): (023,016)
+
+Page #1
+Conditions
+None
+
+Graphic: ITEM BALLS 1
+
+Autonomous Movement
+Type: Fixed
+Speed: 3: Slow
+Freq: 3: Low
+Options Enabled
+Move Animation
+Direction Fix
+Trigger: Action Button
+
+List of Event Commands:
+@>Conditional Branch: Script: pbItemBall(:ULTRABALL)
+ @>Control Self Switch: A =ON
+ @>
+: Branch End
+@>
+
+Page #2
+Conditions
+Self Switch A is ON
+
+Autonomous Movement
+Type: Fixed
+Speed: 3: Slow
+Freq: 3: Low
+Options Enabled
+Move Animation
+Trigger: Action Button
+
+List of Event Commands:
+@>
+
+#------------------------------------------------------------------------------
 
 #==============================================================================
 Map ID: 613
@@ -458087,6 +459121,397 @@ List of Event Commands:
 @>
 
 #------------------------------------------------------------------------------
+Event ID: 026
+Event Name: Item
+(X,Y): (002,023)
+
+Page #1
+Conditions
+None
+
+Graphic: Item005
+
+Autonomous Movement
+Type: Fixed
+Speed: 3: Slow
+Freq: 3: Low
+Options Enabled
+Move Animation
+Direction Fix
+Trigger: Action Button
+
+List of Event Commands:
+@>Conditional Branch: Script: pbItemBall(:MAXREPEL)
+ @>Control Self Switch: A =ON
+ @>
+: Branch End
+@>
+
+Page #2
+Conditions
+Self Switch A is ON
+
+Autonomous Movement
+Type: Fixed
+Speed: 3: Slow
+Freq: 3: Low
+Options Enabled
+Move Animation
+Trigger: Action Button
+
+List of Event Commands:
+@>
+
+#------------------------------------------------------------------------------
+Event ID: 027
+Event Name: Item
+(X,Y): (001,013)
+
+Page #1
+Conditions
+None
+
+Graphic: Item006
+
+Autonomous Movement
+Type: Fixed
+Speed: 3: Slow
+Freq: 3: Low
+Options Enabled
+Move Animation
+Direction Fix
+Trigger: Action Button
+
+List of Event Commands:
+@>Conditional Branch: Script: pbItemBall(:HEARTSCALE)
+ @>Control Self Switch: A =ON
+ @>
+: Branch End
+@>
+
+Page #2
+Conditions
+Self Switch A is ON
+
+Autonomous Movement
+Type: Fixed
+Speed: 3: Slow
+Freq: 3: Low
+Options Enabled
+Move Animation
+Trigger: Action Button
+
+List of Event Commands:
+@>
+
+#------------------------------------------------------------------------------
+Event ID: 028
+Event Name: Item
+(X,Y): (058,037)
+
+Page #1
+Conditions
+None
+
+Graphic: Item006
+
+Autonomous Movement
+Type: Fixed
+Speed: 3: Slow
+Freq: 3: Low
+Options Enabled
+Move Animation
+Direction Fix
+Trigger: Action Button
+
+List of Event Commands:
+@>Conditional Branch: Script: pbItemBall(:HEARTSCALE)
+ @>Control Self Switch: A =ON
+ @>
+: Branch End
+@>
+
+Page #2
+Conditions
+Self Switch A is ON
+
+Autonomous Movement
+Type: Fixed
+Speed: 3: Slow
+Freq: 3: Low
+Options Enabled
+Move Animation
+Trigger: Action Button
+
+List of Event Commands:
+@>
+
+#------------------------------------------------------------------------------
+Event ID: 029
+Event Name: Item
+(X,Y): (035,042)
+
+Page #1
+Conditions
+None
+
+Graphic: Item006
+
+Autonomous Movement
+Type: Fixed
+Speed: 3: Slow
+Freq: 3: Low
+Options Enabled
+Move Animation
+Direction Fix
+Trigger: Action Button
+
+List of Event Commands:
+@>Conditional Branch: Script: pbItemBall(:HEARTSCALE)
+ @>Control Self Switch: A =ON
+ @>
+: Branch End
+@>
+
+Page #2
+Conditions
+Self Switch A is ON
+
+Autonomous Movement
+Type: Fixed
+Speed: 3: Slow
+Freq: 3: Low
+Options Enabled
+Move Animation
+Trigger: Action Button
+
+List of Event Commands:
+@>
+
+#------------------------------------------------------------------------------
+Event ID: 030
+Event Name: Item.sl
+(X,Y): (020,038)
+
+Page #1
+Conditions
+None
+
+Graphic: ITEM BALLS 2
+
+Autonomous Movement
+Type: Fixed
+Speed: 3: Slow
+Freq: 3: Low
+Options Enabled
+Move Animation
+Direction Fix
+Trigger: Action Button
+
+List of Event Commands:
+@>Conditional Branch: Script: pbItemBall(:MINUSBALL)
+ @>Control Self Switch: A =ON
+ @>
+: Branch End
+@>
+
+Page #2
+Conditions
+Self Switch A is ON
+
+Autonomous Movement
+Type: Fixed
+Speed: 3: Slow
+Freq: 3: Low
+Options Enabled
+Move Animation
+Trigger: Action Button
+
+List of Event Commands:
+@>
+
+#------------------------------------------------------------------------------
+Event ID: 031
+Event Name: Togekiss
+(X,Y): (055,032)
+
+Page #1
+Conditions
+None
+
+Graphic: Sleep Togekiss
+
+Autonomous Movement
+Type: Fixed
+Speed: 1: Slowest
+Freq: 4: High
+Options Enabled
+Move Animation
+Stop Animation
+Direction Fix
+Trigger: Action Button
+
+List of Event Commands:
+@>Play SE: 'TOGEKISS', 100, 100
+@>Wait: 10 frame(s)
+@>Script: setBattleRule("cannotRun")
+:       : setBattleRule("outcome", 48)
+:       : pkmn = Pokemon.new(:TOGEKISS,60)
+:       : pkmn.ability_index = 2
+:       : pkmn.learn_move(:LUNARBLESSING)
+:       : pkmn.calc_stats
+:       : WildBattle.start(pkmn)
+@>Conditional Branch: Variable [0048: Kampf-Ergebnis] == 2
+ @>Exit Event Processing
+ @>
+: Else
+ @>Control Self Switch: A =ON
+ @>
+: Branch End
+@>
+
+Page #2
+Conditions
+Self Switch A is ON
+
+Autonomous Movement
+Type: Fixed
+Speed: 3: Slow
+Freq: 3: Low
+Options Enabled
+Move Animation
+Trigger: Action Button
+
+List of Event Commands:
+@>
+
+#------------------------------------------------------------------------------
+Event ID: 032
+Event Name: Item
+(X,Y): (043,013)
+
+Page #1
+Conditions
+None
+
+Graphic: Item002
+
+Autonomous Movement
+Type: Fixed
+Speed: 3: Slow
+Freq: 3: Low
+Options Enabled
+Move Animation
+Direction Fix
+Trigger: Action Button
+
+List of Event Commands:
+@>Conditional Branch: Script: pbItemBall(:HYPERPOTION)
+ @>Control Self Switch: A =ON
+ @>
+: Branch End
+@>
+
+Page #2
+Conditions
+Self Switch A is ON
+
+Autonomous Movement
+Type: Fixed
+Speed: 3: Slow
+Freq: 3: Low
+Options Enabled
+Move Animation
+Trigger: Action Button
+
+List of Event Commands:
+@>
+
+#------------------------------------------------------------------------------
+Event ID: 033
+Event Name: Item.sl
+(X,Y): (027,021)
+
+Page #1
+Conditions
+None
+
+Graphic: ITEM BALLS 1
+
+Autonomous Movement
+Type: Fixed
+Speed: 3: Slow
+Freq: 3: Low
+Options Enabled
+Move Animation
+Direction Fix
+Trigger: Action Button
+
+List of Event Commands:
+@>Conditional Branch: Script: pbItemBall(:ULTRABALL)
+ @>Control Self Switch: A =ON
+ @>
+: Branch End
+@>
+
+Page #2
+Conditions
+Self Switch A is ON
+
+Autonomous Movement
+Type: Fixed
+Speed: 3: Slow
+Freq: 3: Low
+Options Enabled
+Move Animation
+Trigger: Action Button
+
+List of Event Commands:
+@>
+
+#------------------------------------------------------------------------------
+Event ID: 034
+Event Name: Item.sl
+(X,Y): (046,032)
+
+Page #1
+Conditions
+None
+
+Graphic: ITEM BALLS 1
+
+Autonomous Movement
+Type: Fixed
+Speed: 3: Slow
+Freq: 3: Low
+Options Enabled
+Move Animation
+Direction Fix
+Trigger: Action Button
+
+List of Event Commands:
+@>Conditional Branch: Script: pbItemBall(:ULTRABALL)
+ @>Control Self Switch: A =ON
+ @>
+: Branch End
+@>
+
+Page #2
+Conditions
+Self Switch A is ON
+
+Autonomous Movement
+Type: Fixed
+Speed: 3: Slow
+Freq: 3: Low
+Options Enabled
+Move Animation
+Trigger: Action Button
+
+List of Event Commands:
+@>
+
+#------------------------------------------------------------------------------
 
 #==============================================================================
 Map ID: 614
@@ -458457,6 +459882,48 @@ Trigger: Autorun
 List of Event Commands:
 @>Control Self Switch: A =OFF
 @>Script: setTempSwitchOn("A")
+@>
+
+#------------------------------------------------------------------------------
+Event ID: 011
+Event Name: Item.sl
+(X,Y): (020,013)
+
+Page #1
+Conditions
+None
+
+Graphic: ITEM BALLS 1
+
+Autonomous Movement
+Type: Fixed
+Speed: 3: Slow
+Freq: 3: Low
+Options Enabled
+Move Animation
+Direction Fix
+Trigger: Action Button
+
+List of Event Commands:
+@>Conditional Branch: Script: pbItemBall(:ULTRABALL)
+ @>Control Self Switch: A =ON
+ @>
+: Branch End
+@>
+
+Page #2
+Conditions
+Self Switch A is ON
+
+Autonomous Movement
+Type: Fixed
+Speed: 3: Slow
+Freq: 3: Low
+Options Enabled
+Move Animation
+Trigger: Action Button
+
+List of Event Commands:
 @>
 
 #------------------------------------------------------------------------------
@@ -459031,6 +460498,48 @@ List of Event Commands:
 @>
 
 #------------------------------------------------------------------------------
+Event ID: 007
+Event Name: Item
+(X,Y): (027,017)
+
+Page #1
+Conditions
+None
+
+Graphic: Item004
+
+Autonomous Movement
+Type: Fixed
+Speed: 3: Slow
+Freq: 3: Low
+Options Enabled
+Move Animation
+Direction Fix
+Trigger: Action Button
+
+List of Event Commands:
+@>Conditional Branch: Script: pbItemBall(:ENERGYPOWDER)
+ @>Control Self Switch: A =ON
+ @>
+: Branch End
+@>
+
+Page #2
+Conditions
+Self Switch A is ON
+
+Autonomous Movement
+Type: Fixed
+Speed: 3: Slow
+Freq: 3: Low
+Options Enabled
+Move Animation
+Trigger: Action Button
+
+List of Event Commands:
+@>
+
+#------------------------------------------------------------------------------
 
 #==============================================================================
 Map ID: 617
@@ -459411,6 +460920,48 @@ List of Event Commands:
 @>
 
 #------------------------------------------------------------------------------
+Event ID: 003
+Event Name: Item
+(X,Y): (017,020)
+
+Page #1
+Conditions
+None
+
+Graphic: Item012
+
+Autonomous Movement
+Type: Fixed
+Speed: 3: Slow
+Freq: 3: Low
+Options Enabled
+Move Animation
+Direction Fix
+Trigger: Action Button
+
+List of Event Commands:
+@>Conditional Branch: Script: pbItemBall(:ICEGEM)
+ @>Control Self Switch: A =ON
+ @>
+: Branch End
+@>
+
+Page #2
+Conditions
+Self Switch A is ON
+
+Autonomous Movement
+Type: Fixed
+Speed: 3: Slow
+Freq: 3: Low
+Options Enabled
+Move Animation
+Trigger: Action Button
+
+List of Event Commands:
+@>
+
+#------------------------------------------------------------------------------
 
 #==============================================================================
 Map ID: 620
@@ -459502,6 +461053,48 @@ List of Event Commands:
  :              : $>Through OFF
  :              : $>Change Speed: 3
 @>Wait: 6 frame(s)
+@>
+
+#------------------------------------------------------------------------------
+Event ID: 003
+Event Name: Item
+(X,Y): (018,006)
+
+Page #1
+Conditions
+None
+
+Graphic: Item003
+
+Autonomous Movement
+Type: Fixed
+Speed: 3: Slow
+Freq: 3: Low
+Options Enabled
+Move Animation
+Direction Fix
+Trigger: Action Button
+
+List of Event Commands:
+@>Conditional Branch: Script: pbItemBall(:APUP)
+ @>Control Self Switch: A =ON
+ @>
+: Branch End
+@>
+
+Page #2
+Conditions
+Self Switch A is ON
+
+Autonomous Movement
+Type: Fixed
+Speed: 3: Slow
+Freq: 3: Low
+Options Enabled
+Move Animation
+Trigger: Action Button
+
+List of Event Commands:
 @>
 
 #------------------------------------------------------------------------------
@@ -460780,6 +462373,48 @@ List of Event Commands:
 @>
 
 #------------------------------------------------------------------------------
+Event ID: 003
+Event Name: Item
+(X,Y): (009,008)
+
+Page #1
+Conditions
+None
+
+Graphic: Items Amigento-Discs 2
+
+Autonomous Movement
+Type: Fixed
+Speed: 3: Slow
+Freq: 3: Low
+Options Enabled
+Move Animation
+Direction Fix
+Trigger: Action Button
+
+List of Event Commands:
+@>Conditional Branch: Script: pbItemBall(:ABILITYCAPSULE)
+ @>Control Self Switch: A =ON
+ @>
+: Branch End
+@>
+
+Page #2
+Conditions
+Self Switch A is ON
+
+Autonomous Movement
+Type: Fixed
+Speed: 3: Slow
+Freq: 3: Low
+Options Enabled
+Move Animation
+Trigger: Action Button
+
+List of Event Commands:
+@>
+
+#------------------------------------------------------------------------------
 Event ID: 004
 Event Name: EV004
 (X,Y): (000,039)
@@ -461082,6 +462717,48 @@ List of Event Commands:
 @>
 
 #------------------------------------------------------------------------------
+Event ID: 005
+Event Name: Item
+(X,Y): (011,013)
+
+Page #1
+Conditions
+None
+
+Graphic: Items Amigento-Discs 2
+
+Autonomous Movement
+Type: Fixed
+Speed: 3: Slow
+Freq: 3: Low
+Options Enabled
+Move Animation
+Direction Fix
+Trigger: Action Button
+
+List of Event Commands:
+@>Conditional Branch: Script: pbItemBall(:ICESTONE)
+ @>Control Self Switch: A =ON
+ @>
+: Branch End
+@>
+
+Page #2
+Conditions
+Self Switch A is ON
+
+Autonomous Movement
+Type: Fixed
+Speed: 3: Slow
+Freq: 3: Low
+Options Enabled
+Move Animation
+Trigger: Action Button
+
+List of Event Commands:
+@>
+
+#------------------------------------------------------------------------------
 
 #==============================================================================
 Map ID: 628
@@ -461167,6 +462844,48 @@ List of Event Commands:
 @>Transfer Player:[618: Lucenhöhle], (012,009), Down, No Fade
 @>Change Screen Color Tone: (0,0,0,0), @6
 @>Wait: 8 frame(s)
+@>
+
+#------------------------------------------------------------------------------
+Event ID: 003
+Event Name: Item
+(X,Y): (013,030)
+
+Page #1
+Conditions
+None
+
+Graphic: Item004
+
+Autonomous Movement
+Type: Fixed
+Speed: 3: Slow
+Freq: 3: Low
+Options Enabled
+Move Animation
+Direction Fix
+Trigger: Action Button
+
+List of Event Commands:
+@>Conditional Branch: Script: pbItemBall(:ENERGYPOWDER)
+ @>Control Self Switch: A =ON
+ @>
+: Branch End
+@>
+
+Page #2
+Conditions
+Self Switch A is ON
+
+Autonomous Movement
+Type: Fixed
+Speed: 3: Slow
+Freq: 3: Low
+Options Enabled
+Move Animation
+Trigger: Action Button
+
+List of Event Commands:
 @>
 
 #------------------------------------------------------------------------------
@@ -461370,7 +463089,7 @@ Page #1
 Conditions
 None
 
-Graphic: Professor
+Graphic: PSYCHIC
 
 Autonomous Movement
 Type: Fixed
@@ -461381,15 +463100,36 @@ Move Animation
 Trigger: Action Button
 
 List of Event Commands:
-@>Text: Ah, ein Trainer! Ich gehöre zum Team
- :    : von Professor Klein.
- :    : Wir erforschen hier den Cryptorbis.
-@>Text: Er nutzt die positive Aura erlöster
- :    : Pokémon, um die Seelen von Cryptopokémon
- :    : zu reinigen.
-@>Text: Im Inneren warten neun Foren. In jedem
- :    : stehen vier erlöste Pokémon im Kreis
- :    : um ein Cryptopokémon in der Mitte.
+@>Text: Ah, ein Trainer!
+@>Text: Hast du etwa Crypto-Pokémon dabei?
+@>Text: An diesem Stein hier, kann die Tür zum Herzen ein 
+ :    : kleines Stück geöffnet werden.
+@>Text: Natürlich nicht dauerhaft, aber einmal täglich sollte 
+ :    : kein Problem sein.
+@>Text: Sobald die Tür vollständig geöffnet ist, kann ein 
+ :    : Pokémon erlöst werden.
+@>
+
+#------------------------------------------------------------------------------
+Event ID: 004
+Event Name: EV004
+(X,Y): (011,008)
+
+Page #1
+Conditions
+None
+
+Autonomous Movement
+Type: Fixed
+Speed: 3: Slow
+Freq: 3: Low
+Options Enabled
+Move Animation
+Trigger: Action Button
+
+List of Event Commands:
+@>Text: Der Reliquienstein kann verdorbene Herzen ein 
+ :    : wenig reinigen.
 @>
 
 #------------------------------------------------------------------------------
@@ -468000,6 +469740,563 @@ Move Animation
 Trigger: Action Button
 
 List of Event Commands:
+@>
+
+#------------------------------------------------------------------------------
+
+#==============================================================================
+Map ID: 638
+Map Name: MAP638
+Tileset: 135: Schloss
+Width: 40, Height: 31
+
+#==============================================================================
+Map ID: 639
+Map Name: MAP639
+Tileset: 135: Schloss
+Width: 40, Height: 30
+
+#==============================================================================
+Map ID: 640
+Map Name: MAP640
+Tileset: 135: Schloss
+Width: 30, Height: 22
+
+#==============================================================================
+Map ID: 641
+Map Name: MAP641
+Tileset: 070: Schule 2
+Width: 20, Height: 72
+
+#==============================================================================
+Map ID: 642
+Map Name: MAP642
+Tileset: 136: Arena
+Width: 80, Height: 60
+
+#==============================================================================
+Map ID: 643
+Map Name: MAP643
+Tileset: 136: Arena
+Width: 80, Height: 60
+
+#==============================================================================
+Map ID: 644
+Map Name: MAP644
+Tileset: 136: Arena
+Width: 80, Height: 60
+
+#==============================================================================
+Map ID: 645
+Map Name: MAP645
+Tileset: 136: Arena
+Width: 80, Height: 60
+
+#------------------------------------------------------------------------------
+Event ID: 001
+Event Name: Licht .sl
+(X,Y): (033,041)
+
+Page #1
+Conditions
+None
+
+Graphic: Arena Dracheninsel 2
+
+Autonomous Movement
+Type: Custom
+Custom Move Route:
+(Repeat Action)
+$>Change Opacity: 200
+$>Wait: 4 frame(s)
+$>Change Opacity: 150
+$>Wait: 4 frame(s)
+$>Change Opacity: 100
+$>Wait: 4 frame(s)
+$>Change Opacity: 150
+$>Wait: 4 frame(s)
+$>Change Opacity: 200
+$>Wait: 4 frame(s)
+$>Change Opacity: 250
+$>Wait: 4 frame(s)
+
+Speed: 3: Slow
+Freq: 6: Highest
+Options Enabled
+Move Animation
+Through
+Trigger: Parallel Process
+
+List of Event Commands:
+@>Comment: noshadow
+@>
+
+#------------------------------------------------------------------------------
+Event ID: 002
+Event Name: Licht .sl
+(X,Y): (043,041)
+
+Page #1
+Conditions
+None
+
+Graphic: Arena Dracheninsel 2
+
+Autonomous Movement
+Type: Custom
+Custom Move Route:
+(Repeat Action)
+$>Change Opacity: 200
+$>Wait: 4 frame(s)
+$>Change Opacity: 150
+$>Wait: 4 frame(s)
+$>Change Opacity: 100
+$>Wait: 4 frame(s)
+$>Change Opacity: 150
+$>Wait: 4 frame(s)
+$>Change Opacity: 200
+$>Wait: 4 frame(s)
+$>Change Opacity: 250
+$>Wait: 4 frame(s)
+
+Speed: 3: Slow
+Freq: 6: Highest
+Options Enabled
+Move Animation
+Through
+Trigger: Parallel Process
+
+List of Event Commands:
+@>Comment: noshadow
+@>
+
+#------------------------------------------------------------------------------
+Event ID: 003
+Event Name: Licht .sl
+(X,Y): (007,036)
+
+Page #1
+Conditions
+None
+
+Graphic: Arena Dracheninsel
+
+Autonomous Movement
+Type: Custom
+Custom Move Route:
+(Repeat Action)
+$>Change Opacity: 200
+$>Wait: 4 frame(s)
+$>Change Opacity: 150
+$>Wait: 4 frame(s)
+$>Change Opacity: 100
+$>Wait: 4 frame(s)
+$>Change Opacity: 150
+$>Wait: 4 frame(s)
+$>Change Opacity: 200
+$>Wait: 4 frame(s)
+$>Change Opacity: 250
+$>Wait: 4 frame(s)
+
+Speed: 3: Slow
+Freq: 6: Highest
+Options Enabled
+Move Animation
+Through
+Trigger: Parallel Process
+
+List of Event Commands:
+@>Comment: noshadow
+@>
+
+#------------------------------------------------------------------------------
+Event ID: 004
+Event Name: Licht .sl
+(X,Y): (013,031)
+
+Page #1
+Conditions
+None
+
+Graphic: Arena Dracheninsel
+
+Autonomous Movement
+Type: Custom
+Custom Move Route:
+(Repeat Action)
+$>Change Opacity: 200
+$>Wait: 4 frame(s)
+$>Change Opacity: 150
+$>Wait: 4 frame(s)
+$>Change Opacity: 100
+$>Wait: 4 frame(s)
+$>Change Opacity: 150
+$>Wait: 4 frame(s)
+$>Change Opacity: 200
+$>Wait: 4 frame(s)
+$>Change Opacity: 250
+$>Wait: 4 frame(s)
+
+Speed: 3: Slow
+Freq: 6: Highest
+Options Enabled
+Move Animation
+Through
+Trigger: Parallel Process
+
+List of Event Commands:
+@>Comment: noshadow
+@>
+
+#------------------------------------------------------------------------------
+Event ID: 005
+Event Name: Licht .sl
+(X,Y): (019,031)
+
+Page #1
+Conditions
+None
+
+Graphic: Arena Dracheninsel
+
+Autonomous Movement
+Type: Custom
+Custom Move Route:
+(Repeat Action)
+$>Change Opacity: 200
+$>Wait: 4 frame(s)
+$>Change Opacity: 150
+$>Wait: 4 frame(s)
+$>Change Opacity: 100
+$>Wait: 4 frame(s)
+$>Change Opacity: 150
+$>Wait: 4 frame(s)
+$>Change Opacity: 200
+$>Wait: 4 frame(s)
+$>Change Opacity: 250
+$>Wait: 4 frame(s)
+
+Speed: 3: Slow
+Freq: 6: Highest
+Options Enabled
+Move Animation
+Through
+Trigger: Parallel Process
+
+List of Event Commands:
+@>Comment: noshadow
+@>
+
+#------------------------------------------------------------------------------
+Event ID: 006
+Event Name: Licht .sl
+(X,Y): (031,031)
+
+Page #1
+Conditions
+None
+
+Graphic: Arena Dracheninsel
+
+Autonomous Movement
+Type: Custom
+Custom Move Route:
+(Repeat Action)
+$>Change Opacity: 200
+$>Wait: 4 frame(s)
+$>Change Opacity: 150
+$>Wait: 4 frame(s)
+$>Change Opacity: 100
+$>Wait: 4 frame(s)
+$>Change Opacity: 150
+$>Wait: 4 frame(s)
+$>Change Opacity: 200
+$>Wait: 4 frame(s)
+$>Change Opacity: 250
+$>Wait: 4 frame(s)
+
+Speed: 3: Slow
+Freq: 6: Highest
+Options Enabled
+Move Animation
+Through
+Trigger: Parallel Process
+
+List of Event Commands:
+@>Comment: noshadow
+@>
+
+#------------------------------------------------------------------------------
+Event ID: 007
+Event Name: Licht .sl
+(X,Y): (037,031)
+
+Page #1
+Conditions
+None
+
+Graphic: Arena Dracheninsel
+
+Autonomous Movement
+Type: Custom
+Custom Move Route:
+(Repeat Action)
+$>Change Opacity: 200
+$>Wait: 4 frame(s)
+$>Change Opacity: 150
+$>Wait: 4 frame(s)
+$>Change Opacity: 100
+$>Wait: 4 frame(s)
+$>Change Opacity: 150
+$>Wait: 4 frame(s)
+$>Change Opacity: 200
+$>Wait: 4 frame(s)
+$>Change Opacity: 250
+$>Wait: 4 frame(s)
+
+Speed: 3: Slow
+Freq: 6: Highest
+Options Enabled
+Move Animation
+Through
+Trigger: Parallel Process
+
+List of Event Commands:
+@>Comment: noshadow
+@>
+
+#------------------------------------------------------------------------------
+Event ID: 008
+Event Name: Licht .sl
+(X,Y): (045,031)
+
+Page #1
+Conditions
+None
+
+Graphic: Arena Dracheninsel
+
+Autonomous Movement
+Type: Custom
+Custom Move Route:
+(Repeat Action)
+$>Change Opacity: 200
+$>Wait: 4 frame(s)
+$>Change Opacity: 150
+$>Wait: 4 frame(s)
+$>Change Opacity: 100
+$>Wait: 4 frame(s)
+$>Change Opacity: 150
+$>Wait: 4 frame(s)
+$>Change Opacity: 200
+$>Wait: 4 frame(s)
+$>Change Opacity: 250
+$>Wait: 4 frame(s)
+
+Speed: 3: Slow
+Freq: 6: Highest
+Options Enabled
+Move Animation
+Through
+Trigger: Parallel Process
+
+List of Event Commands:
+@>Comment: noshadow
+@>
+
+#------------------------------------------------------------------------------
+Event ID: 009
+Event Name: Licht .sl
+(X,Y): (051,037)
+
+Page #1
+Conditions
+None
+
+Graphic: Arena Dracheninsel
+
+Autonomous Movement
+Type: Custom
+Custom Move Route:
+(Repeat Action)
+$>Change Opacity: 200
+$>Wait: 4 frame(s)
+$>Change Opacity: 150
+$>Wait: 4 frame(s)
+$>Change Opacity: 100
+$>Wait: 4 frame(s)
+$>Change Opacity: 150
+$>Wait: 4 frame(s)
+$>Change Opacity: 200
+$>Wait: 4 frame(s)
+$>Change Opacity: 250
+$>Wait: 4 frame(s)
+
+Speed: 3: Slow
+Freq: 6: Highest
+Options Enabled
+Move Animation
+Through
+Trigger: Parallel Process
+
+List of Event Commands:
+@>Comment: noshadow
+@>
+
+#------------------------------------------------------------------------------
+Event ID: 010
+Event Name: Licht .sl
+(X,Y): (069,037)
+
+Page #1
+Conditions
+None
+
+Graphic: Arena Dracheninsel
+
+Autonomous Movement
+Type: Custom
+Custom Move Route:
+(Repeat Action)
+$>Change Opacity: 200
+$>Wait: 4 frame(s)
+$>Change Opacity: 150
+$>Wait: 4 frame(s)
+$>Change Opacity: 100
+$>Wait: 4 frame(s)
+$>Change Opacity: 150
+$>Wait: 4 frame(s)
+$>Change Opacity: 200
+$>Wait: 4 frame(s)
+$>Change Opacity: 250
+$>Wait: 4 frame(s)
+
+Speed: 3: Slow
+Freq: 6: Highest
+Options Enabled
+Move Animation
+Through
+Trigger: Parallel Process
+
+List of Event Commands:
+@>Comment: noshadow
+@>
+
+#------------------------------------------------------------------------------
+Event ID: 011
+Event Name: Licht .sl
+(X,Y): (025,037)
+
+Page #1
+Conditions
+None
+
+Graphic: Arena Dracheninsel
+
+Autonomous Movement
+Type: Custom
+Custom Move Route:
+(Repeat Action)
+$>Change Opacity: 200
+$>Wait: 4 frame(s)
+$>Change Opacity: 150
+$>Wait: 4 frame(s)
+$>Change Opacity: 100
+$>Wait: 4 frame(s)
+$>Change Opacity: 150
+$>Wait: 4 frame(s)
+$>Change Opacity: 200
+$>Wait: 4 frame(s)
+$>Change Opacity: 250
+$>Wait: 4 frame(s)
+
+Speed: 3: Slow
+Freq: 6: Highest
+Options Enabled
+Move Animation
+Through
+Trigger: Parallel Process
+
+List of Event Commands:
+@>Comment: noshadow
+@>
+
+#------------------------------------------------------------------------------
+Event ID: 012
+Event Name: Licht .sl
+(X,Y): (044,003)
+
+Page #1
+Conditions
+None
+
+Graphic: Arena Dracheninsel
+
+Autonomous Movement
+Type: Custom
+Custom Move Route:
+(Repeat Action)
+$>Change Opacity: 200
+$>Wait: 4 frame(s)
+$>Change Opacity: 150
+$>Wait: 4 frame(s)
+$>Change Opacity: 100
+$>Wait: 4 frame(s)
+$>Change Opacity: 150
+$>Wait: 4 frame(s)
+$>Change Opacity: 200
+$>Wait: 4 frame(s)
+$>Change Opacity: 250
+$>Wait: 4 frame(s)
+
+Speed: 3: Slow
+Freq: 6: Highest
+Options Enabled
+Move Animation
+Through
+Trigger: Parallel Process
+
+List of Event Commands:
+@>Comment: noshadow
+@>
+
+#------------------------------------------------------------------------------
+Event ID: 013
+Event Name: Licht .sl
+(X,Y): (038,013)
+
+Page #1
+Conditions
+None
+
+Graphic: Arena Dracheninsel
+
+Autonomous Movement
+Type: Custom
+Custom Move Route:
+(Repeat Action)
+$>Change Opacity: 200
+$>Wait: 4 frame(s)
+$>Change Opacity: 150
+$>Wait: 4 frame(s)
+$>Change Opacity: 100
+$>Wait: 4 frame(s)
+$>Change Opacity: 150
+$>Wait: 4 frame(s)
+$>Change Opacity: 200
+$>Wait: 4 frame(s)
+$>Change Opacity: 250
+$>Wait: 4 frame(s)
+
+Speed: 3: Slow
+Freq: 6: Highest
+Options Enabled
+Move Animation
+Through
+Trigger: Parallel Process
+
+List of Event Commands:
+@>Comment: noshadow
 @>
 
 #------------------------------------------------------------------------------
