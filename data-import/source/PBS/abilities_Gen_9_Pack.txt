@@ -82,7 +82,11 @@ Description = Nimmt das Pokémon Schaden, wird ein Grasfeld aktiviert.
 #-------------------------------
 [SHARPNESS]
 Name = Scharfkantig
-Description = Die Stärke von Schnitt-Attacken des Pokémon steigt. 
+Description = Die Stärke von Schnitt-Attacken des Pokémon steigt.
+#-------------------------------
+[SPICYSPRAY]
+Name = Chilispritzer
+Description = Fügt dem Angreifer bei einer Attacke, die Schaden zufügt, eine Verbrennung zu.
 #-------------------------------
 [SUPREMEOVERLORD]
 Name = Feldherr
@@ -171,3 +175,23 @@ Description = Bei vollen LP kann es nicht sehr effektiv getroffen werden.
 [TERAFORMZERO]
 Name = Teraforming Null
 Description = Eliminiert bei Annahme der Stellarform sämtliche Wettereffekte und Felder.
+#-------------------------------
+[FIREMANE]
+Name = Flammenmähne
+Description = Verstärkt Feuer-Attacken des Pokémon um 50 %.
+#-------------------------------
+[DRAGONIZE]
+Name = Drachenschicht
+Description = Normal-Attacken des Pokémon nehmen den Typ Drache an und werden verstärkt.
+#-------------------------------
+[EELEVATE]
+Name = Emporwindung
+Description = Das Pokémon schwebt und ist gegen Boden-Attacken immun. Steigert den höchsten Statuswert, wenn es ein Pokémon besiegt.
+#-------------------------------
+[MEGASOL]
+Name = Mega-Solarladung
+Description = Attacken des Pokémon wirken, als herrsche Sonnenschein, unabhängig vom tatsächlichen Wetter.
+#-------------------------------
+[PIERCINGDRILL]
+Name = Stichbohrer
+Description = Kontakt-Attacken des Pokémon durchbrechen Schutz-Attacken, fügen dann aber nur 1/4 des Schadens zu.

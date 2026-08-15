@@ -7216,6 +7216,15 @@ BPPrice = 50
 Flags = MegaStone,Fling_80
 Description = Dieser Stein ermöglicht Espinodon eine Mega-Entwicklung.
 #-------------------------------Einzigartig
+[EXCADRILLITE]
+Name = Stalobornit
+NamePlural = Stalobornite
+Pocket = 6
+Price = 10000
+BPPrice = 50
+Flags = MegaStone,Fling_80
+Description = Dieser Stein ermöglicht Stalobor eine Mega-Entwicklung.
+#-------------------------------Einzigartig
 [TATSUGIRINITE]
 Name = Nigiraginit
 NamePlural = Nigiraginite
@@ -8948,25 +8957,25 @@ Pocket = 1
 Price = 600
 FieldUse = OnPokemon
 BattleUse = OnPokemon
-Description = Dieser Duft kann Shadow-Pokémon etwas freundlicher machen.
+Description = Öffnet die Tür zum Herzen eines Crypto-Pokémon ein Stück.
 #-------------------------------
 [EXCITESCENT]
 Name = Glücks-Essenz
 NamePlural = Glücks-Essenzen
 Pocket = 1
-Price = 800
+Price = 1200
 FieldUse = OnPokemon
 BattleUse = OnPokemon
-Description = Dieser Duft kann Shadow-Pokémon freundlicher machen.
+Description = Öffnet die Tür zum Herzen eines Crypto-Pokémon merklich.
 #-------------------------------
 [VIVIDSCENT]
 Name = Paradies-Essenz
 NamePlural = Paradies-Essenzen
 Pocket = 1
-Price = 1200
+Price = 1800
 FieldUse = OnPokemon
 BattleUse = OnPokemon
-Description = Dieser Duft kann Shadow-Pokémon deutlich freundlicher machen.
+Description = Öffnet die Tür zum Herzen eines Crypto-Pokémon weit.
 #-------------------------------
 [TIMEFLUTE]
 Name = Zeitflöte
@@ -8974,7 +8983,7 @@ NamePlural = Zeitflöten
 Pocket = 1
 Price = 0
 FieldUse = OnPokemon
-Description = Die Zeitflöte kann Celebi herbeirufen, um ein Shadow-Pokémon zu heilen.
+Description = Ruft Celebi, um ein bereites Crypto-Pokémon sofort zu erlösen.
 #-------------------------------
 [DOJOKEY]
 Name = Dojo-Schlüssel

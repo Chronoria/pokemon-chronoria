@@ -4153,6 +4153,11 @@ DarkMap = true
 SnapEdges = true
 BattleBack = cave7
 #-------------------------------
+[630]   # MAP630
+ShowArea = true
+MapPosition = 0,22,4
+SnapEdges = true
+#-------------------------------
 [631]   # Dracheninsel 1
 Name = Dracheninsel
 Outdoor = true

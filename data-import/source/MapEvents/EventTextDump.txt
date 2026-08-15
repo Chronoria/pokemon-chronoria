@@ -22883,6 +22883,21 @@ Trigger: Action Button
 List of Event Commands:
 @>
 
+Page #3
+Conditions
+Switch 0314: Flint vor Regieleki is ON
+
+Autonomous Movement
+Type: Fixed
+Speed: 3: Slow
+Freq: 3: Low
+Options Enabled
+Move Animation
+Trigger: Action Button
+
+List of Event Commands:
+@>
+
 #------------------------------------------------------------------------------
 Event ID: 008
 Event Name: Vater
@@ -33722,9 +33737,20 @@ Move Animation
 Trigger: Action Button
 
 List of Event Commands:
-@>Text: \xn[Prof. Ficht]Nun hinfort in die weite Welt!
-@>Set Move Route: This event
- :              : $>Turn Down
+@>Conditional Branch: Switch [0330: Nach dem Celebi Kampf] == ON
+ @>Text: \xn[Prof. Ficht]Elena wohnt in Morastia.
+ @>Text: \xn[Prof. Ficht]Statte ihr einen Besuch ab, um 
+  :    : möglicherweise etwas über die Brillen vom Team 0 
+  :    : zu erfahren.
+ @>Set Move Route: This event
+  :              : $>Turn Down
+ @>
+: Else
+ @>Text: \xn[Prof. Ficht]Nun hinfort in die weite Welt!
+ @>Set Move Route: This event
+  :              : $>Turn Down
+ @>
+: Branch End
 @>
 
 Page #3
@@ -35578,12 +35604,44 @@ List of Event Commands:
 @>Show Animation: [Professor Ficht], [Exclaim bubble]
 @>Wait: 12 frame(s)
 @>Text: \xn[Prof. Ficht]Sei bloß vorsichtig mit der Brille!
-@>Text: \xn[Prof. Ficht]Wir wissen nicht, was sie anrichten 
- :    : können.
+@>Text: \xn[Prof. Ficht]Wir wissen nicht, ob sie mit den 
+ :    : Crypto-Pokémon zusammenhängt.
+@>Show Animation: [Elisa], [Exclaim bubble]
+@>Wait: 12 frame(s)
 @>Text: \xn[Prof. Ficht]Aber sie können der Schlüssel zum 
  :    : Plan von Team 0 sein.
+@>Text: \xn[Elisa]Professor, das wollte ich Sie unbedingt noch 
+ :    : fragen.
+@>Text: \xn[Elisa]Was genau sind Crypto-Pokémon?
+@>Text: \xn[Elisa]Und wie "erlöst" man sie oder öffnet ihr
+ :    : Herz, oder wie war das?
+@>Text: \xn[Prof. Ficht]Ich bin tatsächlich auch kein Experte, 
+ :    : da schon hunderte Jahre keine Crypto-Pokémon mehr 
+ :    : gesehen wurden.
+@>Text: \xn[Prof. Ficht]Aber du hast Recht, Elisa.
+@>Text: \xn[Prof. Ficht]Soweit ich weiß, können diese 
+ :    : Pokémon auch wieder erlöst werden.
+@>Text: \xn[Prof. Ficht]Solange man das Pokémon bei sich 
+ :    : trägt, Kämpfe mit ihnen kämpft,
+@>Text: \xn[Prof. Ficht]wird sich das Pokémon langsam 
+ :    : wieder an seinen Trainer gewöhnen.
+@>Text: \xn[Prof. Ficht]Ihr habt bestimmt schon gemerkt, dass 
+ :    : es euch in Kämpfen oft nicht gehorcht.
+@>Text: \xn[Prof. Ficht]Bestimmte Essenzen sollen das 
+ :    : Verbessern können, aber da mus ich leider passen.
+@>Text: \xn[Prof. Ficht]Ich werde Nachforschungen anstellen, 
+ :    : wie ihr eure Pokémon wieder erlösen könnt.
+@>Text: \xn[Prof. Ficht]Solange die Crypto-Meter nicht auf null 
+ :    : sind, ist dies ohnehin nicht möglich.
+@>Text: \xn[Elisa]Okay, verstanden, langsam an mich 
+ :    : gewöhnen lassen und danach bekommen wir mein 
+ :    : Voltilamm wieder erlöst.
+@>Text: \xn[Elisa]Hoffentlich.
+@>Text: \xn[Prof. Ficht]Ich weiß, es kostet viel Kraft und Zeit, 
+ :    : aber ihr werdet eure alten Freunde wieder 
+ :    : zurückbekommen.
 @>Text: \xn[Prof. Ficht]Vielleicht stattet ihr Elena einen 
- :    : Besuch ab und zeigt ihr dieses Exemplar.
+ :    : Besuch ab und zeigt ihr euer Exemplar der Brille.
 @>Text: \xn[Prof. Ficht]Sie ist in der digitalen Welt deutlich 
  :    : weiter als ich.
 @>Text: \xn[Prof. Ficht]Ich werde ihr Bescheid geben, dass 
@@ -42185,9 +42243,17 @@ Move Animation
 Trigger: Action Button
 
 List of Event Commands:
-@>Text: Keine Items...
-@>Text: keine Spuren...
-@>Text: nur ein sauberer, unnatürlich sauberer Zustand.
+@>Conditional Branch: Script: rand(100) < 10
+ @>Script: level = $player.party.map { |p| 
+ :       : p.level }.max
+ :       : WildBattle.start(:TRUBBISH, level)
+ @>
+: Else
+ @>Text: Keine Items...
+ @>Text: keine Spuren...
+ @>Text: nur ein sauberer, unnatürlich sauberer Zustand.
+ @>
+: Branch End
 @>
 
 #------------------------------------------------------------------------------
@@ -42208,7 +42274,15 @@ Move Animation
 Trigger: Action Button
 
 List of Event Commands:
-@>Text: "Ich war hier."
+@>Conditional Branch: Script: rand(100) < 10
+ @>Script: level = $player.party.map { |p| 
+ :       : p.level }.max
+ :       : WildBattle.start(:TRUBBISH, level)
+ @>
+: Else
+ @>Text: "Ich war hier."
+ @>
+: Branch End
 @>
 
 #------------------------------------------------------------------------------
@@ -55528,7 +55602,15 @@ Move Animation
 Trigger: Action Button
 
 List of Event Commands:
-@>Text: Hier ist nichts...
+@>Conditional Branch: Script: rand(100) < 10
+ @>Script: level = $player.party.map { |p| 
+ :       : p.level }.max
+ :       : WildBattle.start(:TRUBBISH, level)
+ @>
+: Else
+ @>Text: Hier ist nichts...
+ @>
+: Branch End
 @>
 
 #------------------------------------------------------------------------------
@@ -55800,6 +55882,28 @@ List of Event Commands:
 @>
 
 #------------------------------------------------------------------------------
+Event ID: 019
+Event Name: EV019
+(X,Y): (033,001)
+
+Page #1
+Conditions
+None
+
+Graphic: NAGANADEL EVENT
+
+Autonomous Movement
+Type: Fixed
+Speed: 3: Slow
+Freq: 3: Low
+Options Enabled
+Move Animation
+Trigger: Action Button
+
+List of Event Commands:
+@>
+
+#------------------------------------------------------------------------------
 
 #==============================================================================
 Map ID: 094
@@ -55992,7 +56096,15 @@ Move Animation
 Trigger: Action Button
 
 List of Event Commands:
-@>Text: Bloß Müllreste.
+@>Conditional Branch: Script: rand(100) < 10
+ @>Script: level = $player.party.map { |p| 
+ :       : p.level }.max
+ :       : WildBattle.start(:TRUBBISH, level)
+ @>
+: Else
+ @>Text: Bloß Müllreste.
+ @>
+: Branch End
 @>
 
 #------------------------------------------------------------------------------
@@ -56396,8 +56508,16 @@ Move Animation
 Trigger: Action Button
 
 List of Event Commands:
-@>Text: Da ist ein halbgegessener Donut.
-@>Text: Du lässt ihn lieber liegen.
+@>Conditional Branch: Script: rand(100) < 10
+ @>Script: level = $player.party.map { |p| 
+ :       : p.level }.max
+ :       : WildBattle.start(:TRUBBISH, level)
+ @>
+: Else
+ @>Text: Da ist ein halbgegessener Donut.
+ @>Text: Du lässt ihn lieber liegen.
+ @>
+: Branch End
 @>
 
 #------------------------------------------------------------------------------
@@ -57507,8 +57627,16 @@ Move Animation
 Trigger: Action Button
 
 List of Event Commands:
-@>Text: Hier liegt ein altes Angelmagazin: "Barschuft des 
- :    : Jahres"
+@>Conditional Branch: Script: rand(100) < 10
+ @>Script: level = $player.party.map { |p| 
+ :       : p.level }.max
+ :       : WildBattle.start(:TRUBBISH, level)
+ @>
+: Else
+ @>Text: Hier liegt ein altes Angelmagazin: "Barschuft des 
+  :    : Jahres"
+ @>
+: Branch End
 @>
 
 #------------------------------------------------------------------------------
@@ -58001,7 +58129,15 @@ Move Animation
 Trigger: Action Button
 
 List of Event Commands:
-@>Text: Eine alte Quittung, jemand hat 99 Pokébälle gekauft.
+@>Conditional Branch: Script: rand(100) < 10
+ @>Script: level = $player.party.map { |p| 
+ :       : p.level }.max
+ :       : WildBattle.start(:TRUBBISH, level)
+ @>
+: Else
+ @>Text: Eine alte Quittung, jemand hat 99 Pokébälle gekauft.
+ @>
+: Branch End
 @>
 
 #------------------------------------------------------------------------------
@@ -58313,9 +58449,17 @@ Move Animation
 Trigger: Action Button
 
 List of Event Commands:
-@>Text: Da klebt ein Zettel: "Nicht hineinsehen"
-@>Text: Natürlich schaust du rein, du Rebell.
-@>Text: Hier ist jedoch nichts zu finden.
+@>Conditional Branch: Script: rand(100) < 10
+ @>Script: level = $player.party.map { |p| 
+ :       : p.level }.max
+ :       : WildBattle.start(:TRUBBISH, level)
+ @>
+: Else
+ @>Text: Da klebt ein Zettel: "Nicht hineinsehen"
+ @>Text: Natürlich schaust du rein, du Rebell.
+ @>Text: Hier ist jedoch nichts zu finden.
+ @>
+: Branch End
 @>
 
 #------------------------------------------------------------------------------
@@ -58657,7 +58801,15 @@ Move Animation
 Trigger: Action Button
 
 List of Event Commands:
-@>Text: Ein paar Steinbrocken, wer wirft denn sowas weg?
+@>Conditional Branch: Script: rand(100) < 10
+ @>Script: level = $player.party.map { |p| 
+ :       : p.level }.max
+ :       : WildBattle.start(:TRUBBISH, level)
+ @>
+: Else
+ @>Text: Ein paar Steinbrocken, wer wirft denn sowas weg?
+ @>
+: Branch End
 @>
 
 #------------------------------------------------------------------------------
@@ -58916,7 +59068,15 @@ Move Animation
 Trigger: Action Button
 
 List of Event Commands:
-@>Text: Ein Flyer des Angel-Clubs, total zerknittert.
+@>Conditional Branch: Script: rand(100) < 10
+ @>Script: level = $player.party.map { |p| 
+ :       : p.level }.max
+ :       : WildBattle.start(:TRUBBISH, level)
+ @>
+: Else
+ @>Text: Ein Flyer des Angel-Clubs, total zerknittert.
+ @>
+: Branch End
 @>
 
 #------------------------------------------------------------------------------
@@ -59297,7 +59457,15 @@ Move Animation
 Trigger: Action Button
 
 List of Event Commands:
-@>Text: Du fragst dich, warum du überhaupt reinschaust.
+@>Conditional Branch: Script: rand(100) < 10
+ @>Script: level = $player.party.map { |p| 
+ :       : p.level }.max
+ :       : WildBattle.start(:TRUBBISH, level)
+ @>
+: Else
+ @>Text: Du fragst dich, warum du überhaupt reinschaust.
+ @>
+: Branch End
 @>
 
 #------------------------------------------------------------------------------
@@ -59974,7 +60142,15 @@ Move Animation
 Trigger: Action Button
 
 List of Event Commands:
-@>Text: Nur Müll...
+@>Conditional Branch: Script: rand(100) < 10
+ @>Script: level = $player.party.map { |p| 
+ :       : p.level }.max
+ :       : WildBattle.start(:TRUBBISH, level)
+ @>
+: Else
+ @>Text: Nur Müll...
+ @>
+: Branch End
 @>
 
 #------------------------------------------------------------------------------
@@ -60429,7 +60605,15 @@ Move Animation
 Trigger: Action Button
 
 List of Event Commands:
-@>Text: Du findest nichts, außer Selbstreflexion.
+@>Conditional Branch: Script: rand(100) < 10
+ @>Script: level = $player.party.map { |p| 
+ :       : p.level }.max
+ :       : WildBattle.start(:TRUBBISH, level)
+ @>
+: Else
+ @>Text: Du findest nichts, außer Selbstreflexion.
+ @>
+: Branch End
 @>
 
 #------------------------------------------------------------------------------
@@ -60865,14 +61049,22 @@ Move Animation
 Trigger: Action Button
 
 List of Event Commands:
-@>Text: Du siehst ein kleines Schild...
-@>Text: Möchtest du es näher betrachten?
-@>Show Choices: Ja, Nein
-(When Cancel: Choice 2)
-: When [Ja]
- @>Text: "Leer"
+@>Conditional Branch: Script: rand(100) < 10
+ @>Script: level = $player.party.map { |p| 
+ :       : p.level }.max
+ :       : WildBattle.start(:TRUBBISH, level)
  @>
-: When [Nein]
+: Else
+ @>Text: Du siehst ein kleines Schild...
+ @>Text: Möchtest du es näher betrachten?
+ @>Show Choices: Ja, Nein
+ (When Cancel: Choice 2)
+ : When [Ja]
+  @>Text: "Leer"
+  @>
+ : When [Nein]
+  @>
+ : Branch End
  @>
 : Branch End
 @>
@@ -61542,8 +61734,16 @@ Move Animation
 Trigger: Action Button
 
 List of Event Commands:
-@>Text: Ein Mülleimer.
-@>Text: Die Entwickler hätten hier etwas verstecken können.
+@>Conditional Branch: Script: rand(100) < 10
+ @>Script: level = $player.party.map { |p| 
+ :       : p.level }.max
+ :       : WildBattle.start(:TRUBBISH, level)
+ @>
+: Else
+ @>Text: Ein Mülleimer.
+ @>Text: Die Entwickler hätten hier etwas verstecken können.
+ @>
+: Branch End
 @>
 
 #------------------------------------------------------------------------------
@@ -61963,8 +62163,16 @@ Move Animation
 Trigger: Action Button
 
 List of Event Commands:
-@>Text: Wer weiß, vielleicht ist der wahre Schatz die 
- :    : Enttäuschung selbst.
+@>Conditional Branch: Script: rand(100) < 10
+ @>Script: level = $player.party.map { |p| 
+ :       : p.level }.max
+ :       : WildBattle.start(:TRUBBISH, level)
+ @>
+: Else
+ @>Text: Wer weiß, vielleicht ist der wahre Schatz die 
+  :    : Enttäuschung selbst.
+ @>
+: Branch End
 @>
 
 #------------------------------------------------------------------------------
@@ -67064,6 +67272,7 @@ List of Event Commands:
   :              : $>Graphic: "PICHU_1_shiny', 0, 6, 0
  @>Wait: 20 frame(s)
  @>Set Move Route: [Pichu]
+                   (Ignore If Can't Move)
   :              : $>Move Down
   :              : $>Turn Right
   :              : $>Wait: 6 frame(s)
@@ -67317,7 +67526,7 @@ List of Event Commands:
 @>Erase Picture: 1
 @>Wait: 8 frame(s)
 @>Change Transparent Flag: Normal
-@>Transfer Player:[373: Mistral Händler], (013,018), Up, No Fade
+@>Transfer Player:[082: Beerenladen], (013,014), Up, No Fade
 @>Change Screen Color Tone: (0,0,0,0), @6
 @>
 
@@ -67419,7 +67628,7 @@ List of Event Commands:
 @>Erase Picture: 1
 @>Wait: 8 frame(s)
 @>Change Transparent Flag: Normal
-@>Transfer Player:[373: Mistral Händler], (013,018), Up, No Fade
+@>Transfer Player:[082: Beerenladen], (013,014), Up, No Fade
 @>Change Screen Color Tone: (0,0,0,0), @6
 @>
 
@@ -72964,7 +73173,15 @@ Move Animation
 Trigger: Action Button
 
 List of Event Commands:
-@>Text: Hier ist nichts...
+@>Conditional Branch: Script: rand(100) < 10
+ @>Script: level = $player.party.map { |p| 
+ :       : p.level }.max
+ :       : WildBattle.start(:TRUBBISH, level)
+ @>
+: Else
+ @>Text: Hier ist nichts...
+ @>
+: Branch End
 @>
 
 #------------------------------------------------------------------------------
@@ -73462,7 +73679,15 @@ Move Animation
 Trigger: Action Button
 
 List of Event Commands:
-@>Text: Ein Mülleimer ohne Geheimnisse, wie langweilig.
+@>Conditional Branch: Script: rand(100) < 10
+ @>Script: level = $player.party.map { |p| 
+ :       : p.level }.max
+ :       : WildBattle.start(:TRUBBISH, level)
+ @>
+: Else
+ @>Text: Ein Mülleimer ohne Geheimnisse, wie langweilig.
+ @>
+: Branch End
 @>
 
 #------------------------------------------------------------------------------
@@ -73904,7 +74129,15 @@ Move Animation
 Trigger: Action Button
 
 List of Event Commands:
-@>Text: Du wühlst kurz und bereust es sofort.
+@>Conditional Branch: Script: rand(100) < 10
+ @>Script: level = $player.party.map { |p| 
+ :       : p.level }.max
+ :       : WildBattle.start(:TRUBBISH, level)
+ @>
+: Else
+ @>Text: Du wühlst kurz und bereust es sofort.
+ @>
+: Branch End
 @>
 
 #------------------------------------------------------------------------------
@@ -74360,7 +74593,15 @@ Move Animation
 Trigger: Action Button
 
 List of Event Commands:
-@>Text: Hier ist nichts...
+@>Conditional Branch: Script: rand(100) < 10
+ @>Script: level = $player.party.map { |p| 
+ :       : p.level }.max
+ :       : WildBattle.start(:TRUBBISH, level)
+ @>
+: Else
+ @>Text: Hier ist nichts...
+ @>
+: Branch End
 @>
 
 #------------------------------------------------------------------------------
@@ -74635,7 +74876,15 @@ Move Animation
 Trigger: Action Button
 
 List of Event Commands:
-@>Text: Ein kleiner zerknüllter Zettel, darauf steht "Nope".
+@>Conditional Branch: Script: rand(100) < 10
+ @>Script: level = $player.party.map { |p| 
+ :       : p.level }.max
+ :       : WildBattle.start(:TRUBBISH, level)
+ @>
+: Else
+ @>Text: Ein kleiner zerknüllter Zettel, darauf steht "Nope".
+ @>
+: Branch End
 @>
 
 #------------------------------------------------------------------------------
@@ -74920,7 +75169,15 @@ Move Animation
 Trigger: Action Button
 
 List of Event Commands:
-@>Text: Hier ist nichts...
+@>Conditional Branch: Script: rand(100) < 10
+ @>Script: level = $player.party.map { |p| 
+ :       : p.level }.max
+ :       : WildBattle.start(:TRUBBISH, level)
+ @>
+: Else
+ @>Text: Hier ist nichts...
+ @>
+: Branch End
 @>
 
 #------------------------------------------------------------------------------
@@ -75474,7 +75731,15 @@ Move Animation
 Trigger: Action Button
 
 List of Event Commands:
-@>Text: Nur Leere.
+@>Conditional Branch: Script: rand(100) < 10
+ @>Script: level = $player.party.map { |p| 
+ :       : p.level }.max
+ :       : WildBattle.start(:TRUBBISH, level)
+ @>
+: Else
+ @>Text: Nur Leere.
+ @>
+: Branch End
 @>
 
 #------------------------------------------------------------------------------
@@ -75783,7 +76048,15 @@ Move Animation
 Trigger: Action Button
 
 List of Event Commands:
-@>Text: Hier ist nichts...
+@>Conditional Branch: Script: rand(100) < 10
+ @>Script: level = $player.party.map { |p| 
+ :       : p.level }.max
+ :       : WildBattle.start(:TRUBBISH, level)
+ @>
+: Else
+ @>Text: Hier ist nichts...
+ @>
+: Branch End
 @>
 
 #------------------------------------------------------------------------------
@@ -76038,7 +76311,15 @@ Move Animation
 Trigger: Action Button
 
 List of Event Commands:
-@>Text: Der Mülleimer gähnt innerlich.
+@>Conditional Branch: Script: rand(100) < 10
+ @>Script: level = $player.party.map { |p| 
+ :       : p.level }.max
+ :       : WildBattle.start(:TRUBBISH, level)
+ @>
+: Else
+ @>Text: Der Mülleimer gähnt innerlich.
+ @>
+: Branch End
 @>
 
 #------------------------------------------------------------------------------
@@ -76535,7 +76816,15 @@ Move Animation
 Trigger: Action Button
 
 List of Event Commands:
-@>Text: Nur Müll...
+@>Conditional Branch: Script: rand(100) < 10
+ @>Script: level = $player.party.map { |p| 
+ :       : p.level }.max
+ :       : WildBattle.start(:TRUBBISH, level)
+ @>
+: Else
+ @>Text: Nur Müll...
+ @>
+: Branch End
 @>
 
 #------------------------------------------------------------------------------
@@ -76957,7 +77246,15 @@ Move Animation
 Trigger: Action Button
 
 List of Event Commands:
-@>Text: Du findest nichts, Klassiker!
+@>Conditional Branch: Script: rand(100) < 10
+ @>Script: level = $player.party.map { |p| 
+ :       : p.level }.max
+ :       : WildBattle.start(:TRUBBISH, level)
+ @>
+: Else
+ @>Text: Du findest nichts, Klassiker!
+ @>
+: Branch End
 @>
 
 #------------------------------------------------------------------------------
@@ -77278,7 +77575,15 @@ Move Animation
 Trigger: Action Button
 
 List of Event Commands:
-@>Text: Hier ist nichts...
+@>Conditional Branch: Script: rand(100) < 10
+ @>Script: level = $player.party.map { |p| 
+ :       : p.level }.max
+ :       : WildBattle.start(:TRUBBISH, level)
+ @>
+: Else
+ @>Text: Hier ist nichts...
+ @>
+: Branch End
 @>
 
 #------------------------------------------------------------------------------
@@ -77618,7 +77923,15 @@ Move Animation
 Trigger: Action Button
 
 List of Event Commands:
-@>Text: Hier ist nichts...
+@>Conditional Branch: Script: rand(100) < 10
+ @>Script: level = $player.party.map { |p| 
+ :       : p.level }.max
+ :       : WildBattle.start(:TRUBBISH, level)
+ @>
+: Else
+ @>Text: Hier ist nichts...
+ @>
+: Branch End
 @>
 
 #------------------------------------------------------------------------------
@@ -78018,7 +78331,15 @@ Move Animation
 Trigger: Action Button
 
 List of Event Commands:
-@>Text: Nichtmal ein Byte Müll übrig.
+@>Conditional Branch: Script: rand(100) < 10
+ @>Script: level = $player.party.map { |p| 
+ :       : p.level }.max
+ :       : WildBattle.start(:TRUBBISH, level)
+ @>
+: Else
+ @>Text: Nichtmal ein Byte Müll übrig.
+ @>
+: Branch End
 @>
 
 #------------------------------------------------------------------------------
@@ -78391,7 +78712,15 @@ Move Animation
 Trigger: Action Button
 
 List of Event Commands:
-@>Text: Nur Leere, die reinste Form der Ordnung.
+@>Conditional Branch: Script: rand(100) < 10
+ @>Script: level = $player.party.map { |p| 
+ :       : p.level }.max
+ :       : WildBattle.start(:TRUBBISH, level)
+ @>
+: Else
+ @>Text: Nur Leere, die reinste Form der Ordnung.
+ @>
+: Branch End
 @>
 
 #------------------------------------------------------------------------------
@@ -78689,7 +79018,15 @@ Move Animation
 Trigger: Action Button
 
 List of Event Commands:
-@>Text: Nur ein sanfter Staubwirbel, der sich für wichtig hält.
+@>Conditional Branch: Script: rand(100) < 10
+ @>Script: level = $player.party.map { |p| 
+ :       : p.level }.max
+ :       : WildBattle.start(:TRUBBISH, level)
+ @>
+: Else
+ @>Text: Nur ein sanfter Staubwirbel, der sich für wichtig hält.
+ @>
+: Branch End
 @>
 
 #------------------------------------------------------------------------------
@@ -80492,8 +80829,16 @@ Move Animation
 Trigger: Action Button
 
 List of Event Commands:
-@>Text: Das einzige in diesem Mülleimer ist deine kurz 
- :    : verlorene Würde.
+@>Conditional Branch: Script: rand(100) < 10
+ @>Script: level = $player.party.map { |p| 
+ :       : p.level }.max
+ :       : WildBattle.start(:TRUBBISH, level)
+ @>
+: Else
+ @>Text: Das einzige in diesem Mülleimer ist deine kurz 
+  :    : verlorene Würde.
+ @>
+: Branch End
 @>
 
 #------------------------------------------------------------------------------
@@ -80651,7 +80996,15 @@ Move Animation
 Trigger: Action Button
 
 List of Event Commands:
-@>Text: Hier ist nichts...
+@>Conditional Branch: Script: rand(100) < 10
+ @>Script: level = $player.party.map { |p| 
+ :       : p.level }.max
+ :       : WildBattle.start(:TRUBBISH, level)
+ @>
+: Else
+ @>Text: Hier ist nichts...
+ @>
+: Branch End
 @>
 
 #------------------------------------------------------------------------------
@@ -91066,8 +91419,16 @@ Move Animation
 Trigger: Action Button
 
 List of Event Commands:
-@>Text: Der Mülleimer zeigt dir seine Leere mit einer 
- :    : gewissen Eleganz.
+@>Conditional Branch: Script: rand(100) < 10
+ @>Script: level = $player.party.map { |p| 
+ :       : p.level }.max
+ :       : WildBattle.start(:TRUBBISH, level)
+ @>
+: Else
+ @>Text: Der Mülleimer zeigt dir seine Leere mit einer 
+  :    : gewissen Eleganz.
+ @>
+: Branch End
 @>
 
 #------------------------------------------------------------------------------
@@ -91486,7 +91847,15 @@ Move Animation
 Trigger: Action Button
 
 List of Event Commands:
-@>Text: Hier ist nichts...
+@>Conditional Branch: Script: rand(100) < 10
+ @>Script: level = $player.party.map { |p| 
+ :       : p.level }.max
+ :       : WildBattle.start(:TRUBBISH, level)
+ @>
+: Else
+ @>Text: Hier ist nichts...
+ @>
+: Branch End
 @>
 
 #------------------------------------------------------------------------------
@@ -91942,8 +92311,16 @@ Move Animation
 Trigger: Action Button
 
 List of Event Commands:
-@>Text: Du findest nichts.
-@>Text: Der Mülleimer dankt für deinen Besuch.
+@>Conditional Branch: Script: rand(100) < 10
+ @>Script: level = $player.party.map { |p| 
+ :       : p.level }.max
+ :       : WildBattle.start(:TRUBBISH, level)
+ @>
+: Else
+ @>Text: Du findest nichts.
+ @>Text: Der Mülleimer dankt für deinen Besuch.
+ @>
+: Branch End
 @>
 
 #------------------------------------------------------------------------------
@@ -92212,7 +92589,15 @@ Move Animation
 Trigger: Action Button
 
 List of Event Commands:
-@>Text: Hier ist nichts...
+@>Conditional Branch: Script: rand(100) < 10
+ @>Script: level = $player.party.map { |p| 
+ :       : p.level }.max
+ :       : WildBattle.start(:TRUBBISH, level)
+ @>
+: Else
+ @>Text: Hier ist nichts...
+ @>
+: Branch End
 @>
 
 #------------------------------------------------------------------------------
@@ -92499,7 +92884,15 @@ Move Animation
 Trigger: Action Button
 
 List of Event Commands:
-@>Text: Hier ist nichts...
+@>Conditional Branch: Script: rand(100) < 10
+ @>Script: level = $player.party.map { |p| 
+ :       : p.level }.max
+ :       : WildBattle.start(:TRUBBISH, level)
+ @>
+: Else
+ @>Text: Hier ist nichts...
+ @>
+: Branch End
 @>
 
 #------------------------------------------------------------------------------
@@ -92872,7 +93265,15 @@ Move Animation
 Trigger: Action Button
 
 List of Event Commands:
-@>Text: Nichts, aber auf eine hochwertige Art.
+@>Conditional Branch: Script: rand(100) < 10
+ @>Script: level = $player.party.map { |p| 
+ :       : p.level }.max
+ :       : WildBattle.start(:TRUBBISH, level)
+ @>
+: Else
+ @>Text: Nichts, aber auf eine hochwertige Art.
+ @>
+: Branch End
 @>
 
 #------------------------------------------------------------------------------
@@ -93143,7 +93544,15 @@ Move Animation
 Trigger: Action Button
 
 List of Event Commands:
-@>Text: Nichts, und doch wirkt es bedeutungsvoll.
+@>Conditional Branch: Script: rand(100) < 10
+ @>Script: level = $player.party.map { |p| 
+ :       : p.level }.max
+ :       : WildBattle.start(:TRUBBISH, level)
+ @>
+: Else
+ @>Text: Nichts, und doch wirkt es bedeutungsvoll.
+ @>
+: Branch End
 @>
 
 #------------------------------------------------------------------------------
@@ -116854,6 +117263,64 @@ List of Event Commands:
 @>
 
 #------------------------------------------------------------------------------
+Event ID: 038
+Event Name: EV038
+(X,Y): (036,021)
+
+Page #1
+Conditions
+None
+
+Autonomous Movement
+Type: Fixed
+Speed: 3: Slow
+Freq: 3: Low
+Options Enabled
+Move Animation
+Trigger: Action Button
+
+List of Event Commands:
+@>Conditional Branch: Script: rand(100) < 10
+ @>Script: level = $player.party.map { |p| 
+ :       : p.level }.max
+ :       : WildBattle.start(:TRUBBISH, level)
+ @>
+: Else
+ @>Text: Hier ist nichts.
+ @>
+: Branch End
+@>
+
+#------------------------------------------------------------------------------
+Event ID: 039
+Event Name: EV039
+(X,Y): (005,021)
+
+Page #1
+Conditions
+None
+
+Autonomous Movement
+Type: Fixed
+Speed: 3: Slow
+Freq: 3: Low
+Options Enabled
+Move Animation
+Trigger: Action Button
+
+List of Event Commands:
+@>Conditional Branch: Script: rand(100) < 10
+ @>Script: level = $player.party.map { |p| 
+ :       : p.level }.max
+ :       : WildBattle.start(:TRUBBISH, level)
+ @>
+: Else
+ @>Text: Hier ist nichts.
+ @>
+: Branch End
+@>
+
+#------------------------------------------------------------------------------
 
 #==============================================================================
 Map ID: 164
@@ -116979,7 +117446,15 @@ Move Animation
 Trigger: Action Button
 
 List of Event Commands:
-@>Text: Hier ist nichts.
+@>Conditional Branch: Script: rand(100) < 10
+ @>Script: level = $player.party.map { |p| 
+ :       : p.level }.max
+ :       : WildBattle.start(:TRUBBISH, level)
+ @>
+: Else
+ @>Text: Hier ist nichts.
+ @>
+: Branch End
 @>
 
 #------------------------------------------------------------------------------
@@ -117062,7 +117537,15 @@ Move Animation
 Trigger: Action Button
 
 List of Event Commands:
-@>Text: Hier ist nichts.
+@>Conditional Branch: Script: rand(100) < 10
+ @>Script: level = $player.party.map { |p| 
+ :       : p.level }.max
+ :       : WildBattle.start(:TRUBBISH, level)
+ @>
+: Else
+ @>Text: Hier ist nichts.
+ @>
+: Branch End
 @>
 
 #------------------------------------------------------------------------------
@@ -117525,14 +118008,6 @@ Move Animation
 Trigger: Action Button
 
 List of Event Commands:
-@>Conditional Branch: Script: pbBugContestState.pbContestHeld?
- @>Text: \xn[Prüfungsbeauftragter]Du hast heute bereits an 
-  :    : dem Käfersammler-Turnier teilgenommen.
- @>Text: \xn[Prüfungsbeauftragter]Man kann nur alle 12 
-  :    : Stunden an einem Turnier teilnehmen.
- @>Exit Event Processing
- @>
-: Branch End
 @>Text: \xn[Prüfungsbeauftragter]Herzlich Willkommen bei 
  :    : demKäfersammler-Turnier.
 @>Text: \xn[Prüfungsbeauftragter]Die Regeln um offizieller 
@@ -120922,7 +121397,7 @@ List of Event Commands:
  :    : haben, die wurden also wieder festgenommen?
 @>Text: \xn[Elisa]"Wieder"?
 @>Text: \xn[Elisa]Was soll das heißen, "wieder"?
-@>Text: \xn[Elisa]Kommissar Karl hat sie abgeführt.
+@>Text: \xn[Elisa]Kommissar Karl hat sie doch abgeführt.
 @>Text: \xn[Elisa]Ich war dabei., ich habe es selbst gesehen.
 @>Text: \xn[Elisa]Sicher, dass es dieselben waren?
 @>Text: \xn[Elisa]Da war noch jemand, den sie "Chef" 
@@ -132667,7 +133142,15 @@ Move Animation
 Trigger: Action Button
 
 List of Event Commands:
-@>Text: Nichts zu finden.
+@>Conditional Branch: Script: rand(100) < 10
+ @>Script: level = $player.party.map { |p| 
+ :       : p.level }.max
+ :       : WildBattle.start(:TRUBBISH, level)
+ @>
+: Else
+ @>Text: Nichts zu finden.
+ @>
+: Branch End
 @>
 
 #------------------------------------------------------------------------------
@@ -132688,7 +133171,15 @@ Move Animation
 Trigger: Action Button
 
 List of Event Commands:
-@>Text: Diesmal leider kein Glück.
+@>Conditional Branch: Script: rand(100) < 10
+ @>Script: level = $player.party.map { |p| 
+ :       : p.level }.max
+ :       : WildBattle.start(:TRUBBISH, level)
+ @>
+: Else
+ @>Text: Diesmal leider kein Glück.
+ @>
+: Branch End
 @>
 
 #------------------------------------------------------------------------------
@@ -132728,7 +133219,15 @@ Move Animation
 Trigger: Action Button
 
 List of Event Commands:
-@>Text: Hier ist nichts...
+@>Conditional Branch: Script: rand(100) < 10
+ @>Script: level = $player.party.map { |p| 
+ :       : p.level }.max
+ :       : WildBattle.start(:TRUBBISH, level)
+ @>
+: Else
+ @>Text: Hier ist nichts...
+ @>
+: Branch End
 @>
 
 #------------------------------------------------------------------------------
@@ -132768,7 +133267,15 @@ Move Animation
 Trigger: Action Button
 
 List of Event Commands:
-@>Text: Hier ist nichts...
+@>Conditional Branch: Script: rand(100) < 10
+ @>Script: level = $player.party.map { |p| 
+ :       : p.level }.max
+ :       : WildBattle.start(:TRUBBISH, level)
+ @>
+: Else
+ @>Text: Hier ist nichts...
+ @>
+: Branch End
 @>
 
 #------------------------------------------------------------------------------
@@ -165223,13 +165730,14 @@ List of Event Commands:
  :              : $>SE: 'Explosion2', 100, 50
  :              : $>Graphic: "pkmn_steelix', 0, 2, 0
 @>Wait: 40 frame(s)
-@>Script: setBattleRule("cannotRun")
-:       : pkmn = Pokemon.new(:STEELIX, 45)
+@>Script: pkmn = Pokemon.new(:STEELIX, 45)
 :       : pkmn.form = 1
 :       : pkmn.makeMale
 :       : pkmn.learn_move(:THUNDERFANG)
 :       : pkmn.ability_index = 1
 :       : pkmn.calc_stats
+:       : setBattleRule("midbattleScript", 
+:       : :KRISTALL_STAHLOS)   # NEU
 :       : WildBattle.start(pkmn)
 @>Script: pbSetSelfSwitch(2,"A",true)
 @>Control Self Switch: A =ON
@@ -166160,6 +166668,122 @@ List of Event Commands:
 @>Wait: 8 frame(s)
 @>Transfer Player:[177: Tonishi], (108,095), Down, No Fade
 @>Change Screen Color Tone: (0,0,0,0), @6
+@>
+
+#------------------------------------------------------------------------------
+Event ID: 005
+Event Name: EV005
+(X,Y): (003,009)
+
+Page #1
+Conditions
+None
+
+Autonomous Movement
+Type: Fixed
+Speed: 3: Slow
+Freq: 3: Low
+Options Enabled
+Move Animation
+Trigger: Action Button
+
+List of Event Commands:
+@>Conditional Branch: Script: rand(100) < 10
+ @>Script: level = $player.party.map { |p| 
+ :       : p.level }.max
+ :       : WildBattle.start(:TRUBBISH, level)
+ @>
+: Else
+ @>Text: Hier, ein hauch von nichts für unterwegs.
+ @>
+: Branch End
+@>
+
+#------------------------------------------------------------------------------
+Event ID: 006
+Event Name: EV006
+(X,Y): (041,009)
+
+Page #1
+Conditions
+None
+
+Autonomous Movement
+Type: Fixed
+Speed: 3: Slow
+Freq: 3: Low
+Options Enabled
+Move Animation
+Trigger: Action Button
+
+List of Event Commands:
+@>Conditional Branch: Script: rand(100) < 10
+ @>Script: level = $player.party.map { |p| 
+ :       : p.level }.max
+ :       : WildBattle.start(:TRUBBISH, level)
+ @>
+: Else
+ @>Text: Hier ist nichts.
+ @>
+: Branch End
+@>
+
+#------------------------------------------------------------------------------
+Event ID: 007
+Event Name: EV007
+(X,Y): (027,030)
+
+Page #1
+Conditions
+None
+
+Autonomous Movement
+Type: Fixed
+Speed: 3: Slow
+Freq: 3: Low
+Options Enabled
+Move Animation
+Trigger: Action Button
+
+List of Event Commands:
+@>Conditional Branch: Script: rand(100) < 10
+ @>Script: level = $player.party.map { |p| 
+ :       : p.level }.max
+ :       : WildBattle.start(:TRUBBISH, level)
+ @>
+: Else
+ @>Text: Hier ist nichts.
+ @>
+: Branch End
+@>
+
+#------------------------------------------------------------------------------
+Event ID: 008
+Event Name: EV008
+(X,Y): (017,030)
+
+Page #1
+Conditions
+None
+
+Autonomous Movement
+Type: Fixed
+Speed: 3: Slow
+Freq: 3: Low
+Options Enabled
+Move Animation
+Trigger: Action Button
+
+List of Event Commands:
+@>Conditional Branch: Script: rand(100) < 10
+ @>Script: level = $player.party.map { |p| 
+ :       : p.level }.max
+ :       : WildBattle.start(:TRUBBISH, level)
+ @>
+: Else
+ @>Text: Hier ist nichts.
+ @>
+: Branch End
 @>
 
 #------------------------------------------------------------------------------
@@ -172817,7 +173441,15 @@ Move Animation
 Trigger: Action Button
 
 List of Event Commands:
-@>Text: Du wühlst kurz und bereust es sofort.
+@>Conditional Branch: Script: rand(100) < 10
+ @>Script: level = $player.party.map { |p| 
+ :       : p.level }.max
+ :       : WildBattle.start(:TRUBBISH, level)
+ @>
+: Else
+ @>Text: Du wühlst kurz und bereust es sofort.
+ @>
+: Branch End
 @>
 
 #------------------------------------------------------------------------------
@@ -173211,7 +173843,15 @@ Move Animation
 Trigger: Action Button
 
 List of Event Commands:
-@>Text: Hier ist nichts...
+@>Conditional Branch: Script: rand(100) < 10
+ @>Script: level = $player.party.map { |p| 
+ :       : p.level }.max
+ :       : WildBattle.start(:TRUBBISH, level)
+ @>
+: Else
+ @>Text: Hier ist nichts...
+ @>
+: Branch End
 @>
 
 #------------------------------------------------------------------------------
@@ -173400,7 +174040,15 @@ Move Animation
 Trigger: Action Button
 
 List of Event Commands:
-@>Text: Hier ist nichts...
+@>Conditional Branch: Script: rand(100) < 10
+ @>Script: level = $player.party.map { |p| 
+ :       : p.level }.max
+ :       : WildBattle.start(:TRUBBISH, level)
+ @>
+: Else
+ @>Text: Hier ist nichts...
+ @>
+: Branch End
 @>
 
 #------------------------------------------------------------------------------
@@ -173669,7 +174317,15 @@ Move Animation
 Trigger: Action Button
 
 List of Event Commands:
-@>Text: Hier ist nichts...
+@>Conditional Branch: Script: rand(100) < 10
+ @>Script: level = $player.party.map { |p| 
+ :       : p.level }.max
+ :       : WildBattle.start(:TRUBBISH, level)
+ @>
+: Else
+ @>Text: Hier ist nichts...
+ @>
+: Branch End
 @>
 
 #------------------------------------------------------------------------------
@@ -174342,7 +174998,15 @@ Move Animation
 Trigger: Action Button
 
 List of Event Commands:
-@>Text: Nur Müll...
+@>Conditional Branch: Script: rand(100) < 10
+ @>Script: level = $player.party.map { |p| 
+ :       : p.level }.max
+ :       : WildBattle.start(:TRUBBISH, level)
+ @>
+: Else
+ @>Text: Nur Müll...
+ @>
+: Branch End
 @>
 
 #------------------------------------------------------------------------------
@@ -174934,7 +175598,15 @@ Move Animation
 Trigger: Action Button
 
 List of Event Commands:
-@>Text: Der Mülleimer gähnt innerlich.
+@>Conditional Branch: Script: rand(100) < 10
+ @>Script: level = $player.party.map { |p| 
+ :       : p.level }.max
+ :       : WildBattle.start(:TRUBBISH, level)
+ @>
+: Else
+ @>Text: Der Mülleimer gähnt innerlich.
+ @>
+: Branch End
 @>
 
 #------------------------------------------------------------------------------
@@ -175543,7 +176215,15 @@ Move Animation
 Trigger: Action Button
 
 List of Event Commands:
-@>Text: Hier ist nichts...
+@>Conditional Branch: Script: rand(100) < 10
+ @>Script: level = $player.party.map { |p| 
+ :       : p.level }.max
+ :       : WildBattle.start(:TRUBBISH, level)
+ @>
+: Else
+ @>Text: Hier ist nichts...
+ @>
+: Branch End
 @>
 
 #------------------------------------------------------------------------------
@@ -176142,6 +176822,15 @@ Move Animation
 Trigger: Action Button
 
 List of Event Commands:
+@>Conditional Branch: Script: rand(100) < 10
+ @>Script: level = $player.party.map { |p| 
+ :       : p.level }.max
+ :       : WildBattle.start(:TRUBBISH, level)
+ @>
+: Else
+ @>Text: Hier ist nichts...
+ @>
+: Branch End
 @>
 
 #------------------------------------------------------------------------------
@@ -176282,7 +176971,15 @@ Move Animation
 Trigger: Action Button
 
 List of Event Commands:
-@>Text: Hier ist nichts...
+@>Conditional Branch: Script: rand(100) < 10
+ @>Script: level = $player.party.map { |p| 
+ :       : p.level }.max
+ :       : WildBattle.start(:TRUBBISH, level)
+ @>
+: Else
+ @>Text: Hier ist nichts...
+ @>
+: Branch End
 @>
 
 #------------------------------------------------------------------------------
@@ -176744,7 +177441,15 @@ Move Animation
 Trigger: Action Button
 
 List of Event Commands:
-@>Text: Hier ist nichts...
+@>Conditional Branch: Script: rand(100) < 10
+ @>Script: level = $player.party.map { |p| 
+ :       : p.level }.max
+ :       : WildBattle.start(:TRUBBISH, level)
+ @>
+: Else
+ @>Text: Hier ist nichts...
+ @>
+: Branch End
 @>
 
 #------------------------------------------------------------------------------
@@ -176765,7 +177470,15 @@ Move Animation
 Trigger: Action Button
 
 List of Event Commands:
-@>Text: Nur Müll...
+@>Conditional Branch: Script: rand(100) < 10
+ @>Script: level = $player.party.map { |p| 
+ :       : p.level }.max
+ :       : WildBattle.start(:TRUBBISH, level)
+ @>
+: Else
+ @>Text: Nur Müll...
+ @>
+: Branch End
 @>
 
 #------------------------------------------------------------------------------
@@ -177330,7 +178043,15 @@ Move Animation
 Trigger: Action Button
 
 List of Event Commands:
-@>Text: Hier ist nichts...
+@>Conditional Branch: Script: rand(100) < 10
+ @>Script: level = $player.party.map { |p| 
+ :       : p.level }.max
+ :       : WildBattle.start(:TRUBBISH, level)
+ @>
+: Else
+ @>Text: Hier ist nichts...
+ @>
+: Branch End
 @>
 
 #------------------------------------------------------------------------------
@@ -177351,7 +178072,15 @@ Move Animation
 Trigger: Action Button
 
 List of Event Commands:
-@>Text: Hier ist nichts...
+@>Conditional Branch: Script: rand(100) < 10
+ @>Script: level = $player.party.map { |p| 
+ :       : p.level }.max
+ :       : WildBattle.start(:TRUBBISH, level)
+ @>
+: Else
+ @>Text: Hier ist nichts...
+ @>
+: Branch End
 @>
 
 #------------------------------------------------------------------------------
@@ -177372,14 +178101,22 @@ Move Animation
 Trigger: Action Button
 
 List of Event Commands:
-@>Text: Du siehst ein kleines Schild...
-@>Text: Möchtest du es näher betrachten?
-@>Show Choices: Ja, Nein
-(When Cancel: Choice 2)
-: When [Ja]
- @>Text: "Leer"
+@>Conditional Branch: Script: rand(100) < 10
+ @>Script: level = $player.party.map { |p| 
+ :       : p.level }.max
+ :       : WildBattle.start(:TRUBBISH, level)
  @>
-: When [Nein]
+: Else
+ @>Text: Du siehst ein kleines Schild...
+ @>Text: Möchtest du es näher betrachten?
+ @>Show Choices: Ja, Nein
+ (When Cancel: Choice 2)
+ : When [Ja]
+  @>Text: "Leer"
+  @>
+ : When [Nein]
+  @>
+ : Branch End
  @>
 : Branch End
 @>
@@ -188291,7 +189028,7 @@ List of Event Commands:
 
 #------------------------------------------------------------------------------
 Event ID: 053
-Event Name: EV053
+Event Name: Kairos size(2,1)
 (X,Y): (037,025)
 
 Page #1
@@ -188440,6 +189177,7 @@ List of Event Commands:
 @>Change Screen Color Tone: (-255,-255,-255,0), @20
 @>Wait: 42 frame(s)
 @>Play SE: 'PRSFX- Water Spout2', 100, 100
+@>Script: pbSetSelfSwitch(55,"A",true)
 @>Control Self Switch: A =ON
 @>Transfer Player:[462: Insel], (019,029), Down
 @>Change Screen Color Tone: (0,0,0,0), @20
@@ -188463,68 +189201,6 @@ List of Event Commands:
 @>
 
 #------------------------------------------------------------------------------
-Event ID: 054
-Event Name: EV054
-(X,Y): (038,025)
-
-Page #1
-Conditions
-None
-
-Autonomous Movement
-Type: Fixed
-Speed: 3: Slow
-Freq: 3: Low
-Options Enabled
-Move Animation
-Trigger: Player Touch
-
-List of Event Commands:
-@>Show Animation: [Matrose 1], [Exclaim bubble]
-@>Wait: 12 frame(s)
-@>Set Move Route: Player
- :              : $>Turn Left
-@>Set Move Route: [Matrose 1]
- :              : $>Through ON
- :              : $>Move Right
-@>Text: Hast du ein Ticket?
-@>Text: Nein?!
-@>Text: Dann kannst du leider nicht mitfahren.
-@>Set Move Route: Player
- :              : $>Move Up
-@>Set Move Route: [Matrose 1]
- :              : $>1 Step Backward
- :              : $>Through OFF
-@>Wait: 6 frame(s)
-@>
-
-Page #2
-Conditions
-Switch 0222: Aeon besiegt is ON
-
-Autonomous Movement
-Type: Fixed
-Speed: 3: Slow
-Freq: 3: Low
-Options Enabled
-Move Animation
-Trigger: Event Touch
-
-List of Event Commands:
-@>Show Animation: [Matrose 1], [Exclaim bubble]
-@>Wait: 12 frame(s)
-@>Text: Hast du ein Ticket?
-@>Text: Nein?!
-@>Text: Dann kannst du leider nicht mitfahren.
-@>Set Move Route: Player
- :              : $>1 Step Backward
-@>Set Move Route: [Matrose 1]
- :              : $>1 Step Backward
- :              : $>1 Step Backward
-@>Wait: 6 frame(s)
-@>
-
-#------------------------------------------------------------------------------
 Event ID: 055
 Event Name: Kairos
 (X,Y): (047,022)
@@ -188534,6 +189210,21 @@ Conditions
 Switch 0222: Aeon besiegt is ON
 
 Graphic: KAIROS
+
+Autonomous Movement
+Type: Fixed
+Speed: 3: Slow
+Freq: 3: Low
+Options Enabled
+Move Animation
+Trigger: Action Button
+
+List of Event Commands:
+@>
+
+Page #2
+Conditions
+Self Switch A is ON
 
 Autonomous Movement
 Type: Fixed
@@ -191315,7 +192006,15 @@ Move Animation
 Trigger: Action Button
 
 List of Event Commands:
-@>Text: Hier ist nichts...
+@>Conditional Branch: Script: rand(100) < 10
+ @>Script: level = $player.party.map { |p| 
+ :       : p.level }.max
+ :       : WildBattle.start(:TRUBBISH, level)
+ @>
+: Else
+ @>Text: Hier ist nichts...
+ @>
+: Branch End
 @>
 
 #------------------------------------------------------------------------------
@@ -191648,7 +192347,15 @@ Move Animation
 Trigger: Action Button
 
 List of Event Commands:
-@>Text: Hier ist nichts...
+@>Conditional Branch: Script: rand(100) < 10
+ @>Script: level = $player.party.map { |p| 
+ :       : p.level }.max
+ :       : WildBattle.start(:TRUBBISH, level)
+ @>
+: Else
+ @>Text: Hier ist nichts...
+ @>
+: Branch End
 @>
 
 #------------------------------------------------------------------------------
@@ -192324,7 +193031,15 @@ Move Animation
 Trigger: Action Button
 
 List of Event Commands:
-@>Text: Hier ist nichts...
+@>Conditional Branch: Script: rand(100) < 10
+ @>Script: level = $player.party.map { |p| 
+ :       : p.level }.max
+ :       : WildBattle.start(:TRUBBISH, level)
+ @>
+: Else
+ @>Text: Hier ist nichts...
+ @>
+: Branch End
 @>
 
 #------------------------------------------------------------------------------
@@ -192529,7 +193244,15 @@ Move Animation
 Trigger: Action Button
 
 List of Event Commands:
-@>Text: Nur Müll...
+@>Conditional Branch: Script: rand(100) < 10
+ @>Script: level = $player.party.map { |p| 
+ :       : p.level }.max
+ :       : WildBattle.start(:TRUBBISH, level)
+ @>
+: Else
+ @>Text: Nur Müll...
+ @>
+: Branch End
 @>
 
 #------------------------------------------------------------------------------
@@ -193077,7 +193800,15 @@ Move Animation
 Trigger: Action Button
 
 List of Event Commands:
-@>Text: Hier ist nichts...
+@>Conditional Branch: Script: rand(100) < 10
+ @>Script: level = $player.party.map { |p| 
+ :       : p.level }.max
+ :       : WildBattle.start(:TRUBBISH, level)
+ @>
+: Else
+ @>Text: Hier ist nichts...
+ @>
+: Branch End
 @>
 
 #------------------------------------------------------------------------------
@@ -198542,6 +199273,15 @@ Move Animation
 Trigger: Action Button
 
 List of Event Commands:
+@>Conditional Branch: Script: rand(100) < 10
+ @>Script: level = $player.party.map { |p| 
+ :       : p.level }.max
+ :       : WildBattle.start(:TRUBBISH, level)
+ @>
+: Else
+ @>Text: Hier ist nichts...
+ @>
+: Branch End
 @>
 
 #------------------------------------------------------------------------------
@@ -199580,7 +200320,15 @@ Move Animation
 Trigger: Action Button
 
 List of Event Commands:
-@>Text: Hier ist nichts...
+@>Conditional Branch: Script: rand(100) < 10
+ @>Script: level = $player.party.map { |p| 
+ :       : p.level }.max
+ :       : WildBattle.start(:TRUBBISH, level)
+ @>
+: Else
+ @>Text: Hier ist nichts...
+ @>
+: Branch End
 @>
 
 #------------------------------------------------------------------------------
@@ -203079,7 +203827,15 @@ Move Animation
 Trigger: Action Button
 
 List of Event Commands:
-@>Text: Nur Müll...
+@>Conditional Branch: Script: rand(100) < 10
+ @>Script: level = $player.party.map { |p| 
+ :       : p.level }.max
+ :       : WildBattle.start(:TRUBBISH, level)
+ @>
+: Else
+ @>Text: Nur Müll...
+ @>
+: Branch End
 @>
 
 #------------------------------------------------------------------------------
@@ -209878,7 +210634,15 @@ Move Animation
 Trigger: Action Button
 
 List of Event Commands:
-@>Text: Hier ist nichts.
+@>Conditional Branch: Script: rand(100) < 10
+ @>Script: level = $player.party.map { |p| 
+ :       : p.level }.max
+ :       : WildBattle.start(:TRUBBISH, level)
+ @>
+: Else
+ @>Text: Hier ist nichts.
+ @>
+: Branch End
 @>
 
 #------------------------------------------------------------------------------
@@ -210322,7 +211086,15 @@ Move Animation
 Trigger: Action Button
 
 List of Event Commands:
-@>Text: Hier ist nichts...
+@>Conditional Branch: Script: rand(100) < 10
+ @>Script: level = $player.party.map { |p| 
+ :       : p.level }.max
+ :       : WildBattle.start(:TRUBBISH, level)
+ @>
+: Else
+ @>Text: Hier ist nichts.
+ @>
+: Branch End
 @>
 
 #------------------------------------------------------------------------------
@@ -236140,7 +236912,15 @@ Move Animation
 Trigger: Action Button
 
 List of Event Commands:
-@>Text: Hier ist nichts...
+@>Conditional Branch: Script: rand(100) < 10
+ @>Script: level = $player.party.map { |p| 
+ :       : p.level }.max
+ :       : WildBattle.start(:TRUBBISH, level)
+ @>
+: Else
+ @>Text: Hier ist nichts...
+ @>
+: Branch End
 @>
 
 #------------------------------------------------------------------------------
@@ -237008,7 +237788,15 @@ Move Animation
 Trigger: Action Button
 
 List of Event Commands:
-@>Text: Hier ist nichts...
+@>Conditional Branch: Script: rand(100) < 10
+ @>Script: level = $player.party.map { |p| 
+ :       : p.level }.max
+ :       : WildBattle.start(:TRUBBISH, level)
+ @>
+: Else
+ @>Text: Hier ist nichts...
+ @>
+: Branch End
 @>
 
 #------------------------------------------------------------------------------
@@ -237378,7 +238166,15 @@ Move Animation
 Trigger: Action Button
 
 List of Event Commands:
-@>Text: Hier ist nichts...
+@>Conditional Branch: Script: rand(100) < 10
+ @>Script: level = $player.party.map { |p| 
+ :       : p.level }.max
+ :       : WildBattle.start(:TRUBBISH, level)
+ @>
+: Else
+ @>Text: Hier ist nichts...
+ @>
+: Branch End
 @>
 
 #------------------------------------------------------------------------------
@@ -237845,7 +238641,15 @@ Move Animation
 Trigger: Action Button
 
 List of Event Commands:
-@>Text: Hier ist nichts...
+@>Conditional Branch: Script: rand(100) < 10
+ @>Script: level = $player.party.map { |p| 
+ :       : p.level }.max
+ :       : WildBattle.start(:TRUBBISH, level)
+ @>
+: Else
+ @>Text: Hier ist nichts...
+ @>
+: Branch End
 @>
 
 #------------------------------------------------------------------------------
@@ -238337,7 +239141,15 @@ Move Animation
 Trigger: Action Button
 
 List of Event Commands:
-@>Text: Der Mülleimer gähnt innerlich.
+@>Conditional Branch: Script: rand(100) < 10
+ @>Script: level = $player.party.map { |p| 
+ :       : p.level }.max
+ :       : WildBattle.start(:TRUBBISH, level)
+ @>
+: Else
+ @>Text: Der Mülleimer gähnt innerlich.
+ @>
+: Branch End
 @>
 
 #------------------------------------------------------------------------------
@@ -238759,7 +239571,15 @@ Move Animation
 Trigger: Action Button
 
 List of Event Commands:
-@>Text: Hier ist nichts...
+@>Conditional Branch: Script: rand(100) < 10
+ @>Script: level = $player.party.map { |p| 
+ :       : p.level }.max
+ :       : WildBattle.start(:TRUBBISH, level)
+ @>
+: Else
+ @>Text: Hier ist nichts...
+ @>
+: Branch End
 @>
 
 #------------------------------------------------------------------------------
@@ -239130,7 +239950,15 @@ Move Animation
 Trigger: Action Button
 
 List of Event Commands:
-@>Text: Nichts, aber auf eine hochwertige Art.
+@>Conditional Branch: Script: rand(100) < 10
+ @>Script: level = $player.party.map { |p| 
+ :       : p.level }.max
+ :       : WildBattle.start(:TRUBBISH, level)
+ @>
+: Else
+ @>Text: Nichts, aber auf eine hochwertige Art.
+ @>
+: Branch End
 @>
 
 #------------------------------------------------------------------------------
@@ -239550,7 +240378,15 @@ Move Animation
 Trigger: Action Button
 
 List of Event Commands:
-@>Text: Nur Müll...
+@>Conditional Branch: Script: rand(100) < 10
+ @>Script: level = $player.party.map { |p| 
+ :       : p.level }.max
+ :       : WildBattle.start(:TRUBBISH, level)
+ @>
+: Else
+ @>Text: Nur Müll...
+ @>
+: Branch End
 @>
 
 #------------------------------------------------------------------------------
@@ -239926,9 +240762,17 @@ Move Animation
 Trigger: Action Button
 
 List of Event Commands:
-@>Text: Ein Zettel.
-@>Text: Auf diesem steht...
-@>Text: Niemals die Hoffnung verlieren.
+@>Conditional Branch: Script: rand(100) < 10
+ @>Script: level = $player.party.map { |p| 
+ :       : p.level }.max
+ :       : WildBattle.start(:TRUBBISH, level)
+ @>
+: Else
+ @>Text: Ein Zettel.
+ @>Text: Auf diesem steht...
+ @>Text: Niemals die Hoffnung verlieren.
+ @>
+: Branch End
 @>
 
 #------------------------------------------------------------------------------
@@ -240193,7 +241037,15 @@ Move Animation
 Trigger: Action Button
 
 List of Event Commands:
-@>Text: Ein Hauch von Nichts.
+@>Conditional Branch: Script: rand(100) < 10
+ @>Script: level = $player.party.map { |p| 
+ :       : p.level }.max
+ :       : WildBattle.start(:TRUBBISH, level)
+ @>
+: Else
+ @>Text: Ein Hauch von Nichts.
+ @>
+: Branch End
 @>
 
 #------------------------------------------------------------------------------
@@ -240579,7 +241431,15 @@ Move Animation
 Trigger: Action Button
 
 List of Event Commands:
-@>Text: Hier ist nichts...
+@>Conditional Branch: Script: rand(100) < 10
+ @>Script: level = $player.party.map { |p| 
+ :       : p.level }.max
+ :       : WildBattle.start(:TRUBBISH, level)
+ @>
+: Else
+ @>Text: Hier ist nichts...
+ @>
+: Branch End
 @>
 
 #------------------------------------------------------------------------------
@@ -240835,7 +241695,15 @@ Move Animation
 Trigger: Action Button
 
 List of Event Commands:
-@>Text: Nur Müll.
+@>Conditional Branch: Script: rand(100) < 10
+ @>Script: level = $player.party.map { |p| 
+ :       : p.level }.max
+ :       : WildBattle.start(:TRUBBISH, level)
+ @>
+: Else
+ @>Text: Nur Müll.
+ @>
+: Branch End
 @>
 
 #------------------------------------------------------------------------------
@@ -241086,7 +241954,15 @@ Move Animation
 Trigger: Action Button
 
 List of Event Commands:
-@>Text: Absolut nichts verwertbares...
+@>Conditional Branch: Script: rand(100) < 10
+ @>Script: level = $player.party.map { |p| 
+ :       : p.level }.max
+ :       : WildBattle.start(:TRUBBISH, level)
+ @>
+: Else
+ @>Text: Absolut nichts verwertbares...
+ @>
+: Branch End
 @>
 
 #------------------------------------------------------------------------------
@@ -243381,6 +244257,7 @@ Direction Fix
 Trigger: Action Button
 
 List of Event Commands:
+@>Script: setBattleRule("cannotRun")
 @>Conditional Branch: Script: WildBattle.start(:DURANT, 47)
  @>Control Variables: [0044: Ameisenplage] += 1
  @>Control Self Switch: A =ON
@@ -243428,6 +244305,7 @@ Direction Fix
 Trigger: Action Button
 
 List of Event Commands:
+@>Script: setBattleRule("cannotRun")
 @>Conditional Branch: Script: WildBattle.start(:DURANT, 47)
  @>Control Variables: [0044: Ameisenplage] += 1
  @>Control Self Switch: A =ON
@@ -243475,6 +244353,7 @@ Direction Fix
 Trigger: Action Button
 
 List of Event Commands:
+@>Script: setBattleRule("cannotRun")
 @>Conditional Branch: Script: WildBattle.start(:DURANT, 47)
  @>Control Variables: [0044: Ameisenplage] += 1
  @>Control Self Switch: A =ON
@@ -243522,6 +244401,7 @@ Direction Fix
 Trigger: Action Button
 
 List of Event Commands:
+@>Script: setBattleRule("cannotRun")
 @>Conditional Branch: Script: WildBattle.start(:DURANT, 47)
  @>Control Variables: [0044: Ameisenplage] += 1
  @>Control Self Switch: A =ON
@@ -243568,6 +244448,7 @@ Stop Animation
 Trigger: Action Button
 
 List of Event Commands:
+@>Script: setBattleRule("cannotRun")
 @>Conditional Branch: Script: WildBattle.start(:DURANT, 47)
  @>Control Variables: [0044: Ameisenplage] += 1
  @>Control Self Switch: A =ON
@@ -243615,6 +244496,7 @@ Direction Fix
 Trigger: Action Button
 
 List of Event Commands:
+@>Script: setBattleRule("cannotRun")
 @>Conditional Branch: Script: WildBattle.start(:DURANT, 47)
  @>Control Variables: [0044: Ameisenplage] += 1
  @>Control Self Switch: A =ON
@@ -243708,6 +244590,7 @@ Direction Fix
 Trigger: Action Button
 
 List of Event Commands:
+@>Script: setBattleRule("cannotRun")
 @>Conditional Branch: Script: WildBattle.start(:DURANT, 47)
  @>Control Variables: [0044: Ameisenplage] += 1
  @>Control Self Switch: A =ON
@@ -243755,6 +244638,7 @@ Direction Fix
 Trigger: Action Button
 
 List of Event Commands:
+@>Script: setBattleRule("cannotRun")
 @>Conditional Branch: Script: WildBattle.start(:DURANT, 47)
  @>Control Variables: [0044: Ameisenplage] += 1
  @>Control Self Switch: A =ON
@@ -243802,6 +244686,7 @@ Direction Fix
 Trigger: Action Button
 
 List of Event Commands:
+@>Script: setBattleRule("cannotRun")
 @>Conditional Branch: Script: WildBattle.start(:DURANT, 47)
  @>Control Variables: [0044: Ameisenplage] += 1
  @>Control Self Switch: A =ON
@@ -245917,34 +246802,6 @@ Move Animation
 Trigger: Action Button
 
 List of Event Commands:
-@>
-
-#------------------------------------------------------------------------------
-Event ID: 061
-Event Name: EV061
-(X,Y): (020,017)
-
-Page #1
-Conditions
-None
-
-Autonomous Movement
-Type: Fixed
-Speed: 3: Slow
-Freq: 3: Low
-Options Enabled
-Move Animation
-Trigger: Action Button
-
-List of Event Commands:
-@>Script: pkmn = Pokemon.new(:KANGASKHAN, 58)
-:       : pkmn.ability_index = 2
-:       : pbAddPokemonSilent(pkmn)
-@>Script: pbAddPokemonSilent(:VENUSAUR,58)
-@>Script: pbAddPokemonSilent(:MILOTIC,58)
-@>Script: pbAddPokemonSilent(:HOUNDOOM,58)
-@>Script: pbAddPokemonSilent(:TOXTRICITY,58)
-@>Script: pbAddPokemonSilent(:GENGAR,58)
 @>
 
 #------------------------------------------------------------------------------
@@ -250151,6 +251008,11 @@ Move Animation
 Trigger: Player Touch
 
 List of Event Commands:
+@>Change Screen Color Tone: (-255,-255,-255,0), @6
+@>Wait: 8 frame(s)
+@>Transfer Player:[342: Route 12], (007,018), Right
+@>Change Screen Color Tone: (0,0,0,0), @6
+@>Wait: 8 frame(s)
 @>Script: pbSetSelfSwitch(80,"A",false)
 @>Memorize BGM/BGS
 @>Fade Out BGM: 4 sec.
@@ -250268,6 +251130,102 @@ List of Event Commands:
  @>Wait: 10 frame(s)
  @>Text: \xn[Kairos]Das...
  @>Text: \xn[Kairos]ist unmöglich.
+ @>Text: \xn[Kairos]Aber eine Sache werde ich dir mit auf den 
+  :    : Weg geben.
+ @>Set Move Route: [NAGANADEL]
+  :              : $>Change Opacity: 25
+  :              : $>Wait: 2 frame(s)
+ @>Set Event Location: [NAGANADEL],(008,018), Down
+ @>Set Move Route: [NAGANADEL]
+  :              : $>Change Opacity: 50
+  :              : $>Wait: 2 frame(s)
+  :              : $>Change Opacity: 75
+  :              : $>Wait: 2 frame(s)
+  :              : $>Change Opacity: 100
+  :              : $>Wait: 2 frame(s)
+  :              : $>Change Opacity: 125
+  :              : $>Wait: 2 frame(s)
+  :              : $>Change Opacity: 150
+  :              : $>Wait: 2 frame(s)
+  :              : $>Change Opacity: 175
+  :              : $>Wait: 2 frame(s)
+  :              : $>Change Opacity: 200
+  :              : $>Wait: 2 frame(s)
+  :              : $>Change Opacity: 225
+  :              : $>Wait: 2 frame(s)
+ @>Wait: 16 frame(s)
+ @>Set Move Route: [NAGANADEL]
+  :              : $>Wait: 2 frame(s)
+  :              : $>Graphic: "NAGANADEL EVENT', 0, 2, 1
+  :              : $>Wait: 2 frame(s)
+  :              : $>Graphic: "NAGANADEL EVENT', 0, 2, 1
+  :              : $>Wait: 2 frame(s)
+  :              : $>Graphic: "NAGANADEL EVENT', 0, 2, 2
+  :              : $>Wait: 2 frame(s)
+  :              : $>Graphic: "NAGANADEL EVENT', 0, 2, 3
+  :              : $>Wait: 2 frame(s)
+  :              : $>Graphic: "NAGANADEL EVENT', 0, 2, 1
+  :              : $>Wait: 2 frame(s)
+  :              : $>Graphic: "NAGANADEL EVENT', 0, 2, 1
+  :              : $>Wait: 2 frame(s)
+  :              : $>Graphic: "NAGANADEL EVENT', 0, 2, 2
+  :              : $>Wait: 2 frame(s)
+  :              : $>Graphic: "NAGANADEL EVENT', 0, 2, 3
+  :              : $>Wait: 2 frame(s)
+  :              : $>Graphic: "NAGANADEL EVENT', 0, 2, 1
+  :              : $>Wait: 2 frame(s)
+  :              : $>Graphic: "NAGANADEL EVENT', 0, 2, 1
+  :              : $>Wait: 2 frame(s)
+  :              : $>Graphic: "NAGANADEL EVENT', 0, 2, 2
+  :              : $>Wait: 2 frame(s)
+  :              : $>Graphic: "NAGANADEL EVENT', 0, 2, 3
+  :              : $>Wait: 2 frame(s)
+  :              : $>Graphic: "NAGANADEL EVENT', 0, 4, 0
+  :              : $>Wait: 2 frame(s)
+  :              : $>Graphic: "NAGANADEL EVENT', 0, 4, 1
+  :              : $>Wait: 2 frame(s)
+  :              : $>Graphic: "NAGANADEL EVENT', 0, 4, 2
+  :              : $>SE: 'PRSFX- Poison Sting', 100, 65
+  :              : $>Wait: 2 frame(s)
+  :              : $>Graphic: "NAGANADEL EVENT', 0, 4, 3
+  :              : $>Wait: 2 frame(s)
+  :              : $>Graphic: "NAGANADEL EVENT', 0, 6, 0
+  :              : $>Wait: 2 frame(s)
+  :              : $>Graphic: "NAGANADEL EVENT', 0, 2, 0
+  :              : $>Stop Animation ON
+ @>Wait: 50 frame(s)
+ @>Set Move Route: [NAGANADEL]
+  :              : $>Change Opacity: 225
+  :              : $>Wait: 2 frame(s)
+  :              : $>Change Opacity: 200
+  :              : $>Wait: 2 frame(s)
+  :              : $>Change Opacity: 175
+  :              : $>Wait: 2 frame(s)
+  :              : $>Change Opacity: 150
+  :              : $>Wait: 2 frame(s)
+  :              : $>Change Opacity: 125
+  :              : $>Wait: 2 frame(s)
+  :              : $>Change Opacity: 100
+  :              : $>Wait: 2 frame(s)
+  :              : $>Change Opacity: 75
+  :              : $>Wait: 2 frame(s)
+  :              : $>Change Opacity: 50
+  :              : $>Wait: 2 frame(s)
+  :              : $>Change Opacity: 25
+  :              : $>Wait: 2 frame(s)
+ @>Wait: 18 frame(s)
+ @>Set Event Location: [NAGANADEL],(003,000)
+ @>Show Animation: Player, [Poison bubble]
+ @>Script: eligible = $player.party.select { |p| 
+ :       : !p.shadowPokemon? && !p.egg? }
+ :       : if eligible.empty?
+ :       :   pbMessage(_INTL("All deine Pokémon 
+ :       : sind bereits Crypto-Pokémon..."))
+ :       : else
+ :       :   pkmn = eligible.sample
+ :       :   pkmn.makeShadow
+ :       : end
+ @>Wait: 24 frame(s)
  @>Scroll Map: Right, 2, 3
  @>Wait: 20 frame(s)
  @>Control Switches: [0324: Celebi Event] = ON
@@ -250617,6 +251575,10 @@ List of Event Commands:
 @>Wait: 6 frame(s)
 @>Text: \xn[Elisa]Wenn uns endlich jemand erzählen kann, 
  :    : was hier vor sich geht, verschwindet es einfach.
+@>Text: \xn[Elisa]Oh nein, was hat er deinem Pokémon 
+ :    : angtan?
+@>Text: \xn[Elisa]Ist es...
+@>Text: \xn[Elisa]jetzt auch ein Crypto-Pokémon?!
 @>Text: \xn[Elisa]Wir sollten zurück nach Velmora und dem 
  :    : Professor berichten, was passiert ist.
 @>Change Screen Color Tone: (-255,-255,-255,0), @20
@@ -251676,6 +252638,28 @@ Trigger: Autorun
 List of Event Commands:
 @>Control Self Switch: A =OFF
 @>Script: setTempSwitchOn("A")
+@>
+
+#------------------------------------------------------------------------------
+Event ID: 115
+Event Name: NAGANADEL
+(X,Y): (003,000)
+
+Page #1
+Conditions
+None
+
+Graphic: NAGANADEL EVENT
+
+Autonomous Movement
+Type: Fixed
+Speed: 3: Slow
+Freq: 3: Low
+Options Enabled
+Move Animation
+Trigger: Action Button
+
+List of Event Commands:
 @>
 
 #------------------------------------------------------------------------------
@@ -279629,159 +280613,6 @@ List of Event Commands:
 #------------------------------------------------------------------------------
 
 #==============================================================================
-Map ID: 371
-Map Name: Mistral Händler
-Tileset: 030: Stadt 5 Innen
-Width: 25, Height: 25
-Auto-Change BGM: PokeMarkt
-
-#------------------------------------------------------------------------------
-Event ID: 005
-Event Name: EV005
-(X,Y): (016,011)
-
-Page #1
-Conditions
-None
-
-Autonomous Movement
-Type: Fixed
-Speed: 3: Slow
-Freq: 3: Low
-Options Enabled
-Move Animation
-Trigger: Action Button
-
-List of Event Commands:
-@>Text: Der Durchgang ist nur für Mitarbeiter.
-@>
-
-#------------------------------------------------------------------------------
-Event ID: 006
-Event Name: EV006
-(X,Y): (015,011)
-
-Page #1
-Conditions
-None
-
-Autonomous Movement
-Type: Fixed
-Speed: 3: Slow
-Freq: 3: Low
-Options Enabled
-Move Animation
-Trigger: Action Button
-
-List of Event Commands:
-@>Text: Der Durchgang ist nur für Mitarbeiter.
-@>
-
-#------------------------------------------------------------------------------
-
-#==============================================================================
-Map ID: 372
-Map Name: Mistral Händler
-Tileset: 030: Stadt 5 Innen
-Width: 25, Height: 25
-Auto-Change BGM: PokeMarkt
-
-#------------------------------------------------------------------------------
-Event ID: 005
-Event Name: EV005
-(X,Y): (015,011)
-
-Page #1
-Conditions
-None
-
-Autonomous Movement
-Type: Fixed
-Speed: 3: Slow
-Freq: 3: Low
-Options Enabled
-Move Animation
-Trigger: Action Button
-
-List of Event Commands:
-@>Text: Der Durchgang ist nur für Mitarbeiter.
-@>
-
-#------------------------------------------------------------------------------
-Event ID: 006
-Event Name: EV006
-(X,Y): (016,011)
-
-Page #1
-Conditions
-None
-
-Autonomous Movement
-Type: Fixed
-Speed: 3: Slow
-Freq: 3: Low
-Options Enabled
-Move Animation
-Trigger: Action Button
-
-List of Event Commands:
-@>Text: Der Durchgang ist nur für Mitarbeiter.
-@>
-
-#------------------------------------------------------------------------------
-
-#==============================================================================
-Map ID: 373
-Map Name: Mistral Händler
-Tileset: 030: Stadt 5 Innen
-Width: 25, Height: 25
-Auto-Change BGM: PokeMarkt
-
-#------------------------------------------------------------------------------
-Event ID: 005
-Event Name: EV005
-(X,Y): (015,011)
-
-Page #1
-Conditions
-None
-
-Autonomous Movement
-Type: Fixed
-Speed: 3: Slow
-Freq: 3: Low
-Options Enabled
-Move Animation
-Trigger: Action Button
-
-List of Event Commands:
-@>Text: Der Durchgang ist nur für Mitarbeiter.
-@>
-
-#------------------------------------------------------------------------------
-Event ID: 006
-Event Name: EV006
-(X,Y): (016,011)
-
-Page #1
-Conditions
-None
-
-Autonomous Movement
-Type: Fixed
-Speed: 3: Slow
-Freq: 3: Low
-Options Enabled
-Move Animation
-Trigger: Action Button
-
-List of Event Commands:
-@>Text: Der Durchgang ist nur für Mitarbeiter.
-@>
-
-#------------------------------------------------------------------------------
-
-#==============================================================================
 Map ID: 374
 Map Name: Lucenhöhle
 Tileset: 125: Cave
@@ -280714,7 +281545,15 @@ Move Animation
 Trigger: Action Button
 
 List of Event Commands:
-@>Text: Mal wieder nichts.
+@>Conditional Branch: Script: rand(100) < 10
+ @>Script: level = $player.party.map { |p| 
+ :       : p.level }.max
+ :       : WildBattle.start(:TRUBBISH, level)
+ @>
+: Else
+ @>Text: Mal wieder nichts.
+ @>
+: Branch End
 @>
 
 #------------------------------------------------------------------------------
@@ -280735,7 +281574,15 @@ Move Animation
 Trigger: Action Button
 
 List of Event Commands:
-@>Text: Hier gibt es nichts zu sehen.
+@>Conditional Branch: Script: rand(100) < 10
+ @>Script: level = $player.party.map { |p| 
+ :       : p.level }.max
+ :       : WildBattle.start(:TRUBBISH, level)
+ @>
+: Else
+ @>Text: Hier gibt es nichts zu sehen.
+ @>
+: Branch End
 @>
 
 #------------------------------------------------------------------------------
@@ -281660,8 +282507,16 @@ Move Animation
 Trigger: Action Button
 
 List of Event Commands:
-@>Text: Könnte das ein Item sein?
-@>Text: Nein, nur ein altes Sockenpaar.
+@>Conditional Branch: Script: rand(100) < 10
+ @>Script: level = $player.party.map { |p| 
+ :       : p.level }.max
+ :       : WildBattle.start(:TRUBBISH, level)
+ @>
+: Else
+ @>Text: Könnte das ein Item sein?
+ @>Text: Nein, nur ein altes Sockenpaar.
+ @>
+: Branch End
 @>
 
 #------------------------------------------------------------------------------
@@ -281682,7 +282537,15 @@ Move Animation
 Trigger: Action Button
 
 List of Event Commands:
-@>Text: Nichts, aber hey, du hast es wenigstens versucht.
+@>Conditional Branch: Script: rand(100) < 10
+ @>Script: level = $player.party.map { |p| 
+ :       : p.level }.max
+ :       : WildBattle.start(:TRUBBISH, level)
+ @>
+: Else
+ @>Text: Nichts, aber hey, du hast es wenigstens versucht.
+ @>
+: Branch End
 @>
 
 #------------------------------------------------------------------------------
@@ -282608,7 +283471,15 @@ Move Animation
 Trigger: Action Button
 
 List of Event Commands:
-@>Text: Nur Luft, aber immerhin Luft.
+@>Conditional Branch: Script: rand(100) < 10
+ @>Script: level = $player.party.map { |p| 
+ :       : p.level }.max
+ :       : WildBattle.start(:TRUBBISH, level)
+ @>
+: Else
+ @>Text: Nur Luft, aber immerhin Luft.
+ @>
+: Branch End
 @>
 
 #------------------------------------------------------------------------------
@@ -282629,7 +283500,15 @@ Move Animation
 Trigger: Action Button
 
 List of Event Commands:
-@>Text: Du entdeckst nichts und fühlst dich ertappt.
+@>Conditional Branch: Script: rand(100) < 10
+ @>Script: level = $player.party.map { |p| 
+ :       : p.level }.max
+ :       : WildBattle.start(:TRUBBISH, level)
+ @>
+: Else
+ @>Text: Du entdeckst nichts und fühlst dich ertappt.
+ @>
+: Branch End
 @>
 
 #------------------------------------------------------------------------------
@@ -283461,9 +284340,17 @@ Move Animation
 Trigger: Action Button
 
 List of Event Commands:
-@>Text: Du schaust hinein...
-@>Text: ein kurzer Windstoß macht alles dramatischer, als es 
- :    : sein sollte.
+@>Conditional Branch: Script: rand(100) < 10
+ @>Script: level = $player.party.map { |p| 
+ :       : p.level }.max
+ :       : WildBattle.start(:TRUBBISH, level)
+ @>
+: Else
+ @>Text: Du schaust hinein...
+ @>Text: ein kurzer Windstoß macht alles dramatischer, als es 
+  :    : sein sollte.
+ @>
+: Branch End
 @>
 
 #------------------------------------------------------------------------------
@@ -289428,7 +290315,15 @@ Move Animation
 Trigger: Action Button
 
 List of Event Commands:
-@>Text: Hier ist nichts...
+@>Conditional Branch: Script: rand(100) < 10
+ @>Script: level = $player.party.map { |p| 
+ :       : p.level }.max
+ :       : WildBattle.start(:TRUBBISH, level)
+ @>
+: Else
+ @>Text: Hier ist nichts...
+ @>
+: Branch End
 @>
 
 #------------------------------------------------------------------------------
@@ -294351,7 +295246,15 @@ Move Animation
 Trigger: Action Button
 
 List of Event Commands:
-@>Text: Hier ist nichts...
+@>Conditional Branch: Script: rand(100) < 10
+ @>Script: level = $player.party.map { |p| 
+ :       : p.level }.max
+ :       : WildBattle.start(:TRUBBISH, level)
+ @>
+: Else
+ @>Text: Hier ist nichts...
+ @>
+: Branch End
 @>
 
 #------------------------------------------------------------------------------
@@ -296626,7 +297529,7 @@ List of Event Commands:
  :              : $>Turn Up
 @>Wait for Move's Completion
 @>Text: \xn[Elisa]Was...
-@>Text: \xn[Elisa]was ist das hier?
+@>Text: \xn[Elisa]was ist DAS hier?
 @>Show Animation: [Elisa], [Question bubble]
 @>Wait: 24 frame(s)
 @>Set Move Route: [Elisa]
@@ -296748,16 +297651,20 @@ List of Event Commands:
   :              : $>Move Left
  @>Wait for Move's Completion
  @>Wait: 20 frame(s)
- @>Script: loop do
- :       :   if $player.party.length < 6 
- :       : pbAddPokemon(:EEVEE, 35) 
- :       :  break
- :       :  else
- :       :   pbMessage("Du hast keinen Platz im 
- :       : Team! Bitte mache einen Platz frei.")
- :       :   pbPokeCenterPC
- :       :  end
- :       : end
+ @>Loop
+  @>Conditional Branch: Script: $player.party.length < 6
+   @>Script: pkmn = Pokemon.new(:EEVEE, 40)
+   :       : pkmn.makeShadow
+   :       : pbAddPokemon(pkmn)
+   @>Break Loop
+   @>
+  : Else
+   @>Text: Du hast keinen Platz im Team! Bitte mache einen Platz 
+    :    : frei.
+   @>
+  : Branch End
+  @>
+ : Repeat Above
  @>Set Move Route: [AEON]
   :              : $>Move Right
  @>Set Move Route: Player
@@ -296980,12 +297887,36 @@ List of Event Commands:
  @>Text: \xn[Elisa]Das würde einiges erklären.
  @>Text: \xn[Elisa]Aber wieso das alles?
  @>Text: \xn[Elisa]Was wollte er mit unseren Pokémon?
+ @>Text: \xn[Elisa]Apropos!
+ @>Show Animation: [Elisa], [Exclaim bubble]
+ @>Wait: 10 frame(s)
+ @>Text: \xn[Elisa]Was...
+ @>Text: \xn[Elisa]ist mit meinem Voltilamm passiert?
+ @>Text: \xn[Elisa]Es verhält sich ganz seltsam...
+ @>Text: \xn[Elisa]und dein Evoli auch!
+ @>Play SE: 'PRSFX- Protect', 100, 150
+ @>Wait: 10 frame(s)
+ @>Show Animation: [Elisa], [Exclaim bubble]
+ @>Wait: 10 frame(s)
+ @>Text: \xn[Elisa]Oh, schau dir das an!
+ @>Text: \xn[Elisa]Mein Pokédex sagt, dass es ein Crypto-
+  :    : Pokémon ist.
+ @>Text: \xn[Elisa]Was ist das denn jetzt schon wieder?
+ @>Text: \xn[Elisa]Hier steht, dass die Herzen dieser Pokémon 
+  :    : künstlich verschlossen wurden.
+ @>Text: \xn[Elisa]Man kann sie aber wieder öffnen und 
+  :    : die Pokémon erlösen.
+ @>Text: \xn[Elisa]Und wie?
+ @>Text: \xn[Elisa]Kann nicht ein Mal im Leben etwas Gutes 
+  :    : passieren?
  @>Text: \xn[Elisa]Was ist denn jetzt Team 0 und wieso sollten 
   :    : wir dafür verantwortlich sein?
  @>Text: \xn[Elisa]Eines weiß ich sicher, wir sollten hier 
   :    : verschwinden, so schnell es geht.
  @>Text: \xn[Elisa]Wir haben unsere Pokémon zurück, dafür 
   :    : haben wir lange genug gekämpft.
+ @>Text: \xn[Elisa]Der Professor hat vielleicht Antworten zu 
+  :    : unseren Crypto-Pokémon.
  @>Text: \xn[Elisa]Aber jetzt ist Matteo fort.
  @>Text: \xn[Elisa]Ich muss ihn finden.
  @>Set Move Route: [Elisa]
@@ -297053,7 +297984,9 @@ List of Event Commands:
   :              : $>Move Up
   :              : $>Change Speed: 3
  @>Wait for Move's Completion
- @>Script: pbAddPokemon(:NULLIN, 40)
+ @>Script: pkmn = Pokemon.new(:NULLIN, 40)
+ :       : pkmn.makeShadow
+ :       : pbAddPokemon(pkmn)
  @>Script: pbSetSelfSwitch(15,"A",true)
  @>Control Switches: [0222: Aeon besiegt] = ON
  @>Control Self Switch: A =ON
@@ -299036,8 +299969,16 @@ Move Animation
 Trigger: Action Button
 
 List of Event Commands:
-@>Text: Leer, wie dein Portmonnaie nach einem Shopping-
- :    : Trip.
+@>Conditional Branch: Script: rand(100) < 10
+ @>Script: level = $player.party.map { |p| 
+ :       : p.level }.max
+ :       : WildBattle.start(:TRUBBISH, level)
+ @>
+: Else
+ @>Text: Leer, wie dein Portmonnaie nach einem Shopping-
+  :    : Trip.
+ @>
+: Branch End
 @>
 
 #------------------------------------------------------------------------------
@@ -299078,7 +300019,15 @@ Move Animation
 Trigger: Action Button
 
 List of Event Commands:
-@>Text: Hier ist nichts...
+@>Conditional Branch: Script: rand(100) < 10
+ @>Script: level = $player.party.map { |p| 
+ :       : p.level }.max
+ :       : WildBattle.start(:TRUBBISH, level)
+ @>
+: Else
+ @>Text: Hier ist nichts...
+ @>
+: Branch End
 @>
 
 #------------------------------------------------------------------------------
@@ -301195,7 +302144,15 @@ Move Animation
 Trigger: Action Button
 
 List of Event Commands:
-@>Text: Hier ist nichts...
+@>Conditional Branch: Script: rand(100) < 10
+ @>Script: level = $player.party.map { |p| 
+ :       : p.level }.max
+ :       : WildBattle.start(:TRUBBISH, level)
+ @>
+: Else
+ @>Text: Hier ist nichts...
+ @>
+: Branch End
 @>
 
 #------------------------------------------------------------------------------
@@ -301216,7 +302173,15 @@ Move Animation
 Trigger: Action Button
 
 List of Event Commands:
-@>Text: Hier ist nichts...
+@>Conditional Branch: Script: rand(100) < 10
+ @>Script: level = $player.party.map { |p| 
+ :       : p.level }.max
+ :       : WildBattle.start(:TRUBBISH, level)
+ @>
+: Else
+ @>Text: Hier ist nichts...
+ @>
+: Branch End
 @>
 
 #------------------------------------------------------------------------------
@@ -302080,7 +303045,15 @@ Move Animation
 Trigger: Action Button
 
 List of Event Commands:
-@>Text: Hier ist nichts...
+@>Conditional Branch: Script: rand(100) < 10
+ @>Script: level = $player.party.map { |p| 
+ :       : p.level }.max
+ :       : WildBattle.start(:TRUBBISH, level)
+ @>
+: Else
+ @>Text: Hier ist nichts...
+ @>
+: Branch End
 @>
 
 #------------------------------------------------------------------------------
@@ -302101,7 +303074,15 @@ Move Animation
 Trigger: Action Button
 
 List of Event Commands:
-@>Text: Hier ist nichts...
+@>Conditional Branch: Script: rand(100) < 10
+ @>Script: level = $player.party.map { |p| 
+ :       : p.level }.max
+ :       : WildBattle.start(:TRUBBISH, level)
+ @>
+: Else
+ @>Text: Hier ist nichts...
+ @>
+: Branch End
 @>
 
 #------------------------------------------------------------------------------
@@ -302892,7 +303873,15 @@ Move Animation
 Trigger: Action Button
 
 List of Event Commands:
-@>Text: Hier ist nichts...
+@>Conditional Branch: Script: rand(100) < 10
+ @>Script: level = $player.party.map { |p| 
+ :       : p.level }.max
+ :       : WildBattle.start(:TRUBBISH, level)
+ @>
+: Else
+ @>Text: Hier ist nichts...
+ @>
+: Branch End
 @>
 
 #------------------------------------------------------------------------------
@@ -302913,7 +303902,15 @@ Move Animation
 Trigger: Action Button
 
 List of Event Commands:
-@>Text: Hier ist nichts...
+@>Conditional Branch: Script: rand(100) < 10
+ @>Script: level = $player.party.map { |p| 
+ :       : p.level }.max
+ :       : WildBattle.start(:TRUBBISH, level)
+ @>
+: Else
+ @>Text: Hier ist nichts...
+ @>
+: Branch End
 @>
 
 #------------------------------------------------------------------------------
@@ -311118,7 +312115,15 @@ Move Animation
 Trigger: Action Button
 
 List of Event Commands:
-@>Text: Hier ist nichts...
+@>Conditional Branch: Script: rand(100) < 10
+ @>Script: level = $player.party.map { |p| 
+ :       : p.level }.max
+ :       : WildBattle.start(:TRUBBISH, level)
+ @>
+: Else
+ @>Text: Hier ist nichts...
+ @>
+: Branch End
 @>
 
 #------------------------------------------------------------------------------
@@ -311139,7 +312144,15 @@ Move Animation
 Trigger: Action Button
 
 List of Event Commands:
-@>Text: Nur Müll...
+@>Conditional Branch: Script: rand(100) < 10
+ @>Script: level = $player.party.map { |p| 
+ :       : p.level }.max
+ :       : WildBattle.start(:TRUBBISH, level)
+ @>
+: Else
+ @>Text: Hier ist nichts...
+ @>
+: Branch End
 @>
 
 #------------------------------------------------------------------------------
@@ -315686,7 +316699,15 @@ Move Animation
 Trigger: Action Button
 
 List of Event Commands:
-@>Text: Hier, ein hauch von nichts für unterwegs.
+@>Conditional Branch: Script: rand(100) < 10
+ @>Script: level = $player.party.map { |p| 
+ :       : p.level }.max
+ :       : WildBattle.start(:TRUBBISH, level)
+ @>
+: Else
+ @>Text: Hier, ein hauch von nichts für unterwegs.
+ @>
+: Branch End
 @>
 
 #------------------------------------------------------------------------------
@@ -315881,7 +316902,15 @@ Move Animation
 Trigger: Action Button
 
 List of Event Commands:
-@>Text: Hier ist nichts.
+@>Conditional Branch: Script: rand(100) < 10
+ @>Script: level = $player.party.map { |p| 
+ :       : p.level }.max
+ :       : WildBattle.start(:TRUBBISH, level)
+ @>
+: Else
+ @>Text: Hier ist nichts...
+ @>
+: Branch End
 @>
 
 #------------------------------------------------------------------------------
@@ -316172,7 +317201,15 @@ Move Animation
 Trigger: Action Button
 
 List of Event Commands:
-@>Text: Hier ist nichts.
+@>Conditional Branch: Script: rand(100) < 10
+ @>Script: level = $player.party.map { |p| 
+ :       : p.level }.max
+ :       : WildBattle.start(:TRUBBISH, level)
+ @>
+: Else
+ @>Text: Hier ist nichts.
+ @>
+: Branch End
 @>
 
 #------------------------------------------------------------------------------
@@ -316255,7 +317292,15 @@ Move Animation
 Trigger: Action Button
 
 List of Event Commands:
-@>Text: Hier ist nichts.
+@>Conditional Branch: Script: rand(100) < 10
+ @>Script: level = $player.party.map { |p| 
+ :       : p.level }.max
+ :       : WildBattle.start(:TRUBBISH, level)
+ @>
+: Else
+ @>Text: Hier ist nichts.
+ @>
+: Branch End
 @>
 
 #------------------------------------------------------------------------------
@@ -319789,6 +320834,26 @@ List of Event Commands:
 Page #3
 Conditions
 Switch 0321: Kopplosio besiegt is ON
+
+Autonomous Movement
+Type: Fixed
+Speed: 3: Slow
+Freq: 3: Low
+Options Enabled
+Move Animation
+Trigger: Action Button
+
+List of Event Commands:
+@>
+
+#------------------------------------------------------------------------------
+Event ID: 029
+Event Name: Block
+(X,Y): (045,032)
+
+Page #1
+Conditions
+None
 
 Autonomous Movement
 Type: Fixed
@@ -338899,9 +339964,17 @@ Move Animation
 Trigger: Action Button
 
 List of Event Commands:
-@>Text: Nichts.
-@>Text: Nichtmal ein altes Item.
-@>Text: Wie enttäuschend.
+@>Conditional Branch: Script: rand(100) < 10
+ @>Script: level = $player.party.map { |p| 
+ :       : p.level }.max
+ :       : WildBattle.start(:TRUBBISH, level)
+ @>
+: Else
+ @>Text: Nichts.
+ @>Text: Nichtmal ein altes Item.
+ @>Text: Wie enttäuschend.
+ @>
+: Branch End
 @>
 
 #------------------------------------------------------------------------------
@@ -338922,9 +339995,17 @@ Move Animation
 Trigger: Action Button
 
 List of Event Commands:
-@>Text: Du lugst hinein...
-@>Wait: 20 frame(s)
-@>Text: und wünschst, du hättest es nicht getan.
+@>Conditional Branch: Script: rand(100) < 10
+ @>Script: level = $player.party.map { |p| 
+ :       : p.level }.max
+ :       : WildBattle.start(:TRUBBISH, level)
+ @>
+: Else
+ @>Text: Du lugst hinein...
+ @>Wait: 20 frame(s)
+ @>Text: und wünschst, du hättest es nicht getan.
+ @>
+: Branch End
 @>
 
 #------------------------------------------------------------------------------
@@ -339252,7 +340333,15 @@ Move Animation
 Trigger: Action Button
 
 List of Event Commands:
-@>Text: Einmal reingeschaut, nichts zu holen.
+@>Conditional Branch: Script: rand(100) < 10
+ @>Script: level = $player.party.map { |p| 
+ :       : p.level }.max
+ :       : WildBattle.start(:TRUBBISH, level)
+ @>
+: Else
+ @>Text: Einmal reingeschaut, nichts zu holen.
+ @>
+: Branch End
 @>
 
 #------------------------------------------------------------------------------
@@ -339335,7 +340424,15 @@ Move Animation
 Trigger: Action Button
 
 List of Event Commands:
-@>Text: Leer, wie dein Bauch nach einer langen Wanderung.
+@>Conditional Branch: Script: rand(100) < 10
+ @>Script: level = $player.party.map { |p| 
+ :       : p.level }.max
+ :       : WildBattle.start(:TRUBBISH, level)
+ @>
+: Else
+ @>Text: Leer, wie dein Bauch nach einer langen Wanderung.
+ @>
+: Branch End
 @>
 
 #------------------------------------------------------------------------------
@@ -340060,7 +341157,15 @@ Move Animation
 Trigger: Action Button
 
 List of Event Commands:
-@>Text: Der Mülleimer ist leer, saubere Sache.
+@>Conditional Branch: Script: rand(100) < 10
+ @>Script: level = $player.party.map { |p| 
+ :       : p.level }.max
+ :       : WildBattle.start(:TRUBBISH, level)
+ @>
+: Else
+ @>Text: Der Mülleimer ist leer, saubere Sache.
+ @>
+: Branch End
 @>
 
 #------------------------------------------------------------------------------
@@ -340353,7 +341458,15 @@ Move Animation
 Trigger: Action Button
 
 List of Event Commands:
-@>Text: Nichts drin, nichtmal ein Bonbonpapier.
+@>Conditional Branch: Script: rand(100) < 10
+ @>Script: level = $player.party.map { |p| 
+ :       : p.level }.max
+ :       : WildBattle.start(:TRUBBISH, level)
+ @>
+: Else
+ @>Text: Nichts drin, nichtmal ein Bonbonpapier.
+ @>
+: Branch End
 @>
 
 #------------------------------------------------------------------------------
@@ -340860,7 +341973,15 @@ Move Animation
 Trigger: Action Button
 
 List of Event Commands:
-@>Text: Blitzblank, jemand scheint hier ordentlich zu sein.
+@>Conditional Branch: Script: rand(100) < 10
+ @>Script: level = $player.party.map { |p| 
+ :       : p.level }.max
+ :       : WildBattle.start(:TRUBBISH, level)
+ @>
+: Else
+ @>Text: Blitzblank, jemand scheint hier ordentlich zu sein.
+ @>
+: Branch End
 @>
 
 #------------------------------------------------------------------------------
@@ -341112,12 +342233,12 @@ Trigger: Action Button
 List of Event Commands:
 @>Conditional Branch: Switch [0239: Angler-Quest 5] == ON
  @>Text: \xn[Meisterangler Sybille]Oh, du!
- @>Text: \xn[Meisterangler Sybille]Kanst du mir, naja, einen 
+ @>Text: \xn[Meisterangler Sybille]Kannst du mir, naja, einen 
   :    : kleinen Traum erfüllen?
  @>Text: \xn[Meisterangler Sybille]Ich würde so gern einmal 
   :    : ein Shiny-Karpador sehen.
- @>Text: \xn[Meisterangler Sybille]Falls du eins besitzt, 
-  :    : würdest du mir es zeigen?
+ @>Text: \xn[Meisterangler Sybille]Falls du eines besitzt, 
+  :    : würdest du es mir zeigen?
  @>Script: activateQuest(:Quest46)
  @>Script: pbSetSelfSwitch(7,"A",true)
  @>Control Self Switch: A =ON
@@ -341127,8 +342248,8 @@ List of Event Commands:
   :    : irgendwo schwimmt ein Fisch aus purem Gold.
  @>Text: \xn[Meisterangler Sybille]Ich wette, es ist nur ein 
   :    : Mythos...
- @>Text: \xn[Meisterangler Sybille]aber igrndwie lässt mich der 
-  :    : Gedanke nicht los.
+ @>Text: \xn[Meisterangler Sybille]aber irgendwie lässt mich 
+  :    : der Gedanke nicht los.
  @>
 : Branch End
 @>
@@ -341324,8 +342445,16 @@ Move Animation
 Trigger: Action Button
 
 List of Event Commands:
-@>Text: Nur frische Luft und vielleicht ein Hauch von 
- :    : Reinigungsmittel.
+@>Conditional Branch: Script: rand(100) < 10
+ @>Script: level = $player.party.map { |p| 
+ :       : p.level }.max
+ :       : WildBattle.start(:TRUBBISH, level)
+ @>
+: Else
+ @>Text: Nur frische Luft und vielleicht ein Hauch von 
+  :    : Reinigungsmittel.
+ @>
+: Branch End
 @>
 
 #------------------------------------------------------------------------------
@@ -342159,136 +343288,6 @@ Width: 80, Height: 40
 Auto-Change BGM: SwSh 147 Battle! (Calyrex)
 
 #------------------------------------------------------------------------------
-Event ID: 001
-Event Name: Rotes licht .sl
-(X,Y): (008,013)
-
-Page #1
-Conditions
-None
-
-Graphic: Kraftwerk Lampe
-
-Autonomous Movement
-Type: Fixed
-Speed: 2: Slower
-Freq: 3: Low
-Options Enabled
-Stop Animation
-Through
-Always on Top
-Trigger: Action Button
-
-List of Event Commands:
-@>
-
-Page #2
-Conditions
-Switch 0119: VOLTRIANT1 besiegt is ON
-
-Autonomous Movement
-Type: Fixed
-Speed: 3: Slow
-Freq: 3: Low
-Options Enabled
-Move Animation
-Trigger: Action Button
-
-List of Event Commands:
-@>
-
-#------------------------------------------------------------------------------
-Event ID: 013
-Event Name: EV013
-(X,Y): (042,027)
-
-Page #1
-Conditions
-None
-
-Autonomous Movement
-Type: Fixed
-Speed: 3: Slow
-Freq: 3: Low
-Options Enabled
-Move Animation
-Trigger: Parallel Process
-
-List of Event Commands:
-@>Conditional Branch: Switch [0111: Junge Route 3] == ON
- @>Conditional Branch: Switch [0112: frei] == ON
-  @>Conditional Branch: Switch [0113: frei] == ON
-   @>Control Switches: [0114: frei] = ON
-   @>Control Self Switch: A =ON
-   @>
-  : Else
-   @>
-  : Branch End
-  @>
- : Else
-  @>
- : Branch End
- @>
-: Else
- @>
-: Branch End
-@>
-
-Page #2
-Conditions
-Self Switch A is ON
-
-Autonomous Movement
-Type: Fixed
-Speed: 3: Slow
-Freq: 3: Low
-Options Enabled
-Move Animation
-Trigger: Action Button
-
-List of Event Commands:
-@>
-
-#------------------------------------------------------------------------------
-Event ID: 020
-Event Name: Rotes licht .sl
-(X,Y): (040,032)
-
-Page #1
-Conditions
-None
-
-Graphic: Kraftwerk Lampe
-
-Autonomous Movement
-Type: Fixed
-Speed: 2: Slower
-Freq: 3: Low
-Options Enabled
-Stop Animation
-Through
-Always on Top
-Trigger: Action Button
-
-List of Event Commands:
-@>
-
-Page #2
-Conditions
-Switch 0119: VOLTRIANT1 besiegt is ON
-
-Autonomous Movement
-Type: Fixed
-Speed: 3: Slow
-Freq: 3: Low
-Options Enabled
-Move Animation
-Trigger: Action Button
-
-List of Event Commands:
-@>
-
-#------------------------------------------------------------------------------
 Event ID: 021
 Event Name: Rotes licht .sl
 (X,Y): (040,013)
@@ -342325,465 +343324,6 @@ Move Animation
 Trigger: Action Button
 
 List of Event Commands:
-@>
-
-#------------------------------------------------------------------------------
-Event ID: 023
-Event Name: Rotes licht .sl
-(X,Y): (008,032)
-
-Page #1
-Conditions
-None
-
-Graphic: Kraftwerk Lampe
-
-Autonomous Movement
-Type: Fixed
-Speed: 2: Slower
-Freq: 3: Low
-Options Enabled
-Stop Animation
-Through
-Always on Top
-Trigger: Action Button
-
-List of Event Commands:
-@>
-
-Page #2
-Conditions
-Switch 0119: VOLTRIANT1 besiegt is ON
-
-Autonomous Movement
-Type: Fixed
-Speed: 3: Slow
-Freq: 3: Low
-Options Enabled
-Move Animation
-Trigger: Action Button
-
-List of Event Commands:
-@>
-
-#------------------------------------------------------------------------------
-Event ID: 082
-Event Name: .noShadow
-(X,Y): (038,002)
-
-Page #1
-Conditions
-None
-
-Autonomous Movement
-Type: Fixed
-Speed: 3: Slow
-Freq: 3: Low
-Options Enabled
-Move Animation
-Trigger: Action Button
-
-List of Event Commands:
-@>
-
-Page #2
-Conditions
-Switch 0119: VOLTRIANT1 besiegt is ON
-
-Autonomous Movement
-Type: Fixed
-Speed: 3: Slow
-Freq: 3: Low
-Options Enabled
-Move Animation
-Trigger: Parallel Process
-
-List of Event Commands:
-@>Set Event Location: This event,(015,028)
-@>Set Move Route: This event
-                  (Repeat Action)
- :              : $>Wait: 2 frame(s)
- :              : $>Graphic: "Strom', 0, 2, 2
- :              : $>Wait: 2 frame(s)
- :              : $>Graphic: "Strom', 0, 2, 0
- :              : $>Wait: 2 frame(s)
- :              : $>Graphic: "Strom', 0, 2, 1
-@>Wait for Move's Completion
-@>
-
-#------------------------------------------------------------------------------
-Event ID: 083
-Event Name: .noShadow
-(X,Y): (038,003)
-
-Page #1
-Conditions
-None
-
-Autonomous Movement
-Type: Fixed
-Speed: 3: Slow
-Freq: 3: Low
-Options Enabled
-Move Animation
-Trigger: Action Button
-
-List of Event Commands:
-@>
-
-Page #2
-Conditions
-Switch 0119: VOLTRIANT1 besiegt is ON
-
-Autonomous Movement
-Type: Fixed
-Speed: 3: Slow
-Freq: 3: Low
-Options Enabled
-Move Animation
-Trigger: Parallel Process
-
-List of Event Commands:
-@>Set Event Location: This event,(015,029)
-@>Set Move Route: This event
-                  (Repeat Action)
- :              : $>Wait: 2 frame(s)
- :              : $>Graphic: "Strom', 0, 2, 0
- :              : $>Wait: 2 frame(s)
- :              : $>Graphic: "Strom', 0, 2, 1
- :              : $>Wait: 2 frame(s)
- :              : $>Graphic: "Strom', 0, 2, 2
-@>Wait for Move's Completion
-@>
-
-#------------------------------------------------------------------------------
-Event ID: 084
-Event Name: .noShadow
-(X,Y): (038,004)
-
-Page #1
-Conditions
-None
-
-Autonomous Movement
-Type: Fixed
-Speed: 3: Slow
-Freq: 3: Low
-Options Enabled
-Move Animation
-Trigger: Action Button
-
-List of Event Commands:
-@>
-
-Page #2
-Conditions
-Switch 0119: VOLTRIANT1 besiegt is ON
-
-Autonomous Movement
-Type: Fixed
-Speed: 3: Slow
-Freq: 3: Low
-Options Enabled
-Move Animation
-Direction Fix
-Trigger: Parallel Process
-
-List of Event Commands:
-@>Set Event Location: This event,(015,030)
-@>Set Move Route: This event
-                  (Repeat Action)
- :              : $>Wait: 2 frame(s)
- :              : $>Graphic: "Strom', 0, 2, 1
- :              : $>Wait: 2 frame(s)
- :              : $>Graphic: "Strom', 0, 2, 2
- :              : $>Wait: 2 frame(s)
- :              : $>Graphic: "Strom', 0, 2, 0
-@>Wait for Move's Completion
-@>
-
-#------------------------------------------------------------------------------
-Event ID: 085
-Event Name: .noShadow
-(X,Y): (042,004)
-
-Page #1
-Conditions
-None
-
-Autonomous Movement
-Type: Fixed
-Speed: 3: Slow
-Freq: 3: Low
-Options Enabled
-Move Animation
-Trigger: Action Button
-
-List of Event Commands:
-@>
-
-Page #2
-Conditions
-Switch 0119: VOLTRIANT1 besiegt is ON
-
-Autonomous Movement
-Type: Fixed
-Speed: 3: Slow
-Freq: 3: Low
-Options Enabled
-Move Animation
-Trigger: Parallel Process
-
-List of Event Commands:
-@>Set Event Location: This event,(033,030)
-@>Set Move Route: This event
-                  (Repeat Action)
- :              : $>Wait: 2 frame(s)
- :              : $>Graphic: "Strom', 0, 2, 2
- :              : $>Wait: 2 frame(s)
- :              : $>Graphic: "Strom', 0, 2, 0
- :              : $>Wait: 2 frame(s)
- :              : $>Graphic: "Strom', 0, 2, 1
-@>Wait for Move's Completion
-@>
-
-#------------------------------------------------------------------------------
-Event ID: 086
-Event Name: .noShadow
-(X,Y): (042,002)
-
-Page #1
-Conditions
-None
-
-Autonomous Movement
-Type: Fixed
-Speed: 3: Slow
-Freq: 3: Low
-Options Enabled
-Move Animation
-Trigger: Action Button
-
-List of Event Commands:
-@>
-
-Page #2
-Conditions
-Switch 0119: VOLTRIANT1 besiegt is ON
-
-Autonomous Movement
-Type: Fixed
-Speed: 3: Slow
-Freq: 3: Low
-Options Enabled
-Move Animation
-Trigger: Parallel Process
-
-List of Event Commands:
-@>Set Event Location: This event,(033,028)
-@>Set Move Route: This event
-                  (Repeat Action)
- :              : $>Wait: 2 frame(s)
- :              : $>Graphic: "Strom', 0, 2, 0
- :              : $>Wait: 2 frame(s)
- :              : $>Graphic: "Strom', 0, 2, 1
- :              : $>Wait: 2 frame(s)
- :              : $>Graphic: "Strom', 0, 2, 2
-@>Wait for Move's Completion
-@>
-
-#------------------------------------------------------------------------------
-Event ID: 087
-Event Name: .noShadow
-(X,Y): (042,003)
-
-Page #1
-Conditions
-None
-
-Autonomous Movement
-Type: Fixed
-Speed: 3: Slow
-Freq: 3: Low
-Options Enabled
-Move Animation
-Trigger: Action Button
-
-List of Event Commands:
-@>
-
-Page #2
-Conditions
-Switch 0119: VOLTRIANT1 besiegt is ON
-
-Autonomous Movement
-Type: Fixed
-Speed: 3: Slow
-Freq: 3: Low
-Options Enabled
-Move Animation
-Direction Fix
-Trigger: Parallel Process
-
-List of Event Commands:
-@>Set Event Location: This event,(033,029)
-@>Set Move Route: This event
-                  (Repeat Action)
- :              : $>Wait: 2 frame(s)
- :              : $>Graphic: "Strom', 0, 2, 1
- :              : $>Wait: 2 frame(s)
- :              : $>Graphic: "Strom', 0, 2, 2
- :              : $>Wait: 2 frame(s)
- :              : $>Graphic: "Strom', 0, 2, 0
-@>Wait for Move's Completion
-@>
-
-#------------------------------------------------------------------------------
-Event ID: 088
-Event Name: .noShadow
-(X,Y): (037,002)
-
-Page #1
-Conditions
-None
-
-Autonomous Movement
-Type: Fixed
-Speed: 3: Slow
-Freq: 3: Low
-Options Enabled
-Move Animation
-Trigger: Action Button
-
-List of Event Commands:
-@>
-
-Page #2
-Conditions
-Switch 0119: VOLTRIANT1 besiegt is ON
-
-Autonomous Movement
-Type: Fixed
-Speed: 3: Slow
-Freq: 3: Low
-Options Enabled
-Move Animation
-Trigger: Parallel Process
-
-List of Event Commands:
-@>Set Event Location: This event,(014,027)
-@>Wait for Move's Completion
-@>
-
-#------------------------------------------------------------------------------
-Event ID: 091
-Event Name: .noShadow
-(X,Y): (039,002)
-
-Page #1
-Conditions
-None
-
-Autonomous Movement
-Type: Fixed
-Speed: 3: Slow
-Freq: 3: Low
-Options Enabled
-Move Animation
-Trigger: Action Button
-
-List of Event Commands:
-@>
-
-Page #2
-Conditions
-Switch 0119: VOLTRIANT1 besiegt is ON
-
-Autonomous Movement
-Type: Fixed
-Speed: 3: Slow
-Freq: 3: Low
-Options Enabled
-Move Animation
-Trigger: Parallel Process
-
-List of Event Commands:
-@>Set Event Location: This event,(016,027)
-@>Wait for Move's Completion
-@>
-
-#------------------------------------------------------------------------------
-Event ID: 092
-Event Name: .noShadow
-(X,Y): (041,002)
-
-Page #1
-Conditions
-None
-
-Autonomous Movement
-Type: Fixed
-Speed: 3: Slow
-Freq: 3: Low
-Options Enabled
-Move Animation
-Trigger: Action Button
-
-List of Event Commands:
-@>
-
-Page #2
-Conditions
-Switch 0119: VOLTRIANT1 besiegt is ON
-
-Autonomous Movement
-Type: Fixed
-Speed: 3: Slow
-Freq: 3: Low
-Options Enabled
-Move Animation
-Trigger: Parallel Process
-
-List of Event Commands:
-@>Set Event Location: This event,(032,027)
-@>Wait for Move's Completion
-@>
-
-#------------------------------------------------------------------------------
-Event ID: 093
-Event Name: .noShadow
-(X,Y): (043,002)
-
-Page #1
-Conditions
-None
-
-Autonomous Movement
-Type: Fixed
-Speed: 3: Slow
-Freq: 3: Low
-Options Enabled
-Move Animation
-Trigger: Action Button
-
-List of Event Commands:
-@>
-
-Page #2
-Conditions
-Switch 0119: VOLTRIANT1 besiegt is ON
-
-Autonomous Movement
-Type: Fixed
-Speed: 3: Slow
-Freq: 3: Low
-Options Enabled
-Move Animation
-Trigger: Parallel Process
-
-List of Event Commands:
-@>Set Event Location: This event,(034,027)
-@>Wait for Move's Completion
 @>
 
 #------------------------------------------------------------------------------
@@ -371273,6 +371813,104 @@ List of Event Commands:
   :    : uns ausgehen wird.
  @>Text: \xn[Team 0 Sera]Keine Sorge.
  @>Text: \xn[Team 0 Sera]Wir sehen uns bald wieder.
+ @>Text: \xn[Team 0 Sera]Hier noch eine kleine 
+  :    : Aufmerksamkeit von uns.
+ @>Set Move Route: [EV018]
+  :              : $>Change Opacity: 25
+  :              : $>Wait: 2 frame(s)
+ @>Set Event Location: [EV018],(015,018), Down
+ @>Set Move Route: Player
+  :              : $>Turn Right
+ @>Set Move Route: [EV018]
+  :              : $>Change Opacity: 50
+  :              : $>Wait: 2 frame(s)
+  :              : $>Change Opacity: 75
+  :              : $>Wait: 2 frame(s)
+  :              : $>Change Opacity: 100
+  :              : $>Wait: 2 frame(s)
+  :              : $>Change Opacity: 125
+  :              : $>Wait: 2 frame(s)
+  :              : $>Change Opacity: 150
+  :              : $>Wait: 2 frame(s)
+  :              : $>Change Opacity: 175
+  :              : $>Wait: 2 frame(s)
+  :              : $>Change Opacity: 200
+  :              : $>Wait: 2 frame(s)
+  :              : $>Change Opacity: 225
+  :              : $>Wait: 2 frame(s)
+ @>Wait: 16 frame(s)
+ @>Set Move Route: [EV018]
+  :              : $>Wait: 2 frame(s)
+  :              : $>Graphic: "NAGANADEL EVENT', 0, 2, 1
+  :              : $>Wait: 2 frame(s)
+  :              : $>Graphic: "NAGANADEL EVENT', 0, 2, 1
+  :              : $>Wait: 2 frame(s)
+  :              : $>Graphic: "NAGANADEL EVENT', 0, 2, 2
+  :              : $>Wait: 2 frame(s)
+  :              : $>Graphic: "NAGANADEL EVENT', 0, 2, 3
+  :              : $>Wait: 2 frame(s)
+  :              : $>Graphic: "NAGANADEL EVENT', 0, 2, 1
+  :              : $>Wait: 2 frame(s)
+  :              : $>Graphic: "NAGANADEL EVENT', 0, 2, 1
+  :              : $>Wait: 2 frame(s)
+  :              : $>Graphic: "NAGANADEL EVENT', 0, 2, 2
+  :              : $>Wait: 2 frame(s)
+  :              : $>Graphic: "NAGANADEL EVENT', 0, 2, 3
+  :              : $>Wait: 2 frame(s)
+  :              : $>Graphic: "NAGANADEL EVENT', 0, 2, 1
+  :              : $>Wait: 2 frame(s)
+  :              : $>Graphic: "NAGANADEL EVENT', 0, 2, 1
+  :              : $>Wait: 2 frame(s)
+  :              : $>Graphic: "NAGANADEL EVENT', 0, 2, 2
+  :              : $>Wait: 2 frame(s)
+  :              : $>Graphic: "NAGANADEL EVENT', 0, 2, 3
+  :              : $>Wait: 2 frame(s)
+  :              : $>Graphic: "NAGANADEL EVENT', 0, 4, 0
+  :              : $>Wait: 2 frame(s)
+  :              : $>Graphic: "NAGANADEL EVENT', 0, 4, 1
+  :              : $>Wait: 2 frame(s)
+  :              : $>Graphic: "NAGANADEL EVENT', 0, 4, 2
+  :              : $>SE: 'PRSFX- Poison Sting', 100, 65
+  :              : $>Wait: 2 frame(s)
+  :              : $>Graphic: "NAGANADEL EVENT', 0, 4, 3
+  :              : $>Wait: 2 frame(s)
+  :              : $>Graphic: "NAGANADEL EVENT', 0, 6, 0
+  :              : $>Wait: 2 frame(s)
+  :              : $>Graphic: "NAGANADEL EVENT', 0, 2, 0
+  :              : $>Stop Animation ON
+ @>Wait: 50 frame(s)
+ @>Set Move Route: [EV018]
+  :              : $>Change Opacity: 225
+  :              : $>Wait: 2 frame(s)
+  :              : $>Change Opacity: 200
+  :              : $>Wait: 2 frame(s)
+  :              : $>Change Opacity: 175
+  :              : $>Wait: 2 frame(s)
+  :              : $>Change Opacity: 150
+  :              : $>Wait: 2 frame(s)
+  :              : $>Change Opacity: 125
+  :              : $>Wait: 2 frame(s)
+  :              : $>Change Opacity: 100
+  :              : $>Wait: 2 frame(s)
+  :              : $>Change Opacity: 75
+  :              : $>Wait: 2 frame(s)
+  :              : $>Change Opacity: 50
+  :              : $>Wait: 2 frame(s)
+  :              : $>Change Opacity: 25
+  :              : $>Wait: 2 frame(s)
+ @>Wait: 18 frame(s)
+ @>Set Event Location: [EV018],(003,000)
+ @>Show Animation: Player, [Poison bubble]
+ @>Script: eligible = $player.party.select { |p| 
+ :       : !p.shadowPokemon? && !p.egg? }
+ :       : if eligible.empty?
+ :       :   pbMessage(_INTL("All deine Pokémon 
+ :       : sind bereits Crypto-Pokémon..."))
+ :       : else
+ :       :   pkmn = eligible.sample
+ :       :   pkmn.makeShadow
+ :       : end
+ @>Wait: 24 frame(s)
  @>Set Move Route: [Boss 1]
   :              : $>Turn Left
  @>Text: \xn[Team 0 Sera]Masskito, los geht's!
@@ -371800,6 +372438,28 @@ List of Event Commands:
 Page #3
 Conditions
 Switch 0368: Zekrom besiegt is ON
+
+Autonomous Movement
+Type: Fixed
+Speed: 3: Slow
+Freq: 3: Low
+Options Enabled
+Move Animation
+Trigger: Action Button
+
+List of Event Commands:
+@>
+
+#------------------------------------------------------------------------------
+Event ID: 018
+Event Name: EV018
+(X,Y): (003,000)
+
+Page #1
+Conditions
+None
+
+Graphic: NAGANADEL EVENT
 
 Autonomous Movement
 Type: Fixed
@@ -395272,6 +395932,35 @@ List of Event Commands:
 @>
 
 #------------------------------------------------------------------------------
+Event ID: 040
+Event Name: EV040
+(X,Y): (004,010)
+
+Page #1
+Conditions
+None
+
+Autonomous Movement
+Type: Fixed
+Speed: 3: Slow
+Freq: 3: Low
+Options Enabled
+Move Animation
+Trigger: Action Button
+
+List of Event Commands:
+@>Conditional Branch: Script: rand(100) < 10
+ @>Script: level = $player.party.map { |p| 
+ :       : p.level }.max
+ :       : WildBattle.start(:TRUBBISH, level)
+ @>
+: Else
+ @>Text: Hier ist nichts...
+ @>
+: Branch End
+@>
+
+#------------------------------------------------------------------------------
 
 #==============================================================================
 Map ID: 491
@@ -395396,6 +396085,35 @@ List of Event Commands:
 @>
 
 #------------------------------------------------------------------------------
+Event ID: 002
+Event Name: EV002
+(X,Y): (007,007)
+
+Page #1
+Conditions
+None
+
+Autonomous Movement
+Type: Fixed
+Speed: 3: Slow
+Freq: 3: Low
+Options Enabled
+Move Animation
+Trigger: Action Button
+
+List of Event Commands:
+@>Conditional Branch: Script: rand(100) < 10
+ @>Script: level = $player.party.map { |p| 
+ :       : p.level }.max
+ :       : WildBattle.start(:TRUBBISH, level)
+ @>
+: Else
+ @>Text: Hier ist nichts.
+ @>
+: Branch End
+@>
+
+#------------------------------------------------------------------------------
 Event ID: 003
 Event Name: Exit
 (X,Y): (012,013)
@@ -395487,6 +396205,35 @@ List of Event Commands:
  @>Wait: 8 frame(s)
  @>Transfer Player:[492: Haus], (012,013), Down, No Fade
  @>Change Screen Color Tone: (0,0,0,0), @6
+ @>
+: Branch End
+@>
+
+#------------------------------------------------------------------------------
+Event ID: 002
+Event Name: EV002
+(X,Y): (016,007)
+
+Page #1
+Conditions
+None
+
+Autonomous Movement
+Type: Fixed
+Speed: 3: Slow
+Freq: 3: Low
+Options Enabled
+Move Animation
+Trigger: Action Button
+
+List of Event Commands:
+@>Conditional Branch: Script: rand(100) < 10
+ @>Script: level = $player.party.map { |p| 
+ :       : p.level }.max
+ :       : WildBattle.start(:TRUBBISH, level)
+ @>
+: Else
+ @>Text: Hier ist nichts.
  @>
 : Branch End
 @>
@@ -396054,6 +396801,35 @@ List of Event Commands:
 @>
 
 #------------------------------------------------------------------------------
+Event ID: 002
+Event Name: EV002
+(X,Y): (016,007)
+
+Page #1
+Conditions
+None
+
+Autonomous Movement
+Type: Fixed
+Speed: 3: Slow
+Freq: 3: Low
+Options Enabled
+Move Animation
+Trigger: Action Button
+
+List of Event Commands:
+@>Conditional Branch: Script: rand(100) < 10
+ @>Script: level = $player.party.map { |p| 
+ :       : p.level }.max
+ :       : WildBattle.start(:TRUBBISH, level)
+ @>
+: Else
+ @>Text: Hier ist nichts.
+ @>
+: Branch End
+@>
+
+#------------------------------------------------------------------------------
 
 #==============================================================================
 Map ID: 497
@@ -396425,7 +397201,15 @@ Move Animation
 Trigger: Action Button
 
 List of Event Commands:
-@>Text: Hier ist nichts...
+@>Conditional Branch: Script: rand(100) < 10
+ @>Script: level = $player.party.map { |p| 
+ :       : p.level }.max
+ :       : WildBattle.start(:TRUBBISH, level)
+ @>
+: Else
+ @>Text: Hier ist nichts.
+ @>
+: Branch End
 @>
 
 #------------------------------------------------------------------------------
@@ -396446,7 +397230,15 @@ Move Animation
 Trigger: Action Button
 
 List of Event Commands:
-@>Text: Nur Müll...
+@>Conditional Branch: Script: rand(100) < 10
+ @>Script: level = $player.party.map { |p| 
+ :       : p.level }.max
+ :       : WildBattle.start(:TRUBBISH, level)
+ @>
+: Else
+ @>Text: Nur Müll...
+ @>
+: Branch End
 @>
 
 #------------------------------------------------------------------------------
@@ -403320,8 +404112,16 @@ Move Animation
 Trigger: Action Button
 
 List of Event Commands:
-@>Text: Nichts, als eine alte Zeitung.
-@>Text: Schlagzeile: "Trainer findet wieder nichts im Müll."
+@>Conditional Branch: Script: rand(100) < 10
+ @>Script: level = $player.party.map { |p| 
+ :       : p.level }.max
+ :       : WildBattle.start(:TRUBBISH, level)
+ @>
+: Else
+ @>Text: Nichts, als eine alte Zeitung.
+ @>Text: Schlagzeile: "Trainer findet wieder nichts im Müll."
+ @>
+: Branch End
 @>
 
 #------------------------------------------------------------------------------
@@ -422035,7 +422835,15 @@ Move Animation
 Trigger: Action Button
 
 List of Event Commands:
-@>Text: Hier ist nichts...
+@>Conditional Branch: Script: rand(100) < 10
+ @>Script: level = $player.party.map { |p| 
+ :       : p.level }.max
+ :       : WildBattle.start(:TRUBBISH, level)
+ @>
+: Else
+ @>Text: Hier ist nichts...
+ @>
+: Branch End
 @>
 
 #------------------------------------------------------------------------------
@@ -422348,8 +423156,16 @@ Move Animation
 Trigger: Action Button
 
 List of Event Commands:
-@>Text: Der Mülleimer riecht verdächtig nach Toxiquak.
-@>Text: Du beschließt, nicht genauer nachzufragen.
+@>Conditional Branch: Script: rand(100) < 10
+ @>Script: level = $player.party.map { |p| 
+ :       : p.level }.max
+ :       : WildBattle.start(:TRUBBISH, level)
+ @>
+: Else
+ @>Text: Der Mülleimer riecht verdächtig nach Toxiquak.
+ @>Text: Du beschließt, nicht genauer nachzufragen.
+ @>
+: Branch End
 @>
 
 #------------------------------------------------------------------------------
@@ -422664,8 +423480,16 @@ Move Animation
 Trigger: Action Button
 
 List of Event Commands:
-@>Text: Du findest Reste von einem Sandwich.
-@>Text: Ein Pokémon war wohl schneller als du.
+@>Conditional Branch: Script: rand(100) < 10
+ @>Script: level = $player.party.map { |p| 
+ :       : p.level }.max
+ :       : WildBattle.start(:TRUBBISH, level)
+ @>
+: Else
+ @>Text: Du findest Reste von einem Sandwich.
+ @>Text: Ein Pokémon war wohl schneller als du.
+ @>
+: Branch End
 @>
 
 #------------------------------------------------------------------------------
@@ -427696,6 +428520,35 @@ List of Event Commands:
 @>Transfer Player:[193: Mansion], (012,013), Down, No Fade
 @>Change Screen Color Tone: (0,0,0,0), @6
 @>Wait: 8 frame(s)
+@>
+
+#------------------------------------------------------------------------------
+Event ID: 008
+Event Name: EV008
+(X,Y): (014,019)
+
+Page #1
+Conditions
+None
+
+Autonomous Movement
+Type: Fixed
+Speed: 3: Slow
+Freq: 3: Low
+Options Enabled
+Move Animation
+Trigger: Action Button
+
+List of Event Commands:
+@>Conditional Branch: Script: rand(100) < 10
+ @>Script: level = $player.party.map { |p| 
+ :       : p.level }.max
+ :       : WildBattle.start(:TRUBBISH, level)
+ @>
+: Else
+ @>Text: Hier ist nichts...
+ @>
+: Branch End
 @>
 
 #------------------------------------------------------------------------------
@@ -437065,6 +437918,107 @@ List of Event Commands:
   @>Set Event Location: [Kyurem Black/white .sl],(003,000)
   @>Scroll Map: Down, 4, 4
   @>Wait: 20 frame(s)
+  @>Set Move Route: [EV018.sl]
+   :              : $>Change Opacity: 25
+   :              : $>Wait: 2 frame(s)
+  @>Set Event Location: [EV018.sl],(013,020), Down
+  @>Set Move Route: Player
+   :              : $>Turn Right
+  @>Set Move Route: [EV018.sl]
+   :              : $>Change Opacity: 50
+   :              : $>Wait: 2 frame(s)
+   :              : $>Change Opacity: 75
+   :              : $>Wait: 2 frame(s)
+   :              : $>Change Opacity: 100
+   :              : $>Wait: 2 frame(s)
+   :              : $>Change Opacity: 125
+   :              : $>Wait: 2 frame(s)
+   :              : $>Change Opacity: 150
+   :              : $>Wait: 2 frame(s)
+   :              : $>Change Opacity: 175
+   :              : $>Wait: 2 frame(s)
+   :              : $>Change Opacity: 200
+   :              : $>Wait: 2 frame(s)
+   :              : $>Change Opacity: 225
+   :              : $>Wait: 2 frame(s)
+  @>Wait: 16 frame(s)
+  @>Set Move Route: [EV018.sl]
+   :              : $>Wait: 2 frame(s)
+   :              : $>Graphic: "NAGANADEL EVENT', 0, 2, 1
+   :              : $>Wait: 2 frame(s)
+   :              : $>Graphic: "NAGANADEL EVENT', 0, 2, 1
+   :              : $>Wait: 2 frame(s)
+   :              : $>Graphic: "NAGANADEL EVENT', 0, 2, 2
+   :              : $>Wait: 2 frame(s)
+   :              : $>Graphic: "NAGANADEL EVENT', 0, 2, 3
+   :              : $>Wait: 2 frame(s)
+   :              : $>Graphic: "NAGANADEL EVENT', 0, 2, 1
+   :              : $>Wait: 2 frame(s)
+   :              : $>Graphic: "NAGANADEL EVENT', 0, 2, 1
+   :              : $>Wait: 2 frame(s)
+   :              : $>Graphic: "NAGANADEL EVENT', 0, 2, 2
+   :              : $>Wait: 2 frame(s)
+   :              : $>Graphic: "NAGANADEL EVENT', 0, 2, 3
+   :              : $>Wait: 2 frame(s)
+   :              : $>Graphic: "NAGANADEL EVENT', 0, 2, 1
+   :              : $>Wait: 2 frame(s)
+   :              : $>Graphic: "NAGANADEL EVENT', 0, 2, 1
+   :              : $>Wait: 2 frame(s)
+   :              : $>Graphic: "NAGANADEL EVENT', 0, 2, 2
+   :              : $>Wait: 2 frame(s)
+   :              : $>Graphic: "NAGANADEL EVENT', 0, 2, 3
+   :              : $>Wait: 2 frame(s)
+   :              : $>Graphic: "NAGANADEL EVENT', 0, 4, 0
+   :              : $>Wait: 2 frame(s)
+   :              : $>Graphic: "NAGANADEL EVENT', 0, 4, 1
+   :              : $>Wait: 2 frame(s)
+   :              : $>Graphic: "NAGANADEL EVENT', 0, 4, 2
+   :              : $>SE: 'PRSFX- Poison Sting', 100, 65
+   :              : $>Wait: 2 frame(s)
+   :              : $>Graphic: "NAGANADEL EVENT', 0, 4, 3
+   :              : $>Wait: 2 frame(s)
+   :              : $>Graphic: "NAGANADEL EVENT', 0, 6, 0
+   :              : $>Wait: 2 frame(s)
+   :              : $>Graphic: "NAGANADEL EVENT', 0, 2, 0
+   :              : $>Stop Animation ON
+  @>Wait: 50 frame(s)
+  @>Set Move Route: [EV018.sl]
+   :              : $>Change Opacity: 225
+   :              : $>Wait: 2 frame(s)
+   :              : $>Change Opacity: 200
+   :              : $>Wait: 2 frame(s)
+   :              : $>Change Opacity: 175
+   :              : $>Wait: 2 frame(s)
+   :              : $>Change Opacity: 150
+   :              : $>Wait: 2 frame(s)
+   :              : $>Change Opacity: 125
+   :              : $>Wait: 2 frame(s)
+   :              : $>Change Opacity: 100
+   :              : $>Wait: 2 frame(s)
+   :              : $>Change Opacity: 75
+   :              : $>Wait: 2 frame(s)
+   :              : $>Change Opacity: 50
+   :              : $>Wait: 2 frame(s)
+   :              : $>Change Opacity: 25
+   :              : $>Wait: 2 frame(s)
+  @>Wait: 18 frame(s)
+  @>Set Event Location: [EV018.sl],(003,000)
+  @>Show Animation: Player, [Poison bubble]
+  @>Script: pkmn = $player.party.find { |p| 
+  :       : p.isSpecies?(:KYUREM) && !
+  :       : p.shadowPokemon? }
+  :       : if pkmn
+  :       :   pkmn.makeShadow
+  :       :   if pkmn.fused
+  :       :     if !pkmn.fused.shadowPokemon?
+  :       :       pkmn.fused.makeShadow
+  :       :     end
+  :       :   end
+  @>Script: elsif $player.party.any? { |p| 
+  :       : p.isSpecies?(:KYUREM) }
+  :       : else
+  :       : end
+  @>Wait: 24 frame(s)
   @>Control Switches: [0383: Reshiram + Zekrom Ende] = ON
   @>Control Self Switch: A =ON
   @>
@@ -437690,7 +438644,15 @@ Move Animation
 Trigger: Action Button
 
 List of Event Commands:
-@>Text: Was soll hier noch drin sein?
+@>Conditional Branch: Script: rand(100) < 10
+ @>Script: level = $player.party.map { |p| 
+ :       : p.level }.max
+ :       : WildBattle.start(:TRUBBISH, level)
+ @>
+: Else
+ @>Text: Was soll hier noch drin sein?
+ @>
+: Branch End
 @>
 
 #------------------------------------------------------------------------------
@@ -437711,9 +438673,17 @@ Move Animation
 Trigger: Action Button
 
 List of Event Commands:
-@>Text: Irgendjemand hat hier "nichts zu sehen" 
- :    : hineingekritzelt.
-@>Text: Sehr hilfreich.
+@>Conditional Branch: Script: rand(100) < 10
+ @>Script: level = $player.party.map { |p| 
+ :       : p.level }.max
+ :       : WildBattle.start(:TRUBBISH, level)
+ @>
+: Else
+ @>Text: Irgendjemand hat hier "nichts zu sehen" 
+  :    : hineingekritzelt.
+ @>Text: Sehr hilfreich.
+ @>
+: Branch End
 @>
 
 #------------------------------------------------------------------------------
@@ -438166,8 +439136,16 @@ Move Animation
 Trigger: Action Button
 
 List of Event Commands:
-@>Text: Etwas undefinierbares klebt am Boden.
-@>Text: Du lässt es dort, wo es ist.
+@>Conditional Branch: Script: rand(100) < 10
+ @>Script: level = $player.party.map { |p| 
+ :       : p.level }.max
+ :       : WildBattle.start(:TRUBBISH, level)
+ @>
+: Else
+ @>Text: Etwas undefinierbares klebt am Boden.
+ @>Text: Du lässt es dort, wo es ist.
+ @>
+: Branch End
 @>
 
 #------------------------------------------------------------------------------
@@ -438358,7 +439336,15 @@ Move Animation
 Trigger: Action Button
 
 List of Event Commands:
-@>Text: Der Mülleimer gähnt innerlich.
+@>Conditional Branch: Script: rand(100) < 10
+ @>Script: level = $player.party.map { |p| 
+ :       : p.level }.max
+ :       : WildBattle.start(:TRUBBISH, level)
+ @>
+: Else
+ @>Text: Der Mülleimer gähnt innerlich.
+ @>
+: Branch End
 @>
 
 #------------------------------------------------------------------------------
@@ -438379,9 +439365,17 @@ Move Animation
 Trigger: Action Button
 
 List of Event Commands:
-@>Text: Du fragst dich kurz, wer hier den Müll entsorgt und 
- :    : wo er landet.
-@>Text: Aber eigentlich ist es dir egal.
+@>Conditional Branch: Script: rand(100) < 10
+ @>Script: level = $player.party.map { |p| 
+ :       : p.level }.max
+ :       : WildBattle.start(:TRUBBISH, level)
+ @>
+: Else
+ @>Text: Du fragst dich kurz, wer hier den Müll entsorgt und 
+  :    : wo er landet.
+ @>Text: Aber eigentlich ist es dir egal.
+ @>
+: Branch End
 @>
 
 #------------------------------------------------------------------------------
@@ -438852,9 +439846,17 @@ Move Animation
 Trigger: Action Button
 
 List of Event Commands:
-@>Text: Viele Taschentücher.
-@>Text: Hier muss jemand erkältet sein.
-@>Text: Oder..?
+@>Conditional Branch: Script: rand(100) < 10
+ @>Script: level = $player.party.map { |p| 
+ :       : p.level }.max
+ :       : WildBattle.start(:TRUBBISH, level)
+ @>
+: Else
+ @>Text: Viele Taschentücher.
+ @>Text: Hier muss jemand erkältet sein.
+ @>Text: Oder..?
+ @>
+: Branch End
 @>
 
 #------------------------------------------------------------------------------
@@ -439045,7 +440047,15 @@ Move Animation
 Trigger: Action Button
 
 List of Event Commands:
-@>Text: Manchmal ist ein Mülleimer einfach nur ein Mülleimer.
+@>Conditional Branch: Script: rand(100) < 10
+ @>Script: level = $player.party.map { |p| 
+ :       : p.level }.max
+ :       : WildBattle.start(:TRUBBISH, level)
+ @>
+: Else
+ @>Text: Manchmal ist ein Mülleimer einfach nur ein Mülleimer.
+ @>
+: Branch End
 @>
 
 #------------------------------------------------------------------------------
@@ -439364,7 +440374,15 @@ Move Animation
 Trigger: Action Button
 
 List of Event Commands:
-@>Text: Immernoch schleimig.
+@>Conditional Branch: Script: rand(100) < 10
+ @>Script: level = $player.party.map { |p| 
+ :       : p.level }.max
+ :       : WildBattle.start(:TRUBBISH, level)
+ @>
+: Else
+ @>Text: Immernoch schleimig.
+ @>
+: Branch End
 @>
 
 #------------------------------------------------------------------------------
@@ -440256,7 +441274,15 @@ Move Animation
 Trigger: Action Button
 
 List of Event Commands:
-@>Text: Hier ist nichts...
+@>Conditional Branch: Script: rand(100) < 10
+ @>Script: level = $player.party.map { |p| 
+ :       : p.level }.max
+ :       : WildBattle.start(:TRUBBISH, level)
+ @>
+: Else
+ @>Text: Hier ist nichts...
+ @>
+: Branch End
 @>
 
 #------------------------------------------------------------------------------
@@ -444242,7 +445268,15 @@ Move Animation
 Trigger: Action Button
 
 List of Event Commands:
-@>Text: Hier ist nichts...
+@>Conditional Branch: Script: rand(100) < 10
+ @>Script: level = $player.party.map { |p| 
+ :       : p.level }.max
+ :       : WildBattle.start(:TRUBBISH, level)
+ @>
+: Else
+ @>Text: Hier ist nichts...
+ @>
+: Branch End
 @>
 
 #------------------------------------------------------------------------------
@@ -455096,8 +456130,16 @@ Move Animation
 Trigger: Action Button
 
 List of Event Commands:
-@>Text: Der Geruch alleine reicht, um sofort zu bereuen, es 
- :    : versucht zu haben.
+@>Conditional Branch: Script: rand(100) < 10
+ @>Script: level = $player.party.map { |p| 
+ :       : p.level }.max
+ :       : WildBattle.start(:TRUBBISH, level)
+ @>
+: Else
+ @>Text: Der Geruch alleine reicht, um sofort zu bereuen, es 
+  :    : versucht zu haben.
+ @>
+: Branch End
 @>
 
 #------------------------------------------------------------------------------
@@ -455283,7 +456325,15 @@ Move Animation
 Trigger: Action Button
 
 List of Event Commands:
-@>Text: Hier, ein hauch von nichts für unterwegs.
+@>Conditional Branch: Script: rand(100) < 10
+ @>Script: level = $player.party.map { |p| 
+ :       : p.level }.max
+ :       : WildBattle.start(:TRUBBISH, level)
+ @>
+: Else
+ @>Text: Hier, ein hauch von nichts für unterwegs.
+ @>
+: Branch End
 @>
 
 #------------------------------------------------------------------------------
@@ -460224,6 +461274,62 @@ Page #1
 Conditions
 None
 
+Graphic: Crypto-Stein
+
+Autonomous Movement
+Type: Custom
+Custom Move Route:
+(Repeat Action)
+$>Wait: 4 frame(s)
+$>Graphic: "Crypto-Stein', 0, 2, 2
+$>Wait: 4 frame(s)
+$>Graphic: "Crypto-Stein', 0, 2, 3
+$>Wait: 4 frame(s)
+$>Graphic: "Crypto-Stein', 0, 4, 0
+$>Wait: 4 frame(s)
+$>Graphic: "Crypto-Stein', 0, 4, 1
+$>Wait: 4 frame(s)
+$>Graphic: "Crypto-Stein', 0, 4, 0
+$>Wait: 4 frame(s)
+$>Graphic: "Crypto-Stein', 0, 2, 3
+
+Speed: 6: Fastest
+Freq: 6: Highest
+Options Enabled
+Direction Fix
+Trigger: Action Button
+
+List of Event Commands:
+@>Conditional Branch: Script: $player.party.none? { |p| p.shadowPokemon? && p.heart_gauge > 0 }
+ @>Text: Du hast kein Crypto-Pokémon dabei, dessen Herz 
+  :    : sich noch weiter öffnen ließe.
+ @>
+: Else
+ @>Text: Der Stein beginnt zu pulsieren...
+ @>Script: pbChoosePokemon(1, 2, proc { |pkmn| 
+ :       : pkmn.shadowPokemon? && 
+ :       : pkmn.heart_gauge > 0 })
+ :       : idx = pbGet(1)
+ :       : if idx >= 0
+ :       :     pkmn = $player.party[idx]
+ :       :     amount = rand(100..1000)
+ :       :     pkmn.adjustHeart(-amount)
+ :       : pbMessage(_INTL("Die Kraft des Steins 
+ :       : hat {1}s Herz ein Stück weiter 
+ :       : geöffnet!", pkmn.name))
+ @>Script: pkmn.check_ready_to_purify
+ :       : pbSetEventTime
+ :       : end
+ @>
+: Branch End
+@>
+
+Page #2
+Conditions
+Self Switch A is ON
+
+Graphic: Crypto-Stein
+
 Autonomous Movement
 Type: Fixed
 Speed: 3: Slow
@@ -460233,8 +461339,26 @@ Move Animation
 Trigger: Action Button
 
 List of Event Commands:
-@>Script: $player.seen_purify_chamber = true
-:       : pbPurifyChamber
+@>Text: Der Stein schimmert schwach. Er scheint sich noch 
+ :    : nicht erholt zu haben.
+@>
+
+Page #3
+Conditions
+Switch 0023: s:cooledDown?(86400) is ON
+Self Switch A is ON
+
+Autonomous Movement
+Type: Fixed
+Speed: 3: Slow
+Freq: 3: Low
+Options Enabled
+Move Animation
+Trigger: Autorun
+
+List of Event Commands:
+@>Control Self Switch: A =OFF
+@>Script: setTempSwitchOn("A")
 @>
 
 #------------------------------------------------------------------------------
