@@ -460189,12 +460189,22 @@ Trigger: Action Button
 
 List of Event Commands:
 @>Control Switches: [0032: Fateful encounters] = ON
-@>Conditional Branch: Script: WildBattle.start(:LATIAS, 60)
- @>Control Switches: [0032: Fateful encounters] = OFF
- @>Control Self Switch: B =ON
+@>Script: $game_temp.vs_transition_bg
+@>Script: $game_temp.vs_transition_bg = 
+:       : "Latias"
+@>Script: setBattleRule("cannotRun")
+:       : setBattleRule("outcome", 48)
+:       : setBattleRule("databoxStyle", 
+:       : [:Basic, "{1}"])
+:       : pkmn = Pokemon.new(:LATIAS, 60)
+:       : pkmn.calc_stats
+:       : WildBattle.start(pkmn)
+@>Conditional Branch: Variable [0048: Kampf-Ergebnis] == 2
+ @>Exit Event Processing
  @>
 : Else
- @>Exit Event Processing
+ @>Control Switches: [0032: Fateful encounters] = OFF
+ @>Control Self Switch: B =ON
  @>
 : Branch End
 @>
@@ -470300,6 +470310,18 @@ List of Event Commands:
 @>
 
 #------------------------------------------------------------------------------
+
+#==============================================================================
+Map ID: 646
+Map Name: MAP646
+Tileset: 134: Dracheninsel Stadt
+Width: 50, Height: 60
+
+#==============================================================================
+Map ID: 647
+Map Name: MAP647
+Tileset: 134: Dracheninsel Stadt
+Width: 65, Height: 56
 
 #==============================================================================
 
