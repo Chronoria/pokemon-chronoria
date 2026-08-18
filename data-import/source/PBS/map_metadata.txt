@@ -1031,13 +1031,15 @@ Flags = Levels
 Name = Route 17
 Outdoor = true
 ShowArea = true
-MapPosition = 0,18,4
+MapPosition = 0,19,4
 SnapEdges = true
 Flags = Levels
 #-------------------------------
 [163]   # Spheal-Life
-Name = Route 5
-MapPosition = 0,7,13
+Name = Spheal-Life
+ShowArea = true
+MapPosition = 0,17,4
+SnapEdges = true
 #-------------------------------
 [164]   # Zwischengebäude
 Name = Ephiron / Route 8
@@ -1139,8 +1141,10 @@ BattleBack = gym2
 #-------------------------------
 [177]   # Tonishi
 Name = Tonishi
+Outdoor = true
+ShowArea = true
 HealingSpot = 177,10,7
-MapPosition = 0,9,14
+MapPosition = 0,18,4
 SnapEdges = true
 Flags = Levels
 #-------------------------------
@@ -1389,7 +1393,7 @@ Flags = Levels
 #-------------------------------
 [207]   # Häuser
 Name = Tonishi
-MapPosition = 0,7,13
+MapPosition = 0,18,4
 SnapEdges = true
 #-------------------------------
 [208]   # Solhaven
@@ -2015,13 +2019,13 @@ Flags = Levels
 [306]   # Lucenhöhle
 Name = Lucenhöhle
 ShowArea = true
-MapPosition = 0,3,14
+MapPosition = 0,19,4
 SnapEdges = true
 #-------------------------------
 [307]   # Lucenhöhle
 Name = Lucenhöhle
 ShowArea = true
-MapPosition = 0,3,14
+MapPosition = 0,19,4
 DarkMap = true
 SnapEdges = true
 #-------------------------------
@@ -2063,14 +2067,14 @@ Flags = Levels
 [314]   # Spiegelräume
 Name = Spiegelräume
 ShowArea = true
-MapPosition = 0,5,16
+MapPosition = 0,19,4
 SnapEdges = true
 BattleBack = cave7
 #-------------------------------
 [315]   # Lucenhöhle
 Name = Lucenhöhle
 ShowArea = true
-MapPosition = 0,5,16
+MapPosition = 0,19,4
 DarkMap = true
 SnapEdges = true
 BattleBack = cave7
@@ -2381,10 +2385,27 @@ WildVictoryBGM = Victory! (Wild Pokémon)_2
 Environment = Forest
 Flags = Levels
 #-------------------------------
+[371]   # MAP371
+Name = Noxburgh
+Outdoor = true
+ShowArea = true
+MapPosition = 0,15,2
+SnapEdges = true
+#-------------------------------
+[372]   # MAP372
+Name = Noxburgh
+MapPosition = 0,15,2
+SnapEdges = true
+#-------------------------------
+[373]   # MAP373
+Name = Noxburgh
+MapPosition = 0,15,2
+SnapEdges = true
+#-------------------------------
 [374]   # Lucenhöhle
 Name = Lucenhöhle
 ShowArea = true
-MapPosition = 0,5,16
+MapPosition = 0,19,4
 DarkMap = true
 SnapEdges = true
 BattleBack = cave7
@@ -2392,7 +2413,7 @@ BattleBack = cave7
 [375]   # Lucenhöhle
 Name = Lucenhöhle
 ShowArea = true
-MapPosition = 0,5,16
+MapPosition = 0,19,4
 DarkMap = true
 SnapEdges = true
 BattleBack = cave7
@@ -3098,25 +3119,25 @@ Environment = Rock
 [458]   # Vogelfänger-Club
 Name = Vogelfängerclub
 ShowArea = true
-MapPosition = 0,12,9
+MapPosition = 0,18,4
 SnapEdges = true
 #-------------------------------
 [459]   # Vogelfänger-Club
 Name = Vogelfängerclub
 ShowArea = true
-MapPosition = 0,12,9
+MapPosition = 0,18,4
 SnapEdges = true
 #-------------------------------
 [460]   # Vogelfänger-Club
 Name = Vogelfängerclub
 ShowArea = true
-MapPosition = 0,12,9
+MapPosition = 0,18,4
 SnapEdges = true
 #-------------------------------
 [461]   # Vogelfänger-Club
 Name = Vogelfängerclub
 ShowArea = true
-MapPosition = 0,12,9
+MapPosition = 0,18,4
 SnapEdges = true
 #-------------------------------
 [462]   # Insel
@@ -3178,7 +3199,7 @@ Flags = Levels
 [468]   # Lucenhöhle
 Name = Lucenhöhle
 ShowArea = true
-MapPosition = 0,5,16
+MapPosition = 0,19,4
 DarkMap = true
 SnapEdges = true
 BattleBack = cave7
@@ -3198,7 +3219,7 @@ BattleBack = gym4
 [471]   # Lucenhöhle
 Name = Lucenhöhle
 ShowArea = true
-MapPosition = 0,5,16
+MapPosition = 0,19,4
 DarkMap = true
 SnapEdges = true
 BattleBack = cave7
@@ -3206,14 +3227,14 @@ BattleBack = cave7
 [472]   # Lucenhöhle
 Name = Lucenhöhle
 ShowArea = true
-MapPosition = 0,5,16
+MapPosition = 0,19,4
 DarkMap = true
 SnapEdges = true
 #-------------------------------
 [473]   # Lucenhöhle
 Name = Lucenhöhle
 ShowArea = true
-MapPosition = 0,5,16
+MapPosition = 0,19,4
 DarkMap = true
 SnapEdges = true
 BattleBack = cave7
@@ -3221,7 +3242,7 @@ BattleBack = cave7
 [474]   # Lucenhöhle
 Name = Lucenhöhle
 ShowArea = true
-MapPosition = 0,5,16
+MapPosition = 0,19,4
 DarkMap = true
 SnapEdges = true
 BattleBack = cave7
@@ -3295,26 +3316,26 @@ BattleBack = gym4
 [486]   # Turm der Wiederkehr
 Name = Turm der Wiederkehr
 ShowArea = true
-MapPosition = 0,12,9
+MapPosition = 0,18,4
 SnapEdges = true
 #-------------------------------
 [487]   # Turm der Wiederkehr
 Name = Turm der Wiederkehr
-MapPosition = 0,12,9
+MapPosition = 0,18,4
 DarkMap = true
 SnapEdges = true
 Flags = Levels
 #-------------------------------
 [488]   # Turm der Wiederkehr
 Name = Turm der Wiederkehr
-MapPosition = 0,12,9
+MapPosition = 0,18,4
 DarkMap = true
 SnapEdges = true
 Flags = Levels
 #-------------------------------
 [489]   # Turm der Wiederkehr
 Name = Turm der Wiederkehr
-MapPosition = 0,12,9
+MapPosition = 0,18,4
 DarkMap = true
 SnapEdges = true
 Flags = Levels
@@ -3329,13 +3350,39 @@ WildBattleBGM = Battle Legendary (5)
 WildCaptureME = SwSh 137 Kubfu_s Training Complete!
 Flags = Levels
 #-------------------------------
+[491]   # Haus
+Name = Tonishi
+MapPosition = 0,17,4
+SnapEdges = true
+#-------------------------------
+[492]   # Haus
+Name = Tonishi
+MapPosition = 0,17,4
+SnapEdges = true
+#-------------------------------
+[493]   # Haus
+Name = Tonishi
+MapPosition = 0,17,4
+SnapEdges = true
+#-------------------------------
 [494]   # Center
 Name = Pokécenter Tonishi
 ShowArea = true
 HealingSpot = 633,44,61
-MapPosition = 0,9,14
+MapPosition = 0,17,4
 SnapEdges = true
 Environment = None
+#-------------------------------
+[495]   # Markt
+Name = Markt
+ShowArea = true
+MapPosition = 0,17,4
+SnapEdges = true
+#-------------------------------
+[496]   # Haus
+Name = Tonishi
+MapPosition = 0,17,4
+SnapEdges = true
 #-------------------------------
 [497]   # Lone Beach Pokécenter
 Name = Lone Beach Pokécenter
@@ -3958,7 +4005,7 @@ WildVictoryBGM = Battle victory wild
 [602]   # Lucenhöhle
 Name = Lucenhöhle
 ShowArea = true
-MapPosition = 0,5,16
+MapPosition = 0,19,4
 DarkMap = true
 SnapEdges = true
 BattleBack = cave7
@@ -4021,7 +4068,7 @@ SnapEdges = true
 [611]   # Lucenhöhle
 Name = Lucenhöhle
 ShowArea = true
-MapPosition = 0,5,16
+MapPosition = 0,19,4
 DarkMap = true
 SnapEdges = true
 BattleBack = cave7
@@ -4030,7 +4077,7 @@ BattleBack = cave7
 Name = Aetherspitze
 Outdoor = true
 ShowArea = true
-MapPosition = 0,5,16
+MapPosition = 0,19,4
 SnapEdges = true
 BattleBack = forest2
 #-------------------------------
@@ -4038,7 +4085,7 @@ BattleBack = forest2
 Name = Aetherspitze
 Outdoor = true
 ShowArea = true
-MapPosition = 0,5,16
+MapPosition = 0,19,4
 SnapEdges = true
 BattleBack = forest2
 #-------------------------------
@@ -4046,7 +4093,7 @@ BattleBack = forest2
 Name = Aetherspitze
 Outdoor = true
 ShowArea = true
-MapPosition = 0,5,16
+MapPosition = 0,19,4
 SnapEdges = true
 BattleBack = forest2
 #-------------------------------
@@ -4054,14 +4101,14 @@ BattleBack = forest2
 Name = Aetherspitze
 Outdoor = true
 ShowArea = true
-MapPosition = 0,5,16
+MapPosition = 0,19,4
 SnapEdges = true
 BattleBack = field
 #-------------------------------
 [616]   # Lucenhöhle
 Name = Lucenhöhle
 ShowArea = true
-MapPosition = 0,5,16
+MapPosition = 0,19,4
 DarkMap = true
 SnapEdges = true
 BattleBack = cave7
@@ -4069,21 +4116,21 @@ BattleBack = cave7
 [617]   # Lucenhöhle
 Name = Lucenhöhle
 ShowArea = true
-MapPosition = 0,5,16
+MapPosition = 0,19,4
 SnapEdges = true
 BattleBack = cave7
 #-------------------------------
 [618]   # Lucenhöhle
 Name = Lucenhöhle
 ShowArea = true
-MapPosition = 0,5,16
+MapPosition = 0,19,4
 SnapEdges = true
 BattleBack = cave7
 #-------------------------------
 [619]   # Lucenhöhle
 Name = Lucenhöhle
 ShowArea = true
-MapPosition = 0,5,16
+MapPosition = 0,19,4
 DarkMap = true
 SnapEdges = true
 BattleBack = cave7
@@ -4091,7 +4138,7 @@ BattleBack = cave7
 [620]   # Lucenhöhle
 Name = Lucenhöhle
 ShowArea = true
-MapPosition = 0,5,16
+MapPosition = 0,19,4
 DarkMap = true
 SnapEdges = true
 BattleBack = cave7
@@ -4105,42 +4152,42 @@ SnapEdges = true
 [622]   # Spiegelräume
 Name = Spiegelräume
 ShowArea = true
-MapPosition = 0,5,16
+MapPosition = 0,19,4
 SnapEdges = true
 BattleBack = cave7
 #-------------------------------
 [623]   # Spiegelräume
 Name = Spiegelräume
 ShowArea = true
-MapPosition = 0,5,16
+MapPosition = 0,19,4
 SnapEdges = true
 BattleBack = cave7
 #-------------------------------
 [624]   # Spiegelräume
 Name = Spiegelräume
 ShowArea = true
-MapPosition = 0,5,16
+MapPosition = 0,19,4
 SnapEdges = true
 BattleBack = cave7
 #-------------------------------
 [625]   # Spiegelräume
 Name = Spiegelräume
 ShowArea = true
-MapPosition = 0,5,16
+MapPosition = 0,19,4
 SnapEdges = true
 BattleBack = cave7
 #-------------------------------
 [626]   # Spiegelräume
 Name = Spiegelräume
 ShowArea = true
-MapPosition = 0,5,16
+MapPosition = 0,19,4
 SnapEdges = true
 BattleBack = cave7
 #-------------------------------
 [627]   # Schrein des entzweiten Eises
 Name = Schrein des entzweiten Eises
 ShowArea = true
-MapPosition = 0,5,16
+MapPosition = 0,19,4
 DarkMap = true
 SnapEdges = true
 BattleBack = cave7
@@ -4148,12 +4195,13 @@ BattleBack = cave7
 [628]   # Lucenhöhle
 Name = Lucenhöhle
 ShowArea = true
-MapPosition = 0,5,16
+MapPosition = 0,19,4
 DarkMap = true
 SnapEdges = true
 BattleBack = cave7
 #-------------------------------
 [630]   # MAP630
+Name = MAP630
 ShowArea = true
 MapPosition = 0,22,4
 SnapEdges = true
@@ -4162,18 +4210,91 @@ SnapEdges = true
 Name = Dracheninsel
 Outdoor = true
 ShowArea = true
+MapPosition = 0,16,2
 SnapEdges = true
+Flags = Levels
 #-------------------------------
 [632]   # Dracheninsel 1
 Name = Dracheninsel
 Outdoor = true
 ShowArea = true
+MapPosition = 0,16,1
 SnapEdges = true
+Flags = Levels
 #-------------------------------
 [633]   # Tonishi
 Name = Tonishi
 Outdoor = true
 ShowArea = true
-MapPosition = 0,9,14
+MapPosition = 0,17,4
+SnapEdges = true
+Flags = Levels
+#-------------------------------
+[638]   # MAP638
+Name = Noxburgh
+MapPosition = 0,15,2
+SnapEdges = true
+#-------------------------------
+[639]   # MAP639
+Name = Noxburgh
+MapPosition = 0,15,2
+SnapEdges = true
+#-------------------------------
+[640]   # MAP640
+Name = Noxburgh
+MapPosition = 0,15,2
+SnapEdges = true
+#-------------------------------
+[641]   # MAP641
+Name = Noxburgh
+ShowArea = true
+MapPosition = 0,15,2
+SnapEdges = true
+#-------------------------------
+[642]   # MAP642
+Name = Arena
+ShowArea = true
+MapPosition = 0,15,2
+SnapEdges = true
+#-------------------------------
+[643]   # MAP643
+Name = Arena
+ShowArea = true
+MapPosition = 0,15,2
+SnapEdges = true
+#-------------------------------
+[644]   # MAP644
+Name = Arena
+ShowArea = true
+MapPosition = 0,15,2
+SnapEdges = true
+#-------------------------------
+[645]   # MAP645
+Name = Arena
+ShowArea = true
+MapPosition = 0,15,2
+SnapEdges = true
+#-------------------------------
+[646]   # MAP646
+Name = Route 19
+Outdoor = true
+ShowArea = true
+MapPosition = 0,15,3
+SnapEdges = true
+Flags = Levels
+#-------------------------------
+[647]   # MAP647
+Name = Route 19
+Outdoor = true
+ShowArea = true
+MapPosition = 0,16,3
+SnapEdges = true
+Flags = Levels
+#-------------------------------
+[648]   # Wasserroute
+Name = Route 18
+Outdoor = true
+ShowArea = true
+MapPosition = 0,16,4
 SnapEdges = true
 Flags = Levels

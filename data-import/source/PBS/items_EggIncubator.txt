@@ -1,0 +1,9 @@
+﻿#-------------------------------
+[EGGINCUBATOR]
+Name = Brutkasten
+NamePlural = Brutkästen
+Pocket = 8
+Price = 0
+FieldUse = Direct
+Flags = KeyItem
+Description = Ein Brutkasten, in dem bis zu 6 Eier aufbewahrt werden, bis sie schlüpfen.

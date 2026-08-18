@@ -8,7 +8,7 @@
 import ExcelJS from "exceljs";
 import { join } from "node:path";
 import { TITLE_FONT, NOTE_FONT, COL_HEADER_FONT, COL_HEADER_FILL, FONT, writeGroupedSection, type ColumnDef, type RowStyle } from "./xlsxGroupedSection.ts";
-import { resolveEncounterTarget } from "./resolveEncounterTarget.ts";
+import { speciesDisplayName } from "./resolveEncounterTarget.ts";
 import { encounterMethodLabel } from "../src/lib/encounterMethods.ts";
 import { formLabel } from "./exportPokemonList.ts";
 import { parsePokemonMapLocations } from "./parsePokemonMapLocations.ts";
@@ -177,17 +177,6 @@ function addBstSheet(wb: ExcelJS.Workbook, pokemon: Pokemon[], pokemonById: Map<
   );
 
   return total;
-}
-
-function speciesDisplayName(rawId: string, pokemonById: Map<string, Pokemon>): string {
-  const resolved = resolveEncounterTarget(rawId, pokemonById);
-  if (!resolved) return rawId; // unresolved species (see buildData.ts's own "[Fundorte]" warning for the same data)
-  const species = pokemonById.get(resolved.speciesId)!;
-  const form =
-    resolved.formNumber === null
-      ? { formNumber: 0, formName: null }
-      : species.forms.find((f) => f.formNumber === resolved.formNumber)!;
-  return formLabel(species.name, form);
 }
 
 function buildLocationGroups(encounters: EncounterLocation[], pokemonById: Map<string, Pokemon>): LocationGroup[] {

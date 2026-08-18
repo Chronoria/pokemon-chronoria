@@ -1729,6 +1729,8 @@ Pokedex = With its muscular strength now greatly increased, it can fly continuou
 Generation = 6
 
 
+UnmegaForm = 0
+
 
 #-------------------------------
 
@@ -1775,6 +1777,9 @@ Pokedex = With its muscular strength now greatly increased, it can fly continuou
 
 
 Generation = 6
+
+
+UnmegaForm = 1
 
 
 

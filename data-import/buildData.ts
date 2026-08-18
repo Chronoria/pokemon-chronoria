@@ -21,6 +21,7 @@ import { buildCalcData } from "./exportCalcData.ts";
 import { exportItemListXlsx } from "./exportItemList.ts";
 import { exportPokemonListXlsx } from "./exportPokemonList.ts";
 import { exportEncounterListXlsx } from "./exportEncounterList.ts";
+import { exportFishingListXlsx } from "./exportFishingList.ts";
 import { resolveEncounterTarget } from "./resolveEncounterTarget.ts";
 import type { EncounterRef } from "./dataModel.ts";
 
@@ -226,6 +227,18 @@ async function main() {
     `Routen-Uebersicht.xlsx aktualisiert: ${encounterXlsxResult.locations} Routen, ${encounterXlsxResult.rows} Encounter-Einträge, ` +
       `${encounterXlsxResult.bstEntries} Pokémon in der BST-Rangliste.`
   );
+
+  const fishingXlsxResult = await exportFishingListXlsx(encounters, pokemon);
+  console.log(
+    `Angel-Uebersicht.xlsx aktualisiert: ${fishingXlsxResult.rodsWithData} von ${fishingXlsxResult.rods} Angeln mit ` +
+      `Fangdaten, ${fishingXlsxResult.species} angelbare Pokémon.`
+  );
+  if (fishingXlsxResult.missingGeneration.length > 0) {
+    console.warn(
+      `  [Angeln] ohne Generationsangabe und daher nicht auf dem Generationen-Blatt: ` +
+        fishingXlsxResult.missingGeneration.join(", ")
+    );
+  }
 
   console.log(`Fertig: ${pokemon.length} Pokémon, ${moves.length} Attacken, ${abilities.length} Fähigkeiten, ` +
     `${items.length} Items, ${trainers.length} Trainer, ${encounters.length} Orte, ${medals.length} Medaillen.`);
