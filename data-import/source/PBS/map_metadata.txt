@@ -2385,19 +2385,19 @@ WildVictoryBGM = Victory! (Wild Pokémon)_2
 Environment = Forest
 Flags = Levels
 #-------------------------------
-[371]   # MAP371
+[371]   # Noxburgh
 Name = Noxburgh
 Outdoor = true
 ShowArea = true
 MapPosition = 0,15,2
 SnapEdges = true
 #-------------------------------
-[372]   # MAP372
+[372]   # Noxburgh
 Name = Noxburgh
 MapPosition = 0,15,2
 SnapEdges = true
 #-------------------------------
-[373]   # MAP373
+[373]   # Noxburgh
 Name = Noxburgh
 MapPosition = 0,15,2
 SnapEdges = true
@@ -4200,13 +4200,13 @@ DarkMap = true
 SnapEdges = true
 BattleBack = cave7
 #-------------------------------
-[630]   # MAP630
-Name = MAP630
+[630]   # Reliktstein
+Name = Relikt-Stein
 ShowArea = true
-MapPosition = 0,22,4
+MapPosition = 0,21,4
 SnapEdges = true
 #-------------------------------
-[631]   # Dracheninsel 1
+[631]   # Pfad der Drachen
 Name = Dracheninsel
 Outdoor = true
 ShowArea = true
@@ -4214,7 +4214,7 @@ MapPosition = 0,16,2
 SnapEdges = true
 Flags = Levels
 #-------------------------------
-[632]   # Dracheninsel 1
+[632]   # Pfad der Drachen
 Name = Dracheninsel
 Outdoor = true
 ShowArea = true
@@ -4230,52 +4230,52 @@ MapPosition = 0,17,4
 SnapEdges = true
 Flags = Levels
 #-------------------------------
-[638]   # MAP638
+[638]   # Noxburgh
 Name = Noxburgh
 MapPosition = 0,15,2
 SnapEdges = true
 #-------------------------------
-[639]   # MAP639
+[639]   # Noxburgh
 Name = Noxburgh
 MapPosition = 0,15,2
 SnapEdges = true
 #-------------------------------
-[640]   # MAP640
+[640]   # Noxburgh
 Name = Noxburgh
 MapPosition = 0,15,2
 SnapEdges = true
 #-------------------------------
-[641]   # MAP641
+[641]   # Noxburgh
 Name = Noxburgh
 ShowArea = true
 MapPosition = 0,15,2
 SnapEdges = true
 #-------------------------------
-[642]   # MAP642
+[642]   # Arena
 Name = Arena
 ShowArea = true
 MapPosition = 0,15,2
 SnapEdges = true
 #-------------------------------
-[643]   # MAP643
+[643]   # Arena
 Name = Arena
 ShowArea = true
 MapPosition = 0,15,2
 SnapEdges = true
 #-------------------------------
-[644]   # MAP644
+[644]   # Arena
 Name = Arena
 ShowArea = true
 MapPosition = 0,15,2
 SnapEdges = true
 #-------------------------------
-[645]   # MAP645
+[645]   # Arena
 Name = Arena
 ShowArea = true
 MapPosition = 0,15,2
 SnapEdges = true
 #-------------------------------
-[646]   # MAP646
+[646]   # Route 19
 Name = Route 19
 Outdoor = true
 ShowArea = true
@@ -4283,7 +4283,7 @@ MapPosition = 0,15,3
 SnapEdges = true
 Flags = Levels
 #-------------------------------
-[647]   # MAP647
+[647]   # Route 19
 Name = Route 19
 Outdoor = true
 ShowArea = true
@@ -4291,10 +4291,15 @@ MapPosition = 0,16,3
 SnapEdges = true
 Flags = Levels
 #-------------------------------
-[648]   # Wasserroute
+[648]   # Route 18
 Name = Route 18
 Outdoor = true
 ShowArea = true
 MapPosition = 0,16,4
 SnapEdges = true
 Flags = Levels
+#-------------------------------
+[649]   # Zwischengebäude
+Name = 
+MapPosition = 0,15,2
+SnapEdges = true

@@ -6,7 +6,7 @@
 // Usage: node data-import/syncData.ts [pfad-zum-spielprojekt]
 // Default game dir: E:/Test
 
-import { existsSync, mkdirSync, readdirSync, copyFileSync, unlinkSync } from "node:fs";
+import { existsSync, mkdirSync, readdirSync, copyFileSync, unlinkSync, writeFileSync } from "node:fs";
 import { join } from "node:path";
 
 const gameDir = process.argv[2] ?? "E:/Test";
@@ -107,6 +107,25 @@ const shinySpriteCount = copySprites(join(gameDir, "Graphics", "Pokemon", "Front
 const itemIconCount = copySprites(join(gameDir, "Graphics", "Items"), join(publicDir, "item-icons"));
 const trainerSpriteCount = copySprites(join(gameDir, "Graphics", "Trainers"), join(publicDir, "trainers"));
 const medalIconCount = copySprites(join(gameDir, "Graphics", "UI", "Medal Box", "Medals"), join(publicDir, "medals"));
+// Overworld sprite FILENAMES only. The character sprites themselves (3000+ files) are never
+// shown on the wiki, but exportTrainerList.ts needs to know which trainer classes have one, so
+// a plain name manifest is written instead of copying the artwork.
+function writeCharacterManifest(srcDir: string, destFile: string) {
+  if (!existsSync(srcDir)) return 0;
+  const names = readdirSync(srcDir)
+    .filter((n) => /\.png$/i.test(n))
+    .map((n) => n.replace(/\.png$/i, ""))
+    .sort((a, b) => a.localeCompare(b));
+  mkdirSync(join(destFile, ".."), { recursive: true });
+  writeFileSync(destFile, names.join("\n") + "\n", "utf8");
+  return names.length;
+}
+
+const characterCount = writeCharacterManifest(
+  join(gameDir, "Graphics", "Characters"),
+  join(outDir, "Graphics", "characters.txt")
+);
+
 const eventDumpCopied = copySingleFile(
   join(gameDir, "EventExporter", "EventTextDump.txt"),
   join(outDir, "MapEvents", "EventTextDump.txt")
@@ -122,4 +141,5 @@ console.log(`  Shiny-Sprites: ${shinySpriteCount} Dateien`);
 console.log(`  Item-Icons: ${itemIconCount} Dateien`);
 console.log(`  Trainer-Sprites: ${trainerSpriteCount} Dateien`);
 console.log(`  Medaillen-Icons: ${medalIconCount} Dateien`);
+console.log(`  Charakter-Sprite-Namen: ${characterCount}`);
 console.log(`  Map-Event-Dump: ${eventDumpCopied ? "kopiert" : "nicht gefunden - übersprungen"}`);

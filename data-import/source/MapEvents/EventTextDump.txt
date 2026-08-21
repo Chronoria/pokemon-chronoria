@@ -11768,7 +11768,7 @@ Speed: 3: Slow
 Freq: 3: Low
 Options Enabled
 Move Animation
-Trigger: Player Touch
+Trigger: Event Touch
 
 List of Event Commands:
 @>Conditional Branch: Player is facing Down
@@ -18510,7 +18510,7 @@ Auto-Change BGM: XY 043 Camphrier Town
 #------------------------------------------------------------------------------
 Event ID: 001
 Event Name: Exit
-(X,Y): (017,021)
+(X,Y): (017,022)
 
 Page #1
 Conditions
@@ -18736,6 +18736,42 @@ List of Event Commands:
 @>
 
 #------------------------------------------------------------------------------
+Event ID: 009
+Event Name: EV009
+(X,Y): (000,000)
+
+Page #1
+Conditions
+None
+
+Autonomous Movement
+Type: Fixed
+Speed: 3: Slow
+Freq: 3: Low
+Options Enabled
+Move Animation
+Trigger: Parallel Process
+
+List of Event Commands:
+@>Change Map Settings:Fog = 'Velmora Haus', 0, 255, Normal, 100, 0, 0
+@>
+
+Page #2
+Conditions
+Switch 0015: s:PBDayNight.isNight? is ON
+
+Autonomous Movement
+Type: Fixed
+Speed: 3: Slow
+Freq: 3: Low
+Options Enabled
+Move Animation
+Trigger: Action Button
+
+List of Event Commands:
+@>
+
+#------------------------------------------------------------------------------
 Event ID: 011
 Event Name: EV011
 (X,Y): (011,013)
@@ -18789,7 +18825,7 @@ Auto-Change BGM: XY 043 Camphrier Town
 #------------------------------------------------------------------------------
 Event ID: 001
 Event Name: Exit
-(X,Y): (018,021)
+(X,Y): (018,022)
 
 Page #1
 Conditions
@@ -19122,6 +19158,42 @@ Trigger: Action Button
 
 List of Event Commands:
 @>Text: Nichts Besonderes.
+@>
+
+#------------------------------------------------------------------------------
+Event ID: 009
+Event Name: EV009
+(X,Y): (000,000)
+
+Page #1
+Conditions
+None
+
+Autonomous Movement
+Type: Fixed
+Speed: 3: Slow
+Freq: 3: Low
+Options Enabled
+Move Animation
+Trigger: Parallel Process
+
+List of Event Commands:
+@>Change Map Settings:Fog = 'Velmora_033', 0, 255, Normal, 100, 0, 0
+@>
+
+Page #2
+Conditions
+Switch 0015: s:PBDayNight.isNight? is ON
+
+Autonomous Movement
+Type: Fixed
+Speed: 3: Slow
+Freq: 3: Low
+Options Enabled
+Move Animation
+Trigger: Action Button
+
+List of Event Commands:
 @>
 
 #------------------------------------------------------------------------------
@@ -22600,7 +22672,7 @@ Auto-Change BGM: XY 043 Camphrier Town
 #------------------------------------------------------------------------------
 Event ID: 001
 Event Name: Exit
-(X,Y): (017,021)
+(X,Y): (017,022)
 
 Page #1
 Conditions
@@ -23028,6 +23100,42 @@ List of Event Commands:
 @>
 
 #------------------------------------------------------------------------------
+Event ID: 012
+Event Name: EV012
+(X,Y): (000,000)
+
+Page #1
+Conditions
+None
+
+Autonomous Movement
+Type: Fixed
+Speed: 3: Slow
+Freq: 3: Low
+Options Enabled
+Move Animation
+Trigger: Parallel Process
+
+List of Event Commands:
+@>Change Map Settings:Fog = 'Velmora_042', 0, 255, Normal, 100, 0, 0
+@>
+
+Page #2
+Conditions
+Switch 0015: s:PBDayNight.isNight? is ON
+
+Autonomous Movement
+Type: Fixed
+Speed: 3: Slow
+Freq: 3: Low
+Options Enabled
+Move Animation
+Trigger: Action Button
+
+List of Event Commands:
+@>
+
+#------------------------------------------------------------------------------
 Event ID: 013
 Event Name: EV013
 (X,Y): (033,014)
@@ -23123,7 +23231,7 @@ Auto-Change BGM: XY 043 Camphrier Town
 #------------------------------------------------------------------------------
 Event ID: 001
 Event Name: Exit
-(X,Y): (017,019)
+(X,Y): (017,020)
 
 Page #1
 Conditions
@@ -23467,6 +23575,42 @@ Trigger: Action Button
 
 List of Event Commands:
 @>Text: Nichts Nützliches.
+@>
+
+#------------------------------------------------------------------------------
+Event ID: 010
+Event Name: EV010
+(X,Y): (000,000)
+
+Page #1
+Conditions
+None
+
+Autonomous Movement
+Type: Fixed
+Speed: 3: Slow
+Freq: 3: Low
+Options Enabled
+Move Animation
+Trigger: Parallel Process
+
+List of Event Commands:
+@>Change Map Settings:Fog = 'Velmora_043', 0, 255, Normal, 100, 0, 0
+@>
+
+Page #2
+Conditions
+Switch 0015: s:PBDayNight.isNight? is ON
+
+Autonomous Movement
+Type: Fixed
+Speed: 3: Slow
+Freq: 3: Low
+Options Enabled
+Move Animation
+Trigger: Action Button
+
+List of Event Commands:
 @>
 
 #------------------------------------------------------------------------------
@@ -24252,7 +24396,7 @@ Auto-Change BGM: XY 043 Camphrier Town
 #------------------------------------------------------------------------------
 Event ID: 001
 Event Name: Exit
-(X,Y): (017,019)
+(X,Y): (017,020)
 
 Page #1
 Conditions
@@ -24521,6 +24665,42 @@ Trigger: Action Button
 
 List of Event Commands:
 @>Text: Nichts Besonderes.
+@>
+
+#------------------------------------------------------------------------------
+Event ID: 012
+Event Name: EV012
+(X,Y): (000,000)
+
+Page #1
+Conditions
+None
+
+Autonomous Movement
+Type: Fixed
+Speed: 3: Slow
+Freq: 3: Low
+Options Enabled
+Move Animation
+Trigger: Parallel Process
+
+List of Event Commands:
+@>Change Map Settings:Fog = 'Velmora_048', 0, 255, Normal, 100, 0, 0
+@>
+
+Page #2
+Conditions
+Switch 0015: s:PBDayNight.isNight? is ON
+
+Autonomous Movement
+Type: Fixed
+Speed: 3: Slow
+Freq: 3: Low
+Options Enabled
+Move Animation
+Trigger: Action Button
+
+List of Event Commands:
 @>
 
 #------------------------------------------------------------------------------
@@ -35778,6 +35958,27 @@ List of Event Commands:
  :    : \c[1]Wasser\c[0]?
 @>Text: \xn[Prof. Ficht]Welches Pokémon möchtest du 
  :    : haben?
+@>
+
+#------------------------------------------------------------------------------
+Event ID: 048
+Event Name: EV048
+(X,Y): (000,000)
+
+Page #1
+Conditions
+None
+
+Autonomous Movement
+Type: Fixed
+Speed: 3: Slow
+Freq: 3: Low
+Options Enabled
+Move Animation
+Trigger: Parallel Process
+
+List of Event Commands:
+@>Change Map Settings:Fog = 'Kolosseum', 0, 255, Normal, 100, 0, 0
 @>
 
 #------------------------------------------------------------------------------
@@ -67257,6 +67458,16 @@ Move Animation
 Trigger: Action Button
 
 List of Event Commands:
+@>Conditional Branch: Player is facing Right
+ @>Change Screen Color Tone: (-255,-255,-255,0), @8
+ @>Wait: 8 frame(s)
+ @>Transfer Player:[110: Mistral], (030,012), Up
+ @>Change Screen Color Tone: (0,0,0,0), @8
+ @>Wait: 8 frame(s)
+ @>
+: Else
+ @>
+: Branch End
 @>Text: \xn[Camp-Leiterin]Vielen lieben Dank, dass du das 
  :    : Pichu gerettet hast.
 @>Show Animation: This event, [Happy bubble]
@@ -101401,6 +101612,24 @@ Trigger: Action Button
 List of Event Commands:
 @>
 
+Page #2
+Conditions
+Switch 0368: Zekrom besiegt is ON
+
+Graphic: trainer_ARTIST4
+
+Autonomous Movement
+Type: Fixed
+Speed: 3: Slow
+Freq: 3: Low
+Options Enabled
+Move Animation
+Trigger: Action Button
+
+List of Event Commands:
+@>Text: Ich wollte gerade meine Pokémon heilen, ja genau!
+@>
+
 #------------------------------------------------------------------------------
 Event ID: 086
 Event Name: Haus 1 Tür
@@ -101468,39 +101697,6 @@ Through
 Trigger: Action Button
 
 List of Event Commands:
-@>
-
-#------------------------------------------------------------------------------
-Event ID: 088
-Event Name: EV088
-(X,Y): (013,017)
-
-Page #1
-Conditions
-None
-
-Graphic: NPCGymGuy
-
-Autonomous Movement
-Type: Fixed
-Speed: 3: Slow
-Freq: 3: Low
-Options Enabled
-Move Animation
-Trigger: Action Button
-
-List of Event Commands:
-@>Conditional Branch: Script: $player.party.length == 6 && $player.party.all? { |pkmn| pkmn.female? }
- @>Conditional Branch: Script: TrainerBattle.start(:BATTLEGIRL, "Nala")
-  @>Control Self Switch: A =ON
-  @>
- : Branch End
- @>
-: Else
- @>Text: Du musst ein Team aus 6 Pokémon dabei haben und 
-  :    : alle müssen weiblich sein.
- @>
-: Branch End
 @>
 
 #------------------------------------------------------------------------------
@@ -117430,11 +117626,12 @@ Move Animation
 Trigger: Player Touch
 
 List of Event Commands:
-@>Play SE: 'Door exit', 80, 100
+@>Play SE: 'Door exit', 100, 100
 @>Change Screen Color Tone: (-255,-255,-255,0), @6
 @>Wait: 8 frame(s)
 @>Transfer Player:[385: Route 7], (010,053), Up, No Fade
 @>Change Screen Color Tone: (0,0,0,0), @6
+@>Wait: 8 frame(s)
 @>
 
 #------------------------------------------------------------------------------
@@ -117455,11 +117652,12 @@ Move Animation
 Trigger: Player Touch
 
 List of Event Commands:
-@>Play SE: 'Door exit', 80, 100
+@>Play SE: 'Door exit', 100, 100
 @>Change Screen Color Tone: (-255,-255,-255,0), @6
 @>Wait: 8 frame(s)
 @>Transfer Player:[385: Route 7], (010,053), Up, No Fade
 @>Change Screen Color Tone: (0,0,0,0), @6
+@>Wait: 8 frame(s)
 @>
 
 #------------------------------------------------------------------------------
@@ -117480,11 +117678,12 @@ Move Animation
 Trigger: Player Touch
 
 List of Event Commands:
-@>Play SE: 'Door enter', 80, 100
+@>Play SE: 'Door exit', 100, 100
 @>Change Screen Color Tone: (-255,-255,-255,0), @6
 @>Wait: 8 frame(s)
 @>Transfer Player:[273: Ephiron], (046,006), Down, No Fade
 @>Change Screen Color Tone: (0,0,0,0), @6
+@>Wait: 8 frame(s)
 @>
 
 #------------------------------------------------------------------------------
@@ -117505,11 +117704,12 @@ Move Animation
 Trigger: Player Touch
 
 List of Event Commands:
-@>Play SE: 'Door enter', 80, 100
+@>Play SE: 'Door exit', 100, 100
 @>Change Screen Color Tone: (-255,-255,-255,0), @6
 @>Wait: 8 frame(s)
 @>Transfer Player:[273: Ephiron], (046,006), Down, No Fade
 @>Change Screen Color Tone: (0,0,0,0), @6
+@>Wait: 8 frame(s)
 @>
 
 #------------------------------------------------------------------------------
@@ -131882,16 +132082,16 @@ List of Event Commands:
  :              : $>Wait: 2 frame(s)
  :              : $>Turn Up
  :              : $>Wait: 2 frame(s)
-@>Wait for Move's Completion
+@>Wait: 8 frame(s)
 @>Set Move Route: Player
                   (Ignore If Can't Move)
  :              : $>Through ON
  :              : $>Move Up
  :              : $>Through OFF
-@>Wait for Move's Completion
+@>Wait: 8 frame(s)
 @>Change Transparent Flag: Transparency
 @>Script: Followers.follow_into_door
-@>Wait for Move's Completion
+@>Wait: 8 frame(s)
 @>Set Move Route: This event
                   (Ignore If Can't Move)
  :              : $>SE: 'Door slide', 100, 55
@@ -131902,12 +132102,13 @@ List of Event Commands:
  :              : $>Wait: 2 frame(s)
  :              : $>Turn Down
  :              : $>Wait: 2 frame(s)
-@>Wait for Move's Completion
+@>Wait: 8 frame(s)
 @>Change Screen Color Tone: (-255,-255,-255,0), @6
 @>Wait: 8 frame(s)
 @>Change Transparent Flag: Normal
 @>Transfer Player:[475: Arena 4], (011,037), Up, No Fade
 @>Change Screen Color Tone: (0,0,0,0), @6
+@>Wait: 8 frame(s)
 @>
 
 Page #2
@@ -131938,14 +132139,14 @@ List of Event Commands:
   :              : $>Wait: 2 frame(s)
   :              : $>Turn Up
   :              : $>Wait: 2 frame(s)
- @>Wait for Move's Completion
+ @>Wait: 8 frame(s)
  @>Change Transparent Flag: Normal
  @>Set Move Route: Player
                    (Ignore If Can't Move)
   :              : $>Through ON
   :              : $>Move Down
   :              : $>Through OFF
- @>Wait for Move's Completion
+ @>Wait: 8 frame(s)
  @>Script: Followers.put_followers_on_player
  @>Set Move Route: This event
                    (Ignore If Can't Move)
@@ -131956,7 +132157,7 @@ List of Event Commands:
   :              : $>Wait: 2 frame(s)
   :              : $>Turn Down
   :              : $>Wait: 2 frame(s)
- @>Wait for Move's Completion
+ @>Wait: 8 frame(s)
  @>
 : Branch End
 @>Script: setTempSwitchOn("A")
@@ -131980,11 +132181,12 @@ Move Animation
 Trigger: Player Touch
 
 List of Event Commands:
-@>Play SE: 'Door exit', 80, 100
+@>Play SE: 'Door exit', 100, 100
 @>Change Screen Color Tone: (-255,-255,-255,0), @6
 @>Wait: 8 frame(s)
 @>Transfer Player:[273: Ephiron], (047,035), Down, No Fade
 @>Change Screen Color Tone: (0,0,0,0), @6
+@>Wait: 8 frame(s)
 @>
 
 #------------------------------------------------------------------------------
@@ -132005,11 +132207,12 @@ Move Animation
 Trigger: Player Touch
 
 List of Event Commands:
-@>Play SE: 'Door exit', 80, 100
+@>Play SE: 'Door exit', 100, 100
 @>Change Screen Color Tone: (-255,-255,-255,0), @6
 @>Wait: 8 frame(s)
 @>Transfer Player:[480: Arena 4], (005,013), Right, No Fade
 @>Change Screen Color Tone: (0,0,0,0), @6
+@>Wait: 8 frame(s)
 @>
 
 #------------------------------------------------------------------------------
@@ -132030,11 +132233,12 @@ Move Animation
 Trigger: Player Touch
 
 List of Event Commands:
-@>Play SE: 'Door exit', 80, 100
+@>Play SE: 'Door exit', 100, 100
 @>Change Screen Color Tone: (-255,-255,-255,0), @6
 @>Wait: 8 frame(s)
 @>Transfer Player:[483: Arena 4], (014,009), Left, No Fade
 @>Change Screen Color Tone: (0,0,0,0), @6
+@>Wait: 8 frame(s)
 @>
 
 #------------------------------------------------------------------------------
@@ -211973,11 +212177,12 @@ Move Animation
 Trigger: Player Touch
 
 List of Event Commands:
-@>Play SE: 'Door enter', 80, 100
+@>Play SE: 'Door exit', 100, 100
 @>Change Screen Color Tone: (-255,-255,-255,0), @6
 @>Wait: 8 frame(s)
 @>Transfer Player:[164: Zwischengebäude], (008,019), Up, No Fade
 @>Change Screen Color Tone: (0,0,0,0), @6
+@>Wait: 8 frame(s)
 @>
 
 Page #2
@@ -212020,11 +212225,12 @@ Move Animation
 Trigger: Player Touch
 
 List of Event Commands:
-@>Play SE: 'Door enter', 80, 100
+@>Play SE: 'Door exit', 100, 100
 @>Change Screen Color Tone: (-255,-255,-255,0), @6
 @>Wait: 8 frame(s)
 @>Transfer Player:[412: Zwischengebäude], (008,001), Down, No Fade
 @>Change Screen Color Tone: (0,0,0,0), @6
+@>Wait: 8 frame(s)
 @>
 
 #------------------------------------------------------------------------------
@@ -214422,7 +214628,7 @@ Move Animation
 Trigger: Player Touch
 
 List of Event Commands:
-@>Play SE: 'Door exit', 80, 100
+@>Play SE: 'Door exit', 100, 100
 @>Show Picture: 2, 'cave brown', Upper Left (0,0), (100%,100%), 255, Normal
 @>Wait: 16 frame(s)
 @>Change Screen Color Tone: (-255,-255,-255,0), @6
@@ -214450,9 +214656,8 @@ List of Event Commands:
  @>Script: Followers.hide_followers
  @>Set Move Route: Player
                    (Ignore If Can't Move)
-  :              : $>SE: 'Door exit', 80, 100
   :              : $>Move Down
- @>Wait for Move's Completion
+ @>Wait: 6 frame(s)
  @>Script: Followers.put_followers_on_player
  @>
 : Branch End
@@ -217318,11 +217523,12 @@ Move Animation
 Trigger: Player Touch
 
 List of Event Commands:
-@>Play SE: 'Door enter', 80, 100
+@>Play SE: 'Door exit', 100, 100
 @>Change Screen Color Tone: (-255,-255,-255,0), @6
 @>Wait: 8 frame(s)
 @>Transfer Player:[412: Zwischengebäude], (008,017), Up, No Fade
 @>Change Screen Color Tone: (0,0,0,0), @6
+@>Wait: 8 frame(s)
 @>
 
 Page #2
@@ -238380,7 +238586,7 @@ Auto-Change BGM: XY 059 Cyllage City
 
 #------------------------------------------------------------------------------
 Event ID: 001
-Event Name: Exit
+Event Name: Exit size(2,1)
 (X,Y): (017,021)
 
 Page #1
@@ -238396,36 +238602,12 @@ Move Animation
 Trigger: Player Touch
 
 List of Event Commands:
-@>Play SE: 'Door exit', 80, 100
+@>Play SE: 'Door exit', 100, 100
 @>Change Screen Color Tone: (-255,-255,-255,0), @6
 @>Wait: 8 frame(s)
 @>Transfer Player:[273: Ephiron], (045,018), Down, No Fade
 @>Change Screen Color Tone: (0,0,0,0), @6
-@>
-
-#------------------------------------------------------------------------------
-Event ID: 002
-Event Name: Exit
-(X,Y): (018,021)
-
-Page #1
-Conditions
-None
-
-Autonomous Movement
-Type: Fixed
-Speed: 3: Slow
-Freq: 3: Low
-Options Enabled
-Move Animation
-Trigger: Player Touch
-
-List of Event Commands:
-@>Play SE: 'Door exit', 80, 100
-@>Change Screen Color Tone: (-255,-255,-255,0), @6
 @>Wait: 8 frame(s)
-@>Transfer Player:[273: Ephiron], (045,018), Down, No Fade
-@>Change Screen Color Tone: (0,0,0,0), @6
 @>
 
 #------------------------------------------------------------------------------
@@ -238822,7 +239004,7 @@ Auto-Change BGM: XY 059 Cyllage City
 
 #------------------------------------------------------------------------------
 Event ID: 001
-Event Name: Exit
+Event Name: Exit size(2,1)
 (X,Y): (017,021)
 
 Page #1
@@ -238838,36 +239020,12 @@ Move Animation
 Trigger: Player Touch
 
 List of Event Commands:
-@>Play SE: 'Door exit', 80, 100
+@>Play SE: 'Door exit', 100, 100
 @>Change Screen Color Tone: (-255,-255,-255,0), @6
 @>Wait: 8 frame(s)
 @>Transfer Player:[273: Ephiron], (035,016), Down, No Fade
 @>Change Screen Color Tone: (0,0,0,0), @6
-@>
-
-#------------------------------------------------------------------------------
-Event ID: 002
-Event Name: Exit
-(X,Y): (018,021)
-
-Page #1
-Conditions
-None
-
-Autonomous Movement
-Type: Fixed
-Speed: 3: Slow
-Freq: 3: Low
-Options Enabled
-Move Animation
-Trigger: Player Touch
-
-List of Event Commands:
-@>Play SE: 'Door exit', 80, 100
-@>Change Screen Color Tone: (-255,-255,-255,0), @6
 @>Wait: 8 frame(s)
-@>Transfer Player:[273: Ephiron], (035,016), Down, No Fade
-@>Change Screen Color Tone: (0,0,0,0), @6
 @>
 
 #------------------------------------------------------------------------------
@@ -239277,7 +239435,7 @@ Auto-Change BGM: XY 059 Cyllage City
 
 #------------------------------------------------------------------------------
 Event ID: 001
-Event Name: Exit
+Event Name: Exit size(2,1)
 (X,Y): (018,021)
 
 Page #1
@@ -239293,36 +239451,12 @@ Move Animation
 Trigger: Player Touch
 
 List of Event Commands:
-@>Play SE: 'Door exit', 80, 100
+@>Play SE: 'Door exit', 100, 100
 @>Change Screen Color Tone: (-255,-255,-255,0), @6
 @>Wait: 8 frame(s)
 @>Transfer Player:[273: Ephiron], (025,027), Down, No Fade
 @>Change Screen Color Tone: (0,0,0,0), @6
-@>
-
-#------------------------------------------------------------------------------
-Event ID: 002
-Event Name: Exit
-(X,Y): (019,021)
-
-Page #1
-Conditions
-None
-
-Autonomous Movement
-Type: Fixed
-Speed: 3: Slow
-Freq: 3: Low
-Options Enabled
-Move Animation
-Trigger: Player Touch
-
-List of Event Commands:
-@>Play SE: 'Door exit', 80, 100
-@>Change Screen Color Tone: (-255,-255,-255,0), @6
 @>Wait: 8 frame(s)
-@>Transfer Player:[273: Ephiron], (025,027), Down, No Fade
-@>Change Screen Color Tone: (0,0,0,0), @6
 @>
 
 #------------------------------------------------------------------------------
@@ -239739,7 +239873,7 @@ Auto-Change BGM: XY 059 Cyllage City
 
 #------------------------------------------------------------------------------
 Event ID: 001
-Event Name: Exit
+Event Name: Exit size(2,1)
 (X,Y): (018,021)
 
 Page #1
@@ -239755,36 +239889,12 @@ Move Animation
 Trigger: Player Touch
 
 List of Event Commands:
-@>Play SE: 'Door exit', 80, 100
+@>Play SE: 'Door exit', 100, 100
 @>Change Screen Color Tone: (-255,-255,-255,0), @6
 @>Wait: 8 frame(s)
 @>Transfer Player:[273: Ephiron], (021,027), Down, No Fade
 @>Change Screen Color Tone: (0,0,0,0), @6
-@>
-
-#------------------------------------------------------------------------------
-Event ID: 002
-Event Name: Exit
-(X,Y): (019,021)
-
-Page #1
-Conditions
-None
-
-Autonomous Movement
-Type: Fixed
-Speed: 3: Slow
-Freq: 3: Low
-Options Enabled
-Move Animation
-Trigger: Player Touch
-
-List of Event Commands:
-@>Play SE: 'Door exit', 80, 100
-@>Change Screen Color Tone: (-255,-255,-255,0), @6
 @>Wait: 8 frame(s)
-@>Transfer Player:[273: Ephiron], (021,027), Down, No Fade
-@>Change Screen Color Tone: (0,0,0,0), @6
 @>
 
 #------------------------------------------------------------------------------
@@ -240168,7 +240278,7 @@ Auto-Change BGM: XY 059 Cyllage City
 
 #------------------------------------------------------------------------------
 Event ID: 001
-Event Name: Exit
+Event Name: Exit size(2,1)
 (X,Y): (017,021)
 
 Page #1
@@ -240184,36 +240294,12 @@ Move Animation
 Trigger: Player Touch
 
 List of Event Commands:
-@>Play SE: 'Door exit', 80, 100
+@>Play SE: 'Door exit', 100, 100
 @>Change Screen Color Tone: (-255,-255,-255,0), @6
 @>Wait: 8 frame(s)
 @>Transfer Player:[273: Ephiron], (048,048), Down, No Fade
 @>Change Screen Color Tone: (0,0,0,0), @6
-@>
-
-#------------------------------------------------------------------------------
-Event ID: 002
-Event Name: Exit
-(X,Y): (018,021)
-
-Page #1
-Conditions
-None
-
-Autonomous Movement
-Type: Fixed
-Speed: 3: Slow
-Freq: 3: Low
-Options Enabled
-Move Animation
-Trigger: Player Touch
-
-List of Event Commands:
-@>Play SE: 'Door exit', 80, 100
-@>Change Screen Color Tone: (-255,-255,-255,0), @6
 @>Wait: 8 frame(s)
-@>Transfer Player:[273: Ephiron], (048,048), Down, No Fade
-@>Change Screen Color Tone: (0,0,0,0), @6
 @>
 
 #------------------------------------------------------------------------------
@@ -240547,7 +240633,7 @@ Auto-Change BGM: XY 059 Cyllage City
 
 #------------------------------------------------------------------------------
 Event ID: 001
-Event Name: Exit
+Event Name: Exit size(2,1)
 (X,Y): (018,021)
 
 Page #1
@@ -240563,36 +240649,12 @@ Move Animation
 Trigger: Player Touch
 
 List of Event Commands:
-@>Play SE: 'Door exit', 80, 100
+@>Play SE: 'Door exit', 100, 100
 @>Change Screen Color Tone: (-255,-255,-255,0), @6
 @>Wait: 8 frame(s)
 @>Transfer Player:[273: Ephiron], (044,062), Down, No Fade
 @>Change Screen Color Tone: (0,0,0,0), @6
-@>
-
-#------------------------------------------------------------------------------
-Event ID: 002
-Event Name: Exit
-(X,Y): (019,021)
-
-Page #1
-Conditions
-None
-
-Autonomous Movement
-Type: Fixed
-Speed: 3: Slow
-Freq: 3: Low
-Options Enabled
-Move Animation
-Trigger: Player Touch
-
-List of Event Commands:
-@>Play SE: 'Door exit', 80, 100
-@>Change Screen Color Tone: (-255,-255,-255,0), @6
 @>Wait: 8 frame(s)
-@>Transfer Player:[273: Ephiron], (044,062), Down, No Fade
-@>Change Screen Color Tone: (0,0,0,0), @6
 @>
 
 #------------------------------------------------------------------------------
@@ -240976,7 +241038,7 @@ Auto-Change BGM: XY 059 Cyllage City
 
 #------------------------------------------------------------------------------
 Event ID: 001
-Event Name: Exit
+Event Name: Exit size(2,1)
 (X,Y): (018,021)
 
 Page #1
@@ -240992,36 +241054,12 @@ Move Animation
 Trigger: Player Touch
 
 List of Event Commands:
-@>Play SE: 'Door exit', 80, 100
+@>Play SE: 'Door exit', 100, 100
 @>Change Screen Color Tone: (-255,-255,-255,0), @6
 @>Wait: 8 frame(s)
 @>Transfer Player:[273: Ephiron], (035,058), Down, No Fade
 @>Change Screen Color Tone: (0,0,0,0), @6
-@>
-
-#------------------------------------------------------------------------------
-Event ID: 002
-Event Name: Exit
-(X,Y): (019,021)
-
-Page #1
-Conditions
-None
-
-Autonomous Movement
-Type: Fixed
-Speed: 3: Slow
-Freq: 3: Low
-Options Enabled
-Move Animation
-Trigger: Player Touch
-
-List of Event Commands:
-@>Play SE: 'Door exit', 80, 100
-@>Change Screen Color Tone: (-255,-255,-255,0), @6
 @>Wait: 8 frame(s)
-@>Transfer Player:[273: Ephiron], (035,058), Down, No Fade
-@>Change Screen Color Tone: (0,0,0,0), @6
 @>
 
 #------------------------------------------------------------------------------
@@ -241468,16 +241506,16 @@ List of Event Commands:
  :              : $>Wait: 2 frame(s)
  :              : $>Turn Up
  :              : $>Wait: 2 frame(s)
-@>Wait for Move's Completion
+@>Wait: 8 frame(s)
 @>Set Move Route: Player
                   (Ignore If Can't Move)
  :              : $>Through ON
  :              : $>Move Up
  :              : $>Through OFF
-@>Wait for Move's Completion
+@>Wait: 8 frame(s)
 @>Change Transparent Flag: Transparency
 @>Script: Followers.follow_into_door
-@>Wait for Move's Completion
+@>Wait: 8 frame(s)
 @>Set Move Route: This event
                   (Ignore If Can't Move)
  :              : $>Wait: 2 frame(s)
@@ -241487,12 +241525,13 @@ List of Event Commands:
  :              : $>Wait: 2 frame(s)
  :              : $>Turn Down
  :              : $>Wait: 2 frame(s)
-@>Wait for Move's Completion
+@>Wait: 8 frame(s)
 @>Change Screen Color Tone: (-255,-255,-255,0), @6
 @>Wait: 8 frame(s)
 @>Change Transparent Flag: Normal
 @>Transfer Player:[329: Aufzug], (009,008), Up, No Fade
 @>Change Screen Color Tone: (0,0,0,0), @6
+@>Wait: 8 frame(s)
 @>
 
 Page #2
@@ -241523,14 +241562,14 @@ List of Event Commands:
   :              : $>Wait: 2 frame(s)
   :              : $>Turn Up
   :              : $>Wait: 2 frame(s)
- @>Wait for Move's Completion
+ @>Wait: 8 frame(s)
  @>Change Transparent Flag: Normal
  @>Set Move Route: Player
                    (Ignore If Can't Move)
   :              : $>Through ON
   :              : $>Move Down
   :              : $>Through OFF
- @>Wait for Move's Completion
+ @>Wait: 8 frame(s)
  @>Script: Followers.put_followers_on_player
  @>Set Move Route: This event
                    (Ignore If Can't Move)
@@ -241540,7 +241579,7 @@ List of Event Commands:
   :              : $>Wait: 2 frame(s)
   :              : $>Turn Down
   :              : $>Wait: 2 frame(s)
- @>Wait for Move's Completion
+ @>Wait: 8 frame(s)
  @>
 : Branch End
 @>Script: setTempSwitchOn("A")
@@ -241643,11 +241682,12 @@ Move Animation
 Trigger: Player Touch
 
 List of Event Commands:
-@>Play SE: 'Door exit', 80, 100
+@>Play SE: 'Door exit', 100, 100
 @>Change Screen Color Tone: (-255,-255,-255,0), @6
 @>Wait: 8 frame(s)
 @>Transfer Player:[273: Ephiron], (026,041), Down, No Fade
 @>Change Screen Color Tone: (0,0,0,0), @6
+@>Wait: 8 frame(s)
 @>
 
 #------------------------------------------------------------------------------
@@ -241862,16 +241902,16 @@ List of Event Commands:
  :              : $>Wait: 2 frame(s)
  :              : $>Turn Up
  :              : $>Wait: 2 frame(s)
-@>Wait for Move's Completion
+@>Wait: 8 frame(s)
 @>Set Move Route: Player
                   (Ignore If Can't Move)
  :              : $>Through ON
  :              : $>Move Up
  :              : $>Through OFF
-@>Wait for Move's Completion
+@>Wait: 8 frame(s)
 @>Change Transparent Flag: Transparency
 @>Script: Followers.follow_into_door
-@>Wait for Move's Completion
+@>Wait: 8 frame(s)
 @>Set Move Route: This event
                   (Ignore If Can't Move)
  :              : $>Wait: 2 frame(s)
@@ -241881,12 +241921,13 @@ List of Event Commands:
  :              : $>Wait: 2 frame(s)
  :              : $>Turn Down
  :              : $>Wait: 2 frame(s)
-@>Wait for Move's Completion
+@>Wait: 8 frame(s)
 @>Change Screen Color Tone: (-255,-255,-255,0), @6
 @>Wait: 8 frame(s)
 @>Change Transparent Flag: Normal
 @>Transfer Player:[329: Aufzug], (009,008), Up, No Fade
 @>Change Screen Color Tone: (0,0,0,0), @6
+@>Wait: 8 frame(s)
 @>
 
 Page #2
@@ -241917,14 +241958,14 @@ List of Event Commands:
   :              : $>Wait: 2 frame(s)
   :              : $>Turn Up
   :              : $>Wait: 2 frame(s)
- @>Wait for Move's Completion
+ @>Wait: 8 frame(s)
  @>Change Transparent Flag: Normal
  @>Set Move Route: Player
                    (Ignore If Can't Move)
   :              : $>Through ON
   :              : $>Move Down
   :              : $>Through OFF
- @>Wait for Move's Completion
+ @>Wait: 8 frame(s)
  @>Script: Followers.put_followers_on_player
  @>Set Move Route: This event
                    (Ignore If Can't Move)
@@ -241934,7 +241975,7 @@ List of Event Commands:
   :              : $>Wait: 2 frame(s)
   :              : $>Turn Down
   :              : $>Wait: 2 frame(s)
- @>Wait for Move's Completion
+ @>Wait: 8 frame(s)
  @>
 : Branch End
 @>Script: setTempSwitchOn("A")
@@ -242126,16 +242167,16 @@ List of Event Commands:
  :              : $>Wait: 2 frame(s)
  :              : $>Turn Up
  :              : $>Wait: 2 frame(s)
-@>Wait for Move's Completion
+@>Wait: 8 frame(s)
 @>Set Move Route: Player
                   (Ignore If Can't Move)
  :              : $>Through ON
  :              : $>Move Up
  :              : $>Through OFF
-@>Wait for Move's Completion
+@>Wait: 8 frame(s)
 @>Change Transparent Flag: Transparency
 @>Script: Followers.follow_into_door
-@>Wait for Move's Completion
+@>Wait: 8 frame(s)
 @>Set Move Route: This event
                   (Ignore If Can't Move)
  :              : $>Wait: 2 frame(s)
@@ -242145,12 +242186,13 @@ List of Event Commands:
  :              : $>Wait: 2 frame(s)
  :              : $>Turn Down
  :              : $>Wait: 2 frame(s)
-@>Wait for Move's Completion
+@>Wait: 8 frame(s)
 @>Change Screen Color Tone: (-255,-255,-255,0), @6
 @>Wait: 8 frame(s)
 @>Change Transparent Flag: Normal
 @>Transfer Player:[329: Aufzug], (009,008), Up, No Fade
 @>Change Screen Color Tone: (0,0,0,0), @6
+@>Wait: 8 frame(s)
 @>
 
 Page #2
@@ -242181,14 +242223,14 @@ List of Event Commands:
   :              : $>Wait: 2 frame(s)
   :              : $>Turn Up
   :              : $>Wait: 2 frame(s)
- @>Wait for Move's Completion
+ @>Wait: 8 frame(s)
  @>Change Transparent Flag: Normal
  @>Set Move Route: Player
                    (Ignore If Can't Move)
   :              : $>Through ON
   :              : $>Move Down
   :              : $>Through OFF
- @>Wait for Move's Completion
+ @>Wait: 8 frame(s)
  @>Script: Followers.put_followers_on_player
  @>Set Move Route: This event
                    (Ignore If Can't Move)
@@ -242198,7 +242240,7 @@ List of Event Commands:
   :              : $>Wait: 2 frame(s)
   :              : $>Turn Down
   :              : $>Wait: 2 frame(s)
- @>Wait for Move's Completion
+ @>Wait: 8 frame(s)
  @>
 : Branch End
 @>Script: setTempSwitchOn("A")
@@ -242447,16 +242489,16 @@ List of Event Commands:
  :              : $>Wait: 2 frame(s)
  :              : $>Turn Up
  :              : $>Wait: 2 frame(s)
-@>Wait for Move's Completion
+@>Wait: 8 frame(s)
 @>Set Move Route: Player
                   (Ignore If Can't Move)
  :              : $>Through ON
  :              : $>Move Up
  :              : $>Through OFF
-@>Wait for Move's Completion
+@>Wait: 8 frame(s)
 @>Change Transparent Flag: Transparency
 @>Script: Followers.follow_into_door
-@>Wait for Move's Completion
+@>Wait: 8 frame(s)
 @>Set Move Route: This event
                   (Ignore If Can't Move)
  :              : $>Wait: 2 frame(s)
@@ -242466,12 +242508,13 @@ List of Event Commands:
  :              : $>Wait: 2 frame(s)
  :              : $>Turn Down
  :              : $>Wait: 2 frame(s)
-@>Wait for Move's Completion
+@>Wait: 8 frame(s)
 @>Change Screen Color Tone: (-255,-255,-255,0), @6
 @>Wait: 8 frame(s)
 @>Change Transparent Flag: Normal
 @>Transfer Player:[329: Aufzug], (009,008), Up, No Fade
 @>Change Screen Color Tone: (0,0,0,0), @6
+@>Wait: 8 frame(s)
 @>
 
 Page #2
@@ -242502,14 +242545,14 @@ List of Event Commands:
   :              : $>Wait: 2 frame(s)
   :              : $>Turn Up
   :              : $>Wait: 2 frame(s)
- @>Wait for Move's Completion
+ @>Wait: 8 frame(s)
  @>Change Transparent Flag: Normal
  @>Set Move Route: Player
                    (Ignore If Can't Move)
   :              : $>Through ON
   :              : $>Move Down
   :              : $>Through OFF
- @>Wait for Move's Completion
+ @>Wait: 8 frame(s)
  @>Script: Followers.put_followers_on_player
  @>Set Move Route: This event
                    (Ignore If Can't Move)
@@ -242519,7 +242562,7 @@ List of Event Commands:
   :              : $>Wait: 2 frame(s)
   :              : $>Turn Down
   :              : $>Wait: 2 frame(s)
- @>Wait for Move's Completion
+ @>Wait: 8 frame(s)
  @>
 : Branch End
 @>Script: setTempSwitchOn("A")
@@ -243028,7 +243071,7 @@ Move Animation
 Trigger: Player Touch
 
 List of Event Commands:
-@>Play SE: 'Door exit', 80, 100
+@>Play SE: 'Door exit', 100, 100
 @>Change Screen Color Tone: (-255,-255,-255,0), @6
 @>Wait: 8 frame(s)
 @>Conditional Branch: Variable [0010: Elevator current floor] == 3
@@ -243051,6 +243094,7 @@ List of Event Commands:
  @>
 : Branch End
 @>Change Screen Color Tone: (0,0,0,0), @6
+@>Wait: 8 frame(s)
 @>
 
 #------------------------------------------------------------------------------
@@ -264751,6 +264795,27 @@ List of Event Commands:
 @>
 
 #------------------------------------------------------------------------------
+Event ID: 029
+Event Name: EV029
+(X,Y): (001,037)
+
+Page #1
+Conditions
+None
+
+Autonomous Movement
+Type: Fixed
+Speed: 3: Slow
+Freq: 3: Low
+Options Enabled
+Move Animation
+Trigger: Parallel Process
+
+List of Event Commands:
+@>Change Map Settings:Fog = 'Erdgeschoss', 0, 255, Normal, 100, 0, 0
+@>
+
+#------------------------------------------------------------------------------
 Event ID: 030
 Event Name: Bücherregal size(2,1)
 (X,Y): (002,004)
@@ -265103,7 +265168,7 @@ List of Event Commands:
 #------------------------------------------------------------------------------
 Event ID: 043
 Event Name: EV043
-(X,Y): (027,015)
+(X,Y): (027,016)
 
 Page #1
 Conditions
@@ -267256,6 +267321,27 @@ List of Event Commands:
 @>Text: Die Daten zeigen, dass Deoxys mit einem bestimmte 
  :    : Meteoriten verbunden ist
 @>Text: und er mit diesem seine Form wechseln kann.
+@>
+
+#------------------------------------------------------------------------------
+Event ID: 060
+Event Name: EV060
+(X,Y): (000,037)
+
+Page #1
+Conditions
+None
+
+Autonomous Movement
+Type: Fixed
+Speed: 3: Slow
+Freq: 3: Low
+Options Enabled
+Move Animation
+Trigger: Parallel Process
+
+List of Event Commands:
+@>Change Map Settings:Fog = 'Erdgeschoss', 0, 255, Normal, 100, 0, 0
 @>
 
 #------------------------------------------------------------------------------
@@ -281003,6 +281089,34 @@ Map ID: 371
 Map Name: Noxburgh
 Tileset: 134: Dracheninsel Stadt
 Width: 65, Height: 76
+
+#------------------------------------------------------------------------------
+Event ID: 001
+Event Name: Durchgang size(3,1)
+(X,Y): (051,070)
+
+Page #1
+Conditions
+None
+
+Autonomous Movement
+Type: Fixed
+Speed: 3: Slow
+Freq: 3: Low
+Options Enabled
+Move Animation
+Trigger: Player Touch
+
+List of Event Commands:
+@>Play SE: 'Door exit', 100, 100
+@>Change Screen Color Tone: (-255,-255,-255,0), @6
+@>Wait: 8 frame(s)
+@>Transfer Player:[649: Zwischengebäude], (008,001), Down, No Fade
+@>Change Screen Color Tone: (0,0,0,0), @6
+@>Wait: 8 frame(s)
+@>
+
+#------------------------------------------------------------------------------
 
 #==============================================================================
 Map ID: 372
@@ -305332,7 +305446,7 @@ Move Animation
 Trigger: Player Touch
 
 List of Event Commands:
-@>Play SE: 'Door exit', 80, 100
+@>Play SE: 'Door exit', 100, 100
 @>Change Screen Color Tone: (-255,-255,-255,0), @6
 @>Wait: 8 frame(s)
 @>Transfer Player:[399: Titanenbruch-Kaverne], (013,030), Up, No Fade
@@ -305370,7 +305484,7 @@ Move Animation
 Trigger: Player Touch
 
 List of Event Commands:
-@>Play SE: 'Door exit', 80, 100
+@>Play SE: 'Door exit', 100, 100
 @>Change Screen Color Tone: (-255,-255,-255,0), @6
 @>Wait: 8 frame(s)
 @>Script: pbCaveExit
@@ -305444,7 +305558,7 @@ Move Animation
 Trigger: Player Touch
 
 List of Event Commands:
-@>Play SE: 'Door exit', 80, 100
+@>Play SE: 'Door exit', 100, 100
 @>Change Screen Color Tone: (-255,-255,-255,0), @6
 @>Wait: 8 frame(s)
 @>Transfer Player:[398: Titanenbruch-Kaverne], (007,012), Up, No Fade
@@ -305639,15 +305753,17 @@ Trigger: Event Touch
 
 List of Event Commands:
 @>Conditional Branch: Player is facing Up
- @>Play SE: 'Door exit', 80, 100
+ @>Play SE: 'Door exit', 100, 100
  @>Change Screen Color Tone: (-255,-255,-255,0), @6
  @>Wait: 8 frame(s)
  @>Transfer Player:[400: Titanenbruch-Kaverne], (037,042), Up, No Fade
  @>Change Screen Color Tone: (0,0,0,0), @6
+ @>Wait: 8 frame(s)
  @>
 : Else
  @>Set Move Route: Player
   :              : $>Move Down
+ @>Wait: 6 frame(s)
  @>
 : Branch End
 @>
@@ -308683,15 +308799,17 @@ Trigger: Event Touch
 
 List of Event Commands:
 @>Conditional Branch: Player is facing Up
- @>Play SE: 'Door exit', 80, 100
+ @>Play SE: 'Door exit', 100, 100
  @>Change Screen Color Tone: (-255,-255,-255,0), @6
  @>Wait: 8 frame(s)
  @>Transfer Player:[401: Titanenbruch-Kaverne], (033,041), Up, No Fade
  @>Change Screen Color Tone: (0,0,0,0), @6
+ @>Wait: 8 frame(s)
  @>
 : Else
  @>Set Move Route: Player
   :              : $>Move Down
+ @>Wait: 6 frame(s)
  @>
 : Branch End
 @>
@@ -308714,7 +308832,7 @@ Move Animation
 Trigger: Player Touch
 
 List of Event Commands:
-@>Play SE: 'Door exit', 80, 100
+@>Play SE: 'Door exit', 100, 100
 @>Change Screen Color Tone: (-255,-255,-255,0), @6
 @>Wait: 8 frame(s)
 @>Transfer Player:[399: Titanenbruch-Kaverne], (017,003), Down, No Fade
@@ -308741,15 +308859,17 @@ Trigger: Event Touch
 
 List of Event Commands:
 @>Conditional Branch: Player is facing Up
- @>Play SE: 'Door exit', 80, 100
+ @>Play SE: 'Door exit', 100, 100
  @>Change Screen Color Tone: (-255,-255,-255,0), @6
  @>Wait: 8 frame(s)
  @>Transfer Player:[405: Titanenbruch-Kaverne], (014,010), Up, No Fade
  @>Change Screen Color Tone: (0,0,0,0), @6
+ @>Wait: 8 frame(s)
  @>
 : Else
  @>Set Move Route: Player
   :              : $>Move Down
+ @>Wait: 6 frame(s)
  @>
 : Branch End
 @>
@@ -310348,7 +310468,7 @@ Move Animation
 Trigger: Player Touch
 
 List of Event Commands:
-@>Play SE: 'Door exit', 80, 100
+@>Play SE: 'Door exit', 100, 100
 @>Change Screen Color Tone: (-255,-255,-255,0), @6
 @>Wait: 8 frame(s)
 @>Transfer Player:[400: Titanenbruch-Kaverne], (025,006), Down, No Fade
@@ -310375,15 +310495,17 @@ Trigger: Event Touch
 
 List of Event Commands:
 @>Conditional Branch: Player is facing Up
- @>Play SE: 'Door exit', 80, 100
+ @>Play SE: 'Door exit', 100, 100
  @>Change Screen Color Tone: (-255,-255,-255,0), @6
  @>Wait: 8 frame(s)
  @>Transfer Player:[408: Titanenbruch-Kaverne], (014,010), Up, No Fade
  @>Change Screen Color Tone: (0,0,0,0), @6
+ @>Wait: 8 frame(s)
  @>
 : Else
  @>Set Move Route: Player
   :              : $>Move Down
+ @>Wait: 6 frame(s)
  @>
 : Branch End
 @>
@@ -310611,15 +310733,17 @@ Trigger: Event Touch
 
 List of Event Commands:
 @>Conditional Branch: Player is facing Up
- @>Play SE: 'Door exit', 80, 100
+ @>Play SE: 'Door exit', 100, 100
  @>Change Screen Color Tone: (-255,-255,-255,0), @6
  @>Wait: 8 frame(s)
  @>Transfer Player:[409: Titanenbruch-Kaverne], (011,011), Up, No Fade
  @>Change Screen Color Tone: (0,0,0,0), @6
+ @>Wait: 8 frame(s)
  @>
 : Else
  @>Set Move Route: Player
   :              : $>Move Down
+ @>Wait: 6 frame(s)
  @>
 : Branch End
 @>
@@ -312172,12 +312296,13 @@ Move Animation
 Trigger: Player Touch
 
 List of Event Commands:
-@>Play SE: 'Door exit', 80, 100
+@>Play SE: 'Door exit', 100, 100
 @>Change Screen Color Tone: (-255,-255,-255,0), @6
 @>Script: pbSetSelfSwitch(3,"A",false)
 @>Wait: 8 frame(s)
 @>Transfer Player:[273: Ephiron], (035,008), Down, No Fade
 @>Change Screen Color Tone: (0,0,0,0), @6
+@>Wait: 8 frame(s)
 @>
 
 #------------------------------------------------------------------------------
@@ -313531,7 +313656,7 @@ Move Animation
 Trigger: Player Touch
 
 List of Event Commands:
-@>Play SE: 'Door exit', 80, 100
+@>Play SE: 'Door exit', 100, 100
 @>Change Screen Color Tone: (-255,-255,-255,0), @6
 @>Wait: 8 frame(s)
 @>Transfer Player:[400: Titanenbruch-Kaverne], (048,023), Down, No Fade
@@ -313880,7 +314005,7 @@ Move Animation
 Trigger: Player Touch
 
 List of Event Commands:
-@>Play SE: 'Door exit', 80, 100
+@>Play SE: 'Door exit', 100, 100
 @>Change Screen Color Tone: (-255,-255,-255,0), @6
 @>Wait: 8 frame(s)
 @>Transfer Player:[407: Titanenbruch-Kaverne], (010,004), Down, No Fade
@@ -315290,15 +315415,17 @@ Trigger: Event Touch
 
 List of Event Commands:
 @>Conditional Branch: Player is facing Up
- @>Play SE: 'Door exit', 80, 100
+ @>Play SE: 'Door exit', 100, 100
  @>Change Screen Color Tone: (-255,-255,-255,0), @6
  @>Wait: 8 frame(s)
  @>Transfer Player:[406: Titanenbruch-Kaverne], (028,046), Up, No Fade
  @>Change Screen Color Tone: (0,0,0,0), @6
+ @>Wait: 8 frame(s)
  @>
 : Else
  @>Set Move Route: Player
   :              : $>Move Down
+ @>Wait: 6 frame(s)
  @>
 : Branch End
 @>
@@ -316240,7 +316367,7 @@ Move Animation
 Trigger: Player Touch
 
 List of Event Commands:
-@>Play SE: 'Door exit', 80, 100
+@>Play SE: 'Door exit', 100, 100
 @>Change Screen Color Tone: (-255,-255,-255,0), @6
 @>Wait: 8 frame(s)
 @>Transfer Player:[401: Titanenbruch-Kaverne], (026,007), Down, No Fade
@@ -316821,7 +316948,7 @@ Move Animation
 Trigger: Player Touch
 
 List of Event Commands:
-@>Play SE: 'Door exit', 80, 100
+@>Play SE: 'Door exit', 100, 100
 @>Change Screen Color Tone: (-255,-255,-255,0), @6
 @>Wait: 8 frame(s)
 @>Transfer Player:[401: Titanenbruch-Kaverne], (012,029), Down, No Fade
@@ -317505,11 +317632,12 @@ Move Animation
 Trigger: Player Touch
 
 List of Event Commands:
-@>Play SE: 'Door exit', 80, 100
+@>Play SE: 'Door exit', 100, 100
 @>Change Screen Color Tone: (-255,-255,-255,0), @6
 @>Wait: 8 frame(s)
 @>Transfer Player:[273: Ephiron], (014,069), Up, No Fade
 @>Change Screen Color Tone: (0,0,0,0), @6
+@>Wait: 8 frame(s)
 @>
 
 #------------------------------------------------------------------------------
@@ -317530,11 +317658,12 @@ Move Animation
 Trigger: Player Touch
 
 List of Event Commands:
-@>Play SE: 'Door exit', 80, 100
+@>Play SE: 'Door exit', 100, 100
 @>Change Screen Color Tone: (-255,-255,-255,0), @6
 @>Wait: 8 frame(s)
 @>Transfer Player:[273: Ephiron], (014,069), Up, No Fade
 @>Change Screen Color Tone: (0,0,0,0), @6
+@>Wait: 8 frame(s)
 @>
 
 #------------------------------------------------------------------------------
@@ -317555,11 +317684,12 @@ Move Animation
 Trigger: Player Touch
 
 List of Event Commands:
-@>Play SE: 'Door enter', 80, 100
+@>Play SE: 'Door exit', 100, 100
 @>Change Screen Color Tone: (-255,-255,-255,0), @6
 @>Wait: 8 frame(s)
 @>Transfer Player:[275: Route 8], (014,006), Down, No Fade
 @>Change Screen Color Tone: (0,0,0,0), @6
+@>Wait: 8 frame(s)
 @>
 
 #------------------------------------------------------------------------------
@@ -317580,11 +317710,12 @@ Move Animation
 Trigger: Player Touch
 
 List of Event Commands:
-@>Play SE: 'Door enter', 80, 100
+@>Play SE: 'Door exit', 100, 100
 @>Change Screen Color Tone: (-255,-255,-255,0), @6
 @>Wait: 8 frame(s)
 @>Transfer Player:[275: Route 8], (014,006), Down, No Fade
 @>Change Screen Color Tone: (0,0,0,0), @6
+@>Wait: 8 frame(s)
 @>
 
 #------------------------------------------------------------------------------
@@ -343110,624 +343241,6 @@ Trigger: Action Button
 
 List of Event Commands:
 @>Text: Mehrere Abzeichen und Pokale.
-@>
-
-#------------------------------------------------------------------------------
-
-#==============================================================================
-Map ID: 433
-Map Name: Arena
-Tileset: 081: Kraftwerk
-Width: 60, Height: 40
-Auto-Change BGM: SM 147 The Path to the League
-
-#------------------------------------------------------------------------------
-Event ID: 001
-Event Name: EV001
-(X,Y): (014,010)
-
-Page #1
-Conditions
-None
-
-Graphic: Kraftwerk Lampe
-
-Autonomous Movement
-Type: Fixed
-Speed: 2: Slower
-Freq: 3: Low
-Options Enabled
-Stop Animation
-Through
-Always on Top
-Trigger: Action Button
-
-List of Event Commands:
-@>
-
-Page #2
-Conditions
-Switch 0119: VOLTRIANT1 besiegt is ON
-
-Autonomous Movement
-Type: Fixed
-Speed: 3: Slow
-Freq: 3: Low
-Options Enabled
-Move Animation
-Trigger: Action Button
-
-List of Event Commands:
-@>
-
-#------------------------------------------------------------------------------
-Event ID: 005
-Event Name: Eingang OG
-(X,Y): (002,011)
-
-Page #1
-Conditions
-None
-
-Autonomous Movement
-Type: Fixed
-Speed: 3: Slow
-Freq: 3: Low
-Options Enabled
-Move Animation
-Trigger: Event Touch
-
-List of Event Commands:
-@>Conditional Branch: Switch [0119: VOLTRIANT1 besiegt] == ON
- @>Play SE: 'Door enter', 80, 100
- @>Change Screen Color Tone: (-255,-255,-255,0), @6
- @>Wait: 8 frame(s)
- @>Transfer Player:[187: Kraftwerk OG], (011,031), Left, No Fade
- @>Change Screen Color Tone: (0,0,0,0), @6
- @>
-: Else
- @>Control Switches: [0107: Schwarzblende] = ON
- @>Play SE: 'Door enter', 80, 100
- @>Change Screen Color Tone: (-255,-255,-255,0), @6
- @>Wait: 8 frame(s)
- @>Transfer Player:[187: Kraftwerk OG], (011,031), Left, No Fade
- @>Change Screen Color Tone: (0,0,0,0), @6
- @>Control Switches: [0107: Schwarzblende] = OFF
- @>
-: Branch End
-@>
-
-#------------------------------------------------------------------------------
-Event ID: 006
-Event Name: Eingang UG
-(X,Y): (015,006)
-
-Page #1
-Conditions
-None
-
-Autonomous Movement
-Type: Fixed
-Speed: 3: Slow
-Freq: 3: Low
-Options Enabled
-Move Animation
-Trigger: Event Touch
-
-List of Event Commands:
-@>Conditional Branch: Switch [0119: VOLTRIANT1 besiegt] == ON
- @>Play SE: 'Door enter', 80, 100
- @>Change Screen Color Tone: (-255,-255,-255,0), @6
- @>Wait: 8 frame(s)
- @>Transfer Player:[189: Kraftwerk UG], (037,037), Right, No Fade
- @>Change Screen Color Tone: (0,0,0,0), @6
- @>
-: Else
- @>Control Switches: [0107: Schwarzblende] = ON
- @>Play SE: 'Door enter', 80, 100
- @>Change Screen Color Tone: (-255,-255,-255,0), @6
- @>Wait: 8 frame(s)
- @>Transfer Player:[189: Kraftwerk UG], (037,037), Right, No Fade
- @>Change Screen Color Tone: (0,0,0,0), @6
- @>Control Switches: [0107: Schwarzblende] = OFF
- @>
-: Branch End
-@>
-
-Page #2
-Conditions
-Switch 0119: VOLTRIANT1 besiegt is ON
-
-Autonomous Movement
-Type: Fixed
-Speed: 3: Slow
-Freq: 3: Low
-Options Enabled
-Move Animation
-Trigger: Player Touch
-
-List of Event Commands:
-@>Play SE: 'Door enter', 80, 100
-@>Change Screen Color Tone: (-255,-255,-255,0), @6
-@>Wait: 8 frame(s)
-@>Transfer Player:[189: Kraftwerk UG], (037,037), Right, No Fade
-@>Change Screen Color Tone: (0,0,0,0), @6
-@>
-
-#------------------------------------------------------------------------------
-Event ID: 007
-Event Name: Eingang EG
-(X,Y): (005,004)
-
-Page #1
-Conditions
-None
-
-Autonomous Movement
-Type: Fixed
-Speed: 3: Slow
-Freq: 3: Low
-Options Enabled
-Move Animation
-Trigger: Event Touch
-
-List of Event Commands:
-@>Conditional Branch: Switch [0119: VOLTRIANT1 besiegt] == ON
- @>Conditional Branch: Player is facing Up
-  @>Play SE: 'Door enter', 80, 100
-  @>Change Screen Color Tone: (-255,-255,-255,0), @6
-  @>Wait: 8 frame(s)
-  @>Transfer Player:[188: Kraftwerk EG], (024,033), Up, No Fade
-  @>Change Screen Color Tone: (0,0,0,0), @6
-  @>
- : Else
-  @>Set Move Route: Player
-   :              : $>Move Down
-  @>Wait for Move's Completion
-  @>
- : Branch End
- @>
-: Else
- @>Control Switches: [0107: Schwarzblende] = ON
- @>Conditional Branch: Player is facing Up
-  @>Play SE: 'Door enter', 80, 100
-  @>Change Screen Color Tone: (-255,-255,-255,0), @6
-  @>Wait: 8 frame(s)
-  @>Transfer Player:[188: Kraftwerk EG], (024,033), Up, No Fade
-  @>Change Screen Color Tone: (0,0,0,0), @6
-  @>
- : Else
-  @>Set Move Route: Player
-   :              : $>Move Down
-  @>Wait for Move's Completion
-  @>
- : Branch End
- @>Control Switches: [0107: Schwarzblende] = OFF
- @>
-: Branch End
-@>
-
-Page #2
-Conditions
-Switch 0119: VOLTRIANT1 besiegt is ON
-
-Autonomous Movement
-Type: Fixed
-Speed: 3: Slow
-Freq: 3: Low
-Options Enabled
-Move Animation
-Trigger: Player Touch
-
-List of Event Commands:
-@>Conditional Branch: Player is facing Up
- @>Play SE: 'Door enter', 80, 100
- @>Change Screen Color Tone: (-255,-255,-255,0), @6
- @>Wait: 8 frame(s)
- @>Transfer Player:[188: Kraftwerk EG], (024,033), Up, No Fade
- @>Change Screen Color Tone: (0,0,0,0), @6
- @>
-: Else
- @>Set Move Route: Player
-  :              : $>Move Down
- @>Wait for Move's Completion
- @>
-: Branch End
-@>
-
-#------------------------------------------------------------------------------
-Event ID: 008
-Event Name: Exit
-(X,Y): (008,014)
-
-Page #1
-Conditions
-None
-
-Autonomous Movement
-Type: Fixed
-Speed: 3: Slow
-Freq: 3: Low
-Options Enabled
-Move Animation
-Trigger: Player Touch
-
-List of Event Commands:
-@>Play SE: 'Door exit', 80, 100
-@>Change Screen Color Tone: (-255,-255,-255,0), @6
-@>Wait: 8 frame(s)
-@>Transfer Player:[185: Kraftwerk], (020,027), Down, No Fade
-@>Change Screen Color Tone: (0,0,0,0), @6
-@>
-
-#------------------------------------------------------------------------------
-Event ID: 009
-Event Name: EV009
-(X,Y): (002,005)
-
-Page #1
-Conditions
-None
-
-Graphic: Kraftwerk Lampe
-
-Autonomous Movement
-Type: Fixed
-Speed: 2: Slower
-Freq: 3: Low
-Options Enabled
-Stop Animation
-Through
-Always on Top
-Trigger: Action Button
-
-List of Event Commands:
-@>
-
-Page #2
-Conditions
-Switch 0119: VOLTRIANT1 besiegt is ON
-
-Autonomous Movement
-Type: Fixed
-Speed: 3: Slow
-Freq: 3: Low
-Options Enabled
-Move Animation
-Trigger: Action Button
-
-List of Event Commands:
-@>
-
-#------------------------------------------------------------------------------
-Event ID: 010
-Event Name: Nurse
-(X,Y): (003,009)
-
-Page #1
-Conditions
-None
-
-Graphic: NPC 16
-
-Autonomous Movement
-Type: Fixed
-Speed: 3: Slow
-Freq: 3: Low
-Options Enabled
-Move Animation
-Trigger: Action Button
-
-List of Event Commands:
-@>Text: Möchtest du, dass ich deine Pokémon heile?
-@>Show Choices: Ja, Nein
-(When Cancel: Choice 2)
-: When [Ja]
- @>Play ME: 'Pkmn healing', 100, 100
- @>Recover All: Entire Party
- @>Wait: 35 frame(s)
- @>
-: When [Nein]
- @>
-: Branch End
-@>
-
-#------------------------------------------------------------------------------
-Event ID: 012
-Event Name: EV012
-(X,Y): (013,013)
-
-Page #1
-Conditions
-None
-
-Graphic: WORKER6
-
-Autonomous Movement
-Type: Fixed
-Speed: 4: Fast
-Freq: 6: Highest
-Options Enabled
-Move Animation
-Trigger: Action Button
-
-List of Event Commands:
-@>Text: Keine Ahnung warum das Kraftwerk sich 
- :    : bageschaltet hat.
-@>Wait: 8 frame(s)
-@>Set Move Route: This event
- :              : $>Turn Up
-@>
-
-Page #2
-Conditions
-Switch 0119: VOLTRIANT1 besiegt is ON
-
-Autonomous Movement
-Type: Custom
-Custom Move Route:
-(Repeat Action)
-$>Move Down
-$>Move Down
-$>Move Down
-$>Move Down
-$>Move Down
-$>Move Down
-$>Move Down
-$>Move Down
-$>Move Down
-$>Move Down
-$>Move Down
-$>Move Down
-$>Move Left
-$>Move Left
-$>Move Left
-$>Move Down
-$>Move Down
-$>Move Down
-
-Speed: 4: Fast
-Freq: 6: Highest
-Options Enabled
-Move Animation
-Trigger: Action Button
-
-List of Event Commands:
-@>
-
-#------------------------------------------------------------------------------
-Event ID: 013
-Event Name: EV013
-(X,Y): (008,006)
-
-Page #1
-Conditions
-None
-
-Graphic: WORKER6
-
-Autonomous Movement
-Type: Fixed
-Speed: 4: Fast
-Freq: 6: Highest
-Options Enabled
-Move Animation
-Trigger: Action Button
-
-List of Event Commands:
-@>Text: Wir müssen schnell handeln...
-@>Text: und das Kraftwerk wieder in Betrieb nehmen.
-@>
-
-Page #2
-Conditions
-Switch 0119: VOLTRIANT1 besiegt is ON
-
-Autonomous Movement
-Type: Custom
-Custom Move Route:
-(Repeat Action)
-$>Move Down
-$>Move Down
-$>Move Down
-$>Move Down
-$>Move Down
-$>Move Down
-$>Move Down
-$>Move Down
-$>Move Down
-$>Move Down
-$>Move Down
-$>Move Down
-$>Move Left
-$>Move Left
-$>Move Left
-$>Move Down
-$>Move Down
-$>Move Down
-
-Speed: 4: Fast
-Freq: 6: Highest
-Options Enabled
-Move Animation
-Trigger: Action Button
-
-List of Event Commands:
-@>
-
-#------------------------------------------------------------------------------
-Event ID: 014
-Event Name: EV014
-(X,Y): (012,009)
-
-Page #1
-Conditions
-None
-
-Graphic: WORKER6
-
-Autonomous Movement
-Type: Fixed
-Speed: 4: Fast
-Freq: 6: Highest
-Options Enabled
-Move Animation
-Trigger: Action Button
-
-List of Event Commands:
-@>Text: Immer diese Sonderschichten.
-@>Wait: 8 frame(s)
-@>Set Move Route: This event
- :              : $>Turn Right
-@>
-
-Page #2
-Conditions
-Self Switch A is ON
-
-Autonomous Movement
-Type: Custom
-Custom Move Route:
-(Repeat Action)
-$>Move Down
-$>Move Down
-$>Move Down
-$>Move Down
-$>Move Down
-$>Move Down
-$>Move Down
-$>Move Down
-$>Move Down
-$>Move Down
-$>Move Down
-$>Move Down
-$>Move Left
-$>Move Left
-$>Move Left
-$>Move Down
-$>Move Down
-$>Move Down
-
-Speed: 4: Fast
-Freq: 6: Highest
-Options Enabled
-Move Animation
-Trigger: Action Button
-
-List of Event Commands:
-@>
-
-#------------------------------------------------------------------------------
-Event ID: 015
-Event Name: Heiteira
-(X,Y): (004,009)
-
-Page #1
-Conditions
-None
-
-Graphic: BLISSEY
-
-Autonomous Movement
-Type: Fixed
-Speed: 3: Slow
-Freq: 3: Low
-Options Enabled
-Move Animation
-Stop Animation
-Trigger: Action Button
-
-List of Event Commands:
-@>Play SE: 'BLISSEY', 80, 100
-@>
-
-#------------------------------------------------------------------------------
-Event ID: 016
-Event Name: Item
-(X,Y): (006,005)
-
-Page #1
-Conditions
-None
-
-Autonomous Movement
-Type: Fixed
-Speed: 3: Slow
-Freq: 3: Low
-Options Enabled
-Move Animation
-Direction Fix
-Trigger: Action Button
-
-List of Event Commands:
-@>Conditional Branch: Script: pbItemBall(:IRON)
- @>Control Self Switch: A =ON
- @>
-: Branch End
-@>
-
-Page #2
-Conditions
-Self Switch A is ON
-
-Autonomous Movement
-Type: Fixed
-Speed: 3: Slow
-Freq: 3: Low
-Options Enabled
-Move Animation
-Trigger: Action Button
-
-List of Event Commands:
-@>Text: Hier ist nichts...
-@>
-
-#------------------------------------------------------------------------------
-
-#==============================================================================
-Map ID: 434
-Map Name: Kraftwerk UG
-Tileset: 054: Drinnen
-Width: 80, Height: 40
-Auto-Change BGM: SwSh 147 Battle! (Calyrex)
-
-#------------------------------------------------------------------------------
-Event ID: 021
-Event Name: Rotes licht .sl
-(X,Y): (040,013)
-
-Page #1
-Conditions
-None
-
-Graphic: Kraftwerk Lampe
-
-Autonomous Movement
-Type: Fixed
-Speed: 2: Slower
-Freq: 3: Low
-Options Enabled
-Stop Animation
-Through
-Always on Top
-Trigger: Action Button
-
-List of Event Commands:
-@>
-
-Page #2
-Conditions
-Switch 0119: VOLTRIANT1 besiegt is ON
-
-Autonomous Movement
-Type: Fixed
-Speed: 3: Slow
-Freq: 3: Low
-Options Enabled
-Move Animation
-Trigger: Action Button
-
-List of Event Commands:
 @>
 
 #------------------------------------------------------------------------------
@@ -377741,11 +377254,12 @@ Move Animation
 Trigger: Player Touch
 
 List of Event Commands:
-@>Play SE: 'Door exit', 80, 100
+@>Play SE: 'Door exit', 100, 100
 @>Change Screen Color Tone: (-255,-255,-255,0), @6
 @>Wait: 8 frame(s)
 @>Transfer Player:[477: Arena 4], (006,032), Right, No Fade
 @>Change Screen Color Tone: (0,0,0,0), @6
+@>Wait: 8 frame(s)
 @>
 
 #------------------------------------------------------------------------------
@@ -381739,11 +381253,12 @@ Move Animation
 Trigger: Player Touch
 
 List of Event Commands:
-@>Play SE: 'Door exit', 80, 100
+@>Play SE: 'Door exit', 100, 100
 @>Change Screen Color Tone: (-255,-255,-255,0), @6
 @>Wait: 8 frame(s)
 @>Transfer Player:[477: Arena 4], (023,016), Left, No Fade
 @>Change Screen Color Tone: (0,0,0,0), @6
+@>Wait: 8 frame(s)
 @>
 
 #------------------------------------------------------------------------------
@@ -382464,6 +381979,7 @@ Move Animation
 Trigger: Player Touch
 
 List of Event Commands:
+@>Play SE: 'Door exit', 100, 100
 @>Change Screen Color Tone: (-255,-255,-255,0), @6
 @>Wait: 8 frame(s)
 @>Transfer Player:[477: Arena 4], (014,044), Up, No Fade
@@ -382492,7 +382008,7 @@ List of Event Commands:
   :              : $>Through ON
   :              : $>Move Down
   :              : $>Through OFF
- @>Wait: 4 frame(s)
+ @>Wait: 6 frame(s)
  @>Script: Followers.put_followers_on_player
  @>
 : Branch End
@@ -382517,6 +382033,7 @@ Move Animation
 Trigger: Player Touch
 
 List of Event Commands:
+@>Play SE: 'Door exit', 100, 100
 @>Change Screen Color Tone: (-255,-255,-255,0), @6
 @>Wait: 8 frame(s)
 @>Transfer Player:[477: Arena 4], (015,044), Up, No Fade
@@ -382545,7 +382062,7 @@ List of Event Commands:
   :              : $>Through ON
   :              : $>Move Down
   :              : $>Through OFF
- @>Wait: 4 frame(s)
+ @>Wait: 6 frame(s)
  @>Script: Followers.put_followers_on_player
  @>
 : Branch End
@@ -382570,11 +382087,12 @@ Move Animation
 Trigger: Player Touch
 
 List of Event Commands:
-@>Play SE: 'Door exit', 80, 100
+@>Play SE: 'Door exit', 100, 100
 @>Change Screen Color Tone: (-255,-255,-255,0), @6
 @>Wait: 8 frame(s)
 @>Transfer Player:[178: Arena 4], (027,011), Down, No Fade
 @>Change Screen Color Tone: (0,0,0,0), @6
+@>Wait: 8 frame(s)
 @>
 
 #------------------------------------------------------------------------------
@@ -382595,11 +382113,12 @@ Move Animation
 Trigger: Player Touch
 
 List of Event Commands:
-@>Play SE: 'Door exit', 80, 100
+@>Play SE: 'Door exit', 100, 100
 @>Change Screen Color Tone: (-255,-255,-255,0), @6
 @>Wait: 8 frame(s)
 @>Transfer Player:[476: Arena 4], (009,007), Down, No Fade
 @>Change Screen Color Tone: (0,0,0,0), @6
+@>Wait: 8 frame(s)
 @>
 
 #------------------------------------------------------------------------------
@@ -382750,6 +382269,7 @@ Move Animation
 Trigger: Player Touch
 
 List of Event Commands:
+@>Play SE: 'Door exit', 100, 100
 @>Change Screen Color Tone: (-255,-255,-255,0), @6
 @>Wait: 8 frame(s)
 @>Transfer Player:[475: Arena 4], (031,037), Up, No Fade
@@ -382778,7 +382298,7 @@ List of Event Commands:
   :              : $>Through ON
   :              : $>Move Down
   :              : $>Through OFF
- @>Wait: 4 frame(s)
+ @>Wait: 6 frame(s)
  @>Script: Followers.put_followers_on_player
  @>
 : Branch End
@@ -382854,6 +382374,7 @@ Move Animation
 Trigger: Player Touch
 
 List of Event Commands:
+@>Play SE: 'Door exit', 100, 100
 @>Change Screen Color Tone: (-255,-255,-255,0), @6
 @>Wait: 8 frame(s)
 @>Transfer Player:[481: Arena 4], (006,041), Up, No Fade
@@ -382882,7 +382403,7 @@ List of Event Commands:
   :              : $>Through ON
   :              : $>Move Down
   :              : $>Through OFF
- @>Wait: 4 frame(s)
+ @>Wait: 6 frame(s)
  @>Script: Followers.put_followers_on_player
  @>
 : Branch End
@@ -382907,6 +382428,7 @@ Move Animation
 Trigger: Player Touch
 
 List of Event Commands:
+@>Play SE: 'Door exit', 100, 100
 @>Change Screen Color Tone: (-255,-255,-255,0), @6
 @>Wait: 8 frame(s)
 @>Transfer Player:[481: Arena 4], (007,041), Up, No Fade
@@ -382935,7 +382457,7 @@ List of Event Commands:
   :              : $>Through ON
   :              : $>Move Down
   :              : $>Through OFF
- @>Wait: 4 frame(s)
+ @>Wait: 6 frame(s)
  @>Script: Followers.put_followers_on_player
  @>
 : Branch End
@@ -382960,11 +382482,12 @@ Move Animation
 Trigger: Player Touch
 
 List of Event Commands:
-@>Play SE: 'Door exit', 80, 100
+@>Play SE: 'Door exit', 100, 100
 @>Change Screen Color Tone: (-255,-255,-255,0), @6
 @>Wait: 8 frame(s)
 @>Transfer Player:[470: Arena 4], (003,016), Right, No Fade
 @>Change Screen Color Tone: (0,0,0,0), @6
+@>Wait: 8 frame(s)
 @>
 
 #------------------------------------------------------------------------------
@@ -382985,11 +382508,12 @@ Move Animation
 Trigger: Player Touch
 
 List of Event Commands:
-@>Play SE: 'Door exit', 80, 100
+@>Play SE: 'Door exit', 100, 100
 @>Change Screen Color Tone: (-255,-255,-255,0), @6
 @>Wait: 8 frame(s)
 @>Transfer Player:[479: Arena 4], (014,009), Left, No Fade
 @>Change Screen Color Tone: (0,0,0,0), @6
+@>Wait: 8 frame(s)
 @>
 
 #------------------------------------------------------------------------------
@@ -383010,11 +382534,12 @@ Move Animation
 Trigger: Player Touch
 
 List of Event Commands:
-@>Play SE: 'Door exit', 80, 100
+@>Play SE: 'Door exit', 100, 100
 @>Change Screen Color Tone: (-255,-255,-255,0), @6
 @>Wait: 8 frame(s)
 @>Transfer Player:[469: Arena 4], (013,008), Left, No Fade
 @>Change Screen Color Tone: (0,0,0,0), @6
+@>Wait: 8 frame(s)
 @>
 
 #------------------------------------------------------------------------------
@@ -383035,11 +382560,12 @@ Move Animation
 Trigger: Player Touch
 
 List of Event Commands:
-@>Play SE: 'Door exit', 80, 100
+@>Play SE: 'Door exit', 100, 100
 @>Change Screen Color Tone: (-255,-255,-255,0), @6
 @>Wait: 8 frame(s)
 @>Transfer Player:[475: Arena 4], (011,006), Down, No Fade
 @>Change Screen Color Tone: (0,0,0,0), @6
+@>Wait: 8 frame(s)
 @>
 
 #------------------------------------------------------------------------------
@@ -383060,11 +382586,12 @@ Move Animation
 Trigger: Player Touch
 
 List of Event Commands:
-@>Play SE: 'Door exit', 80, 100
+@>Play SE: 'Door exit', 100, 100
 @>Change Screen Color Tone: (-255,-255,-255,0), @6
 @>Wait: 8 frame(s)
 @>Transfer Player:[475: Arena 4], (012,006), Down, No Fade
 @>Change Screen Color Tone: (0,0,0,0), @6
+@>Wait: 8 frame(s)
 @>
 
 #------------------------------------------------------------------------------
@@ -386917,11 +386444,12 @@ Move Animation
 Trigger: Player Touch
 
 List of Event Commands:
-@>Play SE: 'Door exit', 80, 100
+@>Play SE: 'Door exit', 100, 100
 @>Change Screen Color Tone: (-255,-255,-255,0), @6
 @>Wait: 8 frame(s)
 @>Transfer Player:[481: Arena 4], (005,010), Right, No Fade
 @>Change Screen Color Tone: (0,0,0,0), @6
+@>Wait: 8 frame(s)
 @>
 
 #------------------------------------------------------------------------------
@@ -386993,11 +386521,12 @@ Move Animation
 Trigger: Player Touch
 
 List of Event Commands:
-@>Play SE: 'Door exit', 80, 100
+@>Play SE: 'Door exit', 100, 100
 @>Change Screen Color Tone: (-255,-255,-255,0), @6
 @>Wait: 8 frame(s)
 @>Transfer Player:[477: Arena 4], (006,016), Right, No Fade
 @>Change Screen Color Tone: (0,0,0,0), @6
+@>Wait: 8 frame(s)
 @>
 
 #------------------------------------------------------------------------------
@@ -387119,11 +386648,12 @@ Move Animation
 Trigger: Player Touch
 
 List of Event Commands:
-@>Play SE: 'Door exit', 80, 100
+@>Play SE: 'Door exit', 100, 100
 @>Change Screen Color Tone: (-255,-255,-255,0), @6
 @>Wait: 8 frame(s)
 @>Transfer Player:[178: Arena 4], (035,018), Left, No Fade
 @>Change Screen Color Tone: (0,0,0,0), @6
+@>Wait: 8 frame(s)
 @>
 
 #------------------------------------------------------------------------------
@@ -387353,11 +386883,12 @@ Move Animation
 Trigger: Player Touch
 
 List of Event Commands:
-@>Play SE: 'Door exit', 80, 100
+@>Play SE: 'Door exit', 100, 100
 @>Change Screen Color Tone: (-255,-255,-255,0), @6
 @>Wait: 8 frame(s)
 @>Transfer Player:[482: Arena 4], (004,010), Right, No Fade
 @>Change Screen Color Tone: (0,0,0,0), @6
+@>Wait: 8 frame(s)
 @>
 
 #------------------------------------------------------------------------------
@@ -387378,11 +386909,12 @@ Move Animation
 Trigger: Player Touch
 
 List of Event Commands:
-@>Play SE: 'Door exit', 80, 100
+@>Play SE: 'Door exit', 100, 100
 @>Change Screen Color Tone: (-255,-255,-255,0), @6
 @>Wait: 8 frame(s)
 @>Transfer Player:[484: Arena 4], (006,013), Right, No Fade
 @>Change Screen Color Tone: (0,0,0,0), @6
+@>Wait: 8 frame(s)
 @>
 
 #------------------------------------------------------------------------------
@@ -387403,11 +386935,12 @@ Move Animation
 Trigger: Player Touch
 
 List of Event Commands:
-@>Play SE: 'Door exit', 80, 100
+@>Play SE: 'Door exit', 100, 100
 @>Change Screen Color Tone: (-255,-255,-255,0), @6
 @>Wait: 8 frame(s)
 @>Transfer Player:[478: Arena 4], (017,013), Left, No Fade
 @>Change Screen Color Tone: (0,0,0,0), @6
+@>Wait: 8 frame(s)
 @>
 
 #------------------------------------------------------------------------------
@@ -387428,11 +386961,12 @@ Move Animation
 Trigger: Player Touch
 
 List of Event Commands:
-@>Play SE: 'Door exit', 80, 100
+@>Play SE: 'Door exit', 100, 100
 @>Change Screen Color Tone: (-255,-255,-255,0), @6
 @>Wait: 8 frame(s)
 @>Transfer Player:[477: Arena 4], (014,007), Down, No Fade
 @>Change Screen Color Tone: (0,0,0,0), @6
+@>Wait: 8 frame(s)
 @>
 
 #------------------------------------------------------------------------------
@@ -387453,11 +386987,12 @@ Move Animation
 Trigger: Player Touch
 
 List of Event Commands:
-@>Play SE: 'Door exit', 80, 100
+@>Play SE: 'Door exit', 100, 100
 @>Change Screen Color Tone: (-255,-255,-255,0), @6
 @>Wait: 8 frame(s)
 @>Transfer Player:[477: Arena 4], (015,007), Down, No Fade
 @>Change Screen Color Tone: (0,0,0,0), @6
+@>Wait: 8 frame(s)
 @>
 
 #------------------------------------------------------------------------------
@@ -390497,11 +390032,12 @@ Move Animation
 Trigger: Player Touch
 
 List of Event Commands:
-@>Play SE: 'Door exit', 80, 100
+@>Play SE: 'Door exit', 100, 100
 @>Change Screen Color Tone: (-255,-255,-255,0), @6
 @>Wait: 8 frame(s)
 @>Transfer Player:[481: Arena 4], (034,010), Left, No Fade
 @>Change Screen Color Tone: (0,0,0,0), @6
+@>Wait: 8 frame(s)
 @>
 
 #------------------------------------------------------------------------------
@@ -390531,11 +390067,12 @@ Move Animation
 Trigger: Player Touch
 
 List of Event Commands:
-@>Play SE: 'Door exit', 80, 100
+@>Play SE: 'Door exit', 100, 100
 @>Change Screen Color Tone: (-255,-255,-255,0), @6
 @>Wait: 8 frame(s)
 @>Transfer Player:[178: Arena 4], (006,020), Right, No Fade
 @>Change Screen Color Tone: (0,0,0,0), @6
+@>Wait: 8 frame(s)
 @>
 
 #------------------------------------------------------------------------------
@@ -390656,11 +390193,12 @@ Move Animation
 Trigger: Player Touch
 
 List of Event Commands:
-@>Play SE: 'Door exit', 80, 100
+@>Play SE: 'Door exit', 100, 100
 @>Change Screen Color Tone: (-255,-255,-255,0), @6
 @>Wait: 8 frame(s)
 @>Transfer Player:[481: Arena 4], (034,029), Left, No Fade
 @>Change Screen Color Tone: (0,0,0,0), @6
+@>Wait: 8 frame(s)
 @>
 
 #------------------------------------------------------------------------------
@@ -391357,11 +390895,12 @@ Move Animation
 Trigger: Player Touch
 
 List of Event Commands:
-@>Play SE: 'Door exit', 80, 100
+@>Play SE: 'Door exit', 100, 100
 @>Change Screen Color Tone: (-255,-255,-255,0), @6
 @>Wait: 8 frame(s)
 @>Transfer Player:[481: Arena 4], (029,006), Down, No Fade
 @>Change Screen Color Tone: (0,0,0,0), @6
+@>Wait: 8 frame(s)
 @>
 
 #------------------------------------------------------------------------------
@@ -426297,7 +425836,7 @@ List of Event Commands:
 @>Play SE: 'Door exit', 100, 100
 @>Change Screen Color Tone: (-255,-255,-255,0), @6
 @>Wait: 8 frame(s)
-@>Transfer Player:[630: MAP630], (008,012), Up, No Fade
+@>Transfer Player:[630: Reliktstein], (008,012), Up, No Fade
 @>Change Screen Color Tone: (0,0,0,0), @6
 @>Wait: 8 frame(s)
 @>
@@ -439725,38 +439264,6 @@ List of Event Commands:
 : Branch End
 @>
 
-Page #2
-Conditions
-Switch 0265: Kobalium Brücke is ON
-
-Autonomous Movement
-Type: Fixed
-Speed: 3: Slow
-Freq: 3: Low
-Options Enabled
-Move Animation
-Trigger: Event Touch
-
-List of Event Commands:
-@>Conditional Branch: Player is facing Up
- @>Set Move Route: Player
-  :              : $>Move Up
- @>Play SE: 'Door exit', 80, 100
- @>Change Screen Color Tone: (-255,-255,-255,0), @6
- @>Wait: 12 frame(s)
- @>Transfer Player:[448: Stahltrug-Höhle], (009,042), Up, No Fade
- @>Set Move Route: Player
-  :              : $>Move Up
-  :              : $>Move Up
-  :              : $>Move Up
- @>Change Screen Color Tone: (0,0,0,0), @6
- @>Wait: 12 frame(s)
- @>
-: Else
- @>
-: Branch End
-@>
-
 #------------------------------------------------------------------------------
 Event ID: 013
 Event Name: Exit right
@@ -439792,38 +439299,6 @@ List of Event Commands:
 : Branch End
 @>
 
-Page #2
-Conditions
-Switch 0265: Kobalium Brücke is ON
-
-Autonomous Movement
-Type: Fixed
-Speed: 3: Slow
-Freq: 3: Low
-Options Enabled
-Move Animation
-Trigger: Event Touch
-
-List of Event Commands:
-@>Conditional Branch: Player is facing Up
- @>Set Move Route: Player
-  :              : $>Move Up
- @>Play SE: 'Door exit', 80, 100
- @>Change Screen Color Tone: (-255,-255,-255,0), @6
- @>Wait: 12 frame(s)
- @>Transfer Player:[448: Stahltrug-Höhle], (009,042), Up, No Fade
- @>Set Move Route: Player
-  :              : $>Move Up
-  :              : $>Move Up
-  :              : $>Move Up
- @>Change Screen Color Tone: (0,0,0,0), @6
- @>Wait: 12 frame(s)
- @>
-: Else
- @>
-: Branch End
-@>
-
 #------------------------------------------------------------------------------
 Event ID: 014
 Event Name: Exit right
@@ -439850,38 +439325,6 @@ List of Event Commands:
  @>Wait: 12 frame(s)
  @>Transfer Player:[560: Oben], (008,014), Up, No Fade
  @>Set Move Route: Player
-  :              : $>Move Up
- @>Change Screen Color Tone: (0,0,0,0), @6
- @>Wait: 12 frame(s)
- @>
-: Else
- @>
-: Branch End
-@>
-
-Page #2
-Conditions
-Switch 0265: Kobalium Brücke is ON
-
-Autonomous Movement
-Type: Fixed
-Speed: 3: Slow
-Freq: 3: Low
-Options Enabled
-Move Animation
-Trigger: Event Touch
-
-List of Event Commands:
-@>Conditional Branch: Player is facing Up
- @>Set Move Route: Player
-  :              : $>Move Up
- @>Play SE: 'Door exit', 80, 100
- @>Change Screen Color Tone: (-255,-255,-255,0), @6
- @>Wait: 12 frame(s)
- @>Transfer Player:[448: Stahltrug-Höhle], (009,042), Up, No Fade
- @>Set Move Route: Player
-  :              : $>Move Up
-  :              : $>Move Up
   :              : $>Move Up
  @>Change Screen Color Tone: (0,0,0,0), @6
  @>Wait: 12 frame(s)
@@ -440435,38 +439878,6 @@ List of Event Commands:
 : Branch End
 @>
 
-Page #2
-Conditions
-Switch 0265: Kobalium Brücke is ON
-
-Autonomous Movement
-Type: Fixed
-Speed: 3: Slow
-Freq: 3: Low
-Options Enabled
-Move Animation
-Trigger: Event Touch
-
-List of Event Commands:
-@>Conditional Branch: Player is facing Up
- @>Set Move Route: Player
-  :              : $>Move Up
- @>Play SE: 'Door exit', 80, 100
- @>Change Screen Color Tone: (-255,-255,-255,0), @6
- @>Wait: 12 frame(s)
- @>Transfer Player:[448: Stahltrug-Höhle], (009,042), Up, No Fade
- @>Set Move Route: Player
-  :              : $>Move Up
-  :              : $>Move Up
-  :              : $>Move Up
- @>Change Screen Color Tone: (0,0,0,0), @6
- @>Wait: 12 frame(s)
- @>
-: Else
- @>
-: Branch End
-@>
-
 #------------------------------------------------------------------------------
 Event ID: 014
 Event Name: Exit right
@@ -440502,38 +439913,6 @@ List of Event Commands:
 : Branch End
 @>
 
-Page #2
-Conditions
-Switch 0265: Kobalium Brücke is ON
-
-Autonomous Movement
-Type: Fixed
-Speed: 3: Slow
-Freq: 3: Low
-Options Enabled
-Move Animation
-Trigger: Event Touch
-
-List of Event Commands:
-@>Conditional Branch: Player is facing Up
- @>Set Move Route: Player
-  :              : $>Move Up
- @>Play SE: 'Door exit', 80, 100
- @>Change Screen Color Tone: (-255,-255,-255,0), @6
- @>Wait: 12 frame(s)
- @>Transfer Player:[448: Stahltrug-Höhle], (009,042), Up, No Fade
- @>Set Move Route: Player
-  :              : $>Move Up
-  :              : $>Move Up
-  :              : $>Move Up
- @>Change Screen Color Tone: (0,0,0,0), @6
- @>Wait: 12 frame(s)
- @>
-: Else
- @>
-: Branch End
-@>
-
 #------------------------------------------------------------------------------
 Event ID: 015
 Event Name: Exit right
@@ -440560,38 +439939,6 @@ List of Event Commands:
  @>Wait: 12 frame(s)
  @>Transfer Player:[562: Oben], (008,014), Up, No Fade
  @>Set Move Route: Player
-  :              : $>Move Up
- @>Change Screen Color Tone: (0,0,0,0), @6
- @>Wait: 12 frame(s)
- @>
-: Else
- @>
-: Branch End
-@>
-
-Page #2
-Conditions
-Switch 0265: Kobalium Brücke is ON
-
-Autonomous Movement
-Type: Fixed
-Speed: 3: Slow
-Freq: 3: Low
-Options Enabled
-Move Animation
-Trigger: Event Touch
-
-List of Event Commands:
-@>Conditional Branch: Player is facing Up
- @>Set Move Route: Player
-  :              : $>Move Up
- @>Play SE: 'Door exit', 80, 100
- @>Change Screen Color Tone: (-255,-255,-255,0), @6
- @>Wait: 12 frame(s)
- @>Transfer Player:[448: Stahltrug-Höhle], (009,042), Up, No Fade
- @>Set Move Route: Player
-  :              : $>Move Up
-  :              : $>Move Up
   :              : $>Move Up
  @>Change Screen Color Tone: (0,0,0,0), @6
  @>Wait: 12 frame(s)
@@ -440875,38 +440222,6 @@ List of Event Commands:
 : Branch End
 @>
 
-Page #2
-Conditions
-Switch 0265: Kobalium Brücke is ON
-
-Autonomous Movement
-Type: Fixed
-Speed: 3: Slow
-Freq: 3: Low
-Options Enabled
-Move Animation
-Trigger: Event Touch
-
-List of Event Commands:
-@>Conditional Branch: Player is facing Up
- @>Set Move Route: Player
-  :              : $>Move Up
- @>Play SE: 'Door exit', 80, 100
- @>Change Screen Color Tone: (-255,-255,-255,0), @6
- @>Wait: 12 frame(s)
- @>Transfer Player:[448: Stahltrug-Höhle], (009,042), Up, No Fade
- @>Set Move Route: Player
-  :              : $>Move Up
-  :              : $>Move Up
-  :              : $>Move Up
- @>Change Screen Color Tone: (0,0,0,0), @6
- @>Wait: 12 frame(s)
- @>
-: Else
- @>
-: Branch End
-@>
-
 #------------------------------------------------------------------------------
 Event ID: 009
 Event Name: EV009
@@ -441010,38 +440325,6 @@ List of Event Commands:
 : Branch End
 @>
 
-Page #2
-Conditions
-Switch 0265: Kobalium Brücke is ON
-
-Autonomous Movement
-Type: Fixed
-Speed: 3: Slow
-Freq: 3: Low
-Options Enabled
-Move Animation
-Trigger: Event Touch
-
-List of Event Commands:
-@>Conditional Branch: Player is facing Up
- @>Set Move Route: Player
-  :              : $>Move Up
- @>Play SE: 'Door exit', 80, 100
- @>Change Screen Color Tone: (-255,-255,-255,0), @6
- @>Wait: 12 frame(s)
- @>Transfer Player:[448: Stahltrug-Höhle], (009,042), Up, No Fade
- @>Set Move Route: Player
-  :              : $>Move Up
-  :              : $>Move Up
-  :              : $>Move Up
- @>Change Screen Color Tone: (0,0,0,0), @6
- @>Wait: 12 frame(s)
- @>
-: Else
- @>
-: Branch End
-@>
-
 #------------------------------------------------------------------------------
 Event ID: 013
 Event Name: Exit right
@@ -441068,38 +440351,6 @@ List of Event Commands:
  @>Wait: 12 frame(s)
  @>Transfer Player:[564: Oben], (008,014), Up, No Fade
  @>Set Move Route: Player
-  :              : $>Move Up
- @>Change Screen Color Tone: (0,0,0,0), @6
- @>Wait: 12 frame(s)
- @>
-: Else
- @>
-: Branch End
-@>
-
-Page #2
-Conditions
-Switch 0265: Kobalium Brücke is ON
-
-Autonomous Movement
-Type: Fixed
-Speed: 3: Slow
-Freq: 3: Low
-Options Enabled
-Move Animation
-Trigger: Event Touch
-
-List of Event Commands:
-@>Conditional Branch: Player is facing Up
- @>Set Move Route: Player
-  :              : $>Move Up
- @>Play SE: 'Door exit', 80, 100
- @>Change Screen Color Tone: (-255,-255,-255,0), @6
- @>Wait: 12 frame(s)
- @>Transfer Player:[448: Stahltrug-Höhle], (009,042), Up, No Fade
- @>Set Move Route: Player
-  :              : $>Move Up
-  :              : $>Move Up
   :              : $>Move Up
  @>Change Screen Color Tone: (0,0,0,0), @6
  @>Wait: 12 frame(s)
@@ -461265,6 +460516,27 @@ List of Event Commands:
 @>
 
 #------------------------------------------------------------------------------
+Event ID: 003
+Event Name: EV003
+(X,Y): (000,000)
+
+Page #1
+Conditions
+None
+
+Autonomous Movement
+Type: Fixed
+Speed: 3: Slow
+Freq: 3: Low
+Options Enabled
+Move Animation
+Trigger: Parallel Process
+
+List of Event Commands:
+@>Change Map Settings:Fog = 'Erdgeschoss', 0, 255, Normal, 100, 0, 0
+@>
+
+#------------------------------------------------------------------------------
 
 #==============================================================================
 Map ID: 622
@@ -463006,7 +462278,7 @@ List of Event Commands:
 
 #==============================================================================
 Map ID: 630
-Map Name: MAP630
+Map Name: Reliktstein
 Tileset: 128: Route 15 Haus
 Width: 20, Height: 15
 
@@ -470596,6 +469868,32 @@ List of Event Commands:
 @>
 
 #------------------------------------------------------------------------------
+Event ID: 008
+Event Name: Durchgang size(3,1)
+(X,Y): (008,007)
+
+Page #1
+Conditions
+None
+
+Autonomous Movement
+Type: Fixed
+Speed: 3: Slow
+Freq: 3: Low
+Options Enabled
+Move Animation
+Trigger: Player Touch
+
+List of Event Commands:
+@>Play SE: 'Door exit', 100, 100
+@>Change Screen Color Tone: (-255,-255,-255,0), @6
+@>Wait: 8 frame(s)
+@>Transfer Player:[649: Zwischengebäude], (008,017), Up, No Fade
+@>Change Screen Color Tone: (0,0,0,0), @6
+@>Wait: 8 frame(s)
+@>
+
+#------------------------------------------------------------------------------
 
 #==============================================================================
 Map ID: 647
@@ -471005,6 +470303,184 @@ Trigger: Action Button
 List of Event Commands:
 @>Text: Du hast ein Ei erhalten.
 @>Script: pbGenerateEgg(:HOUNDOUR)
+@>
+
+#------------------------------------------------------------------------------
+
+#==============================================================================
+Map ID: 649
+Map Name: Zwischengebäude
+Tileset: 047: Poke center
+Width: 20, Height: 20
+
+#------------------------------------------------------------------------------
+Event ID: 002
+Event Name: Ausgang oben size(2,1)
+(X,Y): (008,000)
+
+Page #1
+Conditions
+None
+
+Autonomous Movement
+Type: Fixed
+Speed: 3: Slow
+Freq: 3: Low
+Options Enabled
+Move Animation
+Trigger: Player Touch
+
+List of Event Commands:
+@>Play SE: 'Door exit', 100, 100
+@>Change Screen Color Tone: (-255,-255,-255,0), @6
+@>Wait: 8 frame(s)
+@>Transfer Player:[371: Noxburgh], (052,069), Up, No Fade
+@>Change Screen Color Tone: (0,0,0,0), @6
+@>Wait: 8 frame(s)
+@>
+
+#------------------------------------------------------------------------------
+Event ID: 003
+Event Name: Ausgang unten size(2,1)
+(X,Y): (008,018)
+
+Page #1
+Conditions
+None
+
+Autonomous Movement
+Type: Fixed
+Speed: 3: Slow
+Freq: 3: Low
+Options Enabled
+Move Animation
+Trigger: Player Touch
+
+List of Event Commands:
+@>Play SE: 'Door exit', 100, 100
+@>Change Screen Color Tone: (-255,-255,-255,0), @6
+@>Wait: 8 frame(s)
+@>Transfer Player:[646: Route 19], (009,008), Down, No Fade
+@>Change Screen Color Tone: (0,0,0,0), @6
+@>Wait: 8 frame(s)
+@>
+
+#------------------------------------------------------------------------------
+Event ID: 006
+Event Name: EV006
+(X,Y): (000,019)
+
+Page #1
+Conditions
+None
+
+Autonomous Movement
+Type: Fixed
+Speed: 3: Slow
+Freq: 3: Low
+Options Enabled
+Move Animation
+Trigger: Parallel Process
+
+List of Event Commands:
+@>Erase Picture: 1
+@>Control Switches: [0318: Sonne AN] = OFF
+@>Control Switches: [0319: Sonne AUS] = ON
+@>
+
+Page #2
+Conditions
+Switch 0319: Sonne AUS is ON
+
+Autonomous Movement
+Type: Fixed
+Speed: 3: Slow
+Freq: 3: Low
+Options Enabled
+Move Animation
+Trigger: Action Button
+
+List of Event Commands:
+@>
+
+#------------------------------------------------------------------------------
+Event ID: 014
+Event Name: EV014 size(2,1)
+(X,Y): (015,002)
+
+Page #1
+Conditions
+None
+
+Autonomous Movement
+Type: Fixed
+Speed: 3: Slow
+Freq: 3: Low
+Options Enabled
+Move Animation
+Trigger: Action Button
+
+List of Event Commands:
+@>Text: \GEin Getränkeautomat.
+@>Show Choices: Tafelwasser (200$), Soda Pop (300$), Limonade (350$), Abbrechen
+(When Cancel: Choice 4)
+: When [Tafelwasser (200$)]
+ @>Conditional Branch: Gold 200 or more
+  @>Conditional Branch: Script: $bag.can_add?(:FRESHWATER)
+   @>Play SE: 'Mart buy item', 100, 100
+   @>Change Gold: - 200
+   @>Text: \GEin Tafelwasser kommt heraus.
+   @>Script: pbReceiveItem(:FRESHWATER)
+   @>
+  : Else
+   @>Text: \GDu hast keinen Platz mehr im Beutel.
+   @>
+  : Branch End
+  @>
+ : Else
+  @>Text: \GDu hast nicht genug Geld.
+  @>
+ : Branch End
+ @>
+: When [Soda Pop (300$)]
+ @>Conditional Branch: Gold 300 or more
+  @>Conditional Branch: Script: $bag.can_add?(:SODAPOP)
+   @>Play SE: 'Mart buy item', 100, 100
+   @>Change Gold: - 300
+   @>Text: \GEin Soda Pop kommt heraus.
+   @>Script: pbReceiveItem(:SODAPOP)
+   @>
+  : Else
+   @>Text: \GDu hast keinen Platz mehr im Beutel.
+   @>
+  : Branch End
+  @>
+ : Else
+  @>Text: \GDu hast nicht genug Geld.
+  @>
+ : Branch End
+ @>
+: When [Limonade (350$)]
+ @>Conditional Branch: Gold 350 or more
+  @>Conditional Branch: Script: $bag.can_add?(:LEMONADE)
+   @>Play SE: 'Mart buy item', 100, 100
+   @>Change Gold: - 350
+   @>Text: \GEine Limonade kommt heraus.
+   @>Script: pbReceiveItem(:LEMONADE)
+   @>
+  : Else
+   @>Text: \GDu hast keinen Platz mehr im Beutel.
+   @>
+  : Branch End
+  @>
+ : Else
+  @>Text: \GDu hast nicht genug Geld.
+  @>
+ : Branch End
+ @>
+: When [Abbrechen]
+ @>
+: Branch End
 @>
 
 #------------------------------------------------------------------------------

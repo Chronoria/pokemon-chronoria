@@ -22,6 +22,7 @@ import { exportItemListXlsx } from "./exportItemList.ts";
 import { exportPokemonListXlsx } from "./exportPokemonList.ts";
 import { exportEncounterListXlsx } from "./exportEncounterList.ts";
 import { exportFishingListXlsx } from "./exportFishingList.ts";
+import { exportTrainerListXlsx } from "./exportTrainerList.ts";
 import { resolveEncounterTarget } from "./resolveEncounterTarget.ts";
 import type { EncounterRef } from "./dataModel.ts";
 
@@ -238,6 +239,21 @@ async function main() {
       `  [Angeln] ohne Generationsangabe und daher nicht auf dem Generationen-Blatt: ` +
         fishingXlsxResult.missingGeneration.join(", ")
     );
+  }
+
+  const trainerXlsxResult = await exportTrainerListXlsx(trainers);
+  console.log(
+    `Trainer-Uebersicht.xlsx aktualisiert: ${trainerXlsxResult.rows} Auftritte von ` +
+      `${trainerXlsxResult.distinct} Trainern auf ${trainerXlsxResult.maps} Karten.`
+  );
+  console.log(
+    `  [Trainerklassen] ${trainerXlsxResult.unusedTypes.total} von ${trainerXlsxResult.typesTotal} nicht auf einer Karte: ` +
+      `${trainerXlsxResult.unusedTypes.ready} mit beiden Sprites einsatzbereit, ` +
+      `${trainerXlsxResult.unusedTypes.dataOnly} davon sogar mit fertigem Team, ` +
+      `${trainerXlsxResult.unusedTypes.noSprites} ganz ohne Grafik.`
+  );
+  if (trainerXlsxResult.missingPbs > 0) {
+    console.warn(`  [Trainer] ${trainerXlsxResult.missingPbs} Kampf/Kaempfe ohne Eintrag in trainers.txt - siehe Blatt "Ohne PBS-Eintrag".`);
   }
 
   console.log(`Fertig: ${pokemon.length} Pokémon, ${moves.length} Attacken, ${abilities.length} Fähigkeiten, ` +

@@ -74,8 +74,17 @@ Point = 21,6,Höhle des Schwarzen Donners
 Point = 22,4,Route 15
 Point = 21,4,Route 15
 Point = 20,4,Route 16
-Point = 19,4,Route 16
-Point = 19,3,Route 16
+Point = 19,4,Route 17
+Point = 19,3,
+Point = 20,3,Flammenhain,
+Point = 18,4,Tonishi,
+Point = 17,4,Tonishi,
+Point = 16,4,Route 18,
+Point = 16,3,Route 19,
+Point = 15,3,Route 19,
+Point = 15,2,Noxburgh,
+Point = 16,2,Pfad der Drachen,
+Point = 16,1,Pfad der Drachen,
 #-------------------------------
 [1]
 Name = Region 2
