@@ -446,6 +446,64 @@ Pokedex = With its muscular strength now greatly increased, it can fly continuou
 Generation = 6
 UnmegaForm = 1
 #-------------------------------
+[SPEAROW,1]
+FormName = Chrono
+Types = DARK,FLYING
+BaseStats = 40,60,30,70,31,31
+GenderRatio = Female50Percent
+GrowthRate = Medium
+BaseExp = 52
+EVs = SPEED,1
+CatchRate = 255
+Happiness = 50
+Abilities = KEENEYE
+HiddenAbilities = SNIPER
+Moves = 1,GROWL,1,PECK,4,LEER,8,ASSURANCE,11,FURYATTACK,15,AERIALACE,18,THIEF,20,WINGATTACK,22,TAKEDOWN,25,SUCKERPUNCH,29,FOCUSENERGY,32,ROOST,36,DRILLPECK,45,FIERYWRATH
+TutorMoves = AERIALACE,AIRCUTTER,ATTRACT,CAPTIVATE,CONFIDE,DEFOG,DOUBLEEDGE,DOUBLETEAM,DRILLRUN,ECHOEDVOICE,ENDURE,FACADE,FALSESWIPE,FIERYWRATH,FLY,FRUSTRATION,HEATWAVE,HIDDENPOWER,MIMIC,MUDSLAP,NATURALGIFT,OMINOUSWIND,PLUCK,PROTECT,RAINDANCE,REST,RETURN,ROOST,ROUND,SECRETPOWER,SKYATTACK,SLEEPTALK,SNORE,STEELWING,SUBSTITUTE,SUCKERPUNCH,SUNNYDAY,SWAGGER,SWIFT,TAILWIND,THIEF,TWISTER,UPROAR,UTURN,WICKEDTORQUE,WORKUP
+EggMoves = ASTONISH,FEATHERDANCE,QUICKATTACK,SCARYFACE,SKYATTACK,TRIATTACK,UPROAR,WHIRLWIND
+EggGroups = Flying
+HatchSteps = 3840
+Height = 0.3
+Weight = 2.0
+Color = Brown
+Shape = Winged
+Habitat = RoughTerrain
+Category = Tiny Bird
+Pokedex = Its loud cry can be heard over half a mile away. If its high, keening cry is heard echoing all around, it is a sign that they are warning each other of danger.
+Generation = 1
+WildItemUncommon = SHARPBEAK
+Evolutions = FEAROW,Level,20
+CallRateSOS = 9
+RaidRanks = 1,2
+#-------------------------------
+[FEAROW,1]
+FormName = Chrono
+Types = DARK,FLYING
+BaseStats = 65,90,65,100,61,61
+GenderRatio = Female50Percent
+GrowthRate = Medium
+BaseExp = 155
+EVs = SPEED,2
+CatchRate = 90
+Happiness = 50
+Abilities = KEENEYE
+HiddenAbilities = SNIPER
+Moves = 1,PLUCK,1,PECK,1,GROWL,1,LEER,1,DRILLRUN,4,LEER,8,ASSURANCE,11,FURYATTACK,15,AERIALACE,18,THIEF,20,WINGATTACK,23,TAKEDOWN,27,SUCKERPUNCH,32,FOCUSENERGY,36,ROOST,41,DRILLPECK,45,DRILLRUN,56,FIERYWRATH
+TutorMoves = AERIALACE,AIRCUTTER,ATTRACT,CAPTIVATE,CONFIDE,DEFOG,DOUBLEEDGE,DOUBLETEAM,DRILLRUN,ECHOEDVOICE,ENDURE,FACADE,FALSESWIPE,FIERYWRATH,FLY,FRUSTRATION,GIGAIMPACT,HEATWAVE,HIDDENPOWER,HYPERBEAM,LASERFOCUS,MIMIC,MUDSLAP,NATURALGIFT,OMINOUSWIND,PLUCK,PROTECT,RAINDANCE,REST,RETURN,ROOST,ROUND,SECRETPOWER,SKYATTACK,SLEEPTALK,SNORE,STEELWING,SUBSTITUTE,SUCKERPUNCH,SUNNYDAY,SWAGGER,SWIFT,TAILWIND,THIEF,THROATCHOP,TWISTER,UPROAR,UTURN,WICKEDTORQUE,WORKUP
+EggGroups = Flying
+HatchSteps = 3840
+Height = 1.2
+Weight = 38.0
+Color = Brown
+Shape = Winged
+Habitat = RoughTerrain
+Category = Beak
+Pokedex = Its long neck and elongated beak are ideal for catching prey in soil or water. It deftly moves this extended and skinny beak to pluck prey.
+Generation = 1
+WildItemUncommon = SHARPBEAK
+CallRateSOS = 6
+RaidRanks = 3,4
+#-------------------------------
 [PICHU,1]
 FormName = Spitzohr
 Evolutions = PIKACHU,Level,16
