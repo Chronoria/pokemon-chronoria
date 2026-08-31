@@ -2763,19 +2763,19 @@ Flags = Fling_30
 Description = Füllt 20 LP sofort wieder auf und kann im Kampf als getragenes Item genutzt werden.
 #-------------------------------Automat
 [FRESHWATER]
-Name = Tafelwasser
-NamePlural = Tafelwasser
+Name = stilles Wasser
+NamePlural = stilles Wasser
 Pocket = 2
 Price = 200
 SellPrice = 50
 FieldUse = OnPokemon
 BattleUse = OnPokemon
 Flags = Fling_30
-Description = Es füllt die LP eines Pokémon um 50 auf.
+Description = Es füllt die LP eines Pokémon um 30 auf.
 #-------------------------------Automat
 [SODAPOP]
-Name = Sprudel
-NamePlural = Sprudel
+Name = Sprudelwasser
+NamePlural = Sprudelwasser
 Pocket = 2
 Price = 300
 SellPrice = 75
@@ -7956,7 +7956,7 @@ Description = Schwächt eine sehr effektive Pflanzen-Attacke des Gegners ab.
 #-------------------------------
 [YACHEBERRY]
 Name = Kiroyabeere
-NamePlural = YKiroyabeeren
+NamePlural = Kiroyabeeren
 Pocket = 5
 Price = 40
 Flags = Berry,Fling_10,NaturalGift_ICE_80

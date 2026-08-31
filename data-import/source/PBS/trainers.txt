@@ -535,7 +535,7 @@ Pokemon = CONKELDURR,32
 Pokemon = ANNIHILAPE,32
 #-------------------------------
 [LEADER_Sakura,Sakura]
-Items = SUPERPOTION,SUPERPOTION
+Items = HYPERPOTION,HYPERPOTION
 LoseText = Ich bin dankbar.
 Pokemon = TAUROS,30
     Form = 2
@@ -552,7 +552,7 @@ Pokemon = LEAFEON,30
     Gender = female
     IV = 31,31,31,31,31,31
     Ball = SAFARIBALL
-Pokemon = TAUROS,30
+Pokemon = TAUROS,32
     Form = 3
     Moves = RAINDANCE,STOMPINGTANTRUM,LIQUIDATION,SMARTSTRIKE
     AbilityIndex = 2
@@ -3325,19 +3325,19 @@ Pokemon = SIRFETCHD,40
     Item = LEEK
 #-------------------------------
 [JOGGER,Finn]
-LoseText = Schneller als ich gedacht - das muss ich anerkennen!
+LoseText = Schneller als ich dachte - das muss ich anerkennen!
 Pokemon = PERSIAN,25
     Moves = CRUNCH,SLASH,TAUNT,ASSURANCE
     Nature = JOLLY
 #-------------------------------
 [JOGGER,Finn,1]
-LoseText = Schneller als ich gedacht - das muss ich anerkennen!
+LoseText = Schneller als ich dachte - das muss ich anerkennen!
 Pokemon = JOLTEON,30
     Moves = QUICKATTACK,AGILITY,DISCHARGE,THUNDER
     Nature = TIMID
 #-------------------------------
 [JOGGER,Finn,2]
-LoseText = Schneller als ich gedacht - das muss ich anerkennen!
+LoseText = Schneller als ich dachte - das muss ich anerkennen!
 Pokemon = NINJASK,35
     Moves = AGILITY,SWORDSDANCE,XSCISSOR,AERIALACE
     Nature = JOLLY
@@ -3346,7 +3346,7 @@ Pokemon = TALONFLAME,35
     Nature = JOLLY
 #-------------------------------
 [JOGGER,Finn,3]
-LoseText = Schneller als ich gedacht - das muss ich anerkennen!
+LoseText = Schneller als ich dachte - das muss ich anerkennen!
 Pokemon = DRAGAPULT,40
     Moves = DRAGONDARTS,DRAGONDANCE,PHANTOMFORCE,UTURN
     Nature = JOLLY

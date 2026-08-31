@@ -2,10 +2,13 @@
 import Layout from "../../layouts/Layout.astro";
 import Card from "../../components/Card.astro";
 import TypeBadge from "../../components/TypeBadge.astro";
+import RandomButton from "../../components/RandomButton.astro";
 import { pokemon, types, pokemonDexNumber } from "../../lib/data";
 import { slugify } from "../../lib/data";
 import { href } from "../../lib/url";
 import { typeColor } from "../../lib/typeColors";
+
+const randomHrefs = pokemon.map((p) => href(`/pokemon/${slugify(p.id)}/`));
 
 // Forms (Mega Evolutions etc.) are rendered into the same grid so a type-filtered view shows
 // species and forms together - see the note above the .filter-bar script for why they stay hidden
@@ -24,6 +27,7 @@ const allForms = pokemon.flatMap((p) =>
 
 <Layout title="Pokémon">
   <h1>Pokémon ({pokemon.length})</h1>
+  <RandomButton hrefs={randomHrefs} />
 
   <input
     type="search"

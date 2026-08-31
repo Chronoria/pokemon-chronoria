@@ -1,6 +1,7 @@
 ---
 import Layout from "../../layouts/Layout.astro";
 import TypeBadge from "../../components/TypeBadge.astro";
+import RandomButton from "../../components/RandomButton.astro";
 import { pokemon, types, slugify } from "../../lib/data";
 import { href } from "../../lib/url";
 import { typeColor } from "../../lib/typeColors";
@@ -14,10 +15,12 @@ const allForms = pokemon.flatMap((p) =>
       label: f.formName?.text || `Form ${f.formNumber}`,
     }))
 );
+const randomHrefs = allForms.map(({ p, f }) => href(`/pokemon/${slugify(p.id)}/${f.formNumber}/`));
 ---
 
 <Layout title="Formen">
   <h1>Formen ({allForms.length})</h1>
+  <RandomButton hrefs={randomHrefs} label="Zufällige Form" />
 
   <input
     type="search"

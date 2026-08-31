@@ -1,15 +1,18 @@
 ---
 import Layout from "../../layouts/Layout.astro";
 import TypeBadge from "../../components/TypeBadge.astro";
+import RandomButton from "../../components/RandomButton.astro";
 import { pokemon, types, pokemonDexNumber, slugify } from "../../lib/data";
 import { href } from "../../lib/url";
 import { typeColor } from "../../lib/typeColors";
 
 const shinyPokemon = pokemon.filter((p) => p.shinySprite);
+const randomHrefs = shinyPokemon.map((p) => href(`/shiny/${slugify(p.id)}/`));
 ---
 
 <Layout title="Shiny">
   <h1>Shiny ({shinyPokemon.length})</h1>
+  <RandomButton hrefs={randomHrefs} label="Zufälliges Shiny" />
 
   <input
     type="search"

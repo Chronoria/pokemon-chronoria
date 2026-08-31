@@ -378,6 +378,8 @@ BRAMBLEGHAST
 BRAMBLIN
 BRAVIARY
 BRAVIARY_1
+BRAVIARY_2
+BRAVIARY_Hover-Anim
 BRELOOM
 brendan_bike
 brendan_fish_offset
@@ -774,6 +776,7 @@ ELDEGOSS
 ELDER
 ELECTABUZZ
 ELECTIVIRE
+Electricidad
 ELECTRIKE
 ELECTRODE
 ELECTRODE_1
@@ -1126,6 +1129,7 @@ INDEEDEE_1
 INFERNAPE
 INKAY
 INTELEON
+Interruptor
 IRONBOULDER
 IRONBUNDLE
 IRONCROWN
@@ -1171,6 +1175,7 @@ Items Amigento-Discs 2
 Items Megasteine 1
 Items Megasteine 2
 Items Megasteine 3
+Items_eier
 Items1
 Items2
 Items3
@@ -3103,6 +3108,7 @@ VAPOREON
 VAROOM
 Vater
 VELUZA
+VELUZA_swimming
 VENIPEDE
 VENOMOTH
 VENOMOTH_female

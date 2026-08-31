@@ -18766,9 +18766,10 @@ Speed: 3: Slow
 Freq: 3: Low
 Options Enabled
 Move Animation
-Trigger: Action Button
+Trigger: Parallel Process
 
 List of Event Commands:
+@>Change Map Settings:Fog = 'Velmora Haus', 140, 255, Normal, 100, 0, 0
 @>
 
 #------------------------------------------------------------------------------
@@ -19191,9 +19192,10 @@ Speed: 3: Slow
 Freq: 3: Low
 Options Enabled
 Move Animation
-Trigger: Action Button
+Trigger: Parallel Process
 
 List of Event Commands:
+@>Change Map Settings:Fog = 'Velmora_033', 140, 255, Normal, 100, 0, 0
 @>
 
 #------------------------------------------------------------------------------
@@ -23130,9 +23132,10 @@ Speed: 3: Slow
 Freq: 3: Low
 Options Enabled
 Move Animation
-Trigger: Action Button
+Trigger: Parallel Process
 
 List of Event Commands:
+@>Change Map Settings:Fog = 'Velmora_042', 140, 255, Normal, 100, 0, 0
 @>
 
 #------------------------------------------------------------------------------
@@ -23608,9 +23611,10 @@ Speed: 3: Slow
 Freq: 3: Low
 Options Enabled
 Move Animation
-Trigger: Action Button
+Trigger: Parallel Process
 
 List of Event Commands:
+@>Change Map Settings:Fog = 'Velmora_043', 140, 255, Normal, 100, 0, 0
 @>
 
 #------------------------------------------------------------------------------
@@ -24698,9 +24702,10 @@ Speed: 3: Slow
 Freq: 3: Low
 Options Enabled
 Move Animation
-Trigger: Action Button
+Trigger: Parallel Process
 
 List of Event Commands:
+@>Change Map Settings:Fog = 'Velmora_048', 140, 255, Normal, 100, 0, 0
 @>
 
 #------------------------------------------------------------------------------
@@ -36319,6 +36324,27 @@ List of Event Commands:
 @>
 
 #------------------------------------------------------------------------------
+Event ID: 005
+Event Name: EV005
+(X,Y): (000,000)
+
+Page #1
+Conditions
+None
+
+Autonomous Movement
+Type: Fixed
+Speed: 3: Slow
+Freq: 3: Low
+Options Enabled
+Move Animation
+Trigger: Parallel Process
+
+List of Event Commands:
+@>Change Map Settings:Fog = 'Pflanze', 0, 255, Normal, 100, 0, 0
+@>
+
+#------------------------------------------------------------------------------
 Event ID: 006
 Event Name: Igamaro
 (X,Y): (010,013)
@@ -37055,6 +37081,27 @@ Move Animation
 Trigger: Action Button
 
 List of Event Commands:
+@>
+
+#------------------------------------------------------------------------------
+Event ID: 005
+Event Name: EV005
+(X,Y): (000,000)
+
+Page #1
+Conditions
+None
+
+Autonomous Movement
+Type: Fixed
+Speed: 3: Slow
+Freq: 3: Low
+Options Enabled
+Move Animation
+Trigger: Parallel Process
+
+List of Event Commands:
+@>Change Map Settings:Fog = 'Feuer', 0, 255, Normal, 100, 0, 0
 @>
 
 #------------------------------------------------------------------------------
@@ -38267,6 +38314,27 @@ Move Animation
 Trigger: Action Button
 
 List of Event Commands:
+@>
+
+#------------------------------------------------------------------------------
+Event ID: 005
+Event Name: EV005
+(X,Y): (000,000)
+
+Page #1
+Conditions
+None
+
+Autonomous Movement
+Type: Fixed
+Speed: 3: Slow
+Freq: 3: Low
+Options Enabled
+Move Animation
+Trigger: Parallel Process
+
+List of Event Commands:
+@>Change Map Settings:Fog = 'Wasser', 0, 255, Normal, 100, 0, 0
 @>
 
 #------------------------------------------------------------------------------
@@ -57021,7 +57089,7 @@ List of Event Commands:
   @>Wait for Move's Completion
   @>Text: \xn[Wolfgang]Genial!
   @>Text: \xn[Wolfgang]Das hast du dir verdient.
-  @>Script: pbReceiveItem(:POISONBARB)
+  @>Script: pbReceiveItem(:ABILITYSHIELD)
   @>Text: \xn[Wolfgang]Meine Sammlung ist fast vollständig.
   @>Text: \xn[Wolfgang]Ein letztes Mal werde ich dich nun um 
    :    : deine Unterstützung bitten.
@@ -114752,7 +114820,7 @@ List of Event Commands:
 @>Script: pbNoticePlayer(get_self)
 @>Play SE: 'BASCULIN', 80, 100
 @>Script: WildBattle.start(:BASCULIN_2, 54)
-@>Control Self Switch: A =ON
+@>Script: pbSetEventTime
 @>
 
 Page #2
@@ -114768,6 +114836,24 @@ Move Animation
 Trigger: Action Button
 
 List of Event Commands:
+@>
+
+Page #3
+Conditions
+Switch 0023: s:cooledDown?(86400) is ON
+Self Switch A is ON
+
+Autonomous Movement
+Type: Fixed
+Speed: 3: Slow
+Freq: 3: Low
+Options Enabled
+Move Animation
+Trigger: Autorun
+
+List of Event Commands:
+@>Control Self Switch: A =OFF
+@>Script: setTempSwitchOn("A")
 @>
 
 #------------------------------------------------------------------------------
@@ -114809,7 +114895,7 @@ List of Event Commands:
 @>Script: pbNoticePlayer(get_self)
 @>Play SE: 'BASCULIN', 80, 100
 @>Script: WildBattle.start(:BASCULIN_2, 51)
-@>Control Self Switch: A =ON
+@>Script: pbSetEventTime
 @>
 
 Page #2
@@ -114825,6 +114911,24 @@ Move Animation
 Trigger: Action Button
 
 List of Event Commands:
+@>
+
+Page #3
+Conditions
+Switch 0023: s:cooledDown?(86400) is ON
+Self Switch A is ON
+
+Autonomous Movement
+Type: Fixed
+Speed: 3: Slow
+Freq: 3: Low
+Options Enabled
+Move Animation
+Trigger: Autorun
+
+List of Event Commands:
+@>Control Self Switch: A =OFF
+@>Script: setTempSwitchOn("A")
 @>
 
 #------------------------------------------------------------------------------
@@ -114866,7 +114970,7 @@ List of Event Commands:
 @>Script: pbNoticePlayer(get_self)
 @>Play SE: 'BASCULIN', 80, 100
 @>Script: WildBattle.start(:BASCULIN_2, 53)
-@>Control Self Switch: A =ON
+@>Script: pbSetEventTime
 @>
 
 Page #2
@@ -114882,6 +114986,24 @@ Move Animation
 Trigger: Action Button
 
 List of Event Commands:
+@>
+
+Page #3
+Conditions
+Switch 0023: s:cooledDown?(86400) is ON
+Self Switch A is ON
+
+Autonomous Movement
+Type: Fixed
+Speed: 3: Slow
+Freq: 3: Low
+Options Enabled
+Move Animation
+Trigger: Autorun
+
+List of Event Commands:
+@>Control Self Switch: A =OFF
+@>Script: setTempSwitchOn("A")
 @>
 
 #------------------------------------------------------------------------------
@@ -114923,7 +115045,7 @@ List of Event Commands:
 @>Script: pbNoticePlayer(get_self)
 @>Play SE: 'BASCULIN', 80, 100
 @>Script: WildBattle.start(:BASCULIN_2, 52)
-@>Control Self Switch: A =ON
+@>Script: pbSetEventTime
 @>
 
 Page #2
@@ -114939,6 +115061,24 @@ Move Animation
 Trigger: Action Button
 
 List of Event Commands:
+@>
+
+Page #3
+Conditions
+Switch 0023: s:cooledDown?(86400) is ON
+Self Switch A is ON
+
+Autonomous Movement
+Type: Fixed
+Speed: 3: Slow
+Freq: 3: Low
+Options Enabled
+Move Animation
+Trigger: Autorun
+
+List of Event Commands:
+@>Control Self Switch: A =OFF
+@>Script: setTempSwitchOn("A")
 @>
 
 #------------------------------------------------------------------------------
@@ -114980,7 +115120,7 @@ List of Event Commands:
 @>Script: pbNoticePlayer(get_self)
 @>Play SE: 'BASCULIN', 80, 100
 @>Script: WildBattle.start(:BASCULIN_2, 53)
-@>Control Self Switch: A =ON
+@>Script: pbSetEventTime
 @>
 
 Page #2
@@ -114996,6 +115136,24 @@ Move Animation
 Trigger: Action Button
 
 List of Event Commands:
+@>
+
+Page #3
+Conditions
+Switch 0023: s:cooledDown?(86400) is ON
+Self Switch A is ON
+
+Autonomous Movement
+Type: Fixed
+Speed: 3: Slow
+Freq: 3: Low
+Options Enabled
+Move Animation
+Trigger: Autorun
+
+List of Event Commands:
+@>Control Self Switch: A =OFF
+@>Script: setTempSwitchOn("A")
 @>
 
 #------------------------------------------------------------------------------
@@ -115043,7 +115201,7 @@ List of Event Commands:
 @>Script: pkmn = Pokemon.new(:BASCULEGION, 60)
 :       : pkmn.makeMale
 :       : WildBattle.start(pkmn)
-@>Control Self Switch: A =ON
+@>Script: pbSetEventTime
 @>
 
 Page #2
@@ -115059,6 +115217,24 @@ Move Animation
 Trigger: Action Button
 
 List of Event Commands:
+@>
+
+Page #3
+Conditions
+Switch 0023: s:cooledDown?(86400) is ON
+Self Switch A is ON
+
+Autonomous Movement
+Type: Fixed
+Speed: 3: Slow
+Freq: 3: Low
+Options Enabled
+Move Animation
+Trigger: Autorun
+
+List of Event Commands:
+@>Control Self Switch: A =OFF
+@>Script: setTempSwitchOn("A")
 @>
 
 #------------------------------------------------------------------------------
@@ -115102,7 +115278,7 @@ List of Event Commands:
 @>Script: pbNoticePlayer(get_self)
 @>Play SE: 'BASCULIN', 80, 100
 @>Script: WildBattle.start(:BASCULIN_2, 51)
-@>Control Self Switch: A =ON
+@>Script: pbSetEventTime
 @>
 
 Page #2
@@ -115118,6 +115294,24 @@ Move Animation
 Trigger: Action Button
 
 List of Event Commands:
+@>
+
+Page #3
+Conditions
+Switch 0023: s:cooledDown?(86400) is ON
+Self Switch A is ON
+
+Autonomous Movement
+Type: Fixed
+Speed: 3: Slow
+Freq: 3: Low
+Options Enabled
+Move Animation
+Trigger: Autorun
+
+List of Event Commands:
+@>Control Self Switch: A =OFF
+@>Script: setTempSwitchOn("A")
 @>
 
 #------------------------------------------------------------------------------
@@ -115159,7 +115353,7 @@ List of Event Commands:
 @>Script: pbNoticePlayer(get_self)
 @>Play SE: 'BASCULIN', 80, 100
 @>Script: WildBattle.start(:BASCULIN_2, 52)
-@>Control Self Switch: A =ON
+@>Script: pbSetEventTime
 @>
 
 Page #2
@@ -115175,6 +115369,24 @@ Move Animation
 Trigger: Action Button
 
 List of Event Commands:
+@>
+
+Page #3
+Conditions
+Switch 0023: s:cooledDown?(86400) is ON
+Self Switch A is ON
+
+Autonomous Movement
+Type: Fixed
+Speed: 3: Slow
+Freq: 3: Low
+Options Enabled
+Move Animation
+Trigger: Autorun
+
+List of Event Commands:
+@>Control Self Switch: A =OFF
+@>Script: setTempSwitchOn("A")
 @>
 
 #------------------------------------------------------------------------------
@@ -115222,7 +115434,7 @@ List of Event Commands:
 @>Script: pkmn = Pokemon.new(:BASCULEGION, 60)
 :       : pkmn.makeMale
 :       : WildBattle.start(pkmn)
-@>Control Self Switch: A =ON
+@>Script: pbSetEventTime
 @>
 
 Page #2
@@ -115238,6 +115450,24 @@ Move Animation
 Trigger: Action Button
 
 List of Event Commands:
+@>
+
+Page #3
+Conditions
+Switch 0023: s:cooledDown?(86400) is ON
+Self Switch A is ON
+
+Autonomous Movement
+Type: Fixed
+Speed: 3: Slow
+Freq: 3: Low
+Options Enabled
+Move Animation
+Trigger: Autorun
+
+List of Event Commands:
+@>Control Self Switch: A =OFF
+@>Script: setTempSwitchOn("A")
 @>
 
 #------------------------------------------------------------------------------
@@ -116433,6 +116663,166 @@ List of Event Commands:
 Event ID: 046
 Event Name: EV046
 (X,Y): (033,035)
+
+Page #1
+Conditions
+None
+
+Graphic: apricot-pokemon-33
+
+Autonomous Movement
+Type: Fixed
+Speed: 1: Slowest
+Freq: 6: Highest
+Options Enabled
+Move Animation
+Stop Animation
+Direction Fix
+Trigger: Action Button
+
+List of Event Commands:
+@>Set Move Route: This event
+ :              : $>Graphic: "apricot-pokemon-33', 0, 4, 2
+@>Script: apricorns = [
+:       :   :REDAPRICORN,
+:       :   :YELLOWAPRICORN,
+:       :   :BLUEAPRICORN,
+:       :   :GREENAPRICORN,
+:       :   :PINKAPRICORN,
+:       :   :WHITEAPRICORN,
+:       :   :BLACKAPRICORN
+:       : ]
+@>Script: random_item = apricorns.sample
+:       : pbItemBall(random_item)
+@>Script: pbSetEventTime
+@>
+
+Page #2
+Conditions
+Self Switch A is ON
+
+Graphic: apricot-pokemon-33
+
+Autonomous Movement
+Type: Fixed
+Speed: 1: Slowest
+Freq: 5: Higher
+Options Enabled
+Move Animation
+Stop Animation
+Direction Fix
+Trigger: Action Button
+
+List of Event Commands:
+@>Text: Versuch es doch morgen nochmal.
+@>
+
+Page #3
+Conditions
+Switch 0023: s:cooledDown?(86400) is ON
+Self Switch A is ON
+
+Graphic: apricot-pokemon-33
+
+Autonomous Movement
+Type: Fixed
+Speed: 1: Slowest
+Freq: 5: Higher
+Options Enabled
+Move Animation
+Stop Animation
+Direction Fix
+Trigger: Autorun
+
+List of Event Commands:
+@>Control Self Switch: A =OFF
+@>Script: setTempSwitchOn("A")
+@>
+
+#------------------------------------------------------------------------------
+Event ID: 047
+Event Name: EV047
+(X,Y): (035,063)
+
+Page #1
+Conditions
+None
+
+Graphic: apricot-pokemon-33
+
+Autonomous Movement
+Type: Fixed
+Speed: 1: Slowest
+Freq: 6: Highest
+Options Enabled
+Move Animation
+Stop Animation
+Direction Fix
+Trigger: Action Button
+
+List of Event Commands:
+@>Set Move Route: This event
+ :              : $>Graphic: "apricot-pokemon-33', 0, 4, 2
+@>Script: apricorns = [
+:       :   :REDAPRICORN,
+:       :   :YELLOWAPRICORN,
+:       :   :BLUEAPRICORN,
+:       :   :GREENAPRICORN,
+:       :   :PINKAPRICORN,
+:       :   :WHITEAPRICORN,
+:       :   :BLACKAPRICORN
+:       : ]
+@>Script: random_item = apricorns.sample
+:       : pbItemBall(random_item)
+@>Script: pbSetEventTime
+@>
+
+Page #2
+Conditions
+Self Switch A is ON
+
+Graphic: apricot-pokemon-33
+
+Autonomous Movement
+Type: Fixed
+Speed: 1: Slowest
+Freq: 5: Higher
+Options Enabled
+Move Animation
+Stop Animation
+Direction Fix
+Trigger: Action Button
+
+List of Event Commands:
+@>Text: Versuch es doch morgen nochmal.
+@>
+
+Page #3
+Conditions
+Switch 0023: s:cooledDown?(86400) is ON
+Self Switch A is ON
+
+Graphic: apricot-pokemon-33
+
+Autonomous Movement
+Type: Fixed
+Speed: 1: Slowest
+Freq: 5: Higher
+Options Enabled
+Move Animation
+Stop Animation
+Direction Fix
+Trigger: Autorun
+
+List of Event Commands:
+@>Control Self Switch: A =OFF
+@>Script: setTempSwitchOn("A")
+@>
+
+#------------------------------------------------------------------------------
+Event ID: 048
+Event Name: EV048
+(X,Y): (038,032)
 
 Page #1
 Conditions
@@ -132041,6 +132431,166 @@ List of Event Commands:
  @>
 : Branch End
 @>Text: Komm' gerne wieder.
+@>
+
+#------------------------------------------------------------------------------
+Event ID: 050
+Event Name: EV050
+(X,Y): (081,074)
+
+Page #1
+Conditions
+None
+
+Graphic: apricot-pokemon-33
+
+Autonomous Movement
+Type: Fixed
+Speed: 1: Slowest
+Freq: 6: Highest
+Options Enabled
+Move Animation
+Stop Animation
+Direction Fix
+Trigger: Action Button
+
+List of Event Commands:
+@>Set Move Route: This event
+ :              : $>Graphic: "apricot-pokemon-33', 0, 4, 2
+@>Script: apricorns = [
+:       :   :REDAPRICORN,
+:       :   :YELLOWAPRICORN,
+:       :   :BLUEAPRICORN,
+:       :   :GREENAPRICORN,
+:       :   :PINKAPRICORN,
+:       :   :WHITEAPRICORN,
+:       :   :BLACKAPRICORN
+:       : ]
+@>Script: random_item = apricorns.sample
+:       : pbItemBall(random_item)
+@>Script: pbSetEventTime
+@>
+
+Page #2
+Conditions
+Self Switch A is ON
+
+Graphic: apricot-pokemon-33
+
+Autonomous Movement
+Type: Fixed
+Speed: 1: Slowest
+Freq: 5: Higher
+Options Enabled
+Move Animation
+Stop Animation
+Direction Fix
+Trigger: Action Button
+
+List of Event Commands:
+@>Text: Versuch es doch morgen nochmal.
+@>
+
+Page #3
+Conditions
+Switch 0023: s:cooledDown?(86400) is ON
+Self Switch A is ON
+
+Graphic: apricot-pokemon-33
+
+Autonomous Movement
+Type: Fixed
+Speed: 1: Slowest
+Freq: 5: Higher
+Options Enabled
+Move Animation
+Stop Animation
+Direction Fix
+Trigger: Autorun
+
+List of Event Commands:
+@>Control Self Switch: A =OFF
+@>Script: setTempSwitchOn("A")
+@>
+
+#------------------------------------------------------------------------------
+Event ID: 051
+Event Name: EV051
+(X,Y): (099,048)
+
+Page #1
+Conditions
+None
+
+Graphic: apricot-pokemon-33
+
+Autonomous Movement
+Type: Fixed
+Speed: 1: Slowest
+Freq: 6: Highest
+Options Enabled
+Move Animation
+Stop Animation
+Direction Fix
+Trigger: Action Button
+
+List of Event Commands:
+@>Set Move Route: This event
+ :              : $>Graphic: "apricot-pokemon-33', 0, 4, 2
+@>Script: apricorns = [
+:       :   :REDAPRICORN,
+:       :   :YELLOWAPRICORN,
+:       :   :BLUEAPRICORN,
+:       :   :GREENAPRICORN,
+:       :   :PINKAPRICORN,
+:       :   :WHITEAPRICORN,
+:       :   :BLACKAPRICORN
+:       : ]
+@>Script: random_item = apricorns.sample
+:       : pbItemBall(random_item)
+@>Script: pbSetEventTime
+@>
+
+Page #2
+Conditions
+Self Switch A is ON
+
+Graphic: apricot-pokemon-33
+
+Autonomous Movement
+Type: Fixed
+Speed: 1: Slowest
+Freq: 5: Higher
+Options Enabled
+Move Animation
+Stop Animation
+Direction Fix
+Trigger: Action Button
+
+List of Event Commands:
+@>Text: Versuch es doch morgen nochmal.
+@>
+
+Page #3
+Conditions
+Switch 0023: s:cooledDown?(86400) is ON
+Self Switch A is ON
+
+Graphic: apricot-pokemon-33
+
+Autonomous Movement
+Type: Fixed
+Speed: 1: Slowest
+Freq: 5: Higher
+Options Enabled
+Move Animation
+Stop Animation
+Direction Fix
+Trigger: Autorun
+
+List of Event Commands:
+@>Control Self Switch: A =OFF
+@>Script: setTempSwitchOn("A")
 @>
 
 #------------------------------------------------------------------------------
@@ -173732,7 +174282,7 @@ Map ID: 211
 Map Name: Solhaven
 Tileset: 030: Stadt 5 Innen
 Width: 25, Height: 25
-Auto-Change BGM: XY 039 Professor Sycamore_s Theme
+Auto-Change BGM: ORAS 076 Sootopolis City
 
 #------------------------------------------------------------------------------
 Event ID: 001
@@ -174107,7 +174657,7 @@ Map ID: 212
 Map Name: Solhaven
 Tileset: 030: Stadt 5 Innen
 Width: 25, Height: 25
-Auto-Change BGM: XY 039 Professor Sycamore_s Theme
+Auto-Change BGM: ORAS 076 Sootopolis City
 
 #------------------------------------------------------------------------------
 Event ID: 001
@@ -174331,7 +174881,7 @@ Map ID: 213
 Map Name: Solhaven
 Tileset: 030: Stadt 5 Innen
 Width: 25, Height: 25
-Auto-Change BGM: DPPT 040 Floaroma Town (Night)
+Auto-Change BGM: DPPT 040 Floaroma Town (Day)
 
 #------------------------------------------------------------------------------
 Event ID: 001
@@ -174601,7 +175151,7 @@ Map ID: 214
 Map Name: Solhaven
 Tileset: 030: Stadt 5 Innen
 Width: 25, Height: 25
-Auto-Change BGM: SM 093 Burnet_s Lab
+Auto-Change BGM: DPPT 040 Floaroma Town (Day)
 
 #------------------------------------------------------------------------------
 Event ID: 001
@@ -174827,7 +175377,7 @@ Map ID: 215
 Map Name: Solhaven
 Tileset: 030: Stadt 5 Innen
 Width: 25, Height: 25
-Auto-Change BGM: XY 039 Professor Sycamore_s Theme
+Auto-Change BGM: ORAS 076 Sootopolis City
 
 #------------------------------------------------------------------------------
 Event ID: 001
@@ -175282,7 +175832,7 @@ Map ID: 216
 Map Name: Solhaven
 Tileset: 030: Stadt 5 Innen
 Width: 25, Height: 25
-Auto-Change BGM: XY 039 Professor Sycamore_s Theme
+Auto-Change BGM: ORAS 076 Sootopolis City
 
 #------------------------------------------------------------------------------
 Event ID: 001
@@ -175441,7 +175991,7 @@ Map ID: 217
 Map Name: Solhaven
 Tileset: 030: Stadt 5 Innen
 Width: 25, Height: 25
-Auto-Change BGM: XY 039 Professor Sycamore_s Theme
+Auto-Change BGM: ORAS 076 Sootopolis City
 
 #------------------------------------------------------------------------------
 Event ID: 001
@@ -175882,7 +176432,7 @@ Map ID: 218
 Map Name: Solhaven
 Tileset: 030: Stadt 5 Innen
 Width: 25, Height: 25
-Auto-Change BGM: XY 039 Professor Sycamore_s Theme
+Auto-Change BGM: ORAS 076 Sootopolis City
 
 #------------------------------------------------------------------------------
 Event ID: 001
@@ -257644,6 +258194,84 @@ List of Event Commands:
 @>
 
 #------------------------------------------------------------------------------
+Event ID: 107
+Event Name: EV107
+(X,Y): (108,004)
+
+Page #1
+Conditions
+Switch 0393: Vogelfänger Aufnahme is ON
+
+Graphic: Items_eier
+
+Autonomous Movement
+Type: Fixed
+Speed: 3: Slow
+Freq: 3: Low
+Options Enabled
+Move Animation
+Direction Fix
+Always on Top
+Trigger: Action Button
+
+List of Event Commands:
+@>Text: Ein Washakwil Horst!
+@>Text: Möchtest du das Ei nehmen?
+@>Show Choices: Ja, Nein
+(When Cancel: Choice 2)
+: When [Ja]
+ @>Play SE: 'BRAVIARY', 65, 100
+ @>Wait: 40 frame(s)
+ @>Play SE: 'BRAVIARY', 100, 100
+ @>Wait: 20 frame(s)
+ @>Set Event Location: [Washakwil],(117,006)
+ @>Set Move Route: [Washakwil]
+  :              : $>Always on Top ON
+  :              : $>Move Left
+  :              : $>Move Left
+  :              : $>Move Left
+  :              : $>Move Left
+  :              : $>Move Left
+  :              : $>Move Left
+  :              : $>Move Left
+  :              : $>Move Left
+ @>Wait: 10 frame(s)
+ @>Script: setBattleRule("cannotRun")
+ :       : setBattleRule("databoxStyle", 
+ :       : [:Basic, "{1}"])
+ :       : pkmn = Pokemon.new(:BRAVIARY, 76)
+ :       : pkmn.makeMale
+ :       : pkmn.calc_stats
+ :       : WildBattle.start(pkmn)
+ @>Set Event Location: [Washakwil],(097,000)
+ @>Wait: 8 frame(s)
+ @>Play ME: 'Egg get', 90, 100
+ @>Text: Du nimmst das Ei.
+ @>Control Switches: [0394: Washakwil Ei] = ON
+ @>Script: pbSetSelfSwitch(120,"A",true)
+ @>Control Self Switch: A =ON
+ @>
+: When [Nein]
+ @>
+: Branch End
+@>
+
+Page #2
+Conditions
+Self Switch A is ON
+
+Autonomous Movement
+Type: Fixed
+Speed: 3: Slow
+Freq: 3: Low
+Options Enabled
+Move Animation
+Trigger: Action Button
+
+List of Event Commands:
+@>
+
+#------------------------------------------------------------------------------
 Event ID: 108
 Event Name: EV108
 (X,Y): (050,024)
@@ -257941,6 +258569,46 @@ Autonomous Movement
 Type: Random
 Speed: 1: Slowest
 Freq: 1: Lowest
+Options Enabled
+Move Animation
+Trigger: Action Button
+
+List of Event Commands:
+@>
+
+#------------------------------------------------------------------------------
+Event ID: 120
+Event Name: Washakwil
+(X,Y): (097,000)
+
+Page #1
+Conditions
+None
+
+Graphic: BRAVIARY_2
+
+Autonomous Movement
+Type: Fixed
+Speed: 4: Fast
+Freq: 6: Highest
+Options Enabled
+Move Animation
+Stop Animation
+Through
+Always on Top
+Trigger: Action Button
+
+List of Event Commands:
+@>
+
+Page #2
+Conditions
+Self Switch A is ON
+
+Autonomous Movement
+Type: Fixed
+Speed: 3: Slow
+Freq: 3: Low
 Options Enabled
 Move Animation
 Trigger: Action Button
@@ -372641,6 +373309,217 @@ List of Event Commands:
 @>
 
 #------------------------------------------------------------------------------
+Event ID: 010
+Event Name: Quest 1
+(X,Y): (019,023)
+
+Page #1
+Conditions
+None
+
+Graphic: NPC_Mann 11
+
+Autonomous Movement
+Type: Fixed
+Speed: 3: Slow
+Freq: 3: Low
+Options Enabled
+Move Animation
+Trigger: Action Button
+
+List of Event Commands:
+@>Text: \xn[Vogelfänger Flynn]Hörst du das?
+@>Text: \xn[Vogelfänger Flynn]Das ist das Lied des Windes 
+ :    : und das Schlagen mächtiger Schwingen.
+@>Text: \xn[Vogelfänger Flynn]Du hast das Nest des 
+ :    : Vogelfänger-Clubs betreten.
+@>Text: \xn[Vogelfänger Flynn]Möchtest du etwa Mitglied 
+ :    : in diesem Club werden?
+@>Text: \xn[Vogelfänger Flynn]Ich sehe du hast bereits 6 
+ :    : Orden, doch schau dir deine Schuhe an.
+@>Text: \xn[Vogelfänger Flynn]Voller Dreck von den Straßen.
+@>Show Animation: This event, [Happy bubble]
+@>Wait: 24 frame(s)
+@>Text: \xn[Vogelfänger Flynn]Ein echter Vogelfänger lebt in 
+ :    : den Wolken.
+@>Text: \xn[Vogelfänger Flynn]Beweis mir, dass du bereits 
+ :    : flügge bist.
+@>Text: \xn[Vogelfänger Flynn]Bringe mir ein Botogel und wir 
+ :    : schauen gemeinsam, was es in seinem Beutel 
+ :    : versteckt.
+@>Script: activateQuest(:Quest62)
+@>Script: pbSetSelfSwitch(11,"A",true)
+@>Wait: 8 frame(s)
+@>Set Move Route: This event
+ :              : $>Turn Down
+@>Control Self Switch: A =ON
+@>
+
+Page #2
+Conditions
+Self Switch A is ON
+
+Graphic: NPC_Mann 11
+
+Autonomous Movement
+Type: Fixed
+Speed: 3: Slow
+Freq: 3: Low
+Options Enabled
+Move Animation
+Trigger: Action Button
+
+List of Event Commands:
+@>Text: \xn[Vogelfänger Flynn]Wenn du ein wahrer 
+ :    : Vogelfänger werden möchtest,...
+@>Text: \xn[Vogelfänger Flynn]musst du bereit sein in die 
+ :    : Lüfte aufzusteigen.
+@>Text: \xn[Vogelfänger Flynn]Bringe mir ein Botogel und 
+ :    : zeige, dass du flügge geworden bist.
+@>Conditional Branch: Script: $player.has_species?(:DELIBIRD)
+ @>Show Animation: This event, [Exclaim bubble]
+ @>Wait: 12 frame(s)
+ @>Text: \xn[Vogelfänger Flynn]Ich habe es dir bereits 
+  :    : angesehen, dass du wirklich Mitglied in diesem Club 
+  :    : werden willst.
+ @>Text: \xn[Vogelfänger Flynn]Dann lass uns gemeinsam in 
+  :    : seinen Beutel schauen.
+ @>Text: \xn[Vogelfänger Flynn]Oh! Was haben wir denn da?
+ @>Script: pbReceiveItem(:CHOICESCARF)
+ @>Text: \xn[Vogelfänger Flynn]Du hast bewiesen, dass du es 
+  :    : Wert bist ein Teil des Vogelfänger-Clubs zu sein.
+ @>Text: \xn[Vogelfänger Flynn]Herzlichen Glückwunsch.
+ @>Show Animation: This event, [Heart Emote]
+ @>Wait: 20 frame(s)
+ @>Script: completeQuest(:Quest62)
+ @>Script: pbSetSelfSwitch(11,"B",true)
+ @>Text: \xn[Vogelfänger Flynn]Du kannst im Rang aufsteigen, 
+  :    : solltest du in der Lage sein,...
+ @>Text: \xn[Vogelfänger Flynn]die Aufgaben unser 
+  :    : Clubmitglieder zu erfüllen.
+ @>Text: \xn[Vogelfänger Flynn]Du erhälst eine Medaille für 
+  :    : jeden unserer Ränge.
+ @>Text: \xn[Vogelfänger Flynn]Ich wünsche dir viel Erfolg und 
+  :    : immer einen guten Flug.
+ @>Control Switches: [0393: Vogelfänger Aufnahme] = ON
+ @>Wait: 8 frame(s)
+ @>Set Move Route: This event
+  :              : $>Turn Down
+ @>Control Self Switch: B =ON
+ @>
+: Else
+ @>Text: \xn[Vogelfänger Flynn]Nimm dir ruhig Zeit für deinen 
+  :    : Absprung.
+ @>Wait: 8 frame(s)
+ @>Set Move Route: This event
+  :              : $>Turn Down
+ @>
+: Branch End
+@>
+
+Page #3
+Conditions
+Self Switch B is ON
+
+Graphic: NPC_Mann 11
+
+Autonomous Movement
+Type: Fixed
+Speed: 3: Slow
+Freq: 3: Low
+Options Enabled
+Move Animation
+Trigger: Action Button
+
+List of Event Commands:
+@>Text: \xn[Vogelfänger Flynn]Als wahrer Vogelfänger geht 
+ :    : es nicht nur darum die schönsten Wind-Pokémon zu 
+ :    : fangen.
+@>Text: \xn[Vogelfänger Flynn]Natürlich ist man immer auf der 
+ :    : Suche nach besonderen Formen und Farb-Varianten.
+@>Text: \xn[Vogelfänger Flynn]Doch man muss sie auch 
+ :    : verstehen.
+@>Text: \xn[Vogelfänger Flynn]Wo leben sie? 
+@>Text: \xn[Vogelfänger Flynn]Sind sie eher im Wald, an 
+ :    : Stränden oder gar in den eisigen Gebieten zu finden?
+@>Text: \xn[Vogelfänger Flynn]Wie verhalten sie sich?
+@>Text: \xn[Vogelfänger Flynn]Sind sie eher Tag- oder doch 
+ :    : Nachtaktiv?
+@>Text: \xn[Vogelfänger Flynn]Welchen Ruf haben sie?
+@>Text: \xn[Vogelfänger Flynn]Die meisten Vögel hört man 
+ :    : erst, bevor man sie sieht.
+@>Text: \xn[Vogelfänger Flynn]Bewege dich vorsichtig, um 
+ :    : sie nicht zu verscheuchen.
+@>Text: \xn[Vogelfänger Flynn]Und mit viel Glück findet man 
+ :    : sie dann.
+@>Wait: 8 frame(s)
+@>Set Move Route: This event
+ :              : $>Turn Down
+@>
+
+#------------------------------------------------------------------------------
+Event ID: 011
+Event Name: EV011
+(X,Y): (019,022)
+
+Page #1
+Conditions
+None
+
+Graphic: Quest Symbol
+
+Autonomous Movement
+Type: Fixed
+Speed: 2: Slower
+Freq: 6: Highest
+Options Enabled
+Move Animation
+Stop Animation
+Direction Fix
+Through
+Always on Top
+Trigger: Action Button
+
+List of Event Commands:
+@>
+
+Page #2
+Conditions
+Self Switch A is ON
+
+Graphic: Quest Symbol Solved
+
+Autonomous Movement
+Type: Fixed
+Speed: 2: Slower
+Freq: 6: Highest
+Options Enabled
+Move Animation
+Stop Animation
+Direction Fix
+Through
+Always on Top
+Trigger: Action Button
+
+List of Event Commands:
+@>
+
+Page #3
+Conditions
+Self Switch B is ON
+
+Autonomous Movement
+Type: Fixed
+Speed: 3: Slow
+Freq: 3: Low
+Options Enabled
+Move Animation
+Trigger: Action Button
+
+List of Event Commands:
+@>
+
+#------------------------------------------------------------------------------
 
 #==============================================================================
 Map ID: 459
@@ -372947,6 +373826,542 @@ List of Event Commands:
 : Else
  @>
 : Branch End
+@>
+
+#------------------------------------------------------------------------------
+Event ID: 008
+Event Name: Quest 1
+(X,Y): (030,025)
+
+Page #1
+Conditions
+None
+
+Graphic: trainer_BIRDKEEPER_M
+
+Autonomous Movement
+Type: Fixed
+Speed: 3: Slow
+Freq: 3: Low
+Options Enabled
+Move Animation
+Trigger: Action Button
+
+List of Event Commands:
+@>Text: \xn[Vogelfänger Anan]Ich habe soviele coole 
+ :    : Dinge erlebt seitdem ich Mitglied des 
+ :    : Vogelfänger-Clubs bin.
+@>Text: \xn[Vogelfänger Anan]Wenn du Lust auf Abenteuer 
+ :    : hast solltest du uns unbedingt beitreten.
+@>Wait: 8 frame(s)
+@>Set Move Route: This event
+ :              : $>Turn Left
+@>
+
+Page #2
+Conditions
+Switch 0393: Vogelfänger Aufnahme is ON
+
+Graphic: trainer_BIRDKEEPER_M
+
+Autonomous Movement
+Type: Fixed
+Speed: 3: Slow
+Freq: 3: Low
+Options Enabled
+Move Animation
+Trigger: Action Button
+
+List of Event Commands:
+@>Text: \xn[Vogelfänger Anan]Du bist jetzt also auch ein 
+ :    : Mitglied des Vogelfänger-Clubs.
+@>Show Animation: This event, [Happy bubble]
+@>Wait: 24 frame(s)
+@>Text: \xn[Vogelfänger Anan]Könntest du mir dann bitte 
+ :    : einen Gefallen tun.
+@>Text: \xn[Vogelfänger Anan]Auf Route 9 befindet sich ein 
+ :    : Washakwil-Horst.
+@>Text: \xn[Vogelfänger Anan]Aber jedesmal ,wenn ich da 
+ :    : bin, ist es leer.
+@>Text: \xn[Vogelfänger Anan]Würdest du für mich 
+ :    : nachschauen, ob dort mittlerweile ein Ei liegt?
+@>Text: \xn[Vogelfänger Anan]Und falls ja, würdest du mir 
+ :    : dieses bitte mitbringen?
+@>Text: \xn[Vogelfänger Anan]Ich würde dir auch eine 
+ :    : Belohnung geben.
+@>Script: activateQuest(:Quest63)
+@>Script: pbSetSelfSwitch(9,"A",true)
+@>Wait: 8 frame(s)
+@>Set Move Route: This event
+ :              : $>Turn Left
+@>Control Self Switch: A =ON
+@>
+
+Page #3
+Conditions
+Self Switch A is ON
+
+Graphic: trainer_BIRDKEEPER_M
+
+Autonomous Movement
+Type: Fixed
+Speed: 3: Slow
+Freq: 3: Low
+Options Enabled
+Move Animation
+Trigger: Action Button
+
+List of Event Commands:
+@>Text: \xn[Vogelfänger Anan]Wusstest du, dass die 
+ :    : männlichen Washakwil auf die Eier aufpassen?
+@>Text: \xn[Vogelfänger Anan]Apropos, hast du schon im 
+ :    : Horst nachgeschaut?
+@>Text: \xn[Vogelfänger Anan]Es muss unbedigt das Ei 
+ :    : eines wilden Washakwil sein.
+@>Text: \xn[Vogelfänger Anan]Ich gehe da einer Theorie nach 
+ :    : und deswegen darf es kein Ei aus einer Pension 
+ :    : sein.
+@>Conditional Branch: Switch [0394: Washakwil Ei] == ON
+ @>Text: \xn[Vogelfänger Anan]Wow!
+ @>Show Animation: This event, [Exclaim bubble]
+ @>Wait: 12 frame(s)
+ @>Text: \xn[Vogelfänger Anan]Da war wirklich ein Ei?
+ @>Text: \xn[Vogelfänger Anan]Ach währe ich doch selbst 
+  :    : nachschauen gewesen.
+ @>Text: \xn[Vogelfänger Anan]Trotzdem vielen Dank, dass du 
+  :    : mir das Ei besorgt hast.
+ @>Script: completeQuest(:Quest63)
+ @>Script: pbSetSelfSwitch(9,"B",true)
+ @>Text: \xn[Vogelfänger Anan]Jetzt kann ich endlich meiner 
+  :    : Theorie nachgehen.
+ @>Show Animation: This event, [Heart Emote]
+ @>Wait: 20 frame(s)
+ @>Text: \xn[Vogelfänger Anan]Ich habe dir eine Belohnung 
+  :    : versprochen und...
+ @>Text: \xn[Vogelfänger Anan]diese sollst du auch erhalten.
+ @>Script: pbReceiveItem(:UTILITYUMBRELLA)
+ @>Control Variables: [0130: Vogelfänger Mitglied] += 1
+ @>Wait: 8 frame(s)
+ @>Set Move Route: This event
+  :              : $>Turn Left
+ @>Control Self Switch: B =ON
+ @>
+: Else
+ @>Text: \xn[Vogelfänger Anan]Diese Vögel brüten nur sehr 
+  :    : selten.
+ @>Text: \xn[Vogelfänger Anan]Du musst den richtigen Moment 
+  :    : abpassen.
+ @>Wait: 8 frame(s)
+ @>Set Move Route: This event
+  :              : $>Turn Left
+ @>
+: Branch End
+@>
+
+Page #4
+Conditions
+Self Switch B is ON
+
+Graphic: trainer_BIRDKEEPER_M
+
+Autonomous Movement
+Type: Fixed
+Speed: 3: Slow
+Freq: 3: Low
+Options Enabled
+Move Animation
+Trigger: Action Button
+
+List of Event Commands:
+@>Text: \xn[Vogelfänger Anan]Meiner Theorie nach sind 
+ :    : Pokémon aus wilden Eiern stärker.
+@>Text: \xn[Vogelfänger Anan]Ich muss jetzt nur noch das Ei 
+ :    : zum Schlüpfen bringen.
+@>Text: \xn[Vogelfänger Anan]Am besten setze ich mich 
+ :    : drauf, um es schön warm zu halten.
+@>Wait: 8 frame(s)
+@>Set Move Route: This event
+ :              : $>Turn Left
+@>
+
+#------------------------------------------------------------------------------
+Event ID: 009
+Event Name: EV009
+(X,Y): (030,024)
+
+Page #1
+Conditions
+Switch 0393: Vogelfänger Aufnahme is ON
+
+Graphic: Quest Symbol
+
+Autonomous Movement
+Type: Fixed
+Speed: 2: Slower
+Freq: 6: Highest
+Options Enabled
+Move Animation
+Stop Animation
+Direction Fix
+Through
+Always on Top
+Trigger: Action Button
+
+List of Event Commands:
+@>
+
+Page #2
+Conditions
+Self Switch A is ON
+
+Graphic: Quest Symbol Solved
+
+Autonomous Movement
+Type: Fixed
+Speed: 2: Slower
+Freq: 6: Highest
+Options Enabled
+Move Animation
+Stop Animation
+Direction Fix
+Through
+Always on Top
+Trigger: Action Button
+
+List of Event Commands:
+@>
+
+Page #3
+Conditions
+Self Switch B is ON
+
+Autonomous Movement
+Type: Fixed
+Speed: 3: Slow
+Freq: 3: Low
+Options Enabled
+Move Animation
+Trigger: Action Button
+
+List of Event Commands:
+@>
+
+#------------------------------------------------------------------------------
+Event ID: 010
+Event Name: Quest 2
+(X,Y): (008,015)
+
+Page #1
+Conditions
+None
+
+Graphic: trainer_BIRDKEEPER_F
+
+Autonomous Movement
+Type: Fixed
+Speed: 3: Slow
+Freq: 3: Low
+Options Enabled
+Move Animation
+Trigger: Action Button
+
+List of Event Commands:
+@>Text: \xn[Vogelfängerin Miku]Ich liebe den Vogelfänger-
+ :    : Club.
+@>Text: \xn[Vogelfängerin Miku]Hier kann ich meine Pokémon 
+ :    : frei herum fliegen lassen ohne, dass sie wegfliegen 
+ :    : können.
+@>Text: \xn[Vogelfängerin Miku]Allerdings kacken die hier 
+ :    : alles voll.
+@>Wait: 8 frame(s)
+@>Set Move Route: This event
+ :              : $>Turn Right
+@>
+
+Page #2
+Conditions
+Variable 0130: Vogelfänger Mitglied is 1 or above
+
+Graphic: trainer_BIRDKEEPER_F
+
+Autonomous Movement
+Type: Fixed
+Speed: 3: Slow
+Freq: 3: Low
+Options Enabled
+Move Animation
+Trigger: Action Button
+
+List of Event Commands:
+@>Text: \xn[Vogelfängerin Miku]Ich schmücke mich und meine 
+ :    : Pokémon gerne.
+@>Text: \xn[Vogelfängerin Miku]Aber immer das gleiche zu 
+ :    : tragen ist halt auch langweilig.
+@>Text: \xn[Vogelfängerin Miku]Deswegen suche ich immer 
+ :    : neue Schmuckstücke.
+@>Text: \xn[Vogelfängerin Miku]Ich habe gestern erst meinem 
+ :    : Flaminkno mit einer wunderbaren Feder geschmückt.
+@>Text: \xn[Vogelfängerin Miku]Leider hat es diese beim 
+ :    : Fliegen durch einen Sandstrum verloren.
+@>Text: \xn[Vogelfängerin Miku]Sie müsste irgendwo auf 
+ :    : Route 11 zu finden sein.
+@>Text: \xn[Vogelfängerin Miku]Würdest du diese für mich 
+ :    : suchen?
+@>Show Choices: Ja, Nein
+(When Cancel: Choice 2)
+: When [Ja]
+ @>Script: activateQuest(:Quest64)
+ @>Script: pbSetSelfSwitch(11,"A",true)
+ @>Text: \xn[Vogelfängerin Miku]Supi, das ist ganz lieb von dir.
+ @>Show Animation: This event, [Heart Emote]
+ @>Wait: 20 frame(s)
+ @>Set Move Route: This event
+  :              : $>Turn Right
+ @>Control Self Switch: A =ON
+ @>
+: When [Nein]
+ @>Show Animation: This event, [Sad bubble]
+ @>Wait: 20 frame(s)
+ @>Set Move Route: This event
+  :              : $>Turn Right
+ @>
+: Branch End
+@>
+
+Page #3
+Conditions
+Self Switch A is ON
+
+Graphic: trainer_BIRDKEEPER_F
+
+Autonomous Movement
+Type: Fixed
+Speed: 3: Slow
+Freq: 3: Low
+Options Enabled
+Move Animation
+Trigger: Action Button
+
+List of Event Commands:
+@>Text: \xn[Vogelfängerin Miku]Mein Flaminkno ist schon ganz 
+ :    : nervös.
+@>Text: \xn[Vogelfängerin Miku]Hast du die Feder gefunden?
+@>Conditional Branch: Switch [0395: Feder gefunden] == ON
+ @>Text: \xn[Vogelfängerin Miku]Supi, du bist der Beste!
+ @>Show Animation: This event, [Exclaim bubble]
+ @>Wait: 12 frame(s)
+ @>Text: \xn[Vogelfängerin Miku]Vielen, vielen Dank.
+ @>Text: \xn[Vogelfängerin Miku]Das bedeutet mir echt viel.
+ @>Text: \xn[Vogelfängerin Miku]Ich wusste du würdest es 
+  :    : schaffen.
+ @>Script: completeQuest(:Quest64)
+ @>Script: pbSetSelfSwitch(11,"B",true)
+ @>Text: \xn[Vogelfängerin Miku]Jetzt muss ich nur noch 
+  :    : Flaminkno einfangen.
+ @>Text: \xn[Vogelfängerin Miku]Manchmal muss man sein 
+  :    : Pokémon zwingen damit es schön aussieht.
+ @>Text: \xn[Vogelfängerin Miku]Vielleicht kannst du das einem 
+  :    : deiner Pokémon geben...
+ @>Text: \xn[Vogelfängerin Miku]damit es noch schöner wird.
+ @>Script: pbReceiveItem(:CORVIKNIGHTITE)
+ @>Control Variables: [0130: Vogelfänger Mitglied] += 1
+ @>Wait: 8 frame(s)
+ @>Set Move Route: This event
+  :              : $>Move Right
+ @>Control Self Switch: B =ON
+ @>
+: Else
+ @>Text: \xn[Vogelfängerin Miku]Och, menno.
+ @>Show Animation: This event, [Sad bubble]
+ @>Wait: 20 frame(s)
+ @>Set Move Route: This event
+  :              : $>Turn Right
+ @>
+: Branch End
+@>
+
+Page #4
+Conditions
+Self Switch B is ON
+
+Graphic: trainer_BIRDKEEPER_F
+
+Autonomous Movement
+Type: Fixed
+Speed: 3: Slow
+Freq: 3: Low
+Options Enabled
+Move Animation
+Trigger: Action Button
+
+List of Event Commands:
+@>Text: \xn[Vogelfängerin Miku]Und?
+@>Text: \xn[Vogelfängerin Miku]Hast du mein Geschenk 
+ :    : schon ausprobiert?
+@>Text: \xn[Vogelfängerin Miku]Damit verändert Krarmor 
+ :    : seine Form und wird noch schöner.
+@>Wait: 8 frame(s)
+@>Set Move Route: This event
+ :              : $>Turn Right
+@>
+
+#------------------------------------------------------------------------------
+Event ID: 011
+Event Name: EV011
+(X,Y): (008,014)
+
+Page #1
+Conditions
+Variable 0130: Vogelfänger Mitglied is 1 or above
+
+Graphic: Quest Symbol
+
+Autonomous Movement
+Type: Fixed
+Speed: 2: Slower
+Freq: 6: Highest
+Options Enabled
+Move Animation
+Stop Animation
+Direction Fix
+Through
+Always on Top
+Trigger: Action Button
+
+List of Event Commands:
+@>
+
+Page #2
+Conditions
+Self Switch A is ON
+
+Graphic: Quest Symbol Solved
+
+Autonomous Movement
+Type: Fixed
+Speed: 2: Slower
+Freq: 6: Highest
+Options Enabled
+Move Animation
+Stop Animation
+Direction Fix
+Through
+Always on Top
+Trigger: Action Button
+
+List of Event Commands:
+@>
+
+Page #3
+Conditions
+Self Switch B is ON
+
+Autonomous Movement
+Type: Fixed
+Speed: 3: Slow
+Freq: 3: Low
+Options Enabled
+Move Animation
+Trigger: Action Button
+
+List of Event Commands:
+@>
+
+#------------------------------------------------------------------------------
+Event ID: 012
+Event Name: EV012
+(X,Y): (008,017)
+
+Page #1
+Conditions
+None
+
+Graphic: FLAMIGO
+
+Autonomous Movement
+Type: Custom
+Custom Move Route:
+(Repeat Action)
+$>Move Right
+$>Move Right
+$>Move Right
+$>Move Right
+$>Move Right
+$>Move Right
+$>Move Right
+$>Move Right
+$>Move Right
+$>Wait: 4 frame(s)
+$>Turn Down
+$>Wait: 4 frame(s)
+$>Turn Left
+$>Wait: 4 frame(s)
+$>Turn Up
+$>Wait: 4 frame(s)
+$>Move Up
+$>Move Up
+$>Move Up
+$>Move Up
+$>Move Up
+$>Move Up
+$>Move Up
+$>Move Up
+$>Wait: 4 frame(s)
+$>Turn Right
+$>Wait: 4 frame(s)
+$>Turn Down
+$>Wait: 4 frame(s)
+$>Turn Left
+$>Wait: 4 frame(s)
+$>Move Left
+$>Move Left
+$>Wait: 4 frame(s)
+$>Turn Up
+$>Wait: 4 frame(s)
+$>Turn Right
+$>Wait: 4 frame(s)
+$>Turn Down
+$>Wait: 4 frame(s)
+$>Move Down
+$>Move Down
+$>Move Down
+$>Move Down
+$>Move Down
+$>Move Down
+$>Move Down
+$>Move Down
+$>Wait: 4 frame(s)
+$>Turn Right
+$>Wait: 4 frame(s)
+$>Turn Up
+$>Wait: 4 frame(s)
+$>Turn Left
+$>Wait: 4 frame(s)
+$>Move Left
+$>Move Left
+$>Move Left
+$>Move Left
+$>Move Left
+$>Move Left
+$>Move Left
+$>Wait: 4 frame(s)
+$>Turn Up
+$>Wait: 40 frame(s)
+$>Turn Left
+$>Wait: 4 frame(s)
+$>Turn Down
+$>Wait: 4 frame(s)
+$>Turn Right
+$>Wait: 4 frame(s)
+
+Speed: 3: Slow
+Freq: 6: Highest
+Options Enabled
+Move Animation
+Trigger: Action Button
+
+List of Event Commands:
+@>Play SE: 'FLAMIGO', 100, 100
 @>
 
 #------------------------------------------------------------------------------
@@ -392087,6 +393502,26 @@ List of Event Commands:
 @>
 
 #------------------------------------------------------------------------------
+Event ID: 009
+Event Name: Block
+(X,Y): (002,030)
+
+Page #1
+Conditions
+None
+
+Autonomous Movement
+Type: Fixed
+Speed: 3: Slow
+Freq: 3: Low
+Options Enabled
+Move Animation
+Trigger: Action Button
+
+List of Event Commands:
+@>
+
+#------------------------------------------------------------------------------
 
 #==============================================================================
 Map ID: 488
@@ -392230,6 +393665,62 @@ List of Event Commands:
 @>
 
 #------------------------------------------------------------------------------
+Event ID: 004
+Event Name: EV004
+(X,Y): (012,033)
+
+Page #1
+Conditions
+None
+
+Autonomous Movement
+Type: Fixed
+Speed: 3: Slow
+Freq: 3: Low
+Options Enabled
+Move Animation
+Trigger: Player Touch
+
+List of Event Commands:
+@>Script: Followers.hide_followers
+@>Play SE: 'Player jump', 100, 100
+@>Set Move Route: Player
+ :              : $>Through ON
+ :              : $>Jump: +0,-3
+ :              : $>Through OFF
+@>Wait: 15 frame(s)
+@>Script: Followers.put_followers_on_player
+@>
+
+#------------------------------------------------------------------------------
+Event ID: 005
+Event Name: EV005
+(X,Y): (012,032)
+
+Page #1
+Conditions
+None
+
+Autonomous Movement
+Type: Fixed
+Speed: 3: Slow
+Freq: 3: Low
+Options Enabled
+Move Animation
+Trigger: Player Touch
+
+List of Event Commands:
+@>Script: Followers.hide_followers
+@>Play SE: 'Player jump', 100, 100
+@>Set Move Route: Player
+ :              : $>Through ON
+ :              : $>Jump: +0,+3
+ :              : $>Through OFF
+@>Wait: 15 frame(s)
+@>Script: Followers.put_followers_on_player
+@>
+
+#------------------------------------------------------------------------------
 
 #==============================================================================
 Map ID: 489
@@ -392299,10 +393790,15 @@ Move Animation
 Trigger: Action Button
 
 List of Event Commands:
-@>Play ME: 'Key item get', 100, 100
-@>Text: Du hast das Zeichen des Wassers gefunden.
-@>Control Variables: [0054: Hunde] += 1
-@>Control Self Switch: A =ON
+@>Conditional Branch: Player is facing Up
+ @>Play ME: 'Key item get', 100, 100
+ @>Text: Du hast das Zeichen des Wassers gefunden.
+ @>Control Variables: [0054: Hunde] += 1
+ @>Control Self Switch: A =ON
+ @>
+: Else
+ @>
+: Branch End
 @>
 
 Page #2
@@ -392338,23 +393834,89 @@ Move Animation
 Trigger: Player Touch
 
 List of Event Commands:
-@>Conditional Branch: Variable [0054: Hunde] >= 3
- @>Play SE: 'PRSFX- Magnet Rise', 100, 100
- @>Change Screen Color Tone: (-255,-255,-255,0), @6
- @>Wait: 8 frame(s)
- @>Transfer Player:[486: Turm der Wiederkehr], (017,020), Up, No Fade
- @>Script: Followers.hide_followers
- @>Change Screen Color Tone: (0,0,0,0), @6
- @>Wait: 6 frame(s)
- @>Script: Followers.put_followers_on_player
- @>
-: Else
- @>Text: Du hast das Zeichen des Wassers noch nicht.
- @>Set Move Route: Player
-  :              : $>Move Down
- @>Wait: 6 frame(s)
- @>
-: Branch End
+@>Text: Du hast noch nicht alle Zeichen gesammelt.
+@>Set Move Route: Player
+ :              : $>Move Down
+@>Wait: 6 frame(s)
+@>
+
+Page #2
+Conditions
+Variable 0054: Hunde is 3 or above
+
+Autonomous Movement
+Type: Fixed
+Speed: 3: Slow
+Freq: 3: Low
+Options Enabled
+Move Animation
+Trigger: Player Touch
+
+List of Event Commands:
+@>Play SE: 'PRSFX- Magnet Rise', 100, 100
+@>Change Screen Color Tone: (-255,-255,-255,0), @6
+@>Wait: 8 frame(s)
+@>Transfer Player:[486: Turm der Wiederkehr], (017,020), Up, No Fade
+@>Script: Followers.hide_followers
+@>Change Screen Color Tone: (0,0,0,0), @6
+@>Wait: 6 frame(s)
+@>Script: Followers.put_followers_on_player
+@>
+
+#------------------------------------------------------------------------------
+Event ID: 004
+Event Name: EV004
+(X,Y): (021,037)
+
+Page #1
+Conditions
+None
+
+Autonomous Movement
+Type: Fixed
+Speed: 3: Slow
+Freq: 3: Low
+Options Enabled
+Move Animation
+Trigger: Player Touch
+
+List of Event Commands:
+@>Script: Followers.hide_followers
+@>Play SE: 'Player jump', 100, 100
+@>Set Move Route: Player
+ :              : $>Through ON
+ :              : $>Jump: +0,-3
+ :              : $>Through OFF
+@>Wait: 15 frame(s)
+@>Script: Followers.put_followers_on_player
+@>
+
+#------------------------------------------------------------------------------
+Event ID: 005
+Event Name: EV005
+(X,Y): (021,036)
+
+Page #1
+Conditions
+None
+
+Autonomous Movement
+Type: Fixed
+Speed: 3: Slow
+Freq: 3: Low
+Options Enabled
+Move Animation
+Trigger: Player Touch
+
+List of Event Commands:
+@>Script: Followers.hide_followers
+@>Play SE: 'Player jump', 100, 100
+@>Set Move Route: Player
+ :              : $>Through ON
+ :              : $>Jump: +0,+3
+ :              : $>Through OFF
+@>Wait: 15 frame(s)
+@>Script: Followers.put_followers_on_player
 @>
 
 #------------------------------------------------------------------------------
@@ -421719,6 +423281,66 @@ List of Event Commands:
 @>
 
 #------------------------------------------------------------------------------
+Event ID: 086
+Event Name: EV086
+(X,Y): (011,041)
+
+Page #1
+Conditions
+Variable 0130: Vogelfänger Mitglied is 1 or above
+
+Graphic: Items92
+
+Autonomous Movement
+Type: Fixed
+Speed: 3: Slow
+Freq: 3: Low
+Options Enabled
+Move Animation
+Trigger: Action Button
+
+List of Event Commands:
+@>Text: Eine wunderschöne Feder.
+@>Text: Möchtest du sie einsammeln?
+@>Show Choices: Ja, Nein
+(When Cancel: Choice 2)
+: When [Ja]
+ @>Script: setBattleRule("cannotRun")
+ :       : setBattleRule("databoxStyle", 
+ :       : [:Basic, "{1}"])
+ :       : pkmn = Pokemon.new(:SANDACONDA, 76)
+ :       : pkmn.shiny = true
+ :       : pkmn.makeMale
+ :       : pkmn.learn_move(:SCORCHINGSANDS)
+ :       : pkmn.ability_index = 2
+ :       : pkmn.calc_stats
+ :       : WildBattle.start(pkmn)
+ @>Wait: 8 frame(s)
+ @>Text: Du nimmst die Feder.
+ @>Control Switches: [0395: Feder gefunden] = ON
+ @>Control Self Switch: A =ON
+ @>
+: When [Nein]
+ @>
+: Branch End
+@>
+
+Page #2
+Conditions
+Self Switch A is ON
+
+Autonomous Movement
+Type: Fixed
+Speed: 3: Slow
+Freq: 3: Low
+Options Enabled
+Move Animation
+Trigger: Action Button
+
+List of Event Commands:
+@>
+
+#------------------------------------------------------------------------------
 
 #==============================================================================
 Map ID: 519
@@ -445750,8 +447372,8 @@ List of Event Commands:
 @>Text: \xn[???]Halt!
 @>Text: \xn[???]Ja, du!
 @>Text: \xn[???]Dies ist ein ganz besonderer Ort.
-@>Text: \xn[???]Du hast hier den berühmten Geisterclub 
- :    : betreten.
+@>Text: \xn[???]Du hast hier den berühmten Geisterjäger-
+ :    : Club betreten.
 @>Text: \xn[Geisterjäger Casper]Ich bin Casper, Leiter dieses 
  :    : Clubs.
 @>Text: \xn[Geisterjäger Casper]Früher waren wir eine kleine 
@@ -445806,7 +447428,7 @@ List of Event Commands:
 @>Text: \xn[Geisterjäger Casper]Na, hast du es dir anders 
  :    : überlegt?
 @>Text: \xn[Geisterjäger Casper]Möchest du Mitglied in 
- :    : unserem Geisterclub werden?
+ :    : unserem Geisterjäger-Club werden?
 @>Text: \xn[Geisterjäger Casper]Ich bin mir sicher, du hast 
  :    : das Zeug zum wahren Meister.
 @>Show Choices: Ja, Nein
@@ -445897,7 +447519,8 @@ List of Event Commands:
   :    : erhälst du eine Medallie.
  @>Text: \xn[Geisterjäger Casper]Jetzt bleibt mir nur noch zu 
   :    : sagen:
- @>Text: \xn[Geisterjäger Casper]Willkommen im Geisterclub.
+ @>Text: \xn[Geisterjäger Casper]Willkommen im 
+  :    : Geisterjäger-Club.
  @>Script: completeQuest(:Quest53)
  @>Script: pbSetSelfSwitch(7,"B",true)
  @>Control Switches: [0357: Geisterjäger Aufnahme] = ON
@@ -470303,6 +471926,1419 @@ Trigger: Action Button
 List of Event Commands:
 @>Text: Du hast ein Ei erhalten.
 @>Script: pbGenerateEgg(:HOUNDOUR)
+@>
+
+#------------------------------------------------------------------------------
+Event ID: 009
+Event Name: VELUZA sight(6)
+(X,Y): (011,087)
+
+Page #1
+Conditions
+None
+
+Graphic: VELUZA_swimming
+
+Autonomous Movement
+Type: Custom
+Custom Move Route:
+(Repeat Action)
+$>Move Up
+$>Move Up
+$>Move Right
+$>Move Right
+$>Move Right
+$>Move Right
+$>Move Right
+$>Move Down
+$>Move Down
+$>Move Left
+$>Move Left
+$>Move Left
+$>Move Left
+$>Move Left
+
+Speed: 3: Slow
+Freq: 6: Highest
+Options Enabled
+Move Animation
+Stop Animation
+Trigger: Event Touch
+
+List of Event Commands:
+@>Script: pbNoticePlayer(get_self)
+@>Play SE: 'VELUZA', 80, 100
+@>Script: WildBattle.start(:VELUZA, 57)
+@>Script: pbSetEventTime
+@>
+
+Page #2
+Conditions
+Self Switch A is ON
+
+Autonomous Movement
+Type: Fixed
+Speed: 3: Slow
+Freq: 3: Low
+Options Enabled
+Move Animation
+Trigger: Action Button
+
+List of Event Commands:
+@>
+
+Page #3
+Conditions
+Switch 0023: s:cooledDown?(86400) is ON
+Self Switch A is ON
+
+Autonomous Movement
+Type: Fixed
+Speed: 3: Slow
+Freq: 3: Low
+Options Enabled
+Move Animation
+Trigger: Autorun
+
+List of Event Commands:
+@>Control Self Switch: A =OFF
+@>Script: setTempSwitchOn("A")
+@>
+
+#------------------------------------------------------------------------------
+Event ID: 010
+Event Name: VELUZA sight(6)
+(X,Y): (045,070)
+
+Page #1
+Conditions
+None
+
+Graphic: VELUZA_swimming
+
+Autonomous Movement
+Type: Custom
+Custom Move Route:
+(Repeat Action)
+$>Move Up
+$>Move Up
+$>Move Right
+$>Move Right
+$>Move Down
+$>Move Down
+$>Move Left
+$>Move Left
+
+Speed: 3: Slow
+Freq: 6: Highest
+Options Enabled
+Move Animation
+Stop Animation
+Trigger: Event Touch
+
+List of Event Commands:
+@>Script: pbNoticePlayer(get_self)
+@>Play SE: 'VELUZA', 80, 100
+@>Script: WildBattle.start(:VELUZA, 55)
+@>Script: pbSetEventTime
+@>
+
+Page #2
+Conditions
+Self Switch A is ON
+
+Autonomous Movement
+Type: Fixed
+Speed: 3: Slow
+Freq: 3: Low
+Options Enabled
+Move Animation
+Trigger: Action Button
+
+List of Event Commands:
+@>
+
+Page #3
+Conditions
+Switch 0023: s:cooledDown?(86400) is ON
+Self Switch A is ON
+
+Autonomous Movement
+Type: Fixed
+Speed: 3: Slow
+Freq: 3: Low
+Options Enabled
+Move Animation
+Trigger: Autorun
+
+List of Event Commands:
+@>Control Self Switch: A =OFF
+@>Script: setTempSwitchOn("A")
+@>
+
+#------------------------------------------------------------------------------
+Event ID: 011
+Event Name: VELUZA sight(6)
+(X,Y): (044,062)
+
+Page #1
+Conditions
+None
+
+Graphic: VELUZA_swimming
+
+Autonomous Movement
+Type: Custom
+Custom Move Route:
+(Repeat Action)
+$>Move Up
+$>Move Up
+$>Move Up
+$>Move Up
+$>Move Up
+$>Move Up
+$>Move Left
+$>Move Left
+$>Move Left
+$>Move Left
+$>Move Down
+$>Move Down
+$>Move Down
+$>Move Down
+$>Move Down
+$>Move Down
+$>Move Right
+$>Move Right
+$>Move Right
+$>Move Right
+
+Speed: 3: Slow
+Freq: 6: Highest
+Options Enabled
+Move Animation
+Stop Animation
+Trigger: Event Touch
+
+List of Event Commands:
+@>Script: pbNoticePlayer(get_self)
+@>Play SE: 'VELUZA', 80, 100
+@>Script: WildBattle.start(:VELUZA, 60)
+@>Script: pbSetEventTime
+@>
+
+Page #2
+Conditions
+Self Switch A is ON
+
+Autonomous Movement
+Type: Fixed
+Speed: 3: Slow
+Freq: 3: Low
+Options Enabled
+Move Animation
+Trigger: Action Button
+
+List of Event Commands:
+@>
+
+Page #3
+Conditions
+Switch 0023: s:cooledDown?(86400) is ON
+Self Switch A is ON
+
+Autonomous Movement
+Type: Fixed
+Speed: 3: Slow
+Freq: 3: Low
+Options Enabled
+Move Animation
+Trigger: Autorun
+
+List of Event Commands:
+@>Control Self Switch: A =OFF
+@>Script: setTempSwitchOn("A")
+@>
+
+#------------------------------------------------------------------------------
+Event ID: 012
+Event Name: VELUZA sight(6)
+(X,Y): (036,026)
+
+Page #1
+Conditions
+None
+
+Graphic: VELUZA_swimming
+
+Autonomous Movement
+Type: Custom
+Custom Move Route:
+(Repeat Action)
+$>Move Right
+$>Move Right
+$>Move Right
+$>Move Right
+$>Move Right
+$>Move Right
+$>Move Right
+$>Move Right
+$>Move Right
+$>Move Down
+$>Move Down
+$>Move Left
+$>Move Left
+$>Move Left
+$>Move Left
+$>Move Left
+$>Move Left
+$>Move Left
+$>Move Left
+$>Move Left
+$>Move Up
+$>Move Up
+
+Speed: 3: Slow
+Freq: 6: Highest
+Options Enabled
+Move Animation
+Stop Animation
+Trigger: Event Touch
+
+List of Event Commands:
+@>Script: pbNoticePlayer(get_self)
+@>Play SE: 'VELUZA', 80, 100
+@>Script: WildBattle.start(:VELUZA, 58)
+@>Script: pbSetEventTime
+@>
+
+Page #2
+Conditions
+Self Switch A is ON
+
+Autonomous Movement
+Type: Fixed
+Speed: 3: Slow
+Freq: 3: Low
+Options Enabled
+Move Animation
+Trigger: Action Button
+
+List of Event Commands:
+@>
+
+Page #3
+Conditions
+Switch 0023: s:cooledDown?(86400) is ON
+Self Switch A is ON
+
+Autonomous Movement
+Type: Fixed
+Speed: 3: Slow
+Freq: 3: Low
+Options Enabled
+Move Animation
+Trigger: Autorun
+
+List of Event Commands:
+@>Control Self Switch: A =OFF
+@>Script: setTempSwitchOn("A")
+@>
+
+#------------------------------------------------------------------------------
+Event ID: 013
+Event Name: VELUZA sight(6)
+(X,Y): (011,034)
+
+Page #1
+Conditions
+None
+
+Graphic: VELUZA_swimming
+
+Autonomous Movement
+Type: Custom
+Custom Move Route:
+(Repeat Action)
+$>Move Right
+$>Move Right
+$>Move Right
+$>Move Right
+$>Move Right
+$>Move Right
+$>Move Right
+$>Move Right
+$>Move Right
+$>Move Down
+$>Move Down
+$>Move Left
+$>Move Left
+$>Move Left
+$>Move Left
+$>Move Left
+$>Move Left
+$>Move Left
+$>Move Left
+$>Move Left
+$>Move Up
+$>Move Up
+
+Speed: 3: Slow
+Freq: 6: Highest
+Options Enabled
+Move Animation
+Stop Animation
+Trigger: Event Touch
+
+List of Event Commands:
+@>Script: pbNoticePlayer(get_self)
+@>Play SE: 'VELUZA', 80, 100
+@>Script: WildBattle.start(:VELUZA, 58)
+@>Script: pbSetEventTime
+@>
+
+Page #2
+Conditions
+Self Switch A is ON
+
+Autonomous Movement
+Type: Fixed
+Speed: 3: Slow
+Freq: 3: Low
+Options Enabled
+Move Animation
+Trigger: Action Button
+
+List of Event Commands:
+@>
+
+Page #3
+Conditions
+Switch 0023: s:cooledDown?(86400) is ON
+Self Switch A is ON
+
+Autonomous Movement
+Type: Fixed
+Speed: 3: Slow
+Freq: 3: Low
+Options Enabled
+Move Animation
+Trigger: Autorun
+
+List of Event Commands:
+@>Control Self Switch: A =OFF
+@>Script: setTempSwitchOn("A")
+@>
+
+#------------------------------------------------------------------------------
+Event ID: 014
+Event Name: VELUZA sight(6)
+(X,Y): (014,063)
+
+Page #1
+Conditions
+None
+
+Graphic: VELUZA_swimming
+
+Autonomous Movement
+Type: Custom
+Custom Move Route:
+(Repeat Action)
+$>Move Up
+$>Move Up
+$>Move Up
+$>Move Up
+$>Move Up
+$>Move Up
+$>Move Right
+$>Move Right
+$>Move Right
+$>Move Down
+$>Move Down
+$>Move Down
+$>Move Down
+$>Move Down
+$>Move Down
+$>Move Left
+$>Move Left
+$>Move Left
+
+Speed: 3: Slow
+Freq: 6: Highest
+Options Enabled
+Move Animation
+Stop Animation
+Trigger: Event Touch
+
+List of Event Commands:
+@>Script: pbNoticePlayer(get_self)
+@>Play SE: 'VELUZA', 80, 100
+@>Script: WildBattle.start(:VELUZA, 56)
+@>Script: pbSetEventTime
+@>
+
+Page #2
+Conditions
+Self Switch A is ON
+
+Autonomous Movement
+Type: Fixed
+Speed: 3: Slow
+Freq: 3: Low
+Options Enabled
+Move Animation
+Trigger: Action Button
+
+List of Event Commands:
+@>
+
+Page #3
+Conditions
+Switch 0023: s:cooledDown?(86400) is ON
+Self Switch A is ON
+
+Autonomous Movement
+Type: Fixed
+Speed: 3: Slow
+Freq: 3: Low
+Options Enabled
+Move Animation
+Trigger: Autorun
+
+List of Event Commands:
+@>Control Self Switch: A =OFF
+@>Script: setTempSwitchOn("A")
+@>
+
+#------------------------------------------------------------------------------
+Event ID: 015
+Event Name: VELUZA sight(6)
+(X,Y): (032,059)
+
+Page #1
+Conditions
+None
+
+Graphic: VELUZA_swimming
+
+Autonomous Movement
+Type: Custom
+Custom Move Route:
+(Repeat Action)
+$>Move Left
+$>Move Left
+$>Move Left
+$>Move Left
+$>Move Left
+$>Move Left
+$>Move Down
+$>Move Down
+$>Move Down
+$>Move Down
+$>Move Down
+$>Move Right
+$>Move Right
+$>Move Right
+$>Move Right
+$>Move Right
+$>Move Right
+$>Move Up
+$>Move Up
+$>Move Up
+$>Move Up
+$>Move Up
+
+Speed: 3: Slow
+Freq: 6: Highest
+Options Enabled
+Move Animation
+Stop Animation
+Trigger: Event Touch
+
+List of Event Commands:
+@>Script: pbNoticePlayer(get_self)
+@>Play SE: 'VELUZA', 80, 100
+@>Script: WildBattle.start(:VELUZA, 59)
+@>Script: pbSetEventTime
+@>
+
+Page #2
+Conditions
+Self Switch A is ON
+
+Autonomous Movement
+Type: Fixed
+Speed: 3: Slow
+Freq: 3: Low
+Options Enabled
+Move Animation
+Trigger: Action Button
+
+List of Event Commands:
+@>
+
+Page #3
+Conditions
+Switch 0023: s:cooledDown?(86400) is ON
+Self Switch A is ON
+
+Autonomous Movement
+Type: Fixed
+Speed: 3: Slow
+Freq: 3: Low
+Options Enabled
+Move Animation
+Trigger: Autorun
+
+List of Event Commands:
+@>Control Self Switch: A =OFF
+@>Script: setTempSwitchOn("A")
+@>
+
+#------------------------------------------------------------------------------
+Event ID: 016
+Event Name: VELUZA sight(6)
+(X,Y): (009,012)
+
+Page #1
+Conditions
+None
+
+Graphic: VELUZA_swimming
+
+Autonomous Movement
+Type: Custom
+Custom Move Route:
+(Repeat Action)
+$>Move Up
+$>Move Up
+$>Move Up
+$>Move Up
+$>Move Up
+$>Move Up
+$>Move Right
+$>Move Right
+$>Move Right
+$>Move Down
+$>Move Down
+$>Move Down
+$>Move Down
+$>Move Down
+$>Move Down
+$>Move Left
+$>Move Left
+$>Move Left
+
+Speed: 3: Slow
+Freq: 6: Highest
+Options Enabled
+Move Animation
+Stop Animation
+Trigger: Event Touch
+
+List of Event Commands:
+@>Script: pbNoticePlayer(get_self)
+@>Play SE: 'VELUZA', 80, 100
+@>Script: WildBattle.start(:VELUZA, 56)
+@>Script: pbSetEventTime
+@>
+
+Page #2
+Conditions
+Self Switch A is ON
+
+Autonomous Movement
+Type: Fixed
+Speed: 3: Slow
+Freq: 3: Low
+Options Enabled
+Move Animation
+Trigger: Action Button
+
+List of Event Commands:
+@>
+
+Page #3
+Conditions
+Switch 0023: s:cooledDown?(86400) is ON
+Self Switch A is ON
+
+Autonomous Movement
+Type: Fixed
+Speed: 3: Slow
+Freq: 3: Low
+Options Enabled
+Move Animation
+Trigger: Autorun
+
+List of Event Commands:
+@>Control Self Switch: A =OFF
+@>Script: setTempSwitchOn("A")
+@>
+
+#------------------------------------------------------------------------------
+Event ID: 017
+Event Name: VELUZA sight(6)
+(X,Y): (028,010)
+
+Page #1
+Conditions
+None
+
+Graphic: VELUZA_swimming
+
+Autonomous Movement
+Type: Custom
+Custom Move Route:
+(Repeat Action)
+$>Move Up
+$>Move Up
+$>Move Right
+$>Move Right
+$>Move Down
+$>Move Down
+$>Move Left
+$>Move Left
+
+Speed: 3: Slow
+Freq: 6: Highest
+Options Enabled
+Move Animation
+Stop Animation
+Trigger: Event Touch
+
+List of Event Commands:
+@>Script: pbNoticePlayer(get_self)
+@>Play SE: 'VELUZA', 80, 100
+@>Script: WildBattle.start(:VELUZA, 55)
+@>Script: pbSetEventTime
+@>
+
+Page #2
+Conditions
+Self Switch A is ON
+
+Autonomous Movement
+Type: Fixed
+Speed: 3: Slow
+Freq: 3: Low
+Options Enabled
+Move Animation
+Trigger: Action Button
+
+List of Event Commands:
+@>
+
+Page #3
+Conditions
+Switch 0023: s:cooledDown?(86400) is ON
+Self Switch A is ON
+
+Autonomous Movement
+Type: Fixed
+Speed: 3: Slow
+Freq: 3: Low
+Options Enabled
+Move Animation
+Trigger: Autorun
+
+List of Event Commands:
+@>Control Self Switch: A =OFF
+@>Script: setTempSwitchOn("A")
+@>
+
+#------------------------------------------------------------------------------
+Event ID: 018
+Event Name: EV018
+(X,Y): (029,033)
+
+Page #1
+Conditions
+None
+
+Graphic: apricot-pokemon-33
+
+Autonomous Movement
+Type: Fixed
+Speed: 1: Slowest
+Freq: 6: Highest
+Options Enabled
+Move Animation
+Stop Animation
+Direction Fix
+Trigger: Action Button
+
+List of Event Commands:
+@>Set Move Route: This event
+ :              : $>Graphic: "apricot-pokemon-33', 0, 4, 2
+@>Script: apricorns = [
+:       :   :REDAPRICORN,
+:       :   :YELLOWAPRICORN,
+:       :   :BLUEAPRICORN,
+:       :   :GREENAPRICORN,
+:       :   :PINKAPRICORN,
+:       :   :WHITEAPRICORN,
+:       :   :BLACKAPRICORN
+:       : ]
+@>Script: random_item = apricorns.sample
+:       : pbItemBall(random_item)
+@>Script: pbSetEventTime
+@>
+
+Page #2
+Conditions
+Self Switch A is ON
+
+Graphic: apricot-pokemon-33
+
+Autonomous Movement
+Type: Fixed
+Speed: 1: Slowest
+Freq: 5: Higher
+Options Enabled
+Move Animation
+Stop Animation
+Direction Fix
+Trigger: Action Button
+
+List of Event Commands:
+@>Text: Versuch es doch morgen nochmal.
+@>
+
+Page #3
+Conditions
+Switch 0023: s:cooledDown?(86400) is ON
+Self Switch A is ON
+
+Graphic: apricot-pokemon-33
+
+Autonomous Movement
+Type: Fixed
+Speed: 1: Slowest
+Freq: 5: Higher
+Options Enabled
+Move Animation
+Stop Animation
+Direction Fix
+Trigger: Autorun
+
+List of Event Commands:
+@>Control Self Switch: A =OFF
+@>Script: setTempSwitchOn("A")
+@>
+
+#------------------------------------------------------------------------------
+Event ID: 019
+Event Name: .noshadow
+(X,Y): (019,003)
+
+Page #1
+Conditions
+None
+
+Graphic: DEKO Pelipper und Wingull
+
+Autonomous Movement
+Type: Custom
+Custom Move Route:
+(Repeat Action)
+$>Move Right
+$>Move Right
+$>Move Right
+$>Move Right
+$>Move Right
+$>Move Right
+$>Move Right
+$>Move Right
+$>Move Right
+$>Move Right
+$>Move Right
+$>Move Right
+$>Move Right
+$>Move Right
+$>Move Right
+$>Move Left
+$>Move Left
+$>Move Left
+$>Move Left
+$>Move Left
+$>Move Left
+$>Move Left
+$>Move Left
+$>Move Left
+$>Move Left
+$>Move Left
+$>Move Left
+$>Move Left
+$>Move Left
+$>Move Left
+
+Speed: 3: Slow
+Freq: 6: Highest
+Options Enabled
+Move Animation
+Through
+Always on Top
+Trigger: Action Button
+
+List of Event Commands:
+@>
+
+#------------------------------------------------------------------------------
+Event ID: 020
+Event Name: .noshadow
+(X,Y): (018,048)
+
+Page #1
+Conditions
+None
+
+Graphic: DEKO Pelipper und Wingull
+
+Autonomous Movement
+Type: Custom
+Custom Move Route:
+(Repeat Action)
+$>Move Right
+$>Move Right
+$>Move Right
+$>Move Right
+$>Move Right
+$>Move Right
+$>Move Right
+$>Move Right
+$>Move Right
+$>Move Right
+$>Move Right
+$>Move Right
+$>Move Right
+$>Move Right
+$>Move Right
+$>Move Left
+$>Move Left
+$>Move Left
+$>Move Left
+$>Move Left
+$>Move Left
+$>Move Left
+$>Move Left
+$>Move Left
+$>Move Left
+$>Move Left
+$>Move Left
+$>Move Left
+$>Move Left
+$>Move Left
+
+Speed: 3: Slow
+Freq: 6: Highest
+Options Enabled
+Move Animation
+Through
+Always on Top
+Trigger: Action Button
+
+List of Event Commands:
+@>
+
+#------------------------------------------------------------------------------
+Event ID: 021
+Event Name: EV021
+(X,Y): (008,054)
+
+Page #1
+Conditions
+None
+
+Graphic: WINGULL_shadow
+
+Autonomous Movement
+Type: Fixed
+Speed: 1: Slowest
+Freq: 4: High
+Options Enabled
+Move Animation
+Stop Animation
+Through
+Always on Top
+Trigger: Action Button
+
+List of Event Commands:
+@>
+
+#------------------------------------------------------------------------------
+Event ID: 022
+Event Name: EV022
+(X,Y): (014,023)
+
+Page #1
+Conditions
+None
+
+Graphic: WINGULL_shadow
+
+Autonomous Movement
+Type: Fixed
+Speed: 1: Slowest
+Freq: 4: High
+Options Enabled
+Move Animation
+Stop Animation
+Through
+Always on Top
+Trigger: Action Button
+
+List of Event Commands:
+@>
+
+#------------------------------------------------------------------------------
+Event ID: 023
+Event Name: EV023
+(X,Y): (044,021)
+
+Page #1
+Conditions
+None
+
+Graphic: WINGULL_shadow
+
+Autonomous Movement
+Type: Fixed
+Speed: 1: Slowest
+Freq: 4: High
+Options Enabled
+Move Animation
+Stop Animation
+Through
+Always on Top
+Trigger: Action Button
+
+List of Event Commands:
+@>
+
+#------------------------------------------------------------------------------
+Event ID: 024
+Event Name: EV024
+(X,Y): (051,008)
+
+Page #1
+Conditions
+None
+
+Graphic: WINGULL_shadow
+
+Autonomous Movement
+Type: Fixed
+Speed: 1: Slowest
+Freq: 4: High
+Options Enabled
+Move Animation
+Stop Animation
+Through
+Always on Top
+Trigger: Action Button
+
+List of Event Commands:
+@>
+
+#------------------------------------------------------------------------------
+Event ID: 025
+Event Name: EV025
+(X,Y): (050,059)
+
+Page #1
+Conditions
+None
+
+Graphic: WINGULL_shadow
+
+Autonomous Movement
+Type: Fixed
+Speed: 1: Slowest
+Freq: 4: High
+Options Enabled
+Move Animation
+Stop Animation
+Through
+Always on Top
+Trigger: Action Button
+
+List of Event Commands:
+@>
+
+#------------------------------------------------------------------------------
+Event ID: 026
+Event Name: EV026
+(X,Y): (052,092)
+
+Page #1
+Conditions
+None
+
+Graphic: WINGULL_shadow
+
+Autonomous Movement
+Type: Fixed
+Speed: 1: Slowest
+Freq: 4: High
+Options Enabled
+Move Animation
+Stop Animation
+Through
+Always on Top
+Trigger: Action Button
+
+List of Event Commands:
+@>
+
+#------------------------------------------------------------------------------
+Event ID: 027
+Event Name: EV027
+(X,Y): (032,092)
+
+Page #1
+Conditions
+None
+
+Graphic: WINGULL_shadow
+
+Autonomous Movement
+Type: Fixed
+Speed: 1: Slowest
+Freq: 4: High
+Options Enabled
+Move Animation
+Stop Animation
+Through
+Always on Top
+Trigger: Action Button
+
+List of Event Commands:
+@>
+
+#------------------------------------------------------------------------------
+Event ID: 028
+Event Name: EV028
+(X,Y): (032,075)
+
+Page #1
+Conditions
+None
+
+Graphic: WINGULL_shadow
+
+Autonomous Movement
+Type: Fixed
+Speed: 1: Slowest
+Freq: 4: High
+Options Enabled
+Move Animation
+Stop Animation
+Through
+Always on Top
+Trigger: Action Button
+
+List of Event Commands:
+@>
+
+#------------------------------------------------------------------------------
+Event ID: 029
+Event Name: EV029
+(X,Y): (020,084)
+
+Page #1
+Conditions
+None
+
+Graphic: WINGULL_female_shadow
+
+Autonomous Movement
+Type: Fixed
+Speed: 1: Slowest
+Freq: 4: High
+Options Enabled
+Move Animation
+Stop Animation
+Through
+Always on Top
+Trigger: Action Button
+
+List of Event Commands:
+@>
+
+#------------------------------------------------------------------------------
+Event ID: 030
+Event Name: EV030
+(X,Y): (009,094)
+
+Page #1
+Conditions
+None
+
+Graphic: WINGULL_female_shadow
+
+Autonomous Movement
+Type: Fixed
+Speed: 1: Slowest
+Freq: 4: High
+Options Enabled
+Move Animation
+Stop Animation
+Through
+Always on Top
+Trigger: Action Button
+
+List of Event Commands:
+@>
+
+#------------------------------------------------------------------------------
+Event ID: 031
+Event Name: EV031
+(X,Y): (011,071)
+
+Page #1
+Conditions
+None
+
+Graphic: WINGULL_female_shadow
+
+Autonomous Movement
+Type: Fixed
+Speed: 1: Slowest
+Freq: 4: High
+Options Enabled
+Move Animation
+Stop Animation
+Through
+Always on Top
+Trigger: Action Button
+
+List of Event Commands:
+@>
+
+#------------------------------------------------------------------------------
+Event ID: 032
+Event Name: EV032
+(X,Y): (053,076)
+
+Page #1
+Conditions
+None
+
+Graphic: WINGULL_female_shadow
+
+Autonomous Movement
+Type: Fixed
+Speed: 1: Slowest
+Freq: 4: High
+Options Enabled
+Move Animation
+Stop Animation
+Through
+Always on Top
+Trigger: Action Button
+
+List of Event Commands:
+@>
+
+#------------------------------------------------------------------------------
+Event ID: 033
+Event Name: EV033
+(X,Y): (052,071)
+
+Page #1
+Conditions
+None
+
+Graphic: WINGULL_female_shadow
+
+Autonomous Movement
+Type: Fixed
+Speed: 1: Slowest
+Freq: 4: High
+Options Enabled
+Move Animation
+Stop Animation
+Through
+Always on Top
+Trigger: Action Button
+
+List of Event Commands:
+@>
+
+#------------------------------------------------------------------------------
+Event ID: 034
+Event Name: EV034
+(X,Y): (053,051)
+
+Page #1
+Conditions
+None
+
+Graphic: WINGULL_female_shadow
+
+Autonomous Movement
+Type: Fixed
+Speed: 1: Slowest
+Freq: 4: High
+Options Enabled
+Move Animation
+Stop Animation
+Through
+Always on Top
+Trigger: Action Button
+
+List of Event Commands:
+@>
+
+#------------------------------------------------------------------------------
+Event ID: 035
+Event Name: EV035
+(X,Y): (035,040)
+
+Page #1
+Conditions
+None
+
+Graphic: WINGULL_female_shadow
+
+Autonomous Movement
+Type: Fixed
+Speed: 1: Slowest
+Freq: 4: High
+Options Enabled
+Move Animation
+Stop Animation
+Through
+Always on Top
+Trigger: Action Button
+
+List of Event Commands:
+@>
+
+#------------------------------------------------------------------------------
+Event ID: 036
+Event Name: EV036
+(X,Y): (054,025)
+
+Page #1
+Conditions
+None
+
+Graphic: WINGULL_female_shadow
+
+Autonomous Movement
+Type: Fixed
+Speed: 1: Slowest
+Freq: 4: High
+Options Enabled
+Move Animation
+Stop Animation
+Through
+Always on Top
+Trigger: Action Button
+
+List of Event Commands:
+@>
+
+#------------------------------------------------------------------------------
+Event ID: 037
+Event Name: EV037
+(X,Y): (055,018)
+
+Page #1
+Conditions
+None
+
+Graphic: WINGULL_female_shadow
+
+Autonomous Movement
+Type: Fixed
+Speed: 1: Slowest
+Freq: 4: High
+Options Enabled
+Move Animation
+Stop Animation
+Through
+Always on Top
+Trigger: Action Button
+
+List of Event Commands:
+@>
+
+#------------------------------------------------------------------------------
+Event ID: 038
+Event Name: EV038
+(X,Y): (036,011)
+
+Page #1
+Conditions
+None
+
+Graphic: WINGULL_female_shadow
+
+Autonomous Movement
+Type: Fixed
+Speed: 1: Slowest
+Freq: 4: High
+Options Enabled
+Move Animation
+Stop Animation
+Through
+Always on Top
+Trigger: Action Button
+
+List of Event Commands:
+@>
+
+#------------------------------------------------------------------------------
+Event ID: 039
+Event Name: EV039
+(X,Y): (022,022)
+
+Page #1
+Conditions
+None
+
+Graphic: WINGULL_female_shadow
+
+Autonomous Movement
+Type: Fixed
+Speed: 1: Slowest
+Freq: 4: High
+Options Enabled
+Move Animation
+Stop Animation
+Through
+Always on Top
+Trigger: Action Button
+
+List of Event Commands:
+@>
+
+#------------------------------------------------------------------------------
+Event ID: 040
+Event Name: EV040
+(X,Y): (004,016)
+
+Page #1
+Conditions
+None
+
+Graphic: WINGULL_female_shadow
+
+Autonomous Movement
+Type: Fixed
+Speed: 1: Slowest
+Freq: 4: High
+Options Enabled
+Move Animation
+Stop Animation
+Through
+Always on Top
+Trigger: Action Button
+
+List of Event Commands:
 @>
 
 #------------------------------------------------------------------------------

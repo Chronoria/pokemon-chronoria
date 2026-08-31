@@ -1,0 +1,34 @@
+---
+// Jumps straight to a random entry's detail page. Takes only a slim, already href()-resolved
+// array of target URLs as a prop - never import src/lib/data.ts (or `pokemon`) here or in the
+// script below, that would pull the ~5.4 MB generated dataset into the client bundle (see the
+// warning comment in src/lib/calc/data.ts). At ~1026 species/~531 forms, an array of short URL
+// strings is only a few dozen KB, nowhere near that.
+//
+// The list is passed via a plain HTML attribute (Astro JSON-escapes it automatically) rather than
+// define:vars, which - combined with is:inline - makes Astro rebuild this script tag at compile
+// time and silently drop a manually-set data-astro-rerun attribute (see src/pages/index.astro's
+// own note on the same pitfall). data-astro-rerun is what makes the click handler get re-attached
+// after an Astro client-side view transition, so it can't be lost here.
+interface Props {
+  hrefs: string[];
+  label?: string;
+}
+const { hrefs, label = "Zufälliges Pokémon" } = Astro.props;
+---
+
+<button type="button" class="random-btn" data-random-hrefs={JSON.stringify(hrefs)}>
+  <span aria-hidden="true">🎲</span> {label}
+</button>
+
+<script data-astro-rerun>
+  document.querySelectorAll(".random-btn[data-random-hrefs]").forEach((btn) => {
+    if (btn.dataset.randomWired) return;
+    btn.dataset.randomWired = "1";
+    btn.addEventListener("click", () => {
+      const hrefs = JSON.parse(btn.dataset.randomHrefs || "[]");
+      if (hrefs.length === 0) return;
+      window.location.href = hrefs[Math.floor(Math.random() * hrefs.length)];
+    });
+  });
+</script>
