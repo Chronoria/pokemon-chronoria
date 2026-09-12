@@ -345254,6 +345254,354 @@ List of Event Commands:
 @>
 
 #------------------------------------------------------------------------------
+Event ID: 020
+Event Name: EV020
+(X,Y): (020,016)
+
+Page #1
+Conditions
+Switch 0397: Schalter Strom Rot is ON
+
+Autonomous Movement
+Type: Fixed
+Speed: 3: Slow
+Freq: 3: Low
+Options Enabled
+Move Animation
+Trigger: Action Button
+
+List of Event Commands:
+@>Play SE: 'Boton', 85, 100
+@>Control Switches: [0398: Schalter Strom Blau] = ON
+@>Control Switches: [0397: Schalter Strom Rot] = OFF
+@>Play SE: 'Electricidad', 90, 100
+@>
+
+Page #2
+Conditions
+Switch 0398: Schalter Strom Blau is ON
+
+Autonomous Movement
+Type: Fixed
+Speed: 3: Slow
+Freq: 3: Low
+Options Enabled
+Move Animation
+Trigger: Action Button
+
+List of Event Commands:
+@>Play SE: 'Boton', 85, 100
+@>Control Switches: [0397: Schalter Strom Rot] = ON
+@>Control Switches: [0398: Schalter Strom Blau] = OFF
+@>Play SE: 'Electricidad', 90, 100
+@>
+
+Page #3
+Conditions
+Switch 0399: Alle aus is ON
+
+Autonomous Movement
+Type: Fixed
+Speed: 3: Slow
+Freq: 3: Low
+Options Enabled
+Move Animation
+Trigger: Action Button
+
+List of Event Commands:
+@>
+
+#------------------------------------------------------------------------------
+Event ID: 021
+Event Name: EV021
+(X,Y): (044,006)
+
+Page #1
+Conditions
+Switch 0397: Schalter Strom Rot is ON
+
+Autonomous Movement
+Type: Fixed
+Speed: 3: Slow
+Freq: 3: Low
+Options Enabled
+Move Animation
+Trigger: Action Button
+
+List of Event Commands:
+@>Play SE: 'Boton', 85, 100
+@>Control Switches: [0398: Schalter Strom Blau] = ON
+@>Control Switches: [0397: Schalter Strom Rot] = OFF
+@>Play SE: 'Electricidad', 90, 100
+@>
+
+Page #2
+Conditions
+Switch 0398: Schalter Strom Blau is ON
+
+Autonomous Movement
+Type: Fixed
+Speed: 3: Slow
+Freq: 3: Low
+Options Enabled
+Move Animation
+Trigger: Action Button
+
+List of Event Commands:
+@>Play SE: 'Boton', 85, 100
+@>Control Switches: [0397: Schalter Strom Rot] = ON
+@>Control Switches: [0398: Schalter Strom Blau] = OFF
+@>Play SE: 'Electricidad', 90, 100
+@>
+
+Page #3
+Conditions
+Switch 0399: Alle aus is ON
+
+Autonomous Movement
+Type: Fixed
+Speed: 3: Slow
+Freq: 3: Low
+Options Enabled
+Move Animation
+Trigger: Action Button
+
+List of Event Commands:
+@>
+
+#------------------------------------------------------------------------------
+Event ID: 022
+Event Name: EV022
+(X,Y): (045,022)
+
+Page #1
+Conditions
+Switch 0397: Schalter Strom Rot is ON
+
+Autonomous Movement
+Type: Fixed
+Speed: 3: Slow
+Freq: 3: Low
+Options Enabled
+Move Animation
+Trigger: Action Button
+
+List of Event Commands:
+@>Play SE: 'Boton', 85, 100
+@>Control Switches: [0398: Schalter Strom Blau] = ON
+@>Control Switches: [0397: Schalter Strom Rot] = OFF
+@>Play SE: 'Electricidad', 90, 100
+@>
+
+Page #2
+Conditions
+Switch 0398: Schalter Strom Blau is ON
+
+Autonomous Movement
+Type: Fixed
+Speed: 3: Slow
+Freq: 3: Low
+Options Enabled
+Move Animation
+Trigger: Action Button
+
+List of Event Commands:
+@>Play SE: 'Boton', 85, 100
+@>Control Switches: [0397: Schalter Strom Rot] = ON
+@>Control Switches: [0398: Schalter Strom Blau] = OFF
+@>Play SE: 'Electricidad', 90, 100
+@>
+
+Page #3
+Conditions
+Switch 0399: Alle aus is ON
+
+Autonomous Movement
+Type: Fixed
+Speed: 3: Slow
+Freq: 3: Low
+Options Enabled
+Move Animation
+Trigger: Action Button
+
+List of Event Commands:
+@>
+
+#------------------------------------------------------------------------------
+Event ID: 023
+Event Name: EV023
+(X,Y): (045,035)
+
+Page #1
+Conditions
+Switch 0397: Schalter Strom Rot is ON
+
+Autonomous Movement
+Type: Fixed
+Speed: 3: Slow
+Freq: 3: Low
+Options Enabled
+Move Animation
+Trigger: Action Button
+
+List of Event Commands:
+@>Play SE: 'Boton', 85, 100
+@>Control Switches: [0398: Schalter Strom Blau] = ON
+@>Control Switches: [0397: Schalter Strom Rot] = OFF
+@>Play SE: 'Electricidad', 90, 100
+@>
+
+Page #2
+Conditions
+Switch 0398: Schalter Strom Blau is ON
+
+Autonomous Movement
+Type: Fixed
+Speed: 3: Slow
+Freq: 3: Low
+Options Enabled
+Move Animation
+Trigger: Action Button
+
+List of Event Commands:
+@>Play SE: 'Boton', 85, 100
+@>Control Switches: [0397: Schalter Strom Rot] = ON
+@>Control Switches: [0398: Schalter Strom Blau] = OFF
+@>Play SE: 'Electricidad', 90, 100
+@>
+
+Page #3
+Conditions
+Switch 0399: Alle aus is ON
+
+Autonomous Movement
+Type: Fixed
+Speed: 3: Slow
+Freq: 3: Low
+Options Enabled
+Move Animation
+Trigger: Action Button
+
+List of Event Commands:
+@>
+
+#------------------------------------------------------------------------------
+Event ID: 024
+Event Name: EV024
+(X,Y): (034,044)
+
+Page #1
+Conditions
+Switch 0397: Schalter Strom Rot is ON
+
+Autonomous Movement
+Type: Fixed
+Speed: 3: Slow
+Freq: 3: Low
+Options Enabled
+Move Animation
+Trigger: Action Button
+
+List of Event Commands:
+@>Play SE: 'Boton', 85, 100
+@>Control Switches: [0398: Schalter Strom Blau] = ON
+@>Control Switches: [0397: Schalter Strom Rot] = OFF
+@>Play SE: 'Electricidad', 90, 100
+@>
+
+Page #2
+Conditions
+Switch 0398: Schalter Strom Blau is ON
+
+Autonomous Movement
+Type: Fixed
+Speed: 3: Slow
+Freq: 3: Low
+Options Enabled
+Move Animation
+Trigger: Action Button
+
+List of Event Commands:
+@>Play SE: 'Boton', 85, 100
+@>Control Switches: [0397: Schalter Strom Rot] = ON
+@>Control Switches: [0398: Schalter Strom Blau] = OFF
+@>Play SE: 'Electricidad', 90, 100
+@>
+
+Page #3
+Conditions
+Switch 0399: Alle aus is ON
+
+Autonomous Movement
+Type: Fixed
+Speed: 3: Slow
+Freq: 3: Low
+Options Enabled
+Move Animation
+Trigger: Action Button
+
+List of Event Commands:
+@>
+
+#------------------------------------------------------------------------------
+Event ID: 025
+Event Name: EV025
+(X,Y): (020,059)
+
+Page #1
+Conditions
+Switch 0397: Schalter Strom Rot is ON
+
+Autonomous Movement
+Type: Fixed
+Speed: 3: Slow
+Freq: 3: Low
+Options Enabled
+Move Animation
+Trigger: Action Button
+
+List of Event Commands:
+@>Play SE: 'Boton', 85, 100
+@>Control Switches: [0398: Schalter Strom Blau] = ON
+@>Control Switches: [0397: Schalter Strom Rot] = OFF
+@>Play SE: 'Electricidad', 90, 100
+@>
+
+Page #2
+Conditions
+Switch 0398: Schalter Strom Blau is ON
+
+Autonomous Movement
+Type: Fixed
+Speed: 3: Slow
+Freq: 3: Low
+Options Enabled
+Move Animation
+Trigger: Action Button
+
+List of Event Commands:
+@>Play SE: 'Boton', 85, 100
+@>Control Switches: [0397: Schalter Strom Rot] = ON
+@>Control Switches: [0398: Schalter Strom Blau] = OFF
+@>Play SE: 'Electricidad', 90, 100
+@>
+
+Page #3
+Conditions
+Switch 0399: Alle aus is ON
+
+Autonomous Movement
+Type: Fixed
+Speed: 3: Slow
+Freq: 3: Low
+Options Enabled
+Move Animation
+Trigger: Action Button
+
+List of Event Commands:
+@>
+
+#------------------------------------------------------------------------------
 
 #==============================================================================
 Map ID: 434
