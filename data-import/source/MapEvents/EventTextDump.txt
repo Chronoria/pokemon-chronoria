@@ -84746,6 +84746,8 @@ Trigger: Action Button
 
 List of Event Commands:
 @>Text: Eine Statue von Zekrom.
+@>Text: <i>Der Donner der Ideale.</i>
+@>Text: <i>Er sah, was werden sollte.</i>
 @>
 
 #------------------------------------------------------------------------------
@@ -84767,6 +84769,8 @@ Trigger: Action Button
 
 List of Event Commands:
 @>Text: Eine Statue von Reshiram.
+@>Text: <i>Das Feuer der Wahrheit.</i>
+@>Text: <i>Er sah, was war.</i>
 @>
 
 #------------------------------------------------------------------------------
@@ -117988,6 +117992,273 @@ List of Event Commands:
  @>Text: Hier ist nichts.
  @>
 : Branch End
+@>
+
+#------------------------------------------------------------------------------
+Event ID: 040
+Event Name: Eira
+(X,Y): (020,043)
+
+Page #1
+Conditions
+None
+
+Graphic: LEADER_EIRA
+
+Autonomous Movement
+Type: Fixed
+Speed: 3: Slow
+Freq: 3: Low
+Options Enabled
+Move Animation
+Trigger: Action Button
+
+List of Event Commands:
+@>
+
+Page #2
+Conditions
+Self Switch A is ON
+
+Autonomous Movement
+Type: Fixed
+Speed: 3: Slow
+Freq: 3: Low
+Options Enabled
+Move Animation
+Trigger: Action Button
+
+List of Event Commands:
+@>
+
+#------------------------------------------------------------------------------
+Event ID: 041
+Event Name: Nexus
+(X,Y): (025,042)
+
+Page #1
+Conditions
+None
+
+Graphic: Team0_Nexus
+
+Autonomous Movement
+Type: Fixed
+Speed: 3: Slow
+Freq: 3: Low
+Options Enabled
+Move Animation
+Trigger: Action Button
+
+List of Event Commands:
+@>
+
+Page #2
+Conditions
+Self Switch A is ON
+
+Autonomous Movement
+Type: Fixed
+Speed: 3: Slow
+Freq: 3: Low
+Options Enabled
+Move Animation
+Trigger: Action Button
+
+List of Event Commands:
+@>
+
+#------------------------------------------------------------------------------
+Event ID: 042
+Event Name: EV042
+(X,Y): (000,054)
+
+Page #1
+Conditions
+None
+
+Autonomous Movement
+Type: Fixed
+Speed: 3: Slow
+Freq: 3: Low
+Options Enabled
+Move Animation
+Trigger: Autorun
+
+List of Event Commands:
+@>Wait: 20 frame(s)
+@>Set Move Route: Player
+ :              : $>Move Up
+ :              : $>Move Up
+ :              : $>Move Up
+@>Wait: 20 frame(s)
+@>Set Move Route: [Eira]
+ :              : $>Move Down
+ :              : $>Move Down
+@>Wait: 12 frame(s)
+@>Show Animation: [Eira], [Exclaim bubble]
+@>Wait: 10 frame(s)
+@>Text: \xn[???]Oh, hallo!
+@>Text: \xn[???]Dein Name ist also \PN?
+@>Text: \xn[???]Was für ein Zufall!
+@>Text: \xn[???]Bodhi hat von dem Kampf gegen dich 
+ :    : berichtet.
+@>Text: \xn[???]Aber nicht nur das, du hast dich sogar gegen 
+ :    : legendäre Pokémon durchgesetzt.
+@>Text: \xn[???]Wer 6 Orden besitzt, hört dort meistens nicht 
+ :    : auf.
+@>Text: \xn[???]Ich schätze du möchtest zur nächsten 
+ :    : Herausforderung.
+@>Text: \xn[Eira]Ich bin übrigens Eira, die Arenaleiterin von 
+ :    : Noxburgh.
+@>Text: \xn[Eira]Seitdem Aeon nicht mehr derselbe ist, habe 
+ :    : ich die Arena übernommen.
+@>Text: \xn[Eira]Aber unser möglicher Kampf muss warten.
+@>Text: \xn[Eira]Es gibt einige seltsame Pokémon, die auf den 
+ :    : Dracheninseln aufgetaucht sind.
+@>Text: \xn[Eira]Das sind Pokémon, die aussehen, als 
+ :    : würden sie aus einer anderen Zeit stammen.
+@>Text: \xn[Eira]Es ist schwer zu beschreiben aber sie 
+ :    : wirken desorientiert.
+@>Text: \xn[Eira]Vielleicht ist das der Grund, weshalb sie so 
+ :    : aggressiv sind.
+@>Text: \xn[Eira]Ich konnte schon ein paar einfangen, aber 
+ :    : solange wir den Ursprung nicht finden...
+@>Text: \xn[Eira]scheinen es immer mehr zu werden.
+@>Text: \xn[Eira]Ich gehe jedem Hinweis nach, also falls du 
+ :    : etwas darüber weißt...
+@>Show Animation: [Nexus], [Question bubble]
+@>Wait: 20 frame(s)
+@>Set Move Route: [Nexus]
+ :              : $>Move Down
+ :              : $>Move Down
+ :              : $>Move Down
+ :              : $>Move Left
+ :              : $>Move Left
+ :              : $>Move Left
+@>Wait: 36 frame(s)
+@>Set Move Route: Player
+ :              : $>Turn Right
+@>Set Move Route: [Eira]
+ :              : $>Turn Right
+@>Text: \xn[???]Entschuldigen Sie bitte.
+@>Text: \xn[Nexus]Nexus, Privatdetektiv.
+@>Text: \xn[Nexus]Ich möchte auch gar nicht lange stören.
+@>Text: \xn[Nexus]Es war schwierig nicht hinzuhören.
+@>Text: \xn[Nexus]Der Name Aeon ist gefallen und da wurde 
+ :    : ich hellhörig.
+@>Text: \xn[Nexus]Es hat nicht nur in Noxburgh die Runde 
+ :    : gemacht, dass Aeon...
+@>Text: \xn[Nexus]sagen wir...
+@>Text: \xn[Nexus]vergesslich geworden ist.
+@>Text: \xn[Nexus]Auch ich war neugierig und habe 
+ :    : versucht herauszufinden, wie ein so talentierter 
+ :    : Trainer...
+@>Text: \xn[Nexus]alles vergessen konnte.
+@>Text: \xn[Nexus]Ich habe Videomaterial gefunden, von dem 
+ :    : Tag, als es passiert ist.
+@>Text: \xn[Nexus]Es war schwer zu finden, abgelegen in 
+ :    : einem kleinen Labor.
+@>Show Animation: [Eira], [Question bubble]
+@>Wait: 20 frame(s)
+@>Text: \xn[Eira]Was ist mit meinem Bruder passiert?
+@>Text: \xn[Nexus]Hier, Sie können es sich am besten selbst 
+ :    : ansehen.
+@>Set Move Route: [Eira]
+ :              : $>Move Right
+@>Wait: 6 frame(s)
+@>Wait: 20 frame(s)
+@>Set Move Route: [Eira]
+ :              : $>Turn Down
+ :              : $>Wait: 10 frame(s)
+ :              : $>Turn Right
+@>Wait: 10 frame(s)
+@>Wait: 20 frame(s)
+@>Set Move Route: [Eira]
+ :              : $>1 Step Backward
+ :              : $>Wait: 20 frame(s)
+ :              : $>Turn Down
+@>Wait: 26 frame(s)
+@>Set Move Route: Player
+ :              : $>Turn Up
+@>Text: \xn[Eira]Das warst du, oder?
+@>Text: \xn[Eira]Aber, wieso?
+@>Text: \xn[Eira]Bodhi erzählte von deinen Heldentaten.
+@>Text: \xn[Eira]Aber das war wohl gelogen.
+@>Text: \xn[Eira]Wieso hat er das getan?
+@>Text: \xn[Eira]Es gehen seltsame Dinge vor sich und du 
+ :    : scheinst ein Teil davon zu sein.
+@>Text: \xn[Eira]Ich glaube nicht, dass ich deine 
+ :    : Herausforderung annehmen kann, tut mir Leid.
+@>Set Move Route: [Eira]
+ :              : $>Turn Right
+@>Wait: 20 frame(s)
+@>Text: \xn[Eira]Danke für die Aufklärung.
+@>Set Move Route: [Eira]
+ :              : $>Move Right
+ :              : $>Move Down
+ :              : $>Move Down
+ :              : $>Move Down
+ :              : $>Move Down
+ :              : $>Move Down
+@>Wait: 36 frame(s)
+@>Script: pbSetSelfSwitch(40,"A",true)
+@>Set Move Route: [Nexus]
+ :              : $>Move Down
+ :              : $>Move Down
+ :              : $>Turn Left
+@>Wait: 12 frame(s)
+@>Set Move Route: Player
+ :              : $>Turn Right
+@>Text: \xn[Nexus]Schauen Sie sich die Pokémon hier im 
+ :    : Museum an.
+@>Text: \xn[Nexus]Manchmal sitze ich vor dem Aquarium und 
+ :    : sehe, wie sie die selbe Bahn schwimmen.
+@>Text: \xn[Nexus]Immer und immer wieder.
+@>Text: \xn[Nexus]Woran denkt es?
+@>Text: \xn[Nexus]Bestimmt nicht, ob der Strom heute Nacht 
+ :    : ausfällt.
+@>Text: \xn[Nexus]Ob Leitungen den Erdbeben standhalten 
+ :    : können.
+@>Text: \xn[Nexus]Ob Gerechigkeit herrscht.
+@>Text: \xn[Nexus]Wenn man diese Pokémon doch nur 
+ :    : freilassen würde, zurück ins Meer.
+@>Text: \xn[Nexus]Das ist jedoch eine Illusion.
+@>Text: \xn[Nexus]Auch das Meer ist nicht unendlich und 
+ :    : limitiert.
+@>Text: \xn[Nexus]Wir können die ganze Welt bereisen.
+@>Text: \xn[Nexus]Aber was gibt es über darüber hinaus?
+@>Text: \xn[Nexus]Sind wir auch nur gefangen in einem 
+ :    : kleinen Käfig, der für uns "groß" wirkt.
+@>Text: \xn[Nexus]Können wir jemals wirklich frei sein?
+@>Text: \xn[Nexus]Ein Video zeigt auch nur einen kleinen 
+ :    : Ausschnitt, vielleicht nicht die ganze Wahrheit.
+@>Text: \xn[Nexus]Jetzt habe ich Sie aber lange genug 
+ :    : aufgehalten.
+@>Text: \xn[Nexus]Ich werde Sie im Auge behalten, nur dass 
+ :    : Sie das wissen.
+@>Set Move Route: [Nexus]
+ :              : $>Move Down
+ :              : $>Move Down
+ :              : $>Move Down
+@>Wait: 18 frame(s)
+@>Script: pbSetSelfSwitch(41,"A",true)
+@>Control Self Switch: A =ON
+@>
+
+Page #2
+Conditions
+Self Switch A is ON
+
+Autonomous Movement
+Type: Fixed
+Speed: 3: Slow
+Freq: 3: Low
+Options Enabled
+Move Animation
+Trigger: Action Button
+
+List of Event Commands:
 @>
 
 #------------------------------------------------------------------------------
@@ -301269,6 +301540,10 @@ List of Event Commands:
 @>Text: Du hast dich furchtlos den Dieben gestellt und unsere 
  :    : Pokémon gerettet.
 @>Text: Das hast du dir verdient.
+@>Text: Ach, und hier ist ein Brutkasten für dich.
+@>Text: Damit kannst du bis zu 6 Eier ausbrüten, ohne einen 
+ :    : Platz im Team aufzugeben.
+@>Script: pbReceiveItem(:EGGINCUBATOR)
 @>Conditional Branch: Script: pbGenerateEgg(:DREEPY)
  @>Play ME: 'Egg get', 90, 100
  @>Text: Du erhälst ein Ei.
@@ -343914,6 +344189,1079 @@ List of Event Commands:
 #------------------------------------------------------------------------------
 
 #==============================================================================
+Map ID: 433
+Map Name: MAP433
+Tileset: 138: Kanal
+Width: 65, Height: 80
+
+#------------------------------------------------------------------------------
+Event ID: 001
+Event Name: EV001
+(X,Y): (056,057)
+
+Page #1
+Conditions
+None
+
+Graphic: Interruptor
+
+Autonomous Movement
+Type: Fixed
+Speed: 3: Slow
+Freq: 3: Low
+Options Enabled
+Move Animation
+Direction Fix
+Trigger: Action Button
+
+List of Event Commands:
+@>Play SE: '035-Switch04', 100, 100
+@>Wait: 4 frame(s)
+@>Set Move Route: This event
+ :              : $>Graphic: "Interruptor', 0, 2, 0
+@>Play SE: 'PRSFX- Present2', 100, 50
+@>Wait: 20 frame(s)
+@>Control Switches: [0399: Alle aus] = ON
+@>Control Self Switch: A =ON
+@>
+
+Page #2
+Conditions
+Self Switch A is ON
+
+Graphic: Interruptor
+
+Autonomous Movement
+Type: Fixed
+Speed: 3: Slow
+Freq: 3: Low
+Options Enabled
+Move Animation
+Direction Fix
+Trigger: Action Button
+
+List of Event Commands:
+@>
+
+#------------------------------------------------------------------------------
+Event ID: 002
+Event Name: Strom .sl
+(X,Y): (013,011)
+
+Page #1
+Conditions
+Switch 0397: Schalter Strom Rot is ON
+
+Graphic: Electricidad
+
+Autonomous Movement
+Type: Custom
+Custom Move Route:
+(Repeat Action)
+$>Graphic: "Electricidad', 0, 2, 0
+$>Wait: 4 frame(s)
+$>Graphic: "Electricidad', 0, 2, 1
+$>Wait: 4 frame(s)
+$>Graphic: "Electricidad', 0, 2, 2
+$>Wait: 4 frame(s)
+$>Graphic: "Electricidad', 0, 2, 3
+$>Wait: 4 frame(s)
+$>Graphic: "Electricidad', 0, 4, 1
+$>Wait: 4 frame(s)
+$>Graphic: "Electricidad', 0, 4, 2
+$>Wait: 4 frame(s)
+
+Speed: 6: Fastest
+Freq: 6: Highest
+Options Enabled
+Direction Fix
+Trigger: Player Touch
+
+List of Event Commands:
+@>Play SE: 'Elektro', 90, 100
+@>Set Move Route: Player
+ :              : $>1 Step Backward
+@>Wait for Move's Completion
+@>
+
+Page #2
+Conditions
+Switch 0398: Schalter Strom Blau is ON
+
+Autonomous Movement
+Type: Fixed
+Speed: 3: Slow
+Freq: 3: Low
+Options Enabled
+Move Animation
+Trigger: Action Button
+
+List of Event Commands:
+@>
+
+#------------------------------------------------------------------------------
+Event ID: 003
+Event Name: EV003
+(X,Y): (001,005)
+
+Page #1
+Conditions
+Switch 0397: Schalter Strom Rot is ON
+
+Autonomous Movement
+Type: Fixed
+Speed: 3: Slow
+Freq: 3: Low
+Options Enabled
+Move Animation
+Trigger: Action Button
+
+List of Event Commands:
+@>Play SE: 'Boton', 85, 100
+@>Control Switches: [0398: Schalter Strom Blau] = ON
+@>Control Switches: [0397: Schalter Strom Rot] = OFF
+@>Play SE: 'Electricidad', 90, 100
+@>
+
+Page #2
+Conditions
+Switch 0398: Schalter Strom Blau is ON
+
+Autonomous Movement
+Type: Fixed
+Speed: 3: Slow
+Freq: 3: Low
+Options Enabled
+Move Animation
+Trigger: Action Button
+
+List of Event Commands:
+@>Play SE: 'Boton', 85, 100
+@>Control Switches: [0397: Schalter Strom Rot] = ON
+@>Control Switches: [0398: Schalter Strom Blau] = OFF
+@>Play SE: 'Electricidad', 90, 100
+@>
+
+Page #3
+Conditions
+Switch 0399: Alle aus is ON
+
+Autonomous Movement
+Type: Fixed
+Speed: 3: Slow
+Freq: 3: Low
+Options Enabled
+Move Animation
+Trigger: Action Button
+
+List of Event Commands:
+@>
+
+#------------------------------------------------------------------------------
+Event ID: 004
+Event Name: Strom .sl
+(X,Y): (010,017)
+
+Page #1
+Conditions
+Switch 0397: Schalter Strom Rot is ON
+
+Graphic: Electricidad
+
+Autonomous Movement
+Type: Custom
+Custom Move Route:
+(Repeat Action)
+$>Graphic: "Electricidad', 0, 2, 0
+$>Wait: 4 frame(s)
+$>Graphic: "Electricidad', 0, 2, 1
+$>Wait: 4 frame(s)
+$>Graphic: "Electricidad', 0, 2, 2
+$>Wait: 4 frame(s)
+$>Graphic: "Electricidad', 0, 2, 3
+$>Wait: 4 frame(s)
+$>Graphic: "Electricidad', 0, 4, 1
+$>Wait: 4 frame(s)
+$>Graphic: "Electricidad', 0, 4, 2
+$>Wait: 4 frame(s)
+
+Speed: 6: Fastest
+Freq: 6: Highest
+Options Enabled
+Direction Fix
+Trigger: Player Touch
+
+List of Event Commands:
+@>Play SE: 'Elektro', 90, 100
+@>Set Move Route: Player
+ :              : $>1 Step Backward
+@>Wait for Move's Completion
+@>
+
+Page #2
+Conditions
+Switch 0398: Schalter Strom Blau is ON
+
+Autonomous Movement
+Type: Fixed
+Speed: 3: Slow
+Freq: 3: Low
+Options Enabled
+Move Animation
+Trigger: Action Button
+
+List of Event Commands:
+@>
+
+#------------------------------------------------------------------------------
+Event ID: 005
+Event Name: Strom .sl
+(X,Y): (043,013)
+
+Page #1
+Conditions
+Switch 0397: Schalter Strom Rot is ON
+
+Graphic: Electricidad
+
+Autonomous Movement
+Type: Custom
+Custom Move Route:
+(Repeat Action)
+$>Graphic: "Electricidad', 0, 2, 0
+$>Wait: 4 frame(s)
+$>Graphic: "Electricidad', 0, 2, 1
+$>Wait: 4 frame(s)
+$>Graphic: "Electricidad', 0, 2, 2
+$>Wait: 4 frame(s)
+$>Graphic: "Electricidad', 0, 2, 3
+$>Wait: 4 frame(s)
+$>Graphic: "Electricidad', 0, 4, 1
+$>Wait: 4 frame(s)
+$>Graphic: "Electricidad', 0, 4, 2
+$>Wait: 4 frame(s)
+
+Speed: 6: Fastest
+Freq: 6: Highest
+Options Enabled
+Direction Fix
+Trigger: Player Touch
+
+List of Event Commands:
+@>Play SE: 'Elektro', 90, 100
+@>Set Move Route: Player
+ :              : $>1 Step Backward
+@>Wait for Move's Completion
+@>
+
+Page #2
+Conditions
+Switch 0398: Schalter Strom Blau is ON
+
+Autonomous Movement
+Type: Fixed
+Speed: 3: Slow
+Freq: 3: Low
+Options Enabled
+Move Animation
+Trigger: Action Button
+
+List of Event Commands:
+@>
+
+#------------------------------------------------------------------------------
+Event ID: 006
+Event Name: Strom .sl
+(X,Y): (037,023)
+
+Page #1
+Conditions
+Switch 0397: Schalter Strom Rot is ON
+
+Graphic: Electricidad
+
+Autonomous Movement
+Type: Custom
+Custom Move Route:
+(Repeat Action)
+$>Graphic: "Electricidad', 0, 2, 0
+$>Wait: 4 frame(s)
+$>Graphic: "Electricidad', 0, 2, 1
+$>Wait: 4 frame(s)
+$>Graphic: "Electricidad', 0, 2, 2
+$>Wait: 4 frame(s)
+$>Graphic: "Electricidad', 0, 2, 3
+$>Wait: 4 frame(s)
+$>Graphic: "Electricidad', 0, 4, 1
+$>Wait: 4 frame(s)
+$>Graphic: "Electricidad', 0, 4, 2
+$>Wait: 4 frame(s)
+
+Speed: 6: Fastest
+Freq: 6: Highest
+Options Enabled
+Direction Fix
+Trigger: Player Touch
+
+List of Event Commands:
+@>Play SE: 'Elektro', 90, 100
+@>Set Move Route: Player
+ :              : $>1 Step Backward
+@>Wait for Move's Completion
+@>
+
+Page #2
+Conditions
+Switch 0398: Schalter Strom Blau is ON
+
+Autonomous Movement
+Type: Fixed
+Speed: 3: Slow
+Freq: 3: Low
+Options Enabled
+Move Animation
+Trigger: Action Button
+
+List of Event Commands:
+@>
+
+#------------------------------------------------------------------------------
+Event ID: 007
+Event Name: Strom .sl
+(X,Y): (024,039)
+
+Page #1
+Conditions
+Switch 0397: Schalter Strom Rot is ON
+
+Graphic: Electricidad
+
+Autonomous Movement
+Type: Custom
+Custom Move Route:
+(Repeat Action)
+$>Graphic: "Electricidad', 0, 2, 0
+$>Wait: 4 frame(s)
+$>Graphic: "Electricidad', 0, 2, 1
+$>Wait: 4 frame(s)
+$>Graphic: "Electricidad', 0, 2, 2
+$>Wait: 4 frame(s)
+$>Graphic: "Electricidad', 0, 2, 3
+$>Wait: 4 frame(s)
+$>Graphic: "Electricidad', 0, 4, 1
+$>Wait: 4 frame(s)
+$>Graphic: "Electricidad', 0, 4, 2
+$>Wait: 4 frame(s)
+
+Speed: 6: Fastest
+Freq: 6: Highest
+Options Enabled
+Direction Fix
+Trigger: Player Touch
+
+List of Event Commands:
+@>Play SE: 'Elektro', 90, 100
+@>Set Move Route: Player
+ :              : $>1 Step Backward
+@>Wait for Move's Completion
+@>
+
+Page #2
+Conditions
+Switch 0398: Schalter Strom Blau is ON
+
+Autonomous Movement
+Type: Fixed
+Speed: 3: Slow
+Freq: 3: Low
+Options Enabled
+Move Animation
+Trigger: Action Button
+
+List of Event Commands:
+@>
+
+#------------------------------------------------------------------------------
+Event ID: 008
+Event Name: Strom .sl
+(X,Y): (015,057)
+
+Page #1
+Conditions
+Switch 0397: Schalter Strom Rot is ON
+
+Graphic: Electricidad
+
+Autonomous Movement
+Type: Custom
+Custom Move Route:
+(Repeat Action)
+$>Graphic: "Electricidad', 0, 2, 0
+$>Wait: 4 frame(s)
+$>Graphic: "Electricidad', 0, 2, 1
+$>Wait: 4 frame(s)
+$>Graphic: "Electricidad', 0, 2, 2
+$>Wait: 4 frame(s)
+$>Graphic: "Electricidad', 0, 2, 3
+$>Wait: 4 frame(s)
+$>Graphic: "Electricidad', 0, 4, 1
+$>Wait: 4 frame(s)
+$>Graphic: "Electricidad', 0, 4, 2
+$>Wait: 4 frame(s)
+
+Speed: 6: Fastest
+Freq: 6: Highest
+Options Enabled
+Direction Fix
+Trigger: Player Touch
+
+List of Event Commands:
+@>Play SE: 'Elektro', 90, 100
+@>Set Move Route: Player
+ :              : $>1 Step Backward
+@>Wait for Move's Completion
+@>
+
+Page #2
+Conditions
+Switch 0398: Schalter Strom Blau is ON
+
+Autonomous Movement
+Type: Fixed
+Speed: 3: Slow
+Freq: 3: Low
+Options Enabled
+Move Animation
+Trigger: Action Button
+
+List of Event Commands:
+@>
+
+#------------------------------------------------------------------------------
+Event ID: 009
+Event Name: Strom .sl
+(X,Y): (022,066)
+
+Page #1
+Conditions
+Switch 0397: Schalter Strom Rot is ON
+
+Graphic: Electricidad
+
+Autonomous Movement
+Type: Custom
+Custom Move Route:
+(Repeat Action)
+$>Graphic: "Electricidad', 0, 2, 0
+$>Wait: 4 frame(s)
+$>Graphic: "Electricidad', 0, 2, 1
+$>Wait: 4 frame(s)
+$>Graphic: "Electricidad', 0, 2, 2
+$>Wait: 4 frame(s)
+$>Graphic: "Electricidad', 0, 2, 3
+$>Wait: 4 frame(s)
+$>Graphic: "Electricidad', 0, 4, 1
+$>Wait: 4 frame(s)
+$>Graphic: "Electricidad', 0, 4, 2
+$>Wait: 4 frame(s)
+
+Speed: 6: Fastest
+Freq: 6: Highest
+Options Enabled
+Direction Fix
+Trigger: Player Touch
+
+List of Event Commands:
+@>Play SE: 'Elektro', 90, 100
+@>Set Move Route: Player
+ :              : $>1 Step Backward
+@>Wait for Move's Completion
+@>
+
+Page #2
+Conditions
+Switch 0398: Schalter Strom Blau is ON
+
+Autonomous Movement
+Type: Fixed
+Speed: 3: Slow
+Freq: 3: Low
+Options Enabled
+Move Animation
+Trigger: Action Button
+
+List of Event Commands:
+@>
+
+#------------------------------------------------------------------------------
+Event ID: 010
+Event Name: Strom .sl
+(X,Y): (022,068)
+
+Page #1
+Conditions
+Switch 0397: Schalter Strom Rot is ON
+
+Graphic: Electricidad
+
+Autonomous Movement
+Type: Custom
+Custom Move Route:
+(Repeat Action)
+$>Graphic: "Electricidad', 0, 2, 0
+$>Wait: 4 frame(s)
+$>Graphic: "Electricidad', 0, 2, 1
+$>Wait: 4 frame(s)
+$>Graphic: "Electricidad', 0, 2, 2
+$>Wait: 4 frame(s)
+$>Graphic: "Electricidad', 0, 2, 3
+$>Wait: 4 frame(s)
+$>Graphic: "Electricidad', 0, 4, 1
+$>Wait: 4 frame(s)
+$>Graphic: "Electricidad', 0, 4, 2
+$>Wait: 4 frame(s)
+
+Speed: 6: Fastest
+Freq: 6: Highest
+Options Enabled
+Direction Fix
+Trigger: Player Touch
+
+List of Event Commands:
+@>Play SE: 'Elektro', 90, 100
+@>Set Move Route: Player
+ :              : $>1 Step Backward
+@>Wait for Move's Completion
+@>
+
+Page #2
+Conditions
+Switch 0398: Schalter Strom Blau is ON
+
+Autonomous Movement
+Type: Fixed
+Speed: 3: Slow
+Freq: 3: Low
+Options Enabled
+Move Animation
+Trigger: Action Button
+
+List of Event Commands:
+@>
+
+#------------------------------------------------------------------------------
+Event ID: 011
+Event Name: Strom .sl
+(X,Y): (007,020)
+
+Page #1
+Conditions
+Switch 0398: Schalter Strom Blau is ON
+
+Graphic: Electricidad
+
+Autonomous Movement
+Type: Custom
+Custom Move Route:
+(Repeat Action)
+$>Graphic: "Electricidad', 0, 2, 0
+$>Wait: 4 frame(s)
+$>Graphic: "Electricidad', 0, 2, 1
+$>Wait: 4 frame(s)
+$>Graphic: "Electricidad', 0, 2, 2
+$>Wait: 4 frame(s)
+$>Graphic: "Electricidad', 0, 2, 3
+$>Wait: 4 frame(s)
+$>Graphic: "Electricidad', 0, 4, 1
+$>Wait: 4 frame(s)
+$>Graphic: "Electricidad', 0, 4, 2
+$>Wait: 4 frame(s)
+
+Speed: 6: Fastest
+Freq: 6: Highest
+Options Enabled
+Direction Fix
+Trigger: Player Touch
+
+List of Event Commands:
+@>Play SE: 'Elektro', 90, 100
+@>Set Move Route: Player
+ :              : $>1 Step Backward
+@>Wait for Move's Completion
+@>
+
+Page #2
+Conditions
+Switch 0397: Schalter Strom Rot is ON
+
+Autonomous Movement
+Type: Fixed
+Speed: 3: Slow
+Freq: 3: Low
+Options Enabled
+Move Animation
+Trigger: Action Button
+
+List of Event Commands:
+@>
+
+#------------------------------------------------------------------------------
+Event ID: 012
+Event Name: Strom .sl
+(X,Y): (028,014)
+
+Page #1
+Conditions
+Switch 0398: Schalter Strom Blau is ON
+
+Graphic: Electricidad
+
+Autonomous Movement
+Type: Custom
+Custom Move Route:
+(Repeat Action)
+$>Graphic: "Electricidad', 0, 2, 0
+$>Wait: 4 frame(s)
+$>Graphic: "Electricidad', 0, 2, 1
+$>Wait: 4 frame(s)
+$>Graphic: "Electricidad', 0, 2, 2
+$>Wait: 4 frame(s)
+$>Graphic: "Electricidad', 0, 2, 3
+$>Wait: 4 frame(s)
+$>Graphic: "Electricidad', 0, 4, 1
+$>Wait: 4 frame(s)
+$>Graphic: "Electricidad', 0, 4, 2
+$>Wait: 4 frame(s)
+
+Speed: 6: Fastest
+Freq: 6: Highest
+Options Enabled
+Direction Fix
+Trigger: Player Touch
+
+List of Event Commands:
+@>Play SE: 'Elektro', 90, 100
+@>Set Move Route: Player
+ :              : $>1 Step Backward
+@>Wait for Move's Completion
+@>
+
+Page #2
+Conditions
+Switch 0397: Schalter Strom Rot is ON
+
+Autonomous Movement
+Type: Fixed
+Speed: 3: Slow
+Freq: 3: Low
+Options Enabled
+Move Animation
+Trigger: Action Button
+
+List of Event Commands:
+@>
+
+#------------------------------------------------------------------------------
+Event ID: 013
+Event Name: Strom .sl
+(X,Y): (031,023)
+
+Page #1
+Conditions
+Switch 0398: Schalter Strom Blau is ON
+
+Graphic: Electricidad
+
+Autonomous Movement
+Type: Custom
+Custom Move Route:
+(Repeat Action)
+$>Graphic: "Electricidad', 0, 2, 0
+$>Wait: 4 frame(s)
+$>Graphic: "Electricidad', 0, 2, 1
+$>Wait: 4 frame(s)
+$>Graphic: "Electricidad', 0, 2, 2
+$>Wait: 4 frame(s)
+$>Graphic: "Electricidad', 0, 2, 3
+$>Wait: 4 frame(s)
+$>Graphic: "Electricidad', 0, 4, 1
+$>Wait: 4 frame(s)
+$>Graphic: "Electricidad', 0, 4, 2
+$>Wait: 4 frame(s)
+
+Speed: 6: Fastest
+Freq: 6: Highest
+Options Enabled
+Direction Fix
+Trigger: Player Touch
+
+List of Event Commands:
+@>Play SE: 'Elektro', 90, 100
+@>Set Move Route: Player
+ :              : $>1 Step Backward
+@>Wait for Move's Completion
+@>
+
+Page #2
+Conditions
+Switch 0397: Schalter Strom Rot is ON
+
+Autonomous Movement
+Type: Fixed
+Speed: 3: Slow
+Freq: 3: Low
+Options Enabled
+Move Animation
+Trigger: Action Button
+
+List of Event Commands:
+@>
+
+#------------------------------------------------------------------------------
+Event ID: 014
+Event Name: Strom .sl
+(X,Y): (027,039)
+
+Page #1
+Conditions
+Switch 0398: Schalter Strom Blau is ON
+
+Graphic: Electricidad
+
+Autonomous Movement
+Type: Custom
+Custom Move Route:
+(Repeat Action)
+$>Graphic: "Electricidad', 0, 2, 0
+$>Wait: 4 frame(s)
+$>Graphic: "Electricidad', 0, 2, 1
+$>Wait: 4 frame(s)
+$>Graphic: "Electricidad', 0, 2, 2
+$>Wait: 4 frame(s)
+$>Graphic: "Electricidad', 0, 2, 3
+$>Wait: 4 frame(s)
+$>Graphic: "Electricidad', 0, 4, 1
+$>Wait: 4 frame(s)
+$>Graphic: "Electricidad', 0, 4, 2
+$>Wait: 4 frame(s)
+
+Speed: 6: Fastest
+Freq: 6: Highest
+Options Enabled
+Direction Fix
+Trigger: Player Touch
+
+List of Event Commands:
+@>Play SE: 'Elektro', 90, 100
+@>Set Move Route: Player
+ :              : $>1 Step Backward
+@>Wait for Move's Completion
+@>
+
+Page #2
+Conditions
+Switch 0397: Schalter Strom Rot is ON
+
+Autonomous Movement
+Type: Fixed
+Speed: 3: Slow
+Freq: 3: Low
+Options Enabled
+Move Animation
+Trigger: Action Button
+
+List of Event Commands:
+@>
+
+#------------------------------------------------------------------------------
+Event ID: 015
+Event Name: Strom .sl
+(X,Y): (043,034)
+
+Page #1
+Conditions
+Switch 0398: Schalter Strom Blau is ON
+
+Graphic: Electricidad
+
+Autonomous Movement
+Type: Custom
+Custom Move Route:
+(Repeat Action)
+$>Graphic: "Electricidad', 0, 2, 0
+$>Wait: 4 frame(s)
+$>Graphic: "Electricidad', 0, 2, 1
+$>Wait: 4 frame(s)
+$>Graphic: "Electricidad', 0, 2, 2
+$>Wait: 4 frame(s)
+$>Graphic: "Electricidad', 0, 2, 3
+$>Wait: 4 frame(s)
+$>Graphic: "Electricidad', 0, 4, 1
+$>Wait: 4 frame(s)
+$>Graphic: "Electricidad', 0, 4, 2
+$>Wait: 4 frame(s)
+
+Speed: 6: Fastest
+Freq: 6: Highest
+Options Enabled
+Direction Fix
+Trigger: Player Touch
+
+List of Event Commands:
+@>Play SE: 'Elektro', 90, 100
+@>Set Move Route: Player
+ :              : $>1 Step Backward
+@>Wait for Move's Completion
+@>
+
+Page #2
+Conditions
+Switch 0397: Schalter Strom Rot is ON
+
+Autonomous Movement
+Type: Fixed
+Speed: 3: Slow
+Freq: 3: Low
+Options Enabled
+Move Animation
+Trigger: Action Button
+
+List of Event Commands:
+@>
+
+#------------------------------------------------------------------------------
+Event ID: 016
+Event Name: Strom .sl
+(X,Y): (023,047)
+
+Page #1
+Conditions
+Switch 0398: Schalter Strom Blau is ON
+
+Graphic: Electricidad
+
+Autonomous Movement
+Type: Custom
+Custom Move Route:
+(Repeat Action)
+$>Graphic: "Electricidad', 0, 2, 0
+$>Wait: 4 frame(s)
+$>Graphic: "Electricidad', 0, 2, 1
+$>Wait: 4 frame(s)
+$>Graphic: "Electricidad', 0, 2, 2
+$>Wait: 4 frame(s)
+$>Graphic: "Electricidad', 0, 2, 3
+$>Wait: 4 frame(s)
+$>Graphic: "Electricidad', 0, 4, 1
+$>Wait: 4 frame(s)
+$>Graphic: "Electricidad', 0, 4, 2
+$>Wait: 4 frame(s)
+
+Speed: 6: Fastest
+Freq: 6: Highest
+Options Enabled
+Direction Fix
+Trigger: Player Touch
+
+List of Event Commands:
+@>Play SE: 'Elektro', 90, 100
+@>Set Move Route: Player
+ :              : $>1 Step Backward
+@>Wait for Move's Completion
+@>
+
+Page #2
+Conditions
+Switch 0397: Schalter Strom Rot is ON
+
+Autonomous Movement
+Type: Fixed
+Speed: 3: Slow
+Freq: 3: Low
+Options Enabled
+Move Animation
+Trigger: Action Button
+
+List of Event Commands:
+@>
+
+#------------------------------------------------------------------------------
+Event ID: 017
+Event Name: Strom .sl
+(X,Y): (015,059)
+
+Page #1
+Conditions
+Switch 0398: Schalter Strom Blau is ON
+
+Graphic: Electricidad
+
+Autonomous Movement
+Type: Custom
+Custom Move Route:
+(Repeat Action)
+$>Graphic: "Electricidad', 0, 2, 0
+$>Wait: 4 frame(s)
+$>Graphic: "Electricidad', 0, 2, 1
+$>Wait: 4 frame(s)
+$>Graphic: "Electricidad', 0, 2, 2
+$>Wait: 4 frame(s)
+$>Graphic: "Electricidad', 0, 2, 3
+$>Wait: 4 frame(s)
+$>Graphic: "Electricidad', 0, 4, 1
+$>Wait: 4 frame(s)
+$>Graphic: "Electricidad', 0, 4, 2
+$>Wait: 4 frame(s)
+
+Speed: 6: Fastest
+Freq: 6: Highest
+Options Enabled
+Direction Fix
+Trigger: Player Touch
+
+List of Event Commands:
+@>Play SE: 'Elektro', 90, 100
+@>Set Move Route: Player
+ :              : $>1 Step Backward
+@>Wait for Move's Completion
+@>
+
+Page #2
+Conditions
+Switch 0397: Schalter Strom Rot is ON
+
+Autonomous Movement
+Type: Fixed
+Speed: 3: Slow
+Freq: 3: Low
+Options Enabled
+Move Animation
+Trigger: Action Button
+
+List of Event Commands:
+@>
+
+#------------------------------------------------------------------------------
+Event ID: 018
+Event Name: Strom .sl
+(X,Y): (022,067)
+
+Page #1
+Conditions
+Switch 0398: Schalter Strom Blau is ON
+
+Graphic: Electricidad
+
+Autonomous Movement
+Type: Custom
+Custom Move Route:
+(Repeat Action)
+$>Graphic: "Electricidad', 0, 2, 0
+$>Wait: 4 frame(s)
+$>Graphic: "Electricidad', 0, 2, 1
+$>Wait: 4 frame(s)
+$>Graphic: "Electricidad', 0, 2, 2
+$>Wait: 4 frame(s)
+$>Graphic: "Electricidad', 0, 2, 3
+$>Wait: 4 frame(s)
+$>Graphic: "Electricidad', 0, 4, 1
+$>Wait: 4 frame(s)
+$>Graphic: "Electricidad', 0, 4, 2
+$>Wait: 4 frame(s)
+
+Speed: 6: Fastest
+Freq: 6: Highest
+Options Enabled
+Direction Fix
+Trigger: Player Touch
+
+List of Event Commands:
+@>Play SE: 'Elektro', 90, 100
+@>Set Move Route: Player
+ :              : $>1 Step Backward
+@>Wait for Move's Completion
+@>
+
+Page #2
+Conditions
+Switch 0397: Schalter Strom Rot is ON
+
+Autonomous Movement
+Type: Fixed
+Speed: 3: Slow
+Freq: 3: Low
+Options Enabled
+Move Animation
+Trigger: Action Button
+
+List of Event Commands:
+@>
+
+#------------------------------------------------------------------------------
+Event ID: 019
+Event Name: Strom .sl
+(X,Y): (037,063)
+
+Page #1
+Conditions
+Switch 0398: Schalter Strom Blau is ON
+
+Graphic: Electricidad
+
+Autonomous Movement
+Type: Custom
+Custom Move Route:
+(Repeat Action)
+$>Graphic: "Electricidad', 0, 2, 0
+$>Wait: 4 frame(s)
+$>Graphic: "Electricidad', 0, 2, 1
+$>Wait: 4 frame(s)
+$>Graphic: "Electricidad', 0, 2, 2
+$>Wait: 4 frame(s)
+$>Graphic: "Electricidad', 0, 2, 3
+$>Wait: 4 frame(s)
+$>Graphic: "Electricidad', 0, 4, 1
+$>Wait: 4 frame(s)
+$>Graphic: "Electricidad', 0, 4, 2
+$>Wait: 4 frame(s)
+
+Speed: 6: Fastest
+Freq: 6: Highest
+Options Enabled
+Direction Fix
+Trigger: Player Touch
+
+List of Event Commands:
+@>Play SE: 'Elektro', 90, 100
+@>Set Move Route: Player
+ :              : $>1 Step Backward
+@>Wait for Move's Completion
+@>
+
+Page #2
+Conditions
+Switch 0397: Schalter Strom Rot is ON
+
+Autonomous Movement
+Type: Fixed
+Speed: 3: Slow
+Freq: 3: Low
+Options Enabled
+Move Animation
+Trigger: Action Button
+
+List of Event Commands:
+@>
+
+#------------------------------------------------------------------------------
+
+#==============================================================================
+Map ID: 434
+Map Name: MAP434
+Tileset: 138: Kanal
+Width: 70, Height: 65
+
+#==============================================================================
 Map ID: 435
 Map Name: Mooswind-Kaverne
 Tileset: 089: Viridium-Höhle
@@ -373284,32 +374632,7 @@ List of Event Commands:
 @>
 
 #------------------------------------------------------------------------------
-Event ID: 008
-Event Name: Exit size(3,1)
-(X,Y): (018,033)
-
-Page #1
-Conditions
-None
-
-Autonomous Movement
-Type: Fixed
-Speed: 3: Slow
-Freq: 3: Low
-Options Enabled
-Move Animation
-Trigger: Player Touch
-
-List of Event Commands:
-@>Play SE: 'Door exit', 80, 100
-@>Change Screen Color Tone: (-255,-255,-255,0), @6
-@>Wait: 8 frame(s)
-@>Transfer Player:[177: Tonishi], (075,095), Down, No Fade
-@>Change Screen Color Tone: (0,0,0,0), @6
-@>
-
-#------------------------------------------------------------------------------
-Event ID: 010
+Event ID: 007
 Event Name: Quest 1
 (X,Y): (019,023)
 
@@ -373340,13 +374663,23 @@ List of Event Commands:
 @>Text: \xn[Vogelfänger Flynn]Voller Dreck von den Straßen.
 @>Show Animation: This event, [Happy bubble]
 @>Wait: 24 frame(s)
-@>Text: \xn[Vogelfänger Flynn]Ein echter Vogelfänger lebt in 
- :    : den Wolken.
-@>Text: \xn[Vogelfänger Flynn]Beweis mir, dass du bereits 
- :    : flügge bist.
-@>Text: \xn[Vogelfänger Flynn]Bringe mir ein Botogel und wir 
- :    : schauen gemeinsam, was es in seinem Beutel 
- :    : versteckt.
+@>Text: \xn[Vogelfänger Flynn]Aber der Himmel gehört 
+ :    : niemandem, weißt du das?
+@>Text: \xn[Vogelfänger Flynn]Wir heißen zwar Vogelfänger, 
+ :    : aber wir arbeiten eng mit unseren Pokémon 
+ :    : zusammen.
+@>Text: \xn[Vogelfänger Flynn]Wenn du in unseren Club 
+ :    : eintreten möchtest,
+@>Text: \xn[Vogelfänger Flynn]will ich sehen, dass du es 
+ :    : ernst meinst.
+@>Text: \xn[Vogelfänger Flynn]Vogel-Pokémon sind vielseitig.
+@>Text: \xn[Vogelfänger Flynn]Ein Botogel beispielsweise 
+ :    : liebt kalte Gebiete und kann auch bei Eiseskälte 
+ :    : fliegen.
+@>Text: \xn[Vogelfänger Flynn]Außerdem verteilt es 
+ :    : Geschenke, ist das nicht seltsam?!
+@>Text: \xn[Vogelfänger Flynn]Zeige mir ein waschechtes 
+ :    : Botogel und du bist Mitglied in unserem Club.
 @>Script: activateQuest(:Quest62)
 @>Script: pbSetSelfSwitch(11,"A",true)
 @>Wait: 8 frame(s)
@@ -373382,13 +374715,20 @@ List of Event Commands:
  @>Text: \xn[Vogelfänger Flynn]Ich habe es dir bereits 
   :    : angesehen, dass du wirklich Mitglied in diesem Club 
   :    : werden willst.
- @>Text: \xn[Vogelfänger Flynn]Dann lass uns gemeinsam in 
-  :    : seinen Beutel schauen.
  @>Text: \xn[Vogelfänger Flynn]Oh! Was haben wir denn da?
+ @>Text: \xn[Vogelfänger Flynn]Das Botogel scheint dir etwas 
+  :    : geben zu wollen.
  @>Script: pbReceiveItem(:CHOICESCARF)
+ @>Text: \xn[Vogelfänger Flynn]Ein Wahlschal!
+ @>Text: \xn[Vogelfänger Flynn]Will es dir etwa sagen, dass 
+  :    : es dich auserwählt hat?
+ @>Text: \xn[Vogelfänger Flynn]Oder möchte es dich in der 
+  :    : Kälte wärmen?
+ @>Text: \xn[Vogelfänger Flynn]Jedenfalls scheint es dich zu 
+  :    : mögen.
  @>Text: \xn[Vogelfänger Flynn]Du hast bewiesen, dass du es 
   :    : Wert bist ein Teil des Vogelfänger-Clubs zu sein.
- @>Text: \xn[Vogelfänger Flynn]Herzlichen Glückwunsch.
+ @>Text: \xn[Vogelfänger Flynn]Herzlich Willkommen.
  @>Show Animation: This event, [Heart Emote]
  @>Wait: 20 frame(s)
  @>Script: completeQuest(:Quest62)
@@ -373397,7 +374737,7 @@ List of Event Commands:
   :    : solltest du in der Lage sein,...
  @>Text: \xn[Vogelfänger Flynn]die Aufgaben unser 
   :    : Clubmitglieder zu erfüllen.
- @>Text: \xn[Vogelfänger Flynn]Du erhälst eine Medaille für 
+ @>Text: \xn[Vogelfänger Flynn]Du verdienst eine Medaille für 
   :    : jeden unserer Ränge.
  @>Text: \xn[Vogelfänger Flynn]Ich wünsche dir viel Erfolg und 
   :    : immer einen guten Flug.
@@ -373436,7 +374776,7 @@ List of Event Commands:
  :    : es nicht nur darum die schönsten Wind-Pokémon zu 
  :    : fangen.
 @>Text: \xn[Vogelfänger Flynn]Natürlich ist man immer auf der 
- :    : Suche nach besonderen Formen und Farb-Varianten.
+ :    : Suche nach besonderen Formen und Varianten.
 @>Text: \xn[Vogelfänger Flynn]Doch man muss sie auch 
  :    : verstehen.
 @>Text: \xn[Vogelfänger Flynn]Wo leben sie? 
@@ -373455,6 +374795,31 @@ List of Event Commands:
 @>Wait: 8 frame(s)
 @>Set Move Route: This event
  :              : $>Turn Down
+@>
+
+#------------------------------------------------------------------------------
+Event ID: 008
+Event Name: Exit size(3,1)
+(X,Y): (018,033)
+
+Page #1
+Conditions
+None
+
+Autonomous Movement
+Type: Fixed
+Speed: 3: Slow
+Freq: 3: Low
+Options Enabled
+Move Animation
+Trigger: Player Touch
+
+List of Event Commands:
+@>Play SE: 'Door exit', 80, 100
+@>Change Screen Color Tone: (-255,-255,-255,0), @6
+@>Wait: 8 frame(s)
+@>Transfer Player:[177: Tonishi], (075,095), Down, No Fade
+@>Change Screen Color Tone: (0,0,0,0), @6
 @>
 
 #------------------------------------------------------------------------------
@@ -373881,7 +375246,7 @@ List of Event Commands:
  :    : einen Gefallen tun.
 @>Text: \xn[Vogelfänger Anan]Auf Route 9 befindet sich ein 
  :    : Washakwil-Horst.
-@>Text: \xn[Vogelfänger Anan]Aber jedesmal ,wenn ich da 
+@>Text: \xn[Vogelfänger Anan]Aber jedes Mal, wenn ich da 
  :    : bin, ist es leer.
 @>Text: \xn[Vogelfänger Anan]Würdest du für mich 
  :    : nachschauen, ob dort mittlerweile ein Ei liegt?
@@ -373905,7 +375270,7 @@ Graphic: trainer_BIRDKEEPER_M
 
 Autonomous Movement
 Type: Fixed
-Speed: 3: Slow
+Speed: 4: Fast
 Freq: 3: Low
 Options Enabled
 Move Animation
@@ -373926,7 +375291,7 @@ List of Event Commands:
  @>Show Animation: This event, [Exclaim bubble]
  @>Wait: 12 frame(s)
  @>Text: \xn[Vogelfänger Anan]Da war wirklich ein Ei?
- @>Text: \xn[Vogelfänger Anan]Ach währe ich doch selbst 
+ @>Text: \xn[Vogelfänger Anan]Ach wäre ich doch selbst 
   :    : nachschauen gewesen.
  @>Text: \xn[Vogelfänger Anan]Trotzdem vielen Dank, dass du 
   :    : mir das Ei besorgt hast.
@@ -374159,9 +375524,9 @@ List of Event Commands:
  @>Text: \xn[Vogelfängerin Miku]Jetzt muss ich nur noch 
   :    : Flaminkno einfangen.
  @>Text: \xn[Vogelfängerin Miku]Manchmal muss man sein 
-  :    : Pokémon zwingen damit es schön aussieht.
+  :    : Pokémon zwingen, damit es schön aussieht.
  @>Text: \xn[Vogelfängerin Miku]Vielleicht kannst du das einem 
-  :    : deiner Pokémon geben...
+  :    : deiner Pokémon geben,...
  @>Text: \xn[Vogelfängerin Miku]damit es noch schöner wird.
  @>Script: pbReceiveItem(:CORVIKNIGHTITE)
  @>Control Variables: [0130: Vogelfänger Mitglied] += 1
@@ -437342,7 +438707,7 @@ List of Event Commands:
 
 #------------------------------------------------------------------------------
 Event ID: 028
-Event Name: Forstellka
+Event Name: Ditto
 (X,Y): (008,002)
 
 Page #1
@@ -440511,6 +441876,35 @@ Move Animation
 Trigger: Action Button
 
 List of Event Commands:
+@>
+
+#------------------------------------------------------------------------------
+Event ID: 006
+Event Name: EV006
+(X,Y): (018,013)
+
+Page #1
+Conditions
+None
+
+Autonomous Movement
+Type: Fixed
+Speed: 3: Slow
+Freq: 3: Low
+Options Enabled
+Move Animation
+Trigger: Action Button
+
+List of Event Commands:
+@>Text: <i>Was übrig blieb, als das Ganze zerbrach, war 
+ :    : weder Feuer, noch Donner.</i>
+@>Text: <i>Es nahm die Leere, die niemand haben wollte.</i>
+@>Text: <i>Wahrheit ohne Ideale ist kalt.</i>
+@>Text: <i>Ideale ohne Wahrheit sind blind.</i>
+@>Text: <i>Doch die Leere ist imstande beide zu 
+ :    : verdrängen.</i>
+@>Text: Der Name in der letzten Zeile scheint nicht zu Ende 
+ :    : gemeißelt zu sein.
 @>
 
 #------------------------------------------------------------------------------
@@ -464085,7 +465479,7 @@ List of Event Commands:
 Map ID: 631
 Map Name: Pfad der Drachen
 Tileset: 129: Dracheninseln
-Width: 50, Height: 65
+Width: 65, Height: 65
 
 #------------------------------------------------------------------------------
 Event ID: 001
@@ -464412,7 +465806,7 @@ List of Event Commands:
 #------------------------------------------------------------------------------
 Event ID: 015
 Event Name: Amagarga size(2,1)
-(X,Y): (041,033)
+(X,Y): (001,013)
 
 Page #1
 Conditions
@@ -464526,6 +465920,126 @@ Conditions
 None
 
 Graphic: Honigbaum
+
+Autonomous Movement
+Type: Fixed
+Speed: 3: Slow
+Freq: 3: Low
+Options Enabled
+Move Animation
+Trigger: Action Button
+
+List of Event Commands:
+@>
+
+#------------------------------------------------------------------------------
+Event ID: 019
+Event Name: Wutpilz
+(X,Y): (045,040)
+
+Page #1
+Conditions
+None
+
+Graphic: BRUTEBONNET
+
+Autonomous Movement
+Type: Fixed
+Speed: 1: Slowest
+Freq: 4: High
+Options Enabled
+Move Animation
+Stop Animation
+Trigger: Action Button
+
+List of Event Commands:
+@>Play SE: 'BRUTEBONNET', 100, 100
+@>Wait: 10 frame(s)
+@>Script: setBattleRule("cannotRun")
+:       : setBattleRule("outcome", 48)
+:       : pkmn = Pokemon.new(:BRUTEBONNET,60)
+:       : pkmn.ability_index = 0
+:       : pkmn.calc_stats
+:       : WildBattle.start(pkmn)
+@>Conditional Branch: Variable [0048: Kampf-Ergebnis] == 2
+ @>Exit Event Processing
+ @>
+: Else
+ @>Control Variables: [0131: Paradox] += 1
+ @>Conditional Branch: Variable [0131: Paradox] >= 10
+  @>Text: Du hast alle Paradox-Pokémon eingesammelt.
+  @>
+ : Else
+  @>
+ : Branch End
+ @>Control Self Switch: A =ON
+ @>
+: Branch End
+@>
+
+Page #2
+Conditions
+Self Switch A is ON
+
+Autonomous Movement
+Type: Fixed
+Speed: 3: Slow
+Freq: 3: Low
+Options Enabled
+Move Animation
+Trigger: Action Button
+
+List of Event Commands:
+@>
+
+#------------------------------------------------------------------------------
+Event ID: 020
+Event Name: Wutpilz size(2,1)
+(X,Y): (006,043)
+
+Page #1
+Conditions
+None
+
+Graphic: BRUTEBONNET
+
+Autonomous Movement
+Type: Fixed
+Speed: 1: Slowest
+Freq: 4: High
+Options Enabled
+Move Animation
+Stop Animation
+Trigger: Action Button
+
+List of Event Commands:
+@>Play SE: 'BRUTEBONNET', 100, 100
+@>Wait: 10 frame(s)
+@>Script: setBattleRule("cannotRun")
+:       : setBattleRule("outcome", 48)
+:       : pkmn = Pokemon.new(:BRUTEBONNET,60)
+:       : pkmn.ability_index = 0
+:       : pkmn.calc_stats
+:       : WildBattle.start(pkmn)
+@>Conditional Branch: Variable [0048: Kampf-Ergebnis] == 2
+ @>Exit Event Processing
+ @>
+: Else
+ @>Control Variables: [0131: Paradox] += 1
+ @>Conditional Branch: Variable [0131: Paradox] >= 10
+  @>Text: Du hast alle Paradox-Pokémon eingesammelt.
+  @>
+ : Else
+  @>
+ : Branch End
+ @>Control Self Switch: A =ON
+ @>
+: Branch End
+@>
+
+Page #2
+Conditions
+Self Switch A is ON
 
 Autonomous Movement
 Type: Fixed
@@ -471421,50 +472935,6 @@ List of Event Commands:
 @>
 
 #------------------------------------------------------------------------------
-Event ID: 005
-Event Name: Bridge size(3,1)
-(X,Y): (033,020)
-
-Page #1
-Conditions
-None
-
-Autonomous Movement
-Type: Fixed
-Speed: 3: Slow
-Freq: 3: Low
-Options Enabled
-Move Animation
-Through
-Trigger: Player Touch
-
-List of Event Commands:
-@>Script: pbBridgeOn
-@>
-
-#------------------------------------------------------------------------------
-Event ID: 006
-Event Name: Bridge size(3,1)
-(X,Y): (033,021)
-
-Page #1
-Conditions
-None
-
-Autonomous Movement
-Type: Fixed
-Speed: 3: Slow
-Freq: 3: Low
-Options Enabled
-Move Animation
-Through
-Trigger: Player Touch
-
-List of Event Commands:
-@>Script: pbBridgeOff
-@>
-
-#------------------------------------------------------------------------------
 Event ID: 007
 Event Name: Haus 1 Tür
 (X,Y): (049,030)
@@ -471514,6 +472984,66 @@ List of Event Commands:
 @>Transfer Player:[649: Zwischengebäude], (008,017), Up, No Fade
 @>Change Screen Color Tone: (0,0,0,0), @6
 @>Wait: 8 frame(s)
+@>
+
+#------------------------------------------------------------------------------
+Event ID: 009
+Event Name: Wutpilz
+(X,Y): (004,016)
+
+Page #1
+Conditions
+None
+
+Graphic: BRUTEBONNET
+
+Autonomous Movement
+Type: Fixed
+Speed: 1: Slowest
+Freq: 4: High
+Options Enabled
+Move Animation
+Stop Animation
+Trigger: Action Button
+
+List of Event Commands:
+@>Play SE: 'BRUTEBONNET', 100, 100
+@>Wait: 10 frame(s)
+@>Script: setBattleRule("cannotRun")
+:       : setBattleRule("outcome", 48)
+:       : pkmn = Pokemon.new(:BRUTEBONNET,60)
+:       : pkmn.ability_index = 0
+:       : pkmn.calc_stats
+:       : WildBattle.start(pkmn)
+@>Conditional Branch: Variable [0048: Kampf-Ergebnis] == 2
+ @>Exit Event Processing
+ @>
+: Else
+ @>Control Variables: [0131: Paradox] += 1
+ @>Conditional Branch: Variable [0131: Paradox] >= 10
+  @>Text: Du hast alle Paradox-Pokémon eingesammelt.
+  @>
+ : Else
+  @>
+ : Branch End
+ @>Control Self Switch: A =ON
+ @>
+: Branch End
+@>
+
+Page #2
+Conditions
+Self Switch A is ON
+
+Autonomous Movement
+Type: Fixed
+Speed: 3: Slow
+Freq: 3: Low
+Options Enabled
+Move Animation
+Trigger: Action Button
+
+List of Event Commands:
 @>
 
 #------------------------------------------------------------------------------
@@ -471652,6 +473182,270 @@ List of Event Commands:
 @>Transfer Player:[646: Route 19], (048,030), Left, No Fade
 @>Change Screen Color Tone: (0,0,0,0), @6
 @>Wait: 8 frame(s)
+@>
+
+#------------------------------------------------------------------------------
+Event ID: 006
+Event Name: Elisa
+(X,Y): (046,023)
+
+Page #1
+Conditions
+None
+
+Graphic: NPCStylist
+
+Autonomous Movement
+Type: Fixed
+Speed: 3: Slow
+Freq: 3: Low
+Options Enabled
+Move Animation
+Trigger: Action Button
+
+List of Event Commands:
+@>
+
+Page #2
+Conditions
+Self Switch A is ON
+
+Autonomous Movement
+Type: Fixed
+Speed: 3: Slow
+Freq: 3: Low
+Options Enabled
+Move Animation
+Trigger: Action Button
+
+List of Event Commands:
+@>
+
+#------------------------------------------------------------------------------
+Event ID: 007
+Event Name: EV007
+(X,Y): (048,023)
+
+Page #1
+Conditions
+None
+
+Autonomous Movement
+Type: Fixed
+Speed: 3: Slow
+Freq: 3: Low
+Options Enabled
+Move Animation
+Trigger: Player Touch
+
+List of Event Commands:
+@>Set Move Route: Player
+ :              : $>Turn Left
+@>Show Animation: [Elisa], [Exclaim bubble]
+@>Wait: 10 frame(s)
+@>Set Move Route: [Elisa]
+ :              : $>Turn Right
+@>Text: \xn[Elisa]Hi, \PN!
+@>Text: \xn[Elisa]Schön, dich zu sehen.
+@>Text: \xn[Elisa]Ich habe über vieles nachgedacht und...
+@>Text: \xn[Elisa]natürlich kann ich nicht aufgeben und 
+ :    : aufhören nach Matteo zu suchen.
+@>Text: \xn[Elisa]Aber wir brauchen einen Plan.
+@>Show Animation: [Elisa], [Question bubble]
+@>Wait: 20 frame(s)
+@>Text: \xn[Elisa]Was sagst du da?
+@>Text: \xn[Elisa]Seltsame Pokémon auf den Dracheninseln?
+@>Text: \xn[Elisa]Die Arenaleiterin denkt, dass du Schuld an 
+ :    : Aeons Schicksal bist?
+@>Text: \xn[Elisa]Sie ist seine Schwester?
+@>Text: \xn[Elisa]Ohje, ich weiß genau, wie sie sich fühlen 
+ :    : muss.
+@>Text: \xn[Elisa]Mach' dir keine Sorgen.
+@>Text: \xn[Elisa]Das kriegen wir schon hin, aber zuerst 
+ :    : kümmern wir uns um diese Pokémon.
+@>Text: \xn[Elisa]Ich schlage vor, dass wir uns aufteilen.
+@>Text: \xn[Elisa]Es gibt vier Inseln, lass uns jeder zwei 
+ :    : absuchen.
+@>Text: \xn[Elisa]Ich kümmere mich um die beiden Inseln im 
+ :    : Westen.
+@>Text: \xn[Elisa]Du kannst dich auf dieser Insel hier 
+ :    : umschauen und dann weiter nach Osten gehen.
+@>Text: \xn[Elisa]Drachen-Pokémon sind bekanntlich sehr 
+ :    : stark.
+@>Text: \xn[Elisa]Team 0 wird bestimmt nicht weit sein.
+@>Text: \xn[Elisa]Ich warte dann in Noxburgh auf dich, bis du 
+ :    : fertig bist.
+@>Show Animation: [Elisa], [Happy bubble]
+@>Wait: 24 frame(s)
+@>Text: \xn[Elisa]Pass' gut auf dich auf.
+@>Change Screen Color Tone: (-255,-255,-255,0), @20
+@>Wait: 20 frame(s)
+@>Script: pbSetSelfSwitch(6,"A",true)
+@>Script: pbSetSelfSwitch(8,"A",true)
+@>Change Screen Color Tone: (0,0,0,0), @20
+@>Wait: 20 frame(s)
+@>Control Self Switch: A =ON
+@>
+
+Page #2
+Conditions
+Self Switch A is ON
+
+Autonomous Movement
+Type: Fixed
+Speed: 3: Slow
+Freq: 3: Low
+Options Enabled
+Move Animation
+Trigger: Action Button
+
+List of Event Commands:
+@>
+
+#------------------------------------------------------------------------------
+Event ID: 008
+Event Name: EV008
+(X,Y): (048,022)
+
+Page #1
+Conditions
+None
+
+Autonomous Movement
+Type: Fixed
+Speed: 3: Slow
+Freq: 3: Low
+Options Enabled
+Move Animation
+Trigger: Player Touch
+
+List of Event Commands:
+@>Set Move Route: Player
+ :              : $>Move Down
+ :              : $>Turn Left
+@>Control Self Switch: A =ON
+@>
+
+Page #2
+Conditions
+Self Switch A is ON
+
+Autonomous Movement
+Type: Fixed
+Speed: 3: Slow
+Freq: 3: Low
+Options Enabled
+Move Animation
+Trigger: Action Button
+
+List of Event Commands:
+@>
+
+#------------------------------------------------------------------------------
+Event ID: 009
+Event Name: Tür .sl
+(X,Y): (019,011)
+
+Page #1
+Conditions
+None
+
+Graphic: Tür Mansion 2
+
+Autonomous Movement
+Type: Fixed
+Speed: 3: Slow
+Freq: 3: Low
+Options Enabled
+Move Animation
+Trigger: Player Touch
+
+List of Event Commands:
+@>Set Move Route: This event
+ :              : $>SE: 'Door enter', 100, 90
+ :              : $>Graphic: "Tür Mansion 2', 0, 4, 0
+ :              : $>Wait: 2 frame(s)
+ :              : $>Graphic: "Tür Mansion 2', 0, 6, 0
+ :              : $>Wait: 2 frame(s)
+ :              : $>Graphic: "Tür Mansion 2', 0, 8, 0
+ :              : $>Wait: 2 frame(s)
+@>Wait: 6 frame(s)
+@>Set Move Route: Player
+                  (Ignore If Can't Move)
+ :              : $>Through ON
+ :              : $>Move Up
+ :              : $>Through OFF
+@>Wait: 8 frame(s)
+@>Change Transparent Flag: Transparency
+@>Script: Followers.follow_into_door
+@>Wait: 8 frame(s)
+@>Set Move Route: This event
+                  (Ignore If Can't Move)
+ :              : $>SE: 'Door enter', 100, 90
+ :              : $>Wait: 2 frame(s)
+ :              : $>Turn Right
+ :              : $>Wait: 2 frame(s)
+ :              : $>Turn Left
+ :              : $>Wait: 2 frame(s)
+ :              : $>Turn Down
+ :              : $>Wait: 2 frame(s)
+@>Wait: 8 frame(s)
+@>Change Screen Color Tone: (-255,-255,-255,0), @6
+@>Wait: 8 frame(s)
+@>Change Transparent Flag: Normal
+@>Transfer Player:[666: Mansion], (031,040), Up, No Fade
+@>Change Screen Color Tone: (0,0,0,0), @6
+@>Wait: 8 frame(s)
+@>
+
+Page #2
+Conditions
+Switch 0022: s:tsOff?("A") is ON
+
+Graphic: Tür Mansion 2
+
+Autonomous Movement
+Type: Fixed
+Speed: 3: Slow
+Freq: 3: Low
+Options Enabled
+Move Animation
+Trigger: Autorun
+
+List of Event Commands:
+@>Conditional Branch: Script: get_self.onEvent?
+ @>Change Transparent Flag: Transparency
+ @>Script: Followers.hide_followers
+ @>Set Move Route: This event
+                   (Ignore If Can't Move)
+  :              : $>SE: 'Door enter', 100, 90
+  :              : $>Wait: 2 frame(s)
+  :              : $>Turn Left
+  :              : $>Wait: 2 frame(s)
+  :              : $>Turn Right
+  :              : $>Wait: 2 frame(s)
+  :              : $>Turn Up
+  :              : $>Wait: 2 frame(s)
+ @>Wait: 8 frame(s)
+ @>Change Transparent Flag: Normal
+ @>Set Move Route: Player
+                   (Ignore If Can't Move)
+  :              : $>Move Down
+ @>Wait: 8 frame(s)
+ @>Script: Followers.put_followers_on_player
+ @>Set Move Route: This event
+                   (Ignore If Can't Move)
+  :              : $>SE: 'Door enter', 100, 90
+  :              : $>Turn Right
+  :              : $>Wait: 2 frame(s)
+  :              : $>Turn Left
+  :              : $>Wait: 2 frame(s)
+  :              : $>Turn Down
+  :              : $>Wait: 2 frame(s)
+ @>Wait: 8 frame(s)
+ @>
+: Branch End
+@>Script: setTempSwitchOn("A")
 @>
 
 #------------------------------------------------------------------------------
@@ -471858,74 +473652,6 @@ List of Event Commands:
 @>Transfer Player:[647: Route 19], (047,054), Up, No Fade
 @>Change Screen Color Tone: (0,0,0,0), @6
 @>Wait: 8 frame(s)
-@>
-
-#------------------------------------------------------------------------------
-Event ID: 008
-Event Name: EV008
-(X,Y): (042,074)
-
-Page #1
-Conditions
-None
-
-Graphic: NPCClerk
-
-Autonomous Movement
-Type: Fixed
-Speed: 3: Slow
-Freq: 3: Low
-Options Enabled
-Move Animation
-Trigger: Action Button
-
-List of Event Commands:
-@>Text: Hier ist ein Brutkasten für dich.
-@>Text: Damit kannst du bis zu 6 Eier ausbrüten, ohne einen 
- :    : Platz im Team aufzugeben.
-@>Script: pbReceiveItem(:EGGINCUBATOR)
-@>Text: Du hast ein Ei erhalten.
-@>Script: pbGenerateEgg(:PICHU)
-@>Control Self Switch: A =ON
-@>
-
-Page #2
-Conditions
-Self Switch A is ON
-
-Graphic: NPCClerk
-
-Autonomous Movement
-Type: Fixed
-Speed: 3: Slow
-Freq: 3: Low
-Options Enabled
-Move Animation
-Trigger: Action Button
-
-List of Event Commands:
-@>Text: Du hast ein Ei erhalten.
-@>Script: pbGenerateEgg(:RALTS)
-@>Control Self Switch: B =ON
-@>
-
-Page #3
-Conditions
-Self Switch B is ON
-
-Graphic: NPCClerk
-
-Autonomous Movement
-Type: Fixed
-Speed: 3: Slow
-Freq: 3: Low
-Options Enabled
-Move Animation
-Trigger: Action Button
-
-List of Event Commands:
-@>Text: Du hast ein Ei erhalten.
-@>Script: pbGenerateEgg(:HOUNDOUR)
 @>
 
 #------------------------------------------------------------------------------
@@ -472869,7 +474595,7 @@ List of Event Commands:
 #------------------------------------------------------------------------------
 Event ID: 022
 Event Name: EV022
-(X,Y): (014,023)
+(X,Y): (015,024)
 
 Page #1
 Conditions
@@ -473069,7 +474795,7 @@ List of Event Commands:
 #------------------------------------------------------------------------------
 Event ID: 030
 Event Name: EV030
-(X,Y): (009,094)
+(X,Y): (008,095)
 
 Page #1
 Conditions
@@ -473520,6 +475246,2144 @@ List of Event Commands:
 @>
 
 #------------------------------------------------------------------------------
+
+#==============================================================================
+Map ID: 650
+Map Name: MAP650
+Tileset: 138: Kanal
+Width: 20, Height: 15
+
+#==============================================================================
+Map ID: 651
+Map Name: Dracheninsel 2
+Tileset: 140: 
+Width: 80, Height: 60
+
+#------------------------------------------------------------------------------
+Event ID: 001
+Event Name: Riesenzahn
+(X,Y): (032,030)
+
+Page #1
+Conditions
+None
+
+Graphic: GREATTUSK
+
+Autonomous Movement
+Type: Fixed
+Speed: 1: Slowest
+Freq: 4: High
+Options Enabled
+Move Animation
+Stop Animation
+Trigger: Action Button
+
+List of Event Commands:
+@>Play SE: 'GREATTUSK', 100, 100
+@>Wait: 10 frame(s)
+@>Script: setBattleRule("cannotRun")
+:       : setBattleRule("outcome", 48)
+:       : pkmn = Pokemon.new(:GREATTUSK,60)
+:       : pkmn.ability_index = 0
+:       : pkmn.calc_stats
+:       : WildBattle.start(pkmn)
+@>Conditional Branch: Variable [0048: Kampf-Ergebnis] == 2
+ @>Exit Event Processing
+ @>
+: Else
+ @>Control Variables: [0131: Paradox] += 1
+ @>Conditional Branch: Variable [0131: Paradox] >= 10
+  @>Text: Du hast alle Paradox-Pokémon eingesammelt.
+  @>
+ : Else
+  @>
+ : Branch End
+ @>Control Self Switch: A =ON
+ @>
+: Branch End
+@>
+
+Page #2
+Conditions
+Self Switch A is ON
+
+Autonomous Movement
+Type: Fixed
+Speed: 3: Slow
+Freq: 3: Low
+Options Enabled
+Move Animation
+Trigger: Action Button
+
+List of Event Commands:
+@>
+
+#------------------------------------------------------------------------------
+Event ID: 002
+Event Name: Riesenzahn
+(X,Y): (074,011)
+
+Page #1
+Conditions
+None
+
+Graphic: GREATTUSK
+
+Autonomous Movement
+Type: Fixed
+Speed: 1: Slowest
+Freq: 4: High
+Options Enabled
+Move Animation
+Stop Animation
+Trigger: Action Button
+
+List of Event Commands:
+@>Play SE: 'GREATTUSK', 100, 100
+@>Wait: 10 frame(s)
+@>Script: setBattleRule("cannotRun")
+:       : setBattleRule("outcome", 48)
+:       : pkmn = Pokemon.new(:GREATTUSK,60)
+:       : pkmn.ability_index = 0
+:       : pkmn.calc_stats
+:       : WildBattle.start(pkmn)
+@>Conditional Branch: Variable [0048: Kampf-Ergebnis] == 2
+ @>Exit Event Processing
+ @>
+: Else
+ @>Control Variables: [0131: Paradox] += 1
+ @>Conditional Branch: Variable [0131: Paradox] >= 10
+  @>Text: Du hast alle Paradox-Pokémon eingesammelt.
+  @>
+ : Else
+  @>
+ : Branch End
+ @>Control Self Switch: A =ON
+ @>
+: Branch End
+@>
+
+Page #2
+Conditions
+Self Switch A is ON
+
+Autonomous Movement
+Type: Fixed
+Speed: 3: Slow
+Freq: 3: Low
+Options Enabled
+Move Animation
+Trigger: Action Button
+
+List of Event Commands:
+@>
+
+#------------------------------------------------------------------------------
+
+#==============================================================================
+Map ID: 652
+Map Name: MAP652
+Tileset: 140: 
+Width: 35, Height: 70
+
+#==============================================================================
+Map ID: 653
+Map Name: MAP653
+Tileset: 141: 
+Width: 65, Height: 40
+
+#==============================================================================
+Map ID: 654
+Map Name: MAP654
+Tileset: 141: 
+Width: 40, Height: 75
+
+#------------------------------------------------------------------------------
+Event ID: 001
+Event Name: Riesenzahn
+(X,Y): (027,005)
+
+Page #1
+Conditions
+None
+
+Graphic: GREATTUSK
+
+Autonomous Movement
+Type: Fixed
+Speed: 1: Slowest
+Freq: 4: High
+Options Enabled
+Move Animation
+Stop Animation
+Trigger: Action Button
+
+List of Event Commands:
+@>Play SE: 'GREATTUSK', 100, 100
+@>Wait: 10 frame(s)
+@>Script: setBattleRule("cannotRun")
+:       : setBattleRule("outcome", 48)
+:       : pkmn = Pokemon.new(:GREATTUSK,60)
+:       : pkmn.ability_index = 0
+:       : pkmn.calc_stats
+:       : WildBattle.start(pkmn)
+@>Conditional Branch: Variable [0048: Kampf-Ergebnis] == 2
+ @>Exit Event Processing
+ @>
+: Else
+ @>Control Variables: [0131: Paradox] += 1
+ @>Conditional Branch: Variable [0131: Paradox] >= 10
+  @>Text: Du hast alle Paradox-Pokémon eingesammelt.
+  @>
+ : Else
+  @>
+ : Branch End
+ @>Control Self Switch: A =ON
+ @>
+: Branch End
+@>
+
+Page #2
+Conditions
+Self Switch A is ON
+
+Autonomous Movement
+Type: Fixed
+Speed: 3: Slow
+Freq: 3: Low
+Options Enabled
+Move Animation
+Trigger: Action Button
+
+List of Event Commands:
+@>
+
+#------------------------------------------------------------------------------
+Event ID: 002
+Event Name: Riesenzahn
+(X,Y): (006,071)
+
+Page #1
+Conditions
+None
+
+Graphic: GREATTUSK
+
+Autonomous Movement
+Type: Fixed
+Speed: 1: Slowest
+Freq: 4: High
+Options Enabled
+Move Animation
+Stop Animation
+Trigger: Action Button
+
+List of Event Commands:
+@>Play SE: 'GREATTUSK', 100, 100
+@>Wait: 10 frame(s)
+@>Script: setBattleRule("cannotRun")
+:       : setBattleRule("outcome", 48)
+:       : pkmn = Pokemon.new(:GREATTUSK,60)
+:       : pkmn.ability_index = 0
+:       : pkmn.calc_stats
+:       : WildBattle.start(pkmn)
+@>Conditional Branch: Variable [0048: Kampf-Ergebnis] == 2
+ @>Exit Event Processing
+ @>
+: Else
+ @>Control Variables: [0131: Paradox] += 1
+ @>Conditional Branch: Variable [0131: Paradox] >= 10
+  @>Text: Du hast alle Paradox-Pokémon eingesammelt.
+  @>
+ : Else
+  @>
+ : Branch End
+ @>Control Self Switch: A =ON
+ @>
+: Branch End
+@>
+
+Page #2
+Conditions
+Self Switch A is ON
+
+Autonomous Movement
+Type: Fixed
+Speed: 3: Slow
+Freq: 3: Low
+Options Enabled
+Move Animation
+Trigger: Action Button
+
+List of Event Commands:
+@>
+
+#------------------------------------------------------------------------------
+
+#==============================================================================
+Map ID: 655
+Map Name: MAP655
+Tileset: 141: 
+Width: 40, Height: 40
+
+#==============================================================================
+Map ID: 656
+Map Name: MAP656
+Tileset: 142: 
+Width: 75, Height: 83
+
+#------------------------------------------------------------------------------
+Event ID: 001
+Event Name: EV001
+(X,Y): (018,000)
+
+Page #1
+Conditions
+None
+
+Autonomous Movement
+Type: Fixed
+Speed: 3: Slow
+Freq: 3: Low
+Options Enabled
+Move Animation
+Trigger: Parallel Process
+
+List of Event Commands:
+@>Change Map Settings:Panorama = 'Dracheninsel', 0
+@>Change Map Settings:Fog = 'Dracheninsel', 0, 120, Normal, 200, 3, 0
+@>
+
+#------------------------------------------------------------------------------
+Event ID: 002
+Event Name: Eisenrad
+(X,Y): (067,016)
+
+Page #1
+Conditions
+None
+
+Graphic: IRONTREADS
+
+Autonomous Movement
+Type: Fixed
+Speed: 1: Slowest
+Freq: 4: High
+Options Enabled
+Move Animation
+Stop Animation
+Trigger: Action Button
+
+List of Event Commands:
+@>Play SE: 'IRONTREADS', 100, 100
+@>Wait: 10 frame(s)
+@>Script: setBattleRule("cannotRun")
+:       : setBattleRule("outcome", 48)
+:       : pkmn = Pokemon.new(:IRONTREADS,60)
+:       : pkmn.ability_index = 0
+:       : pkmn.calc_stats
+:       : WildBattle.start(pkmn)
+@>Conditional Branch: Variable [0048: Kampf-Ergebnis] == 2
+ @>Exit Event Processing
+ @>
+: Else
+ @>Control Variables: [0131: Paradox] += 1
+ @>Conditional Branch: Variable [0131: Paradox] >= 10
+  @>Text: Du hast alle Paradox-Pokémon eingesammelt.
+  @>
+ : Else
+  @>
+ : Branch End
+ @>Control Self Switch: A =ON
+ @>
+: Branch End
+@>
+
+Page #2
+Conditions
+Self Switch A is ON
+
+Autonomous Movement
+Type: Fixed
+Speed: 3: Slow
+Freq: 3: Low
+Options Enabled
+Move Animation
+Trigger: Action Button
+
+List of Event Commands:
+@>
+
+#------------------------------------------------------------------------------
+Event ID: 003
+Event Name: Eisenrad
+(X,Y): (034,065)
+
+Page #1
+Conditions
+None
+
+Graphic: IRONTREADS
+
+Autonomous Movement
+Type: Fixed
+Speed: 1: Slowest
+Freq: 4: High
+Options Enabled
+Move Animation
+Stop Animation
+Trigger: Action Button
+
+List of Event Commands:
+@>Play SE: 'IRONTREADS', 100, 100
+@>Wait: 10 frame(s)
+@>Script: setBattleRule("cannotRun")
+:       : setBattleRule("outcome", 48)
+:       : pkmn = Pokemon.new(:IRONTREADS,60)
+:       : pkmn.ability_index = 0
+:       : pkmn.calc_stats
+:       : WildBattle.start(pkmn)
+@>Conditional Branch: Variable [0048: Kampf-Ergebnis] == 2
+ @>Exit Event Processing
+ @>
+: Else
+ @>Control Variables: [0131: Paradox] += 1
+ @>Conditional Branch: Variable [0131: Paradox] >= 10
+  @>Text: Du hast alle Paradox-Pokémon eingesammelt.
+  @>
+ : Else
+  @>
+ : Branch End
+ @>Control Self Switch: A =ON
+ @>
+: Branch End
+@>
+
+Page #2
+Conditions
+Self Switch A is ON
+
+Autonomous Movement
+Type: Fixed
+Speed: 3: Slow
+Freq: 3: Low
+Options Enabled
+Move Animation
+Trigger: Action Button
+
+List of Event Commands:
+@>
+
+#------------------------------------------------------------------------------
+Event ID: 004
+Event Name: Eisenrad
+(X,Y): (004,028)
+
+Page #1
+Conditions
+None
+
+Graphic: IRONTREADS
+
+Autonomous Movement
+Type: Fixed
+Speed: 1: Slowest
+Freq: 4: High
+Options Enabled
+Move Animation
+Stop Animation
+Trigger: Action Button
+
+List of Event Commands:
+@>Play SE: 'IRONTREADS', 100, 100
+@>Wait: 10 frame(s)
+@>Script: setBattleRule("cannotRun")
+:       : setBattleRule("outcome", 48)
+:       : pkmn = Pokemon.new(:IRONTREADS,60)
+:       : pkmn.ability_index = 0
+:       : pkmn.calc_stats
+:       : WildBattle.start(pkmn)
+@>Conditional Branch: Variable [0048: Kampf-Ergebnis] == 2
+ @>Exit Event Processing
+ @>
+: Else
+ @>Control Variables: [0131: Paradox] += 1
+ @>Conditional Branch: Variable [0131: Paradox] >= 10
+  @>Text: Du hast alle Paradox-Pokémon eingesammelt.
+  @>
+ : Else
+  @>
+ : Branch End
+ @>Control Self Switch: A =ON
+ @>
+: Branch End
+@>
+
+Page #2
+Conditions
+Self Switch A is ON
+
+Autonomous Movement
+Type: Fixed
+Speed: 3: Slow
+Freq: 3: Low
+Options Enabled
+Move Animation
+Trigger: Action Button
+
+List of Event Commands:
+@>
+
+#------------------------------------------------------------------------------
+
+#==============================================================================
+Map ID: 657
+Map Name: Kraftwerk
+Tileset: 081: Kraftwerk
+Width: 25, Height: 17
+
+#==============================================================================
+Map ID: 658
+Map Name: Kraftwerk
+Tileset: 081: Kraftwerk
+Width: 26, Height: 25
+
+#------------------------------------------------------------------------------
+Event ID: 001
+Event Name: EV001
+(X,Y): (007,019)
+
+Page #1
+Conditions
+None
+
+Graphic: Switch Arena 2
+
+Autonomous Movement
+Type: Fixed
+Speed: 3: Slow
+Freq: 3: Low
+Options Enabled
+Move Animation
+Trigger: Action Button
+
+List of Event Commands:
+@>
+
+#------------------------------------------------------------------------------
+Event ID: 002
+Event Name: EV002
+(X,Y): (018,019)
+
+Page #1
+Conditions
+None
+
+Graphic: Switch Arena 2
+
+Autonomous Movement
+Type: Fixed
+Speed: 3: Slow
+Freq: 3: Low
+Options Enabled
+Move Animation
+Trigger: Action Button
+
+List of Event Commands:
+@>
+
+#------------------------------------------------------------------------------
+
+#==============================================================================
+Map ID: 659
+Map Name: Kraftwerk
+Tileset: 081: Kraftwerk
+Width: 26, Height: 25
+
+#==============================================================================
+Map ID: 660
+Map Name: Kraftwerk
+Tileset: 081: Kraftwerk
+Width: 26, Height: 25
+
+#------------------------------------------------------------------------------
+Event ID: 001
+Event Name: EV001
+(X,Y): (006,019)
+
+Page #1
+Conditions
+None
+
+Graphic: Switch Arena 2
+
+Autonomous Movement
+Type: Fixed
+Speed: 3: Slow
+Freq: 3: Low
+Options Enabled
+Move Animation
+Trigger: Action Button
+
+List of Event Commands:
+@>
+
+#------------------------------------------------------------------------------
+Event ID: 002
+Event Name: EV002
+(X,Y): (019,019)
+
+Page #1
+Conditions
+None
+
+Graphic: Switch Arena 2
+
+Autonomous Movement
+Type: Fixed
+Speed: 3: Slow
+Freq: 3: Low
+Options Enabled
+Move Animation
+Trigger: Action Button
+
+List of Event Commands:
+@>
+
+#------------------------------------------------------------------------------
+
+#==============================================================================
+Map ID: 661
+Map Name: Kraftwerk
+Tileset: 081: Kraftwerk
+Width: 26, Height: 25
+
+#------------------------------------------------------------------------------
+Event ID: 001
+Event Name: EV001
+(X,Y): (014,008)
+
+Page #1
+Conditions
+None
+
+Graphic: Switch Arena 2
+
+Autonomous Movement
+Type: Fixed
+Speed: 3: Slow
+Freq: 3: Low
+Options Enabled
+Move Animation
+Trigger: Action Button
+
+List of Event Commands:
+@>
+
+#------------------------------------------------------------------------------
+Event ID: 002
+Event Name: EV002
+(X,Y): (014,015)
+
+Page #1
+Conditions
+None
+
+Graphic: Switch Arena 2
+
+Autonomous Movement
+Type: Fixed
+Speed: 3: Slow
+Freq: 3: Low
+Options Enabled
+Move Animation
+Trigger: Action Button
+
+List of Event Commands:
+@>
+
+#------------------------------------------------------------------------------
+Event ID: 003
+Event Name: EV003
+(X,Y): (014,020)
+
+Page #1
+Conditions
+None
+
+Graphic: Switch Arena 2
+
+Autonomous Movement
+Type: Fixed
+Speed: 3: Slow
+Freq: 3: Low
+Options Enabled
+Move Animation
+Trigger: Action Button
+
+List of Event Commands:
+@>
+
+#------------------------------------------------------------------------------
+
+#==============================================================================
+Map ID: 662
+Map Name: Kraftwerk
+Tileset: 081: Kraftwerk
+Width: 20, Height: 40
+
+#==============================================================================
+Map ID: 663
+Map Name: Kraftwerk
+Tileset: 081: Kraftwerk
+Width: 26, Height: 25
+
+#------------------------------------------------------------------------------
+Event ID: 001
+Event Name: EV001
+(X,Y): (006,019)
+
+Page #1
+Conditions
+None
+
+Graphic: Switch Arena 2
+
+Autonomous Movement
+Type: Fixed
+Speed: 3: Slow
+Freq: 3: Low
+Options Enabled
+Move Animation
+Trigger: Action Button
+
+List of Event Commands:
+@>
+
+#------------------------------------------------------------------------------
+Event ID: 002
+Event Name: EV002
+(X,Y): (019,019)
+
+Page #1
+Conditions
+None
+
+Graphic: Switch Arena 2
+
+Autonomous Movement
+Type: Fixed
+Speed: 3: Slow
+Freq: 3: Low
+Options Enabled
+Move Animation
+Trigger: Action Button
+
+List of Event Commands:
+@>
+
+#------------------------------------------------------------------------------
+
+#==============================================================================
+Map ID: 664
+Map Name: Kraftwerk
+Tileset: 081: Kraftwerk
+Width: 26, Height: 25
+
+#==============================================================================
+Map ID: 665
+Map Name: Kraftwerk
+Tileset: 081: Kraftwerk
+Width: 20, Height: 20
+
+#==============================================================================
+Map ID: 666
+Map Name: Mansion
+Tileset: 143: Mansion
+Width: 46, Height: 44
+
+#------------------------------------------------------------------------------
+Event ID: 001
+Event Name: Tür
+(X,Y): (002,025)
+
+Page #1
+Conditions
+None
+
+Autonomous Movement
+Type: Fixed
+Speed: 3: Slow
+Freq: 3: Low
+Options Enabled
+Move Animation
+Trigger: Player Touch
+
+List of Event Commands:
+@>Play SE: 'Door exit', 100, 100
+@>Change Screen Color Tone: (-255,-255,-255,0), @6
+@>Wait: 8 frame(s)
+@>Transfer Player:[667: Mansion], (012,028), Left, No Fade
+@>Change Screen Color Tone: (0,0,0,0), @6
+@>Wait: 8 frame(s)
+@>
+
+#------------------------------------------------------------------------------
+Event ID: 002
+Event Name: Tür
+(X,Y): (002,016)
+
+Page #1
+Conditions
+None
+
+Autonomous Movement
+Type: Fixed
+Speed: 3: Slow
+Freq: 3: Low
+Options Enabled
+Move Animation
+Trigger: Player Touch
+
+List of Event Commands:
+@>Play SE: 'Door exit', 100, 100
+@>Change Screen Color Tone: (-255,-255,-255,0), @6
+@>Wait: 8 frame(s)
+@>Transfer Player:[667: Mansion], (012,011), Left, No Fade
+@>Change Screen Color Tone: (0,0,0,0), @6
+@>Wait: 8 frame(s)
+@>
+
+#------------------------------------------------------------------------------
+Event ID: 003
+Event Name: Tür
+(X,Y): (043,025)
+
+Page #1
+Conditions
+None
+
+Autonomous Movement
+Type: Fixed
+Speed: 3: Slow
+Freq: 3: Low
+Options Enabled
+Move Animation
+Trigger: Player Touch
+
+List of Event Commands:
+@>Play SE: 'Door exit', 100, 100
+@>Change Screen Color Tone: (-255,-255,-255,0), @6
+@>Wait: 8 frame(s)
+@>Transfer Player:[667: Mansion], (055,028), Right, No Fade
+@>Change Screen Color Tone: (0,0,0,0), @6
+@>Wait: 8 frame(s)
+@>
+
+#------------------------------------------------------------------------------
+Event ID: 004
+Event Name: Tür
+(X,Y): (043,016)
+
+Page #1
+Conditions
+None
+
+Autonomous Movement
+Type: Fixed
+Speed: 3: Slow
+Freq: 3: Low
+Options Enabled
+Move Animation
+Trigger: Player Touch
+
+List of Event Commands:
+@>Play SE: 'Door exit', 100, 100
+@>Change Screen Color Tone: (-255,-255,-255,0), @6
+@>Wait: 8 frame(s)
+@>Transfer Player:[667: Mansion], (055,012), Right, No Fade
+@>Change Screen Color Tone: (0,0,0,0), @6
+@>Wait: 8 frame(s)
+@>
+
+#------------------------------------------------------------------------------
+Event ID: 005
+Event Name: Tür .sl
+(X,Y): (035,006)
+
+Page #1
+Conditions
+None
+
+Graphic: Puertas3
+
+Autonomous Movement
+Type: Fixed
+Speed: 3: Slow
+Freq: 3: Low
+Options Enabled
+Move Animation
+Trigger: Event Touch
+
+List of Event Commands:
+@>Play SE: 'Door enter', 100, 100
+@>Set Move Route: This event
+ :              : $>Graphic: "Puertas3', 0, 4, 0
+ :              : $>Wait: 2 frame(s)
+ :              : $>Graphic: "Puertas3', 0, 6, 0
+ :              : $>Wait: 2 frame(s)
+ :              : $>Graphic: "Puertas3', 0, 8, 0
+ :              : $>Wait: 2 frame(s)
+@>Wait: 6 frame(s)
+@>Set Move Route: Player
+                  (Ignore If Can't Move)
+ :              : $>Through ON
+ :              : $>Move Up
+ :              : $>Through OFF
+@>Wait: 8 frame(s)
+@>Change Transparent Flag: Transparency
+@>Script: Followers.follow_into_door
+@>Wait: 8 frame(s)
+@>Set Move Route: This event
+                  (Ignore If Can't Move)
+ :              : $>Wait: 2 frame(s)
+ :              : $>Turn Right
+ :              : $>Wait: 2 frame(s)
+ :              : $>Turn Left
+ :              : $>Wait: 2 frame(s)
+ :              : $>Turn Down
+ :              : $>Wait: 2 frame(s)
+@>Wait: 8 frame(s)
+@>Change Screen Color Tone: (-255,-255,-255,0), @6
+@>Wait: 8 frame(s)
+@>Change Transparent Flag: Normal
+@>Transfer Player:[667: Mansion], (042,035), Up, No Fade
+@>Change Screen Color Tone: (0,0,0,0), @6
+@>Wait: 8 frame(s)
+@>
+
+Page #2
+Conditions
+Switch 0022: s:tsOff?("A") is ON
+
+Graphic: Puertas3
+
+Autonomous Movement
+Type: Fixed
+Speed: 3: Slow
+Freq: 3: Low
+Options Enabled
+Move Animation
+Trigger: Autorun
+
+List of Event Commands:
+@>Conditional Branch: Script: get_self.onEvent?
+ @>Change Transparent Flag: Transparency
+ @>Script: Followers.hide_followers
+ @>Set Move Route: This event
+                   (Ignore If Can't Move)
+  :              : $>SE: 'Door enter', 100, 90
+  :              : $>Wait: 2 frame(s)
+  :              : $>Turn Left
+  :              : $>Wait: 2 frame(s)
+  :              : $>Turn Right
+  :              : $>Wait: 2 frame(s)
+  :              : $>Turn Up
+  :              : $>Wait: 2 frame(s)
+ @>Wait: 8 frame(s)
+ @>Change Transparent Flag: Normal
+ @>Set Move Route: Player
+                   (Ignore If Can't Move)
+  :              : $>Move Down
+ @>Wait: 8 frame(s)
+ @>Script: Followers.put_followers_on_player
+ @>Set Move Route: This event
+                   (Ignore If Can't Move)
+  :              : $>Turn Right
+  :              : $>Wait: 2 frame(s)
+  :              : $>Turn Left
+  :              : $>Wait: 2 frame(s)
+  :              : $>Turn Down
+  :              : $>Wait: 2 frame(s)
+ @>Wait: 8 frame(s)
+ @>
+: Branch End
+@>Script: setTempSwitchOn("A")
+@>
+
+#------------------------------------------------------------------------------
+Event ID: 006
+Event Name: Tür .sl
+(X,Y): (027,006)
+
+Page #1
+Conditions
+None
+
+Graphic: Puertas3
+
+Autonomous Movement
+Type: Fixed
+Speed: 3: Slow
+Freq: 3: Low
+Options Enabled
+Move Animation
+Trigger: Event Touch
+
+List of Event Commands:
+@>Play SE: 'Door enter', 100, 100
+@>Set Move Route: This event
+ :              : $>Graphic: "Puertas3', 0, 4, 0
+ :              : $>Wait: 2 frame(s)
+ :              : $>Graphic: "Puertas3', 0, 6, 0
+ :              : $>Wait: 2 frame(s)
+ :              : $>Graphic: "Puertas3', 0, 8, 0
+ :              : $>Wait: 2 frame(s)
+@>Wait: 6 frame(s)
+@>Set Move Route: Player
+                  (Ignore If Can't Move)
+ :              : $>Through ON
+ :              : $>Move Up
+ :              : $>Through OFF
+@>Wait: 8 frame(s)
+@>Change Transparent Flag: Transparency
+@>Script: Followers.follow_into_door
+@>Wait: 8 frame(s)
+@>Set Move Route: This event
+                  (Ignore If Can't Move)
+ :              : $>Wait: 2 frame(s)
+ :              : $>Turn Right
+ :              : $>Wait: 2 frame(s)
+ :              : $>Turn Left
+ :              : $>Wait: 2 frame(s)
+ :              : $>Turn Down
+ :              : $>Wait: 2 frame(s)
+@>Wait: 8 frame(s)
+@>Change Screen Color Tone: (-255,-255,-255,0), @6
+@>Wait: 8 frame(s)
+@>Change Transparent Flag: Normal
+@>Transfer Player:[667: Mansion], (042,014), Up, No Fade
+@>Change Screen Color Tone: (0,0,0,0), @6
+@>Wait: 8 frame(s)
+@>
+
+Page #2
+Conditions
+Switch 0022: s:tsOff?("A") is ON
+
+Graphic: Puertas3
+
+Autonomous Movement
+Type: Fixed
+Speed: 3: Slow
+Freq: 3: Low
+Options Enabled
+Move Animation
+Trigger: Autorun
+
+List of Event Commands:
+@>Conditional Branch: Script: get_self.onEvent?
+ @>Change Transparent Flag: Transparency
+ @>Script: Followers.hide_followers
+ @>Set Move Route: This event
+                   (Ignore If Can't Move)
+  :              : $>SE: 'Door enter', 100, 90
+  :              : $>Wait: 2 frame(s)
+  :              : $>Turn Left
+  :              : $>Wait: 2 frame(s)
+  :              : $>Turn Right
+  :              : $>Wait: 2 frame(s)
+  :              : $>Turn Up
+  :              : $>Wait: 2 frame(s)
+ @>Wait: 8 frame(s)
+ @>Change Transparent Flag: Normal
+ @>Set Move Route: Player
+                   (Ignore If Can't Move)
+  :              : $>Move Down
+ @>Wait: 8 frame(s)
+ @>Script: Followers.put_followers_on_player
+ @>Set Move Route: This event
+                   (Ignore If Can't Move)
+  :              : $>Turn Right
+  :              : $>Wait: 2 frame(s)
+  :              : $>Turn Left
+  :              : $>Wait: 2 frame(s)
+  :              : $>Turn Down
+  :              : $>Wait: 2 frame(s)
+ @>Wait: 8 frame(s)
+ @>
+: Branch End
+@>Script: setTempSwitchOn("A")
+@>
+
+#------------------------------------------------------------------------------
+Event ID: 007
+Event Name: Tür .sl
+(X,Y): (018,006)
+
+Page #1
+Conditions
+None
+
+Graphic: Puertas3
+
+Autonomous Movement
+Type: Fixed
+Speed: 3: Slow
+Freq: 3: Low
+Options Enabled
+Move Animation
+Trigger: Event Touch
+
+List of Event Commands:
+@>Play SE: 'Door enter', 100, 100
+@>Set Move Route: This event
+ :              : $>Graphic: "Puertas3', 0, 4, 0
+ :              : $>Wait: 2 frame(s)
+ :              : $>Graphic: "Puertas3', 0, 6, 0
+ :              : $>Wait: 2 frame(s)
+ :              : $>Graphic: "Puertas3', 0, 8, 0
+ :              : $>Wait: 2 frame(s)
+@>Wait: 6 frame(s)
+@>Set Move Route: Player
+                  (Ignore If Can't Move)
+ :              : $>Through ON
+ :              : $>Move Up
+ :              : $>Through OFF
+@>Wait: 8 frame(s)
+@>Change Transparent Flag: Transparency
+@>Script: Followers.follow_into_door
+@>Wait: 8 frame(s)
+@>Set Move Route: This event
+                  (Ignore If Can't Move)
+ :              : $>Wait: 2 frame(s)
+ :              : $>Turn Right
+ :              : $>Wait: 2 frame(s)
+ :              : $>Turn Left
+ :              : $>Wait: 2 frame(s)
+ :              : $>Turn Down
+ :              : $>Wait: 2 frame(s)
+@>Wait: 8 frame(s)
+@>Change Screen Color Tone: (-255,-255,-255,0), @6
+@>Wait: 8 frame(s)
+@>Change Transparent Flag: Normal
+@>Transfer Player:[667: Mansion], (025,035), Up, No Fade
+@>Change Screen Color Tone: (0,0,0,0), @6
+@>Wait: 8 frame(s)
+@>
+
+Page #2
+Conditions
+Switch 0022: s:tsOff?("A") is ON
+
+Graphic: Puertas3
+
+Autonomous Movement
+Type: Fixed
+Speed: 3: Slow
+Freq: 3: Low
+Options Enabled
+Move Animation
+Trigger: Autorun
+
+List of Event Commands:
+@>Conditional Branch: Script: get_self.onEvent?
+ @>Change Transparent Flag: Transparency
+ @>Script: Followers.hide_followers
+ @>Set Move Route: This event
+                   (Ignore If Can't Move)
+  :              : $>SE: 'Door enter', 100, 90
+  :              : $>Wait: 2 frame(s)
+  :              : $>Turn Left
+  :              : $>Wait: 2 frame(s)
+  :              : $>Turn Right
+  :              : $>Wait: 2 frame(s)
+  :              : $>Turn Up
+  :              : $>Wait: 2 frame(s)
+ @>Wait: 8 frame(s)
+ @>Change Transparent Flag: Normal
+ @>Set Move Route: Player
+                   (Ignore If Can't Move)
+  :              : $>Move Down
+ @>Wait: 8 frame(s)
+ @>Script: Followers.put_followers_on_player
+ @>Set Move Route: This event
+                   (Ignore If Can't Move)
+  :              : $>Turn Right
+  :              : $>Wait: 2 frame(s)
+  :              : $>Turn Left
+  :              : $>Wait: 2 frame(s)
+  :              : $>Turn Down
+  :              : $>Wait: 2 frame(s)
+ @>Wait: 8 frame(s)
+ @>
+: Branch End
+@>Script: setTempSwitchOn("A")
+@>
+
+#------------------------------------------------------------------------------
+Event ID: 008
+Event Name: Tür .sl
+(X,Y): (010,006)
+
+Page #1
+Conditions
+None
+
+Graphic: Puertas3
+
+Autonomous Movement
+Type: Fixed
+Speed: 3: Slow
+Freq: 3: Low
+Options Enabled
+Move Animation
+Trigger: Event Touch
+
+List of Event Commands:
+@>Play SE: 'Door enter', 100, 100
+@>Set Move Route: This event
+ :              : $>Graphic: "Puertas3', 0, 4, 0
+ :              : $>Wait: 2 frame(s)
+ :              : $>Graphic: "Puertas3', 0, 6, 0
+ :              : $>Wait: 2 frame(s)
+ :              : $>Graphic: "Puertas3', 0, 8, 0
+ :              : $>Wait: 2 frame(s)
+@>Wait: 6 frame(s)
+@>Set Move Route: Player
+                  (Ignore If Can't Move)
+ :              : $>Through ON
+ :              : $>Move Up
+ :              : $>Through OFF
+@>Wait: 8 frame(s)
+@>Change Transparent Flag: Transparency
+@>Script: Followers.follow_into_door
+@>Wait: 8 frame(s)
+@>Set Move Route: This event
+                  (Ignore If Can't Move)
+ :              : $>Wait: 2 frame(s)
+ :              : $>Turn Right
+ :              : $>Wait: 2 frame(s)
+ :              : $>Turn Left
+ :              : $>Wait: 2 frame(s)
+ :              : $>Turn Down
+ :              : $>Wait: 2 frame(s)
+@>Wait: 8 frame(s)
+@>Change Screen Color Tone: (-255,-255,-255,0), @6
+@>Wait: 8 frame(s)
+@>Change Transparent Flag: Normal
+@>Transfer Player:[667: Mansion], (025,014), Up, No Fade
+@>Change Screen Color Tone: (0,0,0,0), @6
+@>Wait: 8 frame(s)
+@>
+
+Page #2
+Conditions
+Switch 0022: s:tsOff?("A") is ON
+
+Graphic: Puertas3
+
+Autonomous Movement
+Type: Fixed
+Speed: 3: Slow
+Freq: 3: Low
+Options Enabled
+Move Animation
+Trigger: Autorun
+
+List of Event Commands:
+@>Conditional Branch: Script: get_self.onEvent?
+ @>Change Transparent Flag: Transparency
+ @>Script: Followers.hide_followers
+ @>Set Move Route: This event
+                   (Ignore If Can't Move)
+  :              : $>SE: 'Door enter', 100, 90
+  :              : $>Wait: 2 frame(s)
+  :              : $>Turn Left
+  :              : $>Wait: 2 frame(s)
+  :              : $>Turn Right
+  :              : $>Wait: 2 frame(s)
+  :              : $>Turn Up
+  :              : $>Wait: 2 frame(s)
+ @>Wait: 8 frame(s)
+ @>Change Transparent Flag: Normal
+ @>Set Move Route: Player
+                   (Ignore If Can't Move)
+  :              : $>Move Down
+ @>Wait: 8 frame(s)
+ @>Script: Followers.put_followers_on_player
+ @>Set Move Route: This event
+                   (Ignore If Can't Move)
+  :              : $>Turn Right
+  :              : $>Wait: 2 frame(s)
+  :              : $>Turn Left
+  :              : $>Wait: 2 frame(s)
+  :              : $>Turn Down
+  :              : $>Wait: 2 frame(s)
+ @>Wait: 8 frame(s)
+ @>
+: Branch End
+@>Script: setTempSwitchOn("A")
+@>
+
+#------------------------------------------------------------------------------
+Event ID: 009
+Event Name: Tür
+(X,Y): (015,022)
+
+Page #1
+Conditions
+None
+
+Autonomous Movement
+Type: Fixed
+Speed: 3: Slow
+Freq: 3: Low
+Options Enabled
+Move Animation
+Trigger: Player Touch
+
+List of Event Commands:
+@>Play SE: 'Door exit', 100, 100
+@>Change Screen Color Tone: (-255,-255,-255,0), @6
+@>Wait: 8 frame(s)
+@>Transfer Player:[668: Mansion], (011,021), Left, No Fade
+@>Change Screen Color Tone: (0,0,0,0), @6
+@>Wait: 8 frame(s)
+@>
+
+#------------------------------------------------------------------------------
+Event ID: 010
+Event Name: Tür
+(X,Y): (029,022)
+
+Page #1
+Conditions
+None
+
+Autonomous Movement
+Type: Fixed
+Speed: 3: Slow
+Freq: 3: Low
+Options Enabled
+Move Animation
+Trigger: Player Touch
+
+List of Event Commands:
+@>Play SE: 'Door exit', 100, 100
+@>Change Screen Color Tone: (-255,-255,-255,0), @6
+@>Wait: 8 frame(s)
+@>Transfer Player:[668: Mansion], (017,021), Right, No Fade
+@>Change Screen Color Tone: (0,0,0,0), @6
+@>Wait: 8 frame(s)
+@>
+
+#------------------------------------------------------------------------------
+Event ID: 011
+Event Name: Tür
+(X,Y): (031,041)
+
+Page #1
+Conditions
+None
+
+Autonomous Movement
+Type: Fixed
+Speed: 3: Slow
+Freq: 3: Low
+Options Enabled
+Move Animation
+Trigger: Player Touch
+
+List of Event Commands:
+@>Play SE: 'Door exit', 100, 100
+@>Change Screen Color Tone: (-255,-255,-255,0), @6
+@>Wait: 8 frame(s)
+@>Transfer Player:[647: Route 19], (019,011), Down, No Fade
+@>Change Screen Color Tone: (0,0,0,0), @6
+@>Wait: 8 frame(s)
+@>
+
+#------------------------------------------------------------------------------
+
+#==============================================================================
+Map ID: 667
+Map Name: Mansion
+Tileset: 143: Mansion
+Width: 76, Height: 38
+
+#------------------------------------------------------------------------------
+Event ID: 001
+Event Name: Tür
+(X,Y): (013,011)
+
+Page #1
+Conditions
+None
+
+Autonomous Movement
+Type: Fixed
+Speed: 3: Slow
+Freq: 3: Low
+Options Enabled
+Move Animation
+Trigger: Player Touch
+
+List of Event Commands:
+@>Play SE: 'Door exit', 100, 100
+@>Change Screen Color Tone: (-255,-255,-255,0), @6
+@>Wait: 8 frame(s)
+@>Transfer Player:[666: Mansion], (003,016), Right, No Fade
+@>Change Screen Color Tone: (0,0,0,0), @6
+@>Wait: 8 frame(s)
+@>
+
+#------------------------------------------------------------------------------
+Event ID: 002
+Event Name: Tür
+(X,Y): (013,028)
+
+Page #1
+Conditions
+None
+
+Autonomous Movement
+Type: Fixed
+Speed: 3: Slow
+Freq: 3: Low
+Options Enabled
+Move Animation
+Trigger: Player Touch
+
+List of Event Commands:
+@>Play SE: 'Door exit', 100, 100
+@>Change Screen Color Tone: (-255,-255,-255,0), @6
+@>Wait: 8 frame(s)
+@>Transfer Player:[666: Mansion], (003,025), Right, No Fade
+@>Change Screen Color Tone: (0,0,0,0), @6
+@>Wait: 8 frame(s)
+@>
+
+#------------------------------------------------------------------------------
+Event ID: 003
+Event Name: Tür
+(X,Y): (054,012)
+
+Page #1
+Conditions
+None
+
+Autonomous Movement
+Type: Fixed
+Speed: 3: Slow
+Freq: 3: Low
+Options Enabled
+Move Animation
+Trigger: Player Touch
+
+List of Event Commands:
+@>Play SE: 'Door exit', 100, 100
+@>Change Screen Color Tone: (-255,-255,-255,0), @6
+@>Wait: 8 frame(s)
+@>Transfer Player:[666: Mansion], (042,016), Left, No Fade
+@>Change Screen Color Tone: (0,0,0,0), @6
+@>Wait: 8 frame(s)
+@>
+
+#------------------------------------------------------------------------------
+Event ID: 004
+Event Name: Tür
+(X,Y): (054,028)
+
+Page #1
+Conditions
+None
+
+Autonomous Movement
+Type: Fixed
+Speed: 3: Slow
+Freq: 3: Low
+Options Enabled
+Move Animation
+Trigger: Player Touch
+
+List of Event Commands:
+@>Play SE: 'Door exit', 100, 100
+@>Change Screen Color Tone: (-255,-255,-255,0), @6
+@>Wait: 8 frame(s)
+@>Transfer Player:[666: Mansion], (042,025), Left, No Fade
+@>Change Screen Color Tone: (0,0,0,0), @6
+@>Wait: 8 frame(s)
+@>
+
+#------------------------------------------------------------------------------
+Event ID: 005
+Event Name: Tür
+(X,Y): (042,036)
+
+Page #1
+Conditions
+None
+
+Autonomous Movement
+Type: Fixed
+Speed: 3: Slow
+Freq: 3: Low
+Options Enabled
+Move Animation
+Trigger: Player Touch
+
+List of Event Commands:
+@>Play SE: 'Door exit', 100, 100
+@>Change Screen Color Tone: (-255,-255,-255,0), @6
+@>Wait: 8 frame(s)
+@>Change Transparent Flag: Transparency
+@>Transfer Player:[666: Mansion], (035,006), Down, No Fade
+@>Change Screen Color Tone: (0,0,0,0), @6
+@>Wait: 8 frame(s)
+@>
+
+#------------------------------------------------------------------------------
+Event ID: 006
+Event Name: Tür
+(X,Y): (042,015)
+
+Page #1
+Conditions
+None
+
+Autonomous Movement
+Type: Fixed
+Speed: 3: Slow
+Freq: 3: Low
+Options Enabled
+Move Animation
+Trigger: Player Touch
+
+List of Event Commands:
+@>Play SE: 'Door exit', 100, 100
+@>Change Screen Color Tone: (-255,-255,-255,0), @6
+@>Wait: 8 frame(s)
+@>Change Transparent Flag: Transparency
+@>Transfer Player:[666: Mansion], (027,006), Down, No Fade
+@>Change Screen Color Tone: (0,0,0,0), @6
+@>Wait: 8 frame(s)
+@>
+
+#------------------------------------------------------------------------------
+Event ID: 007
+Event Name: Tür
+(X,Y): (025,036)
+
+Page #1
+Conditions
+None
+
+Autonomous Movement
+Type: Fixed
+Speed: 3: Slow
+Freq: 3: Low
+Options Enabled
+Move Animation
+Trigger: Player Touch
+
+List of Event Commands:
+@>Play SE: 'Door exit', 100, 100
+@>Change Screen Color Tone: (-255,-255,-255,0), @6
+@>Wait: 8 frame(s)
+@>Change Transparent Flag: Transparency
+@>Transfer Player:[666: Mansion], (018,006), Down, No Fade
+@>Change Screen Color Tone: (0,0,0,0), @6
+@>Wait: 8 frame(s)
+@>
+
+#------------------------------------------------------------------------------
+Event ID: 008
+Event Name: Tür
+(X,Y): (025,015)
+
+Page #1
+Conditions
+None
+
+Autonomous Movement
+Type: Fixed
+Speed: 3: Slow
+Freq: 3: Low
+Options Enabled
+Move Animation
+Trigger: Player Touch
+
+List of Event Commands:
+@>Play SE: 'Door exit', 100, 100
+@>Change Screen Color Tone: (-255,-255,-255,0), @6
+@>Wait: 8 frame(s)
+@>Change Transparent Flag: Transparency
+@>Transfer Player:[666: Mansion], (010,006), Down, No Fade
+@>Change Screen Color Tone: (0,0,0,0), @6
+@>Wait: 8 frame(s)
+@>
+
+#------------------------------------------------------------------------------
+
+#==============================================================================
+Map ID: 668
+Map Name: Mansion
+Tileset: 143: Mansion
+Width: 30, Height: 38
+
+#------------------------------------------------------------------------------
+Event ID: 001
+Event Name: Tür
+(X,Y): (002,025)
+
+Page #1
+Conditions
+None
+
+Autonomous Movement
+Type: Fixed
+Speed: 3: Slow
+Freq: 3: Low
+Options Enabled
+Move Animation
+Trigger: Player Touch
+
+List of Event Commands:
+@>Play SE: 'Door exit', 100, 100
+@>Change Screen Color Tone: (-255,-255,-255,0), @6
+@>Wait: 8 frame(s)
+@>Transfer Player:[669: Mansion], (012,028), Left, No Fade
+@>Change Screen Color Tone: (0,0,0,0), @6
+@>Wait: 8 frame(s)
+@>
+
+#------------------------------------------------------------------------------
+Event ID: 002
+Event Name: Tür
+(X,Y): (002,014)
+
+Page #1
+Conditions
+None
+
+Autonomous Movement
+Type: Fixed
+Speed: 3: Slow
+Freq: 3: Low
+Options Enabled
+Move Animation
+Trigger: Player Touch
+
+List of Event Commands:
+@>Play SE: 'Door exit', 100, 100
+@>Change Screen Color Tone: (-255,-255,-255,0), @6
+@>Wait: 8 frame(s)
+@>Transfer Player:[669: Mansion], (012,011), Left, No Fade
+@>Change Screen Color Tone: (0,0,0,0), @6
+@>Wait: 8 frame(s)
+@>
+
+#------------------------------------------------------------------------------
+Event ID: 003
+Event Name: Tür
+(X,Y): (026,014)
+
+Page #1
+Conditions
+None
+
+Autonomous Movement
+Type: Fixed
+Speed: 3: Slow
+Freq: 3: Low
+Options Enabled
+Move Animation
+Trigger: Player Touch
+
+List of Event Commands:
+@>Play SE: 'Door exit', 100, 100
+@>Change Screen Color Tone: (-255,-255,-255,0), @6
+@>Wait: 8 frame(s)
+@>Transfer Player:[669: Mansion], (038,011), Right, No Fade
+@>Change Screen Color Tone: (0,0,0,0), @6
+@>Wait: 8 frame(s)
+@>
+
+#------------------------------------------------------------------------------
+Event ID: 004
+Event Name: Tür
+(X,Y): (026,025)
+
+Page #1
+Conditions
+None
+
+Autonomous Movement
+Type: Fixed
+Speed: 3: Slow
+Freq: 3: Low
+Options Enabled
+Move Animation
+Trigger: Player Touch
+
+List of Event Commands:
+@>Play SE: 'Door exit', 100, 100
+@>Change Screen Color Tone: (-255,-255,-255,0), @6
+@>Wait: 8 frame(s)
+@>Transfer Player:[669: Mansion], (038,028), Right, No Fade
+@>Change Screen Color Tone: (0,0,0,0), @6
+@>Wait: 8 frame(s)
+@>
+
+#------------------------------------------------------------------------------
+Event ID: 005
+Event Name: Tür .sl
+(X,Y): (014,005)
+
+Page #1
+Conditions
+None
+
+Graphic: Tür Mansion
+
+Autonomous Movement
+Type: Fixed
+Speed: 3: Slow
+Freq: 3: Low
+Options Enabled
+Move Animation
+Trigger: Event Touch
+
+List of Event Commands:
+@>Play SE: 'Door enter', 100, 100
+@>Set Move Route: This event
+ :              : $>Graphic: "Tür Mansion', 0, 4, 0
+ :              : $>Wait: 2 frame(s)
+ :              : $>Graphic: "Tür Mansion', 0, 6, 0
+ :              : $>Wait: 2 frame(s)
+ :              : $>Graphic: "Tür Mansion', 0, 8, 0
+ :              : $>Wait: 2 frame(s)
+@>Wait: 6 frame(s)
+@>Set Move Route: Player
+                  (Ignore If Can't Move)
+ :              : $>Through ON
+ :              : $>Move Up
+ :              : $>Through OFF
+@>Wait: 8 frame(s)
+@>Change Transparent Flag: Transparency
+@>Script: Followers.follow_into_door
+@>Wait: 8 frame(s)
+@>Set Move Route: This event
+                  (Ignore If Can't Move)
+ :              : $>Wait: 2 frame(s)
+ :              : $>Turn Right
+ :              : $>Wait: 2 frame(s)
+ :              : $>Turn Left
+ :              : $>Wait: 2 frame(s)
+ :              : $>Turn Down
+ :              : $>Wait: 2 frame(s)
+@>Wait: 8 frame(s)
+@>Change Screen Color Tone: (-255,-255,-255,0), @6
+@>Wait: 8 frame(s)
+@>Change Transparent Flag: Normal
+@>Transfer Player:[669: Mansion], (025,035), Up, No Fade
+@>Change Screen Color Tone: (0,0,0,0), @6
+@>Wait: 8 frame(s)
+@>
+
+Page #2
+Conditions
+Switch 0022: s:tsOff?("A") is ON
+
+Graphic: Tür Mansion
+
+Autonomous Movement
+Type: Fixed
+Speed: 3: Slow
+Freq: 3: Low
+Options Enabled
+Move Animation
+Trigger: Autorun
+
+List of Event Commands:
+@>Conditional Branch: Script: get_self.onEvent?
+ @>Change Transparent Flag: Transparency
+ @>Script: Followers.hide_followers
+ @>Set Move Route: This event
+                   (Ignore If Can't Move)
+  :              : $>SE: 'Door enter', 100, 90
+  :              : $>Wait: 2 frame(s)
+  :              : $>Turn Left
+  :              : $>Wait: 2 frame(s)
+  :              : $>Turn Right
+  :              : $>Wait: 2 frame(s)
+  :              : $>Turn Up
+  :              : $>Wait: 2 frame(s)
+ @>Wait: 8 frame(s)
+ @>Change Transparent Flag: Normal
+ @>Set Move Route: Player
+                   (Ignore If Can't Move)
+  :              : $>Through ON
+  :              : $>Move Down
+  :              : $>Through OFF
+ @>Wait: 8 frame(s)
+ @>Script: Followers.put_followers_on_player
+ @>Set Move Route: This event
+                   (Ignore If Can't Move)
+  :              : $>Turn Right
+  :              : $>Wait: 2 frame(s)
+  :              : $>Turn Left
+  :              : $>Wait: 2 frame(s)
+  :              : $>Turn Down
+  :              : $>Wait: 2 frame(s)
+ @>Wait: 8 frame(s)
+ @>
+: Branch End
+@>Script: setTempSwitchOn("A")
+@>
+
+#------------------------------------------------------------------------------
+Event ID: 006
+Event Name: Tür
+(X,Y): (016,021)
+
+Page #1
+Conditions
+None
+
+Autonomous Movement
+Type: Fixed
+Speed: 3: Slow
+Freq: 3: Low
+Options Enabled
+Move Animation
+Trigger: Player Touch
+
+List of Event Commands:
+@>Play SE: 'Door exit', 100, 100
+@>Change Screen Color Tone: (-255,-255,-255,0), @6
+@>Wait: 8 frame(s)
+@>Transfer Player:[666: Mansion], (028,022), Left, No Fade
+@>Change Screen Color Tone: (0,0,0,0), @6
+@>Wait: 8 frame(s)
+@>
+
+#------------------------------------------------------------------------------
+Event ID: 007
+Event Name: Tür
+(X,Y): (012,021)
+
+Page #1
+Conditions
+None
+
+Autonomous Movement
+Type: Fixed
+Speed: 3: Slow
+Freq: 3: Low
+Options Enabled
+Move Animation
+Trigger: Player Touch
+
+List of Event Commands:
+@>Play SE: 'Door exit', 100, 100
+@>Change Screen Color Tone: (-255,-255,-255,0), @6
+@>Wait: 8 frame(s)
+@>Transfer Player:[666: Mansion], (016,022), Right, No Fade
+@>Change Screen Color Tone: (0,0,0,0), @6
+@>Wait: 8 frame(s)
+@>
+
+#------------------------------------------------------------------------------
+
+#==============================================================================
+Map ID: 669
+Map Name: Mansion
+Tileset: 143: Mansion
+Width: 52, Height: 38
+
+#------------------------------------------------------------------------------
+Event ID: 001
+Event Name: Tür
+(X,Y): (013,028)
+
+Page #1
+Conditions
+None
+
+Autonomous Movement
+Type: Fixed
+Speed: 3: Slow
+Freq: 3: Low
+Options Enabled
+Move Animation
+Trigger: Player Touch
+
+List of Event Commands:
+@>Play SE: 'Door exit', 100, 100
+@>Change Screen Color Tone: (-255,-255,-255,0), @6
+@>Wait: 8 frame(s)
+@>Transfer Player:[668: Mansion], (003,025), Right, No Fade
+@>Change Screen Color Tone: (0,0,0,0), @6
+@>Wait: 8 frame(s)
+@>
+
+#------------------------------------------------------------------------------
+Event ID: 002
+Event Name: Tür
+(X,Y): (013,011)
+
+Page #1
+Conditions
+None
+
+Autonomous Movement
+Type: Fixed
+Speed: 3: Slow
+Freq: 3: Low
+Options Enabled
+Move Animation
+Trigger: Player Touch
+
+List of Event Commands:
+@>Play SE: 'Door exit', 100, 100
+@>Change Screen Color Tone: (-255,-255,-255,0), @6
+@>Wait: 8 frame(s)
+@>Transfer Player:[668: Mansion], (003,014), Right, No Fade
+@>Change Screen Color Tone: (0,0,0,0), @6
+@>Wait: 8 frame(s)
+@>
+
+#------------------------------------------------------------------------------
+Event ID: 003
+Event Name: Tür
+(X,Y): (037,011)
+
+Page #1
+Conditions
+None
+
+Autonomous Movement
+Type: Fixed
+Speed: 3: Slow
+Freq: 3: Low
+Options Enabled
+Move Animation
+Trigger: Player Touch
+
+List of Event Commands:
+@>Play SE: 'Door exit', 100, 100
+@>Change Screen Color Tone: (-255,-255,-255,0), @6
+@>Wait: 8 frame(s)
+@>Transfer Player:[668: Mansion], (025,014), Left, No Fade
+@>Change Screen Color Tone: (0,0,0,0), @6
+@>Wait: 8 frame(s)
+@>
+
+#------------------------------------------------------------------------------
+Event ID: 004
+Event Name: Tür
+(X,Y): (037,028)
+
+Page #1
+Conditions
+None
+
+Autonomous Movement
+Type: Fixed
+Speed: 3: Slow
+Freq: 3: Low
+Options Enabled
+Move Animation
+Trigger: Player Touch
+
+List of Event Commands:
+@>Play SE: 'Door exit', 100, 100
+@>Change Screen Color Tone: (-255,-255,-255,0), @6
+@>Wait: 8 frame(s)
+@>Transfer Player:[668: Mansion], (025,025), Left, No Fade
+@>Change Screen Color Tone: (0,0,0,0), @6
+@>Wait: 8 frame(s)
+@>
+
+#------------------------------------------------------------------------------
+Event ID: 005
+Event Name: Tür
+(X,Y): (025,036)
+
+Page #1
+Conditions
+None
+
+Autonomous Movement
+Type: Fixed
+Speed: 3: Slow
+Freq: 3: Low
+Options Enabled
+Move Animation
+Trigger: Player Touch
+
+List of Event Commands:
+@>Play SE: 'Door exit', 100, 100
+@>Change Screen Color Tone: (-255,-255,-255,0), @6
+@>Wait: 8 frame(s)
+@>Change Transparent Flag: Transparency
+@>Transfer Player:[668: Mansion], (014,005), Down, No Fade
+@>Change Screen Color Tone: (0,0,0,0), @6
+@>Wait: 8 frame(s)
+@>
+
+#------------------------------------------------------------------------------
+Event ID: 006
+Event Name: Tür
+(X,Y): (025,015)
+
+Page #1
+Conditions
+None
+
+Autonomous Movement
+Type: Fixed
+Speed: 3: Slow
+Freq: 3: Low
+Options Enabled
+Move Animation
+Trigger: Player Touch
+
+List of Event Commands:
+@>Play SE: 'Door exit', 100, 100
+@>Change Screen Color Tone: (-255,-255,-255,0), @6
+@>Wait: 8 frame(s)
+@>Change Transparent Flag: Transparency
+@>Transfer Player:[668: Mansion], (000,035)
+@>Wait: 1 frame(s)
+@>Transfer Player:[669: Mansion], (025,025), Down, No Fade
+@>Change Screen Color Tone: (0,0,0,0), @6
+@>Wait: 8 frame(s)
+@>
+
+#------------------------------------------------------------------------------
+Event ID: 007
+Event Name: Tür .sl
+(X,Y): (025,025)
+
+Page #1
+Conditions
+None
+
+Graphic: Tür Mansion
+
+Autonomous Movement
+Type: Fixed
+Speed: 3: Slow
+Freq: 3: Low
+Options Enabled
+Move Animation
+Trigger: Event Touch
+
+List of Event Commands:
+@>Play SE: 'Door enter', 100, 100
+@>Set Move Route: This event
+ :              : $>Graphic: "Tür Mansion', 0, 4, 0
+ :              : $>Wait: 2 frame(s)
+ :              : $>Graphic: "Tür Mansion', 0, 6, 0
+ :              : $>Wait: 2 frame(s)
+ :              : $>Graphic: "Tür Mansion', 0, 8, 0
+ :              : $>Wait: 2 frame(s)
+@>Wait: 6 frame(s)
+@>Set Move Route: Player
+                  (Ignore If Can't Move)
+ :              : $>Through ON
+ :              : $>Move Up
+ :              : $>Through OFF
+@>Wait: 8 frame(s)
+@>Change Transparent Flag: Transparency
+@>Script: Followers.follow_into_door
+@>Wait: 8 frame(s)
+@>Set Move Route: This event
+                  (Ignore If Can't Move)
+ :              : $>Wait: 2 frame(s)
+ :              : $>Turn Right
+ :              : $>Wait: 2 frame(s)
+ :              : $>Turn Left
+ :              : $>Wait: 2 frame(s)
+ :              : $>Turn Down
+ :              : $>Wait: 2 frame(s)
+@>Wait: 8 frame(s)
+@>Change Screen Color Tone: (-255,-255,-255,0), @6
+@>Wait: 8 frame(s)
+@>Change Transparent Flag: Normal
+@>Transfer Player:[669: Mansion], (025,014), Up, No Fade
+@>Change Screen Color Tone: (0,0,0,0), @6
+@>Wait: 8 frame(s)
+@>
+
+Page #2
+Conditions
+Switch 0022: s:tsOff?("A") is ON
+
+Graphic: Tür Mansion
+
+Autonomous Movement
+Type: Fixed
+Speed: 3: Slow
+Freq: 3: Low
+Options Enabled
+Move Animation
+Trigger: Autorun
+
+List of Event Commands:
+@>Conditional Branch: Script: get_self.onEvent?
+ @>Change Transparent Flag: Transparency
+ @>Script: Followers.hide_followers
+ @>Set Move Route: This event
+                   (Ignore If Can't Move)
+  :              : $>SE: 'Door enter', 100, 90
+  :              : $>Wait: 2 frame(s)
+  :              : $>Turn Left
+  :              : $>Wait: 2 frame(s)
+  :              : $>Turn Right
+  :              : $>Wait: 2 frame(s)
+  :              : $>Turn Up
+  :              : $>Wait: 2 frame(s)
+ @>Wait: 8 frame(s)
+ @>Change Transparent Flag: Normal
+ @>Set Move Route: Player
+                   (Ignore If Can't Move)
+  :              : $>Through ON
+  :              : $>Move Down
+  :              : $>Through OFF
+ @>Wait: 8 frame(s)
+ @>Script: Followers.put_followers_on_player
+ @>Set Move Route: This event
+                   (Ignore If Can't Move)
+  :              : $>Turn Right
+  :              : $>Wait: 2 frame(s)
+  :              : $>Turn Left
+  :              : $>Wait: 2 frame(s)
+  :              : $>Turn Down
+  :              : $>Wait: 2 frame(s)
+ @>Wait: 8 frame(s)
+ @>
+: Branch End
+@>Script: setTempSwitchOn("A")
+@>
+
+#------------------------------------------------------------------------------
+
+#==============================================================================
+Map ID: 670
+Map Name: MAP670
+Tileset: 137: Wasserroute
+Width: 90, Height: 40
+
+#==============================================================================
+Map ID: 671
+Map Name: MAP671
+Tileset: 140: 
+Width: 80, Height: 60
 
 #==============================================================================
 

@@ -2003,6 +2003,13 @@ BaseMoney = 100
 BattleBGM = DPPT 035 Battle! (Gym Leader)
 VictoryBGM = Battle victory leader
 #-------------------------------
+[LEADER_Arena7]
+Name = Arenaleiter
+Gender = Female
+BaseMoney = 100
+BattleBGM = DPPT 035 Battle! (Gym Leader)
+VictoryBGM = Battle victory leader
+#-------------------------------
 [LEADER_Marvin]
 Name = Arenaleiter
 Gender = Male

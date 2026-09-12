@@ -4300,6 +4300,9 @@ SnapEdges = true
 Flags = Levels
 #-------------------------------
 [649]   # Zwischengebäude
-Name = 
+Name = Zwischengebäude
 MapPosition = 0,15,2
+SnapEdges = true
+#-------------------------------
+[651]   # Dracheninsel 2
 SnapEdges = true

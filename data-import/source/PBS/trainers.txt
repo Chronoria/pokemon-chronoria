@@ -2193,6 +2193,33 @@ Pokemon = AERODACTYL,50
     Shiny = true
     Ball = HEAVYBALL
 #-------------------------------
+[LEADER_Arena7,Eira]
+Items = HYPERPOTION,HYPERPOTION,MEGARING
+LoseText = Gut gekämpft!
+Pokemon = TORKOAL,48
+    Moves = LAVAPLUME,BODYSLAM,PROTECT,SMOKESCREEN
+    AbilityIndex = 1
+    Item = HEATROCK
+    Ball = MAGMARBALL
+Pokemon = FLAREON,48
+    Moves = ENDEAVOR,FIREFANG,SANDATTACK,PROTECT
+    Gender = male
+    Ball = MAGMARBALL
+Pokemon = ARCANINE,49
+    Moves = FIREFANG,REVERSAL,CRUNCH,AGILITY
+    Item = ROCKYHELMET
+    Gender = female
+    Ball = MAGMARBALL
+Pokemon = GARGANACL,49
+    Moves = ROCKTOMB,SALTCURE,EARTHQUAKE,IRONDEFENSE
+    AbilityIndex = 2
+    Ball = MAGMARBALL
+Pokemon = AERODACTYL,50
+    Moves = FLY,EARTHPOWER,STONEEDGE,FACADE
+    Item = AERODACTYLITE
+    Shiny = true
+    Ball = HEAVYBALL
+#-------------------------------
 [HIKER,Ralik]
 LoseText = Ich konnte nicht standhalten.
 Pokemon = MAGMAR,45
