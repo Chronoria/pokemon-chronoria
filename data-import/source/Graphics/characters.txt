@@ -659,9 +659,11 @@ Door Bruchhain
 Door Dimension
 Door Dojo
 Door Dojo 2
+Door Kraftwerk
 Door Magic
 Door Mine
 Door Morastia PC
+Door Noxburgh
 Door Portal
 Door Regigigas
 Door Reshiram
@@ -1547,6 +1549,7 @@ Muddy Slope
 MUDKIP
 MUDKIP_female
 MUDSDALE
+Mudsdale (2)
 Mühle
 MUK
 MUK_1
@@ -2099,6 +2102,7 @@ PIDGEY
 PIDGEYs
 PIDOVE
 PIGNITE
+Pika_Chu
 PIKACHU
 PIKACHU_1
 PIKACHU_1_shiny
@@ -2546,6 +2550,7 @@ Sleep Charmian
 Sleep Chatot
 Sleep Chimpep
 Sleep Choreogel
+Sleep Deino
 Sleep Felilou
 Sleep Fiffyen
 Sleep Flaniwal

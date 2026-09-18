@@ -298,7 +298,7 @@ Pocket = 1
 Price = 2100
 FieldUse = OnPokemon
 Flags = Fling_30,EvolutionStone
-Description = Es lassen sich Alpollo, Kadabra, Georok, Sedimantur, Strepoli, Paragonis, Irrbis und Maschok entwickeln.
+Description = Es lassen sich Alpollo, Kadabra, Georok, Sedimantur, Strepoli, Paragoni, Irrbis und Maschock entwickeln.
 #-------------------------------Shop
 [DEEPSEATOOTH]
 Name = Abysszahn
@@ -8549,8 +8549,8 @@ Flags = KeyItem
 Description = Erhellt dunkle Gebiete.
 #-------------------------------------------------------------------------------Einzigartig
 [ROCKSMASHITEM]
-Name = Spitzaxt
-NamePlural = Spitzäxte
+Name = Spitzhacke
+NamePlural = Spitzhacken
 Pocket = 8
 Price = 0
 FieldUse = Direct
