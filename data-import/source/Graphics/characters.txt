@@ -1591,6 +1591,7 @@ NOCTOWL
 NOCTOWL_1
 NOIBAT
 NOIVERN
+NOIVERN Deko
 NOSEPASS
 NPC 01
 NPC 02
@@ -2573,7 +2574,9 @@ Sleep Iksbat
 Sleep Infernopod
 Sleep Keifel
 Sleep Kleptifux
+Sleep Knapfel
 Sleep Latios
+Sleep Letarking
 Sleep Leufeo
 Sleep Lohgock
 Sleep Lohgock 2
@@ -2582,6 +2585,7 @@ Sleep Lucario 2
 Sleep Meleoetta 2
 Sleep Meloetta
 Sleep Miltank
+Sleep Miniras
 Sleep Molunk
 Sleep Pampam
 Sleep Papinella
@@ -2611,6 +2615,7 @@ Sleep Velursi
 Sleep Vibrava
 Sleep Voltenso
 Sleep Vulpix_1
+Sleep Waaty
 Sleep Zorua
 Sleep Zorua_1
 Sleep_sandamer

@@ -1235,7 +1235,63 @@ Shape = MultiWinged
 Pokedex = It zips around at blistering speeds, looking for an opening to skewer its opponent on its giant pincers.
 Generation = 6
 #-------------------------------
+[MAGIKARP,1]
+FormName = Chrono
+Types = WATER
+BaseStats = 20,10,55,80,15,20
+GenderRatio = Female50Percent
+GrowthRate = Slow
+BaseExp = 40
+EVs = SPEED,1
+CatchRate = 255
+Happiness = 50
+Abilities = SWIFTSWIM
+HiddenAbilities = RATTLED
+Moves = 1,SPLASH,15,TACKLE,25,FLAIL
+TutorMoves = BOUNCE,HYDROPUMP
+EggGroups = Water2,Dragon
+HatchSteps = 1280
+Height = 0.9
+Weight = 10.0
+Color = Red
+Shape = Finned
+Habitat = WatersEdge
+Category = Fish
+Pokedex = Its swimming muscles are weak, so it is easily washed away by currents. In places where water pools, you can see many Magikarp deposited there by the flow.
+Generation = 1
+Evolutions = GYARADOS,Level,20
+SpeciesSOS = MAGIKARP,GYARADOS
+CallRateSOS = 9
+RaidRanks = 1,2
+#-------------------------------
 [GYARADOS,1]
+FormName = Chrono
+Types = WATER,DRAGON
+BaseStats = 95,125,79,81,60,100
+GenderRatio = Female50Percent
+GrowthRate = Slow
+BaseExp = 189
+EVs = ATTACK,2
+CatchRate = 45
+Happiness = 50
+Abilities = INTIMIDATE
+HiddenAbilities = MOXIE
+Moves = 0,BITE,1,TACKLE,1,LEER,1,TWISTER,1,SPLASH,1,FLAIL,4,WHIRLPOOL,8,ICEFANG,12,BRINE,16,SCARYFACE,21,WATERFALL,24,CRUNCH,28,RAINDANCE,32,AQUATAIL,36,DRAGONDANCE,40,HYDROPUMP,44,HURRICANE,48,THRASH,52,HYPERBEAM
+TutorMoves = AVALANCHE,BLIZZARD,BODYSLAM,BULLDOZE,CHILLINGWATER,CRUNCH,DARKPULSE,DOUBLEEDGE,DRAGONCHEER,DRAGONDANCE,DRAGONPULSE,DRAGONTAIL,EARTHQUAKE,ENDEAVOR,ENDURE,FACADE,FIREBLAST,FLAMETHROWER,GIGAIMPACT,HELPINGHAND,HURRICANE,HYDROPUMP,HYPERBEAM,ICEBEAM,ICEFANG,ICYWIND,IRONHEAD,LASHOUT,MUDDYWATER,OUTRAGE,PROTECT,RAINDANCE,REST,ROAR,SANDSTORM,SCALD,SCALESHOT,SCARYFACE,SLEEPTALK,SPITE,STONEEDGE,SUBSTITUTE,SUNNYDAY,SURF,TAKEDOWN,TAUNT,TEMPERFLARE,THUNDER,THUNDERBOLT,THUNDERWAVE,WATERFALL,WATERPULSE,WHIRLPOOL
+EggGroups = Water2,Dragon
+HatchSteps = 1280
+Height = 6.5
+Weight = 235.0
+Color = Blue
+Shape = Serpentine
+Habitat = WatersEdge
+Category = Atrocious
+Pokedex = It is an extremely vicious and violent Pokémon. When humans begin to fight, it will appear and burn everything to the ground with intensely hot flames.
+Generation = 1
+CallRateSOS = 3
+RaidRanks = 4,5
+#-------------------------------
+[GYARADOS,2]
 FormName = Mega Garados
 MegaStone = GYARADOSITE
 Types = WATER,DARK
@@ -1244,6 +1300,7 @@ BaseExp = 224
 Abilities = MOLDBREAKER
 HiddenAbilities = MOLDBREAKER
 Weight = 305.0
+UnmegaForm = 0
 Pokedex = It zooms out of the water at Mach speeds. Even large ships caught in its path are split cleanly in two!
 Generation = 6
 #-------------------------------
