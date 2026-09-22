@@ -6568,9 +6568,18 @@ BPPrice = 50
 Flags = MegaStone,Fling_80
 Description = Dieser Stein ermöglicht Gewaldro eine Mega-Entwicklung.
 #-------------------------------Einzigartig
-[BLAZIKENITE]
-Name = Lohgocknit
-NamePlural = Lohgocknite
+[BLAZIKENITEX]
+Name = Lohgocknit X
+NamePlural = Lohgocknite X
+Pocket = 6
+Price = 10000
+BPPrice = 50
+Flags = MegaStone,Fling_80
+Description = Dieser Stein ermöglicht Lohgock eine Mega-Entwicklung.
+#-------------------------------Einzigartig
+[BLAZIKENITEY]
+Name = Lohgocknit Y
+NamePlural = Lohgocknite Y
 Pocket = 6
 Price = 10000
 BPPrice = 50
