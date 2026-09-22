@@ -6424,9 +6424,18 @@ BPPrice = 50
 Flags = MegaStone,Fling_80
 Description = Dieser Stein ermöglicht Gengar eine Mega-Entwicklung.
 #-------------------------------Einzigartig
-[KANGASKHANITE]
-Name = Kangamanit
-NamePlural = Kangamanite
+[KANGASKHANITEX]
+Name = Kangamanit X
+NamePlural = Kangamanite X
+Pocket = 6
+Price = 10000
+BPPrice = 50
+Flags = MegaStone,Fling_80
+Description = Dieser Stein ermöglicht Kangama eine Mega-Entwicklung.
+#-------------------------------Einzigartig
+[KANGASKHANITEY]
+Name = Kangamanit Y
+NamePlural = Kangamanite Y
 Pocket = 6
 Price = 10000
 BPPrice = 50

@@ -55739,7 +55739,23 @@ Move Animation
 Trigger: Parallel Process
 
 List of Event Commands:
-@>Erase Picture: 1
+@>Change Map Settings:Fog = 'Velmora Haus', 0, 255, Normal, 100, 0, 0
+@>
+
+Page #2
+Conditions
+Switch 0015: s:PBDayNight.isNight? is ON
+
+Autonomous Movement
+Type: Fixed
+Speed: 3: Slow
+Freq: 3: Low
+Options Enabled
+Move Animation
+Trigger: Parallel Process
+
+List of Event Commands:
+@>Change Map Settings:Fog = 'Velmora Haus', 140, 255, Normal, 100, 0, 0
 @>
 
 #------------------------------------------------------------------------------
@@ -56233,7 +56249,23 @@ Move Animation
 Trigger: Parallel Process
 
 List of Event Commands:
-@>Erase Picture: 1
+@>Change Map Settings:Fog = 'Velmora Haus', 0, 255, Normal, 100, 0, 0
+@>
+
+Page #2
+Conditions
+Switch 0015: s:PBDayNight.isNight? is ON
+
+Autonomous Movement
+Type: Fixed
+Speed: 3: Slow
+Freq: 3: Low
+Options Enabled
+Move Animation
+Trigger: Parallel Process
+
+List of Event Commands:
+@>Change Map Settings:Fog = 'Velmora Haus', 140, 255, Normal, 100, 0, 0
 @>
 
 #------------------------------------------------------------------------------
@@ -56645,7 +56677,23 @@ Move Animation
 Trigger: Parallel Process
 
 List of Event Commands:
-@>Erase Picture: 1
+@>Change Map Settings:Fog = 'Mistral_095', 0, 255, Normal, 100, 0, 0
+@>
+
+Page #2
+Conditions
+Switch 0015: s:PBDayNight.isNight? is ON
+
+Autonomous Movement
+Type: Fixed
+Speed: 3: Slow
+Freq: 3: Low
+Options Enabled
+Move Animation
+Trigger: Parallel Process
+
+List of Event Commands:
+@>Change Map Settings:Fog = 'Velmora Haus', 140, 255, Normal, 100, 0, 0
 @>
 
 #------------------------------------------------------------------------------
@@ -57764,7 +57812,23 @@ Move Animation
 Trigger: Parallel Process
 
 List of Event Commands:
-@>Erase Picture: 1
+@>Change Map Settings:Fog = 'Mistral_095', 0, 255, Normal, 100, 0, 0
+@>
+
+Page #2
+Conditions
+Switch 0015: s:PBDayNight.isNight? is ON
+
+Autonomous Movement
+Type: Fixed
+Speed: 3: Slow
+Freq: 3: Low
+Options Enabled
+Move Animation
+Trigger: Parallel Process
+
+List of Event Commands:
+@>Change Map Settings:Fog = 'Velmora Haus', 140, 255, Normal, 100, 0, 0
 @>
 
 #------------------------------------------------------------------------------
@@ -58406,6 +58470,43 @@ List of Event Commands:
 @>
 
 #------------------------------------------------------------------------------
+Event ID: 013
+Event Name: EV013
+(X,Y): (000,000)
+
+Page #1
+Conditions
+None
+
+Autonomous Movement
+Type: Fixed
+Speed: 3: Slow
+Freq: 3: Low
+Options Enabled
+Move Animation
+Trigger: Parallel Process
+
+List of Event Commands:
+@>Change Map Settings:Fog = 'Velmora Haus', 0, 255, Normal, 100, 0, 0
+@>
+
+Page #2
+Conditions
+Switch 0015: s:PBDayNight.isNight? is ON
+
+Autonomous Movement
+Type: Fixed
+Speed: 3: Slow
+Freq: 3: Low
+Options Enabled
+Move Animation
+Trigger: Parallel Process
+
+List of Event Commands:
+@>Change Map Settings:Fog = 'Velmora Haus', 140, 255, Normal, 100, 0, 0
+@>
+
+#------------------------------------------------------------------------------
 Event ID: 014
 Event Name: EV014
 (X,Y): (024,016)
@@ -59033,6 +59134,43 @@ Trigger: Action Button
 
 List of Event Commands:
 @>Text: Nichts besonderes.
+@>
+
+#------------------------------------------------------------------------------
+Event ID: 010
+Event Name: EV010
+(X,Y): (000,000)
+
+Page #1
+Conditions
+None
+
+Autonomous Movement
+Type: Fixed
+Speed: 3: Slow
+Freq: 3: Low
+Options Enabled
+Move Animation
+Trigger: Parallel Process
+
+List of Event Commands:
+@>Change Map Settings:Fog = 'Velmora Haus', 0, 255, Normal, 100, 0, 0
+@>
+
+Page #2
+Conditions
+Switch 0015: s:PBDayNight.isNight? is ON
+
+Autonomous Movement
+Type: Fixed
+Speed: 3: Slow
+Freq: 3: Low
+Options Enabled
+Move Animation
+Trigger: Parallel Process
+
+List of Event Commands:
+@>Change Map Settings:Fog = 'Velmora Haus', 140, 255, Normal, 100, 0, 0
 @>
 
 #------------------------------------------------------------------------------
@@ -59797,6 +59935,43 @@ List of Event Commands:
 @>
 
 #------------------------------------------------------------------------------
+Event ID: 015
+Event Name: EV015
+(X,Y): (000,000)
+
+Page #1
+Conditions
+None
+
+Autonomous Movement
+Type: Fixed
+Speed: 3: Slow
+Freq: 3: Low
+Options Enabled
+Move Animation
+Trigger: Parallel Process
+
+List of Event Commands:
+@>Change Map Settings:Fog = 'Velmora Haus', 0, 255, Normal, 100, 0, 0
+@>
+
+Page #2
+Conditions
+Switch 0015: s:PBDayNight.isNight? is ON
+
+Autonomous Movement
+Type: Fixed
+Speed: 3: Slow
+Freq: 3: Low
+Options Enabled
+Move Animation
+Trigger: Parallel Process
+
+List of Event Commands:
+@>Change Map Settings:Fog = 'Velmora Haus', 140, 255, Normal, 100, 0, 0
+@>
+
+#------------------------------------------------------------------------------
 
 #==============================================================================
 Map ID: 102
@@ -60457,6 +60632,43 @@ Trigger: Action Button
 
 List of Event Commands:
 @>Text: Nichts besonderes.
+@>
+
+#------------------------------------------------------------------------------
+Event ID: 012
+Event Name: EV012
+(X,Y): (000,000)
+
+Page #1
+Conditions
+None
+
+Autonomous Movement
+Type: Fixed
+Speed: 3: Slow
+Freq: 3: Low
+Options Enabled
+Move Animation
+Trigger: Parallel Process
+
+List of Event Commands:
+@>Change Map Settings:Fog = 'Mistral_107', 0, 255, Normal, 100, 0, 0
+@>
+
+Page #2
+Conditions
+Switch 0015: s:PBDayNight.isNight? is ON
+
+Autonomous Movement
+Type: Fixed
+Speed: 3: Slow
+Freq: 3: Low
+Options Enabled
+Move Animation
+Trigger: Parallel Process
+
+List of Event Commands:
+@>Change Map Settings:Fog = 'Velmora Haus', 140, 255, Normal, 100, 0, 0
 @>
 
 #------------------------------------------------------------------------------
@@ -61270,6 +61482,43 @@ List of Event Commands:
 @>
 
 #------------------------------------------------------------------------------
+Event ID: 010
+Event Name: EV010
+(X,Y): (000,000)
+
+Page #1
+Conditions
+None
+
+Autonomous Movement
+Type: Fixed
+Speed: 3: Slow
+Freq: 3: Low
+Options Enabled
+Move Animation
+Trigger: Parallel Process
+
+List of Event Commands:
+@>Change Map Settings:Fog = 'Mistral_107', 0, 255, Normal, 100, 0, 0
+@>
+
+Page #2
+Conditions
+Switch 0015: s:PBDayNight.isNight? is ON
+
+Autonomous Movement
+Type: Fixed
+Speed: 3: Slow
+Freq: 3: Low
+Options Enabled
+Move Animation
+Trigger: Parallel Process
+
+List of Event Commands:
+@>Change Map Settings:Fog = 'Velmora Haus', 140, 255, Normal, 100, 0, 0
+@>
+
+#------------------------------------------------------------------------------
 Event ID: 011
 Event Name: EV011
 (X,Y): (022,014)
@@ -61987,6 +62236,43 @@ Trigger: Action Button
 
 List of Event Commands:
 @>Text: Nichts besonderes.
+@>
+
+#------------------------------------------------------------------------------
+Event ID: 011
+Event Name: EV011
+(X,Y): (000,000)
+
+Page #1
+Conditions
+None
+
+Autonomous Movement
+Type: Fixed
+Speed: 3: Slow
+Freq: 3: Low
+Options Enabled
+Move Animation
+Trigger: Parallel Process
+
+List of Event Commands:
+@>Change Map Settings:Fog = 'Mistral_107', 0, 255, Normal, 100, 0, 0
+@>
+
+Page #2
+Conditions
+Switch 0015: s:PBDayNight.isNight? is ON
+
+Autonomous Movement
+Type: Fixed
+Speed: 3: Slow
+Freq: 3: Low
+Options Enabled
+Move Animation
+Trigger: Parallel Process
+
+List of Event Commands:
+@>Change Map Settings:Fog = 'Velmora Haus', 140, 255, Normal, 100, 0, 0
 @>
 
 #------------------------------------------------------------------------------
@@ -73423,6 +73709,43 @@ List of Event Commands:
 @>
 
 #------------------------------------------------------------------------------
+Event ID: 010
+Event Name: EV010
+(X,Y): (000,000)
+
+Page #1
+Conditions
+None
+
+Autonomous Movement
+Type: Fixed
+Speed: 3: Slow
+Freq: 3: Low
+Options Enabled
+Move Animation
+Trigger: Parallel Process
+
+List of Event Commands:
+@>Change Map Settings:Fog = 'Velmora Haus', 0, 255, Normal, 100, 0, 0
+@>
+
+Page #2
+Conditions
+Switch 0015: s:PBDayNight.isNight? is ON
+
+Autonomous Movement
+Type: Fixed
+Speed: 3: Slow
+Freq: 3: Low
+Options Enabled
+Move Animation
+Trigger: Parallel Process
+
+List of Event Commands:
+@>Change Map Settings:Fog = 'Velmora Haus', 140, 255, Normal, 100, 0, 0
+@>
+
+#------------------------------------------------------------------------------
 Event ID: 011
 Event Name: EV011
 (X,Y): (013,012)
@@ -73856,6 +74179,43 @@ List of Event Commands:
  @>Text: Ein Mülleimer ohne Geheimnisse, wie langweilig.
  @>
 : Branch End
+@>
+
+#------------------------------------------------------------------------------
+Event ID: 006
+Event Name: EV006
+(X,Y): (000,000)
+
+Page #1
+Conditions
+None
+
+Autonomous Movement
+Type: Fixed
+Speed: 3: Slow
+Freq: 3: Low
+Options Enabled
+Move Animation
+Trigger: Parallel Process
+
+List of Event Commands:
+@>Change Map Settings:Fog = 'Mistral_095', 0, 255, Normal, 100, 0, 0
+@>
+
+Page #2
+Conditions
+Switch 0015: s:PBDayNight.isNight? is ON
+
+Autonomous Movement
+Type: Fixed
+Speed: 3: Slow
+Freq: 3: Low
+Options Enabled
+Move Animation
+Trigger: Parallel Process
+
+List of Event Commands:
+@>Change Map Settings:Fog = 'Velmora Haus', 140, 255, Normal, 100, 0, 0
 @>
 
 #------------------------------------------------------------------------------
@@ -74327,6 +74687,43 @@ Trigger: Action Button
 
 List of Event Commands:
 @>Text: Ein paar Klamotten.
+@>
+
+#------------------------------------------------------------------------------
+Event ID: 008
+Event Name: EV008
+(X,Y): (000,000)
+
+Page #1
+Conditions
+None
+
+Autonomous Movement
+Type: Fixed
+Speed: 3: Slow
+Freq: 3: Low
+Options Enabled
+Move Animation
+Trigger: Parallel Process
+
+List of Event Commands:
+@>Change Map Settings:Fog = 'Mistral_095', 0, 255, Normal, 100, 0, 0
+@>
+
+Page #2
+Conditions
+Switch 0015: s:PBDayNight.isNight? is ON
+
+Autonomous Movement
+Type: Fixed
+Speed: 3: Slow
+Freq: 3: Low
+Options Enabled
+Move Animation
+Trigger: Parallel Process
+
+List of Event Commands:
+@>Change Map Settings:Fog = 'Velmora Haus', 140, 255, Normal, 100, 0, 0
 @>
 
 #------------------------------------------------------------------------------
@@ -74814,6 +75211,43 @@ Trigger: Action Button
 
 List of Event Commands:
 @>Text: Ein paar Klamotten.
+@>
+
+#------------------------------------------------------------------------------
+Event ID: 011
+Event Name: EV011
+(X,Y): (000,000)
+
+Page #1
+Conditions
+None
+
+Autonomous Movement
+Type: Fixed
+Speed: 3: Slow
+Freq: 3: Low
+Options Enabled
+Move Animation
+Trigger: Parallel Process
+
+List of Event Commands:
+@>Change Map Settings:Fog = 'Velmora Haus', 0, 255, Normal, 100, 0, 0
+@>
+
+Page #2
+Conditions
+Switch 0015: s:PBDayNight.isNight? is ON
+
+Autonomous Movement
+Type: Fixed
+Speed: 3: Slow
+Freq: 3: Low
+Options Enabled
+Move Animation
+Trigger: Parallel Process
+
+List of Event Commands:
+@>Change Map Settings:Fog = 'Velmora Haus', 140, 255, Normal, 100, 0, 0
 @>
 
 #------------------------------------------------------------------------------
@@ -75514,6 +75948,43 @@ List of Event Commands:
 @>
 
 #------------------------------------------------------------------------------
+Event ID: 014
+Event Name: EV014
+(X,Y): (000,000)
+
+Page #1
+Conditions
+None
+
+Autonomous Movement
+Type: Fixed
+Speed: 3: Slow
+Freq: 3: Low
+Options Enabled
+Move Animation
+Trigger: Parallel Process
+
+List of Event Commands:
+@>Change Map Settings:Fog = 'Velmora Haus', 0, 255, Normal, 100, 0, 0
+@>
+
+Page #2
+Conditions
+Switch 0015: s:PBDayNight.isNight? is ON
+
+Autonomous Movement
+Type: Fixed
+Speed: 3: Slow
+Freq: 3: Low
+Options Enabled
+Move Animation
+Trigger: Parallel Process
+
+List of Event Commands:
+@>Change Map Settings:Fog = 'Velmora Haus', 140, 255, Normal, 100, 0, 0
+@>
+
+#------------------------------------------------------------------------------
 
 #==============================================================================
 Map ID: 117
@@ -76025,6 +76496,43 @@ List of Event Commands:
 @>
 
 #------------------------------------------------------------------------------
+Event ID: 011
+Event Name: EV011
+(X,Y): (000,000)
+
+Page #1
+Conditions
+None
+
+Autonomous Movement
+Type: Fixed
+Speed: 3: Slow
+Freq: 3: Low
+Options Enabled
+Move Animation
+Trigger: Parallel Process
+
+List of Event Commands:
+@>Change Map Settings:Fog = 'Velmora Haus', 0, 255, Normal, 100, 0, 0
+@>
+
+Page #2
+Conditions
+Switch 0015: s:PBDayNight.isNight? is ON
+
+Autonomous Movement
+Type: Fixed
+Speed: 3: Slow
+Freq: 3: Low
+Options Enabled
+Move Animation
+Trigger: Parallel Process
+
+List of Event Commands:
+@>Change Map Settings:Fog = 'Velmora Haus', 140, 255, Normal, 100, 0, 0
+@>
+
+#------------------------------------------------------------------------------
 Event ID: 012
 Event Name: EV012
 (X,Y): (024,016)
@@ -76459,6 +76967,43 @@ Trigger: Action Button
 
 List of Event Commands:
 @>Text: Vielen Dank nochmal!
+@>
+
+#------------------------------------------------------------------------------
+Event ID: 005
+Event Name: EV005
+(X,Y): (000,000)
+
+Page #1
+Conditions
+None
+
+Autonomous Movement
+Type: Fixed
+Speed: 3: Slow
+Freq: 3: Low
+Options Enabled
+Move Animation
+Trigger: Parallel Process
+
+List of Event Commands:
+@>Change Map Settings:Fog = 'Velmora Haus', 0, 255, Normal, 100, 0, 0
+@>
+
+Page #2
+Conditions
+Switch 0015: s:PBDayNight.isNight? is ON
+
+Autonomous Movement
+Type: Fixed
+Speed: 3: Slow
+Freq: 3: Low
+Options Enabled
+Move Animation
+Trigger: Parallel Process
+
+List of Event Commands:
+@>Change Map Settings:Fog = 'Velmora Haus', 140, 255, Normal, 100, 0, 0
 @>
 
 #------------------------------------------------------------------------------
@@ -77034,6 +77579,43 @@ Trigger: Action Button
 
 List of Event Commands:
 @>Text: Nichts besonderes.
+@>
+
+#------------------------------------------------------------------------------
+Event ID: 006
+Event Name: EV006
+(X,Y): (000,000)
+
+Page #1
+Conditions
+None
+
+Autonomous Movement
+Type: Fixed
+Speed: 3: Slow
+Freq: 3: Low
+Options Enabled
+Move Animation
+Trigger: Parallel Process
+
+List of Event Commands:
+@>Change Map Settings:Fog = 'Velmora Haus', 0, 255, Normal, 100, 0, 0
+@>
+
+Page #2
+Conditions
+Switch 0015: s:PBDayNight.isNight? is ON
+
+Autonomous Movement
+Type: Fixed
+Speed: 3: Slow
+Freq: 3: Low
+Options Enabled
+Move Animation
+Trigger: Parallel Process
+
+List of Event Commands:
+@>Change Map Settings:Fog = 'Velmora Haus', 140, 255, Normal, 100, 0, 0
 @>
 
 #------------------------------------------------------------------------------
@@ -77703,6 +78285,43 @@ Trigger: Action Button
 
 List of Event Commands:
 @>Play SE: 'GROWLITHE', 80, 100
+@>
+
+#------------------------------------------------------------------------------
+Event ID: 006
+Event Name: EV006
+(X,Y): (000,000)
+
+Page #1
+Conditions
+None
+
+Autonomous Movement
+Type: Fixed
+Speed: 3: Slow
+Freq: 3: Low
+Options Enabled
+Move Animation
+Trigger: Parallel Process
+
+List of Event Commands:
+@>Change Map Settings:Fog = 'Mistral_107', 0, 255, Normal, 100, 0, 0
+@>
+
+Page #2
+Conditions
+Switch 0015: s:PBDayNight.isNight? is ON
+
+Autonomous Movement
+Type: Fixed
+Speed: 3: Slow
+Freq: 3: Low
+Options Enabled
+Move Animation
+Trigger: Parallel Process
+
+List of Event Commands:
+@>Change Map Settings:Fog = 'Velmora Haus', 140, 255, Normal, 100, 0, 0
 @>
 
 #------------------------------------------------------------------------------
@@ -78655,6 +79274,43 @@ Trigger: Action Button
 
 List of Event Commands:
 @>Text: Bücher über das anpflanzen von Beeren.
+@>
+
+#------------------------------------------------------------------------------
+Event ID: 015
+Event Name: EV015
+(X,Y): (000,000)
+
+Page #1
+Conditions
+None
+
+Autonomous Movement
+Type: Fixed
+Speed: 3: Slow
+Freq: 3: Low
+Options Enabled
+Move Animation
+Trigger: Parallel Process
+
+List of Event Commands:
+@>Change Map Settings:Fog = 'Mistral_107', 0, 255, Normal, 100, 0, 0
+@>
+
+Page #2
+Conditions
+Switch 0015: s:PBDayNight.isNight? is ON
+
+Autonomous Movement
+Type: Fixed
+Speed: 3: Slow
+Freq: 3: Low
+Options Enabled
+Move Animation
+Trigger: Parallel Process
+
+List of Event Commands:
+@>Change Map Settings:Fog = 'Velmora Haus', 140, 255, Normal, 100, 0, 0
 @>
 
 #------------------------------------------------------------------------------
@@ -91850,6 +92506,43 @@ List of Event Commands:
 @>
 
 #------------------------------------------------------------------------------
+Event ID: 008
+Event Name: EV008
+(X,Y): (000,000)
+
+Page #1
+Conditions
+None
+
+Autonomous Movement
+Type: Fixed
+Speed: 3: Slow
+Freq: 3: Low
+Options Enabled
+Move Animation
+Trigger: Parallel Process
+
+List of Event Commands:
+@>Change Map Settings:Fog = 'Velmora Haus', 0, 255, Normal, 100, 0, 0
+@>
+
+Page #2
+Conditions
+Switch 0015: s:PBDayNight.isNight? is ON
+
+Autonomous Movement
+Type: Fixed
+Speed: 3: Slow
+Freq: 3: Low
+Options Enabled
+Move Animation
+Trigger: Parallel Process
+
+List of Event Commands:
+@>Change Map Settings:Fog = 'Velmora Haus', 140, 255, Normal, 100, 0, 0
+@>
+
+#------------------------------------------------------------------------------
 Event ID: 009
 Event Name: EV009
 (X,Y): (013,012)
@@ -92618,6 +93311,43 @@ List of Event Commands:
 @>
 
 #------------------------------------------------------------------------------
+Event ID: 010
+Event Name: EV010
+(X,Y): (000,000)
+
+Page #1
+Conditions
+None
+
+Autonomous Movement
+Type: Fixed
+Speed: 3: Slow
+Freq: 3: Low
+Options Enabled
+Move Animation
+Trigger: Parallel Process
+
+List of Event Commands:
+@>Change Map Settings:Fog = 'Velmora Haus', 0, 255, Normal, 100, 0, 0
+@>
+
+Page #2
+Conditions
+Switch 0015: s:PBDayNight.isNight? is ON
+
+Autonomous Movement
+Type: Fixed
+Speed: 3: Slow
+Freq: 3: Low
+Options Enabled
+Move Animation
+Trigger: Parallel Process
+
+List of Event Commands:
+@>Change Map Settings:Fog = 'Velmora Haus', 140, 255, Normal, 100, 0, 0
+@>
+
+#------------------------------------------------------------------------------
 Event ID: 011
 Event Name: EV011
 (X,Y): (013,012)
@@ -93211,6 +93941,43 @@ Trigger: Action Button
 
 List of Event Commands:
 @>Play SE: 'WHIMSICOTT', 100, 100
+@>
+
+#------------------------------------------------------------------------------
+Event ID: 009
+Event Name: EV009
+(X,Y): (000,000)
+
+Page #1
+Conditions
+None
+
+Autonomous Movement
+Type: Fixed
+Speed: 3: Slow
+Freq: 3: Low
+Options Enabled
+Move Animation
+Trigger: Parallel Process
+
+List of Event Commands:
+@>Change Map Settings:Fog = 'Velmora Haus', 0, 255, Normal, 100, 0, 0
+@>
+
+Page #2
+Conditions
+Switch 0015: s:PBDayNight.isNight? is ON
+
+Autonomous Movement
+Type: Fixed
+Speed: 3: Slow
+Freq: 3: Low
+Options Enabled
+Move Animation
+Trigger: Parallel Process
+
+List of Event Commands:
+@>Change Map Settings:Fog = 'Velmora Haus', 140, 255, Normal, 100, 0, 0
 @>
 
 #------------------------------------------------------------------------------
@@ -93875,6 +94642,43 @@ List of Event Commands:
 @>Set Move Route: This event
  :              : $>Wait: 4 frame(s)
  :              : $>Turn Up
+@>
+
+#------------------------------------------------------------------------------
+Event ID: 008
+Event Name: EV008
+(X,Y): (000,000)
+
+Page #1
+Conditions
+None
+
+Autonomous Movement
+Type: Fixed
+Speed: 3: Slow
+Freq: 3: Low
+Options Enabled
+Move Animation
+Trigger: Parallel Process
+
+List of Event Commands:
+@>Change Map Settings:Fog = 'Velmora Haus', 0, 255, Normal, 100, 0, 0
+@>
+
+Page #2
+Conditions
+Switch 0015: s:PBDayNight.isNight? is ON
+
+Autonomous Movement
+Type: Fixed
+Speed: 3: Slow
+Freq: 3: Low
+Options Enabled
+Move Animation
+Trigger: Parallel Process
+
+List of Event Commands:
+@>Change Map Settings:Fog = 'Velmora Haus', 140, 255, Normal, 100, 0, 0
 @>
 
 #------------------------------------------------------------------------------
@@ -114391,6 +115195,7 @@ Speed: 3: Slow
 Freq: 6: Highest
 Options Enabled
 Move Animation
+Stop Animation
 Trigger: Action Button
 
 List of Event Commands:
@@ -114440,6 +115245,7 @@ Speed: 3: Slow
 Freq: 3: Low
 Options Enabled
 Move Animation
+Stop Animation
 Trigger: Action Button
 
 List of Event Commands:
@@ -114492,6 +115298,7 @@ Speed: 3: Slow
 Freq: 3: Low
 Options Enabled
 Move Animation
+Stop Animation
 Trigger: Action Button
 
 List of Event Commands:
@@ -114528,6 +115335,7 @@ Speed: 3: Slow
 Freq: 6: Highest
 Options Enabled
 Move Animation
+Stop Animation
 Trigger: Event Touch
 
 List of Event Commands:
@@ -114658,6 +115466,7 @@ Speed: 3: Slow
 Freq: 6: Highest
 Options Enabled
 Move Animation
+Stop Animation
 Trigger: Action Button
 
 List of Event Commands:
@@ -349610,6 +350419,31 @@ List of Event Commands:
 @>
 
 #------------------------------------------------------------------------------
+Event ID: 060
+Event Name: EV060
+(X,Y): (017,005)
+
+Page #1
+Conditions
+None
+
+Graphic: JANGMOO
+
+Autonomous Movement
+Type: Fixed
+Speed: 3: Slow
+Freq: 3: Low
+Options Enabled
+Move Animation
+Trigger: Action Button
+
+List of Event Commands:
+@>Script: pkmn = Pokemon.new(:GYARADOS, 10)
+:       : pkmn.form = 1
+:       : pbAddPokemon(pkmn)
+@>
+
+#------------------------------------------------------------------------------
 
 #==============================================================================
 Map ID: 434
@@ -456129,7 +456963,7 @@ List of Event Commands:
 @>Change Screen Color Tone: (-255,-255,-255,0), @6
 @>Wait: 12 frame(s)
 @>Script: pbCaveExit
-@>Transfer Player:[572: MAP572], (013,012), Down, No Fade
+@>Transfer Player:[654: Route 21], (015,009), Down, No Fade
 @>Change Screen Color Tone: (0,0,0,0), @6
 @>Wait: 6 frame(s)
 @>
@@ -456242,7 +457076,7 @@ List of Event Commands:
 @>Change Screen Color Tone: (-255,-255,-255,0), @6
 @>Wait: 12 frame(s)
 @>Script: pbCaveExit
-@>Transfer Player:[572: MAP572], (017,010), Down, No Fade
+@>Transfer Player:[654: Route 21], (019,007), Down, No Fade
 @>Change Screen Color Tone: (0,0,0,0), @6
 @>Wait: 6 frame(s)
 @>
@@ -456277,7 +457111,7 @@ List of Event Commands:
 @>Change Screen Color Tone: (-255,-255,-255,0), @6
 @>Wait: 12 frame(s)
 @>Script: pbCaveExit
-@>Transfer Player:[572: MAP572], (011,007), Down, No Fade
+@>Transfer Player:[654: Route 21], (013,004), Down, No Fade
 @>Change Screen Color Tone: (0,0,0,0), @6
 @>Wait: 6 frame(s)
 @>
@@ -456871,7 +457705,7 @@ List of Event Commands:
 @>Change Screen Color Tone: (-255,-255,-255,0), @6
 @>Wait: 8 frame(s)
 @>Change Transparent Flag: Normal
-@>Transfer Player:[581: MAP581], (014,024), Up, No Fade
+@>Transfer Player:[580: MAP580], (009,016), Up, No Fade
 @>Change Screen Color Tone: (0,0,0,0), @6
 @>
 
@@ -456920,32 +457754,6 @@ List of Event Commands:
  @>
 : Branch End
 @>Script: setTempSwitchOn("A")
-@>
-
-#------------------------------------------------------------------------------
-Event ID: 005
-Event Name: Exit
-(X,Y): (026,021)
-
-Page #1
-Conditions
-None
-
-Autonomous Movement
-Type: Fixed
-Speed: 3: Slow
-Freq: 3: Low
-Options Enabled
-Move Animation
-Trigger: Player Touch
-
-List of Event Commands:
-@>Play SE: 'Door exit', 80, 100
-@>Change Screen Color Tone: (-255,-255,-255,0), @6
-@>Wait: 12 frame(s)
-@>Transfer Player:[580: MAP580], (009,004), Down, No Fade
-@>Change Screen Color Tone: (0,0,0,0), @6
-@>Wait: 6 frame(s)
 @>
 
 #------------------------------------------------------------------------------
@@ -457007,7 +457815,7 @@ List of Event Commands:
 @>Change Screen Color Tone: (-255,-255,-255,0), @6
 @>Wait: 8 frame(s)
 @>Change Transparent Flag: Normal
-@>Transfer Player:[579: MAP579], (026,020), Up, No Fade
+@>Transfer Player:[581: MAP581], (014,024), Up, No Fade
 @>Change Screen Color Tone: (0,0,0,0), @6
 @>
 
@@ -457059,17 +457867,9 @@ List of Event Commands:
 @>
 
 #------------------------------------------------------------------------------
-
-#==============================================================================
-Map ID: 581
-Map Name: MAP581
-Tileset: 120: Höhle Dracheninsel
-Width: 34, Height: 27
-
-#------------------------------------------------------------------------------
-Event ID: 001
+Event ID: 002
 Event Name: Exit
-(X,Y): (014,025)
+(X,Y): (009,017)
 
 Page #1
 Conditions
@@ -457091,6 +457891,14 @@ List of Event Commands:
 @>Change Screen Color Tone: (0,0,0,0), @6
 @>Wait: 6 frame(s)
 @>
+
+#------------------------------------------------------------------------------
+
+#==============================================================================
+Map ID: 581
+Map Name: MAP581
+Tileset: 120: Höhle Dracheninsel
+Width: 34, Height: 27
 
 #------------------------------------------------------------------------------
 Event ID: 002
@@ -457192,6 +458000,32 @@ List of Event Commands:
  @>
 : Branch End
 @>Script: setTempSwitchOn("A")
+@>
+
+#------------------------------------------------------------------------------
+Event ID: 003
+Event Name: Exit
+(X,Y): (014,025)
+
+Page #1
+Conditions
+None
+
+Autonomous Movement
+Type: Fixed
+Speed: 3: Slow
+Freq: 3: Low
+Options Enabled
+Move Animation
+Trigger: Player Touch
+
+List of Event Commands:
+@>Play SE: 'Door exit', 80, 100
+@>Change Screen Color Tone: (-255,-255,-255,0), @6
+@>Wait: 12 frame(s)
+@>Transfer Player:[580: MAP580], (009,004), Down, No Fade
+@>Change Screen Color Tone: (0,0,0,0), @6
+@>Wait: 6 frame(s)
 @>
 
 #------------------------------------------------------------------------------
@@ -457782,7 +458616,7 @@ List of Event Commands:
 @>Change Screen Color Tone: (-255,-255,-255,0), @6
 @>Wait: 12 frame(s)
 @>Script: pbCaveExit
-@>Transfer Player:[572: MAP572], (016,006), Down, No Fade
+@>Transfer Player:[654: Route 21], (018,002), Down, No Fade
 @>Change Screen Color Tone: (0,0,0,0), @6
 @>Wait: 6 frame(s)
 @>
@@ -457921,7 +458755,7 @@ List of Event Commands:
 @>Change Screen Color Tone: (-255,-255,-255,0), @6
 @>Wait: 12 frame(s)
 @>Script: pbCaveExit
-@>Transfer Player:[572: MAP572], (007,004), Down, No Fade
+@>Transfer Player:[654: Route 21], (008,001), Down, No Fade
 @>Change Screen Color Tone: (0,0,0,0), @6
 @>Wait: 6 frame(s)
 @>
@@ -458446,7 +459280,7 @@ List of Event Commands:
 @>Change Screen Color Tone: (-255,-255,-255,0), @6
 @>Wait: 12 frame(s)
 @>Script: pbCaveExit
-@>Transfer Player:[572: MAP572], (022,014), Down, No Fade
+@>Transfer Player:[654: Route 21], (024,011), Down, No Fade
 @>Change Screen Color Tone: (0,0,0,0), @6
 @>Wait: 6 frame(s)
 @>
@@ -458533,7 +459367,7 @@ List of Event Commands:
 @>Change Screen Color Tone: (-255,-255,-255,0), @6
 @>Wait: 12 frame(s)
 @>Script: pbCaveExit
-@>Transfer Player:[572: MAP572], (010,010), Down, No Fade
+@>Transfer Player:[654: Route 21], (012,007), Down, No Fade
 @>Change Screen Color Tone: (0,0,0,0), @6
 @>Wait: 6 frame(s)
 @>
@@ -480831,6 +481665,7 @@ Speed: 3: Slow
 Freq: 6: Highest
 Options Enabled
 Move Animation
+Stop Animation
 Trigger: Action Button
 
 List of Event Commands:
@@ -482330,6 +483165,7 @@ Speed: 3: Slow
 Freq: 6: Highest
 Options Enabled
 Move Animation
+Stop Animation
 Trigger: Action Button
 
 List of Event Commands:
@@ -482845,7 +483681,7 @@ Auto-Change BGM: FF6 213 The Empire Gestahl
 #------------------------------------------------------------------------------
 Event ID: 001
 Event Name: Riesenzahn
-(X,Y): (027,005)
+(X,Y): (034,011)
 
 Page #1
 Conditions
@@ -482960,6 +483796,370 @@ Move Animation
 Trigger: Action Button
 
 List of Event Commands:
+@>
+
+#------------------------------------------------------------------------------
+Event ID: 003
+Event Name: Cave entrance
+(X,Y): (008,001)
+
+Page #1
+Conditions
+None
+
+Autonomous Movement
+Type: Fixed
+Speed: 3: Slow
+Freq: 3: Low
+Options Enabled
+Move Animation
+Trigger: Player Touch
+
+List of Event Commands:
+@>Play SE: 'Door exit', 80, 100
+@>Change Screen Color Tone: (255,255,255,255), @6
+@>Wait: 8 frame(s)
+@>Script: pbCaveEntrance
+@>Transfer Player:[591: MAP591], (005,011), Up, No Fade
+@>Change Screen Color Tone: (0,0,0,0), @6
+@>Wait: 8 frame(s)
+@>
+
+Page #2
+Conditions
+Switch 0022: s:tsOff?("A") is ON
+
+Autonomous Movement
+Type: Fixed
+Speed: 3: Slow
+Freq: 3: Low
+Options Enabled
+Move Animation
+Trigger: Autorun
+
+List of Event Commands:
+@>Conditional Branch: Script: get_self.onEvent?
+ @>Script: Followers.hide_followers
+ @>Set Move Route: Player
+                   (Ignore If Can't Move)
+  :              : $>Move Down
+ @>Wait for Move's Completion
+ @>Script: Followers.put_followers_on_player
+ @>
+: Branch End
+@>Script: setTempSwitchOn("A")
+@>
+
+#------------------------------------------------------------------------------
+Event ID: 004
+Event Name: Cave entrance
+(X,Y): (013,004)
+
+Page #1
+Conditions
+None
+
+Autonomous Movement
+Type: Fixed
+Speed: 3: Slow
+Freq: 3: Low
+Options Enabled
+Move Animation
+Trigger: Player Touch
+
+List of Event Commands:
+@>Play SE: 'Door exit', 80, 100
+@>Change Screen Color Tone: (255,255,255,255), @6
+@>Wait: 8 frame(s)
+@>Script: pbCaveEntrance
+@>Transfer Player:[576: MAP576], (012,011), Up, No Fade
+@>Change Screen Color Tone: (0,0,0,0), @6
+@>Wait: 8 frame(s)
+@>
+
+Page #2
+Conditions
+Switch 0022: s:tsOff?("A") is ON
+
+Autonomous Movement
+Type: Fixed
+Speed: 3: Slow
+Freq: 3: Low
+Options Enabled
+Move Animation
+Trigger: Autorun
+
+List of Event Commands:
+@>Conditional Branch: Script: get_self.onEvent?
+ @>Script: Followers.hide_followers
+ @>Set Move Route: Player
+                   (Ignore If Can't Move)
+  :              : $>Move Down
+ @>Wait for Move's Completion
+ @>Script: Followers.put_followers_on_player
+ @>
+: Branch End
+@>Script: setTempSwitchOn("A")
+@>
+
+#------------------------------------------------------------------------------
+Event ID: 005
+Event Name: Cave entrance
+(X,Y): (018,002)
+
+Page #1
+Conditions
+None
+
+Autonomous Movement
+Type: Fixed
+Speed: 3: Slow
+Freq: 3: Low
+Options Enabled
+Move Animation
+Trigger: Player Touch
+
+List of Event Commands:
+@>Play SE: 'Door exit', 80, 100
+@>Change Screen Color Tone: (255,255,255,255), @6
+@>Wait: 8 frame(s)
+@>Script: pbCaveEntrance
+@>Transfer Player:[590: MAP590], (008,025), Up, No Fade
+@>Change Screen Color Tone: (0,0,0,0), @6
+@>Wait: 8 frame(s)
+@>
+
+Page #2
+Conditions
+Switch 0022: s:tsOff?("A") is ON
+
+Autonomous Movement
+Type: Fixed
+Speed: 3: Slow
+Freq: 3: Low
+Options Enabled
+Move Animation
+Trigger: Autorun
+
+List of Event Commands:
+@>Conditional Branch: Script: get_self.onEvent?
+ @>Script: Followers.hide_followers
+ @>Set Move Route: Player
+                   (Ignore If Can't Move)
+  :              : $>Move Down
+ @>Wait for Move's Completion
+ @>Script: Followers.put_followers_on_player
+ @>
+: Branch End
+@>Script: setTempSwitchOn("A")
+@>
+
+#------------------------------------------------------------------------------
+Event ID: 006
+Event Name: Cave entrance
+(X,Y): (012,007)
+
+Page #1
+Conditions
+None
+
+Autonomous Movement
+Type: Fixed
+Speed: 3: Slow
+Freq: 3: Low
+Options Enabled
+Move Animation
+Trigger: Player Touch
+
+List of Event Commands:
+@>Play SE: 'Door exit', 80, 100
+@>Change Screen Color Tone: (255,255,255,255), @6
+@>Wait: 8 frame(s)
+@>Script: pbCaveEntrance
+@>Transfer Player:[599: MAP599], (004,010), Up, No Fade
+@>Change Screen Color Tone: (0,0,0,0), @6
+@>Wait: 8 frame(s)
+@>
+
+Page #2
+Conditions
+Switch 0022: s:tsOff?("A") is ON
+
+Autonomous Movement
+Type: Fixed
+Speed: 3: Slow
+Freq: 3: Low
+Options Enabled
+Move Animation
+Trigger: Autorun
+
+List of Event Commands:
+@>Conditional Branch: Script: get_self.onEvent?
+ @>Script: Followers.hide_followers
+ @>Set Move Route: Player
+                   (Ignore If Can't Move)
+  :              : $>Move Down
+ @>Wait for Move's Completion
+ @>Script: Followers.put_followers_on_player
+ @>
+: Branch End
+@>Script: setTempSwitchOn("A")
+@>
+
+#------------------------------------------------------------------------------
+Event ID: 007
+Event Name: Cave entrance
+(X,Y): (015,009)
+
+Page #1
+Conditions
+None
+
+Autonomous Movement
+Type: Fixed
+Speed: 3: Slow
+Freq: 3: Low
+Options Enabled
+Move Animation
+Trigger: Player Touch
+
+List of Event Commands:
+@>Play SE: 'Door exit', 80, 100
+@>Change Screen Color Tone: (255,255,255,255), @6
+@>Wait: 8 frame(s)
+@>Script: pbCaveEntrance
+@>Transfer Player:[574: MAP574], (010,013), Up, No Fade
+@>Change Screen Color Tone: (0,0,0,0), @6
+@>Wait: 8 frame(s)
+@>
+
+Page #2
+Conditions
+Switch 0022: s:tsOff?("A") is ON
+
+Autonomous Movement
+Type: Fixed
+Speed: 3: Slow
+Freq: 3: Low
+Options Enabled
+Move Animation
+Trigger: Autorun
+
+List of Event Commands:
+@>Conditional Branch: Script: get_self.onEvent?
+ @>Script: Followers.hide_followers
+ @>Set Move Route: Player
+                   (Ignore If Can't Move)
+  :              : $>Move Down
+ @>Wait for Move's Completion
+ @>Script: Followers.put_followers_on_player
+ @>
+: Branch End
+@>Script: setTempSwitchOn("A")
+@>
+
+#------------------------------------------------------------------------------
+Event ID: 008
+Event Name: Cave entrance
+(X,Y): (019,007)
+
+Page #1
+Conditions
+None
+
+Autonomous Movement
+Type: Fixed
+Speed: 3: Slow
+Freq: 3: Low
+Options Enabled
+Move Animation
+Trigger: Player Touch
+
+List of Event Commands:
+@>Play SE: 'Door exit', 80, 100
+@>Change Screen Color Tone: (255,255,255,255), @6
+@>Wait: 8 frame(s)
+@>Script: pbCaveEntrance
+@>Transfer Player:[575: MAP575], (009,011), Up, No Fade
+@>Change Screen Color Tone: (0,0,0,0), @6
+@>Wait: 8 frame(s)
+@>
+
+Page #2
+Conditions
+Switch 0022: s:tsOff?("A") is ON
+
+Autonomous Movement
+Type: Fixed
+Speed: 3: Slow
+Freq: 3: Low
+Options Enabled
+Move Animation
+Trigger: Autorun
+
+List of Event Commands:
+@>Conditional Branch: Script: get_self.onEvent?
+ @>Script: Followers.hide_followers
+ @>Set Move Route: Player
+                   (Ignore If Can't Move)
+  :              : $>Move Down
+ @>Wait for Move's Completion
+ @>Script: Followers.put_followers_on_player
+ @>
+: Branch End
+@>Script: setTempSwitchOn("A")
+@>
+
+#------------------------------------------------------------------------------
+Event ID: 009
+Event Name: Cave entrance
+(X,Y): (024,011)
+
+Page #1
+Conditions
+None
+
+Autonomous Movement
+Type: Fixed
+Speed: 3: Slow
+Freq: 3: Low
+Options Enabled
+Move Animation
+Trigger: Player Touch
+
+List of Event Commands:
+@>Play SE: 'Door exit', 80, 100
+@>Change Screen Color Tone: (255,255,255,255), @6
+@>Wait: 8 frame(s)
+@>Script: pbCaveEntrance
+@>Transfer Player:[598: MAP598], (018,016), Up, No Fade
+@>Change Screen Color Tone: (0,0,0,0), @6
+@>Wait: 8 frame(s)
+@>
+
+Page #2
+Conditions
+Switch 0022: s:tsOff?("A") is ON
+
+Autonomous Movement
+Type: Fixed
+Speed: 3: Slow
+Freq: 3: Low
+Options Enabled
+Move Animation
+Trigger: Autorun
+
+List of Event Commands:
+@>Conditional Branch: Script: get_self.onEvent?
+ @>Script: Followers.hide_followers
+ @>Set Move Route: Player
+                   (Ignore If Can't Move)
+  :              : $>Move Down
+ @>Wait for Move's Completion
+ @>Script: Followers.put_followers_on_player
+ @>
+: Branch End
+@>Script: setTempSwitchOn("A")
 @>
 
 #------------------------------------------------------------------------------
@@ -486610,6 +487810,7 @@ Speed: 3: Slow
 Freq: 6: Highest
 Options Enabled
 Move Animation
+Stop Animation
 Trigger: Event Touch
 
 List of Event Commands:
@@ -486740,6 +487941,7 @@ Speed: 3: Slow
 Freq: 6: Highest
 Options Enabled
 Move Animation
+Stop Animation
 Trigger: Action Button
 
 List of Event Commands:
