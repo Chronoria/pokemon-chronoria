@@ -2850,6 +2850,20 @@ Name = Angel-Club
 MapPosition = 0,6,15
 SnapEdges = true
 #-------------------------------
+[433]   # MAP433
+Name = Kanalisation
+ShowArea = true
+MapPosition = 0,15,2
+SnapEdges = true
+Flags = Levels
+#-------------------------------
+[434]   # MAP434
+Name = Kanalisation
+ShowArea = true
+MapPosition = 0,15,2
+SnapEdges = true
+Flags = Levels
+#-------------------------------
 [435]   # Mooswind-Kaverne
 Name = Mooswind-Kaverne
 ShowArea = true
@@ -4304,6 +4318,53 @@ Name = Zwischengebäude
 MapPosition = 0,15,2
 SnapEdges = true
 #-------------------------------
+[650]   # MAP650
+Name = Kanalisation
+ShowArea = true
+MapPosition = 0,15,2
+SnapEdges = true
+Flags = Levels
+#-------------------------------
+[651]   # Route 20
+Name = Dracheninsel 2
+Outdoor = true
+ShowArea = true
+MapPosition = 0,17,1
+SnapEdges = true
+Flags = Levels
+#-------------------------------
+[653]   # Route 21
+Name = Dracheninsel 2
+Outdoor = true
+ShowArea = true
+MapPosition = 0,17,1
+SnapEdges = true
+Flags = Levels
+#-------------------------------
+[654]   # Route 21
+Name = Dracheninsel 2
+Outdoor = true
+ShowArea = true
+MapPosition = 0,18,1
+SnapEdges = true
+Flags = Levels
+#-------------------------------
+[655]   # Route 21
+Name = Dracheninsel 2
+Outdoor = true
+ShowArea = true
+MapPosition = 0,18,2
+SnapEdges = true
+Flags = Levels
+#-------------------------------
+[656]   # Drachen Mons
+Name = Dracheninsel 2
+Outdoor = true
+ShowArea = true
+MapPosition = 0,18,2
+SnapEdges = true
+Flags = Levels
+#-------------------------------
 [657]   # Kraftwerk
 Name = Kraftwerk
 ShowArea = true
@@ -4386,27 +4447,6 @@ MapPosition = 0,16,3
 SnapEdges = true
 Flags = Levels
 #-------------------------------
-[433]   # Kanalisation
-Name = Kanalisation
-ShowArea = true
-MapPosition = 0,15,2
-SnapEdges = true
-Flags = Levels
-#-------------------------------
-[434]   # Kanalisation
-Name = Kanalisation
-ShowArea = true
-MapPosition = 0,15,2
-SnapEdges = true
-Flags = Levels
-#-------------------------------
-[650]   # Kanalisation
-Name = Kanalisation
-ShowArea = true
-MapPosition = 0,15,2
-SnapEdges = true
-Flags = Levels
-#-------------------------------
 [670]   # Route 20
 Name = Route 20
 Outdoor = true
@@ -4415,42 +4455,20 @@ MapPosition = 0,17,2
 SnapEdges = true
 Flags = Levels
 #-------------------------------
-[651]   # Dracheninsel 2
-Name = Dracheninsel 2
-Outdoor = true
+[675]   # MAP675
+Name = Webarak-Nest
 ShowArea = true
-MapPosition = 0,17,1
+MapPosition = 0,8,12
 SnapEdges = true
-Flags = Levels
 #-------------------------------
-[653]   # Dracheninsel 2
-Name = Dracheninsel 2
-Outdoor = true
-ShowArea = true
-MapPosition = 0,17,1
+[676]   # MAP676
+MapPosition = 0,8,12
 SnapEdges = true
-Flags = Levels
 #-------------------------------
-[654]   # Dracheninsel 2
-Name = Dracheninsel 2
-Outdoor = true
-ShowArea = true
-MapPosition = 0,18,1
+[677]   # MAP677
+MapPosition = 0,8,12
 SnapEdges = true
-Flags = Levels
 #-------------------------------
-[655]   # Dracheninsel 2
-Name = Dracheninsel 2
-Outdoor = true
-ShowArea = true
-MapPosition = 0,18,2
+[678]   # MAP678
+MapPosition = 0,8,12
 SnapEdges = true
-Flags = Levels
-#-------------------------------
-[656]   # Dracheninsel 2
-Name = Dracheninsel 2
-Outdoor = true
-ShowArea = true
-MapPosition = 0,18,2
-SnapEdges = true
-Flags = Levels

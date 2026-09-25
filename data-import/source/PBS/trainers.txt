@@ -24,6 +24,7 @@ Pokemon = SKARMORY,21
 Pokemon = GYARADOS,24
     Moves = WATERFALL,CRUNCH,WHIRLPOOL,BULLDOZE
     AbilityIndex = 0
+	Form = 1
     Item = SITRUSBERRY
     Gender = male
     Shiny = true
@@ -62,16 +63,19 @@ LoseText = Weggefegt!
 Pokemon = MAGIKARP,5
 	Moves = SPLASH
 	AbilityIndex = 0
+	Form = 1
 	Nature = RELAXED
 	Ball = NETBALL
 Pokemon = MAGIKARP,5
 	Moves = SPLASH
 	AbilityIndex = 0
+	Form = 1
 	Nature = RELAXED
 	Ball = NETBALL
 Pokemon = MAGIKARP,5
 	Moves = SPLASH
 	AbilityIndex = 0
+	Form = 1
 	Nature = RELAXED
 	Ball = NETBALL
 Pokemon = MAGIKARP,5
@@ -205,6 +209,7 @@ Pokemon = RATTATA,9
 	AbilityIndex = 1
 Pokemon = SPEAROW,10
 	Moves = PECK,GROWL,LEER,ASSURANCE
+	Form = 1
 #-------------------------------
 [BLACKBELT,Achim]
 LoseText = Manchmal ist Verteidigung die bessere Verteidigung.
@@ -324,10 +329,12 @@ Pokemon = BIDOOF,11
 [ADEPTA,Lena]
 LoseText = ...
 Pokemon = BULBASAUR,10
+	Form = 1
 #-------------------------------
 [ADEPTA,Israg]
 LoseText = ...
 Pokemon = BULBASAUR,10
+	Form = 1
 #-------------------------------
 [BACKPACKER_M,Dimitri]
 LoseText = Die Luft ist rein.
@@ -344,6 +351,7 @@ Pokemon = SKORUPI,18
 [BIRDKEEPER_F,Esther]
 LoseText = Ich könnte wegfliegen.
 Pokemon = FEAROW,20
+	Form = 1
 #-------------------------------
 [ARTIST,Heino]
 LoseText = Das hat mich auf neue Ideen gebracht.
@@ -433,6 +441,7 @@ Pokemon = SABLEYE,24
 [FISHERMAN,Sigurt]
 LoseText = Zum verstecktem Strand kommt man nur indem man taucht.
 Pokemon = MAGIKARP,24
+	Form = 1
 Pokemon = CARVANHA,26
 #-------------------------------
 [SCIENTIST_M4,Julius]
@@ -697,6 +706,7 @@ Pokemon = MRMIME,28
 [COOK,STEFANO]
 LoseText = ...
 Pokemon = BULBASAUR,10
+	Form = 1
 #-------------------------------
 [BUGCATCHER,Erik]
 LoseText = Ich dachte du wärst ein Käfer-Pokémon.
@@ -720,6 +730,7 @@ Pokemon = SPRIGATITO,5
 LoseText = Wie konnte das passieren?
 Pokemon = CYNDAQUIL,5
     AbilityIndex = 0
+	Form = 1
     Gender = female
     Ball = POKEBALL
 #-------------------------------
@@ -747,11 +758,13 @@ Pokemon = FLETCHLING,8
 LoseText = Wie konnte das passieren?
 Pokemon = CYNDAQUIL,10
     AbilityIndex = 0
+	Form = 1
     Gender = female
     IV = 6,6,6,6,6,6
     Ball = POKEBALL
 Pokemon = PIDGEY,8
     AbilityIndex = 0
+	Form = 1
     Gender = male
     IV = 6,6,6,6,6,6
     Ball = POKEBALL
@@ -883,6 +896,7 @@ LoseText = Ich kann es doch nicht.
 Pokemon = DURANT,34
 Pokemon = LANTURN,36
 Pokemon = HAUNTER,36
+	Form = 1
 #-------------------------------
 [TEAM1,Rüpel,12]
 LoseText = Wo ist diese blöde Karte?!
@@ -953,6 +967,7 @@ LoseText = Wie konnte das passieren?
 Pokemon = PIDGEOTTO,29
     Moves = QUICKATTACK,TWISTER,FEATHERDANCE,AERIALACE
     AbilityIndex = 0
+	Form = 1
     Item = ORANBERRY
     Gender = male
     IV = 10,12,8,10,9,18
@@ -973,6 +988,7 @@ Pokemon = MILOTIC,29
 Pokemon = QUILAVA,30
     Moves = FLAMEWHEEL,DEFENSECURL,QUICKATTACK,EMBER
     AbilityIndex = 0
+	Form = 1
     Item = SITRUSBERRY
     Gender = female
     IV = 16,12,13,10,15,18
@@ -1043,6 +1059,7 @@ LoseText = Wie konnte das passieren?
 Pokemon = TYPHLOSION,39
     Moves = FLAMEWHEEL,DEFENSECURL,QUICKATTACK,EMBER
     AbilityIndex = 0
+	Form = 1
     Item = SITRUSBERRY
     Gender = female
     IV = 16,12,13,10,15,18
@@ -1050,6 +1067,7 @@ Pokemon = TYPHLOSION,39
 Pokemon = PIDGEOTTO,37
     Moves = QUICKATTACK,TWISTER,FEATHERDANCE,AERIALACE
     AbilityIndex = 0
+	Form = 1
     Item = ORANBERRY
     Gender = male
     IV = 10,12,8,10,9,18
@@ -1691,6 +1709,7 @@ LoseText = Das hat keinerlei Bedeutung.
 Pokemon = GYARADOS,42
     Moves = WATERFALL,WHIRLPOOL,DRAGONDANCE,CRUNCH
     AbilityIndex = 0
+	Form = 1
     Shadow = true
     Ball = SHADOWBALL
 Pokemon = SKUNTANK,43
@@ -1714,6 +1733,7 @@ Pokemon = GRANBULL,42
 Pokemon = FEAROW,42
     Moves = WINGATTACK,AERIALACE,TAKEDOWN,FOCUSENERGY
     AbilityIndex = 0
+	Form = 1
     Shadow = true
     Ball = SHADOWBALL
 Pokemon = ARBOK,43
@@ -1903,6 +1923,7 @@ LoseText = Wie konnte das passieren?
 Pokemon = PIDGEOT,47
     Moves = QUICKATTACK,TWISTER,FEATHERDANCE,AERIALACE
     AbilityIndex = 0
+	Form = 1
     Item = SITRUSBERRY
     Gender = male
     IV = 10,12,8,10,9,18
@@ -1931,6 +1952,7 @@ Pokemon = TINKATON,45
 Pokemon = TYPHLOSION,49
     Moves = FLAMETHROWER,HEX,FIREFANG,REST
     AbilityIndex = 0
+	Form = 1
     Item = CHESTOBERRY
     Gender = female
     IV = 16,12,13,10,15,18
@@ -2141,6 +2163,7 @@ Pokemon = RAPIDASH,45
 Pokemon = CROBAT,44
     Moves = FLY,SLUDGEBOMB,DARKPULSE,XSCISSOR
     AbilityIndex = 0
+	Form = 1
     Gender = female
     Ball = DUSKBALL
 #-------------------------------
@@ -3097,6 +3120,7 @@ LoseText = Du kannst hier unbesorgt surfen.
 Pokemon = GOLDUCK,59
     Moves = SOAK,HYDROPUMP,TRAILBLAZE,ZENHEADBUTT
     AbilityIndex = 0
+	Form = 1
     Gender = female
     Ball = LUREBALL
 Pokemon = POLITOED,58
@@ -3193,6 +3217,7 @@ Pokemon = SWANNA,65
 Pokemon = GOLDUCK_1,65
     Moves = PSYSHOCK,HELPINGHAND,FUTURESIGHT,MUDDYWATER
     AbilityIndex = 0
+	Form = 1
     Item = BINDINGBAND
     Gender = female
     Ball = POKEBALL
@@ -3608,6 +3633,7 @@ Pokemon = DRAGAPULT,40
     AbilityIndex = 1
 Pokemon = CROBAT,40
     Moves = AIRSLASH,CONFUSERAY,TAILWIND,QUICKGUARD
+	Form = 1
     Nature = TIMID
 #-------------------------------
 [PSYCHIC_F,Mira]
@@ -3632,6 +3658,7 @@ LoseText = Deine Kraft... beeindruckend. Ich hab sie nicht kommen sehen.
 Pokemon = GENGAR,35
     Moves = SHADOWBALL,DARKPULSE,HEX,HYPNOSIS
     Nature = MODEST
+	Form = 1
 #-------------------------------
 [PSYCHIC_F,Mira,3]
 LoseText = Deine Kraft... beeindruckend. Ich hab sie nicht kommen sehen.
@@ -3703,6 +3730,7 @@ Pokemon = FROSLASS,40
 LoseText = Selbst die schärfste Zielsicherheit schützt nicht vor einem überlegenen Gegner. Respekt.
 Pokemon = FEAROW,25
     Moves = DRILLPECK,DRILLRUN,FOCUSENERGY,ROOST
+	Form = 1
     Nature = JOLLY
 Pokemon = LUCARIO,25
     Moves = AURASPHERE,CLOSECOMBAT,EXTREMESPEED,SWORDSDANCE
@@ -3755,3 +3783,63 @@ Pokemon = ARCANINE,40
     Moves = FLAREBLITZ,EXTREMESPEED,CRUNCH,FLAMETHROWER
     Nature = JOLLY
     AbilityIndex = 1
+#-------------------------------
+# Rätselkampf 1 - Leih-Team (wird nie selbst bekämpft)
+# Aufruf: pbPuzzleBattle([:TEACHER, "Leihteam 1"], [:TEACHER, "Mia"])
+[TEACHER,Leihteam 1]
+Pokemon = ROOKIDEE,5
+    Moves = AERIALACE,DUALWINGBEAT,POWERTRIP,ROOST
+    Ability = FRISK
+    Nature = BASHFUL
+Pokemon = SKARMORY,5
+    Moves = SPIKES,DRILLPECK,STEALTHROCK,ROOST
+    Ability = STURDY
+    Nature = BASHFUL
+Pokemon = GIBLE,5
+    Moves = STEALTHROCK,ROCKTOMB,BULLDOZE,SCALESHOT
+    Ability = ROUGHSKIN
+    Item = EVIOLITE
+    Nature = BASHFUL
+Pokemon = ARON,5
+    Moves = ROAR,STEALTHROCK,THUNDERWAVE,METALBURST
+    Ability = STURDY
+    Item = EVIOLITE
+    Nature = BASHFUL
+Pokemon = SHUCKLE,5
+    Moves = STICKYWEB,ENCORE,FINALGAMBIT,REST
+    Ability = STURDY
+    Item = BERRYJUICE
+    Nature = BASHFUL
+Pokemon = FLETCHLING,5
+    Moves = BRAVEBIRD,UTURN,RETURN,ROOST
+    Ability = FRISK
+    Item = FOCUSSASH
+    Nature = BASHFUL
+#-------------------------------
+# Rätselkampf 1 - Gegner: 6x Ninjatom Lv. 100
+[TEACHER,Mia]
+LoseText = Unglaublich! Du hast das Rätsel gelöst!
+Pokemon = SHEDINJA,100
+    Moves = XSCISSOR,SHADOWSNEAK
+    Ability = WONDERGUARD
+    Item = FOCUSSASH
+Pokemon = SHEDINJA,100
+    Moves = XSCISSOR,SHADOWSNEAK
+    Ability = WONDERGUARD
+    Item = FOCUSSASH
+Pokemon = SHEDINJA,100
+    Moves = XSCISSOR,SHADOWSNEAK
+    Ability = WONDERGUARD
+    Item = FOCUSSASH
+Pokemon = SHEDINJA,100
+    Moves = XSCISSOR,SHADOWSNEAK
+    Ability = WONDERGUARD
+    Item = FOCUSSASH
+Pokemon = SHEDINJA,100
+    Moves = XSCISSOR,SHADOWSNEAK
+    Ability = WONDERGUARD
+    Item = FOCUSSASH
+Pokemon = SHEDINJA,100
+    Moves = XSCISSOR,SHADOWSNEAK
+    Ability = WONDERGUARD
+    Item = HEAVYDUTYBOOTS

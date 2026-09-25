@@ -3651,151 +3651,151 @@ Description = Damit kann Arceus garantiert gefangen werden.
 Name = TM01
 NamePlural = TM01s
 Pocket = 4
-Price = 400
+Price = 12000
 FieldUse = TM
-Move = TAKEDOWN
-Flags = Fling_90
-Description = Bodycheck schadet dem Ziel. Der Anwender erleidet selbst 25% des angerichteten Schadens durch Rückstoß.
+Move = CLOSECOMBAT
+Flags = Fling_120
+Description = Verursacht Schaden und senkt danach die Verteidigung und Spezial-Verteidigung des Anwenders um je eine Stufe.
 #-------------------------------Map / Shop
 [TM02]
 Name = TM02
 NamePlural = TM02s
 Pocket = 4
-Price = 400
+Price = 8000
 FieldUse = TM
-Move = CHARM
-Flags = Fling_10
-Description = Senkt den Angriff des Gegners um zwei Stufen. 
+Move = DRAGONCLAW
+Flags = Fling_80
+Description = Drachenklaue verursacht Schaden ohne Nebeneffekte.
 #-------------------------------Map / Shop
 [TM03]
 Name = TM03
 NamePlural = TM03s
 Pocket = 4
-Price = 400
+Price = 5000
 FieldUse = TM
-Move = FAKETEARS
-Flags = Fling_10
-Description = Die Spezial-Verteidigung des Ziels sinkt um zwei Stufen. 
+Move = FLIPTURN
+Flags = Fling_60
+Description = Rollwende fügt Schaden zu und wechselt danach den Anwender aus.
 #-------------------------------Map / Shop
 [TM04]
 Name = TM04
 NamePlural = TM04s
 Pocket = 4
-Price = 400
+Price = 8000
 FieldUse = TM
-Move = AGILITY
-Flags = Fling_10
-Description = Agilität erhöht die Initiative des Anwenders um zwei Stufen. 
+Move = SEEDBOMB
+Flags = Fling_80
+Description = Samenbomben schädigt den Gegner ohne zusätzliche Effekte.
 #-------------------------------Map / Shop
 [TM05]
 Name = TM05
 NamePlural = TM05s
 Pocket = 4
-Price = 400
+Price = 200
 FieldUse = TM
-Move = MUDSLAP
-Flags = Fling_20
-Description = Lehmschelle schadet dem Ziel und senkt dessen Genauigkeitswert um eine Stufe. 
+Move = ROAR
+Flags = Fling_10
+Description = Brüller tauscht in Trainerkämpfen das gegnerische Pokémon gegen ein zufällig ausgewähltes Pokémon des gegnerischen Teams aus.
 #-------------------------------Map / Shop
 [TM06]
 Name = TM06
 NamePlural = TM06s
 Pocket = 4
-Price = 400
+Price = 800
 FieldUse = TM
-Move = SCARYFACE
+Move = TOXIC
 Flags = Fling_10
-Description = Grimasse senkt die Initiative des Ziels um zwei Stufen. Wenn dieser Statuswert bereits die Stufe -6 erreicht hat, schlägt die Attacke fehl. 
+Description = Richtet eine schwere Vergiftung an, deren angerichteter Schaden mit jeder Runde um 1/16 erhöht wird.
 #-------------------------------Map / Shop
 [TM07]
 Name = TM07
 NamePlural = TM07s
 Pocket = 4
-Price = 400
+Price = 10000
 FieldUse = TM
-Move = PROTECT
-Flags = Fling_10
-Description = Schützt den Anwender vor Schaden und Effekten von Attacken, die in derselben Runde gegen ihn eingesetzt werden.
+Move = HEATWAVE
+Flags = Fling_95
+Description = Hitzewelle fügt dem Gegner Schaden zu und verbrennt ihn mit einer Wahrscheinlichkeit von 10 %.
 #-------------------------------Map / Shop
 [TM08]
 Name = TM08
 NamePlural = TM08s
 Pocket = 4
-Price = 800
+Price = 5000
 FieldUse = TM
-Move = FIREFANG
-Flags = Fling_65
-Description = Verursacht Schaden und verbrennt das Ziel mit einer Wahrscheinlichkeit von 10 %. Gegner schreckt evtl. zurück.
+Move = ZENHEADBUTT
+Flags = Fling_80
+Description = Schädigt das Ziel und lässt es mit einer Chance von 20% zurückschrecken.
 #-------------------------------Map / Shop
 [TM09]
 Name = TM09
 NamePlural = TM09s
 Pocket = 4
-Price = 800
+Price = 3000
 FieldUse = TM
-Move = THUNDERFANG
-Flags = Fling_65
-Description = Verursacht Schaden und paralysiert das Ziel mit einer Wahrscheinlichkeit von 10%. Gegner schreckt evtl. zurück.
+Move = BULLETSEED
+Flags = Fling_25
+Description = Die Attacke fügt 2 bis 5 Mal hintereinander Schaden zu.
 #-------------------------------Map / Shop
 [TM10]
 Name = TM10
 NamePlural = TM10s
 Pocket = 4
-Price = 800
+Price = 3000
 FieldUse = TM
-Move = ICEFANG
-Flags = Fling_65
-Description = Verursacht Schaden und gefriert das Ziel mit einer Wahrscheinlichkeit von 10 %. Gegner schreckt evtl. zurück.
+Move = HIDDENPOWER
+Flags = Fling_60
+Description = Der Typ dieser Attacke hängt vom jeweiligen Pokémon ab.
 #-------------------------------Map / Shop
 [TM11]
 Name = TM11
 NamePlural = TM11s
 Pocket = 4
-Price = 1500
+Price = 5000
 FieldUse = TM
-Move = WATERPULSE
-Flags = Fling_60
-Description = Verursacht Schaden und verwirrt den Gegner mit einer Wahrscheinlichkeit von 20%. 
+Move = SUPERCELLSLAM
+Flags = Fling_100
+Description = Geht die Attacke daneben, erhält der Anwender die Hälfte seiner maximalen KP als Rückstoßschaden.
 #-------------------------------Map / Shop
 [TM12]
 Name = TM12
 NamePlural = TM12s
 Pocket = 4
-Price = 400
+Price = 3000
 FieldUse = TM
-Move = LOWKICK
+Move = TAUNT
 Flags = Fling_10
-Description = Der Schaden wird an dem Gewicht des Gegners kalkuliert. Je schwerer der Gegner, desto stärker ist die Attacke.
+Description = Das Ziel kann über drei Runden hinweg ausschließlich Attacken einsetzen, die direkten Schaden verursachen.
 #-------------------------------Map / Shop
 [TM13]
 Name = TM13
 NamePlural = TM13s
 Pocket = 4
-Price = 800
+Price = 10000
 FieldUse = TM
-Move = ACIDSPRAY
-Flags = Fling_40
-Description = Schädigt das Ziel und senkt seine Spezial-Verteidigung um 2 Stufen.
+Move = ICEBEAM
+Flags = Fling_90
+Description = Eisstrahl verursacht Schaden und friert das Ziel mit einer Wahrscheinlichkeit von 10 % ein.
 #-------------------------------Map / Shop
 [TM14]
 Name = TM14
 NamePlural = TM14s
 Pocket = 4
-Price = 3000
+Price = 12000
 FieldUse = TM
-Move = ACROBATICS
-Flags = Fling_55
-Description = Die Basisstärke der Attacke wird verdoppelt, wenn der Anwender kein Item hält; mit getragenem Flugjuwel sogar verdreifacht.
+Move = BLIZZARD
+Flags = Fling_110
+Description = Blizzard fügt dem Gegner Schaden zu und friert ihn mit einer Wahrscheinlichkeit von 10 % ein.
 #-------------------------------Map / Shop
 [TM15]
 Name = TM15
 NamePlural = TM15s
 Pocket = 4
-Price = 400
+Price = 800
 FieldUse = TM
-Move = STRUGGLEBUG
-Flags = Fling_50
-Description = Schädigt das Ziel und senkt dessen Spezial-Angriff um eine Stufe. 
+Move = ELECTROWEB
+Flags = Fling_55
+Description = Diese Attacke verursacht Schaden und senkt die Initiative des Gegners um 1 Stufe.
 #-------------------------------Map / Shop
 [TM16]
 Name = TM16
@@ -3803,9 +3803,9 @@ NamePlural = TM16s
 Pocket = 4
 Price = 800
 FieldUse = TM
-Move = PSYBEAM
-Flags = Fling_65
-Description = Psystrahl verursacht Schaden und verwirrt das Ziel mit einer Wahrscheinlichkeit von 10 %. 
+Move = LIGHTSCREEN
+Flags = Fling_10
+Description = Der Schaden, den der Anwender und seine Partner durch Spezial-Angriffe erleiden, wird fünf Runden lang halbiert.
 #-------------------------------Map / Shop
 [TM17]
 Name = TM17
@@ -3813,1762 +3813,53 @@ NamePlural = TM17s
 Pocket = 4
 Price = 400
 FieldUse = TM
-Move = CONFUSERAY
+Move = PROTECT
 Flags = Fling_10
-Description = Das Ziel wird nach erfolgreicher Ausführung dieser Attacke verwirrt. 
+Description = Schützt den Anwender vor Schaden und Effekten von Attacken, die in derselben Runde gegen ihn eingesetzt werden.
 #-------------------------------Map / Shop
 [TM18]
 Name = TM18
 NamePlural = TM18s
 Pocket = 4
-Price = 3000
+Price = 12000
 FieldUse = TM
-Move = THIEF
-Flags = Fling_60
-Description = Raub verursacht Schaden und stiehlt das Item des Zieles, falls dieses eins hält.
+Move = HYDROPUMP
+Flags = Fling_110
+Description = Hydropumpe schädigt den Gegner ohne zusätzliche Effekte.
 #-------------------------------Map / Shop
 [TM19]
 Name = TM19
 NamePlural = TM19s
-Pocket = 4
-Price = 200
-FieldUse = TM
-Move = DISARMINGVOICE
-Flags = Fling_40
-Description = Säuselstimme verursacht Schaden ohne Zusatzeffekte und trifft unabhängig von Veränderungen des Fluchtwerts und der Genauigkeit. 
-#-------------------------------Map / Shop
-[TM20]
-Name = TM20
-NamePlural = TM20s
-Pocket = 4
-Price = 800
-FieldUse = TM
-Move = TRAILBLAZE
-Flags = Fling_50
-Description = Greift den Gegner an und erhöht die Initiative des Anwenders um eine Stufe. 
-#-------------------------------Map / Shop
-[TM21]
-Name = TM21
-NamePlural = TM21s
-Pocket = 4
-Price = 3000
-FieldUse = TM
-Move = POUNCE
-Flags = Fling_50
-Description = Greift den Gegner an und senkt dessen Initiative um eine Stufe. 
-#-------------------------------Map / Shop
-[TM22]
-Name = TM22
-NamePlural = TM22s
-Pocket = 4
-Price = 800
-FieldUse = TM
-Move = CHILLINGWATER
-Flags = Fling_50
-Description = Greift den Gegner an und senkt dessen Angriff um eine Stufe. 
-#-------------------------------
-[TM23]
-Name = TM23
-NamePlural = TM23s
-Pocket = 4
-Price = 800
-FieldUse = TM
-Move = CHARGEBEAM
-Flags = Fling_50
-Description = Schädigt das Ziel. Die Chance, dass bei Ausführung der Spezial-Angriff des Anwenders um 1 Stufe steigt, beträgt 70 %. 
-#-------------------------------
-[TM24]
-Name = TM24
-NamePlural = TM24s
-Pocket = 4
-Price = 5000
-FieldUse = TM
-Move = FIRESPIN
-Flags = Fling_35
-Description = Wurde das Ziel getroffen, werden ihm für 4 bis 5 Runden 1/8 seiner maximalen KP am Ende jeder Runde abgezogen.
-#-------------------------------
-[TM25]
-Name = TM25
-NamePlural = TM25s
-Pocket = 4
-Price = 800
-FieldUse = TM
-Move = FACADE
-Flags = Fling_70
-Description = Ist der Anwender von einer Paralyse, Vergiftung oder Verbrennung betroffen, verdoppelt sich die Stärke.
-#-------------------------------
-[TM26]
-Name = TM26
-NamePlural = TM26s
-Pocket = 4
-Price = 800
-FieldUse = TM
-Move = POISONTAIL
-Flags = Fling_50
-Description = Giftschweif schädigt den Gegner, vergiftet ihn mit einer Wahrscheinlichkeit von 10 % und hat eine erhöhte Volltrefferquote.
-#-------------------------------
-[TM27]
-Name = TM27
-NamePlural = TM27s
-Pocket = 4
-Price = 1500
-FieldUse = TM
-Move = AERIALACE
-Flags = Fling_60
-Description = Verursacht Schaden und trifft den Gegner auf jeden Fall. 
-#-------------------------------
-[TM28]
-Name = TM28
-NamePlural = TM28s
-Pocket = 4
-Price = 1500
-FieldUse = TM
-Move = BULLDOZE
-Flags = Fling_60
-Description = Fügt allen Zielen Schaden zu und senkt deren Initiative um 1 Stufe. 
-#-------------------------------
-[TM29]
-Name = TM29
-NamePlural = TM29s
-Pocket = 4
-Price = 3000
-FieldUse = TM
-Move = HEX
-Flags = Fling_65
-Description = Bürde schädigt das Ziel. Die Stärke der Attacke verdoppelt sich, wenn das Ziel einer primären Statusveränderung unterliegt. 
-#-------------------------------
-[TM30]
-Name = TM30
-NamePlural = TM30s
-Pocket = 4
-Price = 800
-FieldUse = TM
-Move = SNARL
-Flags = Fling_55
-Description = Verursacht Schaden und verringert den Spezial-Angriff des Gegners um eine Stufe und umgeht sogar den Delegator. 
-#-------------------------------
-[TM31]
-Name = TM31
-NamePlural = TM31s
-Pocket = 4
-Price = 400
-FieldUse = TM
-Move = METALCLAW
-Flags = Fling_50
-Description = Metallklaue schädigt das Ziel und erhöht mit einer Chance von 10 % den Angriff des Anwenders um eine Stufe. 
-#-------------------------------
-[TM32]
-Name = TM32
-NamePlural = TM32s
-Pocket = 4
-Price = 200
-FieldUse = TM
-Move = SWIFT
-Flags = Fling_60
-Description = Verursacht Schaden und hat eine 100 % Trefferchance.
-#-------------------------------
-[TM33]
-Name = TM33
-NamePlural = TM33s
-Pocket = 4
-Price = 1500
-FieldUse = TM
-Move = MAGICALLEAF
-Flags = Fling_60
-Description = Verursacht Schaden und trifft den Gegner auf jeden Fall.
-#-------------------------------
-[TM34]
-Name = TM34
-NamePlural = TM34s
-Pocket = 4
-Price = 800
-FieldUse = TM
-Move = ICYWIND
-Flags = Fling_55
-Description = Fügt dem Ziel Schaden zu und senkt dessen Initiative um 1 Stufe. 
-#-------------------------------
-[TM35]
-Name = TM35
-NamePlural = TM35s
-Pocket = 4
-Price = 800
-FieldUse = TM
-Move = MUDSHOT
-Flags = Fling_55
-Description = Lehmschuss schädigt das Ziel und senkt dessen Initiativewert um eine Stufe. 
-#-------------------------------
-[TM36]
-Name = TM36
-NamePlural = TM36s
-Pocket = 4
-Price = 1500
-FieldUse = TM
-Move = ROCKTOMB
-Flags = Fling_60
-Description = Felsgrab verursacht Schaden und senkt die Initiative des Ziels um eine Stufe. 
-#-------------------------------
-[TM37]
-Name = TM37
-NamePlural = TM37s
-Pocket = 4
-Price = 800
-FieldUse = TM
-Move = DRAININGKISS
-Flags = Fling_50
-Description = Diebeskuss schadet dem Ziel und füllt die KP des Anwenders um 75 % des verursachten Schadens auf.
-#-------------------------------
-[TM38]
-Name = TM38
-NamePlural = TM38s
-Pocket = 4
-Price = 800
-FieldUse = TM
-Move = FLAMECHARGE
-Flags = Fling_50
-Description = Schädigt den Gegner und steigert die Initiative des Anwenders um 1 Stufe. 
-#-------------------------------
-[TM39]
-Name = TM39
-NamePlural = TM39s
-Pocket = 4
-Price = 3000
-FieldUse = TM
-Move = LOWSWEEP
-Flags = Fling_65
-Description = Schädigt das Ziel und verringert dessen Initiative um 1 Stufe. 
-#-------------------------------
-[TM40]
-Name = TM40
-NamePlural = TM40s
-Pocket = 4
-Price = 400
-FieldUse = TM
-Move = AIRCUTTER
-Flags = Fling_60
-Description = Schädigt den Gegner und hat eine erhöhte Volltrefferquote. 
-#-------------------------------
-[TM41]
-Name = TM41
-NamePlural = TM41s
-Pocket = 4
-Price = 800
-FieldUse = TM
-Move = STOREDPOWER
-Flags = Fling_20
-Description = Je stärker die eigenen Statuswerte erhöht wurden, desto stärker ist die Attacke.
-#-------------------------------
-[TM42]
-Name = TM42
-NamePlural = TM42s
-Pocket = 4
-Price = 400
-FieldUse = TM
-Move = NIGHTSHADE
-Flags = Fling_10
-Description = Nachtnebel richtet Schaden in Höhe des Levels des Anwenders an. 
-#-------------------------------
-[TM43]
-Name = TM43
-NamePlural = TM43s
-Pocket = 4
-Price = 3000
-FieldUse = TM
-Move = FLING
-Flags = Fling_10
-Description = Die Stärke der Attacke hängt davon ab, welches Item geworfen wird.
-#-------------------------------
-[TM44]
-Name = TM44
-NamePlural = TM44s
-Pocket = 4
-Price = 1500
-FieldUse = TM
-Move = DRAGONTAIL
-Flags = Fling_60
-Description = Drachenrute verursacht Schaden und besitzt eine verringerte Priorität. 
-#-------------------------------
-[TM45]
-Name = TM45
-NamePlural = TM45s
-Pocket = 4
-Price = 3000
-FieldUse = TM
-Move = VENOSHOCK
-Flags = Fling_65
-Description = Ist der Gegner bereits vergiftet, hat diese Attacke die doppelte Stärke. 
-#-------------------------------
-[TM46]
-Name = TM46
-NamePlural = TM46s
-Pocket = 4
-Price = 1500
-FieldUse = TM
-Move = AVALANCHE
-Flags = Fling_60
-Description = Lawine schädigt das Ziel und hat eine niedrigere Priorität als die meisten anderen Attacken.
-#-------------------------------
-[TM47]
-Name = TM47
-NamePlural = TM47s
-Pocket = 4
-Price = 200
-FieldUse = TM
-Move = ENDURE
-Flags = Fling_10
-Description = Wird der Anwender nach dem Einsatz von einer Attacke getroffen, bleibt ihm zumindest noch genau 1 KP übrig.
-#-------------------------------
-[TM48]
-Name = TM48
-NamePlural = TM48s
-Pocket = 4
-Price = 3000
-FieldUse = TM
-Move = VOLTSWITCH
-Flags = Fling_70
-Description = Voltwechsel fügt Schaden zu und wechselt danach den Anwender aus.
-#-------------------------------
-[TM49]
-Name = TM49
-NamePlural = TM49s
-Pocket = 4
-Price = 3000
-FieldUse = TM
-Move = SUNNYDAY
-Flags = Fling_10
-Description = Lässt für fünf Runden die Sonne scheinen; trägt ein Pokémon einen Heißbrocken, so wird der Wettereffekt auf acht Runden verlängert. 
-#-------------------------------
-[TM50]
-Name = TM50
-NamePlural = TM50s
-Pocket = 4
-Price = 3000
-FieldUse = TM
-Move = RAINDANCE
-Flags = Fling_10
-Description = Anwender erzeugt für fünf Runden einen Regenschauer; trägt ein Pokémon einen Nassbrocken, so wird der Wettereffekt auf acht Runden verlängert. 
-#-------------------------------
-[TM51]
-Name = TM51
-NamePlural = TM51s
-Pocket = 4
-Price = 3000
-FieldUse = TM
-Move = SANDSTORM
-Flags = Fling_10
-Description = Erzeugt einen Sandsturm. Alle Pokémon, die nicht vom Typ Boden, Gestein oder Stahl sind, erleiden 1/16 ihrer maximalen KP als Schaden.
-#-------------------------------
-[TM52]
-Name = TM52
-NamePlural = TM52s
-Pocket = 4
-Price = 3000
-FieldUse = TM
-Move = SNOWSCAPE
-Flags = Fling_10
-Description = Erzeugt einen Schneesturm. Während dieser aktiv ist, ist die Verteidigung von Eis-Pokémon erhöht. 
-#-------------------------------
-[TM53]
-Name = TM53
-NamePlural = TM53s
-Pocket = 4
-Price = 3000
-FieldUse = TM
-Move = SMARTSTRIKE
-Flags = Fling_70
-Description = Verursacht Schaden und trifft unabhängig von Veränderungen an Genauigkeit und Fluchtwert immer. 
-#-------------------------------
-[TM54]
-Name = TM54
-NamePlural = TM54s
-Pocket = 4
-Price = 5000
-FieldUse = TM
-Move = PSYSHOCK
-Flags = Fling_80
-Description = Der verursachte Schaden errechnet sich aus dem Spezial-Angriff des Anwenders und der Verteidigung des Ziels.
-#-------------------------------
-[TM55]
-Name = TM55
-NamePlural = TM55s
-Pocket = 4
-Price = 5000
-FieldUse = TM
-Move = DIG
-Flags = Fling_80
-Description =In der Runde, in der Schaufler ausgewählt wurde, gräbt sich der Anwender in die Erde ein und greift in der nächsten Runde an.
-#-------------------------------
-[TM56]
-Name = TM56
-NamePlural = TM56s
-Pocket = 4
-Price = 3000
-FieldUse = TM
-Move = BULLETSEED
-Flags = Fling_25
-Description = Die Attacke fügt 2 bis 5 Mal hintereinander Schaden zu.
-#-------------------------------
-[TM57]
-Name = TM57
-NamePlural = TM57s
-Pocket = 4
-Price = 400
-FieldUse = TM
-Move = FALSESWIPE
-Flags = Fling_40
-Description = Trugschlag schädigt das Ziel, kann das Ziel aber nicht besiegen. Der Gegner hat immer mindestens 1 KP übrig.
-#-------------------------------
-[TM58]
-Name = TM58
-NamePlural = TM58s
-Pocket = 4
-Price = 5000
-FieldUse = TM
-Move = BRICKBREAK
-Flags = Fling_75
-Description =  Bevor der Schaden zugefügt wird, werden die Effekte von Lichtschild, Reflektor und Auroraschleier von der Seite des Ziels entfernt.
-#-------------------------------
-[TM59]
-Name = TM59
-NamePlural = TM59s
-Pocket = 4
-Price = 5000
-FieldUse = TM
-Move = ZENHEADBUTT
-Flags = Fling_80
-Description = Schädigt das Ziel und lässt es mit einer Chance von 20% zurückschrecken. 
-#-------------------------------
-[TM60]
-Name = TM60
-NamePlural = TM60s
-Pocket = 4
-Price = 3000
-FieldUse = TM
-Move = UTURN
-Flags = Fling_70
-Description = Kehrtwende fügt Schaden zu und wechselt danach den Anwender aus.
-#-------------------------------
-[TM61]
-Name = TM61
-NamePlural = TM61s
-Pocket = 4
-Price = 3000
-FieldUse = TM
-Move = SHADOWCLAW
-Flags = Fling_70
-Description = Dunkelklaue schädigt das Ziel und besitzt eine erhöhte Volltrefferquote. 
-#-------------------------------
-[TM62]
-Name = TM62
-NamePlural = TM62s
-Pocket = 4
-Price = 3000
-FieldUse = TM
-Move = FOULPLAY
-Flags = Fling_95
-Description =  Anders als bei anderen Attacken wird hier der Angriffswert des Zieles und nicht der des Anwenders für die Schadensberechnung verwendet.
-#-------------------------------
-[TM63]
-Name = TM63
-NamePlural = TM63s
-Pocket = 4
-Price = 10000
-FieldUse = TM
-Move = PSYCHICFANGS
-Flags = Fling_85
-Description = Richtet Schaden an und entfernt Reflektor, Lichtschild und Auroraschleier auf der Seite des Ziels. 
-#-------------------------------
-[TM64]
-Name = TM64
-NamePlural = TM64s
-Pocket = 4
-Price = 3000
-FieldUse = TM
-Move = BULKUP
-Flags = Fling_10
-Description = Der Angriff und die Verteidigung des Anwenders steigen um je 1 Stufe. 
-#-------------------------------
-[TM65]
-Name = TM65
-NamePlural = TM65s
-Pocket = 4
-Price = 5000
-FieldUse = TM
-Move = AIRSLASH
-Flags = Fling_75
-Description = Luftschnitt schädigt den Gegner und lässt ihn mit einer Wahrscheinlichkeit von 30 % zurückschrecken. 
-#-------------------------------
-[TM66]
-Name = TM66
-NamePlural = TM66s
-Pocket = 4
-Price = 5000
-FieldUse = TM
-Move = BODYSLAM
-Flags = Fling_85
-Description = Verursacht Schaden und paralysiert das Ziel mit einer Wahrscheinlichkeit von 30 %. 
-#-------------------------------
-[TM67]
-Name = TM67
-NamePlural = TM67s
-Pocket = 4
-Price = 5000
-FieldUse = TM
-Move = FIREPUNCH
-Flags = Fling_75
-Description = Schädigt das Ziel und besitzt eine Chance von 10 % das Ziel zu verbrennen. 
-#-------------------------------
-[TM68]
-Name = TM68
-NamePlural = TM68s
-Pocket = 4
-Price = 5000
-FieldUse = TM
-Move = THUNDERPUNCH
-Flags = Fling_75
-Description = Donnerschlag verursacht Schaden und paralysiert das Ziel mit einer Wahrscheinlichkeit von 10 %. 
-#-------------------------------
-[TM69]
-Name = TM69
-NamePlural = TM69s
-Pocket = 4
-Price = 5000
-FieldUse = TM
-Move = ICEPUNCH
-Flags = Fling_75
-Description = Schädigt das Ziel und lässt es besitzt eine Wahrscheinlichkeit von 10 %, das Ziel einzufrieren. 
-#-------------------------------
-[TM70]
-Name = TM70
-NamePlural = TM70s
-Pocket = 4
-Price = 400
-FieldUse = TM
-Move = SLEEPTALK
-Flags = Fling_10
-Description = Der Anwender benutzt, wenn es schläft, zufällig eine seiner übrigen Attacken.
-#-------------------------------
-[TM71]
-Name = TM71
-NamePlural = TM71s
-Pocket = 4
-Price = 8000
-FieldUse = TM
-Move = SEEDBOMB
-Flags = Fling_80
-Description = Samenbomben schädigt den Gegner ohne zusätzliche Effekte. 
-#-------------------------------
-[TM72]
-Name = TM72
-NamePlural = TM72s
-Pocket = 4
-Price = 5000
-FieldUse = TM
-Move = ELECTROBALL
-Flags = Fling_10
-Description = Je höher die Initiative des Anwenders im Vergleich zu der des Ziels ist, desto höher ist der Schaden, der beim Ziel verursacht wird.
-#-------------------------------
-[TM73]
-Name = TM73
-NamePlural = TM73s
-Pocket = 4
-Price = 8000
-FieldUse = TM
-Move = DRAINPUNCH
-Flags = Fling_75
-Description = Die KP des Anwenders werden um die Hälfte des verursachten Schadens aufgefüllt.
-#-------------------------------
-[TM74]
-Name = TM74
-NamePlural = TM74s
-Pocket = 4
-Price = 800
-FieldUse = TM
-Move = REFLECT
-Flags = Fling_10
-Description = Der Schaden, den der Anwender und seine Partner durch Kontakt-Angriffe erleiden, wird fünf Runden lang halbiert.
-#-------------------------------
-[TM75]
-Name = TM75
-NamePlural = TM75s
-Pocket = 4
-Price = 800
-FieldUse = TM
-Move = LIGHTSCREEN
-Flags = Fling_10
-Description = Der Schaden, den der Anwender und seine Partner durch Spezial-Angriffe erleiden, wird fünf Runden lang halbiert.
-#-------------------------------
-[TM76]
-Name = TM76
-NamePlural = TM76s
-Pocket = 4
-Price = 3000
-FieldUse = TM
-Move = ROCKBLAST
-Flags = Fling_25
-Description = Die Attacke fügt 2 bis 5 Mal hintereinander Schaden zu.
-#-------------------------------
-[TM77]
-Name = TM77
-NamePlural = TM77s
-Pocket = 4
-Price = 8000
-FieldUse = TM
-Move = WATERFALL
-Flags = Fling_80
-Description = Schädigt das Ziel und lässt es mit einer Chance von 20% zurückschrecken. 
-#-------------------------------
-[TM78]
-Name = TM78
-NamePlural = TM78s
-Pocket = 4
-Price = 8000
-FieldUse = TM
-Move = DRAGONCLAW
-Flags = Fling_80
-Description = Drachenklaue verursacht Schaden ohne Nebeneffekte. 
-#-------------------------------
-[TM79]
-Name = TM79
-NamePlural = TM79s
-Pocket = 4
-Price = 8000
-FieldUse = TM
-Move = DAZZLINGGLEAM
-Flags = Fling_80
-Description = Diese Attacke verursacht Schaden ohne zusätzliche Effekte. 
-#-------------------------------
-[TM80]
-Name = TM80
-NamePlural = TM80s
-Pocket = 4
-Price = 400
-FieldUse = TM
-Move = METRONOME
-Flags = Fling_10
-Description = Metronom wählt zufällig eine Attacke aus und führt diese dann aus.
-#-------------------------------
-[TM81]
-Name = TM81
-NamePlural = TM81s
-Pocket = 4
-Price = 3000
-FieldUse = TM
-Move = GRASSKNOT
-Flags = Fling_10
-Description = Strauchler hat eine variable Stärke, welche sich nach dem Gewicht des Gegners richtet; je schwerer, desto stärker. 
-#-------------------------------
-[TM82]
-Name = TM82
-NamePlural = TM82s
-Pocket = 4
-Price = 400
-FieldUse = TM
-Move = THUNDERWAVE
-Flags = Fling_10
-Description = Das Ziel wird bei Erfolg paralysiert.
-#-------------------------------
-[TM83]
-Name = TM83
-NamePlural = TM83s
-Pocket = 4
-Price = 5000
-FieldUse = TM
-Move = POISONJAB
-Flags = Fling_80
-Description = Der Gegner wird geschädigt und mit einer Chance von 30 % vergiftet.
-#-------------------------------
-[TM84]
-Name = TM84
-NamePlural = TM84s
-Pocket = 4
-Price = 5000
-FieldUse = TM
-Move = STOMPINGTANTRUM
-Flags = Fling_75
-Description = Falls in der vorherigen Runde die Attacke verfehlte, fehlschlug oder keine Wirkung auf das Ziel hatte, verdoppelt sich die Stärke dieser Attacke.
-#-------------------------------
-[TM85]
-Name = TM85
-NamePlural = TM85s
-Pocket = 4
-Price = 400
-FieldUse = TM
-Move = REST
-Flags = Fling_10
-Description = Durch Erholung schläft der Anwender ein und seine KP werden auf das Maximum aufgefüllt und Statusveränderungen aufgehoben. 
-#-------------------------------
-[TM86]
-Name = TM86
-NamePlural = TM86s
-Pocket = 4
-Price = 5000
-FieldUse = TM
-Move = ROCKSLIDE
-Flags = Fling_75
-Description = Steinhagel schädigt den Gegner und lässt ihn mit einer Wahrscheinlichkeit von 30 % zurückschrecken. 
-#-------------------------------
-[TM87]
-Name = TM87
-NamePlural = TM87s
-Pocket = 4
-Price = 3000
-FieldUse = TM
-Move = TAUNT
-Flags = Fling_10
-Description = Das Ziel kann über drei Runden hinweg ausschließlich Attacken einsetzen, die direkten Schaden verursachen.
-#-------------------------------
-[TM88]
-Name = TM88
-NamePlural = TM88s
-Pocket = 4
-Price = 5000
-FieldUse = TM
-Move = SWORDSDANCE
-Flags = Fling_10
-Description = Schwerttanz erhöht den Angriff des Anwenders um zwei Stufen. 
-#-------------------------------
-[TM89]
-Name = TM89
-NamePlural = TM89s
-Pocket = 4
-Price = 8000
-FieldUse = TM
-Move = BODYPRESS
-Flags = Fling_80
-Description = Die Attacke verwendet bei der Schadensberechnung die Verteidigung statt den Angriff des Anwenders. 
-#-------------------------------
-[TM90]
-Name = TM90
-NamePlural = TM90s
-Pocket = 4
-Price = 3000
-FieldUse = TM
-Move = SPIKES
-Flags = Fling_10
-Description = Stacheln werden vom Anwender bis zu drei Mal ausgelegt, so nimmt jedes vom Gegner neu ausgeschickte Pokémon sofort Schaden. 
-#-------------------------------
-[TM91]
-Name = TM91
-NamePlural = TM91s
-Pocket = 4
-Price = 3000
-FieldUse = TM
-Move = TOXICSPIKES
-Flags = Fling_10
-Description = Wird Giftspitzen eingesetzt und auf der gegnerischen Seite ein neues Pokémon in den Kampf geschickt, wird dieses sofort vergiftet (2x = schwer vergiftet).
-#-------------------------------
-[TM92]
-Name = TM92
-NamePlural = TM92s
-Pocket = 4
-Price = 3000
-FieldUse = TM
-Move = IMPRISON
-Flags = Fling_10
-Description = Nach dem Einsatz von Begrenzer kann der Gegner Attacken, die dem Anwender ebenfalls bekannt sind, nicht mehr einsetzen.
-#-------------------------------
-[TM93]
-Name = TM93
-NamePlural = TM93s
-Pocket = 4
-Price = 8000
-FieldUse = TM
-Move = FLASHCANNON
-Flags = Fling_80
-Description = Schädigt und senkt die Spezial-Verteidigung des Zieles mit einer Wahrscheinlichkeit von 10 %. 
-#-------------------------------
-[TM94]
-Name = TM94
-NamePlural = TM94s
-Pocket = 4
-Price = 8000
-FieldUse = TM
-Move = DARKPULSE
-Flags = Fling_80
-Description = Finsteraura richtet Schaden an und bewirkt mit einer Wahrscheinlichkeit von 20%, dass das Ziel zurückschreckt. 
-#-------------------------------
-[TM95]
-Name = TM95
-NamePlural = TM95s
-Pocket = 4
-Price = 8000
-FieldUse = TM
-Move = LEECHLIFE
-Flags = Fling_80
-Description = Schadet dem Ziel und füllt die KP des Anwenders um 50 % des verursachten Schadens auf.
-#-------------------------------
-[TM96]
-Name = TM96
-NamePlural = TM96s
-Pocket = 4
-Price = 400
-FieldUse = TM
-Move = EERIEIMPULSE
-Flags = Fling_10
-Description = Senkt den Spezial-Angriff des Gegners um 2 Stufen. 
-#-------------------------------
-[TM97]
-Name = TM97
-NamePlural = TM97s
-Pocket = 4
-Price = 5000
-FieldUse = TM
-Move = FLY
-Flags = Fling_90
-Description = In der Runde, in der Fliegen ausgewählt wurde, fliegt der Anwender in die Luft und greift in der nächsten Runde an.
-#-------------------------------
-[TM98]
-Name = TM98
-NamePlural = TM98s
-Pocket = 4
-Price = 3000
-FieldUse = TM
-Move = SKILLSWAP
-Flags = Fling_10
-Description = Die Fähigkeiten des Anwenders und des Gegners werden getauscht.
-#-------------------------------
-[TM99]
-Name = TM99
-NamePlural = TM99s
-Pocket = 4
-Price = 8000
-FieldUse = TM
-Move = IRONHEAD
-Flags = Fling_80
-Description = Schädigt das Ziel und lässt es mit einer Wahrscheinlichkeit von 30 % zurückschrecken.
-#-------------------------------
-[TM100]
-Name = TM100
-NamePlural = TM100s
-Pocket = 4
-Price = 8000
-FieldUse = TM
-Move = DRAGONDANCE
-Flags = Fling_80
-Description = Erhöht Angriff stark und Initiative leicht.
-#-------------------------------
-[TM101]
-Name = TM101
-NamePlural = TM101s
-Pocket = 4
-Price = 8000
-FieldUse = TM
-Move = POWERGEM
-Flags = Fling_80
-Description = Juwelenkraft schädigt das Ziel ohne weitere Effekte. 
-#-------------------------------
-[TM102]
-Name = TM102
-NamePlural = TM102s
-Pocket = 4
-Price = 5000
-FieldUse = TM
-Move = GUNKSHOT
-Flags = Fling_120
-Description = Der Gegner wird geschädigt und mit einer Chance von 30 % vergiftet.
-#-------------------------------
-[TM103]
-Name = TM103
-NamePlural = TM103s
-Pocket = 4
-Price = 5000
-FieldUse = TM
-Move = SUBSTITUTE
-Flags = Fling_10
-Description = Indem er 25 % seiner maximalen KP (abgerundet) verbraucht, erstellt der Anwender eine Finte mit der verbrauchten Zahl an KP.
-#-------------------------------
-[TM104]
-Name = TM104
-NamePlural = TM104s
-Pocket = 4
-Price = 1500
-FieldUse = TM
-Move = IRONDEFENSE
-Flags = Fling_10
-Description = Eisenabwehr erhöht die Verteidigung des Anwenders um 2 Stufen. 
-#-------------------------------
-[TM105]
-Name = TM105
-NamePlural = TM105s
-Pocket = 4
-Price = 5000
-FieldUse = TM
-Move = XSCISSOR
-Flags = Fling_80
-Description = Kreuzschere schädigt das Ziel ohne weitere Effekte. 
-#-------------------------------
-[TM106]
-Name = TM106
-NamePlural = TM106s
-Pocket = 4
-Price = 8000
-FieldUse = TM
-Move = DRILLRUN
-Flags = Fling_80
-Description = Schädigt das Ziel und besitzt eine erhöhte Volltrefferquote. 
-#-------------------------------
-[TM107]
-Name = TM107
-NamePlural = TM107s
-Pocket = 4
-Price = 3000
-FieldUse = TM
-Move = WILLOWISP
-Flags = Fling_10
-Description = Das Ziel wird verbrannt. 
-#-------------------------------
-[TM108]
-Name = TM108
-NamePlural = TM108s
-Pocket = 4
-Price = 8000
-FieldUse = TM
-Move = CRUNCH
-Flags = Fling_80
-Description = Die Verteidigung des Ziels wird mit einer Wahrscheinlichkeit von 20% um eine Stufe gesenkt. 
-#-------------------------------
-[TM109]
-Name = TM109
-NamePlural = TM109s
-Pocket = 4
-Price = 5000
-FieldUse = TM
-Move = TRICK
-Flags = Fling_10
-Description = Tauscht gehaltenes Item mit dem des Gegners.
-#-------------------------------
-[TM110]
-Name = TM110
-NamePlural = TM110s
-Pocket = 4
-Price = 10000
-FieldUse = TM
-Move = LIQUIDATION
-Flags = Fling_85
-Description = Richtet Schaden an und senkt mit einer Wahrscheinlichkeit von 20% die Verteidigung des Zieles um eine Stufe. 
-#-------------------------------
-[TM111]
-Name = TM111
-NamePlural = TM111s
 Pocket = 4
 Price = 8000
 FieldUse = TM
 Move = GIGADRAIN
 Flags = Fling_75
 Description = Schadet dem Ziel und füllt die KP des Anwenders um 50 % des verursachten Schadens auf.
-#-------------------------------
-[TM112]
-Name = TM112
-NamePlural = TM112s
-Pocket = 4
-Price = 8000
-FieldUse = TM
-Move = AURASPHERE
-Flags = Fling_80
-Description = Der Einsatz von Aurasphäre verursacht Schaden und trifft immer.
-#-------------------------------
-[TM113]
-Name = TM113
-NamePlural = TM113s
-Pocket = 4
-Price = 8000
-FieldUse = TM
-Move = TAILWIND
-Flags = Fling_10
-Description = Die Initiative des Anwenders und aller Pokémon in dessen Team wird nach Einsatz der Attacke für 4 Runden verdoppelt. 
-#-------------------------------
-[TM114]
-Name = TM114
-NamePlural = TM114s
-Pocket = 4
-Price = 5000
-FieldUse = TM
-Move = SHADOWBALL
-Flags = Fling_80
-Description = Spukball schädigt das Ziel und senkt mit einer Chance von 20% dessen Spezial-Verteidigung. 
-#-------------------------------
-[TM115]
-Name = TM115
-NamePlural = TM115s
-Pocket = 4
-Price = 8000
-FieldUse = TM
-Move = DRAGONPULSE
-Flags = Fling_85
-Description = Drachenpuls schadet ohne weitere Effekte. 
-#-------------------------------
-[TM116]
-Name = TM116
-NamePlural = TM116s
-Pocket = 4
-Price = 5000
-FieldUse = TM
-Move = STEALTHROCK
-Flags = Fling_10
-Description = Wird ein neues Pokémon in den Kampf geschickt, nimmt es sofort Schaden. Der Schaden hängt vom Typ des angegriffenen Pokémon ab.
-#-------------------------------
-[TM117]
-Name = TM117
-NamePlural = TM117s
+#-------------------------------Map / Shop
+[TM20]
+Name = TM20
+NamePlural = TM20s
 Pocket = 4
 Price = 8000
 FieldUse = TM
 Move = HYPERVOICE
 Flags = Fling_90
-Description = Schallwelle verursacht Schaden ohne Zusatzeffekte und umgeht Delegator. 
-#-------------------------------
-[TM118]
-Name = TM118
-NamePlural = TM118s
-Pocket = 4
-Price = 10000
-FieldUse = TM
-Move = HEATWAVE
-Flags = Fling_95
-Description = Hitzewelle fügt dem Gegner Schaden zu und verbrennt ihn mit einer Wahrscheinlichkeit von 10 %. 
-#-------------------------------
-[TM119]
-Name = TM119
-NamePlural = TM119s
-Pocket = 4
-Price = 10000
-FieldUse = TM
-Move = ENERGYBALL
-Flags = Fling_90
-Description = Energieball schädigt das Ziel und senkt mit einer Wahrscheinlichkeit von 10 % dessen Spezial-Verteidigung. 
-#-------------------------------
-[TM120]
-Name = TM120
-NamePlural = TM120s
-Pocket = 4
-Price = 10000
-FieldUse = TM
-Move = PSYCHIC
-Flags = Fling_90
-Description = Schadet dem Ziel und hat eine Chance von 10 %, die Spezial-Verteidigung um eine Stufe zu senken. 
-#-------------------------------
-[TM121]
-Name = TM121
-NamePlural = TM121s
-Pocket = 4
-Price = 5000
-FieldUse = TM
-Move = HEAVYSLAM
-Flags = Fling_10
-Description = Rammboss verursacht Schaden und ist umso stärker, je mehr Gewicht der Anwender im Vergleich zum Ziel hat.
-#-------------------------------
-[TM122]
-Name = TM122
-NamePlural = TM122s
-Pocket = 4
-Price = 3000
-FieldUse = TM
-Move = ENCORE
-Flags = Fling_10
-Description = Zugabe zwingt den Gegner, seine zuletzt eingesetzte Attacke noch 3 Mal zu wiederholen, wenn er angreifen will.
-#-------------------------------
-[TM123]
-Name = TM123
-NamePlural = TM123s
-Pocket = 4
-Price = 10000
-FieldUse = TM
-Move = SURF
-Flags = Fling_90
-Description = Wenn das angegriffene Pokémon Taucher eingesetzt hat, verdoppelt sich der erhaltene Schaden.
-#-------------------------------
-[TM124]
-Name = TM124
-NamePlural = TM124s
-Pocket = 4
-Price = 8000
-FieldUse = TM
-Move = ICESPINNER
-Flags = Fling_80
-Description = Der Anwender greift den Gegner an und zerstört Feldeffekte. 
-#-------------------------------
-[TM125]
-Name = TM125
-NamePlural = TM125s
-Pocket = 4
-Price = 10000
-FieldUse = TM
-Move = FLAMETHROWER
-Flags = Fling_90
-Description = Schädigt das Ziel und verbrennt es mit einer Wahrscheinlichkeit von 10 %. 
-#-------------------------------
-[TM126]
-Name = TM126
-NamePlural = TM126s
-Pocket = 4
-Price = 10000
-FieldUse = TM
-Move = THUNDERBOLT
-Flags = Fling_90
-Description = Donnerblitz verursacht Schaden und paralysiert das Ziel mit einer Wahrscheinlichkeit von 10 %. 
-#-------------------------------
-[TM127]
-Name = TM127
-NamePlural = TM127s
-Pocket = 4
-Price = 10000
-FieldUse = TM
-Move = PLAYROUGH
-Flags = Fling_90
-Description = Fügt Schaden zu und verringert mit einer Wahrscheinlichkeit von 10 % den Angriffswert des Gegners um eine Stufe. 
-#-------------------------------
-[TM128]
-Name = TM128
-NamePlural = TM128s
-Pocket = 4
-Price = 1500
-FieldUse = TM
-Move = AMNESIA
-Flags = Fling_10
-Description = Die Spezial-Verteidigung des Anwenders wird um zwei Stufen erhöht. 
-#-------------------------------
-[TM129]
-Name = TM129
-NamePlural = TM129s
-Pocket = 4
-Price = 3000
-FieldUse = TM
-Move = CALMMIND
-Flags = Fling_10
-Description = Der Spezial-Angriff und die Spezial-Verteidigung des Anwenders steigen um je 1 Stufe. 
-#-------------------------------
-[TM130]
-Name = TM130
-NamePlural = TM130s
-Pocket = 4
-Price = 400
-FieldUse = TM
-Move = HELPINGHAND
-Flags = Fling_10
-Description = In einem Doppel- oder Dreierkampf wird die Basisstärke der Attacke des Partners durch Einsatz von Rechte Hand um 50% erhöht.
-#-------------------------------
-[TM131]
-Name = TM131
-NamePlural = TM131s
-Pocket = 4
-Price = 10000
-FieldUse = TM
-Move = POLLENPUFF
-Flags = Fling_90
-Description = Die Attacke schadet gegnerischen Pokémon, stellt aber bei Partnern in Mehrfachkämpfen 50 % ihrer maximalen KP wieder her. 
-#-------------------------------
-[TM132]
-Name = TM132
-NamePlural = TM132s
-Pocket = 4
-Price = 3000
-FieldUse = TM
-Move = BATONPASS
-Flags = Fling_10
-Description = Stafette wechselt den Anwender aus und überträgt alle momentanen Wertveränderungen auf das eingetauschte Pokémon.
-#-------------------------------
-[TM133]
-Name = TM133
-NamePlural = TM133s
-Pocket = 4
-Price = 10000
-FieldUse = TM
-Move = EARTHPOWER
-Flags = Fling_90
-Description = Schädigt das Ziel und senkt mit einer Wahrscheinlichkeit von 10 % dessen Spezial-Verteidigung um eine Stufe. 
-#-------------------------------
-[TM134]
-Name = TM134
-NamePlural = TM134s
-Pocket = 4
-Price = 3000
-FieldUse = TM
-Move = REVERSAL
-Flags = Fling_10
-Description = Schädigt den Gegner. Die Stärke der Attacke ist umso höher, je weniger KP der Anwender besitzt.
-#-------------------------------
-[TM135]
-Name = TM135
-NamePlural = TM135s
-Pocket = 4
-Price = 10000
-FieldUse = TM
-Move = ICEBEAM
-Flags = Fling_90
-Description = Eisstrahl verursacht Schaden und friert das Ziel mit einer Wahrscheinlichkeit von 10 % ein. 
-#-------------------------------
-[TM136]
-Name = TM136
-NamePlural = TM136s
-Pocket = 4
-Price = 3000
-FieldUse = TM
-Move = ELECTRICTERRAIN
-Flags = Fling_10
-Description = Pokémon, die den Boden berühren, können nicht einschlafen und ihre Elektro-Attacken werden um 30 % verstärkt. 
-#-------------------------------
-[TM137]
-Name = TM137
-NamePlural = TM137s
-Pocket = 4
-Price = 3000
-FieldUse = TM
-Move = GRASSYTERRAIN
-Flags = Fling_10
-Description = Pokémon, die den Boden berühren, regenerieren am Ende der Runde 1/16 ihrer maximalen KP und ihre Pflanzen-Attacken werden um 30% verstärkt.
-#-------------------------------
-[TM138]
-Name = TM138
-NamePlural = TM138s
-Pocket = 4
-Price = 3000
-FieldUse = TM
-Move = PSYCHICTERRAIN
-Flags = Fling_10
-Description = Pokémon, die den Boden berühren, können nicht von Attacken mit hoher Priorität getroffen werden.
-#-------------------------------
-[TM139]
-Name = TM139
-NamePlural = TM139s
-Pocket = 4
-Price = 3000
-FieldUse = TM
-Move = MISTYTERRAIN
-Flags = Fling_10
-Description = Pokémon, die den Boden berühren, werden nicht von Statusproblemen betroffen und der erlittene Schaden von Drachen-Attacken wird um 50 % reduziert.
-#-------------------------------
-[TM140]
-Name = TM140
-NamePlural = TM140s
-Pocket = 4
-Price = 5000
-FieldUse = TM
-Move = NASTYPLOT
-Flags = Fling_10
-Description = Ränkeschmied erhöht den Spezial-Angriff um zwei Stufen.
-#-------------------------------
-[TM141]
-Name = TM141
-NamePlural = TM141s
-Pocket = 4
-Price = 12000
-FieldUse = TM
-Move = FIREBLAST
-Flags = Fling_110
-Description = Schädigt das Ziel und verbrennt es mit einer Chance von 10 %. 
-#-------------------------------
-[TM142]
-Name = TM142
-NamePlural = TM142s
-Pocket = 4
-Price = 12000
-FieldUse = TM
-Move = HYDROPUMP
-Flags = Fling_110
-Description = Hydropumpe schädigt den Gegner ohne zusätzliche Effekte. 
-#-------------------------------
-[TM143]
-Name = TM143
-NamePlural = TM143s
-Pocket = 4
-Price = 12000
-FieldUse = TM
-Move = BLIZZARD
-Flags = Fling_110
-Description = Blizzard fügt dem Gegner Schaden zu und friert ihn mit einer Wahrscheinlichkeit von 10 % ein.
-#-------------------------------
-[TM144]
-Name = TM144
-NamePlural = TM144s
-Pocket = 4
-Price = 8000
-FieldUse = TM
-Move = FIREPLEDGE
-Flags = Fling_80
-Description = Feuersäulen verursacht regulären Schaden, der zusätzliche Effekte bekommt, wenn man ihn mit Pflanzensäulen oder Wassersäulen kombiniert.
-#-------------------------------
-[TM145]
-Name = TM145
-NamePlural = TM145s
-Pocket = 4
-Price = 8000
-FieldUse = TM
-Move = WATERPLEDGE
-Flags = Fling_80
-Description = Pflanzensäulen verursacht regulären Schaden, der zusätzliche Effekte bekommt, wenn man ihn mit Feuersäulen oder Wassersäulen kombiniert.
-#-------------------------------
-[TM146]
-Name = TM146
-NamePlural = TM146s
-Pocket = 4
-Price = 8000
-FieldUse = TM
-Move = GRASSPLEDGE
-Flags = Fling_80
-Description = Wassersäulen verursacht regulären Schaden, der zusätzliche Effekte bekommt, wenn man ihn mit Pflanzensäulen oder Feuersäulen kombiniert.
-#-------------------------------
-[TM147]
-Name = TM147
-NamePlural = TM147s
-Pocket = 4
-Price = 10000
-FieldUse = TM
-Move = WILDCHARGE
-Flags = Fling_90
-Description = Schädigt den Gegner, wobei der Anwender 25 % des erzeugten Schadens als Rückstoßschaden erleidet. 
-#-------------------------------
-[TM148]
-Name = TM148
-NamePlural = TM148s
-Pocket = 4
-Price = 10000
-FieldUse = TM
-Move = SLUDGEBOMB
-Flags = Fling_90
-Description = Das Ziel wird geschädigt und mit einer Chance von 30 % vergiftet.
-#-------------------------------
-[TM149]
-Name = TM149
-NamePlural = TM149s
-Pocket = 4
-Price = 12000
-FieldUse = TM
-Move = EARTHQUAKE
-Flags = Fling_100
-Description = Fügt allen im Kampf befindlichen Pokémon in der Nähe außer dem Anwender selbst Schaden zu. 
-#-------------------------------
-[TM150]
-Name = TM150
-NamePlural = TM150s
-Pocket = 4
-Price = 12000
-FieldUse = TM
-Move = STONEEDGE
-Flags = Fling_100
-Description = Schädigt das Ziel und besitzt eine erhöhte Volltrefferquote. 
-#-------------------------------
-[TM151]
-Name = TM151
-NamePlural = TM151s
-Pocket = 4
-Price = 10000
-FieldUse = TM
-Move = PHANTOMFORCE
-Flags = Fling_90
-Description = Der Anwender verschwindet in der Runde, in der Phantomkraft eingesetzt wird, und greift sein Ziel in der nächsten Runde an.
-#-------------------------------
-[TM152]
-Name = TM152
-NamePlural = TM152s
-Pocket = 4
-Price = 14000
-FieldUse = TM
-Move = GIGAIMPACT
-Flags = Fling_150
-Description = Nach dem Einsatz muss sich der Anwender eine Runde lang ausruhen.
-#-------------------------------
-[TM153]
-Name = TM153
-NamePlural = TM153s
-Pocket = 4
-Price = 14000
-FieldUse = TM
-Move = BLASTBURN
-Flags = Fling_150
-Description = Trifft die Attacke, muss der Angreifer in der nächsten Runde pausieren. 
-#-------------------------------
-[TM154]
-Name = TM154
-NamePlural = TM154s
-Pocket = 4
-Price = 14000
-FieldUse = TM
-Move = HYDROCANNON
-Flags = Fling_150
-Description = Trifft die Attacke, muss der Anwender in der nächsten Runde pausieren. 
-#-------------------------------
-[TM155]
-Name = TM155
-NamePlural = TM155s
-Pocket = 4
-Price = 14000
-FieldUse = TM
-Move = FRENZYPLANT
-Flags = Fling_150
-Description = Trifft die Attacke, muss der Anwender in der nächsten Runde pausieren. 
-#-------------------------------
-[TM156]
-Name = TM156
-NamePlural = TM156s
-Pocket = 4
-Price = 12000
-FieldUse = TM
-Move = OUTRAGE
-Flags = Fling_120
-Description = Die Attacke fügt Schaden zu und dauert 2 bis 3 Runden. Danach ist der Anwender verwirrt.
-#-------------------------------
-[TM157]
-Name = TM157
-NamePlural = TM157s
-Pocket = 4
-Price = 12000
-FieldUse = TM
-Move = OVERHEAT
-Flags = Fling_130
-Description = Schädigt das Ziel und senkt den Spezial-Angriff des Anwenders um zwei Stufen. 
-#-------------------------------
-[TM158]
-Name = TM158
-NamePlural = TM158s
-Pocket = 4
-Price = 12000
-FieldUse = TM
-Move = FOCUSBLAST
-Flags = Fling_120
-Description = Schadet dem Ziel und senkt mit einer Wahrscheinlichkeit von 10 % dessen Spezial-Verteidigung. 
-#-------------------------------
-[TM159]
-Name = TM159
-NamePlural = TM159s
-Pocket = 4
-Price = 12000
-FieldUse = TM
-Move = LEAFSTORM
-Flags = Fling_130
-Description = Bei einem Treffer schädigt Blättersturm das Ziel und senkt den Spezial-Angriff des Anwenders danach um zwei Stufen. 
-#-------------------------------
-[TM160]
-Name = TM160
-NamePlural = TM160s
-Pocket = 4
-Price = 12000
-FieldUse = TM
-Move = HURRICANE
-Flags = Fling_110
-Description = Schädigt den Gegner und verwirrt ihn mit einer Chance von 30%, wenn er keinen Delegator besitzt. 
-#-------------------------------
-[TM161]
-Name = TM161
-NamePlural = TM161s
-Pocket = 4
-Price = 5000
-FieldUse = TM
-Move = TRICKROOM
-Flags = Fling_10
-Description =Erzeugt einen Raum, der für fünf Runden lang Pokémon mit geringerer Initiative zuerst angreifen lässt.
-#-------------------------------
-[TM162]
-Name = TM162
-NamePlural = TM162s
-Pocket = 4
-Price = 10000
-FieldUse = TM
-Move = BUGBUZZ
-Flags = Fling_90
-Description = Schädigt das Ziel und senkt mit einer Wahrscheinlichkeit von 10 % dessen Spezial-Verteidigung. Umgeht Delegator.
-#-------------------------------
-[TM163]
-Name = TM163
-NamePlural = TM163s
-Pocket = 4
-Price = 14000
-FieldUse = TM
-Move = HYPERBEAM
-Flags = Fling_150
-Description = Der Rückstoß der Attacke bewirkt, dass der Anwender in der nächsten Runde aussetzen muss, auch, wenn das Ziel durch Hyperstrahl besiegt wird.
-#-------------------------------
-[TM164]
-Name = TM164
-NamePlural = TM164s
-Pocket = 4
-Price = 12000
-FieldUse = TM
-Move = BRAVEBIRD
-Flags = Fling_120
-Description = Bei Erfolg schädigt Sturzflug das Ziel; der Anwender erleidet selbst 33 % des zugefügten Schadens durch Rückstoß. 
-#-------------------------------
-[TM165]
-Name = TM165
-NamePlural = TM165s
-Pocket = 4
-Price = 12000
-FieldUse = TM
-Move = FLAREBLITZ
-Flags = Fling_120
-Description = Bei Erfolg schädigt die Attacke das Ziel; der Anwender erleidet selbst 33 % des zugefügten Schadens durch Rückstoß und verbrennt den Gegner zu 10%.
-#-------------------------------
-[TM166]
-Name = TM166
-NamePlural = TM166s
-Pocket = 4
-Price = 12000
-FieldUse = TM
-Move = THUNDER
-Flags = Fling_110
-Description = Verursacht Schaden und paralysiert das Ziel mit einer Wahrscheinlichkeit von 30%. 
-#-------------------------------
-[TM167]
-Name = TM167
-NamePlural = TM167s
-Pocket = 4
-Price = 12000
-FieldUse = TM
-Move = CLOSECOMBAT
-Flags = Fling_120
-Description = Verursacht Schaden und senkt danach die Verteidigung und Spezial-Verteidigung des Anwenders um je eine Stufe. 
-#-------------------------------
-[TM168]
-Name = TM168
-NamePlural = TM168s
-Pocket = 4
-Price = 12000
-FieldUse = TM
-Move = SOLARBEAM
-Flags = Fling_120
-Description = In der Runde, in der Solarstrahl ausgewählt wurde, badet der Anwender in Sonnenlicht und greift in der nächsten Runde an.
-#-------------------------------
-[TM169]
-Name = TM169
-NamePlural = TM169s
-Pocket = 4
-Price = 14000
-FieldUse = TM
-Move = DRACOMETEOR
-Flags = Fling_130
-Description = Schädigt das Ziel und senkt den Spezial-Angriff des Anwenders um zwei Stufen. 
-#-------------------------------
-[TM170]
-Name = TM170
-NamePlural = TM170s
-Pocket = 4
-Price = 14000
-FieldUse = TM
-Move = STEELBEAM
-Flags = Fling_140
-Description = Der Anwender verliert bei Einsatz der Attacke 50 % seiner maximalen KP.
-#-------------------------------
-[TM171]
-Name = TM171
-NamePlural = TM171s
-Pocket = 4
-Price = 0
-FieldUse = TM
-Move = DIVE
-Description = Diese Attacke verursacht Schaden, allerdings erst nach einer Vorbereitungsrunde, in der der Anwender abtaucht.
-#-------------------------------
-[TM172]
-Name = TM172
-NamePlural = TM172s
-Pocket = 4
-Price = 200
-FieldUse = TM
-Move = ROAR
-Flags = Fling_10
-Description = Brüller tauscht in Trainerkämpfen das gegnerische Pokémon gegen ein zufällig ausgewähltes Pokémon des gegnerischen Teams aus.
-#-------------------------------
-[TM173]
-Name = TM173
-NamePlural = TM173s
-Pocket = 4
-Price = 400
-FieldUse = TM
-Move = CHARGE
-Flags = Fling_10
-Description = Wenn der Anwender hiernach eine Elektro-Attacke einsetzt, fügt diese doppelt so viel Schaden zu. Die Spezial-Verteidigung wird erhöht.
-#-------------------------------
-[TM174]
-Name = TM174
-NamePlural = TM174s
-Pocket = 4
-Price = 400
-FieldUse = TM
-Move = HAZE
-Flags = Fling_10
-Description = Dunkelnebel setzt alle Statuswertveränderungen der aktiven Pokémon zurück. 
-#-------------------------------
-[TM175]
-Name = TM175
-NamePlural = TM175s
+Description = Schallwelle verursacht Schaden ohne Zusatzeffekte und umgeht Delegator.
+#-------------------------------Map / Shop
+[TM21]
+Name = TM21
+NamePlural = TM21s
 Pocket = 4
 Price = 800
 FieldUse = TM
-Move = TOXIC
-Flags = Fling_10
-Description = Richtet eine schwere Vergiftung an, deren angerichteter Schaden mit jeder Runde um 1/16 erhöht wird.
-#-------------------------------
-[TM176]
-Name = TM176
-NamePlural = TM176s
-Pocket = 4
-Price = 400
-FieldUse = TM
-Move = SANDTOMB
-Flags = Fling_35
-Description = Sandgrab schadet dem Ziel und hält es für vier bis fünf Runden in einer Sandhose fest.
-#-------------------------------
-[TM177]
-Name = TM177
-NamePlural = TM177s
-Pocket = 4
-Price = 200
-FieldUse = TM
-Move = SPITE
-Flags = Fling_10
-Description = Dem Gegner werden vier AP von der zuletzt ausgeführten Attacke abgezogen.
-#-------------------------------
-[TM178]
-Name = TM178
-NamePlural = TM178s
-Pocket = 4
-Price = 400
-FieldUse = TM
-Move = GRAVITY
-Flags = Fling_10
-Description = Erdanziehung setzt das gesamte Kampffeld für fünf Runden lang einer sehr hohen Schwerkraft aus; negiert so z.B. Schwebe.
-#-------------------------------
-[TM179]
-Name = TM179
-NamePlural = TM179s
-Pocket = 4
-Price = 800
-FieldUse = TM
-Move = SMACKDOWN
-Flags = Fling_50
-Description = Wenn sich das Ziel in der Luft befindet, wird es auf den Boden zurück gezwungen und die Effekte von Magnetflug und Telekinese werden aufgehoben.
-#-------------------------------
-[TM180]
-Name = TM180
-NamePlural = TM180s
-Pocket = 4
-Price = 10000
-FieldUse = TM
-Move = GYROBALL
-Flags = Fling_10
-Description = Sie ist stärker, je langsamer der Anwender im Vergleich zum Ziel ist.
-#-------------------------------
-[TM181]
-Name = TM181
-NamePlural = TM181s
-Pocket = 4
-Price = 14000
-FieldUse = TM
-Move = KNOCKOFF
-Flags = Fling_65
-Description = Trägt das getroffene Pokémon ein Item, wird die Stärke um 50 % erhöht und das getragene Item des Ziels wird entfernt.
-#-------------------------------
-[TM182]
-Name = TM182
-NamePlural = TM182s
-Pocket = 4
-Price = 3000
-FieldUse = TM
-Move = BUGBITE
-Flags = Fling_60
-Description = Hält das Ziel eine Beere, so frisst der Anwender dessen Beere und erhält damit den Effekt der Beere.
-#-------------------------------
-[TM183]
-Name = TM183
-NamePlural = TM183s
-Pocket = 4
-Price = 5000
-FieldUse = TM
-Move = SUPERFANG
-Flags = Fling_10
-Description = Halbiert die momentanen KP des gegnerischen Pokémon.
-#-------------------------------
-[TM184]
-Name = TM184
-NamePlural = TM184s
-Pocket = 4
-Price = 3000
-FieldUse = TM
-Move = VACUUMWAVE
-Flags = Fling_40
-Description = Die Attacke verursacht Schaden und besitzt eine erhöhte Priorität von +1.
-#-------------------------------
-[TM185]
-Name = TM185
-NamePlural = TM185s
-Pocket = 4
-Price = 5000
-FieldUse = TM
-Move = LUNGE
-Flags = Fling_80
-Description = Richtet Schaden an und senkt den Angriff des Zieles um eine Stufe. 
-#-------------------------------
-[TM186]
-Name = TM186
-NamePlural = TM186s
-Pocket = 4
-Price = 5000
-FieldUse = TM
-Move = HIGHHORSEPOWER
-Flags = Fling_95
-Description = Schädigt das Ziel ohne weitere Effekte. 
-#-------------------------------
-[TM187]
-Name = TM187
-NamePlural = TM187s
-Pocket = 4
-Price = 10000
-FieldUse = TM
-Move = ICICLESPEAR
-Flags = Fling_25
-Description = Die Attacke fügt 2- bis 5-Mal hintereinander Schaden zu.
-#-------------------------------
-[TM188]
-Name = TM188
-NamePlural = TM188s
-Pocket = 4
-Price = 8000
-FieldUse = TM
-Move = SCALD
-Flags = Fling_80
-Description = Siedewasser schädigt das Ziel und verbrennt es mit einer Wahrscheinlichkeit von 30 %.
-#-------------------------------
-[TM189]
-Name = TM189
-NamePlural = TM189s
-Pocket = 4
-Price = 8000
-FieldUse = TM
-Move = HEATCRASH
-Flags = Fling_10
-Description = Je schwerer der Anwender im Vergleich zum Ziel ist, desto mehr Schaden wird verursacht. 
-#-------------------------------
-[TM190]
-Name = TM190
-NamePlural = TM190s
-Pocket = 4
-Price = 12000
-FieldUse = TM
-Move = SOLARBLADE
-Flags = Fling_125
-Description = In der Runde, in der Solarklinge ausgewählt wird, muss sich der Anwender aufladen. In der zweiten Runde erfolgt der Angriff.
-#-------------------------------
-[TM191]
-Name = TM191
-NamePlural = TM191s
-Pocket = 4
-Price = 5000
-FieldUse = TM
-Move = UPROAR
-Flags = Fling_90
-Description = Aufruhr verursacht Schaden und umgeht dabei Delegator. Der Anwender setzt es für drei Runden ein und kann dabei keine andere Attacke einsetzen.
-#-------------------------------
-[TM192]
-Name = TM192
-NamePlural = TM192s
-Pocket = 4
-Price = 8000
-FieldUse = TM
-Move = FOCUSPUNCH
-Flags = Fling_150
-Description = Power-Punch schädigt das Ziel und hat eine verminderte Priorität.
-#-------------------------------
-[TM193]
-Name = TM193
-NamePlural = TM193s
+Move = ICYWIND
+Flags = Fling_55
+Description = Fügt dem Ziel Schaden zu und senkt dessen Initiative um 1 Stufe.
+#-------------------------------Map / Shop
+[TM22]
+Name = TM22
+NamePlural = TM22s
 Pocket = 4
 Price = 1500
 FieldUse = TM
@@ -5576,249 +3867,329 @@ Move = WEATHERBALL
 Flags = Fling_50
 Description = Meteorologe fügt Schaden zu. Besteht ein Wettereffekt im Kampf, verdoppelt sich die Stärke von Meteorologe.
 #-------------------------------
-[TM194]
-Name = TM194
-NamePlural = TM194s
+[TM23]
+Name = TM23
+NamePlural = TM23s
+Pocket = 4
+Price = 8000
+FieldUse = TM
+Move = IRONHEAD
+Flags = Fling_80
+Description = Schädigt das Ziel und lässt es mit einer Wahrscheinlichkeit von 30 % zurückschrecken.
+#-------------------------------
+[TM24]
+Name = TM24
+NamePlural = TM24s
+Pocket = 4
+Price = 10000
+FieldUse = TM
+Move = THUNDERBOLT
+Flags = Fling_90
+Description = Donnerblitz verursacht Schaden und paralysiert das Ziel mit einer Wahrscheinlichkeit von 10 %.
+#-------------------------------
+[TM25]
+Name = TM25
+NamePlural = TM25s
+Pocket = 4
+Price = 12000
+FieldUse = TM
+Move = THUNDER
+Flags = Fling_110
+Description = Verursacht Schaden und paralysiert das Ziel mit einer Wahrscheinlichkeit von 30%.
+#-------------------------------
+[TM26]
+Name = TM26
+NamePlural = TM26s
+Pocket = 4
+Price = 12000
+FieldUse = TM
+Move = EARTHQUAKE
+Flags = Fling_100
+Description = Fügt allen im Kampf befindlichen Pokémon in der Nähe außer dem Anwender selbst Schaden zu.
+#-------------------------------
+[TM27]
+Name = TM27
+NamePlural = TM27s
+Pocket = 4
+Price = 5000
+FieldUse = TM
+Move = RETURN
+Flags = Fling_10
+Description = Stärke hängt von der Freundschaft zum Trainer ab.
+#-------------------------------
+[TM28]
+Name = TM28
+NamePlural = TM28s
+Pocket = 4
+Price = 5000
+FieldUse = TM
+Move = DIG
+Flags = Fling_80
+Description = In der Runde, in der Schaufler ausgewählt wurde, gräbt sich der Anwender in die Erde ein und greift in der nächsten Runde an.
+#-------------------------------
+[TM29]
+Name = TM29
+NamePlural = TM29s
+Pocket = 4
+Price = 10000
+FieldUse = TM
+Move = PSYCHIC
+Flags = Fling_90
+Description = Schadet dem Ziel und hat eine Chance von 10 %, die Spezial-Verteidigung um eine Stufe zu senken.
+#-------------------------------
+[TM30]
+Name = TM30
+NamePlural = TM30s
+Pocket = 4
+Price = 5000
+FieldUse = TM
+Move = SHADOWBALL
+Flags = Fling_80
+Description = Spukball schädigt das Ziel und senkt mit einer Chance von 20% dessen Spezial-Verteidigung.
+#-------------------------------
+[TM31]
+Name = TM31
+NamePlural = TM31s
+Pocket = 4
+Price = 5000
+FieldUse = TM
+Move = BRICKBREAK
+Flags = Fling_75
+Description = Bevor der Schaden zugefügt wird, werden die Effekte von Lichtschild, Reflektor und Auroraschleier von der Seite des Ziels entfernt.
+#-------------------------------
+[TM32]
+Name = TM32
+NamePlural = TM32s
+Pocket = 4
+Price = 8000
+FieldUse = TM
+Move = AURASPHERE
+Flags = Fling_80
+Description = Der Einsatz von Aurasphäre verursacht Schaden und trifft immer.
+#-------------------------------
+[TM33]
+Name = TM33
+NamePlural = TM33s
+Pocket = 4
+Price = 800
+FieldUse = TM
+Move = REFLECT
+Flags = Fling_10
+Description = Der Schaden, den der Anwender und seine Partner durch Kontakt-Angriffe erleiden, wird fünf Runden lang halbiert.
+#-------------------------------
+[TM34]
+Name = TM34
+NamePlural = TM34s
+Pocket = 4
+Price = 1500
+FieldUse = TM
+Move = TELEPORT
+Flags = Fling_10
+Description = Wechselt den Anwender mit einem Verbündeten aus.
+#-------------------------------
+[TM35]
+Name = TM35
+NamePlural = TM35s
+Pocket = 4
+Price = 10000
+FieldUse = TM
+Move = FLAMETHROWER
+Flags = Fling_90
+Description = Schädigt das Ziel und verbrennt es mit einer Wahrscheinlichkeit von 10 %.
+#-------------------------------
+[TM36]
+Name = TM36
+NamePlural = TM36s
+Pocket = 4
+Price = 10000
+FieldUse = TM
+Move = SLUDGEBOMB
+Flags = Fling_90
+Description = Das Ziel wird geschädigt und mit einer Chance von 30 % vergiftet.
+#-------------------------------
+[TM37]
+Name = TM37
+NamePlural = TM37s
+Pocket = 4
+Price = 5000
+FieldUse = TM
+Move = HIGHHORSEPOWER
+Flags = Fling_95
+Description = Schädigt das Ziel ohne weitere Effekte.
+#-------------------------------
+[TM38]
+Name = TM38
+NamePlural = TM38s
+Pocket = 4
+Price = 12000
+FieldUse = TM
+Move = FIREBLAST
+Flags = Fling_110
+Description = Schädigt das Ziel und verbrennt es mit einer Chance von 10 %.
+#-------------------------------
+[TM39]
+Name = TM39
+NamePlural = TM39s
+Pocket = 4
+Price = 1500
+FieldUse = TM
+Move = ROCKTOMB
+Flags = Fling_60
+Description = Felsgrab verursacht Schaden und senkt die Initiative des Ziels um eine Stufe.
+#-------------------------------
+[TM40]
+Name = TM40
+NamePlural = TM40s
+Pocket = 4
+Price = 400
+FieldUse = TM
+Move = LOWKICK
+Flags = Fling_10
+Description = Der Schaden wird an dem Gewicht des Gegners kalkuliert. Je schwerer der Gegner, desto stärker ist die Attacke.
+#-------------------------------
+[TM41]
+Name = TM41
+NamePlural = TM41s
+Pocket = 4
+Price = 10000
+FieldUse = TM
+Move = LIQUIDATION
+Flags = Fling_85
+Description = Richtet Schaden an und senkt mit einer Wahrscheinlichkeit von 20% die Verteidigung des Zieles um eine Stufe.
+#-------------------------------
+[TM42]
+Name = TM42
+NamePlural = TM42s
+Pocket = 4
+Price = 800
+FieldUse = TM
+Move = FACADE
+Flags = Fling_70
+Description = Ist der Anwender von einer Paralyse, Vergiftung oder Verbrennung betroffen, verdoppelt sich die Stärke.
+#-------------------------------
+[TM43]
+Name = TM43
+NamePlural = TM43s
+Pocket = 4
+Price = 1500
+FieldUse = TM
+Move = DEFOG
+Flags = Fling_10
+Description = Senkt den Fluchtwert des Ziels; entfernt Wände und Hindernisse auf beiden Seiten.
+#-------------------------------
+[TM44]
+Name = TM44
+NamePlural = TM44s
+Pocket = 4
+Price = 400
+FieldUse = TM
+Move = REST
+Flags = Fling_10
+Description = Durch Erholung schläft der Anwender ein und seine KP werden auf das Maximum aufgefüllt und Statusveränderungen aufgehoben.
+#-------------------------------
+[TM45]
+Name = TM45
+NamePlural = TM45s
+Pocket = 4
+Price = 800
+FieldUse = TM
+Move = DRAININGKISS
+Flags = Fling_50
+Description = Diebeskuss schadet dem Ziel und füllt die KP des Anwenders um 75 % des verursachten Schadens auf.
+#-------------------------------
+[TM46]
+Name = TM46
+NamePlural = TM46s
+Pocket = 4
+Price = 3000
+FieldUse = TM
+Move = THIEF
+Flags = Fling_60
+Description = Raub verursacht Schaden und stiehlt das Item des Zieles, falls dieses eins hält.
+#-------------------------------
+[TM47]
+Name = TM47
+NamePlural = TM47s
+Pocket = 4
+Price = 3000
+FieldUse = TM
+Move = STEELWING
+Flags = Fling_70
+Description = Fügt Schaden zu und erhöht mit 10% Chance die Verteidigung des Anwenders um 1 Stufe.
+#-------------------------------
+[TM48]
+Name = TM48
+NamePlural = TM48s
+Pocket = 4
+Price = 12000
+FieldUse = TM
+Move = HURRICANE
+Flags = Fling_110
+Description = Schädigt den Gegner und verwirrt ihn mit einer Chance von 30%, wenn er keinen Delegator besitzt.
+#-------------------------------
+[TM49]
+Name = TM49
+NamePlural = TM49s
+Pocket = 4
+Price = 8000
+FieldUse = TM
+Move = LEECHLIFE
+Flags = Fling_80
+Description = Schadet dem Ziel und füllt die KP des Anwenders um 50 % des verursachten Schadens auf.
+#-------------------------------
+[TM50]
+Name = TM50
+NamePlural = TM50s
+Pocket = 4
+Price = 12000
+FieldUse = TM
+Move = OVERHEAT
+Flags = Fling_130
+Description = Schädigt das Ziel und senkt den Spezial-Angriff des Anwenders um zwei Stufen.
+#-------------------------------
+[TM51]
+Name = TM51
+NamePlural = TM51s
+Pocket = 4
+Price = 1500
+FieldUse = TM
+Move = ROOST
+Flags = Fling_10
+Description = Heilt 50 % der Max-KP des Anwenders; verliert bis Rundenende den Flug-Typ.
+#-------------------------------
+[TM52]
+Name = TM52
+NamePlural = TM52s
+Pocket = 4
+Price = 12000
+FieldUse = TM
+Move = FOCUSBLAST
+Flags = Fling_120
+Description = Schadet dem Ziel und senkt mit einer Wahrscheinlichkeit von 10 % dessen Spezial-Verteidigung.
+#-------------------------------
+[TM53]
+Name = TM53
+NamePlural = TM53s
+Pocket = 4
+Price = 10000
+FieldUse = TM
+Move = ENERGYBALL
+Flags = Fling_90
+Description = Energieball schädigt das Ziel und senkt mit einer Wahrscheinlichkeit von 10 % dessen Spezial-Verteidigung.
+#-------------------------------
+[TM54]
+Name = TM54
+NamePlural = TM54s
 Pocket = 4
 Price = 10000
 FieldUse = TM
 Move = GRASSYGLIDE
 Flags = Fling_55
-Description = Grasrutsche schädigt das Ziel und besitzt, bei aktivem Grasfeld, solange es beim Einsatz den Boden berührt, eine erhöhte Priorität von +1. 
+Description = Grasrutsche schädigt das Ziel und besitzt, bei aktivem Grasfeld, solange es beim Einsatz den Boden berührt, eine erhöhte Priorität von +1.
 #-------------------------------
-[TM195]
-Name = TM195
-NamePlural = TM195s
-Pocket = 4
-Price = 8000
-FieldUse = TM
-Move = BURNINGJEALOUSY
-Flags = Fling_70
-Description = Fügt allen Gegnern Schaden und denen, die in dieser Runde Statuswerterhöhungen erhalten haben, Verbrennungen zu.
-#-------------------------------
-[TM196]
-Name = TM196
-NamePlural = TM196s
-Pocket = 4
-Price = 5000
-FieldUse = TM
-Move = FLIPTURN
-Flags = Fling_60
-Description = Rollwende fügt Schaden zu und wechselt danach den Anwender aus.
-#-------------------------------
-[TM197]
-Name = TM197
-NamePlural = TM197s
-Pocket = 4
-Price = 5000
-FieldUse = TM
-Move = DUALWINGBEAT
-Flags = Fling_40
-Description = Diese Attacke fügt dem Ziel zweimal in einer Runde Schaden zu.
-#-------------------------------
-[TM198]
-Name = TM198
-NamePlural = TM198s
-Pocket = 4
-Price = 14000
-FieldUse = TM
-Move = POLTERGEIST
-Flags = Fling_110
-Description = Trägt das Ziel kein Item, schlägt die Attacke fehl. Das Item wird, ähnlich wie bei Schnüffler, mitgeteilt. 
-#-------------------------------
-[TM199]
-Name = TM199
-NamePlural = TM199s
-Pocket = 4
-Price = 5000
-FieldUse = TM
-Move = LASHOUT
-Flags = Fling_75
-Description = Die Stärke der Attacke verdoppelt sich, wenn im selben Zug noch vor dem Einsatz der Attacke ein Statuswert des Anwenders reduziert wurde. 
-#-------------------------------
-[TM200]
-Name = TM200
-NamePlural = TM200s
-Pocket = 4
-Price = 10000
-FieldUse = TM
-Move = SCALESHOT
-Flags = Fling_25
-Description = Die Attacke fügt 2 bis 5 mal hintereinander Schaden zu. Die Initiative wird um eine Stufe erhöht und die Verteidigung um eine Stufe gesenkt. 
-#-------------------------------
-[TM201]
-Name = TM201
-NamePlural = TM201s
-Pocket = 4
-Price = 14000
-FieldUse = TM
-Move = MISTYEXPLOSION
-Flags = Fling_100
-Description = Nebelexplosion schadet allen Pokémon in der Umgebung und besiegt den Anwender. Stärke wird bei aktivem Nebelfeld um 50% erhöht.
-#-------------------------------
-[TM202]
-Name = TM202
-NamePlural = TM202s
-Pocket = 4
-Price = 3000
-FieldUse = TM
-Move = PAINSPLIT
-Flags = Fling_10
-Description = Die KP des Anwenders und des Ziels werden addiert und anschließend auf beide verteilt.
-#-------------------------------
-[TM203]
-Name = TM203
-NamePlural = TM203s
-Pocket = 4
-Price = 400
-FieldUse = TM
-Move = PSYCHUP
-Flags = Fling_10
-Description = Beim Einsatz von Psycho-Plus werden die (positiven wie negativen) Veränderungen der Statuswerte des Zieles übernommen.
-#-------------------------------
-[TM204]
-Name = TM204
-NamePlural = TM204s
-Pocket = 4
-Price = 10000
-FieldUse = TM
-Move = DOUBLEEDGE
-Flags = Fling_120
-Description = Risikotackle verursacht bei einem Treffer Schaden, der Anwender erleidet 33 % des angerichteten Schadens als Rückstoßschaden.
-#-------------------------------
-[TM205]
-Name = TM205
-NamePlural = TM205s
-Pocket = 4
-Price = 5000
-FieldUse = TM
-Move = ENDEAVOR
-Flags = Fling_10
-Description = Durch Einsatz von Notsituation werden die KP des Ziels mit den KP des Anwenders gleichgesetzt. 
-#-------------------------------
-[TM206]
-Name = TM206
-NamePlural = TM206s
-Pocket = 4
-Price = 5000
-FieldUse = TM
-Move = PETALBLIZZARD
-Flags = Fling_90
-Description = Fügt allen Pokémon in der Nähe des Anwenders Schaden zu. 
-#-------------------------------
-[TM207]
-Name = TM207
-NamePlural = TM207s
-Pocket = 4
-Price = 3000
-FieldUse = TM
-Move = TEMPERFLARE
-Flags = Fling_75
-Description = Falls in der vorherigen Runde die Attacke verfehlte, fehlschlug oder keine Wirkung auf das Ziel hatte, verdoppelt sich die Stärke.
-#-------------------------------
-[TM208]
-Name = TM208
-NamePlural = TM208s
-Pocket = 4
-Price = 800
-FieldUse = TM
-Move = WHIRLPOOL
-Flags = Fling_35
-Description = Dem Ziel werden 1/8 seiner maximalen KP in den nächsten 5 Runden abgezogen, zusätzlich zu dem Schaden beim Einsatz der Attacke.
-#-------------------------------
-[TM209]
-Name = TM209
-NamePlural = TM209s
-Pocket = 4
-Price = 10000
-FieldUse = TM
-Move = MUDDYWATER
-Flags = Fling_90
-Description = Lehmbrühe schädigt den Gegner und senkt mit einer Wahrscheinlichkeit von 30 % dessen Genauigkeit um eine Stufe. 
-#-------------------------------
-[TM210]
-Name = TM210
-NamePlural = TM210s
-Pocket = 4
-Price = 5000
-FieldUse = TM
-Move = SUPERCELLSLAM
-Flags = Fling_100
-Description = Geht die Attacke daneben, erhält der Anwender die Hälfte seiner maximalen KP als Rückstoßschaden.
-#-------------------------------
-[TM211]
-Name = TM211
-NamePlural = TM211s
-Pocket = 4
-Price = 800
-FieldUse = TM
-Move = ELECTROWEB
-Flags = Fling_55
-Description = Diese Attacke verursacht Schaden und senkt die Initiative des Gegners um 1 Stufe. 
-#-------------------------------
-[TM212]
-Name = TM212
-NamePlural = TM212s
-Pocket = 4
-Price = 8000
-FieldUse = TM
-Move = TRIPLEAXEL
-Flags = Fling_20
-Description = Dreifach-Axel verursacht bis zu dreimal in einer Runde Schaden.
-#-------------------------------
-[TM213]
-Name = TM213
-NamePlural = TM213s
-Pocket = 4
-Price = 800
-FieldUse = TM
-Move = COACHING
-Flags = Fling_10
-Description = Diese Attacke erhöht den Angriff und die Verteidigung der Mitstreiter, der Anwender ausgenommen, um eine Stufe. 
-#-------------------------------
-[TM214]
-Name = TM214
-NamePlural = TM214s
-Pocket = 4
-Price = 10000
-FieldUse = TM
-Move = SLUDGEWAVE
-Flags = Fling_95
-Description = Schädigt den Gegner und hat eine Chance von 10 %, den Gegner zu vergiften.
-#-------------------------------
-[TM215]
-Name = TM215
-NamePlural = TM215s
-Pocket = 4
-Price = 10000
-FieldUse = TM
-Move = SCORCHINGSANDS
-Flags = Fling_70
-Description = Fügt dem Gegner mit einer Wahrscheinlichkeit von 30 % Verbrennungen zu.
-#-------------------------------
-[TM216]
-Name = TM216
-NamePlural = TM216s
-Pocket = 4
-Price = 400
-FieldUse = TM
-Move = FEATHERDANCE
-Flags = Fling_10
-Description = Senkt den Angriff des Ziels um 2 Stufen. 
-#-------------------------------
-[TM217]
-Name = TM217
-NamePlural = TM217s
-Pocket = 4
-Price = 5000
-FieldUse = TM
-Move = FUTURESIGHT
-Flags = Fling_120
-Description = Der Angriff erfolgt 2 Runden nachdem die Attacke eingesetzt wurde. In den Runden dazwischen können andere Attacken eingesetzt werden.
-#-------------------------------
-[TM218]
-Name = TM218
-NamePlural = TM218s
+[TM55]
+Name = TM55
+NamePlural = TM55s
 Pocket = 4
 Price = 10000
 FieldUse = TM
@@ -5826,99 +4197,499 @@ Move = EXPANDINGFORCE
 Flags = Fling_80
 Description = Flächenmacht verursacht Schaden, welcher bei aktivem Psychofeld zusätzlich um 50 % verstärkt wird.
 #-------------------------------
-[TM219]
-Name = TM219
-NamePlural = TM219s
-Pocket = 4
-Price = 3000
-FieldUse = TM
-Move = SKITTERSMACK
-Flags = Fling_70
-Description = Diese Attacke fügt Schaden zu und senkt den Spezial-Angriff des Ziels um eine Stufe. 
-#-------------------------------
-[TM220]
-Name = TM220
-NamePlural = TM220s
-Pocket = 4
-Price = 15000
-FieldUse = TM
-Move = METEORBEAM
-Flags = Fling_120
-Description = In der ersten Runde erhöht der Anwender seinen Spezial-Angriff um eine Stufe und in der zweiten Runde greift er an.
-#-------------------------------
-[TM221]
-Name = TM221
-NamePlural = TM221s
+[TM56]
+Name = TM56
+NamePlural = TM56s
 Pocket = 4
 Price = 5000
 FieldUse = TM
-Move = THROATCHOP
-Flags = Fling_80
-Description = Schädigt das Ziel und bewirkt, dass dieses für zwei Runden keine Lärm-Attacken einsetzen kann. 
+Move = AIRSLASH
+Flags = Fling_75
+Description = Luftschnitt schädigt den Gegner und lässt ihn mit einer Wahrscheinlichkeit von 30 % zurückschrecken.
 #-------------------------------
-[TM222]
-Name = TM222
-NamePlural = TM222s
+[TM57]
+Name = TM57
+NamePlural = TM57s
 Pocket = 4
 Price = 3000
 FieldUse = TM
-Move = BREAKINGSWIPE
-Flags = Fling_60
-Description = Die Attacke fügt den Gegnern Schaden zu und senkt den Angriffs-Wert aller getroffenen Pokémon um eine Stufe. 
+Move = TEMPERFLARE
+Flags = Fling_75
+Description = Falls in der vorherigen Runde die Attacke verfehlte, fehlschlug oder keine Wirkung auf das Ziel hatte, verdoppelt sich die Stärke.
 #-------------------------------
-[TM223]
-Name = TM223
-NamePlural = TM223s
+[TM58]
+Name = TM58
+NamePlural = TM58s
+Pocket = 4
+Price = 3000
+FieldUse = TM
+Move = RISINGVOLTAGE
+Flags = Fling_70
+Description = Kraft wird bei aktivem Elektrofeld verdoppelt.
+#-------------------------------
+[TM59]
+Name = TM59
+NamePlural = TM59s
+Pocket = 4
+Price = 8000
+FieldUse = TM
+Move = DRAGONPULSE
+Flags = Fling_85
+Description = Drachenpuls schadet ohne weitere Effekte.
+#-------------------------------
+[TM60]
+Name = TM60
+NamePlural = TM60s
+Pocket = 4
+Price = 8000
+FieldUse = TM
+Move = DRAINPUNCH
+Flags = Fling_75
+Description = Die KP des Anwenders werden um die Hälfte des verursachten Schadens aufgefüllt.
+#-------------------------------
+[TM61]
+Name = TM61
+NamePlural = TM61s
+Pocket = 4
+Price = 3000
+FieldUse = TM
+Move = WILLOWISP
+Flags = Fling_10
+Description = Das Ziel wird verbrannt.
+#-------------------------------
+[TM62]
+Name = TM62
+NamePlural = TM62s
+Pocket = 4
+Price = 12000
+FieldUse = TM
+Move = IRONTAIL
+Flags = Fling_100
+Description = Fügt Schaden zu und senkt mit 30% Chance die Verteidigung des Ziels um 1 Stufe.
+#-------------------------------
+[TM63]
+Name = TM63
+NamePlural = TM63s
+Pocket = 4
+Price = 3000
+FieldUse = TM
+Move = VENOSHOCK
+Flags = Fling_65
+Description = Ist der Gegner bereits vergiftet, hat diese Attacke die doppelte Stärke.
+#-------------------------------
+[TM64]
+Name = TM64
+NamePlural = TM64s
+Pocket = 4
+Price = 14000
+FieldUse = TM
+Move = EXPLOSION
+Flags = Fling_250
+Description = Schädigt alle Pokémon in der Nähe; der Anwender wird besiegt.
+#-------------------------------
+[TM65]
+Name = TM65
+NamePlural = TM65s
+Pocket = 4
+Price = 3000
+FieldUse = TM
+Move = SHADOWCLAW
+Flags = Fling_70
+Description = Dunkelklaue schädigt das Ziel und besitzt eine erhöhte Volltrefferquote.
+#-------------------------------
+[TM66]
+Name = TM66
+NamePlural = TM66s
+Pocket = 4
+Price = 14000
+FieldUse = TM
+Move = STEELBEAM
+Flags = Fling_140
+Description = Der Anwender verliert bei Einsatz der Attacke 50 % seiner maximalen KP.
+#-------------------------------
+[TM67]
+Name = TM67
+NamePlural = TM67s
+Pocket = 4
+Price = 14000
+FieldUse = TM
+Move = POLTERGEIST
+Flags = Fling_110
+Description = Trägt das Ziel kein Item, schlägt die Attacke fehl. Das Item wird, ähnlich wie bei Schnüffler, mitgeteilt.
+#-------------------------------
+[TM68]
+Name = TM68
+NamePlural = TM68s
 Pocket = 4
 Price = 800
 FieldUse = TM
-Move = METALSOUND
-Flags = Fling_10
-Description = Die Spezial-Verteidigung des angegriffenen Pokémon wird um zwei Stufen reduziert. 
+Move = DUALCHOP
+Flags = Fling_40
+Description = Diese Attacke fügt dem Ziel zweimal in einer Runde Schaden zu.
 #-------------------------------
-[TM224]
-Name = TM224
-NamePlural = TM224s
-Pocket = 4
-Price = 400
-FieldUse = TM
-Move = CURSE
-Flags = Fling_10
-Description = Die Initiative des Anwenders wird um eine Stufe gesenkt, dafür steigen dessen Angriff und Verteidigung um je eine Stufe. 
-#-------------------------------
-[TM225]
-Name = TM225
-NamePlural = TM225s
+[TM69]
+Name = TM69
+NamePlural = TM69s
 Pocket = 4
 Price = 5000
 FieldUse = TM
-Move = HARDPRESS
-Flags = Fling_10
-Description = Die Stärke ist abhängig vom Verhältnis der aktuellen KP zu den maximalen KP des Gegners.
+Move = STOMPINGTANTRUM
+Flags = Fling_75
+Description = Falls in der vorherigen Runde die Attacke verfehlte, fehlschlug oder keine Wirkung auf das Ziel hatte, verdoppelt sich die Stärke dieser Attacke.
 #-------------------------------
-[TM226]
-Name = TM226
-NamePlural = TM226s
+[TM70]
+Name = TM70
+NamePlural = TM70s
 Pocket = 4
-Price = 1500
+Price = 8000
 FieldUse = TM
-Move = DRAGONCHEER
-Flags = Fling_10
-Description = Drachenschrei erhöht die Volltrefferquote der Mitstreiter, bei Drachen-Pokémon um 2 Stufen.
+Move = TRIPLEAXEL
+Flags = Fling_20
+Description = Dreifach-Axel verursacht bis zu dreimal in einer Runde Schaden.
 #-------------------------------
-[TM227]
-Name = TM227
-NamePlural = TM227s
+[TM71]
+Name = TM71
+NamePlural = TM71s
+Pocket = 4
+Price = 12000
+FieldUse = TM
+Move = STONEEDGE
+Flags = Fling_100
+Description = Schädigt das Ziel und besitzt eine erhöhte Volltrefferquote.
+#-------------------------------
+[TM72]
+Name = TM72
+NamePlural = TM72s
+Pocket = 4
+Price = 12000
+FieldUse = TM
+Move = DRAGONRUSH
+Flags = Fling_100
+Description = Lässt den Gegner mit einer Chance von 20% zurückschrecken.
+#-------------------------------
+[TM73]
+Name = TM73
+NamePlural = TM73s
+Pocket = 4
+Price = 400
+FieldUse = TM
+Move = THUNDERWAVE
+Flags = Fling_10
+Description = Das Ziel wird bei Erfolg paralysiert.
+#-------------------------------
+[TM74]
+Name = TM74
+NamePlural = TM74s
+Pocket = 4
+Price = 10000
+FieldUse = TM
+Move = GYROBALL
+Flags = Fling_10
+Description = Sie ist stärker, je langsamer der Anwender im Vergleich zum Ziel ist.
+#-------------------------------
+[TM75]
+Name = TM75
+NamePlural = TM75s
+Pocket = 4
+Price = 14000
+FieldUse = TM
+Move = KNOCKOFF
+Flags = Fling_65
+Description = Trägt das getroffene Pokémon ein Item, wird die Stärke um 50 % erhöht und das getragene Item des Ziels wird entfernt.
+#-------------------------------
+[TM76]
+Name = TM76
+NamePlural = TM76s
+Pocket = 4
+Price = 10000
+FieldUse = TM
+Move = EARTHPOWER
+Flags = Fling_90
+Description = Schädigt das Ziel und senkt mit einer Wahrscheinlichkeit von 10 % dessen Spezial-Verteidigung um eine Stufe.
+#-------------------------------
+[TM77]
+Name = TM77
+NamePlural = TM77s
+Pocket = 4
+Price = 5000
+FieldUse = TM
+Move = THUNDERPUNCH
+Flags = Fling_75
+Description = Donnerschlag verursacht Schaden und paralysiert das Ziel mit einer Wahrscheinlichkeit von 10 %.
+#-------------------------------
+[TM78]
+Name = TM78
+NamePlural = TM78s
 Pocket = 4
 Price = 3000
 FieldUse = TM
-Move = ALLURINGVOICE
-Flags = Fling_80
-Description = Fügt Schaden zu. Wenn das Ziel in dieser Runde eine Statuswerterhöhung erhalten hat, wird es verwirrt. 
+Move = LOWSWEEP
+Flags = Fling_65
+Description = Schädigt das Ziel und verringert dessen Initiative um 1 Stufe.
 #-------------------------------
-[TM228]
-Name = TM228
-NamePlural = TM228s
+[TM79]
+Name = TM79
+NamePlural = TM79s
+Pocket = 4
+Price = 8000
+FieldUse = TM
+Move = DARKPULSE
+Flags = Fling_80
+Description = Finsteraura richtet Schaden an und bewirkt mit einer Wahrscheinlichkeit von 20%, dass das Ziel zurückschreckt.
+#-------------------------------
+[TM80]
+Name = TM80
+NamePlural = TM80s
+Pocket = 4
+Price = 5000
+FieldUse = TM
+Move = ROCKSLIDE
+Flags = Fling_75
+Description = Steinhagel schädigt den Gegner und lässt ihn mit einer Wahrscheinlichkeit von 30 % zurückschrecken.
+#-------------------------------
+[TM81]
+Name = TM81
+NamePlural = TM81s
+Pocket = 4
+Price = 5000
+FieldUse = TM
+Move = XSCISSOR
+Flags = Fling_80
+Description = Kreuzschere schädigt das Ziel ohne weitere Effekte.
+#-------------------------------
+[TM82]
+Name = TM82
+NamePlural = TM82s
+Pocket = 4
+Price = 400
+FieldUse = TM
+Move = SLEEPTALK
+Flags = Fling_10
+Description = Der Anwender benutzt, wenn es schläft, zufällig eine seiner übrigen Attacken.
+#-------------------------------
+[TM83]
+Name = TM83
+NamePlural = TM83s
+Pocket = 4
+Price = 8000
+FieldUse = TM
+Move = SCALD
+Flags = Fling_80
+Description = Siedewasser schädigt das Ziel und verbrennt es mit einer Wahrscheinlichkeit von 30 %.
+#-------------------------------
+[TM84]
+Name = TM84
+NamePlural = TM84s
+Pocket = 4
+Price = 5000
+FieldUse = TM
+Move = POISONJAB
+Flags = Fling_80
+Description = Der Gegner wird geschädigt und mit einer Chance von 30 % vergiftet.
+#-------------------------------
+[TM85]
+Name = TM85
+NamePlural = TM85s
+Pocket = 4
+Price = 5000
+FieldUse = TM
+Move = FUTURESIGHT
+Flags = Fling_120
+Description = Der Angriff erfolgt 2 Runden nachdem die Attacke eingesetzt wurde. In den Runden dazwischen können andere Attacken eingesetzt werden.
+#-------------------------------
+[TM86]
+Name = TM86
+NamePlural = TM86s
+Pocket = 4
+Price = 3000
+FieldUse = TM
+Move = GRASSKNOT
+Flags = Fling_10
+Description = Strauchler hat eine variable Stärke, welche sich nach dem Gewicht des Gegners richtet; je schwerer, desto stärker.
+#-------------------------------
+[TM87]
+Name = TM87
+NamePlural = TM87s
+Pocket = 4
+Price = 1500
+FieldUse = TM
+Move = AERIALACE
+Flags = Fling_60
+Description = Verursacht Schaden und trifft den Gegner auf jeden Fall.
+#-------------------------------
+[TM88]
+Name = TM88
+NamePlural = TM88s
+Pocket = 4
+Price = 3000
+FieldUse = TM
+Move = PLUCK
+Flags = Fling_60
+Description = Fügt Schaden zu und isst die Beere des Ziels, falls es eine hält.
+#-------------------------------
+[TM89]
+Name = TM89
+NamePlural = TM89s
+Pocket = 4
+Price = 3000
+FieldUse = TM
+Move = UTURN
+Flags = Fling_70
+Description = Kehrtwende fügt Schaden zu und wechselt danach den Anwender aus.
+#-------------------------------
+[TM90]
+Name = TM90
+NamePlural = TM90s
+Pocket = 4
+Price = 5000
+FieldUse = TM
+Move = GUNKSHOT
+Flags = Fling_120
+Description = Der Gegner wird geschädigt und mit einer Chance von 30 % vergiftet.
+#-------------------------------
+[TM91]
+Name = TM91
+NamePlural = TM91s
+Pocket = 4
+Price = 8000
+FieldUse = TM
+Move = FLASHCANNON
+Flags = Fling_80
+Description = Schädigt und senkt die Spezial-Verteidigung des Zieles mit einer Wahrscheinlichkeit von 10 %.
+#-------------------------------
+[TM92]
+Name = TM92
+NamePlural = TM92s
+Pocket = 4
+Price = 3000
+FieldUse = TM
+Move = VOLTSWITCH
+Flags = Fling_70
+Description = Voltwechsel fügt Schaden zu und wechselt danach den Anwender aus.
+#-------------------------------
+[TM93]
+Name = TM93
+NamePlural = TM93s
+Pocket = 4
+Price = 1500
+FieldUse = TM
+Move = DRAGONTAIL
+Flags = Fling_60
+Description = Drachenrute verursacht Schaden und besitzt eine verringerte Priorität.
+#-------------------------------
+[TM94]
+Name = TM94
+NamePlural = TM94s
+Pocket = 4
+Price = 10000
+FieldUse = TM
+Move = SCALESHOT
+Flags = Fling_25
+Description = Die Attacke fügt 2 bis 5 mal hintereinander Schaden zu. Die Initiative wird um eine Stufe erhöht und die Verteidigung um eine Stufe gesenkt.
+#-------------------------------
+[TM95]
+Name = TM95
+NamePlural = TM95s
+Pocket = 4
+Price = 1500
+FieldUse = TM
+Move = COSMICPOWER
+Flags = Fling_10
+Description = Erhöht Verteidigung und Sp. Verteidigung des Anwenders um je eine Stufe.
+#-------------------------------
+[TM96]
+Name = TM96
+NamePlural = TM96s
+Pocket = 4
+Price = 1500
+FieldUse = TM
+Move = BULLDOZE
+Flags = Fling_60
+Description = Fügt allen Zielen Schaden zu und senkt deren Initiative um 1 Stufe.
+#-------------------------------
+[TM97]
+Name = TM97
+NamePlural = TM97s
+Pocket = 4
+Price = 3000
+FieldUse = TM
+Move = FROSTBREATH
+Flags = Fling_60
+Description = Diese Attacke erzielt immer einen Volltreffer.
+#-------------------------------
+[TM98]
+Name = TM98
+NamePlural = TM98s
+Pocket = 4
+Price = 5000
+FieldUse = TM
+Move = FIREPUNCH
+Flags = Fling_75
+Description = Schädigt das Ziel und besitzt eine Chance von 10 % das Ziel zu verbrennen.
+#-------------------------------
+[TM99]
+Name = TM99
+NamePlural = TM99s
+Pocket = 4
+Price = 10000
+FieldUse = TM
+Move = WILDCHARGE
+Flags = Fling_90
+Description = Schädigt den Gegner, wobei der Anwender 25 % des erzeugten Schadens als Rückstoßschaden erleidet.
+#-------------------------------
+[TM100]
+Name = TM100
+NamePlural = TM100s
+Pocket = 4
+Price = 5000
+FieldUse = TM
+Move = DUALWINGBEAT
+Flags = Fling_40
+Description = Diese Attacke fügt dem Ziel zweimal in einer Runde Schaden zu.
+#-------------------------------
+[TM101]
+Name = TM101
+NamePlural = TM101s
+Pocket = 4
+Price = 5000
+FieldUse = TM
+Move = ICEPUNCH
+Flags = Fling_75
+Description = Schädigt das Ziel und lässt es besitzt eine Wahrscheinlichkeit von 10 %, das Ziel einzufrieren.
+#-------------------------------
+[TM102]
+Name = TM102
+NamePlural = TM102s
+Pocket = 4
+Price = 8000
+FieldUse = TM
+Move = DAZZLINGGLEAM
+Flags = Fling_80
+Description = Diese Attacke verursacht Schaden ohne zusätzliche Effekte.
+#-------------------------------
+[TM103]
+Name = TM103
+NamePlural = TM103s
+Pocket = 4
+Price = 10000
+FieldUse = TM
+Move = SLUDGEWAVE
+Flags = Fling_95
+Description = Schädigt den Gegner und hat eine Chance von 10 %, den Gegner zu vergiften.
+#-------------------------------
+[TM104]
+Name = TM104
+NamePlural = TM104s
+Pocket = 4
+Price = 5000
+FieldUse = TM
+Move = PSYSHOCK
+Flags = Fling_80
+Description = Der verursachte Schaden errechnet sich aus dem Spezial-Angriff des Anwenders und der Verteidigung des Ziels.
+#-------------------------------
+[TM105]
+Name = TM105
+NamePlural = TM105s
 Pocket = 4
 Price = 3000
 FieldUse = TM
@@ -5926,33 +4697,155 @@ Move = PSYCHICNOISE
 Flags = Fling_75
 Description = Psycholärm fügt Schaden zu und verursacht den Heilblockade-Status.
 #-------------------------------
-[TM229]
-Name = TM229
-NamePlural = TM229s
+[TM106]
+Name = TM106
+NamePlural = TM106s
 Pocket = 4
-Price = 1500
+Price = 3000
 FieldUse = TM
-Move = UPPERHAND
-Flags = Fling_65
-Description = Schnellkonter trifft nur dann das Ziel, wenn dieses eine physische oder spezielle Attacke mit einer Priorität von +1 bis +3 einsetzt.
+Move = ACROBATICS
+Flags = Fling_55
+Description = Die Basisstärke der Attacke wird verdoppelt, wenn der Anwender kein Item hält; mit getragenem Flugjuwel sogar verdreifacht.
 #-------------------------------
-[TM230]
-Name = TM230
-NamePlural = TM230s
+[TM107]
+Name = TM107
+NamePlural = TM107s
+Pocket = 4
+Price = 800
+FieldUse = TM
+Move = TERRAINPULSE
+Flags = Fling_50
+Description = Typ und Stärke dieser Attacke hängen vom aktuellen Terrain ab.
+#-------------------------------
+[TM108]
+Name = TM108
+NamePlural = TM108s
+Pocket = 4
+Price = 800
+FieldUse = TM
+Move = SNARL
+Flags = Fling_55
+Description = Verursacht Schaden und verringert den Spezial-Angriff des Gegners um eine Stufe und umgeht sogar den Delegator.
+#-------------------------------
+[TM109]
+Name = TM109
+NamePlural = TM109s
+Pocket = 4
+Price = 12000
+FieldUse = TM
+Move = SUPERPOWER
+Flags = Fling_120
+Description = Fügt hohen Schaden zu, senkt aber Angriff und Verteidigung des Anwenders um je 1 Stufe.
+#-------------------------------
+[TM110]
+Name = TM110
+NamePlural = TM110s
+Pocket = 4
+Price = 10000
+FieldUse = TM
+Move = SCORCHINGSANDS
+Flags = Fling_70
+Description = Fügt dem Gegner mit einer Wahrscheinlichkeit von 30 % Verbrennungen zu.
+#-------------------------------
+[TM111]
+Name = TM111
+NamePlural = TM111s
+Pocket = 4
+Price = 3000
+FieldUse = TM
+Move = VACUUMWAVE
+Flags = Fling_40
+Description = Die Attacke verursacht Schaden und besitzt eine erhöhte Priorität von +1.
+#-------------------------------
+[TM112]
+Name = TM112
+NamePlural = TM112s
+Pocket = 4
+Price = 14000
+FieldUse = TM
+Move = MISTYEXPLOSION
+Flags = Fling_100
+Description = Nebelexplosion schadet allen Pokémon in der Umgebung und besiegt den Anwender. Stärke wird bei aktivem Nebelfeld um 50% erhöht.
+#-------------------------------
+[TM113]
+Name = TM113
+NamePlural = TM113s
+Pocket = 4
+Price = 10000
+FieldUse = TM
+Move = PLAYROUGH
+Flags = Fling_90
+Description = Fügt Schaden zu und verringert mit einer Wahrscheinlichkeit von 10 % den Angriffswert des Gegners um eine Stufe.
+#-------------------------------
+[TM114]
+Name = TM114
+NamePlural = TM114s
+Pocket = 4
+Price = 8000
+FieldUse = TM
+Move = HEATCRASH
+Flags = Fling_10
+Description = Je schwerer der Anwender im Vergleich zum Ziel ist, desto mehr Schaden wird verursacht.
+#-------------------------------
+[TM115]
+Name = TM115
+NamePlural = TM115s
+Pocket = 4
+Price = 8000
+FieldUse = TM
+Move = BODYPRESS
+Flags = Fling_80
+Description = Die Attacke verwendet bei der Schadensberechnung die Verteidigung statt den Angriff des Anwenders.
+#-------------------------------
+[TM116]
+Name = TM116
+NamePlural = TM116s
 Pocket = 4
 Price = 5000
 FieldUse = TM
-Move = CUT
-Description = Zerschneider schadet dem Ziel ohne Zusatzeffekte. 
-#-------------------------------Map / Shop
-[TM231]
-Name = TM231
-NamePlural = TM231s
+Move = TRICKROOM
+Flags = Fling_10
+Description = Erzeugt einen Raum, der für fünf Runden lang Pokémon mit geringerer Initiative zuerst angreifen lässt.
+#-------------------------------
+[TM117]
+Name = TM117
+NamePlural = TM117s
 Pocket = 4
-Price = 5000
+Price = 12000
 FieldUse = TM
-Move = STRENGTH
-Description = Verursacht Schaden ohne Zusatzeffekte. 
+Move = BRAVEBIRD
+Flags = Fling_120
+Description = Bei Erfolg schädigt Sturzflug das Ziel; der Anwender erleidet selbst 33 % des zugefügten Schadens durch Rückstoß.
+#-------------------------------
+[TM118]
+Name = TM118
+NamePlural = TM118s
+Pocket = 4
+Price = 12000
+FieldUse = TM
+Move = STEELROLLER
+Flags = Fling_130
+Description = Schlägt fehl, falls kein Terrain aktiv ist.
+#-------------------------------
+[TM119]
+Name = TM119
+NamePlural = TM119s
+Pocket = 4
+Price = 14000
+FieldUse = TM
+Move = DRACOMETEOR
+Flags = Fling_130
+Description = Schädigt das Ziel und senkt den Spezial-Angriff des Anwenders um zwei Stufen.
+#-------------------------------
+[TM120]
+Name = TM120
+NamePlural = TM120s
+Pocket = 4
+Price = 8000
+FieldUse = TM
+Move = ICESPINNER
+Flags = Fling_80
+Description = Der Anwender greift den Gegner an und zerstört Feldeffekte.
 #-------------------------------Rezept / Shop
 [XATTACK]
 Name = X-Angriff
@@ -6594,6 +5487,24 @@ Price = 10000
 BPPrice = 50
 Flags = MegaStone,Fling_80
 Description = Dieser Stein ermöglicht Sumpex eine Mega-Entwicklung.
+#-------------------------------Einzigartig
+[TORTERRANITEX]
+Name = Chelterrarnit X
+NamePlural = Chelterrarnite X
+Pocket = 6
+Price = 10000
+BPPrice = 50
+Flags = MegaStone,Fling_80
+Description = Dieser Stein ermöglicht Chelterrar eine Mega-Entwicklung.
+#-------------------------------Einzigartig
+[TORTERRANITEY]
+Name = Chelterrarnit Y
+NamePlural = Chelterrarnite Y
+Pocket = 6
+Price = 10000
+BPPrice = 50
+Flags = MegaStone,Fling_80
+Description = Dieser Stein ermöglicht Chelterrar eine Mega-Entwicklung.
 #-------------------------------Einzigartig
 [GARDEVOIRITE]
 Name = Guardevoirnit

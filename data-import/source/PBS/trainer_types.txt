@@ -1627,7 +1627,7 @@ IntroBGM = XY 089 Trainers_ Eyes Meet (Furisode Girl)
 Name = Lehrerin
 Gender = Female
 BaseMoney = 32
-SkillLevel = 48
+SkillLevel = 100
 IntroBGM = XY 052 Trainers_ Eyes Meet (Maid)
 #-------------------------------
 [TEAM0DUO]

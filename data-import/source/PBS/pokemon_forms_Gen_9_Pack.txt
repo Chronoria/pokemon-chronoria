@@ -286,7 +286,7 @@ Generation = 9
 [FERALIGATR,3]
 FormName = Mega Impergator
 MegaStone = FERALIGITEY
-Types = WATER,ICE
+Types = ICE,DRAGON
 BaseStats = 85,160,89,78,125,93
 Abilities = SLUSHRUSH
 HiddenAbilities = SLUSHRUSH
