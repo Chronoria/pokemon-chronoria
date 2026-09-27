@@ -45,7 +45,7 @@ Description = Erhöht Angriff und senkt Geschwindigkeit, wenn es angegriffen wir
 #-------------------------------
 [SCARECROW]
 Name = Vogelscheuche
-Description = Erzeugt einen Ersatz (Delegator), wenn die KP unter der Hälfte liegen.
+Description = Erzeugt einen Ersatz (Delegator), wenn die LP unter der Hälfte liegen.
 #-------------------------------
 [PHANTOMTHIEF]
 Name = Phantomdieb
@@ -125,7 +125,7 @@ Description = Kehrt nach 5 Runden in die normale Form zurück.
 #-------------------------------
 [CONCUSSION]
 Name = Gehirnerschütterung
-Description = Explosion & Finale verursachen 75% Schaden, wenn bei vollem KP eingesetzt.
+Description = Explosion & Finale verursachen 75% Schaden, wenn bei vollem LP eingesetzt.
 #-------------------------------
 [BOULDERBARRIER]
 Name = Felsbarriere
@@ -133,7 +133,7 @@ Description = Nach erfolgreichem Schutz werden Gesteins-Attacken verstärkt.
 #-------------------------------
 [HESSAFE]
 Name = Cheater
-Description = Bei K.O. durch Rückstoß wird 50% der KP wiederhergestellt.
+Description = Bei K.O. durch Rückstoß wird 50% der LP wiederhergestellt.
 #-------------------------------
 [ARCANEMAGE]
 Name = Arkane Magie

@@ -61,7 +61,7 @@ TotalPP = 5
 Target = NearOther
 FunctionCode = RecoilHalfOfTotalHP
 Flags = CanProtect,CanMirrorMove
-Description = Der Anwender verliert bei Einsatz der Attacke 50 % seiner maximalen KP. 
+Description = Der Anwender verliert bei Einsatz der Attacke 50 % seiner maximalen LP. 
 #-------------------------------
 [MOUNTAINGALE]
 Name = Frostfallwind
@@ -358,7 +358,7 @@ TotalPP = 10
 Target = NearOther
 FunctionCode = HealUserByHalfOfDamageDone
 Flags = Contact,CanProtect,Slicing,CanMirrorMove
-Description = Schadet dem Ziel und füllt die KP des Anwenders um 50 % des verursachten Schadens auf.
+Description = Schadet dem Ziel und füllt die LP des Anwenders um 50 % des verursachten Schadens auf.
 #-------------------------------
 [BLAZINGTORQUE]
 Name = Hitzeturbo
@@ -725,7 +725,7 @@ TotalPP = 10
 Target = NearOther
 FunctionCode = FixedDamageHalfTargetHP
 Flags = CanProtect,CanMirrorMove,CannotMetronome
-Description = Greift den Gegner an und halbiert seine KP.
+Description = Greift den Gegner an und halbiert seine LP.
 #-------------------------------
 [SALTCURE]
 Name = Pökelsalz
@@ -1041,7 +1041,7 @@ TotalPP = 10
 Target = NearOther
 FunctionCode = PowerHigherWithTargetHP100PowerRange
 Flags = Contact,CanProtect,CanMirrorMove
-Description = Je höher die KP des Zieles, desto stärker die Attacke.
+Description = Je höher die LP des Zieles, desto stärker die Attacke.
 #-------------------------------
 [DRAGONCHEER]
 Name = Drachenschrei

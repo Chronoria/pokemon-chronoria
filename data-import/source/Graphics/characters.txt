@@ -535,12 +535,13 @@ COOLTRAINER_F
 COOLTRAINER_F2
 COOLTRAINER_F3
 COOLTRAINER_F4
-COOLTRAINER_F7
+COOLTRAINER_F5
+COOLTRAINER_F5trainer_
 COOLTRAINER_M
 COOLTRAINER_M2
 COOLTRAINER_M3
 COOLTRAINER_M4
-COOLTRAINER_M7
+COOLTRAINER_M5
 COPPERAJAH
 CORPHISH
 CORSOLA
@@ -2173,6 +2174,8 @@ Podest Orb
 Podest Orb Leer
 POIPOLE
 Poké-Center
+Pokécenter Channeira
+Pokécenter Ohrdoch
 POKEFAN_F
 POKEFAN_F2
 POKEFAN_F3
@@ -2180,7 +2183,7 @@ POKEFAN_M
 POKEFAN_M_2
 POKEFAN_M2
 POKEFAN_M3
-POKEFAN_M4
+POKEFAN_M4 - Kopie
 POKEKID
 POKEMANIAC
 Pokemon 01
@@ -2249,11 +2252,10 @@ PRINPLUP
 PRISMA
 PROBOPASS
 Professor
-PSYCHIC
 PSYCHIC_F
+PSYCHIC_F2
 PSYCHIC_M
 PSYCHIC_M2
-PSYCHIC_M3
 PSYDUCK_1
 PSYDUCK_1_female
 Puertas3
@@ -2435,6 +2437,7 @@ SCEPTILE_female
 Schligda
 SCHOOLKID_F
 SCHOOLKID_F2
+SCHOOLKID_F3
 SCHOOLKID_F4
 SCHOOLKID_M
 SCHOOLKID_M2
@@ -2742,6 +2745,7 @@ SWIMMER_F2
 SWIMMER_F3
 SWIMMER_F4
 SWIMMER_F5
+SWIMMER_F5_2
 Swimmer_F5_quellen
 Swimmer_F5_walking
 Swimmer_F5_walking_2
@@ -2851,87 +2855,24 @@ TOXICROAK
 TOXTRICITY
 TOXTRICITY_1
 trAceTrainer_F
+trAceTrainer_F3
 trAceTrainer_M
+trAceTrainer_M3
 Tragosso Sleep
-Trainer 20
-Trainer 21
-Trainer 22
-Trainer 23
-Trainer 24
-Trainer 25
-Trainer 26
-Trainer 27
-Trainer 28
-Trainer 29
-Trainer 30
-Trainer 31
-Trainer 32
-Trainer 33
-Trainer 34
-Trainer 35
-Trainer 36
-Trainer 37
-Trainer 38
-Trainer 39
-Trainer 40
-Trainer 41
-Trainer 42
-Trainer 43
-Trainer 44
-Trainer 45
-Trainer 46
-Trainer 47
-Trainer 48
-Trainer 49
-Trainer 50
-Trainer 51
-Trainer 52
-Trainer 53
-Trainer 54
-Trainer 55
-Trainer 56
-Trainer 57
-Trainer 58
-Trainer 59
-Trainer 60
-Trainer 61
-Trainer 62
-Trainer 63
-Trainer 64
-Trainer 65
-Trainer 66
-Trainer 67
-Trainer 68
-Trainer 69
-Trainer 70
-Trainer 71
-Trainer 72
-Trainer 73
-Trainer 74
-Trainer 75
-Trainer 76
-Trainer 77
-Trainer 78
-Trainer 79
-Trainer 80
-Trainer 81
-Trainer 82
-Trainer 83
-Trainer 84
-Trainer 85
-Trainer 86
-Trainer 87
-Trainer 88
-Trainer 89
-Trainer oder NPC
+trainer_ACETRAINER_F
+trainer_AceTrainer_F2
+trainer_ACETRAINER_M
+trainer_AceTrainer_M2
 trainer_ANCIENTPRIEST
 trainer_AROMALADY
 trainer_AROMALADY2
 trainer_AROMALADY3
+trainer_AROMALADY4
 trainer_ARTIST
 trainer_ARTIST2
 trainer_ARTIST3
 trainer_ARTIST4
+trainer_ARTIST5
 trainer_BACKERS_F
 trainer_BACKERS_F2
 trainer_BACKERS_M
@@ -2950,94 +2891,284 @@ trainer_BEAUTY3
 trainer_BEAUTY4
 trainer_BEAUTY5
 trainer_BEAUTY6
+trainer_BEAUTY7
 trainer_BIKER
 trainer_BIKER2
-trainer_BIKER3
-trainer_BIRDKEEPER
 trainer_BIRDKEEPER_F
 trainer_BIRDKEEPER_M
 trainer_BIRDKEEPER_M2
+trainer_BIRDKEEPER_M3
+trainer_BIRDKEEPER_M4
 trainer_BLACKBELT
+trainer_BLACKBELT2
+trainer_BLACKBELT3
+trainer_BLACKBELT4
+trainer_BLACKBELT5
+trainer_BOARDER
+trainer_BOARDER_F
 trainer_BUGCATCHER
+trainer_BUGCATCHER_F
+trainer_BUGCATCHER_F2
+trainer_BUGCATCHER_F3
+trainer_BUGCATCHER2
+trainer_BUGCATCHER3
+trainer_BUGCATCHER4
+trainer_BUGMANIAC
+trainer_BUGMANIAC_2
+trainer_BUGMANIAC3
 trainer_BURGLAR
+trainer_BURGLAR2
+trainer_BURGLAR3
+trainer_BUTLER
+trainer_CAMERAMAN
+trainer_CAMERAMAN2
+trainer_CAMERAMAN3
 trainer_CAMPER
-trainer_CHAMPION
-trainer_CHANNELER
+trainer_CAMPER_F
+trainer_CAMPER_F2
+trainer_CAMPER_M
+trainer_CEO
+trainer_CHEF
+trainer_CLOWN
+trainer_COLLECTOR3
+trainer_COOK
 trainer_COOLTRAINER_F
+trainer_COOLTRAINER_F2
+trainer_COOLTRAINER_F3
+trainer_COOLTRAINER_F4
+trainer_COOLTRAINER_F6
 trainer_COOLTRAINER_M
-trainer_CRUSHGIRL
-trainer_CUEBALL
-trainer_ELITEFOUR_Agatha
-trainer_ELITEFOUR_Bruno
-trainer_ELITEFOUR_Lance
-trainer_ELITEFOUR_Lorelei
-trainer_ENGINEER
+trainer_COOLTRAINER_M2
+trainer_COOLTRAINER_M3
+trainer_COOLTRAINER_M4
+trainer_COOLTRAINER_M5
+trainer_COOLTRAINER_M6
+trainer_COWGIRL
+trainer_CYCLIST_F
+trainer_CYCLIST_F2
+trainer_CYCLIST_M
+trainer_CYCLIST_M2
+trainer_DANCER
+trainer_DANCER_F
+trainer_DEPOTAGENT
+trainer_DIVER_M
+trainer_DOCTOR
+trainer_DOCTOR_F
+trainer_DOCTOR_M
+trainer_DOCTOR_M2
+trainer_DRAGONTAMER
+trainer_DRAGONTAMER2
+trainer_DRAGONTAMER3
+trainer_ELDER
+trainer_EXPERTF
+trainer_EXPERTM
+trainer_FAIRYTALEGIRL
+trainer_FIREBREATHER
+trainer_FIREFIGHTER
+trainer_FISHER
 trainer_FISHERMAN
+trainer_FISHERMAN2
+trainer_FISHERMAN3
+trainer_FISHERMAN4
+trainer_FISHERMAN5
+trainer_FURISODEGIRL
+trainer_FURISODEGIRL2
+trainer_FURISODEGIRL3
+trainer_FURISODEGIRL4
 trainer_GAMBLER
+trainer_GAMBLER2
+trainer_GARDENER
+trainer_GARDENER_F
 trainer_GENTLEMAN
+trainer_GENTLEMAN2
+trainer_GENTLEMAN3
+trainer_GENTLEMAN4
+trainer_GENTLEMAN5
+trainer_GENTLEMAN6
+trainer_GENTLEMAN7
+trainer_GIOVANNI
+trainer_GIOVANNI2
+trainer_HARLEQUIN
+trainer_HEXMANIAC
 trainer_HIKER
+trainer_HIKER2
+trainer_HIKER3
+trainer_HIKER4
+trainer_HIKER5
+trainer_INTERVIEWERS
+trainer_INTERVIEWERS1
+trainer_JANITOR
+trainer_JANITOR2
+trainer_JOGGER
+trainer_JOGGER1
 trainer_JUGGLER
-trainer_kikyo
+trainer_KIMONOGIRL
 trainer_LADY
+trainer_LADY2
+trainer_LADY3
+trainer_LADY4
+trainer_LADY5
 trainer_LASS
-trainer_LEADER_Blaine
-trainer_LEADER_Brock
-trainer_LEADER_Erika
-trainer_LEADER_Giovanni
+trainer_LASS1
+trainer_LASS2
+trainer_LASS3
+trainer_LASS4
 trainer_LEADER_Jil
 trainer_LEADER_Jil  ALT
-trainer_LEADER_Koga
-trainer_LEADER_Misty
-trainer_LEADER_Sabrina
-trainer_LEADER_Surge
+trainer_MAID
+trainer_MAID2
+trainer_MAID3
+trainer_MEDIUM
+trainer_MEDIUM2
 Trainer_Ninja
 Trainer_Ninja 1
 Trainer_Ninja 2
 Trainer_Ninja 3
 Trainer_Ninja 4
+trainer_NINJABOY
+trainer_NURSE
+trainer_NURSE2
 trainer_PAINTER
+trainer_PAINTER2
+trainer_PAINTER3
 trainer_PICNICKER
+trainer_PILOT
+trainer_POKEFAN_F
+trainer_POKEFAN_F2
+trainer_POKEFAN_F3
+trainer_POKEFAN_M
+trainer_POKEFAN_M2
+trainer_POKEFAN_M3
+trainer_POKEFAN_M4
+trainer_POKEKID
 trainer_POKEMANIAC
 trainer_POKEMONBREEDER
+trainer_POKEMONBREEDER_F
+trainer_POKEMONBREEDER_F2
+trainer_POKEMONBREEDER_F3
+trainer_POKEMONBREEDER_F4
+trainer_POKEMONBREEDER_M
+trainer_POKEMONBREEDER_M2
+trainer_POKEMONBREEDER_M3
+trainer_POKEMONBREEDER_M4
 trainer_POKEMONRANGER_F
+trainer_POKEMONRANGER_F2
+trainer_POKEMONRANGER_F3
+trainer_POKEMONRANGER_F4
 trainer_POKEMONRANGER_M
-trainer_POKEMONTRAINER_Brendan
-trainer_POKEMONTRAINER_Leaf
-trainer_POKEMONTRAINER_May
+trainer_POKEMONRANGER_M2
+trainer_POKEMONRANGER_M3
+trainer_POKEMONRANGER_M4
 trainer_POKEMONTRAINER_Red
 trainer_POKEMONTRAINER_Red_items1
 trainer_POKEMONTRAINER_Red_items2
-trainer_POKEMONTRAINER_Red1
 trainer_POKEMONTRAINER_RedSPIN
-trainer_PROFESSOR
+trainer_POLICEMAN
+trainer_POLICEMAN_KARL
+trainer_POLICEMAN2
+trainer_PRESCHOOLER_F
+trainer_PRESCHOOLER_F2
+trainer_PRESCHOOLER_M
+trainer_PRESCHOOLER_M2
 trainer_PSYCHIC_F
+trainer_PSYCHIC_F2
 trainer_PSYCHIC_M
-trainer_RIVAL1
-trainer_RIVAL2
-trainer_ROCKER
-trainer_ROCKETBOSS
+trainer_PSYCHIC_M2
+trainer_PSYCHIC_M3
+trainer_PUNKF
+trainer_PUNKF2
+trainer_PUNKM
+trainer_PUNKM2
+trainer_RANCHER
+trainer_REPORTER
+trainer_RICHBOY
+trainer_RICHBOY2
+trainer_RICHBOY3
+trainer_RICHBOY4
+trainer_RISINGSTAR_F
+trainer_RISINGSTAR_M
 trainer_RUINMANIAC
+trainer_RUINMANIAC2
 trainer_SAILOR
-trainer_Salya
-trainer_SCIENTIST
-trainer_Seneca
-trainer_SHINYHUNTER
+trainer_SAILOR2
+trainer_SAILOR3
+trainer_SCHOOLKID_F
+trainer_SCHOOLKID_F2
+trainer_SCHOOLKID_F3
+trainer_SCHOOLKID_F4
+trainer_SCHOOLKID_M
+trainer_SCHOOLKID_M2
+trainer_SCHOOLKID_M3
+trainer_SCHOOLKID_M4
+trainer_SCIENTIST_F
+trainer_SCIENTIST_F2
+trainer_SCIENTIST_F3
+trainer_SCIENTIST_M
+trainer_SCIENTIST_M2
+trainer_SCIENTIST_M3
+trainer_SCIENTIST_M4
+trainer_SCIENTIST_M5
 trainer_SUPERNERD
+trainer_SUPERNERD2
 trainer_SWIMMER_F
+trainer_SWIMMER_F2
+trainer_SWIMMER_F3
+trainer_SWIMMER_F4
+trainer_SWIMMER_F5
+trainer_SWIMMER_F5_2
+trainer_SWIMMER_F5_walking
+trainer_SWIMMER_F5_walking2
+trainer_SWIMMER_F6
 trainer_SWIMMER_M
+trainer_SWIMMER_M2
+trainer_SWIMMER_M3
+trainer_SWIMMER_M4
+trainer_SWIMMER_M4_2_walking
+trainer_SWIMMER_M4_3_walking
+trainer_SWIMMER_M4_sonnenbrand_walking
+trainer_SWIMMER_M4_walking
+trainer_SWIMMER_M5_walking
 trainer_SWIMMER2_F
 trainer_SWIMMER2_M
-trainer_TAMER
-trainer_TEAMROCKET_F
-trainer_TEAMROCKET_M
+trainer_TEACHER
+trainer_TEACHER2
+trainer_TEENAGERF
+trainer_TEENAGERM
+trainer_THIEF
+trainer_TOURISTF
+trainer_TOURISTF2
+trainer_TOURISTM
 trainer_TUBER_F
+trainer_TUBER_F2
 trainer_TUBER_M
-trainer_TUBER2_F
-trainer_TUBER2_M
+trainer_TUBER_M2
 trainer_TWINS
-trainer_YOUNGCOUPLE
-trainer_YOUNGCOUPLE_2
+trainer_TWINS2
+trainer_TWINS3
+trainer_VETERAN_F
+trainer_VETERAN_F2
+trainer_VETERAN_M
+trainer_VETERAN_M2
+trainer_VETERAN_M3
+trainer_WAITER
+trainer_WAITER2
+trainer_WAITER3
+trainer_WAITRESS
+trainer_WAITRESS2
+trainer_WAITRESS3
+trainer_WORKER
+trainer_WORKER_F
+trainer_WORKER_F2
+trainer_WORKER2
+trainer_WORKER3
+trainer_WORKER4
+trainer_WORKER5
+trainer_WORKER6
 trainer_YOUNGSTER
+trainer_YOUNGSTER2
+trainer_YOUNGSTER3
+trainer_YOUNGSTER4
+trainer_YOUNGSTER5
 TRANQUILL
 TRAPINCH
 TRAPINCH_female

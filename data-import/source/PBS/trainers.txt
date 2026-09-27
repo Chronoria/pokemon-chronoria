@@ -3195,32 +3195,128 @@ Pokemon = DRAGALGE,60
     Gender = male
     Ball = NETBALL
 #-------------------------------Route 18
+[SWIMMER_M4,Friedrich]
+LoseText = Uff... Jetzt ist mir die Sonne wohl doch zu sehr zu Kopf gestiegen.
+Items = MEGARING
+Pokemon = SEADRA,62
+    Moves = SMOKESCREEN,DRAGONPULSE,WHIRLPOOL,MUDDYWATER
+    AbilityIndex = 0
+    Gender = female
+    Ball = NETBALL
+Pokemon = SLOWBRO_1,63
+    Moves = TRICKROOM,SHELLSIDEARM,PSYCHIC,YAWN
+    AbilityIndex = 0
+    Gender = male
+    Ball = GREATBALL
+Pokemon = DRAGALGE,60
+    Moves = WATERPULSE,TOXIC,SHADOWBALL,DRACOMETEOR
+    AbilityIndex = 0
+    Item = DRAGALGITE
+    Gender = male
+    Ball = NETBALL
+#-------------------------------Route 18
 [SWIMMER_F4,Meghan]
 LoseText = Du weißt, was du tust.
-Pokemon = AZUMARILL,66
-    Moves = AQUARING,MUDDYWATER,BOUNCE,HELPINGHAND
+Pokemon = LUDICOLO,63
+    Moves = ENERGYBALL,LEECHSEED,FIREPUNCH,WHIRLPOOL
     AbilityIndex = 1
-    Item = BIGROOT
+    Gender = male
+    Ball = POKEBALL
+Pokemon = DHELMISE,65
+    Moves = POWERWHIP,PHANTOMFORCE,ANCHORSHOT,WHIRLPOOL
+    AbilityIndex = 0
+    Gender = male
+    Ball = FASTBALL
+#------------------------------Route 18
+[SWIMMER_M3,Malte]
+LoseText = Ich war nur außer Atem.
+Pokemon = SLOWPOKE,62
+    Moves = HEADBUTT,CONFUSION,WATERGUN,DISABLE
+    AbilityIndex = 0
+    Nature = JOLLY
+    IV = 25,25,25,25,25,25
+    Ball = POKEBALL
+Pokemon = SHELLDER,66
+    Moves = AURORABEAM,CLAMP,SUPERSONIC,LEER
+    AbilityIndex = 0
+    Nature = JOLLY
+    IV = 25,25,25,25,25,25
+    Ball = LUREBALL
+Pokemon = KINGLER,63
+    Moves = GUILLOTINE,STOMP,MUDSHOT,BUBBLE
+    AbilityIndex = 0
+    Nature = IMPISH
+    IV = 25,25,25,25,25,25
+    Ball = NETBALL
+Pokemon = STARMIE,62
+    Moves = BUBBLEBEAM,SWIFT,RECOVER,RAPIDSPIN
+    AbilityIndex = 1
+    Nature = NAIVE
+    IV = 25,25,25,25,25,25
+    Ball = LUREBALL
+Pokemon = GOLDUCK,64
+    Moves = CONFUSION,SCRATCH,SCREECH,DISABLE
+    AbilityIndex = 2
+    Nature = RELAXED
+    IV = 25,25,25,25,25,25
+    Ball = LUXURYBALL
+#-------------------------------Route 18
+[SWIMMER_F2,Hannah]
+LoseText = Blubb, blubb... Ich schätze, ich bin zuerst untergegangen!
+Pokemon = VANILLUXE,63
+    Moves = BLIZZARD,ACIDARMOR,SUBSTITUTE,EXPLOSION
+    AbilityIndex = 2
     Gender = female
     Ball = POKEBALL
-Pokemon = PALAFIN,64
-    Moves = FLIPTURN,WAVECRASH,MIST,DIVE
+Pokemon = AVALUGG,64
+    Moves = BODYSLAM,ICICLECRASH,CRUNCH,RECOVER
     AbilityIndex = 0
     Gender = female
-    Ball = LUREBALL
-Pokemon = SWANNA,65
-    Moves = BRAVEBIRD,TAILWIND,RAINDANCE,WHIRLPOOL
-    AbilityIndex = 0
-    Item = BINDINGBAND
+    Ball = GREATBALL
+Pokemon = CRABOMINABLE,65
+    Moves = ICEPUNCH,SLAM,REVERSAL,DYNAMICPUNCH
+    AbilityIndex = 1
     Gender = female
     Ball = LUCKBALL
-Pokemon = GOLDUCK_1,65
-    Moves = PSYSHOCK,HELPINGHAND,FUTURESIGHT,MUDDYWATER
+#-------------------------------Route 18
+[BUGMANIAC_2,Gideon]
+LoseText = Verdammt… Du hast mein Netz zerrissen!
+Items = MEGARING
+Pokemon = GALVANTULA,61
+    Moves = BUGBUZZ,THUNDERWAVE,THUNDER,STICKYWEB
     AbilityIndex = 0
-	Form = 1
-    Item = BINDINGBAND
+	Item = BRIGHTPOWDER
+    Gender = male
+    Ball = NETBALL
+Pokemon = HERACROSS,62
+    Moves = MEGAHORN,CLOSECOMBAT,SWORDSDANCE,AERIALACE
+    AbilityIndex = 0
+	Item = BRIGHTPOWDER
     Gender = female
-    Ball = POKEBALL
+    Ball = NETBALL
+Pokemon = SCIZOR,63
+    Moves = XSCISSOR,IRONHEAD,SWORDSDANCE,BULLETPUNCH
+    AbilityIndex = 0
+    Gender = male
+    Ball = NETBALL
+Pokemon = GOLISOPOD,61
+    Moves = FIRSTIMPRESSION,LIQUIDATION,GUNKSHOT,MUDSHOT
+    AbilityIndex = 0
+	Item = BRIGHTPOWDER
+    Gender = male
+    Ball = NETBALL
+Pokemon = CENTISKORCH,63
+    Moves = LUNGE,FIRELASH,WILLOWISP,SMOKESCREEN
+    AbilityIndex = 2
+	Item = BRIGHTPOWDER
+    Gender = male
+    Ball = NETBALL
+Pokemon = PINSIR,65
+    Moves = CLOSECOMBAT,LUNGE,SWORDSDANCE,AERIALACE
+    AbilityIndex = 0
+	Item = PINSIRITE
+    Gender = male
+    Ball = NETBALL
 #-------------------------------Noxburgh
 [LEADER_Arena7,Eira] #schnee permanent
 Items = HYPERPOTION,HYPERPOTION,MEGARING
@@ -3377,6 +3473,88 @@ Pokemon = BAXCALIBUR,67
     Item = BAXCALIBRITE
     Gender = male
     Ball = GREATBALL
+#-------------------------------Pfad der Drachen
+[ELDER,Ibraham]
+LoseText = Wer nie fällt, lernt nie, wie man wieder aufsteht.
+Items = MEGARING
+Pokemon = HOUNDSTONE,64
+    Moves = LASTRESPECTS,PHANTOMFORCE,DIG,PLAYROUGH
+    AbilityIndex = 1
+    Gender = female
+    Ball = ULTRABALL
+Pokemon = ANNIHILAPE,68
+    Moves = SHADOWPUNCH,RAGEFIST,CLOSECOMBAT,FINALGAMBIT
+    AbilityIndex = 1
+    Gender = male
+    Ball = ULTRABALL
+Pokemon = DRAMPA,70
+    Moves = HYPERVOICE,FLY,DRAGONPULSE,FLAMETHROWER
+    AbilityIndex = 0
+	Item = DRAMPANITE
+    Gender = male
+    Ball = ULTRABALL
+#-------------------------------Pfad der Drachen
+[FISHERMAN2,Fiete]
+LoseText = Tja, diesmal bist du mir wohl vom Haken gegangen...
+Items = MEGARING
+Pokemon = VELUZA,65
+    Moves = LIQUIDATION,PSYCHOCUT,CRUNCH,SLASH
+    AbilityIndex = 0
+    Gender = female
+    Ball = LUREBALL
+Pokemon = PELIPPER,64
+    Moves = HURRICANE,MIST,TAILWIND,SOAK
+    AbilityIndex = 1
+	Item = DAMPROCK
+    Gender = male
+    Ball = LUREBALL
+Pokemon = SHARPEDO,67
+    Moves = BOUNCE,CRUNCH,LIQUIDATION,SLASH
+    AbilityIndex = 0
+	Item = SHARPEDONITE
+    Gender = male
+    Ball = LUREBALL
+#-------------------------------Pfad der Drachen
+[DRAGONTAMER,Orion]
+LoseText = Unglaublich... Dein Wille brennt heißer als das reinste Drachenfeuer!
+Items = MEGARING
+Pokemon = DRAKLOAK,65
+    Moves = DRAGONPULSE,PHANTOMFORCE,UTURN,DRAGONDANCE
+    AbilityIndex = 1
+    Gender = male
+    Ball = ULTRABALL
+Pokemon = DRAKLOAK,65
+    Moves = DRAGONPULSE,PHANTOMFORCE,UTURN,DRAGONDANCE
+    AbilityIndex = 1
+    Gender = male
+    Ball = ULTRABALL
+Pokemon = DRAGAPULT,68
+    Moves = DRAGONDARTS,PHANTOMFORCE,UTURN,DRAGONDANCE
+    AbilityIndex = 1
+    Gender = male
+    Ball = ULTRABALL
+#-------------------------------Pfad der Drachen
+[DRAGONTAMER,Pyros]
+LoseText = Du hast mit dem Herzen eines wahren Drachen gekämpft.
+Items = MEGARING
+Pokemon = TORKOAL,64
+    Moves = ERUPTION,SOLARBEAM,DOUBLEEDGE,BODYPRESS
+    AbilityIndex = 1
+	Item = HEATROCK
+    Gender = female
+    Ball = MAGMARBALL
+Pokemon = TURTONATOR,66
+    Moves = SHELLTRAP,DRAGONPULSE,WILLOWISP,SOLARBEAM
+    AbilityIndex = 0
+    Gender = male
+    Ball = HEAVYBALL
+Pokemon = CHARIZARD,69
+    Moves = FLAREBLITZ,DRAGONBREATH,DRAGONCLAW,FIREPUNCH
+    AbilityIndex = 0
+	Item = CHARIZARDITEX
+    Gender = male
+    Ball = VALUEBALL
+    IV = 25,25,25,25,25,25
 #-------------------------------Route 20
 [SWIMMER_M2,Jason]
 LoseText = Du hast aus meinen Pokémon Suppe gemacht.
@@ -3427,6 +3605,69 @@ Pokemon = SLOWKING,68
     Item = ICYROCK
     Gender = male
     Ball = POKEBALL
+#------------------------------Route 20
+[SWIMMER_M3,Reef]
+LoseText = War das gruselig.
+Pokemon = STARMIE,70
+    Moves = LIGHTSCREEN,REFLECT,HARDEN,RECOVER
+    AbilityIndex = 0
+    Item = LIGHTCLAY
+    Gender = female
+    Ball = LUREBALL
+Pokemon = QUAGSIRE,70
+    Moves = RAINDANCE,MUDDYWATER,SURF,MIST
+    AbilityIndex = 1
+    Item = DAMPROCK
+    Gender = male
+    Ball = GREATBALL
+#-------------------------------Route 20
+[SWIMMER_F5,Gundula]
+LoseText = Anscheinend weißt du bereits, wie man mit Drachen-Pokémon umgeht.
+Pokemon = LUVDISC,68
+    Moves = LOVELYKISS,DAZZLINGGLEAM,HYDROPUMP,ICEBEAM
+    AbilityIndex = 2
+    Item = FOCUSSASH
+    Nature = TIMID
+    IV = 31,31,31,31,31,31
+    EV = 6,0,0,252,252,0
+    Ball = POKEBALL
+Pokemon = ALOMOMOLA,67
+    Moves = SAFEGUARD,WHIRLPOOL,HELPINGHAND,HEALINGWISH
+    AbilityIndex = 0
+    Nature = HASTY
+    IV = 10,10,10,10,10,10
+    Ball = LUREBALL
+Pokemon = GOREBYSS,69
+    Moves = RAINDANCE,HYDROPUMP,DRAININGKISS,PSYCHIC
+    AbilityIndex = 0
+    Gender = female
+    Ball = NETBALL
+Pokemon = KINGDRA,71
+    Moves = DRAGONDANCE,WAVECRASH,DRAGONPULSE,GIGAIMPACT
+    AbilityIndex = 0
+    Shiny = true
+    Gender = female
+    Ball = NETBALL
+	#-------------------------------Route 20
+[DRAGONTAMER3,Tiamat]
+LoseText = Unglaublich... Du hast die Urgewalt meiner Drachen gebändigt!
+Pokemon = MILOTIC,67
+    Moves = DRAGONPULSE,SURF,DRAININGKISS,RECOVER
+    AbilityIndex = 1
+    Gender = male
+    Ball = LUXURYBALL
+Pokemon = FLYGON,68
+    Moves = DRAGONPULSE,BRAVEBIRD,SILVERWIND,EARTHPOWER
+    AbilityIndex = 1
+	Item = WIDELENS
+    Gender = female
+    Ball = NETBALL
+Pokemon = GYARADOS,70
+    Moves = JAWLOCK,PSYCHICFANGS,POISONFANG,FISHIOUSREND
+    AbilityIndex = 1
+	Form = 1
+    Gender = female
+    Ball = NETBALL
 #-------------------------------
 [BLACKBELT,Björn]
 LoseText = ...Ein Treffer. Mehr hat's nicht gebraucht. Respekt.

@@ -928,7 +928,7 @@ Description = Verhindert das Senken der Statuswerte durch Gegner.
 #-------------------------------
 [SHADOWSHIELD]
 Name = Phantomschutz
-Description = Verringert den erlittenen Schaden bei vollen KP.
+Description = Verringert den erlittenen Schaden bei vollen LP.
 #-------------------------------
 [PRISMARMOR]
 Name = Prismarüstung
