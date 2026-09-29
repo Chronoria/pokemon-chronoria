@@ -1080,7 +1080,7 @@ RaidRanks = 3,4
 
 [SPEAROW]
 
-Name = Habitak
+Name = Spearow
 
 Types = NORMAL,FLYING
 
@@ -1137,7 +1137,7 @@ RaidRanks = 1,2
 
 [FEAROW]
 
-Name = Ibitak
+Name = Fearow
 
 Types = NORMAL,FLYING
 
@@ -5063,7 +5063,7 @@ RaidRanks = 3,4,5
 
 [GASTLY]
 
-Name = Nebulak
+Name = Gastly
 
 Types = GHOST,POISON
 
@@ -5715,7 +5715,7 @@ RaidRanks = 3,4,5
 
 [CUBONE]
 
-Name = Tragosso
+Name = Cubone
 
 Types = GROUND
 
@@ -5772,7 +5772,7 @@ RaidRanks = 1,2
 
 [MAROWAK]
 
-Name = Knogga
+Name = Marowak
 
 Types = GROUND
 
@@ -7132,7 +7132,7 @@ RaidRanks = 4,5
 
 [MAGIKARP]
 
-Name = Karpador
+Name = Magikarp
 
 Types = WATER
 
@@ -7185,7 +7185,7 @@ RaidRanks = 1,2
 
 [GYARADOS]
 
-Name = Garados
+Name = Gyarados
 
 Types = WATER,FLYING
 
@@ -9188,7 +9188,7 @@ RaidRanks = 2,3
 
 [SPINARAK]
 
-Name = Webarak
+Name = Spinarak
 
 Types = BUG,POISON
 
@@ -42595,7 +42595,7 @@ Evolutions = TYPENULL,Level,45
 
 [TYPENULL]
 
-Name = Typ:Null
+Name = Type: Null
 
 Types = OMNI
 

@@ -43085,8 +43085,14 @@ Move Animation
 Trigger: Action Button
 
 List of Event Commands:
-@>Text: Schau dir diese Wände an.
-@>Text: Sie erzählen eine Millionen Jahre alte Geschichte.
+@>Text: Weißt du, weshalb ich so entspannt durch Höhlen 
+ :    : wandere?
+@>Text: Mein erstes Pokémon im Team hat die Fähigkeit 
+ :    : Duftnote.
+@>Text: Die meisten wilden Pokémon machen deshalb einen 
+ :    : großen Bogen um uns.
+@>Text: Es soll auch noch mehr Fähigkeiten mit diesem Effekt 
+ :    : geben.
 @>
 
 #------------------------------------------------------------------------------
@@ -43720,6 +43726,37 @@ Move Animation
 Trigger: Action Button
 
 List of Event Commands:
+@>
+
+#------------------------------------------------------------------------------
+Event ID: 020
+Event Name: EV020
+(X,Y): (027,008)
+
+Page #1
+Conditions
+None
+
+Graphic: HIKER3
+
+Autonomous Movement
+Type: Random
+Speed: 3: Slow
+Freq: 3: Low
+Options Enabled
+Move Animation
+Trigger: Action Button
+
+List of Event Commands:
+@>Text: Mein Pokémon hat die Fähigkeit Erleuchtung.
+@>Text: Ich dachte ich mache mir damit das Leben leicht in 
+ :    : dunklen Höhlen.
+@>Text: Ich sehe zwar mehr aber, werde auch schneller von 
+ :    : wilden Pokémon gesehen.
+@>Text: Ich kann kaum zwei Schritte laufen, ohne, dass mich 
+ :    : ein wildes Pokémon anspringt.
+@>Text: Ich hätte lieber ein Pokémon mit Bedroher mitnehmen 
+ :    : sollen.
 @>
 
 #------------------------------------------------------------------------------
@@ -55607,6 +55644,34 @@ List of Event Commands:
 @>
 
 #------------------------------------------------------------------------------
+Event ID: 093
+Event Name: EV093
+(X,Y): (029,013)
+
+Page #1
+Conditions
+None
+
+Graphic: NPCMan
+
+Autonomous Movement
+Type: Fixed
+Speed: 3: Slow
+Freq: 3: Low
+Options Enabled
+Move Animation
+Trigger: Action Button
+
+List of Event Commands:
+@>Text: Du möchtest, dass ein wildes Pokémon ein 
+ :    : bestimmtes Wesen hat?
+@>Text: Wenn dein Pokémon die Fähigkeit Synchro besitzt, 
+ :    : hat das wilde Pokémon das gleiche Wesen, wie dein 
+ :    : Pokémon!
+@>Text: Das klappt garantiert!
+@>
+
+#------------------------------------------------------------------------------
 
 #==============================================================================
 Map ID: 093
@@ -56794,6 +56859,8 @@ List of Event Commands:
   @>Text: \xn[Wolfgang]Das ist für dich.
   @>Script: pbReceiveItem(:TM06)
   @>Wait: 20 frame(s)
+  @>Text: \xn[Wolfgang]Toxin trifft immer, wenn der Anwender 
+   :    : ein Gift-Pokémon ist.
   @>Text: \xn[Wolfgang]Wo du schonmal hier bist, ich könnte 
    :    : wieder deine Hilfe gebrauchen.
   @>Text: \xn[Wolfgang]Skunkapuh ist für seinen 
@@ -69617,7 +69684,7 @@ List of Event Commands:
  @>
 : Else
  @>Text: Die Stadt ist echt groß.
- @>Text: Ich verlaufe mich manchmal in der Stadt.
+ @>Text: Ich verlaufe mich manchmal.
  @>
 : Branch End
 @>
@@ -73567,6 +73634,86 @@ Trigger: Autorun
 List of Event Commands:
 @>Control Self Switch: A =OFF
 @>Script: setTempSwitchOn("A")
+@>
+
+#------------------------------------------------------------------------------
+Event ID: 138
+Event Name: EV138
+(X,Y): (028,028)
+
+Page #1
+Conditions
+None
+
+Graphic: trainer_THIEF
+
+Autonomous Movement
+Type: Fixed
+Speed: 3: Slow
+Freq: 3: Low
+Options Enabled
+Move Animation
+Trigger: Action Button
+
+List of Event Commands:
+@>Text: Hey, pssst!
+@>Text: Ein kleiner Geheimtipp von mir.
+@>Text: Kauf dir keinen Honig, spare das Geld.
+@>Text: Such dir lieber ein Pokémon mit der Fähigkeit 
+ :    : Honigmaul.
+@>Text: Je höher das Level, desto fleißiger sammelt es Honig 
+ :    : für dich.
+@>Text: Probier es doch mal aus!
+@>Script: pkmn = Pokemon.new(:CUTIEFLY, 10)
+:       : pkmn.ability_index = 0
+:       : pbAddPokemon(pkmn)
+@>Change Screen Color Tone: (-255,-255,-255,0), @20
+@>Wait: 20 frame(s)
+@>Control Self Switch: A =ON
+@>Change Screen Color Tone: (0,0,0,0), @20
+@>Wait: 20 frame(s)
+@>
+
+Page #2
+Conditions
+Self Switch A is ON
+
+Autonomous Movement
+Type: Fixed
+Speed: 3: Slow
+Freq: 3: Low
+Options Enabled
+Move Animation
+Trigger: Action Button
+
+List of Event Commands:
+@>
+
+#------------------------------------------------------------------------------
+Event ID: 139
+Event Name: EV139
+(X,Y): (039,014)
+
+Page #1
+Conditions
+None
+
+Graphic: NPC_Mann 21
+
+Autonomous Movement
+Type: Random
+Speed: 3: Slow
+Freq: 3: Low
+Options Enabled
+Move Animation
+Trigger: Action Button
+
+List of Event Commands:
+@>Text: Mir ist etwas aufgefallen.
+@>Text: Wenn zwei Pokémon derselben Art in der Pension 
+ :    : sind, bringen sie sich manchmal gegenseitig Attacken 
+ :    : bei.
+@>Text: Verblüffend.
 @>
 
 #------------------------------------------------------------------------------
@@ -92243,6 +92390,53 @@ List of Event Commands:
 @>
 
 #------------------------------------------------------------------------------
+Event ID: 019
+Event Name: EV019
+(X,Y): (020,012)
+
+Page #1
+Conditions
+None
+
+Graphic: NPC_Mann 3
+
+Autonomous Movement
+Type: Random
+Speed: 3: Slow
+Freq: 3: Low
+Options Enabled
+Move Animation
+Trigger: Action Button
+
+List of Event Commands:
+@>Text: Viele glauben, der Düsterball funktioniert nur nachts.
+@>Text: In Höhlen ist es aber immer dunkel.
+@>Text: Hier ist er zu jeder Tageszeit so stark wie nachts.
+@>Script: pbReceiveItem(:DUSKBALL)
+@>Control Self Switch: A =ON
+@>
+
+Page #2
+Conditions
+Self Switch A is ON
+
+Graphic: NPC_Mann 3
+
+Autonomous Movement
+Type: Random
+Speed: 3: Slow
+Freq: 3: Low
+Options Enabled
+Move Animation
+Trigger: Action Button
+
+List of Event Commands:
+@>Text: Viele glauben, der Düsterball funktioniert nur nachts.
+@>Text: In Höhlen ist es aber immer dunkel.
+@>Text: Hier ist er zu jeder Tageszeit so stark wie nachts.
+@>
+
+#------------------------------------------------------------------------------
 
 #==============================================================================
 Map ID: 143
@@ -102379,8 +102573,9 @@ Options Enabled
 Trigger: Action Button
 
 List of Event Commands:
-@>Text: Wollte ich schaukeln?
-@>Text: Oder war ich schon schaukeln?
+@>Text: Edelmut ist eine wundervolle Fähigkeit.
+@>Text: Alle Zusatzeffekte treten doppelt ein.
+@>Text: Verbrennung, Vergiftung, einfach doppelt so oft.
 @>
 
 #------------------------------------------------------------------------------
@@ -114897,6 +115092,33 @@ List of Event Commands:
 @>
 
 #------------------------------------------------------------------------------
+Event ID: 098
+Event Name: EV098
+(X,Y): (049,019)
+
+Page #1
+Conditions
+None
+
+Graphic: trainer_AceTrainer_F2
+
+Autonomous Movement
+Type: Fixed
+Speed: 3: Slow
+Freq: 3: Low
+Options Enabled
+Move Animation
+Trigger: Action Button
+
+List of Event Commands:
+@>Text: Manchmal wackelt der Pokéball nur ein einziges Mal.
+@>Text: Klick, gefangen.
+@>Text: Je mehr verschiedene Arten du gefangen hast, desto 
+ :    : häufiger kommt das vor.
+@>Text: Erfahrung zahlt sich eben aus.
+@>
+
+#------------------------------------------------------------------------------
 
 #==============================================================================
 Map ID: 162
@@ -119787,6 +120009,7 @@ List of Event Commands:
    :       : - Set the party index of the Pokémon chosen by the 
    :       : player to use in the contest.
    :       : - Start the contest with 20 Sport Balls.
+  @>Control Switches: [0406: BugContest] = ON
   @>Script: contest = pbBugContestState
   :       : contest.pbSetJudgingPoint(166, 12, 9)
   :       : contest.pbSetReception(
@@ -120675,6 +120898,7 @@ Move Animation
 Trigger: Autorun
 
 List of Event Commands:
+@>Control Switches: [0406: BugContest] = OFF
 @>Text: \xn[Prüfungsbeauftragter]Herzlich Willkommen zur 
  :    : Siegerehrung des heutigen Käfersammler-Turniers!
 @>Conditional Branch: Script: $bag.has?(:TM89)
@@ -120762,6 +120986,12 @@ List of Event Commands:
   :    : dem zweiten Platz gewinnt 
   :    : \PN einen Ewigstein!
  @>Script: pbReceiveItem(:EVERSTONE)
+ @>Text: \xn[Prüfungsbeauftragter]Der Ewigstein verhindert 
+  :    : nicht nur Entwicklungen.
+ @>Text: \xn[Prüfungsbeauftragter]Gib ihn einem Pokémon in 
+  :    : der Pension.
+ @>Text: \xn[Prüfungsbeauftragter]Damit hat der Nachwuchs 
+  :    : garantiert dasselbe Wesen.
  @>Control Variables: [0036: Turnier mind. dritter] = 1
  @>Conditional Branch: Script: $bag.has?(:TM89)
   @>
@@ -121258,7 +121488,7 @@ List of Event Commands:
 #------------------------------------------------------------------------------
 Event ID: 003
 Event Name: EV003
-(X,Y): (012,029)
+(X,Y): (012,030)
 
 Page #1
 Conditions
@@ -121279,7 +121509,7 @@ List of Event Commands:
 #------------------------------------------------------------------------------
 Event ID: 004
 Event Name: EV004
-(X,Y): (013,029)
+(X,Y): (013,030)
 
 Page #1
 Conditions
@@ -121300,7 +121530,7 @@ List of Event Commands:
 #------------------------------------------------------------------------------
 Event ID: 005
 Event Name: EV005
-(X,Y): (014,029)
+(X,Y): (014,030)
 
 Page #1
 Conditions
@@ -121321,7 +121551,7 @@ List of Event Commands:
 #------------------------------------------------------------------------------
 Event ID: 006
 Event Name: EV006
-(X,Y): (015,029)
+(X,Y): (015,030)
 
 Page #1
 Conditions
@@ -121342,7 +121572,7 @@ List of Event Commands:
 #------------------------------------------------------------------------------
 Event ID: 007
 Event Name: EV007
-(X,Y): (012,027)
+(X,Y): (012,026)
 
 Page #1
 Conditions
@@ -121363,7 +121593,7 @@ List of Event Commands:
 #------------------------------------------------------------------------------
 Event ID: 008
 Event Name: EV008
-(X,Y): (013,027)
+(X,Y): (013,026)
 
 Page #1
 Conditions
@@ -121384,7 +121614,7 @@ List of Event Commands:
 #------------------------------------------------------------------------------
 Event ID: 009
 Event Name: EV009
-(X,Y): (014,027)
+(X,Y): (014,026)
 
 Page #1
 Conditions
@@ -121405,7 +121635,7 @@ List of Event Commands:
 #------------------------------------------------------------------------------
 Event ID: 010
 Event Name: EV010
-(X,Y): (015,027)
+(X,Y): (015,026)
 
 Page #1
 Conditions
@@ -121468,7 +121698,7 @@ List of Event Commands:
  @>Set Move Route: Player
                    (Ignore If Can't Move)
   :              : $>Move Down
- @>Wait for Move's Completion
+ @>Wait: 8 frame(s)
  @>Script: Followers.put_followers_on_player
  @>
 : Branch End
@@ -121598,30 +121828,14 @@ List of Event Commands:
 
 #------------------------------------------------------------------------------
 Event ID: 016
-Event Name: StrengthBoulder
-(X,Y): (013,019)
+Event Name: EV016
+(X,Y): (009,019)
 
 Page #1
 Conditions
 None
 
-Graphic: Object boulder
-
-Autonomous Movement
-Type: Fixed
-Speed: 2: Slower
-Freq: 3: Low
-Options Enabled
-Move Animation
-Trigger: Player Touch
-
-List of Event Commands:
-@>Script: pbPushThisBoulder
-@>
-
-Page #2
-Conditions
-Switch 0058: Boulder down hole ice cave is ON
+Graphic: NPC_Frau 7
 
 Autonomous Movement
 Type: Fixed
@@ -121632,6 +121846,9 @@ Move Animation
 Trigger: Action Button
 
 List of Event Commands:
+@>Text: Iiih, Spinnen sind mein Endgegner.
+@>Set Move Route: This event
+ :              : $>Turn Up
 @>
 
 #------------------------------------------------------------------------------
@@ -121712,6 +121929,140 @@ Move Animation
 Trigger: Action Button
 
 List of Event Commands:
+@>
+
+#------------------------------------------------------------------------------
+Event ID: 019
+Event Name: EV019
+(X,Y): (014,039)
+
+Page #1
+Conditions
+None
+
+Graphic: NPC_Mädchen 2
+
+Autonomous Movement
+Type: Random
+Speed: 3: Slow
+Freq: 3: Low
+Options Enabled
+Move Animation
+Trigger: Action Button
+
+List of Event Commands:
+@>Text: Ich hab's geschafft!
+@>Text: Ich habe mein allererstes Pokémon bei dieser Prüfung 
+ :    : gefangen.
+@>Text: Das ist alles so aufregend, auch wenn es nur ein 
+ :    : Raupy ist.
+@>
+
+#------------------------------------------------------------------------------
+Event ID: 020
+Event Name: EV020
+(X,Y): (006,068)
+
+Page #1
+Conditions
+None
+
+Graphic: apricot-pokemon-33
+
+Autonomous Movement
+Type: Fixed
+Speed: 1: Slowest
+Freq: 6: Highest
+Options Enabled
+Move Animation
+Stop Animation
+Direction Fix
+Trigger: Action Button
+
+List of Event Commands:
+@>Set Move Route: This event
+ :              : $>Graphic: "apricot-pokemon-33', 0, 4, 2
+@>Script: apricorns = [
+:       :   :REDAPRICORN,
+:       :   :YELLOWAPRICORN,
+:       :   :BLUEAPRICORN,
+:       :   :GREENAPRICORN,
+:       :   :PINKAPRICORN,
+:       :   :WHITEAPRICORN,
+:       :   :BLACKAPRICORN
+:       : ]
+@>Script: random_item = apricorns.sample
+:       : pbItemBall(random_item)
+@>Script: pbSetEventTime
+@>
+
+Page #2
+Conditions
+Self Switch A is ON
+
+Graphic: apricot-pokemon-33
+
+Autonomous Movement
+Type: Fixed
+Speed: 1: Slowest
+Freq: 5: Higher
+Options Enabled
+Move Animation
+Stop Animation
+Direction Fix
+Trigger: Action Button
+
+List of Event Commands:
+@>Text: Versuch es doch morgen nochmal.
+@>
+
+Page #3
+Conditions
+Switch 0023: s:cooledDown?(86400) is ON
+Self Switch A is ON
+
+Graphic: apricot-pokemon-33
+
+Autonomous Movement
+Type: Fixed
+Speed: 1: Slowest
+Freq: 5: Higher
+Options Enabled
+Move Animation
+Stop Animation
+Direction Fix
+Trigger: Autorun
+
+List of Event Commands:
+@>Control Self Switch: A =OFF
+@>Script: setTempSwitchOn("A")
+@>
+
+#------------------------------------------------------------------------------
+Event ID: 021
+Event Name: EV021
+(X,Y): (028,025)
+
+Page #1
+Conditions
+None
+
+Graphic: trainer_POKEFAN_F3
+
+Autonomous Movement
+Type: Fixed
+Speed: 3: Slow
+Freq: 3: Low
+Options Enabled
+Move Animation
+Trigger: Action Button
+
+List of Event Commands:
+@>Text: Ich fange meine Käfer-Pokémon ausschließlich mit 
+ :    : Netzbällen.
+@>Text: Bei Käfer- und Wasser-Pokémon sind sie 
+ :    : dreieinhalbmal so gut.
+@>Text: Selbst ein Hyperball kann da nicht mithalten.
 @>
 
 #------------------------------------------------------------------------------
@@ -122016,6 +122367,58 @@ List of Event Commands:
 @>
 
 #------------------------------------------------------------------------------
+Event ID: 003
+Event Name: Cave entrance
+(X,Y): (040,005)
+
+Page #1
+Conditions
+None
+
+Autonomous Movement
+Type: Fixed
+Speed: 3: Slow
+Freq: 3: Low
+Options Enabled
+Move Animation
+Trigger: Player Touch
+
+List of Event Commands:
+@>Play SE: 'Door exit', 100, 100
+@>Change Screen Color Tone: (255,255,255,255), @6
+@>Wait: 8 frame(s)
+@>Script: pbCaveEntrance
+@>Transfer Player:[675: Webarak-Nest], (006,038), Up, No Fade
+@>Change Screen Color Tone: (0,0,0,0), @6
+@>Wait: 8 frame(s)
+@>
+
+Page #2
+Conditions
+Switch 0022: s:tsOff?("A") is ON
+
+Autonomous Movement
+Type: Fixed
+Speed: 3: Slow
+Freq: 3: Low
+Options Enabled
+Move Animation
+Trigger: Autorun
+
+List of Event Commands:
+@>Conditional Branch: Script: get_self.onEvent?
+ @>Script: Followers.hide_followers
+ @>Set Move Route: Player
+                   (Ignore If Can't Move)
+  :              : $>Move Down
+ @>Wait: 8 frame(s)
+ @>Script: Followers.put_followers_on_player
+ @>
+: Branch End
+@>Script: setTempSwitchOn("A")
+@>
+
+#------------------------------------------------------------------------------
 
 #==============================================================================
 Map ID: 170
@@ -122067,6 +122470,37 @@ List of Event Commands:
 @>
 
 #------------------------------------------------------------------------------
+Event ID: 002
+Event Name: EV002
+(X,Y): (023,007)
+
+Page #1
+Conditions
+None
+
+Graphic: trainer_VETERAN_F
+
+Autonomous Movement
+Type: Fixed
+Speed: 3: Slow
+Freq: 3: Low
+Options Enabled
+Move Animation
+Trigger: Action Button
+
+List of Event Commands:
+@>Text: Heute ist mein Tag, ich kann es spüren.
+@>Text: Ich habe ein Bibor gefangen.
+@>Text: Level 17, kaum ein Kratzer und es schaut richtig 
+ :    : böse.
+@>Text: Jedes Mal werde ich Zweiter, diesmal nicht.
+@>Text: ...
+@>Text: Es sei denn, du hast was Besseres...
+@>Text: hast du was Besseres?
+@>Show Animation: This event, [Thinking bubble]
+@>
+
+#------------------------------------------------------------------------------
 
 #==============================================================================
 Map ID: 171
@@ -122115,6 +122549,61 @@ Move Animation
 Trigger: Action Button
 
 List of Event Commands:
+@>
+
+#------------------------------------------------------------------------------
+Event ID: 002
+Event Name: EV002
+(X,Y): (008,006)
+
+Page #1
+Conditions
+None
+
+Graphic: trainer_TOURISTM
+
+Autonomous Movement
+Type: Fixed
+Speed: 3: Slow
+Freq: 3: Low
+Options Enabled
+Move Animation
+Trigger: Action Button
+
+List of Event Commands:
+@>Text: Ich sammle Waumpel.
+@>Text: Man weiß nie, ob es ein Papinella oder ein Pudox 
+ :    : wird.
+@>Text: Das ist wie ein Überraschungsei.
+@>Text: Alle meine Waumpel wurden bisher zu Pudox.
+@>Text: Das Leben ist kein Wunschkonzert.
+@>
+
+#------------------------------------------------------------------------------
+Event ID: 003
+Event Name: EV003
+(X,Y): (029,006)
+
+Page #1
+Conditions
+None
+
+Graphic: trainer_WORKER_F2
+
+Autonomous Movement
+Type: Fixed
+Speed: 3: Slow
+Freq: 3: Low
+Options Enabled
+Move Animation
+Trigger: Action Button
+
+List of Event Commands:
+@>Text: Wusstest du, dass Vivillon in den verschiedenen 
+ :    : Teilen des Geländes andere Flügel hat?
+@>Text: Angeblich soll es auch eines mit Pokéball-Muster 
+ :    : geben.
+@>Text: Das hat sich aber bestimmt nur jemand ausgedacht.
 @>
 
 #------------------------------------------------------------------------------
@@ -122502,6 +122991,7 @@ List of Event Commands:
  @>Control Self Switch: A =ON
  @>
 : Else
+ @>Exit Event Processing
  @>
 : Branch End
 @>
@@ -122642,6 +123132,44 @@ List of Event Commands:
 @>
 
 #------------------------------------------------------------------------------
+Event ID: 018
+Event Name: StrengthBoulder
+(X,Y): (013,016)
+
+Page #1
+Conditions
+None
+
+Graphic: Object boulder
+
+Autonomous Movement
+Type: Fixed
+Speed: 2: Slower
+Freq: 3: Low
+Options Enabled
+Move Animation
+Trigger: Player Touch
+
+List of Event Commands:
+@>Script: pbPushThisBoulder
+@>
+
+Page #2
+Conditions
+Switch 0058: Boulder down hole ice cave is ON
+
+Autonomous Movement
+Type: Fixed
+Speed: 3: Slow
+Freq: 3: Low
+Options Enabled
+Move Animation
+Trigger: Action Button
+
+List of Event Commands:
+@>
+
+#------------------------------------------------------------------------------
 Event ID: 019
 Event Name: Cave entrance
 (X,Y): (030,006)
@@ -122663,7 +123191,7 @@ List of Event Commands:
 @>Change Screen Color Tone: (255,255,255,255), @6
 @>Wait: 8 frame(s)
 @>Script: pbCaveEntrance
-@>Transfer Player:[675: MAP675], (032,021), Up, No Fade
+@>Transfer Player:[675: Webarak-Nest], (032,021), Up, No Fade
 @>Change Screen Color Tone: (0,0,0,0), @6
 @>Wait: 8 frame(s)
 @>
@@ -122691,6 +123219,70 @@ List of Event Commands:
  @>
 : Branch End
 @>Script: setTempSwitchOn("A")
+@>
+
+#------------------------------------------------------------------------------
+Event ID: 020
+Event Name: glowsize(26)
+(X,Y): (044,006)
+
+Page #1
+Conditions
+None
+
+Autonomous Movement
+Type: Fixed
+Speed: 3: Slow
+Freq: 3: Low
+Options Enabled
+Move Animation
+Trigger: Action Button
+
+List of Event Commands:
+@>
+
+#------------------------------------------------------------------------------
+Event ID: 021
+Event Name: glowsize(26)
+(X,Y): (048,006)
+
+Page #1
+Conditions
+None
+
+Autonomous Movement
+Type: Fixed
+Speed: 3: Slow
+Freq: 3: Low
+Options Enabled
+Move Animation
+Trigger: Action Button
+
+List of Event Commands:
+@>
+
+#------------------------------------------------------------------------------
+Event ID: 022
+Event Name: EV022
+(X,Y): (033,007)
+
+Page #1
+Conditions
+None
+
+Graphic: trainer_BATTLEGIRL
+
+Autonomous Movement
+Type: Fixed
+Speed: 3: Slow
+Freq: 3: Low
+Options Enabled
+Move Animation
+Trigger: Action Button
+
+List of Event Commands:
+@>Text: Sicher, dass du da rein gehen möchtest?
+@>Text: Dort wimmelt es nur so vor Spinnen.
 @>
 
 #------------------------------------------------------------------------------
@@ -129625,6 +130217,34 @@ List of Event Commands:
 @>
 
 #------------------------------------------------------------------------------
+Event ID: 029
+Event Name: EV029
+(X,Y): (108,085)
+
+Page #1
+Conditions
+None
+
+Graphic: trainer_BIRDKEEPER_F
+
+Autonomous Movement
+Type: Random
+Speed: 3: Slow
+Freq: 3: Low
+Options Enabled
+Move Animation
+Trigger: Action Button
+
+List of Event Commands:
+@>Text: Donner ist eine sehr ungenaue, aber starke Attacke.
+@>Text: Du kannst das Wetter nutzen, um die Genauigkeit zu 
+ :    : erhöhen.
+@>Text: Bei Regen trifft Donner immer.
+@>Text: Orkan übrigens auch.
+@>Text: Der Himmel hilft dem, der ihn versteht.
+@>
+
+#------------------------------------------------------------------------------
 Event ID: 034
 Event Name: Haus 1 Tür
 (X,Y): (139,086)
@@ -134870,7 +135490,7 @@ None
 Graphic: POKEMANIAC
 
 Autonomous Movement
-Type: Random
+Type: Fixed
 Speed: 3: Slow
 Freq: 4: High
 Options Enabled
@@ -134878,8 +135498,12 @@ Move Animation
 Trigger: Action Button
 
 List of Event Commands:
-@>Text: Ich bin auf dem Weg zum Strand.
-@>Text: Nur verlaufe ich mich hier immer.
+@>Text: Mein Smettbo hat die Fähigkeit Facettenauge.
+@>Text: Damit erhöht sich die Chance, dass wilde Pokémon 
+ :    : Items tragen.
+@>Text: Mit der Attacke Raub kann ich diese dann einfach 
+ :    : entwenden.
+@>Show Animation: This event, [Happy bubble]
 @>
 
 #------------------------------------------------------------------------------
@@ -139032,6 +139656,30 @@ Trigger: Autorun
 List of Event Commands:
 @>Control Self Switch: A =OFF
 @>Script: setTempSwitchOn("A")
+@>
+
+#------------------------------------------------------------------------------
+Event ID: 127
+Event Name: EV127
+(X,Y): (027,035)
+
+Page #1
+Conditions
+None
+
+Graphic: BUTTERFREE_female
+
+Autonomous Movement
+Type: Fixed
+Speed: 3: Slow
+Freq: 3: Low
+Options Enabled
+Move Animation
+Stop Animation
+Trigger: Action Button
+
+List of Event Commands:
+@>Play SE: 'BUTTERFREE', 100, 100
 @>
 
 #------------------------------------------------------------------------------
@@ -158477,6 +159125,60 @@ List of Event Commands:
 @>
 
 #------------------------------------------------------------------------------
+Event ID: 044
+Event Name: EV044
+(X,Y): (017,019)
+
+Page #1
+Conditions
+None
+
+Graphic: trainer_THIEF
+
+Autonomous Movement
+Type: Random
+Speed: 3: Slow
+Freq: 3: Low
+Options Enabled
+Move Animation
+Trigger: Action Button
+
+List of Event Commands:
+@>Text: Strolche sind immer zuerst dran mit ihren fiesen 
+ :    : Tricks.
+@>Text: Bei mir klappt das aber nicht.
+@>Text: Unlicht-Pokémon lassen sich nicht von der Fähigkeit 
+ :    : Strolch reinlegen.
+@>Text: Ein Dieb erkennt den anderen.
+@>
+
+#------------------------------------------------------------------------------
+Event ID: 045
+Event Name: EV045
+(X,Y): (047,033)
+
+Page #1
+Conditions
+None
+
+Graphic: trainer_HIKER4
+
+Autonomous Movement
+Type: Random
+Speed: 3: Slow
+Freq: 3: Low
+Options Enabled
+Move Animation
+Trigger: Action Button
+
+List of Event Commands:
+@>Text: Mein Pokémon hält alles aus.
+@>Text: Egal wie stark der Angriff sein sollte.
+@>Text: Es bleibt mit einem einzigen LP stehen, aber es steht.
+@>Text: Die Fähigkeit heißt Robustheit.
+@>
+
+#------------------------------------------------------------------------------
 Event ID: 053
 Event Name: EV053
 (X,Y): (048,038)
@@ -175149,7 +175851,9 @@ Trigger: Action Button
 
 List of Event Commands:
 @>Text: \xn[Hana]Danke nochmal für das Flegmon.
-@>Text: \xn[Hana]Die Suppe wird weltklasse.
+@>Text: \xn[Hana]Übrigens, die Attacke Abschlag trifft härter, 
+ :    : wenn der Gegner ein Item trägt.
+@>Text: \xn[Hana]Und das Item wird vom Gegner entfernt.
 @>
 
 #------------------------------------------------------------------------------
@@ -175964,6 +176668,32 @@ Trigger: Action Button
 
 List of Event Commands:
 @>Text: Nichts besonderes.
+@>
+
+#------------------------------------------------------------------------------
+Event ID: 005
+Event Name: EV005
+(X,Y): (014,017)
+
+Page #1
+Conditions
+None
+
+Graphic: NPC_Junge 9
+
+Autonomous Movement
+Type: Random
+Speed: 3: Slow
+Freq: 3: Low
+Options Enabled
+Move Animation
+Trigger: Action Button
+
+List of Event Commands:
+@>Text: Mogelhieb ist mein Lieblingstrick.
+@>Text: Der klappt aber nur, wenn mein Pokémon gerade 
+ :    : eingewechselt wurde.
+@>Text: Danach fällt keiner mehr drauf rein.
 @>
 
 #------------------------------------------------------------------------------
@@ -183165,7 +183895,7 @@ List of Event Commands:
 #------------------------------------------------------------------------------
 Event ID: 055
 Event Name: EV055
-(X,Y): (053,033)
+(X,Y): (054,033)
 
 Page #1
 Conditions
@@ -183174,7 +183904,7 @@ None
 Graphic: HIKER2
 
 Autonomous Movement
-Type: Random
+Type: Fixed
 Speed: 3: Slow
 Freq: 3: Low
 Options Enabled
@@ -183182,8 +183912,10 @@ Move Animation
 Trigger: Action Button
 
 List of Event Commands:
-@>Text: Brr... dieser Wind geht durch Mark und Bein.
-@>Text: Ich sollte mich wirklich besser ausrüsten.
+@>Text: Solange ich mein Siberio dabei habe, halten sich 
+ :    : wilde Pokémon oft von mir fern.
+@>Text: Es hat die Fähigkeit Schneemantel, wodurch andere 
+ :    : Pokémon uns schlechter erkennen können.
 @>
 
 #------------------------------------------------------------------------------
@@ -184055,6 +184787,32 @@ Move Animation
 Trigger: Action Button
 
 List of Event Commands:
+@>
+
+#------------------------------------------------------------------------------
+Event ID: 079
+Event Name: EV079
+(X,Y): (053,033)
+
+Page #1
+Conditions
+None
+
+Graphic: BEARTIC
+
+Autonomous Movement
+Type: Fixed
+Speed: 3: Slow
+Freq: 3: Low
+Options Enabled
+Move Animation
+Trigger: Action Button
+
+List of Event Commands:
+@>Play SE: 'BEARTIC', 100, 100
+@>Wait: 15 frame(s)
+@>Set Move Route: This event
+ :              : $>Turn Right
 @>
 
 #------------------------------------------------------------------------------
@@ -190917,6 +191675,33 @@ List of Event Commands:
 @>
 
 #------------------------------------------------------------------------------
+Event ID: 003
+Event Name: EV003
+(X,Y): (014,009)
+
+Page #1
+Conditions
+None
+
+Graphic: NPC_Mann 20
+
+Autonomous Movement
+Type: Random
+Speed: 3: Slow
+Freq: 3: Low
+Options Enabled
+Move Animation
+Trigger: Action Button
+
+List of Event Commands:
+@>Text: Schlafende Pokémon sind viel leichter zu fangen, als 
+ :    : ein wütendes.
+@>Text: Andere Statusänderungen helfen auch, aber nichts 
+ :    : ist besser zum Fangen, als ein schlafendes 
+ :    : Pokémon.
+@>
+
+#------------------------------------------------------------------------------
 Event ID: 007
 Event Name: EV007
 (X,Y): (009,010)
@@ -190936,27 +191721,6 @@ Trigger: Action Button
 List of Event Commands:
 @>Text: Eine Schiggy-Puppe.
 @>Text: Könnte auch mal gewaschen werden.
-@>
-
-#------------------------------------------------------------------------------
-Event ID: 008
-Event Name: EV008
-(X,Y): (018,011)
-
-Page #1
-Conditions
-None
-
-Autonomous Movement
-Type: Fixed
-Speed: 3: Slow
-Freq: 3: Low
-Options Enabled
-Move Animation
-Trigger: Action Button
-
-List of Event Commands:
-@>Text: Du solltest auf deine Figur achten.
 @>
 
 #------------------------------------------------------------------------------
@@ -191336,6 +192100,32 @@ Trigger: Parallel Process
 
 List of Event Commands:
 @>Erase Picture: 1
+@>
+
+#------------------------------------------------------------------------------
+Event ID: 003
+Event Name: EV003
+(X,Y): (019,011)
+
+Page #1
+Conditions
+None
+
+Graphic: NPC_Frau 24
+
+Autonomous Movement
+Type: Fixed
+Speed: 3: Slow
+Freq: 3: Low
+Options Enabled
+Move Animation
+Trigger: Action Button
+
+List of Event Commands:
+@>Text: Meine Lieblingsattacke ist Trugschlag.
+@>Text: Damit bleibt dem Gegner immer mindestens ein LP 
+ :    : übrig.
+@>Text: Ideal, um wilde Pokémon zu fangen.
 @>
 
 #------------------------------------------------------------------------------
@@ -197493,9 +198283,10 @@ Move Animation
 Trigger: Action Button
 
 List of Event Commands:
-@>Text: Diese alten Häuser...
-@>Text: manchmal klopft es an den Wänden aber da ist 
- :    : niemand.
+@>Text: Kennst du Frostbrand?
+@>Text: Es ist wie eine Verbrennung, allerdings wird hier 
+ :    : nicht der Angriff sondern der Spezial-Angriff halbiert.
+@>Text: Außerdem stecken Pokémon auch mehr Schaden ein.
 @>Set Move Route: This event
  :              : $>Turn Down
 @>
@@ -198562,23 +199353,55 @@ List of Event Commands:
 
 #------------------------------------------------------------------------------
 Event ID: 011
-Event Name: BasicRaidDen
+Event Name: EV011
 (X,Y): (010,016)
 
 Page #1
 Conditions
 None
 
+Graphic: NPCTeenager
+
 Autonomous Movement
 Type: Fixed
 Speed: 3: Slow
 Freq: 3: Low
 Options Enabled
-Stop Animation
+Move Animation
 Trigger: Action Button
 
 List of Event Commands:
-@>Script: pbRaidDen
+@>Text: Weißt du, wie man ein Shiny-Pokémon findet?
+@>Text: Man kämpft immer und immer wieder gegen das 
+ :    : gleiche Pokémon.
+@>Text: Nach jedem 50. Kampf steigen die Chancen nochmal 
+ :    : enorm.
+@>Text: Ich bin bei 412...
+@>Text: glaube ich...
+@>Text: oh nein, jetzt habe ich mich verzählt...
+@>Control Self Switch: A =ON
+@>
+
+Page #2
+Conditions
+Self Switch A is ON
+
+Graphic: NPCTeenager
+
+Autonomous Movement
+Type: Fixed
+Speed: 3: Slow
+Freq: 3: Low
+Options Enabled
+Move Animation
+Trigger: Action Button
+
+List of Event Commands:
+@>Text: 410, 411,...
+@>Text: Jetzt bich ich mir gar nicht mehr sicher, wie viele 
+ :    : Molunk ich besiegt habe.
+@>Text: Danke dafür!
+@>Show Animation: This event, [Mad bubble]
 @>
 
 #------------------------------------------------------------------------------
@@ -215819,6 +216642,57 @@ Trigger: Autorun
 List of Event Commands:
 @>Control Self Switch: A =OFF
 @>Script: setTempSwitchOn("A")
+@>
+
+#------------------------------------------------------------------------------
+Event ID: 084
+Event Name: EV084
+(X,Y): (046,051)
+
+Page #1
+Conditions
+None
+
+Graphic: trainer_WORKER_F
+
+Autonomous Movement
+Type: Fixed
+Speed: 3: Slow
+Freq: 3: Low
+Options Enabled
+Move Animation
+Trigger: Action Button
+
+List of Event Commands:
+@>Text: Wenn du ernsthaft Züchten willst, braucht du einen 
+ :    : Fatumknoten.
+@>Text: Damit werden fünf statt drei IV-Werte vererbt.
+@>Text: Ein Machtgewicht sorgt dafür, dass die LP garantiert 
+ :    : dabei sind.
+@>Script: pbReceiveItem(:DESTINYKNOT)
+@>Control Self Switch: A =ON
+@>
+
+Page #2
+Conditions
+Self Switch A is ON
+
+Graphic: trainer_WORKER_F
+
+Autonomous Movement
+Type: Fixed
+Speed: 3: Slow
+Freq: 3: Low
+Options Enabled
+Move Animation
+Trigger: Action Button
+
+List of Event Commands:
+@>Text: Wenn du ernsthaft Züchten willst, braucht du einen 
+ :    : Fatumknoten.
+@>Text: Damit werden fünf statt drei IV-Werte vererbt.
+@>Text: Ein Machtgewicht sorgt dafür, dass die LP garantiert 
+ :    : dabei sind.
 @>
 
 #------------------------------------------------------------------------------
@@ -241901,8 +242775,13 @@ Move Animation
 Trigger: Action Button
 
 List of Event Commands:
-@>Text: Du solltest unbedingt die ganzen verschiedenen 
- :    : Pokébälle ausprobieren.
+@>Text: Flottball oder Timerball?
+@>Text: Das kommt ganz darauf an.
+@>Text: Der Timerball wird mit jeder Runde besser.
+@>Text: Nach 10 Runden ist er sogar besser als der 
+ :    : Hyperball.
+@>Text: Der Flottball ist nur in der ersten Runde herausragend 
+ :    : gut.
 @>Set Move Route: This event
  :              : $>Turn Right
 @>
@@ -252144,6 +253023,34 @@ Move Animation
 Trigger: Action Button
 
 List of Event Commands:
+@>
+
+#------------------------------------------------------------------------------
+Event ID: 116
+Event Name: EV116
+(X,Y): (066,025)
+
+Page #1
+Conditions
+None
+
+Graphic: NPC_Junge 2
+
+Autonomous Movement
+Type: Random
+Speed: 3: Slow
+Freq: 3: Low
+Options Enabled
+Move Animation
+Trigger: Action Button
+
+List of Event Commands:
+@>Text: Normalerweise sind Attacken vom eigenen Typ 
+ :    : anderthalbmal so stark.
+@>Text: Hat das Pokémon die Fähigkeit Anpassung, sind 
+ :    : solche Attacken sogar doppelt so stark.
+@>Text: Das kann in Kämpfen den entscheidenden 
+ :    : Unterschied ausmachen.
 @>
 
 #------------------------------------------------------------------------------
@@ -274153,6 +275060,62 @@ List of Event Commands:
 @>
 
 #------------------------------------------------------------------------------
+Event ID: 010
+Event Name: EV010
+(X,Y): (011,007)
+
+Page #1
+Conditions
+None
+
+Graphic: trainer_PSYCHIC_M3
+
+Autonomous Movement
+Type: Fixed
+Speed: 3: Slow
+Freq: 3: Low
+Options Enabled
+Move Animation
+Trigger: Action Button
+
+List of Event Commands:
+@>Text: Ein Statusproblem?
+@>Text: Für mein Pokémon ist es ein Geschenk.
+@>Text: Es hat die Fähigkeit Adrenalin, wodurch Statuseffekte 
+ :    : ihm einen Attacken-Boost geben.
+@>Text: Selbst eine Verbrennung erhöht den Angriff, anstatt 
+ :    : ihn zu senken.
+@>Set Move Route: This event
+ :              : $>Turn Up
+@>
+
+#------------------------------------------------------------------------------
+Event ID: 011
+Event Name: EV011
+(X,Y): (011,006)
+
+Page #1
+Conditions
+None
+
+Graphic: THROH
+
+Autonomous Movement
+Type: Fixed
+Speed: 3: Slow
+Freq: 3: Low
+Options Enabled
+Move Animation
+Trigger: Action Button
+
+List of Event Commands:
+@>Play SE: 'THROH', 100, 100
+@>Wait: 10 frame(s)
+@>Set Move Route: This event
+ :              : $>Turn Down
+@>
+
+#------------------------------------------------------------------------------
 
 #==============================================================================
 Map ID: 366
@@ -275176,6 +276139,30 @@ List of Event Commands:
  :    : Interesse hast.
 @>Script: pbPuzzleBattle([:TEACHER, 
 :       : "Leihteam 1"], [:TEACHER, "Mia"])
+@>
+
+#------------------------------------------------------------------------------
+Event ID: 022
+Event Name: EV022
+(X,Y): (035,017)
+
+Page #1
+Conditions
+None
+
+Graphic: UMBREON
+
+Autonomous Movement
+Type: Fixed
+Speed: 3: Slow
+Freq: 3: Low
+Options Enabled
+Move Animation
+Trigger: Action Button
+
+List of Event Commands:
+@>Script: pbLeitungsRaetsel(width: 8,    
+:       : height: 6, time: 45)
 @>
 
 #------------------------------------------------------------------------------
@@ -279165,6 +280152,1262 @@ List of Event Commands:
 @>
 
 #------------------------------------------------------------------------------
+Event ID: 050
+Event Name: EV050
+(X,Y): (024,017)
+
+Page #1
+Conditions
+None
+
+Graphic: UMBREON
+
+Autonomous Movement
+Type: Fixed
+Speed: 3: Slow
+Freq: 3: Low
+Options Enabled
+Move Animation
+Trigger: Action Button
+
+List of Event Commands:
+@>Script: pbIcognitoRaetsel
+@>
+
+#------------------------------------------------------------------------------
+Event ID: 051
+Event Name: EV051
+(X,Y): (025,017)
+
+Page #1
+Conditions
+None
+
+Graphic: UMBREON
+
+Autonomous Movement
+Type: Fixed
+Speed: 3: Slow
+Freq: 3: Low
+Options Enabled
+Move Animation
+Trigger: Action Button
+
+List of Event Commands:
+@>Script: pbTypenDuell
+@>
+
+#------------------------------------------------------------------------------
+Event ID: 052
+Event Name: EV052
+(X,Y): (027,017)
+
+Page #1
+Conditions
+None
+
+Graphic: UMBREON
+
+Autonomous Movement
+Type: Fixed
+Speed: 3: Slow
+Freq: 3: Low
+Options Enabled
+Move Animation
+Trigger: Action Button
+
+List of Event Commands:
+@>Script: pbRufeQuiz >= 7
+@>
+
+#------------------------------------------------------------------------------
+Event ID: 053
+Event Name: EV053
+(X,Y): (030,017)
+
+Page #1
+Conditions
+None
+
+Graphic: UMBREON
+
+Autonomous Movement
+Type: Fixed
+Speed: 3: Slow
+Freq: 3: Low
+Options Enabled
+Move Animation
+Trigger: Action Button
+
+List of Event Commands:
+@>Script: pbSilhouettenQuiz >= 7
+@>
+
+#------------------------------------------------------------------------------
+Event ID: 054
+Event Name: EV054
+(X,Y): (032,017)
+
+Page #1
+Conditions
+None
+
+Graphic: UMBREON
+
+Autonomous Movement
+Type: Fixed
+Speed: 3: Slow
+Freq: 3: Low
+Options Enabled
+Move Animation
+Trigger: Action Button
+
+List of Event Commands:
+@>Script: pbIcognitoWort
+@>
+
+#------------------------------------------------------------------------------
+Event ID: 055
+Event Name: EV055
+(X,Y): (033,017)
+
+Page #1
+Conditions
+None
+
+Graphic: ESPEON
+
+Autonomous Movement
+Type: Fixed
+Speed: 3: Slow
+Freq: 3: Low
+Options Enabled
+Move Animation
+Trigger: Action Button
+
+List of Event Commands:
+@>Script: pbIcognitoWort(word: "FLAMME", 
+:       : riddle: "Ich tanze ohne Füße …")
+@>
+
+#------------------------------------------------------------------------------
+Event ID: 056
+Event Name: EV056
+(X,Y): (036,017)
+
+Page #1
+Conditions
+None
+
+Graphic: UMBREON
+
+Autonomous Movement
+Type: Fixed
+Speed: 3: Slow
+Freq: 3: Low
+Options Enabled
+Move Animation
+Trigger: Action Button
+
+List of Event Commands:
+@>Script: pbHoeherTiefer >= 10
+@>
+
+#------------------------------------------------------------------------------
+Event ID: 057
+Event Name: EV057
+(X,Y): (037,017)
+
+Page #1
+Conditions
+None
+
+Graphic: UMBREON
+
+Autonomous Movement
+Type: Fixed
+Speed: 3: Slow
+Freq: 3: Low
+Options Enabled
+Move Animation
+Trigger: Action Button
+
+List of Event Commands:
+@>Script: pbKlangfolgeKlavier >= 8
+@>
+
+#------------------------------------------------------------------------------
+Event ID: 058
+Event Name: EV058
+(X,Y): (038,017)
+
+Page #1
+Conditions
+None
+
+Graphic: UMBREON
+
+Autonomous Movement
+Type: Fixed
+Speed: 3: Slow
+Freq: 3: Low
+Options Enabled
+Move Animation
+Trigger: Action Button
+
+List of Event Commands:
+@>Script: pbKlangfolgeRufe
+@>
+
+#------------------------------------------------------------------------------
+Event ID: 059
+Event Name: EV059
+(X,Y): (039,017)
+
+Page #1
+Conditions
+None
+
+Graphic: UMBREON
+
+Autonomous Movement
+Type: Fixed
+Speed: 3: Slow
+Freq: 3: Low
+Options Enabled
+Move Animation
+Trigger: Action Button
+
+List of Event Commands:
+@>Script: pbPixelRaetsel
+@>
+
+#------------------------------------------------------------------------------
+Event ID: 060
+Event Name: EV060
+(X,Y): (043,017)
+
+Page #1
+Conditions
+None
+
+Graphic: ESPEON
+
+Autonomous Movement
+Type: Fixed
+Speed: 3: Slow
+Freq: 3: Low
+Options Enabled
+Move Animation
+Trigger: Action Button
+
+List of Event Commands:
+@>Script: pbLamelluxRaetsel(size: 14, 
+:       : difficulty: :schwer)
+@>
+
+#------------------------------------------------------------------------------
+Event ID: 061
+Event Name: EV061
+(X,Y): (041,017)
+
+Page #1
+Conditions
+None
+
+Graphic: UMBREON
+
+Autonomous Movement
+Type: Fixed
+Speed: 3: Slow
+Freq: 3: Low
+Options Enabled
+Move Animation
+Trigger: Action Button
+
+List of Event Commands:
+@>Script: pbLamelluxRaetsel(size: 7, 
+:       : difficulty: :leicht)
+@>
+
+#------------------------------------------------------------------------------
+Event ID: 062
+Event Name: EV062
+(X,Y): (042,017)
+
+Page #1
+Conditions
+None
+
+Graphic: ESPEON
+
+Autonomous Movement
+Type: Fixed
+Speed: 3: Slow
+Freq: 3: Low
+Options Enabled
+Move Animation
+Trigger: Action Button
+
+List of Event Commands:
+@>Script: pbLamelluxRaetsel
+@>
+
+#------------------------------------------------------------------------------
+Event ID: 063
+Event Name: Kairos
+(X,Y): (013,003)
+
+Page #1
+Conditions
+None
+
+Graphic: KAIROS_1
+
+Autonomous Movement
+Type: Fixed
+Speed: 3: Slow
+Freq: 3: Low
+Options Enabled
+Move Animation
+Trigger: Event Touch
+
+List of Event Commands:
+@>Script: pbTrainerIntro(:KAIROS)
+@>Script: pbNoticePlayer(get_self)
+@>Text: \xn[KAIROS]TEST
+@>Conditional Branch: Script: TrainerBattle.start(:KAIROS, "Kairos")
+ @>Control Self Switch: A =ON
+ @>
+: Branch End
+@>Script: pbTrainerEnd
+@>
+
+Page #2
+Conditions
+Self Switch A is ON
+
+Autonomous Movement
+Type: Fixed
+Speed: 3: Slow
+Freq: 3: Low
+Options Enabled
+Move Animation
+Trigger: Action Button
+
+List of Event Commands:
+@>
+
+#------------------------------------------------------------------------------
+Event ID: 064
+Event Name: Boss 1
+(X,Y): (014,003)
+
+Page #1
+Conditions
+None
+
+Graphic: TEAM_0_Boss_3
+
+Autonomous Movement
+Type: Fixed
+Speed: 3: Slow
+Freq: 3: Low
+Options Enabled
+Move Animation
+Trigger: Action Button
+
+List of Event Commands:
+@>
+
+Page #2
+Conditions
+Self Switch A is ON
+
+Graphic: TEAM_0_Boss_3
+
+Autonomous Movement
+Type: Fixed
+Speed: 3: Slow
+Freq: 3: Low
+Options Enabled
+Direction Fix
+Trigger: Action Button
+
+List of Event Commands:
+@>
+
+#------------------------------------------------------------------------------
+Event ID: 065
+Event Name: Boss 2
+(X,Y): (015,003)
+
+Page #1
+Conditions
+None
+
+Graphic: TEAM_0_Boss_3M
+
+Autonomous Movement
+Type: Fixed
+Speed: 3: Slow
+Freq: 3: Low
+Options Enabled
+Move Animation
+Trigger: Action Button
+
+List of Event Commands:
+@>
+
+Page #2
+Conditions
+Self Switch A is ON
+
+Graphic: TEAM_0_Boss_3M
+
+Autonomous Movement
+Type: Fixed
+Speed: 3: Slow
+Freq: 3: Low
+Options Enabled
+Move Animation
+Trigger: Action Button
+
+List of Event Commands:
+@>
+
+#------------------------------------------------------------------------------
+Event ID: 066
+Event Name: Nexus
+(X,Y): (016,003)
+
+Page #1
+Conditions
+None
+
+Graphic: Team0_Nexus
+
+Autonomous Movement
+Type: Fixed
+Speed: 3: Slow
+Freq: 3: Low
+Options Enabled
+Move Animation
+Trigger: Action Button
+
+List of Event Commands:
+@>
+
+Page #2
+Conditions
+Self Switch A is ON
+
+Autonomous Movement
+Type: Fixed
+Speed: 3: Slow
+Freq: 3: Low
+Options Enabled
+Move Animation
+Trigger: Action Button
+
+List of Event Commands:
+@>
+
+#------------------------------------------------------------------------------
+Event ID: 067
+Event Name: EV067
+(X,Y): (028,017)
+
+Page #1
+Conditions
+None
+
+Graphic: ESPEON
+
+Autonomous Movement
+Type: Fixed
+Speed: 3: Slow
+Freq: 3: Low
+Options Enabled
+Move Animation
+Trigger: Action Button
+
+List of Event Commands:
+@>Script: pbRufeQuiz(pool: :seen)
+@>
+
+#------------------------------------------------------------------------------
+Event ID: 068
+Event Name: EV068
+(X,Y): (016,017)
+
+Page #1
+Conditions
+None
+
+Autonomous Movement
+Type: Fixed
+Speed: 3: Slow
+Freq: 3: Low
+Options Enabled
+Move Animation
+Trigger: Player Touch
+
+List of Event Commands:
+@>Set Move Route: Player
+ :              : $>Through ON
+ :              : $>SE: 'PRSFX- Wring Out2', 100, 150
+ :              : $>Change Speed: 5
+ :              : $>Move Animation OFF
+ :              : $>Move Upper Left
+ :              : $>Move Left
+ :              : $>Move Animation ON
+ :              : $>Change Speed: 3
+ :              : $>SE: 'Voltorb Flip Point', 100, 150
+ :              : $>Through OFF
+@>Wait: 2 frame(s)
+@>
+
+Page #2
+Conditions
+Switch 0408: Rätsel is ON
+
+Autonomous Movement
+Type: Fixed
+Speed: 3: Slow
+Freq: 3: Low
+Options Enabled
+Move Animation
+Trigger: Player Touch
+
+List of Event Commands:
+@>Set Move Route: Player
+ :              : $>SE: 'PRSFX- Wring Out2', 100, 150
+ :              : $>Change Speed: 5
+ :              : $>Move Animation OFF
+ :              : $>Move Upper Right
+ :              : $>Move Right
+ :              : $>Move Animation ON
+ :              : $>Change Speed: 3
+ :              : $>SE: 'Voltorb Flip Point', 100, 150
+@>Wait: 10 frame(s)
+@>
+
+#------------------------------------------------------------------------------
+Event ID: 069
+Event Name: EV069
+(X,Y): (015,016)
+
+Page #1
+Conditions
+None
+
+Autonomous Movement
+Type: Fixed
+Speed: 3: Slow
+Freq: 3: Low
+Options Enabled
+Move Animation
+Trigger: Player Touch
+
+List of Event Commands:
+@>Set Move Route: Player
+ :              : $>Through ON
+ :              : $>SE: 'PRSFX- Wring Out2', 100, 150
+ :              : $>Change Speed: 5
+ :              : $>Move Animation OFF
+ :              : $>Move Upper Right
+ :              : $>Move Up
+ :              : $>Move Animation ON
+ :              : $>Change Speed: 3
+ :              : $>SE: 'Voltorb Flip Point', 100, 150
+ :              : $>Through OFF
+@>Wait: 2 frame(s)
+@>
+
+Page #2
+Conditions
+Switch 0408: Rätsel is ON
+
+Autonomous Movement
+Type: Fixed
+Speed: 3: Slow
+Freq: 3: Low
+Options Enabled
+Move Animation
+Trigger: Player Touch
+
+List of Event Commands:
+@>Set Move Route: Player
+ :              : $>SE: 'PRSFX- Wring Out2', 100, 150
+ :              : $>Change Speed: 5
+ :              : $>Move Animation OFF
+ :              : $>Move Lower Right
+ :              : $>Move Down
+ :              : $>Move Animation ON
+ :              : $>Change Speed: 3
+ :              : $>SE: 'Voltorb Flip Point', 100, 150
+@>Wait: 10 frame(s)
+@>
+
+#------------------------------------------------------------------------------
+Event ID: 070
+Event Name: EV070
+(X,Y): (016,015)
+
+Page #1
+Conditions
+None
+
+Autonomous Movement
+Type: Fixed
+Speed: 3: Slow
+Freq: 3: Low
+Options Enabled
+Move Animation
+Trigger: Player Touch
+
+List of Event Commands:
+@>Set Move Route: Player
+ :              : $>Through ON
+ :              : $>SE: 'PRSFX- Wring Out2', 100, 150
+ :              : $>Change Speed: 5
+ :              : $>Move Animation OFF
+ :              : $>Move Lower Right
+ :              : $>Move Right
+ :              : $>Move Animation ON
+ :              : $>Change Speed: 3
+ :              : $>SE: 'Voltorb Flip Point', 100, 150
+ :              : $>Through OFF
+@>Wait: 2 frame(s)
+@>
+
+Page #2
+Conditions
+Switch 0408: Rätsel is ON
+
+Autonomous Movement
+Type: Fixed
+Speed: 3: Slow
+Freq: 3: Low
+Options Enabled
+Move Animation
+Trigger: Player Touch
+
+List of Event Commands:
+@>Set Move Route: Player
+ :              : $>SE: 'PRSFX- Wring Out2', 100, 150
+ :              : $>Change Speed: 5
+ :              : $>Move Animation OFF
+ :              : $>Move Lower Left
+ :              : $>Move Left
+ :              : $>Move Animation ON
+ :              : $>Change Speed: 3
+ :              : $>SE: 'Voltorb Flip Point', 100, 150
+@>Wait: 10 frame(s)
+@>
+
+#------------------------------------------------------------------------------
+Event ID: 071
+Event Name: EV071
+(X,Y): (017,016)
+
+Page #1
+Conditions
+None
+
+Autonomous Movement
+Type: Fixed
+Speed: 3: Slow
+Freq: 3: Low
+Options Enabled
+Move Animation
+Trigger: Player Touch
+
+List of Event Commands:
+@>Set Move Route: Player
+ :              : $>Through ON
+ :              : $>SE: 'PRSFX- Wring Out2', 100, 150
+ :              : $>Change Speed: 5
+ :              : $>Move Animation OFF
+ :              : $>Move Lower Left
+ :              : $>Move Down
+ :              : $>Move Animation ON
+ :              : $>Change Speed: 3
+ :              : $>SE: 'Voltorb Flip Point', 100, 150
+ :              : $>Through OFF
+@>Wait: 2 frame(s)
+@>
+
+Page #2
+Conditions
+Switch 0408: Rätsel is ON
+
+Autonomous Movement
+Type: Fixed
+Speed: 3: Slow
+Freq: 3: Low
+Options Enabled
+Move Animation
+Trigger: Player Touch
+
+List of Event Commands:
+@>Set Move Route: Player
+ :              : $>SE: 'PRSFX- Wring Out2', 100, 150
+ :              : $>Change Speed: 5
+ :              : $>Move Animation OFF
+ :              : $>Move Upper Left
+ :              : $>Move Up
+ :              : $>Move Animation ON
+ :              : $>Change Speed: 3
+ :              : $>SE: 'Voltorb Flip Point', 100, 150
+@>Wait: 10 frame(s)
+@>
+
+#------------------------------------------------------------------------------
+Event ID: 072
+Event Name: EV072
+(X,Y): (016,016)
+
+Page #1
+Conditions
+None
+
+Autonomous Movement
+Type: Fixed
+Speed: 3: Slow
+Freq: 3: Low
+Options Enabled
+Move Animation
+Trigger: Action Button
+
+List of Event Commands:
+@>
+
+Page #2
+Conditions
+Switch 0408: Rätsel is ON
+
+Autonomous Movement
+Type: Fixed
+Speed: 3: Slow
+Freq: 3: Low
+Options Enabled
+Move Animation
+Trigger: Action Button
+
+List of Event Commands:
+@>
+
+#------------------------------------------------------------------------------
+Event ID: 073
+Event Name: EV073
+(X,Y): (017,017)
+
+Page #1
+Conditions
+None
+
+Autonomous Movement
+Type: Fixed
+Speed: 3: Slow
+Freq: 3: Low
+Options Enabled
+Move Animation
+Trigger: Action Button
+
+List of Event Commands:
+@>
+
+Page #2
+Conditions
+Switch 0408: Rätsel is ON
+
+Autonomous Movement
+Type: Fixed
+Speed: 3: Slow
+Freq: 3: Low
+Options Enabled
+Move Animation
+Trigger: Action Button
+
+List of Event Commands:
+@>
+
+#------------------------------------------------------------------------------
+Event ID: 074
+Event Name: EV074
+(X,Y): (015,017)
+
+Page #1
+Conditions
+None
+
+Autonomous Movement
+Type: Fixed
+Speed: 3: Slow
+Freq: 3: Low
+Options Enabled
+Move Animation
+Trigger: Action Button
+
+List of Event Commands:
+@>
+
+Page #2
+Conditions
+Switch 0408: Rätsel is ON
+
+Autonomous Movement
+Type: Fixed
+Speed: 3: Slow
+Freq: 3: Low
+Options Enabled
+Move Animation
+Trigger: Action Button
+
+List of Event Commands:
+@>
+
+#------------------------------------------------------------------------------
+Event ID: 075
+Event Name: EV075
+(X,Y): (015,015)
+
+Page #1
+Conditions
+None
+
+Autonomous Movement
+Type: Fixed
+Speed: 3: Slow
+Freq: 3: Low
+Options Enabled
+Move Animation
+Trigger: Action Button
+
+List of Event Commands:
+@>
+
+Page #2
+Conditions
+Switch 0408: Rätsel is ON
+
+Autonomous Movement
+Type: Fixed
+Speed: 3: Slow
+Freq: 3: Low
+Options Enabled
+Move Animation
+Trigger: Action Button
+
+List of Event Commands:
+@>
+
+#------------------------------------------------------------------------------
+Event ID: 076
+Event Name: EV076
+(X,Y): (017,015)
+
+Page #1
+Conditions
+None
+
+Autonomous Movement
+Type: Fixed
+Speed: 3: Slow
+Freq: 3: Low
+Options Enabled
+Move Animation
+Trigger: Action Button
+
+List of Event Commands:
+@>
+
+Page #2
+Conditions
+Switch 0408: Rätsel is ON
+
+Autonomous Movement
+Type: Fixed
+Speed: 3: Slow
+Freq: 3: Low
+Options Enabled
+Move Animation
+Trigger: Action Button
+
+List of Event Commands:
+@>
+
+#------------------------------------------------------------------------------
+Event ID: 077
+Event Name: EV077
+(X,Y): (016,020)
+
+Page #1
+Conditions
+None
+
+Autonomous Movement
+Type: Fixed
+Speed: 3: Slow
+Freq: 3: Low
+Options Enabled
+Move Animation
+Trigger: Player Touch
+
+List of Event Commands:
+@>Set Move Route: Player
+ :              : $>Through ON
+ :              : $>SE: 'PRSFX- Wring Out2', 100, 150
+ :              : $>Change Speed: 5
+ :              : $>Move Animation OFF
+ :              : $>Move Upper Right
+ :              : $>Move Right
+ :              : $>Move Animation ON
+ :              : $>Change Speed: 3
+ :              : $>SE: 'Voltorb Flip Point', 100, 150
+ :              : $>Through OFF
+@>Wait: 2 frame(s)
+@>
+
+Page #2
+Conditions
+Switch 0408: Rätsel is ON
+
+Autonomous Movement
+Type: Fixed
+Speed: 3: Slow
+Freq: 3: Low
+Options Enabled
+Move Animation
+Trigger: Player Touch
+
+List of Event Commands:
+@>Set Move Route: Player
+ :              : $>SE: 'PRSFX- Wring Out2', 100, 150
+ :              : $>Change Speed: 5
+ :              : $>Move Animation OFF
+ :              : $>Move Upper Left
+ :              : $>Move Left
+ :              : $>Move Animation ON
+ :              : $>Change Speed: 3
+ :              : $>SE: 'Voltorb Flip Point', 100, 150
+@>Wait: 10 frame(s)
+@>
+
+#------------------------------------------------------------------------------
+Event ID: 078
+Event Name: EV078
+(X,Y): (015,019)
+
+Page #1
+Conditions
+None
+
+Autonomous Movement
+Type: Fixed
+Speed: 3: Slow
+Freq: 3: Low
+Options Enabled
+Move Animation
+Trigger: Player Touch
+
+List of Event Commands:
+@>Set Move Route: Player
+ :              : $>Through ON
+ :              : $>SE: 'PRSFX- Wring Out2', 100, 150
+ :              : $>Change Speed: 5
+ :              : $>Move Animation OFF
+ :              : $>Move Lower Right
+ :              : $>Move Down
+ :              : $>Move Animation ON
+ :              : $>Change Speed: 3
+ :              : $>SE: 'Voltorb Flip Point', 100, 150
+ :              : $>Through OFF
+@>Wait: 2 frame(s)
+@>
+
+Page #2
+Conditions
+Switch 0408: Rätsel is ON
+
+Autonomous Movement
+Type: Fixed
+Speed: 3: Slow
+Freq: 3: Low
+Options Enabled
+Move Animation
+Trigger: Player Touch
+
+List of Event Commands:
+@>Set Move Route: Player
+ :              : $>SE: 'PRSFX- Wring Out2', 100, 150
+ :              : $>Change Speed: 5
+ :              : $>Move Animation OFF
+ :              : $>Move Upper Right
+ :              : $>Move Up
+ :              : $>Move Animation ON
+ :              : $>Change Speed: 3
+ :              : $>SE: 'Voltorb Flip Point', 100, 150
+@>Wait: 10 frame(s)
+@>
+
+#------------------------------------------------------------------------------
+Event ID: 079
+Event Name: EV079
+(X,Y): (016,018)
+
+Page #1
+Conditions
+None
+
+Autonomous Movement
+Type: Fixed
+Speed: 3: Slow
+Freq: 3: Low
+Options Enabled
+Move Animation
+Trigger: Player Touch
+
+List of Event Commands:
+@>Set Move Route: Player
+ :              : $>Through ON
+ :              : $>SE: 'PRSFX- Wring Out2', 100, 150
+ :              : $>Change Speed: 5
+ :              : $>Move Animation OFF
+ :              : $>Move Lower Left
+ :              : $>Move Left
+ :              : $>Move Animation ON
+ :              : $>Change Speed: 3
+ :              : $>SE: 'Voltorb Flip Point', 100, 150
+ :              : $>Through OFF
+@>Wait: 2 frame(s)
+@>
+
+Page #2
+Conditions
+Switch 0408: Rätsel is ON
+
+Autonomous Movement
+Type: Fixed
+Speed: 3: Slow
+Freq: 3: Low
+Options Enabled
+Move Animation
+Trigger: Player Touch
+
+List of Event Commands:
+@>Set Move Route: Player
+ :              : $>SE: 'PRSFX- Wring Out2', 100, 150
+ :              : $>Change Speed: 5
+ :              : $>Move Animation OFF
+ :              : $>Move Lower Right
+ :              : $>Move Right
+ :              : $>Move Animation ON
+ :              : $>Change Speed: 3
+ :              : $>SE: 'Voltorb Flip Point', 100, 150
+@>Wait: 10 frame(s)
+@>
+
+#------------------------------------------------------------------------------
+Event ID: 080
+Event Name: EV080
+(X,Y): (017,019)
+
+Page #1
+Conditions
+None
+
+Autonomous Movement
+Type: Fixed
+Speed: 3: Slow
+Freq: 3: Low
+Options Enabled
+Move Animation
+Trigger: Player Touch
+
+List of Event Commands:
+@>Set Move Route: Player
+ :              : $>Through ON
+ :              : $>SE: 'PRSFX- Wring Out2', 100, 150
+ :              : $>Change Speed: 5
+ :              : $>Move Animation OFF
+ :              : $>Move Upper Left
+ :              : $>Move Up
+ :              : $>Move Animation ON
+ :              : $>Change Speed: 3
+ :              : $>SE: 'Voltorb Flip Point', 100, 150
+ :              : $>Through OFF
+@>Wait: 2 frame(s)
+@>
+
+Page #2
+Conditions
+Switch 0408: Rätsel is ON
+
+Autonomous Movement
+Type: Fixed
+Speed: 3: Slow
+Freq: 3: Low
+Options Enabled
+Move Animation
+Trigger: Player Touch
+
+List of Event Commands:
+@>Set Move Route: Player
+ :              : $>SE: 'PRSFX- Wring Out2', 100, 150
+ :              : $>Change Speed: 5
+ :              : $>Move Animation OFF
+ :              : $>Move Lower Left
+ :              : $>Move Down
+ :              : $>Move Animation ON
+ :              : $>Change Speed: 3
+ :              : $>SE: 'Voltorb Flip Point', 100, 150
+@>Wait: 10 frame(s)
+@>
+
+#------------------------------------------------------------------------------
+Event ID: 081
+Event Name: EV081
+(X,Y): (017,020)
+
+Page #1
+Conditions
+None
+
+Autonomous Movement
+Type: Fixed
+Speed: 3: Slow
+Freq: 3: Low
+Options Enabled
+Move Animation
+Trigger: Action Button
+
+List of Event Commands:
+@>
+
+Page #2
+Conditions
+Switch 0408: Rätsel is ON
+
+Autonomous Movement
+Type: Fixed
+Speed: 3: Slow
+Freq: 3: Low
+Options Enabled
+Move Animation
+Trigger: Action Button
+
+List of Event Commands:
+@>
+
+#------------------------------------------------------------------------------
+Event ID: 082
+Event Name: EV082
+(X,Y): (017,018)
+
+Page #1
+Conditions
+None
+
+Autonomous Movement
+Type: Fixed
+Speed: 3: Slow
+Freq: 3: Low
+Options Enabled
+Move Animation
+Trigger: Action Button
+
+List of Event Commands:
+@>
+
+Page #2
+Conditions
+Switch 0408: Rätsel is ON
+
+Autonomous Movement
+Type: Fixed
+Speed: 3: Slow
+Freq: 3: Low
+Options Enabled
+Move Animation
+Trigger: Action Button
+
+List of Event Commands:
+@>
+
+#------------------------------------------------------------------------------
+Event ID: 083
+Event Name: EV083
+(X,Y): (015,018)
+
+Page #1
+Conditions
+None
+
+Autonomous Movement
+Type: Fixed
+Speed: 3: Slow
+Freq: 3: Low
+Options Enabled
+Move Animation
+Trigger: Action Button
+
+List of Event Commands:
+@>
+
+Page #2
+Conditions
+Switch 0408: Rätsel is ON
+
+Autonomous Movement
+Type: Fixed
+Speed: 3: Slow
+Freq: 3: Low
+Options Enabled
+Move Animation
+Trigger: Action Button
+
+List of Event Commands:
+@>
+
+#------------------------------------------------------------------------------
+Event ID: 084
+Event Name: EV084
+(X,Y): (015,020)
+
+Page #1
+Conditions
+None
+
+Autonomous Movement
+Type: Fixed
+Speed: 3: Slow
+Freq: 3: Low
+Options Enabled
+Move Animation
+Trigger: Action Button
+
+List of Event Commands:
+@>
+
+Page #2
+Conditions
+Switch 0408: Rätsel is ON
+
+Autonomous Movement
+Type: Fixed
+Speed: 3: Slow
+Freq: 3: Low
+Options Enabled
+Move Animation
+Trigger: Action Button
+
+List of Event Commands:
+@>
+
+#------------------------------------------------------------------------------
 
 #==============================================================================
 Map ID: 367
@@ -282018,6 +284261,34 @@ Trigger: Autorun
 List of Event Commands:
 @>Control Self Switch: A =OFF
 @>Script: setTempSwitchOn("A")
+@>
+
+#------------------------------------------------------------------------------
+Event ID: 052
+Event Name: EV052
+(X,Y): (045,034)
+
+Page #1
+Conditions
+None
+
+Graphic: SCIENTIST_F
+
+Autonomous Movement
+Type: Random
+Speed: 3: Slow
+Freq: 3: Low
+Options Enabled
+Move Animation
+Trigger: Action Button
+
+List of Event Commands:
+@>Text: Wenn ich ein Pokémon mit der Fähigkeit Statik ganz 
+ :    : vorne im Team habe, erscheinen häufiger Elektro-
+ :    : Pokémon.
+@>Text: Das gleiche gilt auch bei Magnetfalle für Stahl-
+ :    : Pokémon,
+@>Text: oder Feuerfänger für Feuer-Pokémon.
 @>
 
 #------------------------------------------------------------------------------
@@ -304267,7 +306538,23 @@ Move Animation
 Trigger: Action Button
 
 List of Event Commands:
-@>Text: Hier ist nichts...
+@>Script: pbAddPokemon(:MELTAN, 30)
+@>Control Self Switch: A =ON
+@>
+
+Page #2
+Conditions
+Self Switch A is ON
+
+Autonomous Movement
+Type: Fixed
+Speed: 3: Slow
+Freq: 3: Low
+Options Enabled
+Move Animation
+Trigger: Action Button
+
+List of Event Commands:
 @>
 
 #------------------------------------------------------------------------------
@@ -305746,7 +308033,7 @@ Page #1
 Conditions
 None
 
-Graphic: PSYCHIC_M3
+Graphic: NPCSchoolBoy
 
 Autonomous Movement
 Type: Fixed
@@ -305970,6 +308257,31 @@ Move Animation
 Trigger: Action Button
 
 List of Event Commands:
+@>
+
+#------------------------------------------------------------------------------
+Event ID: 020
+Event Name: EV020
+(X,Y): (003,006)
+
+Page #1
+Conditions
+None
+
+Graphic: NPC_Frau 6
+
+Autonomous Movement
+Type: Fixed
+Speed: 3: Slow
+Freq: 3: Low
+Options Enabled
+Move Animation
+Trigger: Action Button
+
+List of Event Commands:
+@>Text: Hat dein Pokémon vorne im Team die Fähigkeit 
+ :    : Charmebolzen, haben wilde Pokémon häufig das 
+ :    : andere Geschlecht.
 @>
 
 #------------------------------------------------------------------------------
@@ -323773,6 +326085,33 @@ Stop Animation
 Trigger: Action Button
 
 List of Event Commands:
+@>
+
+#------------------------------------------------------------------------------
+Event ID: 016
+Event Name: EV016
+(X,Y): (028,011)
+
+Page #1
+Conditions
+None
+
+Graphic: trainer_VETERAN_M3
+
+Autonomous Movement
+Type: Random
+Speed: 3: Slow
+Freq: 3: Low
+Options Enabled
+Move Animation
+Trigger: Action Button
+
+List of Event Commands:
+@>Text: Die Fähigkeit Rohe Gewalt verzichet auf alle 
+ :    : Zusatzeffekte.
+@>Text: Kein Verbrennen, kein Zurückschrecken, nichts.
+@>Text: Dafür schlagen die Attacken deutlich härter zu.
+@>Text: Selbst der Leben-Orb kostet keine LP mehr.
 @>
 
 #------------------------------------------------------------------------------
@@ -345402,6 +347741,13 @@ Trigger: Action Button
 List of Event Commands:
 @>Text: \xn[Angler Rick]Ich kann dir garantieren, dass du mit 
  :    : dem Angeln das beste Hobby gefunden hast.
+@>Text: \xn[Angler Rick]Hier ist noch ein Profi-Tipp für dich:
+@>Text: \xn[Angler Rick]Beim Angeln solltest du ein Pokémon 
+ :    : mit der Fähigkeit Saugnapf an die Spitze nehmen.
+@>Text: \xn[Angler Rick]Dann beißen Pokémon viel schneller 
+ :    : an.
+@>Text: \xn[Angler Rick]Es klappt auch mit der Fähigkeit 
+ :    : Klebekörper aber da gehe ich nicht ins Detail.
 @>
 
 #------------------------------------------------------------------------------
@@ -405822,6 +408168,88 @@ List of Event Commands:
 @>
 
 #------------------------------------------------------------------------------
+Event ID: 041
+Event Name: EV041
+(X,Y): (012,021)
+
+Page #1
+Conditions
+None
+
+Graphic: trainer_BLACKBELT3
+
+Autonomous Movement
+Type: Fixed
+Speed: 3: Slow
+Freq: 3: Low
+Options Enabled
+Move Animation
+Trigger: Action Button
+
+List of Event Commands:
+@>Text: Beim Training habe ich vorne im Team immer ein 
+ :    : Pokémon mit der Fähigkeit Übereifer, Erzwinger oder 
+ :    : Munterkeit.
+@>Text: Dann treffe ich viel öfter auf die stärksten Pokémon 
+ :    : der Route.
+@>Text: Höheres Level gleich mehr Erfahrung, ganz einfach.
+@>
+
+#------------------------------------------------------------------------------
+Event ID: 042
+Event Name: EV042
+(X,Y): (012,019)
+
+Page #1
+Conditions
+None
+
+Graphic: PRIMEAPE
+
+Autonomous Movement
+Type: Fixed
+Speed: 3: Slow
+Freq: 3: Low
+Options Enabled
+Move Animation
+Stop Animation
+Trigger: Action Button
+
+List of Event Commands:
+@>Play SE: 'PRIMEAPE', 100, 100
+@>Wait: 10 frame(s)
+@>Set Move Route: This event
+ :              : $>Turn Left
+@>
+
+#------------------------------------------------------------------------------
+Event ID: 043
+Event Name: EV043
+(X,Y): (011,039)
+
+Page #1
+Conditions
+None
+
+Graphic: trainer_BATTLEGIRL3
+
+Autonomous Movement
+Type: Random
+Speed: 3: Slow
+Freq: 3: Low
+Options Enabled
+Move Animation
+Trigger: Action Button
+
+List of Event Commands:
+@>Text: Starke Attacken sind nicht alles.
+@>Text: Mit der Fähigkeit Techniker werden schwache 
+ :    : Attacken, bis Stärke 60, um 50% erhöht.
+@>Text: Das gilt auch für jeden einzelnen Treffer einer 
+ :    : Serien-Attacke.
+@>
+
+#------------------------------------------------------------------------------
 
 #==============================================================================
 Map ID: 491
@@ -430097,11 +432525,13 @@ List of Event Commands:
 #------------------------------------------------------------------------------
 Event ID: 060
 Event Name: EV060
-(X,Y): (046,067)
+(X,Y): (049,065)
 
 Page #1
 Conditions
 None
+
+Graphic: trainer_ACETRAINER_F
 
 Autonomous Movement
 Type: Fixed
@@ -430112,6 +432542,9 @@ Move Animation
 Trigger: Action Button
 
 List of Event Commands:
+@>Text: Mein Pokémon kann weder durch Wetter, noch durch 
+ :    : Rückstoß oder Gift verletzt werden.
+@>Text: Mit Magieschild ist es einfach nur genial!
 @>
 
 Page #2
@@ -431442,6 +433875,57 @@ Move Animation
 Trigger: Action Button
 
 List of Event Commands:
+@>
+
+#------------------------------------------------------------------------------
+Event ID: 087
+Event Name: EV087
+(X,Y): (049,064)
+
+Page #1
+Conditions
+None
+
+Graphic: KADABRA
+
+Autonomous Movement
+Type: Fixed
+Speed: 3: Slow
+Freq: 3: Low
+Options Enabled
+Move Animation
+Trigger: Action Button
+
+List of Event Commands:
+@>Play SE: 'KADABRA', 100, 100
+@>Wait: 15 frame(s)
+@>Set Move Route: This event
+ :              : $>Turn Down
+@>
+
+#------------------------------------------------------------------------------
+Event ID: 088
+Event Name: EV088
+(X,Y): (070,016)
+
+Page #1
+Conditions
+None
+
+Graphic: NPC_Junge 3
+
+Autonomous Movement
+Type: Random
+Speed: 3: Slow
+Freq: 3: Low
+Options Enabled
+Move Animation
+Trigger: Action Button
+
+List of Event Commands:
+@>Text: Gestein-Pokémon lieben den Sandsturm.
+@>Text: Spezial-Attacken prallen dann viel leichter an ihnen 
+ :    : ab.
 @>
 
 #------------------------------------------------------------------------------
@@ -474527,6 +477011,110 @@ List of Event Commands:
 @>
 
 #------------------------------------------------------------------------------
+Event ID: 031
+Event Name: Tür .sl
+(X,Y): (022,008)
+
+Page #1
+Conditions
+None
+
+Graphic: Tür Labor Team 0
+
+Autonomous Movement
+Type: Fixed
+Speed: 3: Slow
+Freq: 3: Low
+Options Enabled
+Move Animation
+Trigger: Player Touch
+
+List of Event Commands:
+@>Set Move Route: This event
+ :              : $>SE: 'Door enter', 100, 100
+ :              : $>Graphic: "Tür Labor Team 0', 0, 2, 1
+ :              : $>Wait: 2 frame(s)
+ :              : $>Graphic: "Tür Labor Team 0', 0, 2, 2
+ :              : $>Wait: 2 frame(s)
+ :              : $>Graphic: "Tür Labor Team 0', 0, 2, 3
+ :              : $>Wait: 2 frame(s)
+@>Wait: 6 frame(s)
+@>Set Move Route: Player
+                  (Ignore If Can't Move)
+ :              : $>Through ON
+ :              : $>Move Up
+ :              : $>Through OFF
+@>Wait: 8 frame(s)
+@>Change Transparent Flag: Transparency
+@>Script: Followers.follow_into_door
+@>Wait: 8 frame(s)
+@>Set Move Route: This event
+ :              : $>SE: 'Door enter', 100, 90
+ :              : $>Graphic: "Tür Labor Team 0', 0, 2, 2
+ :              : $>Wait: 2 frame(s)
+ :              : $>Graphic: "Tür Labor Team 0', 0, 2, 1
+ :              : $>Wait: 2 frame(s)
+ :              : $>Graphic: "Tür Labor Team 0', 0, 2, 0
+ :              : $>Wait: 2 frame(s)
+@>Wait: 8 frame(s)
+@>Change Screen Color Tone: (-255,-255,-255,0), @6
+@>Wait: 8 frame(s)
+@>Change Transparent Flag: Normal
+@>Transfer Player:[693: Eingang], (019,032), Up, No Fade
+@>Change Screen Color Tone: (0,0,0,0), @6
+@>Wait: 8 frame(s)
+@>
+
+Page #2
+Conditions
+Switch 0022: s:tsOff?("A") is ON
+
+Graphic: Tür Labor Team 0
+
+Autonomous Movement
+Type: Fixed
+Speed: 3: Slow
+Freq: 3: Low
+Options Enabled
+Move Animation
+Trigger: Autorun
+
+List of Event Commands:
+@>Conditional Branch: Script: get_self.onEvent?
+ @>Change Transparent Flag: Transparency
+ @>Script: Followers.hide_followers
+ @>Set Move Route: This event
+  :              : $>SE: 'Door enter', 100, 100
+  :              : $>Graphic: "Tür Labor Team 0', 0, 2, 1
+  :              : $>Wait: 2 frame(s)
+  :              : $>Graphic: "Tür Labor Team 0', 0, 2, 2
+  :              : $>Wait: 2 frame(s)
+  :              : $>Graphic: "Tür Labor Team 0', 0, 2, 3
+  :              : $>Wait: 2 frame(s)
+ @>Wait: 8 frame(s)
+ @>Change Transparent Flag: Normal
+ @>Set Move Route: Player
+                   (Ignore If Can't Move)
+  :              : $>Through ON
+  :              : $>Move Down
+  :              : $>Through OFF
+ @>Wait: 8 frame(s)
+ @>Script: Followers.put_followers_on_player
+ @>Set Move Route: This event
+  :              : $>SE: 'Door enter', 100, 90
+  :              : $>Graphic: "Tür Labor Team 0', 0, 2, 2
+  :              : $>Wait: 2 frame(s)
+  :              : $>Graphic: "Tür Labor Team 0', 0, 2, 1
+  :              : $>Wait: 2 frame(s)
+  :              : $>Graphic: "Tür Labor Team 0', 0, 2, 0
+  :              : $>Wait: 2 frame(s)
+ @>Wait: 8 frame(s)
+ @>
+: Branch End
+@>Script: setTempSwitchOn("A")
+@>
+
+#------------------------------------------------------------------------------
 
 #==============================================================================
 Map ID: 633
@@ -492813,9 +495401,10 @@ List of Event Commands:
 
 #==============================================================================
 Map ID: 675
-Map Name: MAP675
+Map Name: Webarak-Nest
 Tileset: 146: Höhle Webarak
 Width: 40, Height: 40
+Auto-Change BGM: Webarak-Nest
 
 #------------------------------------------------------------------------------
 Event ID: 001
@@ -492891,7 +495480,7 @@ List of Event Commands:
  @>Play SE: 'Door exit', 100, 100
  @>Change Screen Color Tone: (-255,-255,-255,0), @6
  @>Wait: 8 frame(s)
- @>Transfer Player:[676: MAP676], (012,001), Up, No Fade
+ @>Transfer Player:[676: Webarak-Nest], (012,001), Up, No Fade
  @>Change Screen Color Tone: (0,0,0,0), @6
  @>Script: Followers.hide_followers
  @>Play SE: 'freesound_community-metal-footsteps-14727', 100, 100
@@ -492937,7 +495526,7 @@ List of Event Commands:
  @>Play SE: 'Door exit', 100, 100
  @>Change Screen Color Tone: (-255,-255,-255,0), @6
  @>Wait: 8 frame(s)
- @>Transfer Player:[676: MAP676], (021,008), Up, No Fade
+ @>Transfer Player:[676: Webarak-Nest], (021,008), Up, No Fade
  @>Change Screen Color Tone: (0,0,0,0), @6
  @>Script: Followers.hide_followers
  @>Play SE: 'freesound_community-metal-footsteps-14727', 100, 100
@@ -493031,12 +495620,38 @@ List of Event Commands:
 @>
 
 #------------------------------------------------------------------------------
+Event ID: 008
+Event Name: EV008
+(X,Y): (026,008)
+
+Page #1
+Conditions
+None
+
+Graphic: NPC_Junge 6
+
+Autonomous Movement
+Type: Random
+Speed: 3: Slow
+Freq: 3: Low
+Options Enabled
+Move Animation
+Trigger: Action Button
+
+List of Event Commands:
+@>Text: Ich habe eine Decke, belegte Brote und 20 
+ :    : Prüfungsbälle.
+@>Text: Ich warte einfach, bis die Käfer zu mir kommen.
+@>
+
+#------------------------------------------------------------------------------
 
 #==============================================================================
 Map ID: 676
-Map Name: MAP676
+Map Name: Webarak-Nest
 Tileset: 146: Höhle Webarak
 Width: 27, Height: 30
+Auto-Change BGM: Webarak-Nest
 
 #------------------------------------------------------------------------------
 Event ID: 001
@@ -493069,7 +495684,7 @@ List of Event Commands:
 @>Change Screen Color Tone: (-255,-255,-255,0), @35
 @>Wait: 35 frame(s)
 @>Play SE: 'Door exit', 100, 100
-@>Transfer Player:[675: MAP675], (018,006), Up, No Fade
+@>Transfer Player:[675: Webarak-Nest], (018,006), Up, No Fade
 @>Change Screen Color Tone: (0,0,0,0), @6
 @>Set Move Route: Player
  :              : $>Change Speed: 2
@@ -493111,7 +495726,7 @@ List of Event Commands:
 @>Change Screen Color Tone: (-255,-255,-255,0), @35
 @>Wait: 35 frame(s)
 @>Play SE: 'Door exit', 100, 100
-@>Transfer Player:[675: MAP675], (029,012), Up, No Fade
+@>Transfer Player:[675: Webarak-Nest], (029,012), Up, No Fade
 @>Change Screen Color Tone: (0,0,0,0), @6
 @>Set Move Route: Player
  :              : $>Change Speed: 2
@@ -493144,7 +495759,7 @@ List of Event Commands:
 @>Change Screen Color Tone: (255,255,255,255), @6
 @>Wait: 8 frame(s)
 @>Script: pbCaveEntrance
-@>Transfer Player:[677: MAP677], (002,019), Up, No Fade
+@>Transfer Player:[677: Webarak-Nest], (002,019), Up, No Fade
 @>Change Screen Color Tone: (0,0,0,0), @6
 @>Wait: 8 frame(s)
 @>
@@ -493196,12 +495811,38 @@ List of Event Commands:
 @>
 
 #------------------------------------------------------------------------------
+Event ID: 005
+Event Name: EV005
+(X,Y): (006,009)
+
+Page #1
+Conditions
+None
+
+Graphic: trainer_JUGGLER
+
+Autonomous Movement
+Type: Random
+Speed: 3: Slow
+Freq: 3: Low
+Options Enabled
+Move Animation
+Trigger: Action Button
+
+List of Event Commands:
+@>Text: Jedes Mal, wenn ich hierher komme, stehen meine 
+ :    : Haare zu Berge.
+@>Text: Die Webarak scheinen irgendwie elektrisch zu sein.
+@>
+
+#------------------------------------------------------------------------------
 
 #==============================================================================
 Map ID: 677
-Map Name: MAP677
+Map Name: Webarak-Nest
 Tileset: 146: Höhle Webarak
 Width: 50, Height: 40
+Auto-Change BGM: Webarak-Nest
 
 #------------------------------------------------------------------------------
 Event ID: 001
@@ -493225,7 +495866,7 @@ List of Event Commands:
 @>Change Screen Color Tone: (255,255,255,255), @6
 @>Wait: 8 frame(s)
 @>Script: pbCaveEntrance
-@>Transfer Player:[678: MAP678], (010,012), Up, No Fade
+@>Transfer Player:[678: Webarak-Nest], (010,012), Up, No Fade
 @>Change Screen Color Tone: (0,0,0,0), @6
 @>Wait: 8 frame(s)
 @>
@@ -493276,7 +495917,7 @@ List of Event Commands:
 @>Play SE: 'Door exit', 100, 100
 @>Change Screen Color Tone: (-255,-255,-255,0), @6
 @>Wait: 8 frame(s)
-@>Transfer Player:[676: MAP676], (007,003), Down, No Fade
+@>Transfer Player:[676: Webarak-Nest], (007,003), Down, No Fade
 @>Change Screen Color Tone: (0,0,0,0), @6
 @>Wait: 8 frame(s)
 @>
@@ -494663,12 +497304,66 @@ List of Event Commands:
 @>
 
 #------------------------------------------------------------------------------
+Event ID: 056
+Event Name: EV056
+(X,Y): (019,015)
+
+Page #1
+Conditions
+None
+
+Graphic: trainer_SCIENTIST_M5
+
+Autonomous Movement
+Type: Random
+Speed: 3: Slow
+Freq: 3: Low
+Options Enabled
+Move Animation
+Trigger: Action Button
+
+List of Event Commands:
+@>Text: Weißt du wie viele Webarak hier leben?
+@>Text: Hunderte!
+@>Text: Irgendeins davon muss doch einfach shiny sein.
+@>Text: Das ist reine Mathematik.
+@>
+
+#------------------------------------------------------------------------------
+Event ID: 057
+Event Name: EV057
+(X,Y): (045,033)
+
+Page #1
+Conditions
+None
+
+Graphic: trainer_PSYCHIC_M3
+
+Autonomous Movement
+Type: Random
+Speed: 3: Slow
+Freq: 3: Low
+Options Enabled
+Move Animation
+Trigger: Action Button
+
+List of Event Commands:
+@>Text: Hier soll es ein Ariados mit der Fähigkeit Schildlos 
+ :    : geben.
+@>Text: Seine Attacken treffen dadurch immer.
+@>Text: Aber deine auch!
+@>Text: Ein fairer Deal, wenn du mich fragst.
+@>
+
+#------------------------------------------------------------------------------
 
 #==============================================================================
 Map ID: 678
-Map Name: MAP678
+Map Name: Webarak-Nest
 Tileset: 146: Höhle Webarak
 Width: 20, Height: 20
+Auto-Change BGM: Webarak-Nest
 
 #------------------------------------------------------------------------------
 Event ID: 001
@@ -494688,6 +497383,24 @@ Freq: 1: Lowest
 Options Enabled
 Move Animation
 Stop Animation
+Direction Fix
+Trigger: Action Button
+
+List of Event Commands:
+@>
+
+Page #2
+Conditions
+Switch 0405: Ariados is ON
+
+Graphic: SPINARAK
+
+Autonomous Movement
+Type: Fixed
+Speed: 1: Slowest
+Freq: 1: Lowest
+Options Enabled
+Move Animation
 Direction Fix
 Trigger: Action Button
 
@@ -494718,6 +497431,24 @@ Trigger: Action Button
 List of Event Commands:
 @>
 
+Page #2
+Conditions
+Switch 0405: Ariados is ON
+
+Graphic: SPINARAK
+
+Autonomous Movement
+Type: Fixed
+Speed: 1: Slowest
+Freq: 1: Lowest
+Options Enabled
+Move Animation
+Direction Fix
+Trigger: Action Button
+
+List of Event Commands:
+@>
+
 #------------------------------------------------------------------------------
 Event ID: 003
 Event Name: EV003
@@ -494736,6 +497467,24 @@ Freq: 1: Lowest
 Options Enabled
 Move Animation
 Stop Animation
+Direction Fix
+Trigger: Action Button
+
+List of Event Commands:
+@>
+
+Page #2
+Conditions
+Switch 0405: Ariados is ON
+
+Graphic: SPINARAK
+
+Autonomous Movement
+Type: Fixed
+Speed: 1: Slowest
+Freq: 1: Lowest
+Options Enabled
+Move Animation
 Direction Fix
 Trigger: Action Button
 
@@ -494766,6 +497515,24 @@ Trigger: Action Button
 List of Event Commands:
 @>
 
+Page #2
+Conditions
+Switch 0405: Ariados is ON
+
+Graphic: SPINARAK
+
+Autonomous Movement
+Type: Fixed
+Speed: 1: Slowest
+Freq: 1: Lowest
+Options Enabled
+Move Animation
+Direction Fix
+Trigger: Action Button
+
+List of Event Commands:
+@>
+
 #------------------------------------------------------------------------------
 Event ID: 005
 Event Name: EV005
@@ -494784,6 +497551,24 @@ Freq: 1: Lowest
 Options Enabled
 Move Animation
 Stop Animation
+Direction Fix
+Trigger: Action Button
+
+List of Event Commands:
+@>
+
+Page #2
+Conditions
+Switch 0405: Ariados is ON
+
+Graphic: SPINARAK
+
+Autonomous Movement
+Type: Fixed
+Speed: 1: Slowest
+Freq: 1: Lowest
+Options Enabled
+Move Animation
 Direction Fix
 Trigger: Action Button
 
@@ -494814,6 +497599,24 @@ Trigger: Action Button
 List of Event Commands:
 @>
 
+Page #2
+Conditions
+Switch 0405: Ariados is ON
+
+Graphic: SPINARAK
+
+Autonomous Movement
+Type: Fixed
+Speed: 1: Slowest
+Freq: 1: Lowest
+Options Enabled
+Move Animation
+Direction Fix
+Trigger: Action Button
+
+List of Event Commands:
+@>
+
 #------------------------------------------------------------------------------
 Event ID: 007
 Event Name: EV007
@@ -494832,6 +497635,24 @@ Freq: 1: Lowest
 Options Enabled
 Move Animation
 Stop Animation
+Direction Fix
+Trigger: Action Button
+
+List of Event Commands:
+@>
+
+Page #2
+Conditions
+Switch 0405: Ariados is ON
+
+Graphic: SPINARAK
+
+Autonomous Movement
+Type: Fixed
+Speed: 1: Slowest
+Freq: 1: Lowest
+Options Enabled
+Move Animation
 Direction Fix
 Trigger: Action Button
 
@@ -494862,6 +497683,24 @@ Trigger: Action Button
 List of Event Commands:
 @>
 
+Page #2
+Conditions
+Switch 0405: Ariados is ON
+
+Graphic: SPINARAK
+
+Autonomous Movement
+Type: Fixed
+Speed: 1: Slowest
+Freq: 1: Lowest
+Options Enabled
+Move Animation
+Direction Fix
+Trigger: Action Button
+
+List of Event Commands:
+@>
+
 #------------------------------------------------------------------------------
 Event ID: 009
 Event Name: EV009
@@ -494886,6 +497725,24 @@ Trigger: Action Button
 List of Event Commands:
 @>
 
+Page #2
+Conditions
+Switch 0405: Ariados is ON
+
+Graphic: SPINARAK
+
+Autonomous Movement
+Type: Fixed
+Speed: 1: Slowest
+Freq: 1: Lowest
+Options Enabled
+Move Animation
+Direction Fix
+Trigger: Action Button
+
+List of Event Commands:
+@>
+
 #------------------------------------------------------------------------------
 Event ID: 010
 Event Name: EV010
@@ -494904,6 +497761,24 @@ Freq: 1: Lowest
 Options Enabled
 Move Animation
 Stop Animation
+Direction Fix
+Trigger: Action Button
+
+List of Event Commands:
+@>
+
+Page #2
+Conditions
+Switch 0405: Ariados is ON
+
+Graphic: SPINARAK
+
+Autonomous Movement
+Type: Fixed
+Speed: 1: Slowest
+Freq: 1: Lowest
+Options Enabled
+Move Animation
 Direction Fix
 Trigger: Action Button
 
@@ -494982,6 +497857,24 @@ Trigger: Action Button
 List of Event Commands:
 @>
 
+Page #2
+Conditions
+Switch 0405: Ariados is ON
+
+Graphic: SPINARAK
+
+Autonomous Movement
+Type: Fixed
+Speed: 1: Slowest
+Freq: 1: Lowest
+Options Enabled
+Move Animation
+Direction Fix
+Trigger: Action Button
+
+List of Event Commands:
+@>
+
 #------------------------------------------------------------------------------
 Event ID: 014
 Event Name: Exit
@@ -495003,9 +497896,27 @@ List of Event Commands:
 @>Play SE: 'Door exit', 100, 100
 @>Change Screen Color Tone: (-255,-255,-255,0), @6
 @>Wait: 8 frame(s)
-@>Transfer Player:[677: MAP677], (044,003), Down, No Fade
+@>Transfer Player:[677: Webarak-Nest], (044,003), Down, No Fade
 @>Change Screen Color Tone: (0,0,0,0), @6
 @>Wait: 8 frame(s)
+@>
+
+Page #2
+Conditions
+Switch 0405: Ariados is ON
+
+Graphic: SPINARAK
+
+Autonomous Movement
+Type: Fixed
+Speed: 1: Slowest
+Freq: 1: Lowest
+Options Enabled
+Move Animation
+Direction Fix
+Trigger: Action Button
+
+List of Event Commands:
 @>
 
 #------------------------------------------------------------------------------
@@ -495027,6 +497938,4482 @@ Trigger: Parallel Process
 
 List of Event Commands:
 @>Change Map Settings:Fog = 'Webarak 2', 0, 255, Normal, 100, 0, 0
+@>
+
+Page #2
+Conditions
+Switch 0405: Ariados is ON
+
+Autonomous Movement
+Type: Fixed
+Speed: 3: Slow
+Freq: 3: Low
+Options Enabled
+Move Animation
+Trigger: Action Button
+
+List of Event Commands:
+@>
+
+#------------------------------------------------------------------------------
+Event ID: 016
+Event Name: Ariados
+(X,Y): (010,007)
+
+Page #1
+Conditions
+None
+
+Graphic: ARIADOS
+
+Autonomous Movement
+Type: Fixed
+Speed: 1: Slowest
+Freq: 1: Lowest
+Options Enabled
+Move Animation
+Trigger: Action Button
+
+List of Event Commands:
+@>
+
+Page #2
+Conditions
+Self Switch A is ON
+
+Autonomous Movement
+Type: Fixed
+Speed: 3: Slow
+Freq: 3: Low
+Options Enabled
+Move Animation
+Trigger: Action Button
+
+List of Event Commands:
+@>
+
+Page #3
+Conditions
+Switch 0406: BugContest is ON
+
+Autonomous Movement
+Type: Fixed
+Speed: 3: Slow
+Freq: 3: Low
+Options Enabled
+Move Animation
+Trigger: Action Button
+
+List of Event Commands:
+@>
+
+#------------------------------------------------------------------------------
+Event ID: 017
+Event Name: EV017
+(X,Y): (010,009)
+
+Page #1
+Conditions
+None
+
+Autonomous Movement
+Type: Fixed
+Speed: 3: Slow
+Freq: 3: Low
+Options Enabled
+Move Animation
+Trigger: Player Touch
+
+List of Event Commands:
+@>Change Screen Color Tone: (-80,-80,-80,0), @40
+@>Memorize BGM/BGS
+@>Fade Out BGM: 3 sec.
+@>Play SE: 'Impact', 80, 100
+@>Wait: 60 frame(s)
+@>Play SE: 'Spider Attack', 100, 100
+@>Play SE: 'Spider Attack 2', 100, 100
+@>Play SE: 'Spider Attack 3', 100, 100
+@>Play SE: 'Spider Attack 4', 100, 100
+@>Play SE: 'Spider Attack 5', 100, 100
+@>Control Switches: [0405: Ariados] = ON
+@>Change Map Settings:Fog = 'Webarak 6', 0, 255, Normal, 100, 0, 0
+@>Wait: 15 frame(s)
+@>Play SE: 'Spider Attack 2', 100, 70
+@>Set Move Route: [Ariados]
+ :              : $>Through ON
+ :              : $>Stop Animation ON
+ :              : $>Wait: 20 frame(s)
+ :              : $>Move Down
+ :              : $>SE: 'Spider Attack 3', 100, 50
+ :              : $>Move Down
+ :              : $>Wait: 20 frame(s)
+ :              : $>Through OFF
+@>Wait: 60 frame(s)
+@>Play SE: 'ARIADOS', 100, 100
+@>Wait: 10 frame(s)
+@>Script: setBattleRule("cannotRun")
+:       : setBattleRule("outcome", 48)
+:       : setBattleRule("databoxStyle", 
+:       : [:Basic, "{1}"])
+:       : setBattleRule("editWildPokemon", {
+:       : :form    => 1,
+:       : :ability => :NOGUARD,
+:       : :moves   => [:VOLTTACKLE, :TOXIC, 
+:       : :BUGBITE, :KNOCKOFF],
+:       : :iv      => 31 })
+:       : WildBattle.start(:ARIADOS, 20)
+@>Conditional Branch: Variable [0048: Kampf-Ergebnis] == 2
+ @>Exit Event Processing
+ @>
+: Else
+ @>Change Screen Color Tone: (0,0,0,0), @40
+ @>Restore BGM/BGS
+ @>Script: pbSetSelfSwitch(16,"A",true)
+ @>Control Switches: [0405: Ariados] = OFF
+ @>Script: pbReceiveItem(:ELECTRICGEM,10)
+ @>Control Self Switch: A =ON
+ @>
+: Branch End
+@>
+
+Page #2
+Conditions
+Self Switch A is ON
+
+Autonomous Movement
+Type: Fixed
+Speed: 3: Slow
+Freq: 3: Low
+Options Enabled
+Move Animation
+Trigger: Action Button
+
+List of Event Commands:
+@>
+
+Page #3
+Conditions
+Switch 0406: BugContest is ON
+
+Autonomous Movement
+Type: Fixed
+Speed: 3: Slow
+Freq: 3: Low
+Options Enabled
+Move Animation
+Trigger: Action Button
+
+List of Event Commands:
+@>
+
+#------------------------------------------------------------------------------
+
+#==============================================================================
+Map ID: 679
+Map Name: MAP679
+Tileset: 147: Zwischenwelt
+Width: 55, Height: 41
+
+#------------------------------------------------------------------------------
+Event ID: 001
+Event Name: Cave entrance
+(X,Y): (047,026)
+
+Page #1
+Conditions
+None
+
+Autonomous Movement
+Type: Fixed
+Speed: 3: Slow
+Freq: 3: Low
+Options Enabled
+Move Animation
+Trigger: Event Touch
+
+List of Event Commands:
+@>Play SE: 'Door exit', 100, 100
+@>Change Screen Color Tone: (-255,-255,-255,0), @6
+@>Wait: 8 frame(s)
+@>Transfer Player:[681: MAP681], (004,042), Right, No Fade
+@>Change Screen Color Tone: (0,0,0,0), @6
+@>Wait: 6 frame(s)
+@>
+
+Page #2
+Conditions
+Switch 0022: s:tsOff?("A") is ON
+
+Autonomous Movement
+Type: Fixed
+Speed: 3: Slow
+Freq: 3: Low
+Options Enabled
+Move Animation
+Trigger: Autorun
+
+List of Event Commands:
+@>Conditional Branch: Script: get_self.onEvent?
+ @>Script: Followers.hide_followers
+ @>Set Move Route: Player
+                   (Ignore If Can't Move)
+  :              : $>Through ON
+  :              : $>Move Left
+  :              : $>Through OFF
+ @>Wait: 6 frame(s)
+ @>Script: Followers.put_followers_on_player
+ @>
+: Branch End
+@>Script: setTempSwitchOn("A")
+@>
+
+#------------------------------------------------------------------------------
+Event ID: 002
+Event Name: Haus 1 Tür
+(X,Y): (038,000)
+
+Page #1
+Conditions
+None
+
+Autonomous Movement
+Type: Fixed
+Speed: 3: Slow
+Freq: 3: Low
+Options Enabled
+Move Animation
+Trigger: Player Touch
+
+List of Event Commands:
+@>Play SE: 'Door exit', 100, 100
+@>Change Screen Color Tone: (-255,-255,-255,0), @6
+@>Wait: 8 frame(s)
+@>Transfer Player:[680: MAP680], (017,032), Up, No Fade
+@>Change Screen Color Tone: (0,0,0,0), @6
+@>Wait: 8 frame(s)
+@>
+
+#------------------------------------------------------------------------------
+Event ID: 003
+Event Name: Haus 1 Tür
+(X,Y): (039,000)
+
+Page #1
+Conditions
+None
+
+Autonomous Movement
+Type: Fixed
+Speed: 3: Slow
+Freq: 3: Low
+Options Enabled
+Move Animation
+Trigger: Player Touch
+
+List of Event Commands:
+@>Play SE: 'Door exit', 100, 100
+@>Change Screen Color Tone: (-255,-255,-255,0), @6
+@>Wait: 8 frame(s)
+@>Transfer Player:[680: MAP680], (018,032), Up, No Fade
+@>Change Screen Color Tone: (0,0,0,0), @6
+@>Wait: 8 frame(s)
+@>
+
+#------------------------------------------------------------------------------
+Event ID: 004
+Event Name: Haus 1 Tür
+(X,Y): (040,000)
+
+Page #1
+Conditions
+None
+
+Autonomous Movement
+Type: Fixed
+Speed: 3: Slow
+Freq: 3: Low
+Options Enabled
+Move Animation
+Trigger: Player Touch
+
+List of Event Commands:
+@>Play SE: 'Door exit', 100, 100
+@>Change Screen Color Tone: (-255,-255,-255,0), @6
+@>Wait: 8 frame(s)
+@>Transfer Player:[680: MAP680], (019,032), Up, No Fade
+@>Change Screen Color Tone: (0,0,0,0), @6
+@>Wait: 8 frame(s)
+@>
+
+#------------------------------------------------------------------------------
+Event ID: 005
+Event Name: Haus 1 Tür
+(X,Y): (041,000)
+
+Page #1
+Conditions
+None
+
+Autonomous Movement
+Type: Fixed
+Speed: 3: Slow
+Freq: 3: Low
+Options Enabled
+Move Animation
+Trigger: Player Touch
+
+List of Event Commands:
+@>Play SE: 'Door exit', 100, 100
+@>Change Screen Color Tone: (-255,-255,-255,0), @6
+@>Wait: 8 frame(s)
+@>Transfer Player:[680: MAP680], (020,032), Up, No Fade
+@>Change Screen Color Tone: (0,0,0,0), @6
+@>Wait: 8 frame(s)
+@>
+
+#------------------------------------------------------------------------------
+
+#==============================================================================
+Map ID: 680
+Map Name: MAP680
+Tileset: 147: Zwischenwelt
+Width: 40, Height: 34
+
+#------------------------------------------------------------------------------
+Event ID: 001
+Event Name: Haus 1 Tür
+(X,Y): (017,033)
+
+Page #1
+Conditions
+None
+
+Autonomous Movement
+Type: Fixed
+Speed: 3: Slow
+Freq: 3: Low
+Options Enabled
+Move Animation
+Trigger: Player Touch
+
+List of Event Commands:
+@>Play SE: 'Door exit', 100, 100
+@>Change Screen Color Tone: (-255,-255,-255,0), @6
+@>Wait: 8 frame(s)
+@>Transfer Player:[679: MAP679], (038,001), Down, No Fade
+@>Change Screen Color Tone: (0,0,0,0), @6
+@>Wait: 8 frame(s)
+@>
+
+#------------------------------------------------------------------------------
+Event ID: 002
+Event Name: Haus 1 Tür
+(X,Y): (018,033)
+
+Page #1
+Conditions
+None
+
+Autonomous Movement
+Type: Fixed
+Speed: 3: Slow
+Freq: 3: Low
+Options Enabled
+Move Animation
+Trigger: Player Touch
+
+List of Event Commands:
+@>Play SE: 'Door exit', 100, 100
+@>Change Screen Color Tone: (-255,-255,-255,0), @6
+@>Wait: 8 frame(s)
+@>Transfer Player:[679: MAP679], (039,001), Down, No Fade
+@>Change Screen Color Tone: (0,0,0,0), @6
+@>Wait: 8 frame(s)
+@>
+
+#------------------------------------------------------------------------------
+Event ID: 003
+Event Name: Haus 1 Tür
+(X,Y): (019,033)
+
+Page #1
+Conditions
+None
+
+Autonomous Movement
+Type: Fixed
+Speed: 3: Slow
+Freq: 3: Low
+Options Enabled
+Move Animation
+Trigger: Player Touch
+
+List of Event Commands:
+@>Play SE: 'Door exit', 100, 100
+@>Change Screen Color Tone: (-255,-255,-255,0), @6
+@>Wait: 8 frame(s)
+@>Transfer Player:[679: MAP679], (040,001), Down, No Fade
+@>Change Screen Color Tone: (0,0,0,0), @6
+@>Wait: 8 frame(s)
+@>
+
+#------------------------------------------------------------------------------
+Event ID: 004
+Event Name: Haus 1 Tür
+(X,Y): (020,033)
+
+Page #1
+Conditions
+None
+
+Autonomous Movement
+Type: Fixed
+Speed: 3: Slow
+Freq: 3: Low
+Options Enabled
+Move Animation
+Trigger: Player Touch
+
+List of Event Commands:
+@>Play SE: 'Door exit', 100, 100
+@>Change Screen Color Tone: (-255,-255,-255,0), @6
+@>Wait: 8 frame(s)
+@>Transfer Player:[679: MAP679], (041,001), Down, No Fade
+@>Change Screen Color Tone: (0,0,0,0), @6
+@>Wait: 8 frame(s)
+@>
+
+#------------------------------------------------------------------------------
+Event ID: 005
+Event Name: Cave entrance
+(X,Y): (009,019)
+
+Page #1
+Conditions
+None
+
+Autonomous Movement
+Type: Fixed
+Speed: 3: Slow
+Freq: 3: Low
+Options Enabled
+Move Animation
+Trigger: Player Touch
+
+List of Event Commands:
+@>Play SE: 'Door exit', 100, 100
+@>Change Screen Color Tone: (-255,-255,-255,0), @6
+@>Wait: 8 frame(s)
+@>Transfer Player:[691: MAP691], (009,012), Up, No Fade
+@>Change Screen Color Tone: (0,0,0,0), @6
+@>Wait: 6 frame(s)
+@>
+
+Page #2
+Conditions
+Switch 0022: s:tsOff?("A") is ON
+
+Autonomous Movement
+Type: Fixed
+Speed: 3: Slow
+Freq: 3: Low
+Options Enabled
+Move Animation
+Trigger: Autorun
+
+List of Event Commands:
+@>Conditional Branch: Script: get_self.onEvent?
+ @>Script: Followers.hide_followers
+ @>Set Move Route: Player
+                   (Ignore If Can't Move)
+  :              : $>Through ON
+  :              : $>Move Down
+  :              : $>Through OFF
+ @>Wait: 6 frame(s)
+ @>Script: Followers.put_followers_on_player
+ @>
+: Branch End
+@>Script: setTempSwitchOn("A")
+@>
+
+#------------------------------------------------------------------------------
+Event ID: 006
+Event Name: Cave entrance
+(X,Y): (008,007)
+
+Page #1
+Conditions
+None
+
+Autonomous Movement
+Type: Fixed
+Speed: 3: Slow
+Freq: 3: Low
+Options Enabled
+Move Animation
+Trigger: Player Touch
+
+List of Event Commands:
+@>Play SE: 'Door exit', 100, 100
+@>Change Screen Color Tone: (-255,-255,-255,0), @6
+@>Wait: 8 frame(s)
+@>Transfer Player:[688: MAP688], (009,012), Up, No Fade
+@>Change Screen Color Tone: (0,0,0,0), @6
+@>Wait: 6 frame(s)
+@>
+
+Page #2
+Conditions
+Switch 0022: s:tsOff?("A") is ON
+
+Autonomous Movement
+Type: Fixed
+Speed: 3: Slow
+Freq: 3: Low
+Options Enabled
+Move Animation
+Trigger: Autorun
+
+List of Event Commands:
+@>Conditional Branch: Script: get_self.onEvent?
+ @>Script: Followers.hide_followers
+ @>Set Move Route: Player
+                   (Ignore If Can't Move)
+  :              : $>Through ON
+  :              : $>Move Down
+  :              : $>Through OFF
+ @>Wait: 6 frame(s)
+ @>Script: Followers.put_followers_on_player
+ @>
+: Branch End
+@>Script: setTempSwitchOn("A")
+@>
+
+#------------------------------------------------------------------------------
+Event ID: 007
+Event Name: Cave entrance
+(X,Y): (031,014)
+
+Page #1
+Conditions
+None
+
+Autonomous Movement
+Type: Fixed
+Speed: 3: Slow
+Freq: 3: Low
+Options Enabled
+Move Animation
+Trigger: Player Touch
+
+List of Event Commands:
+@>Play SE: 'Door exit', 100, 100
+@>Change Screen Color Tone: (-255,-255,-255,0), @6
+@>Wait: 8 frame(s)
+@>Transfer Player:[689: MAP689], (009,012), Up, No Fade
+@>Change Screen Color Tone: (0,0,0,0), @6
+@>Wait: 6 frame(s)
+@>
+
+Page #2
+Conditions
+Switch 0022: s:tsOff?("A") is ON
+
+Autonomous Movement
+Type: Fixed
+Speed: 3: Slow
+Freq: 3: Low
+Options Enabled
+Move Animation
+Trigger: Autorun
+
+List of Event Commands:
+@>Conditional Branch: Script: get_self.onEvent?
+ @>Script: Followers.hide_followers
+ @>Set Move Route: Player
+                   (Ignore If Can't Move)
+  :              : $>Through ON
+  :              : $>Move Down
+  :              : $>Through OFF
+ @>Wait: 6 frame(s)
+ @>Script: Followers.put_followers_on_player
+ @>
+: Branch End
+@>Script: setTempSwitchOn("A")
+@>
+
+#------------------------------------------------------------------------------
+Event ID: 008
+Event Name: Cave entrance
+(X,Y): (027,021)
+
+Page #1
+Conditions
+None
+
+Autonomous Movement
+Type: Fixed
+Speed: 3: Slow
+Freq: 3: Low
+Options Enabled
+Move Animation
+Trigger: Player Touch
+
+List of Event Commands:
+@>Play SE: 'Door exit', 100, 100
+@>Change Screen Color Tone: (-255,-255,-255,0), @6
+@>Wait: 8 frame(s)
+@>Transfer Player:[690: MAP690], (009,012), Up, No Fade
+@>Change Screen Color Tone: (0,0,0,0), @6
+@>Wait: 6 frame(s)
+@>
+
+Page #2
+Conditions
+Switch 0022: s:tsOff?("A") is ON
+
+Autonomous Movement
+Type: Fixed
+Speed: 3: Slow
+Freq: 3: Low
+Options Enabled
+Move Animation
+Trigger: Autorun
+
+List of Event Commands:
+@>Conditional Branch: Script: get_self.onEvent?
+ @>Script: Followers.hide_followers
+ @>Set Move Route: Player
+                   (Ignore If Can't Move)
+  :              : $>Through ON
+  :              : $>Move Down
+  :              : $>Through OFF
+ @>Wait: 6 frame(s)
+ @>Script: Followers.put_followers_on_player
+ @>
+: Branch End
+@>Script: setTempSwitchOn("A")
+@>
+
+#------------------------------------------------------------------------------
+Event ID: 009
+Event Name: Cave entrance
+(X,Y): (018,012)
+
+Page #1
+Conditions
+None
+
+Autonomous Movement
+Type: Fixed
+Speed: 3: Slow
+Freq: 3: Low
+Options Enabled
+Move Animation
+Trigger: Player Touch
+
+List of Event Commands:
+@>Play SE: 'Door exit', 100, 100
+@>Change Screen Color Tone: (-255,-255,-255,0), @6
+@>Wait: 8 frame(s)
+@>Transfer Player:[692: MAP692], (009,014), Up, No Fade
+@>Change Screen Color Tone: (0,0,0,0), @6
+@>Wait: 6 frame(s)
+@>
+
+Page #2
+Conditions
+Switch 0022: s:tsOff?("A") is ON
+
+Autonomous Movement
+Type: Fixed
+Speed: 3: Slow
+Freq: 3: Low
+Options Enabled
+Move Animation
+Trigger: Autorun
+
+List of Event Commands:
+@>Conditional Branch: Script: get_self.onEvent?
+ @>Script: Followers.hide_followers
+ @>Set Move Route: Player
+                   (Ignore If Can't Move)
+  :              : $>Through ON
+  :              : $>Move Down
+  :              : $>Through OFF
+ @>Wait: 6 frame(s)
+ @>Script: Followers.put_followers_on_player
+ @>
+: Branch End
+@>Script: setTempSwitchOn("A")
+@>
+
+#------------------------------------------------------------------------------
+Event ID: 010
+Event Name: Cave entrance
+(X,Y): (019,012)
+
+Page #1
+Conditions
+None
+
+Autonomous Movement
+Type: Fixed
+Speed: 3: Slow
+Freq: 3: Low
+Options Enabled
+Move Animation
+Trigger: Player Touch
+
+List of Event Commands:
+@>Play SE: 'Door exit', 100, 100
+@>Change Screen Color Tone: (-255,-255,-255,0), @6
+@>Wait: 8 frame(s)
+@>Transfer Player:[692: MAP692], (009,014), Up, No Fade
+@>Change Screen Color Tone: (0,0,0,0), @6
+@>Wait: 6 frame(s)
+@>
+
+Page #2
+Conditions
+Switch 0022: s:tsOff?("A") is ON
+
+Autonomous Movement
+Type: Fixed
+Speed: 3: Slow
+Freq: 3: Low
+Options Enabled
+Move Animation
+Trigger: Autorun
+
+List of Event Commands:
+@>Conditional Branch: Script: get_self.onEvent?
+ @>Script: Followers.hide_followers
+ @>Set Move Route: Player
+                   (Ignore If Can't Move)
+  :              : $>Through ON
+  :              : $>Move Down
+  :              : $>Through OFF
+ @>Wait: 6 frame(s)
+ @>Script: Followers.put_followers_on_player
+ @>
+: Branch End
+@>Script: setTempSwitchOn("A")
+@>
+
+#------------------------------------------------------------------------------
+
+#==============================================================================
+Map ID: 681
+Map Name: MAP681
+Tileset: 148: Höhle
+Width: 40, Height: 52
+
+#------------------------------------------------------------------------------
+Event ID: 001
+Event Name: EV001
+(X,Y): (000,000)
+
+Page #1
+Conditions
+None
+
+Autonomous Movement
+Type: Fixed
+Speed: 3: Slow
+Freq: 3: Low
+Options Enabled
+Move Animation
+Trigger: Parallel Process
+
+List of Event Commands:
+@>Conditional Branch: Switch [0015: s:PBDayNight.isNight?] == ON
+ @>Change Map Settings:Fog = 'ZW Höhle 1 Nacht', 0, 255, Normal, 100, 0, 0
+ @>
+: Else
+ @>Change Map Settings:Fog = 'ZW Höhle 1', 0, 255, Normal, 100, 0, 0
+ @>
+: Branch End
+@>
+
+#------------------------------------------------------------------------------
+Event ID: 002
+Event Name: Cave entrance
+(X,Y): (026,017)
+
+Page #1
+Conditions
+None
+
+Autonomous Movement
+Type: Fixed
+Speed: 3: Slow
+Freq: 3: Low
+Options Enabled
+Move Animation
+Trigger: Event Touch
+
+List of Event Commands:
+@>Play SE: 'Door exit', 100, 100
+@>Change Screen Color Tone: (-255,-255,-255,0), @6
+@>Wait: 8 frame(s)
+@>Transfer Player:[684: MAP684], (006,048), Right, No Fade
+@>Change Screen Color Tone: (0,0,0,0), @6
+@>Wait: 6 frame(s)
+@>
+
+Page #2
+Conditions
+Switch 0022: s:tsOff?("A") is ON
+
+Autonomous Movement
+Type: Fixed
+Speed: 3: Slow
+Freq: 3: Low
+Options Enabled
+Move Animation
+Trigger: Autorun
+
+List of Event Commands:
+@>Conditional Branch: Script: get_self.onEvent?
+ @>Script: Followers.hide_followers
+ @>Set Move Route: Player
+                   (Ignore If Can't Move)
+  :              : $>Through ON
+  :              : $>Move Left
+  :              : $>Through OFF
+ @>Wait: 6 frame(s)
+ @>Script: Followers.put_followers_on_player
+ @>
+: Branch End
+@>Script: setTempSwitchOn("A")
+@>
+
+#------------------------------------------------------------------------------
+Event ID: 003
+Event Name: Cave entrance
+(X,Y): (004,042)
+
+Page #1
+Conditions
+None
+
+Autonomous Movement
+Type: Fixed
+Speed: 3: Slow
+Freq: 3: Low
+Options Enabled
+Move Animation
+Trigger: Event Touch
+
+List of Event Commands:
+@>Play SE: 'Door exit', 100, 100
+@>Change Screen Color Tone: (-255,-255,-255,0), @6
+@>Wait: 8 frame(s)
+@>Transfer Player:[679: MAP679], (047,026), Left, No Fade
+@>Change Screen Color Tone: (0,0,0,0), @6
+@>Wait: 6 frame(s)
+@>
+
+Page #2
+Conditions
+Switch 0022: s:tsOff?("A") is ON
+
+Autonomous Movement
+Type: Fixed
+Speed: 3: Slow
+Freq: 3: Low
+Options Enabled
+Move Animation
+Trigger: Autorun
+
+List of Event Commands:
+@>Conditional Branch: Script: get_self.onEvent?
+ @>Script: Followers.hide_followers
+ @>Set Move Route: Player
+                   (Ignore If Can't Move)
+  :              : $>Through ON
+  :              : $>Move Right
+  :              : $>Through OFF
+ @>Wait: 6 frame(s)
+ @>Script: Followers.put_followers_on_player
+ @>
+: Branch End
+@>Script: setTempSwitchOn("A")
+@>
+
+#------------------------------------------------------------------------------
+Event ID: 004
+Event Name: Cave entrance
+(X,Y): (029,007)
+
+Page #1
+Conditions
+None
+
+Autonomous Movement
+Type: Fixed
+Speed: 3: Slow
+Freq: 3: Low
+Options Enabled
+Move Animation
+Trigger: Event Touch
+
+List of Event Commands:
+@>Play SE: 'Door exit', 100, 100
+@>Change Screen Color Tone: (-255,-255,-255,0), @6
+@>Wait: 8 frame(s)
+@>Transfer Player:[684: MAP684], (008,014), Right, No Fade
+@>Change Screen Color Tone: (0,0,0,0), @6
+@>Wait: 6 frame(s)
+@>
+
+Page #2
+Conditions
+Switch 0022: s:tsOff?("A") is ON
+
+Autonomous Movement
+Type: Fixed
+Speed: 3: Slow
+Freq: 3: Low
+Options Enabled
+Move Animation
+Trigger: Autorun
+
+List of Event Commands:
+@>Conditional Branch: Script: get_self.onEvent?
+ @>Script: Followers.hide_followers
+ @>Set Move Route: Player
+                   (Ignore If Can't Move)
+  :              : $>Through ON
+  :              : $>Move Left
+  :              : $>Through OFF
+ @>Wait: 6 frame(s)
+ @>Script: Followers.put_followers_on_player
+ @>
+: Branch End
+@>Script: setTempSwitchOn("A")
+@>
+
+#------------------------------------------------------------------------------
+Event ID: 005
+Event Name: Cave entrance
+(X,Y): (006,023)
+
+Page #1
+Conditions
+None
+
+Autonomous Movement
+Type: Fixed
+Speed: 3: Slow
+Freq: 3: Low
+Options Enabled
+Move Animation
+Trigger: Event Touch
+
+List of Event Commands:
+@>Play SE: 'Door exit', 100, 100
+@>Change Screen Color Tone: (-255,-255,-255,0), @6
+@>Wait: 8 frame(s)
+@>Transfer Player:[682: MAP682], (028,039), Left, No Fade
+@>Change Screen Color Tone: (0,0,0,0), @6
+@>Wait: 6 frame(s)
+@>
+
+Page #2
+Conditions
+Switch 0022: s:tsOff?("A") is ON
+
+Autonomous Movement
+Type: Fixed
+Speed: 3: Slow
+Freq: 3: Low
+Options Enabled
+Move Animation
+Trigger: Autorun
+
+List of Event Commands:
+@>Conditional Branch: Script: get_self.onEvent?
+ @>Script: Followers.hide_followers
+ @>Set Move Route: Player
+                   (Ignore If Can't Move)
+  :              : $>Through ON
+  :              : $>Move Right
+  :              : $>Through OFF
+ @>Wait: 6 frame(s)
+ @>Script: Followers.put_followers_on_player
+ @>
+: Branch End
+@>Script: setTempSwitchOn("A")
+@>
+
+#------------------------------------------------------------------------------
+Event ID: 006
+Event Name: Cave entrance
+(X,Y): (023,029)
+
+Page #1
+Conditions
+None
+
+Autonomous Movement
+Type: Fixed
+Speed: 3: Slow
+Freq: 3: Low
+Options Enabled
+Move Animation
+Trigger: Event Touch
+
+List of Event Commands:
+@>Play SE: 'Door exit', 100, 100
+@>Change Screen Color Tone: (-255,-255,-255,0), @6
+@>Wait: 8 frame(s)
+@>Transfer Player:[684: MAP684], (009,068), Right, No Fade
+@>Change Screen Color Tone: (0,0,0,0), @6
+@>Wait: 6 frame(s)
+@>
+
+Page #2
+Conditions
+Switch 0022: s:tsOff?("A") is ON
+
+Autonomous Movement
+Type: Fixed
+Speed: 3: Slow
+Freq: 3: Low
+Options Enabled
+Move Animation
+Trigger: Autorun
+
+List of Event Commands:
+@>Conditional Branch: Script: get_self.onEvent?
+ @>Script: Followers.hide_followers
+ @>Set Move Route: Player
+                   (Ignore If Can't Move)
+  :              : $>Through ON
+  :              : $>Move Left
+  :              : $>Through OFF
+ @>Wait: 6 frame(s)
+ @>Script: Followers.put_followers_on_player
+ @>
+: Branch End
+@>Script: setTempSwitchOn("A")
+@>
+
+#------------------------------------------------------------------------------
+Event ID: 007
+Event Name: Cave entrance
+(X,Y): (031,043)
+
+Page #1
+Conditions
+None
+
+Autonomous Movement
+Type: Fixed
+Speed: 3: Slow
+Freq: 3: Low
+Options Enabled
+Move Animation
+Trigger: Event Touch
+
+List of Event Commands:
+@>Play SE: 'Door exit', 100, 100
+@>Change Screen Color Tone: (-255,-255,-255,0), @6
+@>Wait: 8 frame(s)
+@>Transfer Player:[684: MAP684], (007,078), Right, No Fade
+@>Change Screen Color Tone: (0,0,0,0), @6
+@>Wait: 6 frame(s)
+@>
+
+Page #2
+Conditions
+Switch 0022: s:tsOff?("A") is ON
+
+Autonomous Movement
+Type: Fixed
+Speed: 3: Slow
+Freq: 3: Low
+Options Enabled
+Move Animation
+Trigger: Autorun
+
+List of Event Commands:
+@>Conditional Branch: Script: get_self.onEvent?
+ @>Script: Followers.hide_followers
+ @>Set Move Route: Player
+                   (Ignore If Can't Move)
+  :              : $>Through ON
+  :              : $>Move Left
+  :              : $>Through OFF
+ @>Wait: 6 frame(s)
+ @>Script: Followers.put_followers_on_player
+ @>
+: Branch End
+@>Script: setTempSwitchOn("A")
+@>
+
+#------------------------------------------------------------------------------
+Event ID: 008
+Event Name: Cave entrance
+(X,Y): (005,012)
+
+Page #1
+Conditions
+None
+
+Autonomous Movement
+Type: Fixed
+Speed: 3: Slow
+Freq: 3: Low
+Options Enabled
+Move Animation
+Trigger: Player Touch
+
+List of Event Commands:
+@>Play SE: 'Door exit', 100, 100
+@>Change Screen Color Tone: (-255,-255,-255,0), @6
+@>Wait: 8 frame(s)
+@>Transfer Player:[683: MAP683], (010,027), Up, No Fade
+@>Change Screen Color Tone: (0,0,0,0), @6
+@>Wait: 6 frame(s)
+@>
+
+Page #2
+Conditions
+Switch 0022: s:tsOff?("A") is ON
+
+Autonomous Movement
+Type: Fixed
+Speed: 3: Slow
+Freq: 3: Low
+Options Enabled
+Move Animation
+Trigger: Autorun
+
+List of Event Commands:
+@>Conditional Branch: Script: get_self.onEvent?
+ @>Script: Followers.hide_followers
+ @>Set Move Route: Player
+                   (Ignore If Can't Move)
+  :              : $>Through ON
+  :              : $>Move Down
+  :              : $>Through OFF
+ @>Wait: 6 frame(s)
+ @>Script: Followers.put_followers_on_player
+ @>
+: Branch End
+@>Script: setTempSwitchOn("A")
+@>
+
+#------------------------------------------------------------------------------
+Event ID: 009
+Event Name: Cave entrance
+(X,Y): (011,005)
+
+Page #1
+Conditions
+None
+
+Autonomous Movement
+Type: Fixed
+Speed: 3: Slow
+Freq: 3: Low
+Options Enabled
+Move Animation
+Trigger: Player Touch
+
+List of Event Commands:
+@>Play SE: 'Door exit', 100, 100
+@>Change Screen Color Tone: (-255,-255,-255,0), @6
+@>Wait: 8 frame(s)
+@>Transfer Player:[683: MAP683], (023,023), Up, No Fade
+@>Change Screen Color Tone: (0,0,0,0), @6
+@>Wait: 6 frame(s)
+@>
+
+Page #2
+Conditions
+Switch 0022: s:tsOff?("A") is ON
+
+Autonomous Movement
+Type: Fixed
+Speed: 3: Slow
+Freq: 3: Low
+Options Enabled
+Move Animation
+Trigger: Autorun
+
+List of Event Commands:
+@>Conditional Branch: Script: get_self.onEvent?
+ @>Script: Followers.hide_followers
+ @>Set Move Route: Player
+                   (Ignore If Can't Move)
+  :              : $>Through ON
+  :              : $>Move Down
+  :              : $>Through OFF
+ @>Wait: 6 frame(s)
+ @>Script: Followers.put_followers_on_player
+ @>
+: Branch End
+@>Script: setTempSwitchOn("A")
+@>
+
+#------------------------------------------------------------------------------
+Event ID: 010
+Event Name: Cave entrance
+(X,Y): (019,005)
+
+Page #1
+Conditions
+None
+
+Autonomous Movement
+Type: Fixed
+Speed: 3: Slow
+Freq: 3: Low
+Options Enabled
+Move Animation
+Trigger: Player Touch
+
+List of Event Commands:
+@>Play SE: 'Door exit', 100, 100
+@>Change Screen Color Tone: (-255,-255,-255,0), @6
+@>Wait: 8 frame(s)
+@>Transfer Player:[683: MAP683], (036,026), Up, No Fade
+@>Change Screen Color Tone: (0,0,0,0), @6
+@>Wait: 6 frame(s)
+@>
+
+Page #2
+Conditions
+Switch 0022: s:tsOff?("A") is ON
+
+Autonomous Movement
+Type: Fixed
+Speed: 3: Slow
+Freq: 3: Low
+Options Enabled
+Move Animation
+Trigger: Autorun
+
+List of Event Commands:
+@>Conditional Branch: Script: get_self.onEvent?
+ @>Script: Followers.hide_followers
+ @>Set Move Route: Player
+                   (Ignore If Can't Move)
+  :              : $>Through ON
+  :              : $>Move Down
+  :              : $>Through OFF
+ @>Wait: 6 frame(s)
+ @>Script: Followers.put_followers_on_player
+ @>
+: Branch End
+@>Script: setTempSwitchOn("A")
+@>
+
+#------------------------------------------------------------------------------
+Event ID: 011
+Event Name: Haus 1 Tür
+(X,Y): (000,013)
+
+Page #1
+Conditions
+None
+
+Autonomous Movement
+Type: Fixed
+Speed: 3: Slow
+Freq: 3: Low
+Options Enabled
+Move Animation
+Trigger: Player Touch
+
+List of Event Commands:
+@>Play SE: 'Door exit', 100, 100
+@>Change Screen Color Tone: (-255,-255,-255,0), @6
+@>Wait: 8 frame(s)
+@>Transfer Player:[682: MAP682], (038,010), Left, No Fade
+@>Change Screen Color Tone: (0,0,0,0), @6
+@>Wait: 8 frame(s)
+@>
+
+#------------------------------------------------------------------------------
+Event ID: 012
+Event Name: Haus 1 Tür
+(X,Y): (000,014)
+
+Page #1
+Conditions
+None
+
+Autonomous Movement
+Type: Fixed
+Speed: 3: Slow
+Freq: 3: Low
+Options Enabled
+Move Animation
+Trigger: Player Touch
+
+List of Event Commands:
+@>Play SE: 'Door exit', 100, 100
+@>Change Screen Color Tone: (-255,-255,-255,0), @6
+@>Wait: 8 frame(s)
+@>Transfer Player:[682: MAP682], (038,011), Left, No Fade
+@>Change Screen Color Tone: (0,0,0,0), @6
+@>Wait: 8 frame(s)
+@>
+
+#------------------------------------------------------------------------------
+Event ID: 013
+Event Name: Haus 1 Tür
+(X,Y): (000,015)
+
+Page #1
+Conditions
+None
+
+Autonomous Movement
+Type: Fixed
+Speed: 3: Slow
+Freq: 3: Low
+Options Enabled
+Move Animation
+Trigger: Player Touch
+
+List of Event Commands:
+@>Play SE: 'Door exit', 100, 100
+@>Change Screen Color Tone: (-255,-255,-255,0), @6
+@>Wait: 8 frame(s)
+@>Transfer Player:[682: MAP682], (038,012), Left, No Fade
+@>Change Screen Color Tone: (0,0,0,0), @6
+@>Wait: 8 frame(s)
+@>
+
+#------------------------------------------------------------------------------
+Event ID: 014
+Event Name: Xatu
+(X,Y): (015,044)
+
+Page #1
+Conditions
+None
+
+Graphic: Idle_Xatu
+
+Autonomous Movement
+Type: Fixed
+Speed: 1: Slowest
+Freq: 3: Low
+Options Enabled
+Move Animation
+Stop Animation
+Direction Fix
+Trigger: Action Button
+
+List of Event Commands:
+@>
+
+#------------------------------------------------------------------------------
+Event ID: 015
+Event Name: Xatu
+(X,Y): (025,040)
+
+Page #1
+Conditions
+None
+
+Graphic: Idle_Unfezant
+
+Autonomous Movement
+Type: Fixed
+Speed: 1: Slowest
+Freq: 2: Lower
+Options Enabled
+Move Animation
+Stop Animation
+Direction Fix
+Trigger: Action Button
+
+List of Event Commands:
+@>
+
+#------------------------------------------------------------------------------
+Event ID: 016
+Event Name: Natu
+(X,Y): (025,021)
+
+Page #1
+Conditions
+Switch 0015: s:PBDayNight.isNight? is ON
+
+Graphic: Deko Vogel 4
+
+Autonomous Movement
+Type: Fixed
+Speed: 1: Slowest
+Freq: 3: Low
+Options Enabled
+Move Animation
+Stop Animation
+Trigger: Action Button
+
+List of Event Commands:
+@>
+
+Page #2
+Conditions
+Switch 0014: s:PBDayNight.isDay? is ON
+
+Graphic: Deko Vogel 1
+
+Autonomous Movement
+Type: Fixed
+Speed: 1: Slowest
+Freq: 3: Low
+Options Enabled
+Move Animation
+Stop Animation
+Trigger: Action Button
+
+List of Event Commands:
+@>
+
+#------------------------------------------------------------------------------
+Event ID: 017
+Event Name: Natu
+(X,Y): (003,006)
+
+Page #1
+Conditions
+Switch 0015: s:PBDayNight.isNight? is ON
+
+Graphic: Deko Vogel 7
+
+Autonomous Movement
+Type: Fixed
+Speed: 1: Slowest
+Freq: 3: Low
+Options Enabled
+Move Animation
+Stop Animation
+Trigger: Action Button
+
+List of Event Commands:
+@>
+
+Page #2
+Conditions
+Switch 0014: s:PBDayNight.isDay? is ON
+
+Graphic: Deko Vogel 3
+
+Autonomous Movement
+Type: Fixed
+Speed: 1: Slowest
+Freq: 3: Low
+Options Enabled
+Move Animation
+Stop Animation
+Trigger: Action Button
+
+List of Event Commands:
+@>
+
+#------------------------------------------------------------------------------
+Event ID: 018
+Event Name: Natu
+(X,Y): (005,027)
+
+Page #1
+Conditions
+Switch 0015: s:PBDayNight.isNight? is ON
+
+Graphic: Deko Vogel 6
+
+Autonomous Movement
+Type: Fixed
+Speed: 1: Slowest
+Freq: 3: Low
+Options Enabled
+Move Animation
+Stop Animation
+Trigger: Action Button
+
+List of Event Commands:
+@>
+
+Page #2
+Conditions
+Switch 0014: s:PBDayNight.isDay? is ON
+
+Graphic: Deko Vogel 2
+
+Autonomous Movement
+Type: Fixed
+Speed: 1: Slowest
+Freq: 3: Low
+Options Enabled
+Move Animation
+Stop Animation
+Trigger: Action Button
+
+List of Event Commands:
+@>
+
+#------------------------------------------------------------------------------
+Event ID: 019
+Event Name: Noctuh
+(X,Y): (025,004)
+
+Page #1
+Conditions
+None
+
+Graphic: Idle_Noctowl
+
+Autonomous Movement
+Type: Fixed
+Speed: 1: Slowest
+Freq: 2: Lower
+Options Enabled
+Move Animation
+Stop Animation
+Direction Fix
+Trigger: Action Button
+
+List of Event Commands:
+@>
+
+#------------------------------------------------------------------------------
+
+#==============================================================================
+Map ID: 682
+Map Name: MAP682
+Tileset: 148: Höhle
+Width: 40, Height: 50
+
+#------------------------------------------------------------------------------
+Event ID: 001
+Event Name: EV001
+(X,Y): (000,000)
+
+Page #1
+Conditions
+None
+
+Autonomous Movement
+Type: Fixed
+Speed: 3: Slow
+Freq: 3: Low
+Options Enabled
+Move Animation
+Trigger: Parallel Process
+
+List of Event Commands:
+@>Conditional Branch: Switch [0015: s:PBDayNight.isNight?] == ON
+ @>Change Map Settings:Fog = 'ZW Höhle 2 Nacht', 0, 255, Normal, 100, 0, 0
+ @>
+: Else
+ @>Change Map Settings:Fog = 'ZW Höhle 2', 0, 255, Normal, 100, 0, 0
+ @>
+: Branch End
+@>
+
+#------------------------------------------------------------------------------
+Event ID: 002
+Event Name: Cave entrance
+(X,Y): (028,039)
+
+Page #1
+Conditions
+None
+
+Autonomous Movement
+Type: Fixed
+Speed: 3: Slow
+Freq: 3: Low
+Options Enabled
+Move Animation
+Trigger: Event Touch
+
+List of Event Commands:
+@>Play SE: 'Door exit', 100, 100
+@>Change Screen Color Tone: (-255,-255,-255,0), @6
+@>Wait: 8 frame(s)
+@>Transfer Player:[681: MAP681], (006,023), Right, No Fade
+@>Change Screen Color Tone: (0,0,0,0), @6
+@>Wait: 6 frame(s)
+@>
+
+Page #2
+Conditions
+Switch 0022: s:tsOff?("A") is ON
+
+Autonomous Movement
+Type: Fixed
+Speed: 3: Slow
+Freq: 3: Low
+Options Enabled
+Move Animation
+Trigger: Autorun
+
+List of Event Commands:
+@>Conditional Branch: Script: get_self.onEvent?
+ @>Script: Followers.hide_followers
+ @>Set Move Route: Player
+                   (Ignore If Can't Move)
+  :              : $>Through ON
+  :              : $>Move Left
+  :              : $>Through OFF
+ @>Wait: 6 frame(s)
+ @>Script: Followers.put_followers_on_player
+ @>
+: Branch End
+@>Script: setTempSwitchOn("A")
+@>
+
+#------------------------------------------------------------------------------
+Event ID: 003
+Event Name: Haus 1 Tür
+(X,Y): (039,010)
+
+Page #1
+Conditions
+None
+
+Autonomous Movement
+Type: Fixed
+Speed: 3: Slow
+Freq: 3: Low
+Options Enabled
+Move Animation
+Trigger: Player Touch
+
+List of Event Commands:
+@>Play SE: 'Door exit', 100, 100
+@>Change Screen Color Tone: (-255,-255,-255,0), @6
+@>Wait: 8 frame(s)
+@>Transfer Player:[681: MAP681], (001,013), Right, No Fade
+@>Change Screen Color Tone: (0,0,0,0), @6
+@>Wait: 8 frame(s)
+@>
+
+#------------------------------------------------------------------------------
+Event ID: 004
+Event Name: Haus 1 Tür
+(X,Y): (039,011)
+
+Page #1
+Conditions
+None
+
+Autonomous Movement
+Type: Fixed
+Speed: 3: Slow
+Freq: 3: Low
+Options Enabled
+Move Animation
+Trigger: Player Touch
+
+List of Event Commands:
+@>Play SE: 'Door exit', 100, 100
+@>Change Screen Color Tone: (-255,-255,-255,0), @6
+@>Wait: 8 frame(s)
+@>Transfer Player:[681: MAP681], (001,014), Right, No Fade
+@>Change Screen Color Tone: (0,0,0,0), @6
+@>Wait: 8 frame(s)
+@>
+
+#------------------------------------------------------------------------------
+Event ID: 005
+Event Name: Haus 1 Tür
+(X,Y): (039,012)
+
+Page #1
+Conditions
+None
+
+Autonomous Movement
+Type: Fixed
+Speed: 3: Slow
+Freq: 3: Low
+Options Enabled
+Move Animation
+Trigger: Player Touch
+
+List of Event Commands:
+@>Play SE: 'Door exit', 100, 100
+@>Change Screen Color Tone: (-255,-255,-255,0), @6
+@>Wait: 8 frame(s)
+@>Transfer Player:[681: MAP681], (001,015), Right, No Fade
+@>Change Screen Color Tone: (0,0,0,0), @6
+@>Wait: 8 frame(s)
+@>
+
+#------------------------------------------------------------------------------
+Event ID: 006
+Event Name: Noctuh
+(X,Y): (002,037)
+
+Page #1
+Conditions
+None
+
+Graphic: Idle_Staraptor
+
+Autonomous Movement
+Type: Fixed
+Speed: 1: Slowest
+Freq: 2: Lower
+Options Enabled
+Move Animation
+Stop Animation
+Direction Fix
+Trigger: Action Button
+
+List of Event Commands:
+@>
+
+#------------------------------------------------------------------------------
+Event ID: 007
+Event Name: Natu
+(X,Y): (002,034)
+
+Page #1
+Conditions
+Switch 0015: s:PBDayNight.isNight? is ON
+
+Graphic: Deko Vogel 6
+
+Autonomous Movement
+Type: Fixed
+Speed: 1: Slowest
+Freq: 3: Low
+Options Enabled
+Move Animation
+Stop Animation
+Trigger: Action Button
+
+List of Event Commands:
+@>
+
+Page #2
+Conditions
+Switch 0014: s:PBDayNight.isDay? is ON
+
+Graphic: Deko Vogel 2
+
+Autonomous Movement
+Type: Fixed
+Speed: 1: Slowest
+Freq: 3: Low
+Options Enabled
+Move Animation
+Stop Animation
+Trigger: Action Button
+
+List of Event Commands:
+@>
+
+#------------------------------------------------------------------------------
+Event ID: 008
+Event Name: Natu
+(X,Y): (001,039)
+
+Page #1
+Conditions
+Switch 0015: s:PBDayNight.isNight? is ON
+
+Graphic: Deko Vogel 6
+
+Autonomous Movement
+Type: Fixed
+Speed: 1: Slowest
+Freq: 3: Low
+Options Enabled
+Move Animation
+Stop Animation
+Trigger: Action Button
+
+List of Event Commands:
+@>
+
+Page #2
+Conditions
+Switch 0014: s:PBDayNight.isDay? is ON
+
+Graphic: Deko Vogel 2
+
+Autonomous Movement
+Type: Fixed
+Speed: 1: Slowest
+Freq: 3: Low
+Options Enabled
+Move Animation
+Stop Animation
+Trigger: Action Button
+
+List of Event Commands:
+@>
+
+#------------------------------------------------------------------------------
+Event ID: 009
+Event Name: Natu
+(X,Y): (012,042)
+
+Page #1
+Conditions
+Switch 0015: s:PBDayNight.isNight? is ON
+
+Graphic: Deko Vogel 5
+
+Autonomous Movement
+Type: Fixed
+Speed: 1: Slowest
+Freq: 2: Lower
+Options Enabled
+Move Animation
+Stop Animation
+Always on Top
+Trigger: Action Button
+
+List of Event Commands:
+@>
+
+Page #2
+Conditions
+Switch 0014: s:PBDayNight.isDay? is ON
+
+Graphic: Deko Vogel 1
+
+Autonomous Movement
+Type: Fixed
+Speed: 1: Slowest
+Freq: 3: Low
+Options Enabled
+Move Animation
+Stop Animation
+Always on Top
+Trigger: Action Button
+
+List of Event Commands:
+@>
+
+#------------------------------------------------------------------------------
+
+#==============================================================================
+Map ID: 683
+Map Name: MAP683
+Tileset: 148: Höhle
+Width: 45, Height: 35
+
+#------------------------------------------------------------------------------
+Event ID: 001
+Event Name: EV001
+(X,Y): (000,000)
+
+Page #1
+Conditions
+None
+
+Autonomous Movement
+Type: Fixed
+Speed: 3: Slow
+Freq: 3: Low
+Options Enabled
+Move Animation
+Trigger: Parallel Process
+
+List of Event Commands:
+@>Conditional Branch: Switch [0015: s:PBDayNight.isNight?] == ON
+ @>Change Map Settings:Fog = 'ZW Höhle 3 Nacht', 0, 255, Normal, 100, 0, 0
+ @>
+: Else
+ @>Change Map Settings:Fog = 'ZW Höhle 3', 0, 255, Normal, 100, 0, 0
+ @>
+: Branch End
+@>
+
+#------------------------------------------------------------------------------
+Event ID: 002
+Event Name: Cave entrance
+(X,Y): (039,011)
+
+Page #1
+Conditions
+None
+
+Autonomous Movement
+Type: Fixed
+Speed: 3: Slow
+Freq: 3: Low
+Options Enabled
+Move Animation
+Trigger: Event Touch
+
+List of Event Commands:
+@>Play SE: 'Door exit', 100, 100
+@>Change Screen Color Tone: (-255,-255,-255,0), @6
+@>Wait: 8 frame(s)
+@>Transfer Player:[684: MAP684], (008,014), Right, No Fade
+@>Change Screen Color Tone: (0,0,0,0), @6
+@>Wait: 6 frame(s)
+@>
+
+Page #2
+Conditions
+Switch 0022: s:tsOff?("A") is ON
+
+Autonomous Movement
+Type: Fixed
+Speed: 3: Slow
+Freq: 3: Low
+Options Enabled
+Move Animation
+Trigger: Autorun
+
+List of Event Commands:
+@>Conditional Branch: Script: get_self.onEvent?
+ @>Script: Followers.hide_followers
+ @>Set Move Route: Player
+                   (Ignore If Can't Move)
+  :              : $>Through ON
+  :              : $>Move Left
+  :              : $>Through OFF
+ @>Wait: 6 frame(s)
+ @>Script: Followers.put_followers_on_player
+ @>
+: Branch End
+@>Script: setTempSwitchOn("A")
+@>
+
+#------------------------------------------------------------------------------
+Event ID: 003
+Event Name: Exit
+(X,Y): (036,027)
+
+Page #1
+Conditions
+None
+
+Autonomous Movement
+Type: Fixed
+Speed: 3: Slow
+Freq: 3: Low
+Options Enabled
+Move Animation
+Trigger: Player Touch
+
+List of Event Commands:
+@>Play SE: 'Door exit', 80, 100
+@>Change Screen Color Tone: (-255,-255,-255,0), @6
+@>Wait: 12 frame(s)
+@>Transfer Player:[681: MAP681], (019,005), Down, No Fade
+@>Change Screen Color Tone: (0,0,0,0), @6
+@>Wait: 6 frame(s)
+@>
+
+#------------------------------------------------------------------------------
+Event ID: 004
+Event Name: Exit
+(X,Y): (023,024)
+
+Page #1
+Conditions
+None
+
+Autonomous Movement
+Type: Fixed
+Speed: 3: Slow
+Freq: 3: Low
+Options Enabled
+Move Animation
+Trigger: Player Touch
+
+List of Event Commands:
+@>Play SE: 'Door exit', 80, 100
+@>Change Screen Color Tone: (-255,-255,-255,0), @6
+@>Wait: 12 frame(s)
+@>Transfer Player:[681: MAP681], (011,005), Down, No Fade
+@>Change Screen Color Tone: (0,0,0,0), @6
+@>Wait: 6 frame(s)
+@>
+
+#------------------------------------------------------------------------------
+Event ID: 005
+Event Name: Exit
+(X,Y): (010,028)
+
+Page #1
+Conditions
+None
+
+Autonomous Movement
+Type: Fixed
+Speed: 3: Slow
+Freq: 3: Low
+Options Enabled
+Move Animation
+Trigger: Player Touch
+
+List of Event Commands:
+@>Play SE: 'Door exit', 80, 100
+@>Change Screen Color Tone: (-255,-255,-255,0), @6
+@>Wait: 12 frame(s)
+@>Transfer Player:[681: MAP681], (005,012), Down, No Fade
+@>Change Screen Color Tone: (0,0,0,0), @6
+@>Wait: 6 frame(s)
+@>
+
+#------------------------------------------------------------------------------
+Event ID: 006
+Event Name: Natu
+(X,Y): (003,021)
+
+Page #1
+Conditions
+Switch 0015: s:PBDayNight.isNight? is ON
+
+Graphic: Deko Vogel 6
+
+Autonomous Movement
+Type: Fixed
+Speed: 1: Slowest
+Freq: 3: Low
+Options Enabled
+Move Animation
+Stop Animation
+Trigger: Action Button
+
+List of Event Commands:
+@>
+
+Page #2
+Conditions
+Switch 0014: s:PBDayNight.isDay? is ON
+
+Graphic: Deko Vogel 2
+
+Autonomous Movement
+Type: Fixed
+Speed: 1: Slowest
+Freq: 3: Low
+Options Enabled
+Move Animation
+Stop Animation
+Trigger: Action Button
+
+List of Event Commands:
+@>
+
+#------------------------------------------------------------------------------
+Event ID: 007
+Event Name: Natu
+(X,Y): (021,028)
+
+Page #1
+Conditions
+Switch 0015: s:PBDayNight.isNight? is ON
+
+Graphic: Deko Vogel 4
+
+Autonomous Movement
+Type: Fixed
+Speed: 1: Slowest
+Freq: 3: Low
+Options Enabled
+Move Animation
+Stop Animation
+Trigger: Action Button
+
+List of Event Commands:
+@>
+
+Page #2
+Conditions
+Switch 0014: s:PBDayNight.isDay? is ON
+
+Graphic: Deko Vogel 1
+
+Autonomous Movement
+Type: Fixed
+Speed: 1: Slowest
+Freq: 3: Low
+Options Enabled
+Move Animation
+Stop Animation
+Trigger: Action Button
+
+List of Event Commands:
+@>
+
+#------------------------------------------------------------------------------
+Event ID: 008
+Event Name: Natu
+(X,Y): (029,018)
+
+Page #1
+Conditions
+Switch 0015: s:PBDayNight.isNight? is ON
+
+Graphic: Deko Vogel 7
+
+Autonomous Movement
+Type: Fixed
+Speed: 1: Slowest
+Freq: 3: Low
+Options Enabled
+Move Animation
+Stop Animation
+Trigger: Action Button
+
+List of Event Commands:
+@>
+
+Page #2
+Conditions
+Switch 0014: s:PBDayNight.isDay? is ON
+
+Graphic: Deko Vogel 3
+
+Autonomous Movement
+Type: Fixed
+Speed: 1: Slowest
+Freq: 3: Low
+Options Enabled
+Move Animation
+Stop Animation
+Trigger: Action Button
+
+List of Event Commands:
+@>
+
+#------------------------------------------------------------------------------
+Event ID: 009
+Event Name: Hoothoot
+(X,Y): (031,028)
+
+Page #1
+Conditions
+None
+
+Graphic: HOOTHOOT
+
+Autonomous Movement
+Type: Fixed
+Speed: 1: Slowest
+Freq: 3: Low
+Options Enabled
+Move Animation
+Stop Animation
+Trigger: Action Button
+
+List of Event Commands:
+@>
+
+#------------------------------------------------------------------------------
+Event ID: 010
+Event Name: Natu
+(X,Y): (012,002)
+
+Page #1
+Conditions
+Switch 0015: s:PBDayNight.isNight? is ON
+
+Graphic: Deko Vogel 4
+
+Autonomous Movement
+Type: Fixed
+Speed: 1: Slowest
+Freq: 3: Low
+Options Enabled
+Move Animation
+Stop Animation
+Trigger: Action Button
+
+List of Event Commands:
+@>
+
+Page #2
+Conditions
+Switch 0014: s:PBDayNight.isDay? is ON
+
+Graphic: Deko Vogel 1
+
+Autonomous Movement
+Type: Fixed
+Speed: 1: Slowest
+Freq: 3: Low
+Options Enabled
+Move Animation
+Stop Animation
+Trigger: Action Button
+
+List of Event Commands:
+@>
+
+#------------------------------------------------------------------------------
+
+#==============================================================================
+Map ID: 684
+Map Name: MAP684
+Tileset: 148: Höhle
+Width: 45, Height: 90
+
+#------------------------------------------------------------------------------
+Event ID: 001
+Event Name: EV001
+(X,Y): (000,000)
+
+Page #1
+Conditions
+None
+
+Autonomous Movement
+Type: Fixed
+Speed: 3: Slow
+Freq: 3: Low
+Options Enabled
+Move Animation
+Trigger: Parallel Process
+
+List of Event Commands:
+@>Conditional Branch: Switch [0015: s:PBDayNight.isNight?] == ON
+ @>Change Map Settings:Fog = 'ZW Höhle 4 Nacht', 0, 255, Normal, 100, 0, 0
+ @>
+: Else
+ @>Change Map Settings:Fog = 'ZW Höhle 4', 0, 255, Normal, 100, 0, 0
+ @>
+: Branch End
+@>
+
+#------------------------------------------------------------------------------
+Event ID: 002
+Event Name: Cave entrance
+(X,Y): (009,068)
+
+Page #1
+Conditions
+None
+
+Autonomous Movement
+Type: Fixed
+Speed: 3: Slow
+Freq: 3: Low
+Options Enabled
+Move Animation
+Trigger: Event Touch
+
+List of Event Commands:
+@>Play SE: 'Door exit', 100, 100
+@>Change Screen Color Tone: (-255,-255,-255,0), @6
+@>Wait: 8 frame(s)
+@>Transfer Player:[681: MAP681], (023,029), Left, No Fade
+@>Change Screen Color Tone: (0,0,0,0), @6
+@>Wait: 6 frame(s)
+@>
+
+Page #2
+Conditions
+Switch 0022: s:tsOff?("A") is ON
+
+Autonomous Movement
+Type: Fixed
+Speed: 3: Slow
+Freq: 3: Low
+Options Enabled
+Move Animation
+Trigger: Autorun
+
+List of Event Commands:
+@>Conditional Branch: Script: get_self.onEvent?
+ @>Script: Followers.hide_followers
+ @>Set Move Route: Player
+                   (Ignore If Can't Move)
+  :              : $>Through ON
+  :              : $>Move Right
+  :              : $>Through OFF
+ @>Wait: 6 frame(s)
+ @>Script: Followers.put_followers_on_player
+ @>
+: Branch End
+@>Script: setTempSwitchOn("A")
+@>
+
+#------------------------------------------------------------------------------
+Event ID: 003
+Event Name: Cave entrance
+(X,Y): (005,058)
+
+Page #1
+Conditions
+None
+
+Autonomous Movement
+Type: Fixed
+Speed: 3: Slow
+Freq: 3: Low
+Options Enabled
+Move Animation
+Trigger: Event Touch
+
+List of Event Commands:
+@>Play SE: 'Door exit', 100, 100
+@>Change Screen Color Tone: (-255,-255,-255,0), @6
+@>Wait: 8 frame(s)
+@>Transfer Player:[681: MAP681], (026,017), Left, No Fade
+@>Change Screen Color Tone: (0,0,0,0), @6
+@>Wait: 6 frame(s)
+@>
+
+Page #2
+Conditions
+Switch 0022: s:tsOff?("A") is ON
+
+Autonomous Movement
+Type: Fixed
+Speed: 3: Slow
+Freq: 3: Low
+Options Enabled
+Move Animation
+Trigger: Autorun
+
+List of Event Commands:
+@>Conditional Branch: Script: get_self.onEvent?
+ @>Script: Followers.hide_followers
+ @>Set Move Route: Player
+                   (Ignore If Can't Move)
+  :              : $>Through ON
+  :              : $>Move Right
+  :              : $>Through OFF
+ @>Wait: 6 frame(s)
+ @>Script: Followers.put_followers_on_player
+ @>
+: Branch End
+@>Script: setTempSwitchOn("A")
+@>
+
+#------------------------------------------------------------------------------
+Event ID: 004
+Event Name: Cave entrance
+(X,Y): (006,048)
+
+Page #1
+Conditions
+None
+
+Autonomous Movement
+Type: Fixed
+Speed: 3: Slow
+Freq: 3: Low
+Options Enabled
+Move Animation
+Trigger: Event Touch
+
+List of Event Commands:
+@>Play SE: 'Door exit', 100, 100
+@>Change Screen Color Tone: (-255,-255,-255,0), @6
+@>Wait: 8 frame(s)
+@>Transfer Player:[681: MAP681], (029,007), Left, No Fade
+@>Change Screen Color Tone: (0,0,0,0), @6
+@>Wait: 6 frame(s)
+@>
+
+Page #2
+Conditions
+Switch 0022: s:tsOff?("A") is ON
+
+Autonomous Movement
+Type: Fixed
+Speed: 3: Slow
+Freq: 3: Low
+Options Enabled
+Move Animation
+Trigger: Autorun
+
+List of Event Commands:
+@>Conditional Branch: Script: get_self.onEvent?
+ @>Script: Followers.hide_followers
+ @>Set Move Route: Player
+                   (Ignore If Can't Move)
+  :              : $>Through ON
+  :              : $>Move Right
+  :              : $>Through OFF
+ @>Wait: 6 frame(s)
+ @>Script: Followers.put_followers_on_player
+ @>
+: Branch End
+@>Script: setTempSwitchOn("A")
+@>
+
+#------------------------------------------------------------------------------
+Event ID: 005
+Event Name: Cave entrance
+(X,Y): (008,014)
+
+Page #1
+Conditions
+None
+
+Autonomous Movement
+Type: Fixed
+Speed: 3: Slow
+Freq: 3: Low
+Options Enabled
+Move Animation
+Trigger: Event Touch
+
+List of Event Commands:
+@>Play SE: 'Door exit', 100, 100
+@>Change Screen Color Tone: (-255,-255,-255,0), @6
+@>Wait: 8 frame(s)
+@>Transfer Player:[683: MAP683], (039,011), Left, No Fade
+@>Change Screen Color Tone: (0,0,0,0), @6
+@>Wait: 6 frame(s)
+@>
+
+Page #2
+Conditions
+Switch 0022: s:tsOff?("A") is ON
+
+Autonomous Movement
+Type: Fixed
+Speed: 3: Slow
+Freq: 3: Low
+Options Enabled
+Move Animation
+Trigger: Autorun
+
+List of Event Commands:
+@>Conditional Branch: Script: get_self.onEvent?
+ @>Script: Followers.hide_followers
+ @>Set Move Route: Player
+                   (Ignore If Can't Move)
+  :              : $>Through ON
+  :              : $>Move Right
+  :              : $>Through OFF
+ @>Wait: 6 frame(s)
+ @>Script: Followers.put_followers_on_player
+ @>
+: Branch End
+@>Script: setTempSwitchOn("A")
+@>
+
+#------------------------------------------------------------------------------
+Event ID: 006
+Event Name: Cave entrance
+(X,Y): (032,034)
+
+Page #1
+Conditions
+None
+
+Autonomous Movement
+Type: Fixed
+Speed: 3: Slow
+Freq: 3: Low
+Options Enabled
+Move Animation
+Trigger: Event Touch
+
+List of Event Commands:
+@>Play SE: 'Door exit', 100, 100
+@>Change Screen Color Tone: (-255,-255,-255,0), @6
+@>Wait: 8 frame(s)
+@>Transfer Player:[685: MAP685], (006,016), Right, No Fade
+@>Change Screen Color Tone: (0,0,0,0), @6
+@>Wait: 6 frame(s)
+@>
+
+Page #2
+Conditions
+Switch 0022: s:tsOff?("A") is ON
+
+Autonomous Movement
+Type: Fixed
+Speed: 3: Slow
+Freq: 3: Low
+Options Enabled
+Move Animation
+Trigger: Autorun
+
+List of Event Commands:
+@>Conditional Branch: Script: get_self.onEvent?
+ @>Script: Followers.hide_followers
+ @>Set Move Route: Player
+                   (Ignore If Can't Move)
+  :              : $>Through ON
+  :              : $>Move Left
+  :              : $>Through OFF
+ @>Wait: 6 frame(s)
+ @>Script: Followers.put_followers_on_player
+ @>
+: Branch End
+@>Script: setTempSwitchOn("A")
+@>
+
+#------------------------------------------------------------------------------
+Event ID: 007
+Event Name: Cave entrance
+(X,Y): (007,078)
+
+Page #1
+Conditions
+None
+
+Autonomous Movement
+Type: Fixed
+Speed: 3: Slow
+Freq: 3: Low
+Options Enabled
+Move Animation
+Trigger: Event Touch
+
+List of Event Commands:
+@>Play SE: 'Door exit', 100, 100
+@>Change Screen Color Tone: (-255,-255,-255,0), @6
+@>Wait: 8 frame(s)
+@>Transfer Player:[681: MAP681], (031,043), Left, No Fade
+@>Change Screen Color Tone: (0,0,0,0), @6
+@>Wait: 6 frame(s)
+@>
+
+Page #2
+Conditions
+Switch 0022: s:tsOff?("A") is ON
+
+Autonomous Movement
+Type: Fixed
+Speed: 3: Slow
+Freq: 3: Low
+Options Enabled
+Move Animation
+Trigger: Autorun
+
+List of Event Commands:
+@>Conditional Branch: Script: get_self.onEvent?
+ @>Script: Followers.hide_followers
+ @>Set Move Route: Player
+                   (Ignore If Can't Move)
+  :              : $>Through ON
+  :              : $>Move Right
+  :              : $>Through OFF
+ @>Wait: 6 frame(s)
+ @>Script: Followers.put_followers_on_player
+ @>
+: Branch End
+@>Script: setTempSwitchOn("A")
+@>
+
+#------------------------------------------------------------------------------
+Event ID: 008
+Event Name: Cave entrance
+(X,Y): (035,075)
+
+Page #1
+Conditions
+None
+
+Autonomous Movement
+Type: Fixed
+Speed: 3: Slow
+Freq: 3: Low
+Options Enabled
+Move Animation
+Trigger: Event Touch
+
+List of Event Commands:
+@>Play SE: 'Door exit', 100, 100
+@>Change Screen Color Tone: (-255,-255,-255,0), @6
+@>Wait: 8 frame(s)
+@>Transfer Player:[685: MAP685], (006,044), Right, No Fade
+@>Change Screen Color Tone: (0,0,0,0), @6
+@>Wait: 6 frame(s)
+@>
+
+Page #2
+Conditions
+Switch 0022: s:tsOff?("A") is ON
+
+Autonomous Movement
+Type: Fixed
+Speed: 3: Slow
+Freq: 3: Low
+Options Enabled
+Move Animation
+Trigger: Autorun
+
+List of Event Commands:
+@>Conditional Branch: Script: get_self.onEvent?
+ @>Script: Followers.hide_followers
+ @>Set Move Route: Player
+                   (Ignore If Can't Move)
+  :              : $>Through ON
+  :              : $>Move Left
+  :              : $>Through OFF
+ @>Wait: 6 frame(s)
+ @>Script: Followers.put_followers_on_player
+ @>
+: Branch End
+@>Script: setTempSwitchOn("A")
+@>
+
+#------------------------------------------------------------------------------
+Event ID: 009
+Event Name: Cave entrance
+(X,Y): (027,004)
+
+Page #1
+Conditions
+None
+
+Autonomous Movement
+Type: Fixed
+Speed: 3: Slow
+Freq: 3: Low
+Options Enabled
+Move Animation
+Trigger: Player Touch
+
+List of Event Commands:
+@>Play SE: 'Door exit', 100, 100
+@>Change Screen Color Tone: (-255,-255,-255,0), @6
+@>Wait: 8 frame(s)
+@>Transfer Player:[687: MAP687], (018,022), Up, No Fade
+@>Change Screen Color Tone: (0,0,0,0), @6
+@>Wait: 6 frame(s)
+@>
+
+Page #2
+Conditions
+Switch 0022: s:tsOff?("A") is ON
+
+Autonomous Movement
+Type: Fixed
+Speed: 3: Slow
+Freq: 3: Low
+Options Enabled
+Move Animation
+Trigger: Autorun
+
+List of Event Commands:
+@>Conditional Branch: Script: get_self.onEvent?
+ @>Script: Followers.hide_followers
+ @>Set Move Route: Player
+                   (Ignore If Can't Move)
+  :              : $>Through ON
+  :              : $>Move Down
+  :              : $>Through OFF
+ @>Wait: 6 frame(s)
+ @>Script: Followers.put_followers_on_player
+ @>
+: Branch End
+@>Script: setTempSwitchOn("A")
+@>
+
+#------------------------------------------------------------------------------
+Event ID: 010
+Event Name: Exit
+(X,Y): (029,083)
+
+Page #1
+Conditions
+None
+
+Autonomous Movement
+Type: Fixed
+Speed: 3: Slow
+Freq: 3: Low
+Options Enabled
+Move Animation
+Trigger: Player Touch
+
+List of Event Commands:
+@>Play SE: 'Door exit', 80, 100
+@>Change Screen Color Tone: (-255,-255,-255,0), @6
+@>Wait: 12 frame(s)
+@>Transfer Player:[686: MAP686], (027,010), Down, No Fade
+@>Change Screen Color Tone: (0,0,0,0), @6
+@>Wait: 6 frame(s)
+@>
+
+#------------------------------------------------------------------------------
+Event ID: 011
+Event Name: Natu
+(X,Y): (013,001)
+
+Page #1
+Conditions
+Switch 0015: s:PBDayNight.isNight? is ON
+
+Graphic: Deko Vogel 7
+
+Autonomous Movement
+Type: Fixed
+Speed: 1: Slowest
+Freq: 3: Low
+Options Enabled
+Move Animation
+Stop Animation
+Trigger: Action Button
+
+List of Event Commands:
+@>
+
+Page #2
+Conditions
+Switch 0014: s:PBDayNight.isDay? is ON
+
+Graphic: Deko Vogel 3
+
+Autonomous Movement
+Type: Fixed
+Speed: 1: Slowest
+Freq: 3: Low
+Options Enabled
+Move Animation
+Stop Animation
+Trigger: Action Button
+
+List of Event Commands:
+@>
+
+#------------------------------------------------------------------------------
+Event ID: 012
+Event Name: Natu
+(X,Y): (038,031)
+
+Page #1
+Conditions
+Switch 0015: s:PBDayNight.isNight? is ON
+
+Graphic: Deko Vogel 7
+
+Autonomous Movement
+Type: Fixed
+Speed: 1: Slowest
+Freq: 3: Low
+Options Enabled
+Move Animation
+Stop Animation
+Trigger: Action Button
+
+List of Event Commands:
+@>
+
+Page #2
+Conditions
+Switch 0014: s:PBDayNight.isDay? is ON
+
+Graphic: Deko Vogel 3
+
+Autonomous Movement
+Type: Fixed
+Speed: 1: Slowest
+Freq: 3: Low
+Options Enabled
+Move Animation
+Stop Animation
+Trigger: Action Button
+
+List of Event Commands:
+@>
+
+#------------------------------------------------------------------------------
+Event ID: 013
+Event Name: Natu
+(X,Y): (009,035)
+
+Page #1
+Conditions
+Switch 0015: s:PBDayNight.isNight? is ON
+
+Graphic: Deko Vogel 6
+
+Autonomous Movement
+Type: Fixed
+Speed: 1: Slowest
+Freq: 3: Low
+Options Enabled
+Move Animation
+Stop Animation
+Trigger: Action Button
+
+List of Event Commands:
+@>
+
+Page #2
+Conditions
+Switch 0014: s:PBDayNight.isDay? is ON
+
+Graphic: Deko Vogel 2
+
+Autonomous Movement
+Type: Fixed
+Speed: 1: Slowest
+Freq: 3: Low
+Options Enabled
+Move Animation
+Stop Animation
+Trigger: Action Button
+
+List of Event Commands:
+@>
+
+#------------------------------------------------------------------------------
+Event ID: 014
+Event Name: Natu
+(X,Y): (023,052)
+
+Page #1
+Conditions
+Switch 0015: s:PBDayNight.isNight? is ON
+
+Graphic: Deko Vogel 6
+
+Autonomous Movement
+Type: Fixed
+Speed: 1: Slowest
+Freq: 3: Low
+Options Enabled
+Move Animation
+Stop Animation
+Trigger: Action Button
+
+List of Event Commands:
+@>
+
+Page #2
+Conditions
+Switch 0014: s:PBDayNight.isDay? is ON
+
+Graphic: Deko Vogel 2
+
+Autonomous Movement
+Type: Fixed
+Speed: 1: Slowest
+Freq: 3: Low
+Options Enabled
+Move Animation
+Stop Animation
+Trigger: Action Button
+
+List of Event Commands:
+@>
+
+#------------------------------------------------------------------------------
+Event ID: 015
+Event Name: Natu
+(X,Y): (003,055)
+
+Page #1
+Conditions
+Switch 0015: s:PBDayNight.isNight? is ON
+
+Graphic: Deko Vogel 4
+
+Autonomous Movement
+Type: Fixed
+Speed: 1: Slowest
+Freq: 3: Low
+Options Enabled
+Move Animation
+Stop Animation
+Trigger: Action Button
+
+List of Event Commands:
+@>
+
+Page #2
+Conditions
+Switch 0014: s:PBDayNight.isDay? is ON
+
+Graphic: Deko Vogel 3
+
+Autonomous Movement
+Type: Fixed
+Speed: 1: Slowest
+Freq: 3: Low
+Options Enabled
+Move Animation
+Stop Animation
+Trigger: Action Button
+
+List of Event Commands:
+@>
+
+#------------------------------------------------------------------------------
+
+#==============================================================================
+Map ID: 685
+Map Name: MAP685
+Tileset: 148: Höhle
+Width: 27, Height: 53
+
+#------------------------------------------------------------------------------
+Event ID: 001
+Event Name: EV001
+(X,Y): (000,000)
+
+Page #1
+Conditions
+None
+
+Autonomous Movement
+Type: Fixed
+Speed: 3: Slow
+Freq: 3: Low
+Options Enabled
+Move Animation
+Trigger: Parallel Process
+
+List of Event Commands:
+@>Conditional Branch: Switch [0016: s:PBDayNight.isMorning?] == ON
+ @>Change Map Settings:Panorama = 'Gipfel', 0
+ @>
+: Else
+ @>Conditional Branch: Switch [0015: s:PBDayNight.isNight?] == ON
+  @>Change Map Settings:Panorama = 'Gipfel Nacht', 0
+  @>
+ : Else
+  @>
+ : Branch End
+ @>
+: Branch End
+@>
+
+#------------------------------------------------------------------------------
+Event ID: 002
+Event Name: Cave entrance
+(X,Y): (006,016)
+
+Page #1
+Conditions
+None
+
+Autonomous Movement
+Type: Fixed
+Speed: 3: Slow
+Freq: 3: Low
+Options Enabled
+Move Animation
+Trigger: Event Touch
+
+List of Event Commands:
+@>Play SE: 'Door exit', 100, 100
+@>Change Screen Color Tone: (-255,-255,-255,0), @6
+@>Wait: 8 frame(s)
+@>Transfer Player:[684: MAP684], (032,034), Left, No Fade
+@>Change Screen Color Tone: (0,0,0,0), @6
+@>Wait: 6 frame(s)
+@>
+
+Page #2
+Conditions
+Switch 0022: s:tsOff?("A") is ON
+
+Autonomous Movement
+Type: Fixed
+Speed: 3: Slow
+Freq: 3: Low
+Options Enabled
+Move Animation
+Trigger: Autorun
+
+List of Event Commands:
+@>Conditional Branch: Script: get_self.onEvent?
+ @>Script: Followers.hide_followers
+ @>Set Move Route: Player
+                   (Ignore If Can't Move)
+  :              : $>Through ON
+  :              : $>Move Right
+  :              : $>Through OFF
+ @>Wait: 6 frame(s)
+ @>Script: Followers.put_followers_on_player
+ @>
+: Branch End
+@>Script: setTempSwitchOn("A")
+@>
+
+#------------------------------------------------------------------------------
+Event ID: 003
+Event Name: Cave entrance
+(X,Y): (006,044)
+
+Page #1
+Conditions
+None
+
+Autonomous Movement
+Type: Fixed
+Speed: 3: Slow
+Freq: 3: Low
+Options Enabled
+Move Animation
+Trigger: Event Touch
+
+List of Event Commands:
+@>Play SE: 'Door exit', 100, 100
+@>Change Screen Color Tone: (-255,-255,-255,0), @6
+@>Wait: 8 frame(s)
+@>Transfer Player:[684: MAP684], (035,075), Left, No Fade
+@>Change Screen Color Tone: (0,0,0,0), @6
+@>Wait: 6 frame(s)
+@>
+
+Page #2
+Conditions
+Switch 0022: s:tsOff?("A") is ON
+
+Autonomous Movement
+Type: Fixed
+Speed: 3: Slow
+Freq: 3: Low
+Options Enabled
+Move Animation
+Trigger: Autorun
+
+List of Event Commands:
+@>Conditional Branch: Script: get_self.onEvent?
+ @>Script: Followers.hide_followers
+ @>Set Move Route: Player
+                   (Ignore If Can't Move)
+  :              : $>Through ON
+  :              : $>Move Right
+  :              : $>Through OFF
+ @>Wait: 6 frame(s)
+ @>Script: Followers.put_followers_on_player
+ @>
+: Branch End
+@>Script: setTempSwitchOn("A")
+@>
+
+#------------------------------------------------------------------------------
+Event ID: 004
+Event Name: Noctuh
+(X,Y): (010,008)
+
+Page #1
+Conditions
+None
+
+Graphic: Idle_Fearow
+
+Autonomous Movement
+Type: Fixed
+Speed: 1: Slowest
+Freq: 2: Lower
+Options Enabled
+Move Animation
+Stop Animation
+Direction Fix
+Trigger: Action Button
+
+List of Event Commands:
+@>
+
+#------------------------------------------------------------------------------
+Event ID: 005
+Event Name: EV005
+(X,Y): (010,009)
+
+Page #1
+Conditions
+None
+
+Graphic: Schlüpfen Starly
+
+Autonomous Movement
+Type: Fixed
+Speed: 3: Slow
+Freq: 3: Low
+Options Enabled
+Move Animation
+Trigger: Action Button
+
+List of Event Commands:
+@>
+
+#------------------------------------------------------------------------------
+Event ID: 006
+Event Name: Natu
+(X,Y): (009,009)
+
+Page #1
+Conditions
+Switch 0015: s:PBDayNight.isNight? is ON
+
+Graphic: Deko Vogel 4
+
+Autonomous Movement
+Type: Fixed
+Speed: 1: Slowest
+Freq: 3: Low
+Options Enabled
+Move Animation
+Stop Animation
+Trigger: Action Button
+
+List of Event Commands:
+@>
+
+Page #2
+Conditions
+Switch 0014: s:PBDayNight.isDay? is ON
+
+Graphic: Deko Vogel 3
+
+Autonomous Movement
+Type: Fixed
+Speed: 1: Slowest
+Freq: 3: Low
+Options Enabled
+Move Animation
+Stop Animation
+Trigger: Action Button
+
+List of Event Commands:
+@>
+
+#------------------------------------------------------------------------------
+Event ID: 007
+Event Name: Natu
+(X,Y): (018,033)
+
+Page #1
+Conditions
+Switch 0015: s:PBDayNight.isNight? is ON
+
+Graphic: Deko Vogel 4
+
+Autonomous Movement
+Type: Fixed
+Speed: 1: Slowest
+Freq: 3: Low
+Options Enabled
+Move Animation
+Stop Animation
+Trigger: Action Button
+
+List of Event Commands:
+@>
+
+Page #2
+Conditions
+Switch 0014: s:PBDayNight.isDay? is ON
+
+Graphic: Deko Vogel 1
+
+Autonomous Movement
+Type: Fixed
+Speed: 1: Slowest
+Freq: 3: Low
+Options Enabled
+Move Animation
+Stop Animation
+Trigger: Action Button
+
+List of Event Commands:
+@>
+
+#------------------------------------------------------------------------------
+Event ID: 008
+Event Name: Natu
+(X,Y): (011,047)
+
+Page #1
+Conditions
+Switch 0015: s:PBDayNight.isNight? is ON
+
+Graphic: Deko Vogel 6
+
+Autonomous Movement
+Type: Fixed
+Speed: 1: Slowest
+Freq: 3: Low
+Options Enabled
+Move Animation
+Stop Animation
+Trigger: Action Button
+
+List of Event Commands:
+@>
+
+Page #2
+Conditions
+Switch 0014: s:PBDayNight.isDay? is ON
+
+Graphic: Deko Vogel 2
+
+Autonomous Movement
+Type: Fixed
+Speed: 1: Slowest
+Freq: 3: Low
+Options Enabled
+Move Animation
+Stop Animation
+Trigger: Action Button
+
+List of Event Commands:
+@>
+
+#------------------------------------------------------------------------------
+Event ID: 009
+Event Name: Natu
+(X,Y): (004,021)
+
+Page #1
+Conditions
+Switch 0015: s:PBDayNight.isNight? is ON
+
+Graphic: Deko Vogel 6
+
+Autonomous Movement
+Type: Fixed
+Speed: 1: Slowest
+Freq: 3: Low
+Options Enabled
+Move Animation
+Stop Animation
+Trigger: Action Button
+
+List of Event Commands:
+@>
+
+Page #2
+Conditions
+Switch 0014: s:PBDayNight.isDay? is ON
+
+Graphic: Deko Vogel 1
+
+Autonomous Movement
+Type: Fixed
+Speed: 1: Slowest
+Freq: 3: Low
+Options Enabled
+Move Animation
+Stop Animation
+Trigger: Action Button
+
+List of Event Commands:
+@>
+
+#------------------------------------------------------------------------------
+
+#==============================================================================
+Map ID: 686
+Map Name: MAP686
+Tileset: 148: Höhle
+Width: 45, Height: 45
+
+#------------------------------------------------------------------------------
+Event ID: 001
+Event Name: Cave entrance
+(X,Y): (027,010)
+
+Page #1
+Conditions
+None
+
+Autonomous Movement
+Type: Fixed
+Speed: 3: Slow
+Freq: 3: Low
+Options Enabled
+Move Animation
+Trigger: Player Touch
+
+List of Event Commands:
+@>Play SE: 'Door exit', 100, 100
+@>Change Screen Color Tone: (-255,-255,-255,0), @6
+@>Wait: 8 frame(s)
+@>Transfer Player:[684: MAP684], (029,082), Up, No Fade
+@>Change Screen Color Tone: (0,0,0,0), @6
+@>Wait: 6 frame(s)
+@>
+
+Page #2
+Conditions
+Switch 0022: s:tsOff?("A") is ON
+
+Autonomous Movement
+Type: Fixed
+Speed: 3: Slow
+Freq: 3: Low
+Options Enabled
+Move Animation
+Trigger: Autorun
+
+List of Event Commands:
+@>Conditional Branch: Script: get_self.onEvent?
+ @>Script: Followers.hide_followers
+ @>Set Move Route: Player
+                   (Ignore If Can't Move)
+  :              : $>Through ON
+  :              : $>Move Down
+  :              : $>Through OFF
+ @>Wait: 6 frame(s)
+ @>Script: Followers.put_followers_on_player
+ @>
+: Branch End
+@>Script: setTempSwitchOn("A")
+@>
+
+#------------------------------------------------------------------------------
+Event ID: 002
+Event Name: Hoothoot
+(X,Y): (016,037)
+
+Page #1
+Conditions
+None
+
+Graphic: HOOTHOOT
+
+Autonomous Movement
+Type: Fixed
+Speed: 1: Slowest
+Freq: 3: Low
+Options Enabled
+Move Animation
+Stop Animation
+Trigger: Action Button
+
+List of Event Commands:
+@>
+
+#------------------------------------------------------------------------------
+Event ID: 003
+Event Name: Noctuh
+(X,Y): (012,009)
+
+Page #1
+Conditions
+None
+
+Graphic: Idle_Braviary
+
+Autonomous Movement
+Type: Fixed
+Speed: 1: Slowest
+Freq: 2: Lower
+Options Enabled
+Move Animation
+Stop Animation
+Direction Fix
+Trigger: Action Button
+
+List of Event Commands:
+@>
+
+#------------------------------------------------------------------------------
+
+#==============================================================================
+Map ID: 687
+Map Name: MAP687
+Tileset: 148: Höhle
+Width: 37, Height: 35
+
+#------------------------------------------------------------------------------
+Event ID: 001
+Event Name: EV001
+(X,Y): (000,000)
+
+Page #1
+Conditions
+None
+
+Autonomous Movement
+Type: Fixed
+Speed: 3: Slow
+Freq: 3: Low
+Options Enabled
+Move Animation
+Trigger: Parallel Process
+
+List of Event Commands:
+@>Conditional Branch: Switch [0014: s:PBDayNight.isDay?] == ON
+ @>Change Map Settings:Panorama = 'Gipfel2', 0
+ @>
+: Else
+ @>Conditional Branch: Switch [0015: s:PBDayNight.isNight?] == ON
+  @>Change Map Settings:Panorama = 'Gipfel Nacht 2', 0
+  @>
+ : Else
+  @>
+ : Branch End
+ @>
+: Branch End
+@>
+
+#------------------------------------------------------------------------------
+Event ID: 002
+Event Name: Exit
+(X,Y): (018,023)
+
+Page #1
+Conditions
+None
+
+Autonomous Movement
+Type: Fixed
+Speed: 3: Slow
+Freq: 3: Low
+Options Enabled
+Move Animation
+Trigger: Player Touch
+
+List of Event Commands:
+@>Play SE: 'Door exit', 80, 100
+@>Change Screen Color Tone: (-255,-255,-255,0), @6
+@>Wait: 12 frame(s)
+@>Transfer Player:[684: MAP684], (027,004), Down, No Fade
+@>Change Screen Color Tone: (0,0,0,0), @6
+@>Wait: 6 frame(s)
+@>
+
+#------------------------------------------------------------------------------
+Event ID: 003
+Event Name: event.sl
+(X,Y): (018,012)
+
+Page #1
+Conditions
+Switch 0014: s:PBDayNight.isDay? is ON
+Switch 0407: Hooh/Lugia Event is ON
+
+Graphic: HoohLugia2
+
+Autonomous Movement
+Type: Fixed
+Speed: 1: Slowest
+Freq: 1: Lowest
+Options Enabled
+Move Animation
+Stop Animation
+Always on Top
+Trigger: Action Button
+
+List of Event Commands:
+@>
+
+Page #2
+Conditions
+Switch 0015: s:PBDayNight.isNight? is ON
+Switch 0407: Hooh/Lugia Event is ON
+
+Graphic: HoohLugia2
+
+Autonomous Movement
+Type: Fixed
+Speed: 1: Slowest
+Freq: 1: Lowest
+Options Enabled
+Move Animation
+Stop Animation
+Always on Top
+Trigger: Action Button
+
+List of Event Commands:
+@>
+
+#------------------------------------------------------------------------------
+Event ID: 004
+Event Name: EV004
+(X,Y): (001,000)
+
+Page #1
+Conditions
+None
+
+Autonomous Movement
+Type: Fixed
+Speed: 3: Slow
+Freq: 3: Low
+Options Enabled
+Move Animation
+Trigger: Autorun
+
+List of Event Commands:
+@>Control Switches: [0407: Hooh/Lugia Event] = ON
+@>Set Event Location: [event.sl],(018,008)
+@>Wait: 20 frame(s)
+@>Set Move Route: Player
+ :              : $>Move Up
+ :              : $>Move Up
+ :              : $>Move Up
+ :              : $>Move Up
+ :              : $>Move Up
+@>Wait: 36 frame(s)
+@>Scroll Map: Up, 7, 4
+@>Wait: 36 frame(s)
+@>Set Move Route: [event.sl]
+ :              : $>Through ON
+ :              : $>Direction Fix ON
+ :              : $>Move Down
+ :              : $>Move Down
+ :              : $>Move Down
+ :              : $>Move Down
+ :              : $>Direction Fix OFF
+ :              : $>Through OFF
+@>Wait: 70 frame(s)
+@>Conditional Branch: Switch [0014: s:PBDayNight.isDay?] == ON
+ @>Set Move Route: [event.sl]
+  :              : $>Stop Animation OFF
+  :              : $>Wait: 6 frame(s)
+  :              : $>Graphic: "HoohLugia2', 0, 4, 0
+  :              : $>Wait: 10 frame(s)
+  :              : $>SE: 'HOOH', 100, 100
+  :              : $>Graphic: "HoohLugia2', 0, 4, 2
+  :              : $>Wait: 1 frame(s)
+  :              : $>Graphic: "HoohLugia2', 0, 4, 3
+  :              : $>Wait: 1 frame(s)
+  :              : $>Graphic: "HoohLugia2', 0, 4, 2
+  :              : $>Wait: 1 frame(s)
+  :              : $>Graphic: "HoohLugia2', 0, 4, 3
+  :              : $>Wait: 1 frame(s)
+  :              : $>Graphic: "HoohLugia2', 0, 4, 2
+  :              : $>Wait: 1 frame(s)
+  :              : $>Graphic: "HoohLugia2', 0, 4, 3
+  :              : $>Wait: 1 frame(s)
+  :              : $>Graphic: "HoohLugia2', 0, 4, 2
+  :              : $>Wait: 1 frame(s)
+  :              : $>Graphic: "HoohLugia2', 0, 4, 3
+  :              : $>Wait: 1 frame(s)
+  :              : $>Graphic: "HoohLugia2', 0, 4, 2
+  :              : $>Wait: 1 frame(s)
+  :              : $>Graphic: "HoohLugia2', 0, 4, 3
+  :              : $>Wait: 1 frame(s)
+  :              : $>Graphic: "HoohLugia2', 0, 4, 2
+  :              : $>Wait: 1 frame(s)
+  :              : $>Graphic: "HoohLugia2', 0, 4, 3
+  :              : $>Wait: 1 frame(s)
+  :              : $>Graphic: "HoohLugia2', 0, 4, 2
+  :              : $>Wait: 1 frame(s)
+  :              : $>Graphic: "HoohLugia2', 0, 4, 3
+  :              : $>Wait: 1 frame(s)
+  :              : $>Graphic: "HoohLugia2', 0, 4, 2
+  :              : $>Wait: 1 frame(s)
+  :              : $>Graphic: "HoohLugia2', 0, 4, 3
+  :              : $>Wait: 1 frame(s)
+  :              : $>Graphic: "HoohLugia2', 0, 2, 0
+  :              : $>Stop Animation ON
+ @>Wait: 50 frame(s)
+ @>
+: Else
+ @>Set Move Route: [event.sl]
+  :              : $>Stop Animation OFF
+  :              : $>Wait: 6 frame(s)
+  :              : $>Graphic: "HoohLugia2', 0, 8, 0
+  :              : $>Wait: 10 frame(s)
+  :              : $>SE: 'LUGIA', 100, 100
+  :              : $>Graphic: "HoohLugia2', 0, 8, 1
+  :              : $>Wait: 1 frame(s)
+  :              : $>Graphic: "HoohLugia2', 0, 8, 3
+  :              : $>Wait: 1 frame(s)
+  :              : $>Graphic: "HoohLugia2', 0, 8, 1
+  :              : $>Wait: 1 frame(s)
+  :              : $>Graphic: "HoohLugia2', 0, 8, 3
+  :              : $>Wait: 1 frame(s)
+  :              : $>Graphic: "HoohLugia2', 0, 8, 1
+  :              : $>Wait: 1 frame(s)
+  :              : $>Graphic: "HoohLugia2', 0, 8, 3
+  :              : $>Wait: 1 frame(s)
+  :              : $>Graphic: "HoohLugia2', 0, 8, 1
+  :              : $>Wait: 1 frame(s)
+  :              : $>Graphic: "HoohLugia2', 0, 8, 3
+  :              : $>Wait: 1 frame(s)
+  :              : $>Graphic: "HoohLugia2', 0, 8, 1
+  :              : $>Wait: 1 frame(s)
+  :              : $>Graphic: "HoohLugia2', 0, 8, 3
+  :              : $>Wait: 1 frame(s)
+  :              : $>Graphic: "HoohLugia2', 0, 8, 1
+  :              : $>Wait: 1 frame(s)
+  :              : $>Graphic: "HoohLugia2', 0, 8, 3
+  :              : $>Wait: 1 frame(s)
+  :              : $>Graphic: "HoohLugia2', 0, 8, 1
+  :              : $>Wait: 1 frame(s)
+  :              : $>Graphic: "HoohLugia2', 0, 8, 3
+  :              : $>Wait: 1 frame(s)
+  :              : $>Graphic: "HoohLugia2', 0, 8, 1
+  :              : $>Wait: 1 frame(s)
+  :              : $>Graphic: "HoohLugia2', 0, 8, 3
+  :              : $>Wait: 1 frame(s)
+  :              : $>Graphic: "HoohLugia2', 0, 8, 1
+  :              : $>Wait: 1 frame(s)
+  :              : $>Graphic: "HoohLugia2', 0, 8, 3
+  :              : $>Wait: 1 frame(s)
+  :              : $>Graphic: "HoohLugia2', 0, 6, 0
+  :              : $>Stop Animation ON
+ @>Wait: 50 frame(s)
+ @>
+: Branch End
+@>Set Move Route: [event.sl]
+ :              : $>Stop Animation ON
+ :              : $>Through OFF
+@>Wait: 36 frame(s)
+@>Scroll Map: Down, 7, 4
+@>Wait: 36 frame(s)
+@>Control Self Switch: A =ON
+@>
+
+Page #2
+Conditions
+Self Switch A is ON
+
+Autonomous Movement
+Type: Fixed
+Speed: 3: Slow
+Freq: 3: Low
+Options Enabled
+Move Animation
+Trigger: Action Button
+
+List of Event Commands:
+@>
+
+#------------------------------------------------------------------------------
+
+#==============================================================================
+Map ID: 688
+Map Name: MAP688
+Tileset: 147: Zwischenwelt
+Width: 20, Height: 20
+
+#==============================================================================
+Map ID: 689
+Map Name: MAP689
+Tileset: 147: Zwischenwelt
+Width: 20, Height: 20
+
+#==============================================================================
+Map ID: 690
+Map Name: MAP690
+Tileset: 147: Zwischenwelt
+Width: 20, Height: 20
+
+#==============================================================================
+Map ID: 691
+Map Name: MAP691
+Tileset: 147: Zwischenwelt
+Width: 20, Height: 20
+
+#==============================================================================
+Map ID: 692
+Map Name: MAP692
+Tileset: 147: Zwischenwelt
+Width: 20, Height: 20
+
+#------------------------------------------------------------------------------
+Event ID: 001
+Event Name: EV001
+(X,Y): (006,009)
+
+Page #1
+Conditions
+None
+
+Graphic: Rauch
+
+Autonomous Movement
+Type: Fixed
+Speed: 3: Slow
+Freq: 6: Highest
+Options Enabled
+Move Animation
+Stop Animation
+Trigger: Action Button
+
+List of Event Commands:
+@>
+
+#------------------------------------------------------------------------------
+Event ID: 002
+Event Name: EV002
+(X,Y): (012,009)
+
+Page #1
+Conditions
+None
+
+Graphic: Rauch
+
+Autonomous Movement
+Type: Fixed
+Speed: 3: Slow
+Freq: 6: Highest
+Options Enabled
+Move Animation
+Stop Animation
+Trigger: Action Button
+
+List of Event Commands:
+@>
+
+#------------------------------------------------------------------------------
+Event ID: 003
+Event Name: EV003
+(X,Y): (006,008)
+
+Page #1
+Conditions
+None
+
+Graphic: Rauch
+
+Autonomous Movement
+Type: Fixed
+Speed: 3: Slow
+Freq: 6: Highest
+Options Enabled
+Move Animation
+Stop Animation
+Trigger: Action Button
+
+List of Event Commands:
+@>
+
+#------------------------------------------------------------------------------
+Event ID: 004
+Event Name: EV004
+(X,Y): (012,008)
+
+Page #1
+Conditions
+None
+
+Graphic: Rauch
+
+Autonomous Movement
+Type: Fixed
+Speed: 3: Slow
+Freq: 6: Highest
+Options Enabled
+Move Animation
+Stop Animation
+Trigger: Action Button
+
+List of Event Commands:
+@>
+
+#------------------------------------------------------------------------------
+
+#==============================================================================
+Map ID: 693
+Map Name: Eingang
+Tileset: 149: Labor / Versteck
+Width: 40, Height: 40
+
+#------------------------------------------------------------------------------
+Event ID: 001
+Event Name: Haus 1 Tür
+(X,Y): (002,015)
+
+Page #1
+Conditions
+None
+
+Autonomous Movement
+Type: Fixed
+Speed: 3: Slow
+Freq: 3: Low
+Options Enabled
+Move Animation
+Trigger: Player Touch
+
+List of Event Commands:
+@>Play SE: 'Door exit', 100, 100
+@>Change Screen Color Tone: (-255,-255,-255,0), @6
+@>Wait: 8 frame(s)
+@>Transfer Player:[694: Links], (026,033), Left, No Fade
+@>Change Screen Color Tone: (0,0,0,0), @6
+@>Wait: 8 frame(s)
+@>
+
+#------------------------------------------------------------------------------
+Event ID: 002
+Event Name: Haus 1 Tür
+(X,Y): (036,015)
+
+Page #1
+Conditions
+None
+
+Autonomous Movement
+Type: Fixed
+Speed: 3: Slow
+Freq: 3: Low
+Options Enabled
+Move Animation
+Trigger: Player Touch
+
+List of Event Commands:
+@>Play SE: 'Door exit', 100, 100
+@>Change Screen Color Tone: (-255,-255,-255,0), @6
+@>Wait: 8 frame(s)
+@>Transfer Player:[695: Rechts], (003,012), Right, No Fade
+@>Change Screen Color Tone: (0,0,0,0), @6
+@>Wait: 8 frame(s)
+@>
+
+#------------------------------------------------------------------------------
+Event ID: 003
+Event Name: Haus 1 Tür
+(X,Y): (019,033)
+
+Page #1
+Conditions
+None
+
+Autonomous Movement
+Type: Fixed
+Speed: 3: Slow
+Freq: 3: Low
+Options Enabled
+Move Animation
+Trigger: Player Touch
+
+List of Event Commands:
+@>Play SE: 'Door exit', 100, 100
+@>Change Screen Color Tone: (-255,-255,-255,0), @6
+@>Wait: 8 frame(s)
+@>Transfer Player:[632: Pfad der Drachen], (022,008), Down, No Fade
+@>Change Screen Color Tone: (0,0,0,0), @6
+@>Wait: 8 frame(s)
+@>
+
+#------------------------------------------------------------------------------
+
+#==============================================================================
+Map ID: 694
+Map Name: Links
+Tileset: 149: Labor / Versteck
+Width: 40, Height: 40
+
+#------------------------------------------------------------------------------
+Event ID: 001
+Event Name: Haus 1 Tür
+(X,Y): (027,033)
+
+Page #1
+Conditions
+None
+
+Autonomous Movement
+Type: Fixed
+Speed: 3: Slow
+Freq: 3: Low
+Options Enabled
+Move Animation
+Trigger: Player Touch
+
+List of Event Commands:
+@>Play SE: 'Door exit', 100, 100
+@>Change Screen Color Tone: (-255,-255,-255,0), @6
+@>Wait: 8 frame(s)
+@>Transfer Player:[693: Eingang], (003,015), Right, No Fade
+@>Change Screen Color Tone: (0,0,0,0), @6
+@>Wait: 8 frame(s)
+@>
+
+#------------------------------------------------------------------------------
+
+#==============================================================================
+Map ID: 695
+Map Name: Rechts
+Tileset: 149: Labor / Versteck
+Width: 35, Height: 25
+
+#------------------------------------------------------------------------------
+Event ID: 001
+Event Name: Haus 1 Tür
+(X,Y): (002,012)
+
+Page #1
+Conditions
+None
+
+Autonomous Movement
+Type: Fixed
+Speed: 3: Slow
+Freq: 3: Low
+Options Enabled
+Move Animation
+Trigger: Player Touch
+
+List of Event Commands:
+@>Play SE: 'Door exit', 100, 100
+@>Change Screen Color Tone: (-255,-255,-255,0), @6
+@>Wait: 8 frame(s)
+@>Transfer Player:[693: Eingang], (035,015), Left, No Fade
+@>Change Screen Color Tone: (0,0,0,0), @6
+@>Wait: 8 frame(s)
+@>
+
+#------------------------------------------------------------------------------
+
+#==============================================================================
+Map ID: 696
+Map Name: -1
+Tileset: 149: Labor / Versteck
+Width: 45, Height: 30
+
+#------------------------------------------------------------------------------
+Event ID: 001
+Event Name: Haus 1 Tür
+(X,Y): (038,016)
+
+Page #1
+Conditions
+None
+
+Autonomous Movement
+Type: Fixed
+Speed: 3: Slow
+Freq: 3: Low
+Options Enabled
+Move Animation
+Trigger: Player Touch
+
+List of Event Commands:
+@>Play SE: 'Door exit', 100, 100
+@>Change Screen Color Tone: (-255,-255,-255,0), @6
+@>Wait: 8 frame(s)
+@>Transfer Player:[697: Rechts], (021,061), Right, No Fade
+@>Change Screen Color Tone: (0,0,0,0), @6
+@>Wait: 8 frame(s)
+@>
+
+#------------------------------------------------------------------------------
+Event ID: 002
+Event Name: Haus 1 Tür
+(X,Y): (001,015)
+
+Page #1
+Conditions
+None
+
+Autonomous Movement
+Type: Fixed
+Speed: 3: Slow
+Freq: 3: Low
+Options Enabled
+Move Animation
+Trigger: Player Touch
+
+List of Event Commands:
+@>Play SE: 'Door exit', 100, 100
+@>Change Screen Color Tone: (-255,-255,-255,0), @6
+@>Wait: 8 frame(s)
+@>Transfer Player:[698: Links], (026,023), Left, No Fade
+@>Change Screen Color Tone: (0,0,0,0), @6
+@>Wait: 8 frame(s)
+@>
+
+#------------------------------------------------------------------------------
+
+#==============================================================================
+Map ID: 697
+Map Name: Rechts
+Tileset: 149: Labor / Versteck
+Width: 60, Height: 66
+
+#------------------------------------------------------------------------------
+Event ID: 001
+Event Name: Haus 1 Tür
+(X,Y): (020,061)
+
+Page #1
+Conditions
+None
+
+Autonomous Movement
+Type: Fixed
+Speed: 3: Slow
+Freq: 3: Low
+Options Enabled
+Move Animation
+Trigger: Player Touch
+
+List of Event Commands:
+@>Play SE: 'Door exit', 100, 100
+@>Change Screen Color Tone: (-255,-255,-255,0), @6
+@>Wait: 8 frame(s)
+@>Transfer Player:[696: -1], (037,016), Left, No Fade
+@>Change Screen Color Tone: (0,0,0,0), @6
+@>Wait: 8 frame(s)
+@>
+
+#------------------------------------------------------------------------------
+
+#==============================================================================
+Map ID: 698
+Map Name: Links
+Tileset: 149: Labor / Versteck
+Width: 30, Height: 30
+
+#------------------------------------------------------------------------------
+Event ID: 001
+Event Name: Haus 1 Tür
+(X,Y): (027,023)
+
+Page #1
+Conditions
+None
+
+Autonomous Movement
+Type: Fixed
+Speed: 3: Slow
+Freq: 3: Low
+Options Enabled
+Move Animation
+Trigger: Player Touch
+
+List of Event Commands:
+@>Play SE: 'Door exit', 100, 100
+@>Change Screen Color Tone: (-255,-255,-255,0), @6
+@>Wait: 8 frame(s)
+@>Transfer Player:[696: -1], (002,015), Right, No Fade
+@>Change Screen Color Tone: (0,0,0,0), @6
+@>Wait: 8 frame(s)
+@>
+
+#------------------------------------------------------------------------------
+
+#==============================================================================
+Map ID: 699
+Map Name: 1
+Tileset: 149: Labor / Versteck
+Width: 30, Height: 25
+
+#------------------------------------------------------------------------------
+Event ID: 001
+Event Name: Haus 1 Tür
+(X,Y): (027,008)
+
+Page #1
+Conditions
+None
+
+Autonomous Movement
+Type: Fixed
+Speed: 3: Slow
+Freq: 3: Low
+Options Enabled
+Move Animation
+Trigger: Player Touch
+
+List of Event Commands:
+@>Play SE: 'Door exit', 100, 100
+@>Change Screen Color Tone: (-255,-255,-255,0), @6
+@>Wait: 8 frame(s)
+@>Transfer Player:[700: Rechts], (003,010), Right, No Fade
+@>Change Screen Color Tone: (0,0,0,0), @6
+@>Wait: 8 frame(s)
+@>
+
+#------------------------------------------------------------------------------
+
+#==============================================================================
+Map ID: 700
+Map Name: Rechts
+Tileset: 149: Labor / Versteck
+Width: 30, Height: 26
+
+#------------------------------------------------------------------------------
+Event ID: 001
+Event Name: Haus 1 Tür
+(X,Y): (002,010)
+
+Page #1
+Conditions
+None
+
+Autonomous Movement
+Type: Fixed
+Speed: 3: Slow
+Freq: 3: Low
+Options Enabled
+Move Animation
+Trigger: Player Touch
+
+List of Event Commands:
+@>Play SE: 'Door exit', 100, 100
+@>Change Screen Color Tone: (-255,-255,-255,0), @6
+@>Wait: 8 frame(s)
+@>Transfer Player:[699: 1], (026,008), Left, No Fade
+@>Change Screen Color Tone: (0,0,0,0), @6
+@>Wait: 8 frame(s)
+@>
+
+#------------------------------------------------------------------------------
+
+#==============================================================================
+Map ID: 701
+Map Name: -2
+Tileset: 149: Labor / Versteck
+Width: 30, Height: 35
+
+#------------------------------------------------------------------------------
+Event ID: 001
+Event Name: Tür .sl
+(X,Y): (014,004)
+
+Page #1
+Conditions
+Variable 0001: Temp Pokemon Choice is 0 or above
+
+Graphic: Tür Metall
+
+Autonomous Movement
+Type: Fixed
+Speed: 3: Slow
+Freq: 3: Low
+Options Enabled
+Move Animation
+Trigger: Player Touch
+
+List of Event Commands:
+@>Set Move Route: This event
+ :              : $>SE: 'PRSFX- Earthquake2', 100, 50
+ :              : $>Graphic: "Tür Metall', 0, 4, 0
+ :              : $>Wait: 2 frame(s)
+ :              : $>Graphic: "Tür Metall', 0, 6, 0
+ :              : $>Wait: 2 frame(s)
+ :              : $>Graphic: "Tür Metall', 0, 8, 0
+ :              : $>Wait: 2 frame(s)
+ :              : $>Graphic: "Tür Metall', 0, 2, 1
+ :              : $>Wait: 2 frame(s)
+ :              : $>Graphic: "Tür Metall', 0, 4, 1
+ :              : $>Wait: 2 frame(s)
+ :              : $>Graphic: "Tür Metall', 0, 6, 1
+ :              : $>Wait: 2 frame(s)
+ :              : $>Graphic: "Tür Metall', 0, 8, 1
+ :              : $>Wait: 2 frame(s)
+ :              : $>Graphic: "Tür Metall', 0, 2, 2
+ :              : $>Wait: 2 frame(s)
+ :              : $>Graphic: "Tür Metall', 0, 4, 2
+ :              : $>Wait: 2 frame(s)
+ :              : $>Graphic: "Tür Metall', 0, 6, 2
+ :              : $>Wait: 2 frame(s)
+ :              : $>Graphic: "Tür Metall', 0, 8, 2
+ :              : $>Wait: 2 frame(s)
+@>Wait: 22 frame(s)
+@>Set Move Route: Player
+ :              : $>Through ON
+ :              : $>Move Up
+ :              : $>Through OFF
+@>Change Screen Color Tone: (-255,-255,-255,0), @6
+@>Wait: 10 frame(s)
+@>Change Transparent Flag: Normal
+@>Transfer Player:[702: Oben], (011,057), Up, No Fade
+@>Change Screen Color Tone: (0,0,0,0), @6
+@>Wait: 8 frame(s)
+@>
+
+Page #2
+Conditions
+Switch 0022: s:tsOff?("A") is ON
+
+Graphic: Tür Metall
+
+Autonomous Movement
+Type: Fixed
+Speed: 3: Slow
+Freq: 3: Low
+Options Enabled
+Move Animation
+Trigger: Autorun
+
+List of Event Commands:
+@>Conditional Branch: Script: get_self.onEvent?
+ @>Change Transparent Flag: Normal
+ @>Set Move Route: Player
+                   (Ignore If Can't Move)
+  :              : $>Through ON
+  :              : $>Move Down
+  :              : $>Through OFF
+ @>Wait: 8 frame(s)
+ @>Script: Followers.put_followers_on_player
+ @>
+: Branch End
+@>Script: setTempSwitchOn("A")
+@>
+
+#------------------------------------------------------------------------------
+Event ID: 002
+Event Name: Haus 1 Tür
+(X,Y): (001,010)
+
+Page #1
+Conditions
+None
+
+Autonomous Movement
+Type: Fixed
+Speed: 3: Slow
+Freq: 3: Low
+Options Enabled
+Move Animation
+Trigger: Player Touch
+
+List of Event Commands:
+@>Play SE: 'Door exit', 100, 100
+@>Change Screen Color Tone: (-255,-255,-255,0), @6
+@>Wait: 8 frame(s)
+@>Transfer Player:[703: Links], (025,021), Left, No Fade
+@>Change Screen Color Tone: (0,0,0,0), @6
+@>Wait: 8 frame(s)
+@>
+
+#------------------------------------------------------------------------------
+Event ID: 003
+Event Name: Haus 1 Tür
+(X,Y): (027,011)
+
+Page #1
+Conditions
+None
+
+Autonomous Movement
+Type: Fixed
+Speed: 3: Slow
+Freq: 3: Low
+Options Enabled
+Move Animation
+Trigger: Player Touch
+
+List of Event Commands:
+@>Play SE: 'Door exit', 100, 100
+@>Change Screen Color Tone: (-255,-255,-255,0), @6
+@>Wait: 8 frame(s)
+@>Transfer Player:[704: Rechts], (003,023), Right, No Fade
+@>Change Screen Color Tone: (0,0,0,0), @6
+@>Wait: 8 frame(s)
+@>
+
+#------------------------------------------------------------------------------
+
+#==============================================================================
+Map ID: 702
+Map Name: Oben
+Tileset: 149: Labor / Versteck
+Width: 25, Height: 60
+
+#------------------------------------------------------------------------------
+Event ID: 001
+Event Name: Tür .sl
+(X,Y): (011,004)
+
+Page #1
+Conditions
+None
+
+Graphic: Tür Metall
+
+Autonomous Movement
+Type: Fixed
+Speed: 3: Slow
+Freq: 3: Low
+Options Enabled
+Move Animation
+Trigger: Player Touch
+
+List of Event Commands:
+@>Set Move Route: This event
+ :              : $>SE: 'PRSFX- Earthquake2', 100, 50
+ :              : $>Graphic: "Tür Metall', 0, 4, 0
+ :              : $>Wait: 2 frame(s)
+ :              : $>Graphic: "Tür Metall', 0, 6, 0
+ :              : $>Wait: 2 frame(s)
+ :              : $>Graphic: "Tür Metall', 0, 8, 0
+ :              : $>Wait: 2 frame(s)
+ :              : $>Graphic: "Tür Metall', 0, 2, 1
+ :              : $>Wait: 2 frame(s)
+ :              : $>Graphic: "Tür Metall', 0, 4, 1
+ :              : $>Wait: 2 frame(s)
+ :              : $>Graphic: "Tür Metall', 0, 6, 1
+ :              : $>Wait: 2 frame(s)
+ :              : $>Graphic: "Tür Metall', 0, 8, 1
+ :              : $>Wait: 2 frame(s)
+ :              : $>Graphic: "Tür Metall', 0, 2, 2
+ :              : $>Wait: 2 frame(s)
+ :              : $>Graphic: "Tür Metall', 0, 4, 2
+ :              : $>Wait: 2 frame(s)
+ :              : $>Graphic: "Tür Metall', 0, 6, 2
+ :              : $>Wait: 2 frame(s)
+ :              : $>Graphic: "Tür Metall', 0, 8, 2
+ :              : $>Wait: 2 frame(s)
+@>Wait: 22 frame(s)
+@>Set Move Route: Player
+ :              : $>Through ON
+ :              : $>Move Up
+ :              : $>Through OFF
+@>Change Screen Color Tone: (-255,-255,-255,0), @6
+@>Wait: 10 frame(s)
+@>Change Transparent Flag: Normal
+@>Transfer Player:[705: Finale], (018,033), Up, No Fade
+@>Change Screen Color Tone: (0,0,0,0), @6
+@>Wait: 8 frame(s)
+@>
+
+Page #2
+Conditions
+Switch 0022: s:tsOff?("A") is ON
+
+Graphic: Tür Metall
+
+Autonomous Movement
+Type: Fixed
+Speed: 3: Slow
+Freq: 3: Low
+Options Enabled
+Move Animation
+Trigger: Autorun
+
+List of Event Commands:
+@>Conditional Branch: Script: get_self.onEvent?
+ @>Change Transparent Flag: Normal
+ @>Set Move Route: Player
+                   (Ignore If Can't Move)
+  :              : $>Through ON
+  :              : $>Move Down
+  :              : $>Through OFF
+ @>Wait: 8 frame(s)
+ @>Script: Followers.put_followers_on_player
+ @>
+: Branch End
+@>Script: setTempSwitchOn("A")
+@>
+
+#------------------------------------------------------------------------------
+Event ID: 002
+Event Name: Haus 1 Tür size(3,1)
+(X,Y): (010,058)
+
+Page #1
+Conditions
+None
+
+Autonomous Movement
+Type: Fixed
+Speed: 3: Slow
+Freq: 3: Low
+Options Enabled
+Move Animation
+Trigger: Player Touch
+
+List of Event Commands:
+@>Play SE: 'Door exit', 100, 100
+@>Change Screen Color Tone: (-255,-255,-255,0), @6
+@>Wait: 8 frame(s)
+@>Transfer Player:[701: -2], (014,004), Down, No Fade
+@>Change Screen Color Tone: (0,0,0,0), @6
+@>Wait: 8 frame(s)
+@>
+
+#------------------------------------------------------------------------------
+
+#==============================================================================
+Map ID: 703
+Map Name: Links
+Tileset: 149: Labor / Versteck
+Width: 35, Height: 30
+
+#------------------------------------------------------------------------------
+Event ID: 001
+Event Name: Haus 1 Tür
+(X,Y): (026,021)
+
+Page #1
+Conditions
+None
+
+Autonomous Movement
+Type: Fixed
+Speed: 3: Slow
+Freq: 3: Low
+Options Enabled
+Move Animation
+Trigger: Player Touch
+
+List of Event Commands:
+@>Play SE: 'Door exit', 100, 100
+@>Change Screen Color Tone: (-255,-255,-255,0), @6
+@>Wait: 8 frame(s)
+@>Transfer Player:[701: -2], (002,010), Right, No Fade
+@>Change Screen Color Tone: (0,0,0,0), @6
+@>Wait: 8 frame(s)
+@>
+
+#------------------------------------------------------------------------------
+
+#==============================================================================
+Map ID: 704
+Map Name: Rechts
+Tileset: 149: Labor / Versteck
+Width: 35, Height: 30
+
+#------------------------------------------------------------------------------
+Event ID: 001
+Event Name: Haus 1 Tür
+(X,Y): (002,023)
+
+Page #1
+Conditions
+None
+
+Autonomous Movement
+Type: Fixed
+Speed: 3: Slow
+Freq: 3: Low
+Options Enabled
+Move Animation
+Trigger: Player Touch
+
+List of Event Commands:
+@>Play SE: 'Door exit', 100, 100
+@>Change Screen Color Tone: (-255,-255,-255,0), @6
+@>Wait: 8 frame(s)
+@>Transfer Player:[701: -2], (026,011), Left, No Fade
+@>Change Screen Color Tone: (0,0,0,0), @6
+@>Wait: 8 frame(s)
+@>
+
+#------------------------------------------------------------------------------
+
+#==============================================================================
+Map ID: 705
+Map Name: Finale
+Tileset: 149: Labor / Versteck
+Width: 40, Height: 40
+
+#------------------------------------------------------------------------------
+Event ID: 001
+Event Name: Haus 1 Tür size(5,1)
+(X,Y): (016,034)
+
+Page #1
+Conditions
+None
+
+Autonomous Movement
+Type: Fixed
+Speed: 3: Slow
+Freq: 3: Low
+Options Enabled
+Move Animation
+Trigger: Player Touch
+
+List of Event Commands:
+@>Play SE: 'Door exit', 100, 100
+@>Change Screen Color Tone: (-255,-255,-255,0), @6
+@>Wait: 8 frame(s)
+@>Transfer Player:[702: Oben], (011,004), Down, No Fade
+@>Change Screen Color Tone: (0,0,0,0), @6
+@>Wait: 8 frame(s)
 @>
 
 #------------------------------------------------------------------------------

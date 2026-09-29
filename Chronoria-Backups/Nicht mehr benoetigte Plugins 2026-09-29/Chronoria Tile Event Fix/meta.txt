@@ -1,0 +1,17 @@
+Name       = Chronoria Tile Event Fix
+Version    = 1.0.0
+Essentials = 21.1
+Credits    = Chronoria Dev Team
+
+# Change logs
+#############################################
+# 1.0.0
+#############################################
+# - Events mit Tile-Grafik aus sehr hohen Tilesets (hoeher als die maximale
+#   Texturgroesse, z.B. "Fusion Tileset" mit 45442 px) holen ihr Tile jetzt aus
+#   der bereits zerlegten Tileset-Fassung der Karte (TilesetWrapper), statt
+#   jedes Mal das komplette Riesenbild als "Mega-Surface" zu laden.
+# - Behebt die Konsolenmeldungen
+#     "In pixman_region_union_rect: Invalid rectangle passed"
+#   und beschleunigt das Laden solcher Maps.
+# - Bei normal grossen Tilesets aendert sich nichts.

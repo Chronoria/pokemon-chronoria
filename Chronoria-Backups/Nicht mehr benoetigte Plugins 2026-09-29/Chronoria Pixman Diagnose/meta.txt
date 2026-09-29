@@ -1,0 +1,12 @@
+Name       = Chronoria Pixman Diagnose
+Version    = 1.0.0
+Essentials = 21.1
+Credits    = Chronoria Dev Team
+
+# Voruebergehendes Diagnose-Plugin (nur im Debug-Modus aktiv).
+# Findet heraus, welches Skript die Konsolenmeldung
+#   "In pixman_region_union_rect: Invalid rectangle passed"
+# ausloest: Jeder Zeichenbefehl mit ungueltigem Rechteck (Breite/Hoehe 0 oder
+# kleiner, oder komplett ausserhalb des Bildes) wird mit Aufrufer in die Konsole
+# geschrieben, jede Stelle nur einmal.
+# Nach der Fehlersuche diesen Ordner einfach wieder loeschen.

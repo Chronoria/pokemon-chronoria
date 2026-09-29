@@ -668,7 +668,7 @@ SnapEdges = true
 Name = Morastia
 Outdoor = true
 ShowArea = true
-MapPosition = 0,22,8
+MapPosition = 0,22,5
 SnapEdges = true
 BattleBack = Swamp
 WildBattleBGM = Battle Wild Southeast
@@ -828,7 +828,7 @@ SnapEdges = true
 Name = Traumwelt
 ShowArea = true
 HealingSpot = 110,81,11
-MapPosition = 0,29,0
+MapPosition = 0,22,7
 SnapEdges = true
 BattleBack = traum
 WildBattleBGM = battle wild space
@@ -840,7 +840,7 @@ Flags = Levels,Inverse
 Name = Route 15
 Outdoor = true
 ShowArea = true
-MapPosition = 0,22,7
+MapPosition = 0,22,4
 SnapEdges = true
 BattleBack = route15
 Flags = Levels
@@ -956,7 +956,7 @@ BattleBack = arena1
 Name = Bruchhain
 Outdoor = true
 ShowArea = true
-MapPosition = 0,22,10
+MapPosition = 0,22,7
 SnapEdges = true
 BattleBack = Forest_2
 WildBattleBGM = Battle! (Clan Warden)
@@ -1031,14 +1031,14 @@ Flags = Levels
 Name = Route 17
 Outdoor = true
 ShowArea = true
-MapPosition = 0,19,7
+MapPosition = 0,19,4
 SnapEdges = true
 Flags = Levels
 #-------------------------------
 [163]   # Spheal-Life
 Name = Spheal-Life
 ShowArea = true
-MapPosition = 0,17,7
+MapPosition = 0,17,4
 SnapEdges = true
 #-------------------------------
 [164]   # Zwischengebäude
@@ -1144,7 +1144,7 @@ Name = Tonishi
 Outdoor = true
 ShowArea = true
 HealingSpot = 177,10,7
-MapPosition = 0,18,7
+MapPosition = 0,18,4
 SnapEdges = true
 Flags = Levels
 #-------------------------------
@@ -1266,7 +1266,7 @@ Flags = Levels
 Name = Route 14
 Outdoor = true
 ShowArea = true
-MapPosition = 0,22,9
+MapPosition = 0,22,6
 SnapEdges = true
 BattleBack = Swamp
 WildBattleBGM = Battle Wild Southeast
@@ -1279,7 +1279,7 @@ Name = Route 13
 Outdoor = true
 ShowArea = true
 HealingSpot = 141,35,37
-MapPosition = 0,21,12
+MapPosition = 0,21,9
 SnapEdges = true
 BattleBack = Forest_2
 WildBattleBGM = Battle! (Clan Warden)
@@ -1291,7 +1291,7 @@ Flags = Levels
 Name = Mansion
 Outdoor = true
 ShowArea = true
-MapPosition = 0,22,9
+MapPosition = 0,22,6
 SnapEdges = true
 BattleBack = Swamp
 WildBattleBGM = Battle Wild Southeast
@@ -1393,7 +1393,7 @@ Flags = Levels
 #-------------------------------
 [207]   # Häuser
 Name = Tonishi
-MapPosition = 0,18,7
+MapPosition = 0,18,4
 SnapEdges = true
 #-------------------------------
 [208]   # Solhaven
@@ -2019,13 +2019,13 @@ Flags = Levels
 [306]   # Lucenhöhle
 Name = Lucenhöhle
 ShowArea = true
-MapPosition = 0,19,7
+MapPosition = 0,19,4
 SnapEdges = true
 #-------------------------------
 [307]   # Lucenhöhle
 Name = Lucenhöhle
 ShowArea = true
-MapPosition = 0,19,7
+MapPosition = 0,19,4
 DarkMap = true
 SnapEdges = true
 #-------------------------------
@@ -2067,14 +2067,14 @@ Flags = Levels
 [314]   # Spiegelräume
 Name = Spiegelräume
 ShowArea = true
-MapPosition = 0,19,7
+MapPosition = 0,19,4
 SnapEdges = true
 BattleBack = cave7
 #-------------------------------
 [315]   # Lucenhöhle
 Name = Lucenhöhle
 ShowArea = true
-MapPosition = 0,19,7
+MapPosition = 0,19,4
 DarkMap = true
 SnapEdges = true
 BattleBack = cave7
@@ -2183,7 +2183,7 @@ Name = Ariduna
 Outdoor = true
 ShowArea = true
 Bicycle = true
-MapPosition = 0,19,12
+MapPosition = 0,19,9
 SnapEdges = true
 BattleBack = desert
 WildBattleBGM = battle wild 2
@@ -2194,14 +2194,14 @@ Flags = Levels
 [341]   # Arena 5
 Name = Ariduna Arena
 ShowArea = true
-MapPosition = 0,19,12
+MapPosition = 0,19,9
 SnapEdges = true
 #-------------------------------
 [342]   # Route 12
 Name = Route 12
 Outdoor = true
 ShowArea = true
-MapPosition = 0,20,12
+MapPosition = 0,20,9
 SnapEdges = true
 BattleBack = forest2
 WildBattleBGM = Battle Wild Southeast
@@ -2247,13 +2247,13 @@ SnapEdges = true
 Name = Route 12 / 13
 Outdoor = true
 Bicycle = true
-MapPosition = 0,20,12
+MapPosition = 0,20,9
 SnapEdges = true
 #-------------------------------
 [350]   # Traumwelt
 Name = Traumwelt
 ShowArea = true
-MapPosition = 0,29,0
+MapPosition = 0,22,7
 SnapEdges = true
 BattleBack = traum
 WildBattleBGM = battle glitch
@@ -2377,7 +2377,7 @@ Flags = Levels
 Name = Route 13
 Outdoor = true
 ShowArea = true
-MapPosition = 0,21,11
+MapPosition = 0,21,8
 SnapEdges = true
 BattleBack = Forest_2
 WildBattleBGM = Battle! (Clan Warden)
@@ -2389,23 +2389,23 @@ Flags = Levels
 Name = Noxburgh
 Outdoor = true
 ShowArea = true
-MapPosition = 0,15,5
+MapPosition = 0,15,2
 SnapEdges = true
 #-------------------------------
 [372]   # Noxburgh
 Name = Noxburgh
-MapPosition = 0,15,5
+MapPosition = 0,15,2
 SnapEdges = true
 #-------------------------------
 [373]   # Noxburgh
 Name = Noxburgh
-MapPosition = 0,15,5
+MapPosition = 0,15,2
 SnapEdges = true
 #-------------------------------
 [374]   # Lucenhöhle
 Name = Lucenhöhle
 ShowArea = true
-MapPosition = 0,19,7
+MapPosition = 0,19,4
 DarkMap = true
 SnapEdges = true
 BattleBack = cave7
@@ -2413,7 +2413,7 @@ BattleBack = cave7
 [375]   # Lucenhöhle
 Name = Lucenhöhle
 ShowArea = true
-MapPosition = 0,19,7
+MapPosition = 0,19,4
 DarkMap = true
 SnapEdges = true
 BattleBack = cave7
@@ -2465,7 +2465,7 @@ Name = Route 10
 Outdoor = true
 ShowArea = true
 Weather = Sandstorm,50
-MapPosition = 0,18,13
+MapPosition = 0,18,10
 SnapEdges = true
 BattleBack = desert
 WildBattleBGM = battle wild 2
@@ -2711,7 +2711,7 @@ SnapEdges = true
 [413]   # Regirock Tempel
 Name = Vermächtnis von Regirock
 ShowArea = true
-MapPosition = 0,18,13
+MapPosition = 0,18,10
 DarkMap = true
 SnapEdges = true
 BattleBack = ruine
@@ -2723,7 +2723,7 @@ Flags = Levels
 Name = Oase
 Outdoor = true
 ShowArea = true
-MapPosition = 0,19,12
+MapPosition = 0,19,9
 SnapEdges = true
 BattleBack = desert
 WildBattleBGM = battle wild 2
@@ -2733,43 +2733,43 @@ Flags = Levels
 #-------------------------------
 [415]   # Labor Eingang
 Name = Route 11
-MapPosition = 0,18,12
+MapPosition = 0,18,9
 SnapEdges = true
 BattleBack = gym4
 #-------------------------------
 [416]   # Labor
 Name = Route 11
-MapPosition = 0,18,12
+MapPosition = 0,18,9
 SnapEdges = true
 BattleBack = gym4
 Flags = Levels
 #-------------------------------
 [417]   # Mine
 Name = Ariduna Arena
-MapPosition = 0,19,12
+MapPosition = 0,19,9
 SnapEdges = true
 #-------------------------------
 [418]   # Center
 Name = Ariduna Pokécenter
 ShowArea = true
 HealingSpot = 340,26,20
-MapPosition = 0,19,12
+MapPosition = 0,19,9
 SnapEdges = true
 #-------------------------------
 [419]   # Archäologe
 Name = Ariduna
-MapPosition = 0,19,12
+MapPosition = 0,19,9
 SnapEdges = true
 #-------------------------------
 [420]   # Oben
 Name = Ariduna
-MapPosition = 0,19,12
+MapPosition = 0,19,9
 SnapEdges = true
 #-------------------------------
 [421]   # Ruinen
 Name = Siegelkammer
 ShowArea = true
-MapPosition = 0,20,12
+MapPosition = 0,20,9
 SnapEdges = true
 BattleBack = regis
 WildBattleBGM = battle wild 2
@@ -2779,7 +2779,7 @@ Flags = Levels
 #-------------------------------
 [422]   # Links
 Name = Siegelkammer
-MapPosition = 0,20,12
+MapPosition = 0,20,9
 SnapEdges = true
 BattleBack = regis
 WildBattleBGM = battle wild 2
@@ -2789,7 +2789,7 @@ Flags = Levels
 #-------------------------------
 [423]   # Rechts
 Name = Siegelkammer
-MapPosition = 0,20,12
+MapPosition = 0,20,9
 SnapEdges = true
 BattleBack = regis
 WildBattleBGM = battle wild 2
@@ -2799,7 +2799,7 @@ Flags = Levels
 #-------------------------------
 [424]   # Mine
 Name = Ariduna Arena
-MapPosition = 0,19,12
+MapPosition = 0,19,9
 SnapEdges = true
 BattleBack = mine
 WildBattleBGM = Battle wild (2)
@@ -2810,7 +2810,7 @@ Flags = Levels
 #-------------------------------
 [425]   # Gym
 Name = Ariduna Arena
-MapPosition = 0,19,12
+MapPosition = 0,19,9
 SnapEdges = true
 BattleBack = labor1
 Flags = Levels
@@ -2853,14 +2853,14 @@ SnapEdges = true
 [433]   # MAP433
 Name = Kanalisation
 ShowArea = true
-MapPosition = 0,15,5
+MapPosition = 0,15,2
 SnapEdges = true
 Flags = Levels
 #-------------------------------
 [434]   # MAP434
 Name = Kanalisation
 ShowArea = true
-MapPosition = 0,15,5
+MapPosition = 0,15,2
 SnapEdges = true
 Flags = Levels
 #-------------------------------
@@ -3059,7 +3059,7 @@ Flags = Levels
 [451]   # Route 13
 Name = Route 13
 Outdoor = true
-MapPosition = 0,21,10
+MapPosition = 0,21,7
 SnapEdges = true
 BattleBack = Forest_2
 WildBattleBGM = Battle! (Clan Warden)
@@ -3070,7 +3070,7 @@ Flags = Levels
 Name = Route 16
 Outdoor = true
 ShowArea = true
-MapPosition = 0,20,7
+MapPosition = 0,20,4
 SnapEdges = true
 BattleBack = wald
 Environment = Forest
@@ -3080,7 +3080,7 @@ Flags = Levels
 Name = Faulmoor
 Outdoor = true
 ShowArea = true
-MapPosition = 0,21,8
+MapPosition = 0,21,5
 SnapEdges = true
 BattleBack = Forest_2
 WildBattleBGM = Battle Wild Southeast
@@ -3092,7 +3092,7 @@ Flags = Levels
 Name = Faulmoor
 Outdoor = true
 ShowArea = true
-MapPosition = 0,20,8
+MapPosition = 0,20,5
 SnapEdges = true
 BattleBack = Forest_2
 WildBattleBGM = Battle Wild Southeast
@@ -3104,7 +3104,7 @@ Flags = Levels
 Name = Faulmoor
 Outdoor = true
 ShowArea = true
-MapPosition = 0,20,9
+MapPosition = 0,20,6
 SnapEdges = true
 BattleBack = sacred
 WildBattleBGM = Battle Wild Southeast
@@ -3115,7 +3115,7 @@ Flags = Levels
 [456]   # Höhle des Schwarzen Donners
 Name = Höhle des Schwarzen Donners
 ShowArea = true
-MapPosition = 0,21,9
+MapPosition = 0,21,6
 DarkMap = true
 SnapEdges = true
 BattleBack = gym2
@@ -3125,7 +3125,7 @@ Flags = Levels
 [457]   # Höhle des Schwarzen Donners
 Name = Höhle des Schwarzen Donners
 ShowArea = true
-MapPosition = 0,21,9
+MapPosition = 0,21,6
 SnapEdges = true
 BattleBack = gym2
 Environment = Rock
@@ -3133,25 +3133,25 @@ Environment = Rock
 [458]   # Vogelfänger-Club
 Name = Vogelfängerclub
 ShowArea = true
-MapPosition = 0,18,7
+MapPosition = 0,18,4
 SnapEdges = true
 #-------------------------------
 [459]   # Vogelfänger-Club
 Name = Vogelfängerclub
 ShowArea = true
-MapPosition = 0,18,7
+MapPosition = 0,18,4
 SnapEdges = true
 #-------------------------------
 [460]   # Vogelfänger-Club
 Name = Vogelfängerclub
 ShowArea = true
-MapPosition = 0,18,7
+MapPosition = 0,18,4
 SnapEdges = true
 #-------------------------------
 [461]   # Vogelfänger-Club
 Name = Vogelfängerclub
 ShowArea = true
-MapPosition = 0,18,7
+MapPosition = 0,18,4
 SnapEdges = true
 #-------------------------------
 [462]   # Insel
@@ -3190,7 +3190,7 @@ Flags = Levels
 Name = Lone Beach
 Outdoor = true
 ShowArea = true
-MapPosition = 0,17,15
+MapPosition = 0,17,12
 SnapEdges = true
 BattleBack = beach
 WildBattleBGM = Battle wild Theme
@@ -3201,7 +3201,7 @@ Flags = Levels
 [467]   # Soul-Gasse
 Name = Soul-Gasse
 ShowArea = true
-MapPosition = 0,17,14
+MapPosition = 0,17,11
 DarkMap = true
 SnapEdges = true
 BattleBack = cave3
@@ -3213,7 +3213,7 @@ Flags = Levels
 [468]   # Lucenhöhle
 Name = Lucenhöhle
 ShowArea = true
-MapPosition = 0,19,7
+MapPosition = 0,19,4
 DarkMap = true
 SnapEdges = true
 BattleBack = cave7
@@ -3233,7 +3233,7 @@ BattleBack = gym4
 [471]   # Lucenhöhle
 Name = Lucenhöhle
 ShowArea = true
-MapPosition = 0,19,7
+MapPosition = 0,19,4
 DarkMap = true
 SnapEdges = true
 BattleBack = cave7
@@ -3241,14 +3241,14 @@ BattleBack = cave7
 [472]   # Lucenhöhle
 Name = Lucenhöhle
 ShowArea = true
-MapPosition = 0,19,7
+MapPosition = 0,19,4
 DarkMap = true
 SnapEdges = true
 #-------------------------------
 [473]   # Lucenhöhle
 Name = Lucenhöhle
 ShowArea = true
-MapPosition = 0,19,7
+MapPosition = 0,19,4
 DarkMap = true
 SnapEdges = true
 BattleBack = cave7
@@ -3256,7 +3256,7 @@ BattleBack = cave7
 [474]   # Lucenhöhle
 Name = Lucenhöhle
 ShowArea = true
-MapPosition = 0,19,7
+MapPosition = 0,19,4
 DarkMap = true
 SnapEdges = true
 BattleBack = cave7
@@ -3330,26 +3330,26 @@ BattleBack = gym4
 [486]   # Turm der Wiederkehr
 Name = Turm der Wiederkehr
 ShowArea = true
-MapPosition = 0,18,7
+MapPosition = 0,18,4
 SnapEdges = true
 #-------------------------------
 [487]   # Turm der Wiederkehr
 Name = Turm der Wiederkehr
-MapPosition = 0,18,7
+MapPosition = 0,18,4
 DarkMap = true
 SnapEdges = true
 Flags = Levels
 #-------------------------------
 [488]   # Turm der Wiederkehr
 Name = Turm der Wiederkehr
-MapPosition = 0,18,7
+MapPosition = 0,18,4
 DarkMap = true
 SnapEdges = true
 Flags = Levels
 #-------------------------------
 [489]   # Turm der Wiederkehr
 Name = Turm der Wiederkehr
-MapPosition = 0,18,7
+MapPosition = 0,18,4
 DarkMap = true
 SnapEdges = true
 Flags = Levels
@@ -3366,49 +3366,49 @@ Flags = Levels
 #-------------------------------
 [491]   # Haus
 Name = Tonishi
-MapPosition = 0,17,7
+MapPosition = 0,17,4
 SnapEdges = true
 #-------------------------------
 [492]   # Haus
 Name = Tonishi
-MapPosition = 0,17,7
+MapPosition = 0,17,4
 SnapEdges = true
 #-------------------------------
 [493]   # Haus
 Name = Tonishi
-MapPosition = 0,17,7
+MapPosition = 0,17,4
 SnapEdges = true
 #-------------------------------
 [494]   # Center
 Name = Pokécenter Tonishi
 ShowArea = true
 HealingSpot = 633,44,61
-MapPosition = 0,17,7
+MapPosition = 0,17,4
 SnapEdges = true
 Environment = None
 #-------------------------------
 [495]   # Markt
 Name = Markt
 ShowArea = true
-MapPosition = 0,17,7
+MapPosition = 0,17,4
 SnapEdges = true
 #-------------------------------
 [496]   # Haus
 Name = Tonishi
-MapPosition = 0,17,7
+MapPosition = 0,17,4
 SnapEdges = true
 #-------------------------------
 [497]   # Lone Beach Pokécenter
 Name = Lone Beach Pokécenter
 ShowArea = true
 HealingSpot = 466,33,6
-MapPosition = 0,17,14
+MapPosition = 0,17,11
 SnapEdges = true
 #-------------------------------
 [498]   # Regirock
 Name = Vermächtnis von Regirock
 ShowArea = true
-MapPosition = 0,18,13
+MapPosition = 0,18,10
 SnapEdges = true
 BattleBack = ruine
 WildBattleBGM = battle wild 2
@@ -3418,7 +3418,7 @@ Flags = Levels
 #-------------------------------
 [499]   # Regirock
 Name = Vermächtnis von Regirock
-MapPosition = 0,18,13
+MapPosition = 0,18,10
 SnapEdges = true
 BattleBack = ruine
 WildBattleBGM = battle wild 2
@@ -3428,7 +3428,7 @@ Flags = Levels
 #-------------------------------
 [500]   # Regirock
 Name = Vermächtnis von Regirock
-MapPosition = 0,18,13
+MapPosition = 0,18,10
 SnapEdges = true
 BattleBack = ruine
 WildBattleBGM = battle wild 2
@@ -3438,7 +3438,7 @@ Flags = Levels
 #-------------------------------
 [501]   # Regirock
 Name = Vermächtnis von Regirock
-MapPosition = 0,18,13
+MapPosition = 0,18,10
 SnapEdges = true
 BattleBack = ruine
 WildBattleBGM = Battle! (Wild Pokémon)_8
@@ -3447,7 +3447,7 @@ Flags = Levels
 #-------------------------------
 [502]   # Regirock
 Name = Vermächtnis von Regirock
-MapPosition = 0,18,13
+MapPosition = 0,18,10
 SnapEdges = true
 BattleBack = ruine
 WildBattleBGM = Battle! (Wild Pokémon)_8
@@ -3456,7 +3456,7 @@ Flags = Levels
 #-------------------------------
 [503]   # Regirock
 Name = Vermächtnis von Regirock
-MapPosition = 0,18,13
+MapPosition = 0,18,10
 SnapEdges = true
 BattleBack = ruine
 WildBattleBGM = Battle! (Wild Pokémon)_8
@@ -3465,7 +3465,7 @@ Flags = Levels
 #-------------------------------
 [504]   # Regirock
 Name = Vermächtnis von Regirock
-MapPosition = 0,18,13
+MapPosition = 0,18,10
 SnapEdges = true
 BattleBack = ruine
 WildBattleBGM = Battle! (Wild Pokémon)_8
@@ -3474,7 +3474,7 @@ Flags = Levels
 #-------------------------------
 [505]   # Regirock
 Name = Vermächtnis von Regirock
-MapPosition = 0,18,13
+MapPosition = 0,18,10
 SnapEdges = true
 BattleBack = ruine
 WildBattleBGM = Battle! (Wild Pokémon)_8
@@ -3483,7 +3483,7 @@ Flags = Levels
 #-------------------------------
 [506]   # Regirock
 Name = Vermächtnis von Regirock
-MapPosition = 0,18,13
+MapPosition = 0,18,10
 SnapEdges = true
 BattleBack = ruine
 WildBattleBGM = Battle! (Wild Pokémon)_8
@@ -3492,12 +3492,12 @@ Flags = Levels
 #-------------------------------
 [507]   # Zwischengebäude
 Name = Oase / Ariduna
-MapPosition = 0,19,12
+MapPosition = 0,19,9
 #-------------------------------
 [508]   # Regieleki Eingang
 Name = Vermächtnis von Regieleki
 ShowArea = true
-MapPosition = 0,17,12
+MapPosition = 0,17,9
 SnapEdges = true
 BattleBack = ruine
 WildBattleBGM = battle wild 2
@@ -3506,7 +3506,7 @@ Flags = Levels
 #-------------------------------
 [509]   # Regieleki rechts
 Name = Vermächtnis von Regieleki
-MapPosition = 0,17,12
+MapPosition = 0,17,9
 SnapEdges = true
 BattleBack = ruine
 WildBattleBGM = battle wild 2
@@ -3515,7 +3515,7 @@ Flags = Levels
 #-------------------------------
 [510]   # Regieleki links
 Name = Vermächtnis von Regieleki
-MapPosition = 0,17,12
+MapPosition = 0,17,9
 SnapEdges = true
 BattleBack = ruine
 WildBattleBGM = battle wild 2
@@ -3524,7 +3524,7 @@ Flags = Levels
 #-------------------------------
 [511]   # Regieleki mitte
 Name = Vermächtnis von Regieleki
-MapPosition = 0,17,12
+MapPosition = 0,17,9
 SnapEdges = true
 BattleBack = ruine
 WildBattleBGM = battle wild 2
@@ -3533,7 +3533,7 @@ Flags = Levels
 #-------------------------------
 [512]   # Regieleki links hinten
 Name = Vermächtnis von Regieleki
-MapPosition = 0,17,12
+MapPosition = 0,17,9
 SnapEdges = true
 BattleBack = ruine
 WildBattleBGM = battle wild 2
@@ -3542,7 +3542,7 @@ Flags = Levels
 #-------------------------------
 [513]   # Regieleki links unten
 Name = Vermächtnis von Regieleki
-MapPosition = 0,17,12
+MapPosition = 0,17,9
 SnapEdges = true
 BattleBack = ruine
 WildBattleBGM = battle wild 2
@@ -3552,7 +3552,7 @@ Flags = Levels
 [514]   # Traumwelt
 Name = Traumwelt
 ShowArea = true
-MapPosition = 0,29,0
+MapPosition = 0,12,1
 SnapEdges = true
 StillReflections = true
 BattleBack = traum
@@ -3564,7 +3564,7 @@ Flags = Levels,Inverse
 [515]   # Traumwelt
 Name = Traumwelt
 ShowArea = true
-MapPosition = 0,29,0
+MapPosition = 0,12,1
 SnapEdges = true
 BattleBack = traum
 WildBattleBGM = battle glitch
@@ -3575,7 +3575,7 @@ Flags = Levels,Inverse
 [516]   # Traumwelt
 Name = Traumwelt
 ShowArea = true
-MapPosition = 0,29,0
+MapPosition = 0,12,1
 SnapEdges = true
 BattleBack = traum
 WildBattleBGM = battle glitch
@@ -3586,7 +3586,7 @@ Flags = Levels,Inverse
 [517]   # Traumwelt
 Name = Traumwelt
 ShowArea = true
-MapPosition = 0,29,0
+MapPosition = 0,12,1
 SnapEdges = true
 BattleBack = traum
 WildBattleBGM = battle glitch
@@ -3599,7 +3599,7 @@ Name = Route 11
 Outdoor = true
 ShowArea = true
 Weather = Sandstorm,50
-MapPosition = 0,17,12
+MapPosition = 0,17,9
 SnapEdges = true
 BattleBack = desert
 WildBattleBGM = battle wild 2
@@ -3609,7 +3609,7 @@ Flags = Levels
 #-------------------------------
 [519]   # Tempel 1
 Name = Route 11
-MapPosition = 0,17,12
+MapPosition = 0,17,9
 DarkMap = true
 SnapEdges = true
 BattleBack = ruine
@@ -3619,7 +3619,7 @@ Flags = Levels
 #-------------------------------
 [520]   # Tempel 2
 Name = Route 11
-MapPosition = 0,17,12
+MapPosition = 0,17,9
 DarkMap = true
 SnapEdges = true
 BattleBack = ruine
@@ -3629,7 +3629,7 @@ Flags = Levels
 #-------------------------------
 [521]   # Tempel 3
 Name = Route 11
-MapPosition = 0,17,12
+MapPosition = 0,17,9
 DarkMap = true
 SnapEdges = true
 BattleBack = ruine
@@ -3639,7 +3639,7 @@ Flags = Levels
 #-------------------------------
 [522]   # Tempel 4
 Name = Route 11
-MapPosition = 0,17,12
+MapPosition = 0,17,9
 DarkMap = true
 SnapEdges = true
 BattleBack = ruine
@@ -3649,7 +3649,7 @@ Flags = Levels
 #-------------------------------
 [523]   # Tempel 5
 Name = Route 11
-MapPosition = 0,17,12
+MapPosition = 0,17,9
 DarkMap = true
 SnapEdges = true
 BattleBack = ruine
@@ -3659,7 +3659,7 @@ Flags = Levels
 #-------------------------------
 [524]   # Tempel 6
 Name = Route 11
-MapPosition = 0,17,12
+MapPosition = 0,17,9
 DarkMap = true
 SnapEdges = true
 BattleBack = ruine
@@ -3669,7 +3669,7 @@ Flags = Levels
 #-------------------------------
 [525]   # Tempel 7
 Name = Route 11
-MapPosition = 0,17,12
+MapPosition = 0,17,9
 DarkMap = true
 SnapEdges = true
 BattleBack = ruine
@@ -3679,12 +3679,12 @@ Flags = Levels
 #-------------------------------
 [527]   # Tempel 8
 Name = Route 11
-MapPosition = 0,17,12
+MapPosition = 0,17,9
 #-------------------------------
 [528]   # Tempel 9
 Name = Vermächtnis von Regieleki
 ShowArea = true
-MapPosition = 0,17,12
+MapPosition = 0,17,9
 DarkMap = true
 SnapEdges = true
 BattleBack = ruine
@@ -3694,7 +3694,7 @@ Flags = Levels
 #-------------------------------
 [529]   # Tempel 1
 Name = Route 10
-MapPosition = 0,18,13
+MapPosition = 0,18,10
 DarkMap = true
 SnapEdges = true
 BattleBack = ruine
@@ -3704,7 +3704,7 @@ Flags = Levels
 #-------------------------------
 [530]   # Tempel 2
 Name = Route 10
-MapPosition = 0,18,13
+MapPosition = 0,18,10
 DarkMap = true
 SnapEdges = true
 BattleBack = ruine
@@ -3714,7 +3714,7 @@ Flags = Levels
 #-------------------------------
 [531]   # Tempel 3
 Name = Route 10
-MapPosition = 0,18,13
+MapPosition = 0,18,10
 DarkMap = true
 SnapEdges = true
 BattleBack = ruine
@@ -3724,7 +3724,7 @@ Flags = Levels
 #-------------------------------
 [532]   # Tempel 4
 Name = Route 10
-MapPosition = 0,18,13
+MapPosition = 0,18,10
 DarkMap = true
 SnapEdges = true
 BattleBack = ruine
@@ -3734,7 +3734,7 @@ Flags = Levels
 #-------------------------------
 [533]   # Tempel 5
 Name = Route 10
-MapPosition = 0,18,13
+MapPosition = 0,18,10
 DarkMap = true
 SnapEdges = true
 BattleBack = ruine
@@ -3744,7 +3744,7 @@ Flags = Levels
 #-------------------------------
 [534]   # Tempel 6
 Name = Route 10
-MapPosition = 0,18,13
+MapPosition = 0,18,10
 DarkMap = true
 SnapEdges = true
 BattleBack = ruine
@@ -3754,7 +3754,7 @@ Flags = Levels
 #-------------------------------
 [535]   # Tempel 7
 Name = Route 10
-MapPosition = 0,18,13
+MapPosition = 0,18,10
 DarkMap = true
 SnapEdges = true
 BattleBack = ruine
@@ -3764,43 +3764,43 @@ Flags = Levels
 #-------------------------------
 [536]   # Wohnhaus
 Name = Ariduna
-MapPosition = 0,19,12
+MapPosition = 0,19,9
 SnapEdges = true
 #-------------------------------
 [537]   # Oben
 Name = Ariduna
-MapPosition = 0,19,12
+MapPosition = 0,19,9
 SnapEdges = true
 #-------------------------------
 [538]   # Wohnhaus
 Name = Ariduna
-MapPosition = 0,19,12
+MapPosition = 0,19,9
 SnapEdges = true
 #-------------------------------
 [539]   # Wohnhaus
 Name = Ariduna
-MapPosition = 0,19,12
+MapPosition = 0,19,9
 SnapEdges = true
 #-------------------------------
 [540]   # Haus
 Name = Bruchhain
-MapPosition = 0,22,10
+MapPosition = 0,22,7
 SnapEdges = true
 #-------------------------------
 [541]   # Haus
 Name = Bruchhain
-MapPosition = 0,22,10
+MapPosition = 0,22,7
 SnapEdges = true
 #-------------------------------
 [542]   # Haus
 Name = Bruchhain
-MapPosition = 0,22,10
+MapPosition = 0,22,7
 SnapEdges = true
 #-------------------------------
 [543]   # Flüstergrotte
 Name = Flüstergrotte
 ShowArea = true
-MapPosition = 0,21,11
+MapPosition = 0,21,8
 SnapEdges = true
 BattleBack = cave1
 WildBattleBGM = Battle! (Clan Warden)
@@ -3810,14 +3810,14 @@ Flags = Levels
 #-------------------------------
 [544]   # Durchgang
 Name = Bruchhain
-MapPosition = 0,22,10
+MapPosition = 0,22,7
 SnapEdges = true
 #-------------------------------
 [545]   # Schrein des modrigen Holzes
 Name = Schrein des modrigen Holzes
 Outdoor = true
 ShowArea = true
-MapPosition = 0,22,9
+MapPosition = 0,22,6
 SnapEdges = true
 BattleBack = Swamp
 WildBattleBGM = Battle Wild Southeast
@@ -3829,7 +3829,7 @@ Flags = Levels
 Name = Route 15
 Outdoor = true
 ShowArea = true
-MapPosition = 0,21,7
+MapPosition = 0,21,4
 SnapEdges = true
 BattleBack = route15
 Flags = Levels
@@ -3837,7 +3837,7 @@ Flags = Levels
 [547]   # Höhle des Schwarzen Donners
 Name = Höhle des Schwarzen Donners
 ShowArea = true
-MapPosition = 0,21,9
+MapPosition = 0,21,6
 SnapEdges = true
 BattleBack = gym2
 Environment = Rock
@@ -3845,7 +3845,7 @@ Environment = Rock
 [548]   # Höhle des Schwarzen Donners
 Name = Höhle des Schwarzen Donners
 ShowArea = true
-MapPosition = 0,21,9
+MapPosition = 0,21,6
 SnapEdges = true
 BattleBack = gym2
 Environment = Rock
@@ -3853,7 +3853,7 @@ Environment = Rock
 [549]   # Höhle des Schwarzen Donners
 Name = Höhle des Schwarzen Donners
 ShowArea = true
-MapPosition = 0,21,9
+MapPosition = 0,21,6
 SnapEdges = true
 BattleBack = gym2
 Environment = Rock
@@ -3861,21 +3861,21 @@ Environment = Rock
 [550]   # Höhle des Schwarzen Donners
 Name = Höhle des Schwarzen Donners
 ShowArea = true
-MapPosition = 0,21,9
+MapPosition = 0,21,6
 SnapEdges = true
 BattleBack = gym2
 Environment = Rock
 #-------------------------------
 [551]   # Mansion Innen Sound
 Name = Mansion
-MapPosition = 0,22,9
+MapPosition = 0,22,6
 SnapEdges = true
 #-------------------------------
 [552]   # Route 16
 Name = Route 16
 Outdoor = true
 ShowArea = true
-MapPosition = 0,20,7
+MapPosition = 0,20,4
 SnapEdges = true
 BattleBack = wald
 Environment = Forest
@@ -3885,7 +3885,7 @@ Flags = Levels
 Name = Flammenhain
 Outdoor = true
 ShowArea = true
-MapPosition = 0,20,6
+MapPosition = 0,20,3
 SnapEdges = true
 BattleBack = wald
 Environment = Forest
@@ -3895,7 +3895,7 @@ Flags = Levels
 Name = Flammenhain
 Outdoor = true
 ShowArea = true
-MapPosition = 0,20,6
+MapPosition = 0,20,3
 SnapEdges = true
 BattleBack = wald
 Environment = Forest
@@ -3905,7 +3905,7 @@ Flags = Levels
 Name = Flammenhain
 Outdoor = true
 ShowArea = true
-MapPosition = 0,20,6
+MapPosition = 0,20,3
 SnapEdges = true
 BattleBack = wald
 Environment = Forest
@@ -3914,7 +3914,7 @@ Flags = Levels
 [556]   # Stein der Wahrheit
 Name = Stein der Wahrheit
 ShowArea = true
-MapPosition = 0,20,6
+MapPosition = 0,20,3
 SnapEdges = true
 BattleBack = reshiram
 Environment = None
@@ -3923,7 +3923,7 @@ Flags = Levels
 [557]   # Krypta der Weißen Flammen
 Name = Krypta der Weißen Flammen
 ShowArea = true
-MapPosition = 0,20,6
+MapPosition = 0,20,3
 SnapEdges = true
 BattleBack = reshiram
 Flags = Levels
@@ -3931,55 +3931,55 @@ Flags = Levels
 [558]   # Schrein der Wahrheit und Ideale
 Name = Schrein der Wahrheit und Ideale
 ShowArea = true
-MapPosition = 0,22,7
+MapPosition = 0,22,4
 SnapEdges = true
 Flags = Levels
 #-------------------------------
 [559]   # Morastia Haus
 Name = Morastia
-MapPosition = 0,22,8
+MapPosition = 0,22,5
 SnapEdges = true
 #-------------------------------
 [560]   # Oben
 Name = Morastia
-MapPosition = 0,22,8
+MapPosition = 0,22,5
 SnapEdges = true
 #-------------------------------
 [561]   # Morastia Haus
 Name = Morastia
-MapPosition = 0,22,8
+MapPosition = 0,22,5
 SnapEdges = true
 #-------------------------------
 [562]   # Oben
 Name = Morastia
-MapPosition = 0,22,8
+MapPosition = 0,22,5
 SnapEdges = true
 #-------------------------------
 [563]   # Morastia Haus
 Name = Morastia
-MapPosition = 0,22,8
+MapPosition = 0,22,5
 SnapEdges = true
 #-------------------------------
 [564]   # Oben
 Name = Morastia
-MapPosition = 0,22,8
+MapPosition = 0,22,5
 SnapEdges = true
 #-------------------------------
 [565]   # Labor
 Name = Morastia Labor
-MapPosition = 0,22,8
+MapPosition = 0,22,5
 SnapEdges = true
 #-------------------------------
 [566]   # Pokécenter
 Name = Bruchhain Pokécenter
 HealingSpot = 155,12,18
-MapPosition = 0,22,10
+MapPosition = 0,22,7
 SnapEdges = true
 #-------------------------------
 [567]   # Tao
 Name = Tao
 ShowArea = true
-MapPosition = 0,20,6
+MapPosition = 0,20,3
 SnapEdges = true
 Flags = Levels
 #-------------------------------
@@ -3987,29 +3987,29 @@ Flags = Levels
 Name = Morastia Pokécenter
 ShowArea = true
 HealingSpot = 109,37,19
-MapPosition = 0,22,8
+MapPosition = 0,22,5
 SnapEdges = true
 #-------------------------------
 [569]   # Geisterjägerclub
 Name = Geisterjäger-Club
 ShowArea = true
-MapPosition = 0,22,8
+MapPosition = 0,22,5
 SnapEdges = true
 #-------------------------------
 [570]   # Geisterjägerclub
 Name = Geisterjäger-Club
-MapPosition = 0,22,8
+MapPosition = 0,22,5
 SnapEdges = true
 #-------------------------------
 [571]   # Mansion Innen Sound
 Name = Mansion
-MapPosition = 0,22,9
+MapPosition = 0,22,6
 SnapEdges = true
 #-------------------------------
 [601]   # Klartrug Arena
 Name = Morastia Arena
 ShowArea = true
-MapPosition = 0,22,8
+MapPosition = 0,22,5
 SnapEdges = true
 BattleBack = Forest_2
 WildBattleBGM = battle wild 2
@@ -4019,7 +4019,7 @@ WildVictoryBGM = Battle victory wild
 [602]   # Lucenhöhle
 Name = Lucenhöhle
 ShowArea = true
-MapPosition = 0,19,7
+MapPosition = 0,19,4
 DarkMap = true
 SnapEdges = true
 BattleBack = cave7
@@ -4027,7 +4027,7 @@ BattleBack = cave7
 [603]   # Klartrug Arena
 Name = Morastia Arena
 ShowArea = true
-MapPosition = 0,22,8
+MapPosition = 0,22,5
 SnapEdges = true
 BattleBack = Forest_2
 WildBattleBGM = battle wild space
@@ -4040,7 +4040,7 @@ Flags = Levels,Inverse
 [604]   # Klartrug Arena
 Name = Morastia Arena
 ShowArea = true
-MapPosition = 0,22,8
+MapPosition = 0,22,5
 SnapEdges = true
 BattleBack = Forest_2
 Environment = Forest
@@ -4049,14 +4049,14 @@ Flags = Levels,Inverse
 [606]   # Tao
 Name = Tao
 ShowArea = true
-MapPosition = 0,20,6
+MapPosition = 0,20,3
 SnapEdges = true
 Flags = Levels
 #-------------------------------
 [607]   # MAP607
 Name = Siegelkammer
 ShowArea = true
-MapPosition = 0,20,12
+MapPosition = 0,20,9
 DarkMap = true
 SnapEdges = true
 BattleBack = ruine2
@@ -4065,24 +4065,24 @@ Flags = Levels
 #-------------------------------
 [608]   # Haus
 Name = Route 16
-MapPosition = 0,20,6
+MapPosition = 0,20,3
 SnapEdges = true
 Flags = Levels
 #-------------------------------
 [609]   # Durchgang
 Name = Route 15 / Morastia
-MapPosition = 0,22,8
+MapPosition = 0,22,5
 SnapEdges = true
 #-------------------------------
 [610]   # Zwischengebäude
 Name = Faulmoor / Morastia
-MapPosition = 0,22,8
+MapPosition = 0,22,5
 SnapEdges = true
 #-------------------------------
 [611]   # Lucenhöhle
 Name = Lucenhöhle
 ShowArea = true
-MapPosition = 0,19,7
+MapPosition = 0,19,4
 DarkMap = true
 SnapEdges = true
 BattleBack = cave7
@@ -4091,7 +4091,7 @@ BattleBack = cave7
 Name = Aetherspitze
 Outdoor = true
 ShowArea = true
-MapPosition = 0,19,7
+MapPosition = 0,19,4
 SnapEdges = true
 BattleBack = forest2
 #-------------------------------
@@ -4099,7 +4099,7 @@ BattleBack = forest2
 Name = Aetherspitze
 Outdoor = true
 ShowArea = true
-MapPosition = 0,19,7
+MapPosition = 0,19,4
 SnapEdges = true
 BattleBack = forest2
 #-------------------------------
@@ -4107,7 +4107,7 @@ BattleBack = forest2
 Name = Aetherspitze
 Outdoor = true
 ShowArea = true
-MapPosition = 0,19,7
+MapPosition = 0,19,4
 SnapEdges = true
 BattleBack = forest2
 #-------------------------------
@@ -4115,14 +4115,14 @@ BattleBack = forest2
 Name = Aetherspitze
 Outdoor = true
 ShowArea = true
-MapPosition = 0,19,7
+MapPosition = 0,19,4
 SnapEdges = true
 BattleBack = field
 #-------------------------------
 [616]   # Lucenhöhle
 Name = Lucenhöhle
 ShowArea = true
-MapPosition = 0,19,7
+MapPosition = 0,19,4
 DarkMap = true
 SnapEdges = true
 BattleBack = cave7
@@ -4130,21 +4130,21 @@ BattleBack = cave7
 [617]   # Lucenhöhle
 Name = Lucenhöhle
 ShowArea = true
-MapPosition = 0,19,7
+MapPosition = 0,19,4
 SnapEdges = true
 BattleBack = cave7
 #-------------------------------
 [618]   # Lucenhöhle
 Name = Lucenhöhle
 ShowArea = true
-MapPosition = 0,19,7
+MapPosition = 0,19,4
 SnapEdges = true
 BattleBack = cave7
 #-------------------------------
 [619]   # Lucenhöhle
 Name = Lucenhöhle
 ShowArea = true
-MapPosition = 0,19,7
+MapPosition = 0,19,4
 DarkMap = true
 SnapEdges = true
 BattleBack = cave7
@@ -4152,7 +4152,7 @@ BattleBack = cave7
 [620]   # Lucenhöhle
 Name = Lucenhöhle
 ShowArea = true
-MapPosition = 0,19,7
+MapPosition = 0,19,4
 DarkMap = true
 SnapEdges = true
 BattleBack = cave7
@@ -4166,42 +4166,42 @@ SnapEdges = true
 [622]   # Spiegelräume
 Name = Spiegelräume
 ShowArea = true
-MapPosition = 0,19,7
+MapPosition = 0,19,4
 SnapEdges = true
 BattleBack = cave7
 #-------------------------------
 [623]   # Spiegelräume
 Name = Spiegelräume
 ShowArea = true
-MapPosition = 0,19,7
+MapPosition = 0,19,4
 SnapEdges = true
 BattleBack = cave7
 #-------------------------------
 [624]   # Spiegelräume
 Name = Spiegelräume
 ShowArea = true
-MapPosition = 0,19,7
+MapPosition = 0,19,4
 SnapEdges = true
 BattleBack = cave7
 #-------------------------------
 [625]   # Spiegelräume
 Name = Spiegelräume
 ShowArea = true
-MapPosition = 0,19,7
+MapPosition = 0,19,4
 SnapEdges = true
 BattleBack = cave7
 #-------------------------------
 [626]   # Spiegelräume
 Name = Spiegelräume
 ShowArea = true
-MapPosition = 0,19,7
+MapPosition = 0,19,4
 SnapEdges = true
 BattleBack = cave7
 #-------------------------------
 [627]   # Schrein des entzweiten Eises
 Name = Schrein des entzweiten Eises
 ShowArea = true
-MapPosition = 0,19,7
+MapPosition = 0,19,4
 DarkMap = true
 SnapEdges = true
 BattleBack = cave7
@@ -4209,7 +4209,7 @@ BattleBack = cave7
 [628]   # Lucenhöhle
 Name = Lucenhöhle
 ShowArea = true
-MapPosition = 0,19,7
+MapPosition = 0,19,4
 DarkMap = true
 SnapEdges = true
 BattleBack = cave7
@@ -4217,14 +4217,14 @@ BattleBack = cave7
 [630]   # Reliktstein
 Name = Relikt-Stein
 ShowArea = true
-MapPosition = 0,21,7
+MapPosition = 0,21,4
 SnapEdges = true
 #-------------------------------
 [631]   # Pfad der Drachen
 Name = Dracheninsel
 Outdoor = true
 ShowArea = true
-MapPosition = 0,16,5
+MapPosition = 0,16,2
 SnapEdges = true
 Flags = Levels
 #-------------------------------
@@ -4232,7 +4232,7 @@ Flags = Levels
 Name = Dracheninsel
 Outdoor = true
 ShowArea = true
-MapPosition = 0,16,4
+MapPosition = 0,16,1
 SnapEdges = true
 Flags = Levels
 #-------------------------------
@@ -4240,60 +4240,60 @@ Flags = Levels
 Name = Tonishi
 Outdoor = true
 ShowArea = true
-MapPosition = 0,17,7
+MapPosition = 0,17,4
 SnapEdges = true
 Flags = Levels
 #-------------------------------
 [638]   # Noxburgh
 Name = Noxburgh
-MapPosition = 0,15,5
+MapPosition = 0,15,2
 SnapEdges = true
 #-------------------------------
 [639]   # Noxburgh
 Name = Noxburgh
-MapPosition = 0,15,5
+MapPosition = 0,15,2
 SnapEdges = true
 #-------------------------------
 [640]   # Noxburgh
 Name = Noxburgh
-MapPosition = 0,15,5
+MapPosition = 0,15,2
 SnapEdges = true
 #-------------------------------
 [641]   # Noxburgh
 Name = Noxburgh
 ShowArea = true
-MapPosition = 0,15,5
+MapPosition = 0,15,2
 SnapEdges = true
 #-------------------------------
 [642]   # Arena
 Name = Arena
 ShowArea = true
-MapPosition = 0,15,5
+MapPosition = 0,15,2
 SnapEdges = true
 #-------------------------------
 [643]   # Arena
 Name = Arena
 ShowArea = true
-MapPosition = 0,15,5
+MapPosition = 0,15,2
 SnapEdges = true
 #-------------------------------
 [644]   # Arena
 Name = Arena
 ShowArea = true
-MapPosition = 0,15,5
+MapPosition = 0,15,2
 SnapEdges = true
 #-------------------------------
 [645]   # Arena
 Name = Arena
 ShowArea = true
-MapPosition = 0,15,5
+MapPosition = 0,15,2
 SnapEdges = true
 #-------------------------------
 [646]   # Route 19
 Name = Route 19
 Outdoor = true
 ShowArea = true
-MapPosition = 0,15,6
+MapPosition = 0,15,3
 SnapEdges = true
 Flags = Levels
 #-------------------------------
@@ -4301,7 +4301,7 @@ Flags = Levels
 Name = Route 19
 Outdoor = true
 ShowArea = true
-MapPosition = 0,16,6
+MapPosition = 0,16,3
 SnapEdges = true
 Flags = Levels
 #-------------------------------
@@ -4309,19 +4309,19 @@ Flags = Levels
 Name = Route 18
 Outdoor = true
 ShowArea = true
-MapPosition = 0,16,7
+MapPosition = 0,16,4
 SnapEdges = true
 Flags = Levels
 #-------------------------------
 [649]   # Zwischengebäude
 Name = Zwischengebäude
-MapPosition = 0,15,5
+MapPosition = 0,15,2
 SnapEdges = true
 #-------------------------------
 [650]   # MAP650
 Name = Kanalisation
 ShowArea = true
-MapPosition = 0,15,5
+MapPosition = 0,15,2
 SnapEdges = true
 Flags = Levels
 #-------------------------------
@@ -4329,7 +4329,7 @@ Flags = Levels
 Name = Dracheninsel 2
 Outdoor = true
 ShowArea = true
-MapPosition = 0,17,4
+MapPosition = 0,17,1
 SnapEdges = true
 Flags = Levels
 #-------------------------------
@@ -4337,7 +4337,7 @@ Flags = Levels
 Name = Dracheninsel 2
 Outdoor = true
 ShowArea = true
-MapPosition = 0,17,4
+MapPosition = 0,17,1
 SnapEdges = true
 Flags = Levels
 #-------------------------------
@@ -4345,7 +4345,7 @@ Flags = Levels
 Name = Dracheninsel 2
 Outdoor = true
 ShowArea = true
-MapPosition = 0,18,4
+MapPosition = 0,18,1
 SnapEdges = true
 Flags = Levels
 #-------------------------------
@@ -4353,7 +4353,7 @@ Flags = Levels
 Name = Dracheninsel 2
 Outdoor = true
 ShowArea = true
-MapPosition = 0,18,5
+MapPosition = 0,18,2
 SnapEdges = true
 Flags = Levels
 #-------------------------------
@@ -4361,89 +4361,89 @@ Flags = Levels
 Name = Dracheninsel 2
 Outdoor = true
 ShowArea = true
-MapPosition = 0,18,5
+MapPosition = 0,18,2
 SnapEdges = true
 Flags = Levels
 #-------------------------------
 [657]   # Kraftwerk
 Name = Kraftwerk
 ShowArea = true
-MapPosition = 0,15,6
+MapPosition = 0,15,3
 SnapEdges = true
 #-------------------------------
 [658]   # Kraftwerk
 Name = Kraftwerk
 ShowArea = true
-MapPosition = 0,15,6
+MapPosition = 0,15,3
 SnapEdges = true
 #-------------------------------
 [659]   # Kraftwerk
 Name = Kraftwerk
 ShowArea = true
-MapPosition = 0,15,6
+MapPosition = 0,15,3
 SnapEdges = true
 #-------------------------------
 [660]   # Kraftwerk
 Name = Kraftwerk
 ShowArea = true
-MapPosition = 0,15,6
+MapPosition = 0,15,3
 SnapEdges = true
 #-------------------------------
 [661]   # Kraftwerk
 Name = Kraftwerk
 ShowArea = true
-MapPosition = 0,15,6
+MapPosition = 0,15,3
 SnapEdges = true
 #-------------------------------
 [662]   # Kraftwerk
 Name = Kraftwerk
 ShowArea = true
-MapPosition = 0,15,6
+MapPosition = 0,15,3
 SnapEdges = true
 #-------------------------------
 [663]   # Kraftwerk
 Name = Kraftwerk
 ShowArea = true
-MapPosition = 0,15,6
+MapPosition = 0,15,3
 SnapEdges = true
 #-------------------------------
 [664]   # Kraftwerk
 Name = Kraftwerk
 ShowArea = true
-MapPosition = 0,15,6
+MapPosition = 0,15,3
 SnapEdges = true
 #-------------------------------
 [665]   # Kraftwerk
 Name = Kraftwerk
 ShowArea = true
-MapPosition = 0,15,6
+MapPosition = 0,15,3
 SnapEdges = true
 #-------------------------------
 [666]   # Mansion
 Name = Mansion
 ShowArea = true
-MapPosition = 0,16,6
+MapPosition = 0,16,3
 SnapEdges = true
 Flags = Levels
 #-------------------------------
 [667]   # Mansion
 Name = Mansion
 ShowArea = true
-MapPosition = 0,16,6
+MapPosition = 0,16,3
 SnapEdges = true
 Flags = Levels
 #-------------------------------
 [668]   # Mansion
 Name = Mansion
 ShowArea = true
-MapPosition = 0,16,6
+MapPosition = 0,16,3
 SnapEdges = true
 Flags = Levels
 #-------------------------------
 [669]   # Mansion
 Name = Mansion
 ShowArea = true
-MapPosition = 0,16,6
+MapPosition = 0,16,3
 SnapEdges = true
 Flags = Levels
 #-------------------------------
@@ -4451,11 +4451,11 @@ Flags = Levels
 Name = Route 20
 Outdoor = true
 ShowArea = true
-MapPosition = 0,17,5
+MapPosition = 0,17,2
 SnapEdges = true
 Flags = Levels
 #-------------------------------
-[675]   # Webarak-Nest
+[675]   # MAP675
 Name = Webarak-Nest
 ShowArea = true
 MapPosition = 0,8,12
@@ -4463,7 +4463,7 @@ SnapEdges = true
 BattleBack = cave
 Flags = BugContest,Levels
 #-------------------------------
-[676]   # Webarak-Nest
+[676]   # MAP676
 Name = Webarak-Nest
 ShowArea = true
 MapPosition = 0,8,12
@@ -4471,7 +4471,7 @@ SnapEdges = true
 BattleBack = cave
 Flags = BugContest,Levels
 #-------------------------------
-[677]   # Webarak-Nest
+[677]   # MAP677
 Name = Webarak-Nest
 ShowArea = true
 MapPosition = 0,8,12
@@ -4479,46 +4479,10 @@ SnapEdges = true
 BattleBack = cave
 Flags = BugContest,Levels
 #-------------------------------
-[678]   # Webarak-Nest
+[678]   # MAP678
 Name = Webarak-Nest
 ShowArea = true
 MapPosition = 0,8,12
 SnapEdges = true
 BattleBack = cave
 Flags = BugContest,Levels
-#-------------------------------
-[679]   # MAP679
-SnapEdges = true
-#-------------------------------
-[680]   # MAP680
-SnapEdges = true
-#-------------------------------
-[681]   # MAP681
-SnapEdges = true
-#-------------------------------
-[682]   # MAP682
-SnapEdges = true
-#-------------------------------
-[683]   # MAP683
-SnapEdges = true
-#-------------------------------
-[684]   # MAP684
-SnapEdges = true
-#-------------------------------
-[685]   # MAP685
-SnapEdges = true
-#-------------------------------
-[688]   # MAP688
-SnapEdges = true
-#-------------------------------
-[689]   # MAP689
-SnapEdges = true
-#-------------------------------
-[690]   # MAP690
-SnapEdges = true
-#-------------------------------
-[691]   # MAP691
-SnapEdges = true
-#-------------------------------
-[692]   # MAP692
-SnapEdges = true

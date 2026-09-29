@@ -47,6 +47,7 @@ Acuario_Prinplup
 Acuario_Tirtouga
 AEGISLASH
 AERODACTYL
+Aerodactyl (2)
 AERODACTYL_1
 AERODACTYL_1 - Kopie
 AERODACTYLs
@@ -378,7 +379,6 @@ BRAMBLIN
 BRAVIARY
 BRAVIARY_1
 BRAVIARY_2
-BRAVIARY_Hover-Anim
 BRELOOM
 brendan_bike
 brendan_fish_offset
@@ -614,6 +614,15 @@ DEKO Ibitak
 DEKO Krawalloro
 DEKO Pelipper und Wingull
 Deko Vivillon und Wingull
+Deko Vogel
+Deko Vogel 1
+Deko Vogel 2
+Deko Vogel 3
+Deko Vogel 4
+Deko Vogel 5
+Deko Vogel 6
+Deko Vogel 7
+Deko Vogel 8
 DELCATTY
 DELIBIRD
 DELPHOX
@@ -651,6 +660,13 @@ DODUO
 DOLLIV
 DONDOZO
 DONPHAN
+door
+Door (2)
+Door (3)
+Door (4)
+Door (5)
+door (6)
+Door (7)
 Door Aufzug
 DOOR BLOCK
 DOOR BLOCK 2
@@ -658,16 +674,21 @@ Door Bruchhain
 Door Dimension
 Door Dojo
 Door Dojo 2
+Door Grass
 Door Kraftwerk
+Door Legis
 Door Magic
 Door Mine
 Door Morastia PC
 Door Noxburgh
 Door Portal
+Door Portal (2)
 Door Regigigas
 Door Reshiram
 Door Route 5
 Door Ruinen
+Door Scheune
+Door Schrank Geheim
 Door Schule
 Door Stadt 2 Labor
 Door Stadt 3
@@ -711,6 +732,7 @@ doors6
 doors7
 doors8
 doors9
+doorsElite4
 doorsKlefki
 DOTTLER
 DOUBLADE
@@ -1002,6 +1024,8 @@ GOLEM_1
 GOLETT
 GOLISOPOD
 GOLURK
+Golurk (2)
+Golurk (3)
 GOODRA
 GOODRA_1
 GOOMY
@@ -1090,6 +1114,7 @@ HIPPOWDON_female
 HITMONCHAN
 HITMONLEE
 HITMONTOP
+Ho-Oh
 Höhle kleiner Raum
 Höhleneingang
 HONCHKROW
@@ -1121,6 +1146,12 @@ HYDREIGON
 Hyeroglyphen
 Hyeroglyphen1
 HYPNO
+Idle_Braviary
+Idle_Fearow
+Idle_Noctowl
+Idle_Staraptor
+Idle_Unfezant
+Idle_Xatu
 IDOL
 IGGLYBUFF
 ILLUMISE
@@ -1336,6 +1367,7 @@ LUCARIO_1
 LUCARIO_1 - Kopie
 LUDICOLO
 LUGIA
+Lugia (2)
 Lugia_3
 LUGIA_shadow
 Lugia_Special
@@ -1592,6 +1624,10 @@ NOIBAT
 NOIVERN
 NOIVERN Deko
 NOSEPASS
+NPC
+NPC (2)
+NPC (3)
+NPC (4)
 NPC 01
 NPC 02
 NPC 02_1
@@ -2162,6 +2198,7 @@ pkmn_steelix
 pkmn_tailow
 pkmn_unowngroup
 pkmn_unowngroup_1
+pkmn_unowngroup_2
 pkmn_walrein_1
 pkmn_Yveltal
 pkmn_Yveltal_2
@@ -2237,7 +2274,18 @@ PONYTA
 PONYTA_1
 POOCHYENA
 POPPLIO
+Portal 2
+Portal 3
+Portal 4
+Portal 5
+Portal 5_1
+Portal Dialga
+Portal Giratina
+Portal mana
+Portal Palkia
 PortalC
+Portaledielebi
+portalobbyonline
 PORYGON
 PORYGON2
 PORYGONZ
@@ -2434,7 +2482,9 @@ SCEPTILE
 SCEPTILE_1
 SCEPTILE_1 - Kopie
 SCEPTILE_female
+Schamane
 Schligda
+Schlüpfen Starly
 SCHOOLKID_F
 SCHOOLKID_F2
 SCHOOLKID_F3
@@ -2669,6 +2719,7 @@ SPINARAK
 Spinarak Meme
 SPINARAKs
 SPINDA
+Spinnen
 Spint
 SPIRITOMB
 SPOINK
@@ -2688,6 +2739,7 @@ STANTLER
 STANTLER_Sleep
 STARAPTOR
 STARAVIA
+Stärke Tonne
 STARLY
 STARMIE
 STARMIE_1
@@ -2824,6 +2876,9 @@ THUNDURUS
 THUNDURUS_1
 THWACKEY
 TIMBURR
+TimeGearDoor4
+TimeGearDoor5
+TimeGearDoor6
 TINGLU
 TINKATINK
 TINKATON
@@ -3172,6 +3227,7 @@ trainer_YOUNGSTER5
 TRANQUILL
 TRAPINCH
 TRAPINCH_female
+trchar_PipeDoor
 TREECKO
 Tresor Schule
 TREVENANT
@@ -3190,8 +3246,10 @@ TUBER_M
 TUBER_M2
 Tür Dracheninsel
 Tür Geisterhaus
+Tür Labor Team 0
 Tür Mansion
 Tür Mansion 2
+Tür Metall
 Tür REGIS
 TURTONATOR
 TURTWIG
@@ -3241,6 +3299,8 @@ UNOWN_6
 UNOWN_7
 UNOWN_8
 UNOWN_9
+UNOWN-A-P
+UNOWN-Q-Z
 URSALUNA
 URSALUNA_1
 URSARING

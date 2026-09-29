@@ -453,6 +453,7 @@ Pokemon = CARBINK,28
 LoseText = Meine Pokémon waren schon geschwächt.
 Pokemon = WHIRLIPEDE,26
 Pokemon = ARIADOS,28
+	Form = 1
 Pokemon = MAREANIE,26
 Pokemon = BEEDRILL,28
 #-------------------------------
@@ -711,6 +712,7 @@ Pokemon = BULBASAUR,10
 [BUGCATCHER,Erik]
 LoseText = Ich dachte du wärst ein Käfer-Pokémon.
 Pokemon = ARIADOS,33
+	Form = 1
 Pokemon = PINSIR,35
 #-------------------------------
 [GENTLEMAN5,Josef]
@@ -888,6 +890,7 @@ LoseText = Meine Falle hat nicht zugeschnappt.
 Pokemon = STUNFISK,33
     Form = 1
 Pokemon = ARIADOS,35
+	Form = 1
 Pokemon = GRAFAIAI,35
 Pokemon = RHYHORN,37
 #-------------------------------

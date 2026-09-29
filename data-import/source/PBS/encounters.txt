@@ -1120,6 +1120,36 @@ Land,21
     9,SPIDOPS,25,29
     1,PINSIR,30,35
 #-------------------------------
+[675] # Webarak-Nest
+Land,31
+    50,SPINARAK_1,10,20
+	10,TAROUNTULA,15,20
+	10,JOLTIK,10,20
+	10,SPIDOPS,10,20
+	10,DEWPIDER,10,20
+	5,ARIADOS_1,22,24
+	5,ARAQUANID,22,24
+#-------------------------------
+[676] # Webarak-Nest
+Land,31
+    50,SPINARAK_1,10,20
+	10,TAROUNTULA,15,20
+	10,JOLTIK,10,20
+	10,SPIDOPS,10,20
+	10,DEWPIDER,10,20
+	5,ARIADOS_1,22,24
+	5,ARAQUANID,22,24
+#-------------------------------
+[677] # Webarak-Nest
+Land,31
+    50,SPINARAK_1,10,20
+	10,TAROUNTULA,15,20
+	10,JOLTIK,10,20
+	10,SPIDOPS,10,20
+	10,DEWPIDER,10,20
+	5,ARIADOS_1,22,24
+	5,ARAQUANID,22,24
+#-------------------------------
 [174] # Azumaris
 LandMorning,21
     15,FOMANTIS,13,17
