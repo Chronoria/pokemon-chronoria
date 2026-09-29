@@ -3126,7 +3126,7 @@ CallRateSOS = 6
 RaidRanks = 2,3
 #-------------------------------
 
-[CHINCHOU]
+[CHINCHOU,1]
 
 FormName = Chrono
 
@@ -3187,7 +3187,7 @@ CallRateSOS = 9
 RaidRanks = 1,2
 #-------------------------------
 
-[LANTURN]
+[LANTURN,1]
 
 FormName = Chrono
 
@@ -3263,7 +3263,7 @@ Pokedex = Massive amounts of energy intensely stimulated Ampharos's cells, appar
 Generation = 6
 #-------------------------------
 
-[SNUBBULL]
+[SNUBBULL,1]
 
 FormName = Chrono
 
@@ -3320,7 +3320,7 @@ CallRateSOS = 9
 RaidRanks = 1,2
 #-------------------------------
 
-[GRANBULL]
+[GRANBULL,1]
 
 FormName = Chrono
 
