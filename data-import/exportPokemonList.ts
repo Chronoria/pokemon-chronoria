@@ -8,7 +8,7 @@ import ExcelJS from "exceljs";
 import { join } from "node:path";
 import { parsePokemonMapLocations } from "./parsePokemonMapLocations.ts";
 import { writeGroupedSection, TITLE_FONT, NOTE_FONT, type ColumnDef, type RowStyle } from "./xlsxGroupedSection.ts";
-import type { Pokemon, Item, Move } from "./dataModel.ts";
+import type { Pokemon, Item, Move, Ability } from "./dataModel.ts";
 
 const OUT_PATH = join(import.meta.dirname, "..", "Pokemon-Uebersicht.xlsx");
 const GENERATIONS = [1, 2, 3, 4, 5, 6, 7, 8, 9];
@@ -77,7 +77,7 @@ interface BattleFormRule {
   ability?: string;
   move?: string;
   item?: string | ((form: number) => string | undefined);
-  text?: string;
+  text?: string | ((form: number) => string);
   base?: (form: number) => number;
 }
 const BATTLE_ONLY_FORMS: Record<string, BattleFormRule> = {
@@ -106,7 +106,7 @@ const BATTLE_ONLY_FORMS: Record<string, BattleFormRule> = {
     text: "Terakristallisierung",
     item: (f) => ({ 5: "WELLSPRINGMASK", 6: "HEARTHFLAMEMASK", 7: "CORNERSTONEMASK" })[f],
   },
-  TERAPAGOS: { forms: [1, 2], ability: "TERASHIFT" },
+  TERAPAGOS: { forms: [1, 2], text: (f) => (f === 1 ? "Fähigkeit: Tera-Wandel" : "Terakristallisierung") },
 };
 
 const MEGA_DONE_STYLE: RowStyle = {
@@ -124,19 +124,22 @@ function byDexNumber(a: Row, b: Row) {
   return a.dexNumber - b.dexNumber;
 }
 
-export async function exportPokemonListXlsx(pokemon: Pokemon[], items: Item[], moves: Move[]) {
+export async function exportPokemonListXlsx(pokemon: Pokemon[], items: Item[], moves: Move[], abilities: Ability[]) {
   const pokemonById = new Map(pokemon.map((p) => [p.id, p]));
   const itemById = new Map(items.map((i) => [i.id, i]));
   const moveById = new Map(moves.map((m) => [m.id, m]));
+  const abilityById = new Map(abilities.map((a) => [a.id, a]));
   const eventLocations = parsePokemonMapLocations(pokemonById);
 
   const availableByGen = new Map<string | number, Row[]>();
   const unavailableByGen = new Map<string | number, Row[]>();
   const megaByGen = new Map<string | number, MegaRow[]>();
+  const battleByGen = new Map<string | number, BattleFormRow[]>();
   for (const gen of GENERATIONS) {
     availableByGen.set(gen, []);
     unavailableByGen.set(gen, []);
     megaByGen.set(gen, []);
+    battleByGen.set(gen, []);
   }
 
   // Same convention as src/lib/data.ts's pokemonDexNumber: position in the parsed pokemon.txt
@@ -170,6 +173,41 @@ export async function exportPokemonListXlsx(pokemon: Pokemon[], items: Item[], m
         });
         continue;
       }
+      // Battle-only forms: "Erledigt" once the out-of-battle form they come from is obtainable
+      // (and, where one is needed, the triggering item too).
+      const battleRule = BATTLE_ONLY_FORMS[p.id];
+      if (battleRule && battleRule.forms.includes(f.formNumber)) {
+        const baseNumber = battleRule.base ? battleRule.base(f.formNumber) : 0;
+        const baseForm = forms.find((bf) => bf.formNumber === baseNumber) ?? forms[0];
+        const baseNames = [...new Set(locationsOf(baseForm.formNumber, baseForm.foundIn))].sort((a, b) =>
+          a.localeCompare(b, "de")
+        );
+        const itemId = typeof battleRule.item === "function" ? battleRule.item(f.formNumber) : battleRule.item;
+        const item = itemId ? itemById.get(itemId) : undefined;
+        const itemNames = item
+          ? [...new Set(item.locations.map((l) => (l.source === "shop" ? `${l.locationName} (Shop)` : l.locationName)))]
+          : [];
+        const text = typeof battleRule.text === "function" ? battleRule.text(f.formNumber) : battleRule.text;
+        const trigger = [
+          battleRule.ability ? `Fähigkeit: ${abilityById.get(battleRule.ability)?.name ?? battleRule.ability}` : null,
+          battleRule.move ? `Attacke: ${moveById.get(battleRule.move)?.name ?? battleRule.move}` : null,
+          text ?? null,
+          itemId ? `Item: ${item?.name ?? itemId}` : null,
+        ].filter(Boolean);
+        const baseLabel = formLabel(p.name, baseForm);
+        const locationParts = [
+          baseNames.length > 0 ? `${baseLabel}: ${baseNames.join(", ")}` : `${baseLabel}: noch nicht erhältlich`,
+          ...(itemId ? [itemNames.length > 0 ? `${item?.name ?? itemId}: ${itemNames.join(", ")}` : `${item?.name ?? itemId}: noch nicht erhältlich`] : []),
+        ];
+        battleByGen.get(p.generation ?? 1)!.push({
+          dexNumber,
+          name: formLabel(p.name, f),
+          trigger: trigger.join(", "),
+          done: baseNames.length > 0 && (!itemId || itemNames.length > 0),
+          locationNames: locationParts.join(" | "),
+        });
+        continue;
+      }
       const locationNames = [...new Set(locationsOf(f.formNumber, f.foundIn))].sort((a, b) =>
         a.localeCompare(b, "de")
       );
@@ -188,11 +226,14 @@ export async function exportPokemonListXlsx(pokemon: Pokemon[], items: Item[], m
     availableByGen.get(gen)!.sort(byDexNumber);
     unavailableByGen.get(gen)!.sort(byDexNumber);
     megaByGen.get(gen)!.sort((a, b) => a.dexNumber - b.dexNumber);
+    battleByGen.get(gen)!.sort((a, b) => a.dexNumber - b.dexNumber);
   }
   const availableTotal = [...availableByGen.values()].reduce((s, l) => s + l.length, 0);
   const unavailableTotal = [...unavailableByGen.values()].reduce((s, l) => s + l.length, 0);
   const megaRows = [...megaByGen.values()].flat();
   const megaDone = megaRows.filter((r) => r.done).length;
+  const battleRows = [...battleByGen.values()].flat();
+  const battleDone = battleRows.filter((r) => r.done).length;
 
   const wb = new ExcelJS.Workbook();
   wb.creator = "Chronoria Wiki (data-import/exportPokemonList.ts)";
@@ -213,12 +254,14 @@ export async function exportPokemonListXlsx(pokemon: Pokemon[], items: Item[], m
     "pbAddPokemon/pbAddPokemonSilent, pbGenerateEgg, Pokemon.new, pbStartTrade), automatisch bei jedem build-data-Lauf. " +
     "Mega-Entwicklungen stehen in einer eigenen Liste ganz unten und gelten als erledigt (grün), sobald ihr " +
     "auslösender Mega-Stein irgendwo auffindbar oder kaufbar ist (Mega-Rayquaza: sobald Rayquaza erhältlich ist). " +
+    "Darunter folgen die Formen, die nur im Kampf entstehen (z.B. Proto-Formen, Formeo, Durengard): erledigt, sobald " +
+    "die Form, aus der sie entstehen, erhältlich ist (und ggf. das nötige Item). " +
     "Generationen stehen nebeneinander, sortiert nach Dex-Nummer. \"ID\" ist die interne PBS-ID (inkl. \"_N\"-Formen-Suffix). " +
     "Fundorte fassen Wildfang- und Event-/Geschenk-/Tausch-/Ei-Vorkommen zusammen, ohne die Quelle zu unterscheiden. " +
     "Bekannte Essentials-Demo-/Test-Maps werden ausgeschlossen (siehe parseMapLocations.ts EXCLUDED_MAP_IDS).";
   sheet.getCell(row, 1).font = NOTE_FONT;
   sheet.mergeCells(row, 1, row, maxCols);
-  sheet.getRow(row).height = 45;
+  sheet.getRow(row).height = 60;
   sheet.getCell(row, 1).alignment = { wrapText: true, vertical: "top" };
   row += 2;
 
@@ -244,7 +287,7 @@ export async function exportPokemonListXlsx(pokemon: Pokemon[], items: Item[], m
     UNAVAILABLE_COLUMNS
   );
   row += 2;
-  writeGroupedSection(
+  row = writeGroupedSection(
     sheet,
     row,
     `Mega-Entwicklungen (${megaDone} von ${megaRows.length} erledigt)`,
@@ -255,7 +298,27 @@ export async function exportPokemonListXlsx(pokemon: Pokemon[], items: Item[], m
     MEGA_COLUMNS,
     (r) => (r.done ? MEGA_DONE_STYLE : null)
   );
+  row += 2;
+  writeGroupedSection(
+    sheet,
+    row,
+    `Formen, die nur im Kampf entstehen (${battleDone} von ${battleRows.length} erledigt)`,
+    "Anzahl:",
+    GENERATIONS,
+    (gen) => `Generation ${gen}`,
+    battleByGen,
+    BATTLE_FORM_COLUMNS,
+    (r) => (r.done ? MEGA_DONE_STYLE : null)
+  );
 
   await wb.xlsx.writeFile(OUT_PATH);
-  return { used: availableTotal, unused: unavailableTotal, megaDone, megaTotal: megaRows.length, path: OUT_PATH };
+  return {
+    used: availableTotal,
+    unused: unavailableTotal,
+    megaDone,
+    megaTotal: megaRows.length,
+    battleDone,
+    battleTotal: battleRows.length,
+    path: OUT_PATH,
+  };
 }
