@@ -3353,7 +3353,7 @@ Pokemon = BEARTIC,65
     Ball = QUICKBALL
 Pokemon = GLACEON,67
     Moves = CHILLINGWATER,PROTECT,MIRRORCOAT,BLIZZARD
-    AbilityIndex = 2
+    AbilityIndex = 0
     Item = HEAVYDUTYBOOTS
     Gender = female
     Ball = POKEBALL
@@ -3377,12 +3377,12 @@ Pokemon = BAXCALIBUR,66
     Ball = GREATBALL
 Pokemon = DRAGONITE,67
     Moves = SURF,FLAMETHROWER,AERIALACE,DRAGONPULSE
-    AbilityIndex = 2
+    AbilityIndex = 1
     Item = DRAGONINITE
     Gender = male
     Ball = FRIENDBALL
 #-------------------------------
-[LEADER_Arena7,Eira,1] #Hagel
+[LEADER_Arena7,Eira_1] #Hagel
 Items = HYPERPOTION,HYPERPOTION,MEGARING
 LoseText = Ich glaube, ich schmelze!
 Pokemon = GARCHOMP,65
@@ -3393,7 +3393,7 @@ Pokemon = GARCHOMP,65
     Ball = LOCKBALL
 Pokemon = GLACEON,66
     Moves = CHILLINGWATER,PROTECT,MIRRORCOAT,BLIZZARD
-    AbilityIndex = 2
+    AbilityIndex = 0
     Item = HEAVYDUTYBOOTS
     Gender = female
     Ball = POKEBALL
@@ -3410,7 +3410,7 @@ Pokemon = BAXCALIBUR,66
     Ball = GREATBALL
 Pokemon = DRAGONITE,66
     Moves = SURF,FLAMETHROWER,AERIALACE,DRAGONPULSE
-    AbilityIndex = 2
+    AbilityIndex = 1
     Item = REDCARD
     Gender = male
     Ball = FRIENDBALL
@@ -3421,7 +3421,7 @@ Pokemon = ABOMASNOW,67
     Gender = female
     Ball = GREATBALL
 #-------------------------------
-[LEADER_Arena7,Eira,2] #Hagel
+[LEADER_Arena7,Eira_2] #Hagel
 Items = HYPERPOTION,HYPERPOTION,MEGARING
 LoseText = Ich glaube, ich schmelze!
 Pokemon = BAXCALIBUR,65
@@ -3437,13 +3437,13 @@ Pokemon = BEARTIC,66
     Ball = QUICKBALL
 Pokemon = DRAGONITE,65
     Moves = SURF,FLAMETHROWER,AERIALACE,DRAGONPULSE
-    AbilityIndex = 2
+    AbilityIndex = 1
     Item = REDCARD
     Gender = male
     Ball = FRIENDBALL
 Pokemon = GLACEON,66
     Moves = CHILLINGWATER,PROTECT,MIRRORCOAT,BLIZZARD
-    AbilityIndex = 2
+    AbilityIndex = 0
     Item = HEAVYDUTYBOOTS
     Gender = female
     Ball = POKEBALL
@@ -3460,12 +3460,12 @@ Pokemon = GARCHOMP,67
     Gender = male
     Ball = LOCKBALL
 #-------------------------------
-[LEADER_Arena7,Eira,3] #Schnee permanent
+[LEADER_Arena7,Eira_3] #Schnee permanent
 Items = HYPERPOTION,HYPERPOTION,MEGARING
 LoseText = Ich glaube, ich schmelze!
 Pokemon = DRAGONITE,65
     Moves = SURF,FLAMETHROWER,AERIALACE,DRAGONPULSE
-    AbilityIndex = 2
+    AbilityIndex = 1
     Item = REDCARD
     Gender = male
     Ball = FRIENDBALL
@@ -3488,7 +3488,7 @@ Pokemon = BEARTIC,66
     Ball = QUICKBALL
 Pokemon = GLACEON,66
     Moves = CHILLINGWATER,PROTECT,MIRRORCOAT,BLIZZARD
-    AbilityIndex = 2
+    AbilityIndex = 0
     Item = HEAVYDUTYBOOTS
     Gender = female
     Ball = POKEBALL

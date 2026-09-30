@@ -98128,7 +98128,7 @@ Move Animation
 Trigger: Action Button
 
 List of Event Commands:
-@>Text: \xn[Arenaleiter Jil]Der Kampf startet sobald du auf 
+@>Text: \xn[Arenaleiterin Jil]Der Kampf startet sobald du auf 
  :    : deine Position gegangen bist.
 @>
 
@@ -98147,13 +98147,13 @@ Move Animation
 Trigger: Action Button
 
 List of Event Commands:
-@>Text: \xn[Arenaleiter Jil]Mich konntest du vielleicht 
- :    : schlagen, aber es kommen noch 7 weietre 
+@>Text: \xn[Arenaleiterin Jil]Mich konntest du vielleicht 
+ :    : schlagen, aber es kommen noch 7 weitere 
  :    : Arenaleiter.
-@>Text: \xn[Arenaleiter Jil]Sie werden dich sicherlich vor 
+@>Text: \xn[Arenaleiterin Jil]Sie werden dich sicherlich vor 
  :    : größere Herausforderungen stellen.
-@>Text: \xn[Arenaleiter Jil]Deine Pokémon können übrigens ab 
- :    : jetzt bis zu Level 24 erreichen.
+@>Text: \xn[Arenaleiterin Jil]Deine Pokémon können übrigens 
+ :    : ab jetzt bis zu Level 24 erreichen.
 @>
 
 #------------------------------------------------------------------------------
@@ -98184,7 +98184,7 @@ List of Event Commands:
  @>Wait: 20 frame(s)
  @>Script: $stats.gym_leader_attempts[0] += 1
  @>Script: pbTrainerIntro(:LEADER_Jil)
- @>Text: \xn[Arenaleiter Jil]Du hast es so weit gebracht, 
+ @>Text: \xn[Arenaleiterin Jil]Du hast es so weit gebracht, 
   :    : kannst du mich schlagen?
  @>Set Event Location: [EV003],(010,008)
  @>Show Animation: [EV003], [Pokemon Ball Out]
@@ -98199,14 +98199,14 @@ List of Event Commands:
    :              : $>Graphic: (None)
   @>Set Event Location: [EV003],(001,000)
   @>Wait: 5 frame(s)
-  @>Text: \me[Badge get]\xn[Arenaleiter Jil]Du hast dir den 
+  @>Text: \me[Badge get]\xn[Arenaleiterin Jil]Du hast dir den 
    :    : Dunkelorden verdient.\wtnp[110]
   @>Script: $stats.set_time_to_badge(0)
   :       : $player.badges[0] = true
-  @>Text: \xn[Arenaleiter Jil] Hier, das kannst du sicherlich auch 
-   :    : gebrauchen.
+  @>Text: \xn[Arenaleiterin Jil] Hier, das kannst du sicherlich 
+   :    : auch gebrauchen.
   @>Script: pbReceiveItem(:TM84)
-  @>Text: \xn[Arenaleiter Jil]Deine Pokémon können ab jetzt 
+  @>Text: \xn[Arenaleiterin Jil]Deine Pokémon können ab jetzt 
    :    : Level 24 erreichen.
   @>Control Switches: [0004: Defeated Gym 1] = ON
   @>Control Variables: [0198] = 24
@@ -148851,10 +148851,12 @@ List of Event Commands:
 :       : [:Basic, "{1}"])
 :       : setBattleRule("disablePokeBalls")
 :       : setBattleRule("cannotRun")
-:       : setBattleRule("editWildPokemon", {
+@>Script: setBattleRule("editWildPokemon", {
 :       :   :hp_level=> 6,
 :       :   :immunities => 
-:       : [:ALLSTATUS, :STATDROPS, :OHKO]
+:       : [:ALLSTATUS, :STATDROPS, :OHKO],
+:       :   :moves => [[:SHOCKWAVE, :HYPNOSIS, 
+:       : :ENERGYBALL, :THUNDERBOLT]
 :       : })
 :       : WildBattle.start(:XURKITREE, 40)
 @>Set Move Route: [.noShadow]
@@ -466932,7 +466934,7 @@ List of Event Commands:
  :       : setBattleRule("double")
  :       : setBattleRule("outcome", 48)
  @>Script: TrainerBattle.start(:LEADER_Arena6, 
- :       : "Bodhi & Roya")
+ :       : "Bodhi & Raya")
  @>Script: pbTrainerEnd
  @>Conditional Branch: Variable [0048: Kampf-Ergebnis] == 1
   @>Text: \xn[Bodhi]Unglaublich.
@@ -484487,18 +484489,23 @@ Move Animation
 Trigger: Event Touch
 
 List of Event Commands:
-@>Text: Arenaleiter herausfordern?
+@>Text: Arenaleiterin herausfordern?
 @>Show Choices: Ja, Nein
 (When Cancel: Choice 2)
 : When [Ja]
  @>Script: $stats.gym_leader_attempts[0] += 1
- @>Script: pbTrainerIntro(:LEADER_EIRA)
+ @>Script: pbTrainerIntro(:LEADER_Arena7)
  @>Text: \xn[Arenaleiterin Eira]Hi, \PN!
- @>Script: setBattleRule("midbattleScript", 
- :       : :ARENALEITER_FLINT)
- @>Conditional Branch: Script: TrainerBattle.start(:LEADER_Arena5, "Flint")
-  @>Text: \me[Badge get]\xn[Arenaleiter Jil]Du erhältst den 
-   :    : Vulkanorden.\wtnp[110]
+ @>Script: setBattleRule("outcome", 48)
+ :       : setBattleRule("midbattleScript", 
+ :       : :ARENALEITER_EIRA)
+ :       : v = rand(4); setBattleRule("weather", 
+ :       : :Hail) if [0, 3].include?(v); 
+ :       : TrainerBattle.start(:LEADER_Arena7, 
+ :       : "Eira", v)
+ @>Conditional Branch: Variable [0048: Kampf-Ergebnis] == 1
+  @>Text: \me[Badge get]\xn[Arenaleiterin Eira]Du erhältst den 
+   :    : Nordlichtorden.\wtnp[110]
   @>Script: $stats.set_time_to_badge(0)
   :       : $player.badges[6] = true
   @>Script: pbReceiveItem(:ABILITYCAPSULE)
@@ -484506,12 +484513,13 @@ List of Event Commands:
   @>Control Variables: [0198] = 76
   @>Control Switches: [0010: Defeated Gym 7] = ON
   @>Control Self Switch: A =ON
+  @>Script: pbTrainerEnd
   @>
  : Else
+  @>Script: pbTrainerEnd
   @>Exit Event Processing
   @>
  : Branch End
- @>Script: pbTrainerEnd
  @>
 : When [Nein]
  @>Set Move Route: Player
