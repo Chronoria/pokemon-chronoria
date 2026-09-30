@@ -680,7 +680,7 @@ FormName = Chrono
 
 Types = FLYING
 
-BaseStats = 40,35,35,65,55,35
+BaseStats = 40,45,40,56,35,35
 
 GenderRatio = Female50Percent
 
@@ -740,7 +740,7 @@ FormName = Chrono
 
 Types = FLYING
 
-BaseStats = 63,45,50,82,75,50
+BaseStats = 63,60,55,71,50,50
 
 GenderRatio = Female50Percent
 
@@ -796,7 +796,7 @@ FormName = Chrono
 
 Types = FLYING
 
-BaseStats = 83,55,70,115,110,72
+BaseStats = 83,80,75,101,70,70
 
 GenderRatio = Female50Percent
 
@@ -900,7 +900,7 @@ FormName = Chrono
 
 Types = DARK,FLYING
 
-BaseStats = 40,75,30,70,31,31
+BaseStats = 40,60,30,70,31,31
 
 GenderRatio = Female50Percent
 
@@ -960,7 +960,7 @@ FormName = Chrono
 
 Types = DARK,FLYING
 
-BaseStats = 65,115,60,100,61,55
+BaseStats = 65,90,65,100,61,61
 
 GenderRatio = Female50Percent
 
@@ -1098,8 +1098,6 @@ RaidRanks = 3,4
 FormName = Chrono
 
 Types = DARK
-
-BaseStats = 40,56,45,57,25,50
 
 Abilities = GLUTTONY,HUSTLE
 
@@ -1317,7 +1315,7 @@ FormName = Chrono
 
 Types = POISON,DARK
 
-BaseStats = 40,55,35,60,25,40
+BaseStats = 40,45,35,55,30,40
 
 GenderRatio = Female50Percent
 
@@ -1375,7 +1373,7 @@ FormName = Chrono
 
 Types = POISON,DARK
 
-BaseStats = 80,95,70,92,50,75
+BaseStats = 75,80,70,90,65,75
 
 GenderRatio = Female50Percent
 
@@ -1433,7 +1431,7 @@ FormName = Chrono
 
 Types = POISON,DARK
 
-BaseStats = 85,115,80,125,55,80
+BaseStats = 85,90,80,130,70,80
 
 GenderRatio = Female50Percent
 
@@ -1632,7 +1630,7 @@ FormName = Chrono
 
 Types = WATER,PSYCHIC
 
-BaseStats = 50,45,48,60,75,52
+BaseStats = 50,52,48,55,65,50
 
 GenderRatio = Female50Percent
 
@@ -1690,7 +1688,7 @@ FormName = Chrono
 
 Types = WATER,PSYCHIC
 
-BaseStats = 80,72,78,95,115,85
+BaseStats = 80,82,78,85,95,80
 
 GenderRatio = Female50Percent
 
@@ -2410,8 +2408,6 @@ FormName = Alola
 
 Types = FIRE,GHOST
 
-BaseStats = 105,110,80,85,55,75
-
 Abilities = CURSEDBODY,LIGHTNINGROD
 
 HiddenAbilities = ROCKHEAD
@@ -2436,7 +2432,7 @@ FormName = Chrono
 
 Types = GROUND
 
-BaseStats = 60,60,90,35,30,55
+BaseStats = 50,50,95,35,40,50
 
 GenderRatio = FemaleSevenEighths
 
@@ -2500,7 +2496,7 @@ FormName = Chrono
 
 Types = GROUND
 
-BaseStats = 85,95,110,45,35,85
+BaseStats = 60,80,110,45,50,80
 
 GenderRatio = FemaleSevenEighths
 
@@ -2780,7 +2776,7 @@ FormName = Chrono
 
 Types = WATER,DRAGON
 
-BaseStats = 100,135,95,70,50,95
+BaseStats = 95,125,79,81,60,100
 
 GenderRatio = Female50Percent
 
@@ -3136,7 +3132,7 @@ FormName = Chrono
 
 Types = DARK,ELECTRIC
 
-BaseStats = 75,50,40,67,60,50
+BaseStats = 75,38,38,67,56,56
 
 GenderRatio = Female50Percent
 
@@ -3197,7 +3193,7 @@ FormName = Chrono
 
 Types = DARK,ELECTRIC
 
-BaseStats = 125,85,68,67,85,70
+BaseStats = 125,58,58,67,76,76
 
 GenderRatio = Female50Percent
 
@@ -3273,7 +3269,7 @@ FormName = Chrono
 
 Types = DARK
 
-BaseStats = 60,90,50,30,30,45
+BaseStats = 60,80,50,30,40,40
 
 GenderRatio = Female75Percent
 
@@ -3330,7 +3326,7 @@ FormName = Chrono
 
 Types = DARK
 
-BaseStats = 95,130,80,50,40,70
+BaseStats = 90,120,75,45,60,60
 
 GenderRatio = Female75Percent
 
@@ -3346,7 +3342,7 @@ Happiness = 50
 
 Abilities = INTIMIDATE,QUICKFEET
 
-HiddenAbilities = RATTLED,STRONGJAW
+HiddenAbilities = RATTLED
 
 Moves = 1,OUTRAGE,1,TACKLE,1,TAILWHIP,1,GROWL,1,ICEFANG,1,SCARYFACE,1,FIREFANG,1,CHARM,1,THUNDERFANG,7,BITE,13,LICK,19,HEADBUTT,27,ROAR,35,LASTRESORT,43,NIGHTDAZE,51,PAYBACK,59,CRUNCH,65,JAWLOCK,71,FOULPLAY
 
@@ -3575,8 +3571,6 @@ Generation = 3
 FormName = Chrono
 
 Types = STEEL,ICE
-
-BaseStats = 100,125,140,40,55,80
 
 GenderRatio = Female50Percent
 
@@ -4457,8 +4451,6 @@ FormName = Chrono
 
 Types = ELECTRIC,FLYING
 
-BaseStats = 45,30,55,60,60,65
-
 Abilities = CLOUDNINE,VOLTABSORB
 
 HiddenAbilities = STORMDRAIN
@@ -4486,8 +4478,6 @@ Evolutions = ALTARIA,Item,THUNDERSTONE
 FormName = Chrono
 
 Types = ELECTRIC,DRAGON
-
-BaseStats = 80,55,80,95,110,95
 
 Abilities = CLOUDNINE,VOLTABSORB
 
@@ -7397,7 +7387,7 @@ FormName = Chrono
 
 Types = GRASS,ROCK
 
-BaseStats = 45,70,90,25,20,55
+BaseStats = 40,55,80,30,35,60
 
 GenderRatio = Genderless
 
@@ -7453,7 +7443,7 @@ FormName = Chrono
 
 Types = GRASS,ROCK
 
-BaseStats = 70,95,110,40,40,75
+BaseStats = 60,75,100,50,55,80
 
 GenderRatio = Genderless
 
@@ -7509,7 +7499,7 @@ FormName = Chrono
 
 Types = GRASS,ROCK
 
-BaseStats = 100,150,140,50,60,100
+BaseStats = 80,135,130,70,95,90
 
 GenderRatio = Genderless
 
@@ -7587,7 +7577,7 @@ FormName = Tief-Form
 
 Types = GRASS
 
-BaseStats = 60,55,55,50,72,55
+BaseStats = 60,62,50,40,62,60
 
 GenderRatio = Female50Percent
 
@@ -7645,7 +7635,7 @@ FormName = Tief-Form
 
 Types = GRASS
 
-BaseStats = 95,80,80,70,115,80
+BaseStats = 90,92,75,60,92,85
 
 GenderRatio = Female50Percent
 
@@ -7817,8 +7807,6 @@ FormName = Chrono
 
 Types = GRASS,STEEL
 
-BaseStats = 35,50,85,25,85,55
-
 HiddenAbilities = GRASSPELT
 
 Abilities = MAGNETPULL,LEVITATE
@@ -7847,8 +7835,6 @@ FormName = Chrono
 
 Types = GRASS,STEEL
 
-BaseStats = 65,80,110,40,110,75
-
 BaseExp = 163
 
 Abilities = MAGNETPULL,LEVITATE
@@ -7870,8 +7856,6 @@ Evolutions = MAGNEZONE,Item,THUNDERSTONE,MAGNEZONE,LocationFlag,Magnetic
 FormName = Chrono
 
 Types = GRASS,STEEL
-
-BaseStats = 85,95,130,30,120,95
 
 Abilities = MAGNETPULL,LEVITATE
 
@@ -7935,7 +7919,7 @@ FormName = Chrono
 
 Types = POISON
 
-BaseStats = 40,45,90,40,65,40
+BaseStats = 30,65,100,40,45,25
 
 EVs = DEFENSE,1
 
@@ -7969,7 +7953,7 @@ FormName = Chrono
 
 Types = POISON,ROCK
 
-BaseStats = 70,85,140,65,115,75
+BaseStats = 50,95,180,70,85,45
 
 EVs = DEFENSE,2
 
@@ -7977,7 +7961,7 @@ Abilities = CORROSION,BATTLEARMOR
 
 HiddenAbilities = SOLIDROCK
 
-Moves = 0,ROCKBLAST,1,SHELLSMASH,1,SMOG,1,TOXICSPIKES,1,IRONDEFENSE,1,ACIDSPRAY,1,SPIKES,1,PROTECT,1,WITHDRAW,1,VENOSHOCK,1,SLUDGEBOMB,1,TOXIC,5,SLUDGE
+Moves = 0,ROCKBLAST,1,ICICLECRASH,1,SHELLSMASH,1,SMOG,1,TOXICSPIKES,1,IRONDEFENSE,1,ACIDSPRAY,1,SPIKES,1,PROTECT,1,WITHDRAW,1,VENOSHOCK,1,SLUDGEBOMB,1,TOXIC,5,SLUDGE
 
 TutorMoves = ACIDSPRAY,HIDDENPOWER,IRONDEFENSE,MUDSHOT,PROTECT,REST,ROCKSLIDE,SCARYFACE,SHELLSMASH,SLUDGEBOMB,SLUDGEWAVE,SMARTSTRIKE,SPIKES,STONEEDGE,SUBSTITUTE,TOXIC,TOXICSPIKES,VENOSHOCK
 
@@ -8173,8 +8157,6 @@ FormName = Chrono
 
 Types = BUG,GRASS
 
-BaseStats = 65,70,70,45,55,65
-
 Abilities = GOOEY
 
 HiddenAbilities = REGENERATOR
@@ -8196,8 +8178,6 @@ Evolutions = VOLCARONA,Level,60
 FormName = Chrono
 
 Types = BUG,GRASS
-
-BaseStats = 100,60,95,75,120,110
 
 Abilities = GOOEY
 
@@ -8229,7 +8209,7 @@ FormName = Chrono
 
 Types = GROUND
 
-BaseStats = 50,10,45,10,80,95
+BaseStats = 50,80,95,10,10,45
 
 Abilities = SANDVEIL,SANDRUSH
 
@@ -8525,7 +8505,7 @@ FormName = Chrono
 
 Types = ICE,FLYING
 
-BaseStats = 60,30,30,50,56,36
+BaseStats = 60,30,30,50,36,56
 
 GenderRatio = Female50Percent
 
