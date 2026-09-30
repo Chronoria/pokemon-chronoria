@@ -483370,53 +483370,22 @@ List of Event Commands:
 @>
 
 #------------------------------------------------------------------------------
-Event ID: 002
-Event Name: EV002
-(X,Y): (005,038)
+Event ID: 003
+Event Name: Block size(3,3) .sl
+(X,Y): (024,041)
 
 Page #1
 Conditions
 None
 
-Autonomous Movement
-Type: Fixed
-Speed: 3: Slow
-Freq: 3: Low
-Options Enabled
-Move Animation
-Trigger: Action Button
-
-List of Event Commands:
-@>Text: Schalter aktiviert.
-@>Change Screen Color Tone: (-255,-255,-255,0), @20
-@>Wait: 20 frame(s)
-@>Control Variables: [0132: Arena 7] += 1
-@>Control Switches: [0400: Geschenk 1] = ON
-@>Conditional Branch: Player is facing Left
- @>Control Self Switch: A =ON
- @>Transfer Player:[643: Arena], (006,038), Left
- @>Change Screen Color Tone: (0,0,0,0), @20
- @>Wait: 20 frame(s)
- @>
-: Else
- @>Control Self Switch: A =ON
- @>Transfer Player:[643: Arena], (005,039), Up
- @>Change Screen Color Tone: (0,0,0,0), @20
- @>Wait: 20 frame(s)
- @>
-: Branch End
-@>
-
-Page #2
-Conditions
-Self Switch A is ON
+Graphic: object_DarkIce_1
 
 Autonomous Movement
 Type: Fixed
 Speed: 3: Slow
 Freq: 3: Low
 Options Enabled
-Move Animation
+Direction Fix
 Trigger: Action Button
 
 List of Event Commands:
@@ -483476,53 +483445,22 @@ List of Event Commands:
 @>
 
 #------------------------------------------------------------------------------
-Event ID: 005
-Event Name: EV005
-(X,Y): (071,039)
+Event ID: 006
+Event Name: Block size(3,3) .sl
+(X,Y): (050,041)
 
 Page #1
 Conditions
 None
 
-Autonomous Movement
-Type: Fixed
-Speed: 3: Slow
-Freq: 3: Low
-Options Enabled
-Move Animation
-Trigger: Action Button
-
-List of Event Commands:
-@>Text: Schalter aktiviert.
-@>Change Screen Color Tone: (-255,-255,-255,0), @20
-@>Wait: 20 frame(s)
-@>Control Variables: [0132: Arena 7] += 1
-@>Control Switches: [0400: Geschenk 1] = ON
-@>Conditional Branch: Player is facing Left
- @>Control Self Switch: A =ON
- @>Transfer Player:[643: Arena], (070,039), Right
- @>Change Screen Color Tone: (0,0,0,0), @20
- @>Wait: 20 frame(s)
- @>
-: Else
- @>Control Self Switch: A =ON
- @>Transfer Player:[643: Arena], (071,040), Up
- @>Change Screen Color Tone: (0,0,0,0), @20
- @>Wait: 20 frame(s)
- @>
-: Branch End
-@>
-
-Page #2
-Conditions
-Self Switch A is ON
+Graphic: object_DarkIce_1
 
 Autonomous Movement
 Type: Fixed
 Speed: 3: Slow
 Freq: 3: Low
 Options Enabled
-Move Animation
+Direction Fix
 Trigger: Action Button
 
 List of Event Commands:
@@ -483591,112 +483529,6 @@ List of Event Commands:
 @>
 
 #------------------------------------------------------------------------------
-Event ID: 002
-Event Name: EV002
-(X,Y): (042,005)
-
-Page #1
-Conditions
-None
-
-Autonomous Movement
-Type: Fixed
-Speed: 3: Slow
-Freq: 3: Low
-Options Enabled
-Move Animation
-Trigger: Action Button
-
-List of Event Commands:
-@>Text: Schalter aktiviert.
-@>Change Screen Color Tone: (-255,-255,-255,0), @20
-@>Wait: 20 frame(s)
-@>Control Variables: [0132: Arena 7] += 1
-@>Control Switches: [0401: Geschenk 2] = ON
-@>Conditional Branch: Player is facing Left
- @>Control Self Switch: A =ON
- @>Transfer Player:[644: Arena], (043,005), Left
- @>Change Screen Color Tone: (0,0,0,0), @20
- @>Wait: 20 frame(s)
- @>
-: Else
- @>Control Self Switch: A =ON
- @>Transfer Player:[644: Arena], (042,006), Up
- @>Change Screen Color Tone: (0,0,0,0), @20
- @>Wait: 20 frame(s)
- @>
-: Branch End
-@>
-
-Page #2
-Conditions
-Self Switch A is ON
-
-Autonomous Movement
-Type: Fixed
-Speed: 3: Slow
-Freq: 3: Low
-Options Enabled
-Move Animation
-Trigger: Action Button
-
-List of Event Commands:
-@>
-
-#------------------------------------------------------------------------------
-Event ID: 003
-Event Name: EV003
-(X,Y): (071,039)
-
-Page #1
-Conditions
-None
-
-Autonomous Movement
-Type: Fixed
-Speed: 3: Slow
-Freq: 3: Low
-Options Enabled
-Move Animation
-Trigger: Action Button
-
-List of Event Commands:
-@>Text: Schalter aktiviert.
-@>Change Screen Color Tone: (-255,-255,-255,0), @20
-@>Wait: 20 frame(s)
-@>Control Variables: [0132: Arena 7] += 1
-@>Control Switches: [0401: Geschenk 2] = ON
-@>Conditional Branch: Player is facing Left
- @>Control Self Switch: A =ON
- @>Transfer Player:[644: Arena], (070,039), Right
- @>Change Screen Color Tone: (0,0,0,0), @20
- @>Wait: 20 frame(s)
- @>
-: Else
- @>Control Self Switch: A =ON
- @>Transfer Player:[644: Arena], (071,040), Up
- @>Change Screen Color Tone: (0,0,0,0), @20
- @>Wait: 20 frame(s)
- @>
-: Branch End
-@>
-
-Page #2
-Conditions
-Self Switch A is ON
-
-Autonomous Movement
-Type: Fixed
-Speed: 3: Slow
-Freq: 3: Low
-Options Enabled
-Move Animation
-Trigger: Action Button
-
-List of Event Commands:
-@>
-
-#------------------------------------------------------------------------------
 Event ID: 004
 Event Name: Tür size(3,1)
 (X,Y): (037,053)
@@ -483724,6 +483556,28 @@ List of Event Commands:
 @>
 
 #------------------------------------------------------------------------------
+Event ID: 005
+Event Name: Block size(3,3) .sl
+(X,Y): (050,041)
+
+Page #1
+Conditions
+None
+
+Graphic: object_DarkIce_1
+
+Autonomous Movement
+Type: Fixed
+Speed: 3: Slow
+Freq: 3: Low
+Options Enabled
+Direction Fix
+Trigger: Action Button
+
+List of Event Commands:
+@>
+
+#------------------------------------------------------------------------------
 
 #==============================================================================
 Map ID: 644
@@ -483731,112 +483585,6 @@ Map Name: Arena
 Tileset: 136: Arena
 Width: 80, Height: 60
 Auto-Change BGM: B2W2 237 Humilau City Gym
-
-#------------------------------------------------------------------------------
-Event ID: 001
-Event Name: EV001
-(X,Y): (005,038)
-
-Page #1
-Conditions
-None
-
-Autonomous Movement
-Type: Fixed
-Speed: 3: Slow
-Freq: 3: Low
-Options Enabled
-Move Animation
-Trigger: Action Button
-
-List of Event Commands:
-@>Text: Schalter aktiviert.
-@>Change Screen Color Tone: (-255,-255,-255,0), @20
-@>Wait: 20 frame(s)
-@>Control Variables: [0132: Arena 7] += 1
-@>Control Switches: [0402: Geschenk 3] = ON
-@>Conditional Branch: Player is facing Left
- @>Control Self Switch: A =ON
- @>Transfer Player:[645: Arena], (006,038), Left
- @>Change Screen Color Tone: (0,0,0,0), @20
- @>Wait: 20 frame(s)
- @>
-: Else
- @>Control Self Switch: A =ON
- @>Transfer Player:[645: Arena], (005,039), Up
- @>Change Screen Color Tone: (0,0,0,0), @20
- @>Wait: 20 frame(s)
- @>
-: Branch End
-@>
-
-Page #2
-Conditions
-Self Switch A is ON
-
-Autonomous Movement
-Type: Fixed
-Speed: 3: Slow
-Freq: 3: Low
-Options Enabled
-Move Animation
-Trigger: Action Button
-
-List of Event Commands:
-@>
-
-#------------------------------------------------------------------------------
-Event ID: 002
-Event Name: EV002
-(X,Y): (042,005)
-
-Page #1
-Conditions
-None
-
-Autonomous Movement
-Type: Fixed
-Speed: 3: Slow
-Freq: 3: Low
-Options Enabled
-Move Animation
-Trigger: Action Button
-
-List of Event Commands:
-@>Text: Schalter aktiviert.
-@>Change Screen Color Tone: (-255,-255,-255,0), @20
-@>Wait: 20 frame(s)
-@>Control Variables: [0132: Arena 7] += 1
-@>Control Switches: [0402: Geschenk 3] = ON
-@>Conditional Branch: Player is facing Left
- @>Control Self Switch: A =ON
- @>Transfer Player:[645: Arena], (043,005), Left
- @>Change Screen Color Tone: (0,0,0,0), @20
- @>Wait: 20 frame(s)
- @>
-: Else
- @>Control Self Switch: A =ON
- @>Transfer Player:[645: Arena], (042,006), Up
- @>Change Screen Color Tone: (0,0,0,0), @20
- @>Wait: 20 frame(s)
- @>
-: Branch End
-@>
-
-Page #2
-Conditions
-Self Switch A is ON
-
-Autonomous Movement
-Type: Fixed
-Speed: 3: Slow
-Freq: 3: Low
-Options Enabled
-Move Animation
-Trigger: Action Button
-
-List of Event Commands:
-@>
 
 #------------------------------------------------------------------------------
 Event ID: 003
