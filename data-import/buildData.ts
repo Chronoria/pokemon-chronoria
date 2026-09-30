@@ -220,8 +220,11 @@ async function main() {
       `${xlsxResult.prices} mit Preisvorschlag, ${xlsxResult.byPocket} in der Tasche-Übersicht.`
   );
 
-  const pokemonXlsxResult = await exportPokemonListXlsx(pokemon, items);
-  console.log(`Pokemon-Uebersicht.xlsx aktualisiert: ${pokemonXlsxResult.used} verwendet, ${pokemonXlsxResult.unused} noch nicht verwendet.`);
+  const pokemonXlsxResult = await exportPokemonListXlsx(pokemon, items, moves);
+  console.log(
+    `Pokemon-Uebersicht.xlsx aktualisiert: ${pokemonXlsxResult.used} verwendet, ${pokemonXlsxResult.unused} noch nicht verwendet, ` +
+      `${pokemonXlsxResult.megaDone} von ${pokemonXlsxResult.megaTotal} Mega-Entwicklungen erledigt.`
+  );
 
   const encounterXlsxResult = await exportEncounterListXlsx(encounters, pokemon);
   console.log(

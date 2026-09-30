@@ -4488,25 +4488,56 @@ BattleBack = cave
 Flags = BugContest,Levels
 #-------------------------------
 [679]   # MAP679
+ShowArea = true
 SnapEdges = true
+Flags = Levels
 #-------------------------------
 [680]   # MAP680
+ShowArea = true
 SnapEdges = true
+Flags = Levels
 #-------------------------------
 [681]   # MAP681
+ShowArea = true
 SnapEdges = true
+BattleBack = cave
+Flags = Levels
 #-------------------------------
 [682]   # MAP682
+ShowArea = true
 SnapEdges = true
+BattleBack = cave
+Flags = Levels
 #-------------------------------
 [683]   # MAP683
+ShowArea = true
 SnapEdges = true
+BattleBack = cave
+Flags = Levels
 #-------------------------------
 [684]   # MAP684
+ShowArea = true
 SnapEdges = true
+BattleBack = cave
+Flags = Levels
 #-------------------------------
 [685]   # MAP685
+ShowArea = true
 SnapEdges = true
+BattleBack = draconic
+Flags = Levels
+#-------------------------------
+[686]   # MAP686
+ShowArea = true
+SnapEdges = true
+BattleBack = draconic
+Flags = Levels
+#-------------------------------
+[687]   # MAP687
+ShowArea = true
+SnapEdges = true
+BattleBack = draconic
+Flags = Levels
 #-------------------------------
 [688]   # MAP688
 SnapEdges = true

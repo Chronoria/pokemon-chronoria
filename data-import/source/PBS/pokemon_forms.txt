@@ -3021,7 +3021,7 @@ FormName = Chrono
 
 Types = BUG,ELECTRIC
 
-BaseStats = 40,60,40,30,40,40
+BaseStats = 30,40,30,60,60,30
 
 GenderRatio = Female50Percent
 
@@ -3079,7 +3079,7 @@ FormName = Chrono
 
 Types = BUG,ELECTRIC
 
-BaseStats = 70,90,70,40,60,70
+BaseStats = 60,60,50,90,90,50
 
 GenderRatio = Female50Percent
 

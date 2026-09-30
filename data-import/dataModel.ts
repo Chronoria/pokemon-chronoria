@@ -41,6 +41,8 @@ export interface PokemonForm {
   raidRanks: number[];
   /** PBS item id of the Mega Stone that triggers this form, or null if it's not a Mega Evolution */
   megaStone: string | null;
+  /** PBS move id that triggers this Mega Evolution instead of a stone (only Mega Rayquaza: DRAGONASCENT), or null */
+  megaMove: string | null;
   /** form number this Mega Evolution reverts to after battle (0 = base species). Only meaningful when megaStone is set. */
   unmegaForm: number;
   /** filename in public/sprites/, or null if no matching form sprite exists */

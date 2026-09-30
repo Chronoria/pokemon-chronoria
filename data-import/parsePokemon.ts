@@ -163,6 +163,7 @@ function blockToForm(
     wildItemUncommon: r.WildItemUncommon !== undefined ? splitList(r.WildItemUncommon) : base.wildItemUncommon,
     wildItemRare: r.WildItemRare !== undefined ? splitList(r.WildItemRare) : base.wildItemRare,
     megaStone: r.MegaStone ?? null,
+    megaMove: r.MegaMove ?? null,
     unmegaForm: r.UnmegaForm !== undefined ? Number(r.UnmegaForm) : 0,
     sprite: sprites.get(`${speciesId}_${formNumber}`) ?? null,
     femaleSprite: sprites.get(`${speciesId}_${formNumber}_female`) ?? null,
