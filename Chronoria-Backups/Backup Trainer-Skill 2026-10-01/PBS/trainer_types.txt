@@ -4,7 +4,7 @@
 Name = Ass-Trainerin
 Gender = Female
 BaseMoney = 45
-SkillLevel = 85
+SkillLevel = 48
 IntroBGM = ORAS 092 Trainer_s Eyes Meet (Ace Trainer)
 #-------------------------------
 [ACETRAINER_F2]
@@ -25,7 +25,7 @@ IntroBGM = ORAS 092 Trainer_s Eyes Meet (Ace Trainer)
 Name = Ass-Trainer
 Gender = Female
 BaseMoney = 45
-SkillLevel = 85
+SkillLevel = 48
 IntroBGM = ORAS 092 Trainer_s Eyes Meet (Ace Trainer)
 #-------------------------------
 [ACETRAINER_M2]
@@ -151,7 +151,6 @@ IntroBGM = XY 034 Trainers_ Eyes Meet (Poke Fan)
 Name = Kämpferin
 Gender = Female
 BaseMoney = 32
-SkillLevel = 55
 IntroBGM = XY 089 Trainers_ Eyes Meet (Furisode Girl)
 #-------------------------------
 [BATTLEGIRL2]
@@ -164,14 +163,12 @@ IntroBGM = XY 089 Trainers_ Eyes Meet (Furisode Girl)
 Name = Kämpferin
 Gender = Female
 BaseMoney = 32
-SkillLevel = 70
 IntroBGM = XY 089 Trainers_ Eyes Meet (Furisode Girl)
 #-------------------------------
 [BATTLEGIRL4]
 Name = Kämpferin
 Gender = Female
 BaseMoney = 32
-SkillLevel = 70
 IntroBGM = XY 089 Trainers_ Eyes Meet (Furisode Girl)
 #-------------------------------
 [BEAUTY]
@@ -269,14 +266,12 @@ IntroBGM = RSE 147 Trainers_ Eyes Meet (Hiker)
 Name = Schwarzgurt
 Gender = Male
 BaseMoney = 32
-SkillLevel = 55
 IntroBGM = XY 068 Trainers_ Eyes Meet (Black Belt)
 #-------------------------------
 [BLACKBELT2]
 Name = Schwarzgurt
 Gender = Male
 BaseMoney = 32
-SkillLevel = 70
 IntroBGM = XY 068 Trainers_ Eyes Meet (Black Belt)
 #-------------------------------
 [BLACKBELT3]
@@ -301,14 +296,12 @@ IntroBGM = XY 068 Trainers_ Eyes Meet (Black Belt)
 Name = Snowboarder
 Gender = Male
 BaseMoney = 32
-SkillLevel = 85
 IntroBGM = XY 071 Trainers_ Eyes Meet (Roller Skater)
 #-------------------------------
 [BOARDER_F]
 Name = Snowboarderin
 Gender = Female
 BaseMoney = 32
-SkillLevel = 85
 IntroBGM = XY 071 Trainers_ Eyes Meet (Roller Skater)
 #-------------------------------
 [BUGCATCHER]
@@ -357,14 +350,12 @@ IntroBGM = BUGCATCHER
 Name = Käferexperte
 Gender = Male
 BaseMoney = 16
-SkillLevel = 70
 IntroBGM = BUGCATCHER
 #-------------------------------
 [BUGMANIAC_2]
 Name = Käferexperte
 Gender = Male
 BaseMoney = 16
-SkillLevel = 70
 IntroBGM = BUGCATCHER
 #-------------------------------
 [BUGMANIAC3]
@@ -476,7 +467,6 @@ IntroBGM = DPPT 093 Trainers_ Eyes Meet (Collector)
 Name = Pokémon-Sammler
 Gender = Male
 BaseMoney = 32
-SkillLevel = 55
 IntroBGM = DPPT 093 Trainers_ Eyes Meet (Collector)
 #-------------------------------
 [COLLECTOR3]
@@ -511,14 +501,14 @@ IntroBGM = RSE 243 Trainers_ Eyes Meet (Cooltrainer)
 Name = Ass-Trainer
 Gender = Female
 BaseMoney = 60
-SkillLevel = 70
+SkillLevel = 48
 IntroBGM = RSE 243 Trainers_ Eyes Meet (Cooltrainer)
 #-------------------------------
 [COOLTRAINER_F2]
 Name = Ass-Trainer
 Gender = Female
 BaseMoney = 60
-SkillLevel = 70
+SkillLevel = 48
 IntroBGM = RSE 243 Trainers_ Eyes Meet (Cooltrainer)
 #-------------------------------
 [COOLTRAINER_F3]
@@ -560,7 +550,7 @@ IntroBGM = RSE 243 Trainers_ Eyes Meet (Cooltrainer)
 Name = Ass-Trainer
 Gender = Male
 BaseMoney = 60
-SkillLevel = 70
+SkillLevel = 48
 IntroBGM = RSE 243 Trainers_ Eyes Meet (Cooltrainer)
 #-------------------------------
 [COOLTRAINER_M3]
@@ -632,7 +622,6 @@ IntroBGM = DPPT 053 Trainers_ Eyes Meet (Cycling)
 Name = Tänzer
 Gender = Male
 BaseMoney = 32
-SkillLevel = 55
 IntroBGM = DPPT 101 Trainers_ Eyes Meet (Artist)
 #-------------------------------
 [DANCER_F]
@@ -699,28 +688,24 @@ IntroBGM = BW 152 Trainers_ Eyes Meet (Clerk)
 Name = Drachenzähmer
 Gender = Male
 BaseMoney = 32
-SkillLevel = 95
 IntroBGM = BW 222 Trainers_ Eyes Meet (Roughneck)
 #-------------------------------
 [DRAGONTAMER2]
 Name = Drachenzähmer
 Gender = Male
 BaseMoney = 32
-SkillLevel = 95
 IntroBGM = BW 222 Trainers_ Eyes Meet (Roughneck)
 #-------------------------------
 [DRAGONTAMER3]
 Name = Drachenzähmerin
 Gender = Female
 BaseMoney = 32
-SkillLevel = 95
 IntroBGM = BW 222 Trainers_ Eyes Meet (Roughneck)
 #-------------------------------
 [ELDER]
 Name = Ältester
 Gender = Male
 BaseMoney = 32
-SkillLevel = 55
 IntroBGM = RSE 217 Trainers_ Eyes Meet (Hex Maniac)
 #-------------------------------
 [EXECUTIVE]
@@ -751,7 +736,7 @@ IntroBGM = BW 222 Trainers_ Eyes Meet (Roughneck)
 Name = Expertin
 Gender = Female
 BaseMoney = 32
-SkillLevel = 70
+SkillLevel = 48
 IntroBGM = BW 222 Trainers_ Eyes Meet (Roughneck)
 #-------------------------------
 [EXPERTM]
@@ -843,7 +828,7 @@ IntroBGM = KIMONO
 Name = Glücksspieler
 Gender = Male
 BaseMoney = 72
-SkillLevel = 48
+SkillLevel = 32
 IntroBGM = DPPT 097 Trainers_ Eyes Meet (Gambler)
 #-------------------------------
 [GAMBLER2]
@@ -869,7 +854,7 @@ IntroBGM = Spotted nurseryaid_breeder_doctor_nurse
 Name = Gentleman
 Gender = Male
 BaseMoney = 72
-SkillLevel = 48
+SkillLevel = 32
 IntroBGM = ORAS 058 Trainers_ Eyes Meet (Gentleman)
 #-------------------------------
 [GENTLEMAN2]
@@ -897,7 +882,7 @@ IntroBGM = BW 346 Trainers_ Eyes Meet (Gentleman)
 Name = Gentleman
 Gender = Male
 BaseMoney = 72
-SkillLevel = 55
+SkillLevel = 32
 IntroBGM = BW 346 Trainers_ Eyes Meet (Gentleman)
 #-------------------------------
 [GENTLEMAN6]
@@ -918,7 +903,7 @@ IntroBGM = ORAS 058 Trainers_ Eyes Meet (Gentleman)
 Name = Gitarrist
 Gender = Male
 BaseMoney = 48
-SkillLevel = 55
+SkillLevel = 32
 IntroBGM = DPPT 097 Trainers_ Eyes Meet (Gambler)
 #-------------------------------
 [GUITARIST2]
@@ -945,7 +930,6 @@ IntroBGM = B2W2 135 Trainers_ Eyes Meet (Harlequin)
 Name = Hexe
 Gender = Female
 BaseMoney = 32
-SkillLevel = 85
 IntroBGM = ORAS 067 Trainers_ Eyes Meet (Hex Maniac)
 #-------------------------------
 [HIKER]
@@ -1012,7 +996,6 @@ IntroBGM = XY 071 Trainers_ Eyes Meet (Roller Skater)
 Name = Jongleur
 Gender = Male
 BaseMoney = 32
-SkillLevel = 55
 IntroBGM = DPPT 097 Trainers_ Eyes Meet (Gambler)
 #-------------------------------
 [KAIROS]
@@ -1195,21 +1178,18 @@ IntroBGM = XY 052 Trainers_ Eyes Meet (Maid)
 Name = Medium
 Gender = Female
 BaseMoney = 24
-SkillLevel = 70
 IntroBGM = BW 212 Trainers_ Eyes Meet (Psychic)
 #-------------------------------
 [NINJABOY]
 Name = Ninjajunge
 Gender = Male
 BaseMoney = 24
-SkillLevel = 85
 IntroBGM = XY 096 Trainers_ Eyes Meet (Psychic)
 #-------------------------------
 [NINJABOY2]
 Name = Ninjajunge
 Gender = Male
 BaseMoney = 24
-SkillLevel = 85
 IntroBGM = XY 096 Trainers_ Eyes Meet (Psychic)
 #-------------------------------
 [NOCTIS]
@@ -1334,7 +1314,7 @@ IntroBGM = BW 337 Trainers_ Eyes Meet (Pokefan)
 Name = Pokémaniac
 Gender = Male
 BaseMoney = 64
-SkillLevel = 55
+SkillLevel = 32
 IntroBGM = BW 337 Trainers_ Eyes Meet (Pokefan)
 #-------------------------------
 [POKEMONBREEDER_F]
@@ -1389,14 +1369,12 @@ IntroBGM = SwSh 045 Trainers_ Eyes Meet! (Farmer)
 Name = Ranger
 Gender = Female
 BaseMoney = 60
-SkillLevel = 55
 IntroBGM = POKEMONRANGER
 #-------------------------------
 [POKEMONRANGER_F2]
 Name = Ranger
 Gender = Female
 BaseMoney = 60
-SkillLevel = 70
 IntroBGM = POKEMONRANGER
 #-------------------------------
 [POKEMONRANGER_F3]
@@ -1415,7 +1393,6 @@ IntroBGM = POKEMONRANGER
 Name = Ranger
 Gender = Male
 BaseMoney = 60
-SkillLevel = 70
 IntroBGM = POKEMONRANGER
 #-------------------------------
 [POKEMONRANGER_M2]
@@ -1487,7 +1464,6 @@ IntroBGM = XY 096 Trainers_ Eyes Meet (Psychic)
 Name = Seherin
 Gender = Female
 BaseMoney = 32
-SkillLevel = 55
 IntroBGM = XY 096 Trainers_ Eyes Meet (Psychic)
 #-------------------------------
 [PSYCHIC_F2]
@@ -1500,7 +1476,6 @@ IntroBGM = XY 096 Trainers_ Eyes Meet (Psychic)
 Name = Seher
 Gender = Male
 BaseMoney = 32
-SkillLevel = 70
 IntroBGM = XY 096 Trainers_ Eyes Meet (Psychic)
 #-------------------------------
 [PSYCHIC_M2]
@@ -1513,7 +1488,6 @@ IntroBGM = XY 096 Trainers_ Eyes Meet (Psychic)
 Name = Seher
 Gender = Male
 BaseMoney = 32
-SkillLevel = 70
 IntroBGM = XY 096 Trainers_ Eyes Meet (Psychic)
 #-------------------------------
 [PUNKF]
@@ -1532,7 +1506,6 @@ IntroBGM = XY 178 Trainers_ Eyes Meet (Punk Guy)
 Name = Punk
 Gender = Male
 BaseMoney = 32
-SkillLevel = 55
 IntroBGM = XY 178 Trainers_ Eyes Meet (Punk Guy)
 #-------------------------------
 [PUNKM2]
@@ -1617,14 +1590,14 @@ Flags = ReserveLastPokemon,FixedLead
 Name = Ruinenforscher
 Gender = Male
 BaseMoney = 48
-SkillLevel = 70
+SkillLevel = 32
 IntroBGM = SM 024 Trainers_ Eyes Meet (Trainer)
 #-------------------------------
 [RUINMANIAC2]
 Name = Ruinenforscher
 Gender = Male
 BaseMoney = 48
-SkillLevel = 70
+SkillLevel = 32
 IntroBGM = SM 024 Trainers_ Eyes Meet (Trainer)
 #-------------------------------
 [SAILOR]
@@ -1697,28 +1670,24 @@ IntroBGM = SwSh 022 Trainers_ Eyes Meet! (Youngster)
 Name = Forscherin
 Gender = Female
 BaseMoney = 48
-SkillLevel = 70
 IntroBGM = BW 206 Trainers_ Eyes Meet (Scientist)
 #-------------------------------
 [SCIENTIST_F2]
 Name = Forscherin
 Gender = Female
 BaseMoney = 48
-SkillLevel = 70
 IntroBGM = BW 206 Trainers_ Eyes Meet (Scientist)
 #-------------------------------
 [SCIENTIST_F3]
 Name = Forscherin
 Gender = Female
 BaseMoney = 48
-SkillLevel = 70
 IntroBGM = BW 206 Trainers_ Eyes Meet (Scientist)
 #-------------------------------
 [SCIENTIST_M]
 Name = Forscher
 Gender = Male
 BaseMoney = 48
-SkillLevel = 70
 IntroBGM = BW 206 Trainers_ Eyes Meet (Scientist)
 #-------------------------------
 [SCIENTIST_M2]
@@ -1737,14 +1706,12 @@ IntroBGM = BW 206 Trainers_ Eyes Meet (Scientist)
 Name = Forscher
 Gender = Male
 BaseMoney = 48
-SkillLevel = 70
 IntroBGM = BW 206 Trainers_ Eyes Meet (Scientist)
 #-------------------------------
 [SCIENTIST_M5]
 Name = Forscher
 Gender = Male
 BaseMoney = 48
-SkillLevel = 70
 IntroBGM = BW 206 Trainers_ Eyes Meet (Scientist)
 #-------------------------------
 [SUPERNERD]
@@ -1770,7 +1737,7 @@ IntroBGM = XY 058 Trainers_ Eyes Meet (Swimmer♀)
 Name = Schwimmerin
 Gender = Female
 BaseMoney = 16
-SkillLevel = 55
+SkillLevel = 32
 IntroBGM = XY 058 Trainers_ Eyes Meet (Swimmer♀)
 #-------------------------------
 [SWIMMER_F3]
@@ -1784,7 +1751,7 @@ IntroBGM = XY 058 Trainers_ Eyes Meet (Swimmer♀)
 Name = Schwimmerin
 Gender = Female
 BaseMoney = 16
-SkillLevel = 55
+SkillLevel = 32
 IntroBGM = XY 058 Trainers_ Eyes Meet (Swimmer♀)
 #-------------------------------
 [SWIMMER_F5]
@@ -1819,14 +1786,14 @@ IntroBGM = XY 074 Trainers_ Eyes Meet (Swimmer♂)
 Name = Schwimmer
 Gender = Male
 BaseMoney = 16
-SkillLevel = 55
+SkillLevel = 32
 IntroBGM = XY 074 Trainers_ Eyes Meet (Swimmer♂)
 #-------------------------------
 [SWIMMER_M3]
 Name = Schwimmer
 Gender = Male
 BaseMoney = 16
-SkillLevel = 55
+SkillLevel = 32
 IntroBGM = XY 074 Trainers_ Eyes Meet (Swimmer♂)
 #-------------------------------
 [SWIMMER_M4]
@@ -1868,9 +1835,8 @@ IntroBGM = XY 074 Trainers_ Eyes Meet (Swimmer♂)
 Name = Lehrerin
 Gender = Female
 BaseMoney = 32
-SkillLevel = 32
+SkillLevel = 100
 IntroBGM = XY 052 Trainers_ Eyes Meet (Maid)
-Flags = UsePokemonInOrder
 #-------------------------------
 [TEACHER2]
 Name = Lehrerin
@@ -1907,7 +1873,7 @@ BattleBGM = Team Flare
 Name = Team 0
 Gender = Male
 BaseMoney = 70
-SkillLevel = 70
+SkillLevel = 48
 IntroBGM = TEAM1
 BattleBGM = Team Flare
 VictoryBGM = XY 105 Victory! (Team Flare)
@@ -1916,7 +1882,7 @@ VictoryBGM = XY 105 Victory! (Team Flare)
 Name = Team 0
 Gender = Unknown
 BaseMoney = 32
-SkillLevel = 70
+SkillLevel = 48
 IntroBGM = Team Plasma
 BattleBGM = Team Flare
 #-------------------------------
@@ -1924,7 +1890,7 @@ BattleBGM = Team Flare
 Name = Team 0
 Gender = Unknown
 BaseMoney = 32
-SkillLevel = 70
+SkillLevel = 48
 IntroBGM = Team Plasma
 BattleBGM = Team Flare
 #-------------------------------
@@ -1932,7 +1898,7 @@ BattleBGM = Team Flare
 Name = Team 1
 Gender = Male
 BaseMoney = 70
-SkillLevel = 70
+SkillLevel = 48
 IntroBGM = TEAM1
 BattleBGM = Team Flare
 VictoryBGM = XY 105 Victory! (Team Flare)
@@ -1941,7 +1907,7 @@ VictoryBGM = XY 105 Victory! (Team Flare)
 Name = Team 1
 Gender = Unknown
 BaseMoney = 70
-SkillLevel = 70
+SkillLevel = 48
 IntroBGM = TEAM1
 BattleBGM = Team Flare
 VictoryBGM = XY 105 Victory! (Team Flare)
@@ -1950,7 +1916,7 @@ VictoryBGM = XY 105 Victory! (Team Flare)
 Name = Team 1
 Gender = Unknown
 BaseMoney = 70
-SkillLevel = 70
+SkillLevel = 48
 IntroBGM = TEAM1
 BattleBGM = Team Flare
 VictoryBGM = XY 105 Victory! (Team Flare)
@@ -1959,7 +1925,7 @@ VictoryBGM = XY 105 Victory! (Team Flare)
 Name = Team 1
 Gender = Female
 BaseMoney = 70
-SkillLevel = 70
+SkillLevel = 48
 IntroBGM = TEAM1
 BattleBGM = Team Flare
 VictoryBGM = XY 105 Victory! (Team Flare)
@@ -2053,21 +2019,21 @@ IntroBGM = XY 042 Trainers_ Eyes Meet (Twins)
 Name = Veteranin
 Gender = Female
 BaseMoney = 60
-SkillLevel = 85
+SkillLevel = 48
 IntroBGM = VETERAN
 #-------------------------------
 [VETERAN_F2]
 Name = Veteranin
 Gender = Female
 BaseMoney = 60
-SkillLevel = 85
+SkillLevel = 48
 IntroBGM = VETERAN
 #-------------------------------
 [VETERAN_M]
 Name = Veteran
 Gender = Male
 BaseMoney = 60
-SkillLevel = 85
+SkillLevel = 48
 IntroBGM = VETERAN
 #-------------------------------
 [VETERAN_M2]
@@ -2081,7 +2047,7 @@ IntroBGM = VETERAN
 Name = Veteran
 Gender = Male
 BaseMoney = 60
-SkillLevel = 85
+SkillLevel = 48
 IntroBGM = VETERAN
 #-------------------------------
 [WAITER]
@@ -2142,21 +2108,18 @@ IntroBGM = SwSh 047 Trainers_ Eyes Meet! (Worker)
 Name = Handwerker
 Gender = Male
 BaseMoney = 32
-SkillLevel = 55
 IntroBGM = SwSh 047 Trainers_ Eyes Meet! (Worker)
 #-------------------------------
 [WORKER3]
 Name = Handwerker
 Gender = Male
 BaseMoney = 32
-SkillLevel = 55
 IntroBGM = SwSh 047 Trainers_ Eyes Meet! (Worker)
 #-------------------------------
 [WORKER4]
 Name = Handwerker
 Gender = Male
 BaseMoney = 32
-SkillLevel = 55
 IntroBGM = SwSh 047 Trainers_ Eyes Meet! (Worker)
 #-------------------------------
 [WORKER5]

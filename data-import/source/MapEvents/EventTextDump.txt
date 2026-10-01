@@ -48283,7 +48283,7 @@ List of Event Commands:
 #------------------------------------------------------------------------------
 Event ID: 002
 Event Name: EV002
-(X,Y): (029,031)
+(X,Y): (009,034)
 
 Page #1
 Conditions
@@ -48478,7 +48478,7 @@ List of Event Commands:
 #------------------------------------------------------------------------------
 Event ID: 007
 Event Name: EV007
-(X,Y): (011,024)
+(X,Y): (009,023)
 
 Page #1
 Conditions
@@ -48517,7 +48517,7 @@ List of Event Commands:
 #------------------------------------------------------------------------------
 Event ID: 008
 Event Name: EV008
-(X,Y): (025,025)
+(X,Y): (003,023)
 
 Page #1
 Conditions
@@ -48737,7 +48737,7 @@ List of Event Commands:
 #------------------------------------------------------------------------------
 Event ID: 014
 Event Name: EV014
-(X,Y): (026,031)
+(X,Y): (026,032)
 
 Page #1
 Conditions
@@ -48833,6 +48833,27 @@ Move Animation
 Trigger: Action Button
 
 List of Event Commands:
+@>
+
+#------------------------------------------------------------------------------
+Event ID: 017
+Event Name: EV017
+(X,Y): (025,032)
+
+Page #1
+Conditions
+None
+
+Autonomous Movement
+Type: Fixed
+Speed: 3: Slow
+Freq: 3: Low
+Options Enabled
+Move Animation
+Trigger: Event Touch
+
+List of Event Commands:
+@>Script: pbBridgeOff
 @>
 
 #------------------------------------------------------------------------------
@@ -119143,7 +119164,7 @@ List of Event Commands:
 @>Text: \xn[Nexus]Ich habe Videomaterial gefunden, von dem 
  :    : Tag, als es passiert ist.
 @>Text: \xn[Nexus]Es war schwer zu finden, abgelegen in 
- :    : einem kleinen Labor.
+ :    : einem kleinen Labor in der Nähe der Sternwarte.
 @>Show Animation: [Eira], [Question bubble]
 @>Wait: 20 frame(s)
 @>Text: \xn[Eira]Was ist mit meinem Bruder passiert?
@@ -119208,14 +119229,15 @@ List of Event Commands:
 @>Text: \xn[Nexus]Ob Gerechigkeit herrscht.
 @>Text: \xn[Nexus]Wenn man diese Pokémon doch nur 
  :    : freilassen würde, zurück ins Meer.
-@>Text: \xn[Nexus]Das ist jedoch eine Illusion.
+@>Text: \xn[Nexus]Aber auch dort geraten sie an ihre 
+ :    : Grenzen.
 @>Text: \xn[Nexus]Auch das Meer ist nicht unendlich und 
  :    : limitiert.
-@>Text: \xn[Nexus]Wir können die ganze Welt bereisen.
-@>Text: \xn[Nexus]Aber was gibt es darüber hinaus?
+@>Text: \xn[Nexus]Wir haben die Möglichkeit die ganze Welt 
+ :    : zu bereisen.
 @>Text: \xn[Nexus]Sind wir auch nur gefangen in einem 
  :    : kleinen Käfig, der für uns "groß" wirkt.
-@>Text: \xn[Nexus]Können wir jemals wirklich frei sein?
+@>Text: \xn[Nexus]Was bedeutet Freiheit?
 @>Text: \xn[Nexus]Ein Video zeigt auch nur einen kleinen 
  :    : Ausschnitt, vielleicht nicht die ganze Wahrheit.
 @>Text: \xn[Nexus]Jetzt habe ich Sie aber lange genug 
@@ -280641,7 +280663,7 @@ List of Event Commands:
 #------------------------------------------------------------------------------
 Event ID: 068
 Event Name: EV068
-(X,Y): (016,017)
+(X,Y): (016,008)
 
 Page #1
 Conditions
@@ -280698,7 +280720,7 @@ List of Event Commands:
 #------------------------------------------------------------------------------
 Event ID: 069
 Event Name: EV069
-(X,Y): (015,016)
+(X,Y): (015,007)
 
 Page #1
 Conditions
@@ -280755,7 +280777,7 @@ List of Event Commands:
 #------------------------------------------------------------------------------
 Event ID: 070
 Event Name: EV070
-(X,Y): (016,015)
+(X,Y): (016,006)
 
 Page #1
 Conditions
@@ -280812,7 +280834,7 @@ List of Event Commands:
 #------------------------------------------------------------------------------
 Event ID: 071
 Event Name: EV071
-(X,Y): (017,016)
+(X,Y): (017,007)
 
 Page #1
 Conditions
@@ -280869,7 +280891,7 @@ List of Event Commands:
 #------------------------------------------------------------------------------
 Event ID: 072
 Event Name: EV072
-(X,Y): (016,016)
+(X,Y): (016,007)
 
 Page #1
 Conditions
@@ -280904,7 +280926,7 @@ List of Event Commands:
 #------------------------------------------------------------------------------
 Event ID: 073
 Event Name: EV073
-(X,Y): (017,017)
+(X,Y): (017,008)
 
 Page #1
 Conditions
@@ -280939,7 +280961,7 @@ List of Event Commands:
 #------------------------------------------------------------------------------
 Event ID: 074
 Event Name: EV074
-(X,Y): (015,017)
+(X,Y): (015,008)
 
 Page #1
 Conditions
@@ -280974,7 +280996,7 @@ List of Event Commands:
 #------------------------------------------------------------------------------
 Event ID: 075
 Event Name: EV075
-(X,Y): (015,015)
+(X,Y): (015,006)
 
 Page #1
 Conditions
@@ -281009,7 +281031,7 @@ List of Event Commands:
 #------------------------------------------------------------------------------
 Event ID: 076
 Event Name: EV076
-(X,Y): (017,015)
+(X,Y): (017,006)
 
 Page #1
 Conditions
@@ -281044,7 +281066,7 @@ List of Event Commands:
 #------------------------------------------------------------------------------
 Event ID: 077
 Event Name: EV077
-(X,Y): (016,020)
+(X,Y): (016,011)
 
 Page #1
 Conditions
@@ -281101,7 +281123,7 @@ List of Event Commands:
 #------------------------------------------------------------------------------
 Event ID: 078
 Event Name: EV078
-(X,Y): (015,019)
+(X,Y): (015,010)
 
 Page #1
 Conditions
@@ -281158,7 +281180,7 @@ List of Event Commands:
 #------------------------------------------------------------------------------
 Event ID: 079
 Event Name: EV079
-(X,Y): (016,018)
+(X,Y): (016,009)
 
 Page #1
 Conditions
@@ -281215,7 +281237,7 @@ List of Event Commands:
 #------------------------------------------------------------------------------
 Event ID: 080
 Event Name: EV080
-(X,Y): (017,019)
+(X,Y): (017,010)
 
 Page #1
 Conditions
@@ -281272,7 +281294,7 @@ List of Event Commands:
 #------------------------------------------------------------------------------
 Event ID: 081
 Event Name: EV081
-(X,Y): (017,020)
+(X,Y): (017,011)
 
 Page #1
 Conditions
@@ -281307,7 +281329,7 @@ List of Event Commands:
 #------------------------------------------------------------------------------
 Event ID: 082
 Event Name: EV082
-(X,Y): (017,018)
+(X,Y): (017,009)
 
 Page #1
 Conditions
@@ -281342,7 +281364,7 @@ List of Event Commands:
 #------------------------------------------------------------------------------
 Event ID: 083
 Event Name: EV083
-(X,Y): (015,018)
+(X,Y): (015,009)
 
 Page #1
 Conditions
@@ -281377,7 +281399,7 @@ List of Event Commands:
 #------------------------------------------------------------------------------
 Event ID: 084
 Event Name: EV084
-(X,Y): (015,020)
+(X,Y): (015,011)
 
 Page #1
 Conditions
@@ -281412,7 +281434,7 @@ List of Event Commands:
 #------------------------------------------------------------------------------
 Event ID: 085
 Event Name: EV085
-(X,Y): (016,019)
+(X,Y): (016,010)
 
 Page #1
 Conditions
@@ -287727,6 +287749,80 @@ Trigger: Action Button
 
 List of Event Commands:
 @>Text: Noxburgh
+@>
+
+#------------------------------------------------------------------------------
+Event ID: 038
+Event Name: Eira
+(X,Y): (007,067)
+
+Page #1
+Conditions
+None
+
+Graphic: LEADER_EIRA
+
+Autonomous Movement
+Type: Fixed
+Speed: 3: Slow
+Freq: 3: Low
+Options Enabled
+Move Animation
+Trigger: Action Button
+
+List of Event Commands:
+@>
+
+Page #2
+Conditions
+Self Switch A is ON
+
+Autonomous Movement
+Type: Fixed
+Speed: 3: Slow
+Freq: 3: Low
+Options Enabled
+Move Animation
+Trigger: Action Button
+
+List of Event Commands:
+@>
+
+#------------------------------------------------------------------------------
+Event ID: 039
+Event Name: Elisa
+(X,Y): (013,067)
+
+Page #1
+Conditions
+None
+
+Graphic: NPCStylist
+
+Autonomous Movement
+Type: Fixed
+Speed: 3: Slow
+Freq: 3: Low
+Options Enabled
+Move Animation
+Trigger: Action Button
+
+List of Event Commands:
+@>
+
+Page #2
+Conditions
+Self Switch A is ON
+
+Autonomous Movement
+Type: Fixed
+Speed: 3: Slow
+Freq: 3: Low
+Options Enabled
+Move Animation
+Trigger: Action Button
+
+List of Event Commands:
 @>
 
 #------------------------------------------------------------------------------
@@ -305647,6 +305743,7 @@ List of Event Commands:
  @>Text: \xn[Elisa]Team 1 wollte ein neues, übermächtiges 
   :    : Pokémon erschaffen...
  @>Text: \xn[Elisa]das kann nichts Gutes bedeuten.
+ @>Text: \xn[Elisa]Wir treffen uns am Schiff in Solhaven.
  @>Set Move Route: [Elisa]
   :              : $>Move Left
   :              : $>Move Down
@@ -483370,6 +483467,62 @@ List of Event Commands:
 @>
 
 #------------------------------------------------------------------------------
+Event ID: 002
+Event Name: Trainer(2)
+(X,Y): (040,027)
+
+Page #1
+Conditions
+None
+
+Graphic: trainer_BOARDER_F
+
+Autonomous Movement
+Type: Fixed
+Speed: 3: Slow
+Freq: 3: Low
+Options Enabled
+Move Animation
+Trigger: Event Touch
+
+List of Event Commands:
+@>Script: pbTrainerIntro(:BOARDER_F)
+@>Script: pbNoticePlayer(get_self)
+@>Text: \xn[Snowboarderin Ylva]Hey!
+@>Text: \xn[Snowboarderin Ylva]Willst du Eira 
+ :    : herausfordern?
+@>Text: \xn[Snowboarderin Ylva]Dann musst du erst an mir 
+ :    : vorbei!
+@>Conditional Branch: Script: TrainerBattle.start(:BOARDER_F, "Ylva")
+ @>Control Self Switch: A =ON
+ @>
+: Branch End
+@>Script: pbTrainerEnd
+@>
+
+Page #2
+Conditions
+Self Switch A is ON
+
+Graphic: trainer_BOARDER_F
+
+Autonomous Movement
+Type: Fixed
+Speed: 3: Slow
+Freq: 3: Low
+Options Enabled
+Move Animation
+Trigger: Action Button
+
+List of Event Commands:
+@>Text: \xn[Snowboarderin Ylva]Hier drin schneit es ohne 
+ :    : Pause.
+@>Text: \xn[Snowboarderin Ylva]Meine Pokémon lieben das.
+@>Text: \xn[Snowboarderin Ylva]Im Schnee halten Eis-
+ :    : Pokémon physische Angriffe viel besser aus.
+@>
+
+#------------------------------------------------------------------------------
 Event ID: 003
 Event Name: Block size(3,3) .sl
 (X,Y): (024,041)
@@ -483445,6 +483598,64 @@ List of Event Commands:
 @>
 
 #------------------------------------------------------------------------------
+Event ID: 005
+Event Name: Trainer(2)
+(X,Y): (023,039)
+
+Page #1
+Conditions
+None
+
+Graphic: trainer_DRAGONTAMER
+
+Autonomous Movement
+Type: Fixed
+Speed: 3: Slow
+Freq: 3: Low
+Options Enabled
+Move Animation
+Trigger: Event Touch
+
+List of Event Commands:
+@>Script: pbTrainerIntro(:DRAGONTAMER)
+@>Script: pbNoticePlayer(get_self)
+@>Text: \xn[Drachenzähmer Ragnar]Du wunderst dich, was 
+ :    : ein Drachenzähmer in einer Eis-Arena macht?
+@>Text: \xn[Drachenzähmer Ragnar]Eira hat mir gezeigt, dass 
+ :    : Drachen und EIs sich nicht ausschließen.
+@>Text: \xn[Drachenzähmer Ragnar]Die Kälte macht meine 
+ :    : Drachen zäh und ziemlich schlecht gelaunt.
+@>Text: \xn[Drachenzähmer Ragnar]Diese Laune bekommst 
+ :    : du jetzt zu spüren.
+@>Conditional Branch: Script: TrainerBattle.start(:DRAGONTAMER, "Ragnar")
+ @>Control Self Switch: A =ON
+ @>
+: Branch End
+@>Script: pbTrainerEnd
+@>
+
+Page #2
+Conditions
+Self Switch A is ON
+
+Graphic: trainer_DRAGONTAMER
+
+Autonomous Movement
+Type: Fixed
+Speed: 3: Slow
+Freq: 3: Low
+Options Enabled
+Move Animation
+Trigger: Action Button
+
+List of Event Commands:
+@>Text: \xn[Drachenzähmer Ragnar]Drachen wanken gegen 
+ :    : Eis-Attacken.
+@>Text: \xn[Drachenzähmer Ragnar]Zur Abhärtung sind Eiras 
+ :    : Drachen ständig im Schnee.
+@>
+
+#------------------------------------------------------------------------------
 Event ID: 006
 Event Name: Block size(3,3) .sl
 (X,Y): (050,041)
@@ -483464,6 +483675,59 @@ Direction Fix
 Trigger: Action Button
 
 List of Event Commands:
+@>
+
+#------------------------------------------------------------------------------
+Event ID: 007
+Event Name: Trainer(2)
+(X,Y): (053,039)
+
+Page #1
+Conditions
+None
+
+Graphic: trainer_ACETRAINER_M
+
+Autonomous Movement
+Type: Fixed
+Speed: 3: Slow
+Freq: 3: Low
+Options Enabled
+Move Animation
+Trigger: Event Touch
+
+List of Event Commands:
+@>Script: pbTrainerIntro(:ACETRAINER_M)
+@>Script: pbNoticePlayer(get_self)
+@>Text: \xn[Ass-Trainer Sven]Eis und Drache gleichzeitig zu 
+ :    : meistern, ist eine Kunst für sich.
+@>Text: \xn[Ass-Trainer Sven]Zeig mir, ob du beides 
+ :    : durchschaust.
+@>Conditional Branch: Script: TrainerBattle.start(:DRAGONTAMER, "Ragnar")
+ @>Control Self Switch: A =ON
+ @>
+: Branch End
+@>Script: pbTrainerEnd
+@>
+
+Page #2
+Conditions
+Self Switch A is ON
+
+Graphic: trainer_ACETRAINER_M
+
+Autonomous Movement
+Type: Fixed
+Speed: 3: Slow
+Freq: 3: Low
+Options Enabled
+Move Animation
+Trigger: Action Button
+
+List of Event Commands:
+@>Text: \xn[Ass-Trainer Sven]Im Schnee trifft Blizzard immer.
+@>Text: \xn[Ass-Trainer Sven]Dein Team sollte das aushalten 
+ :    : können, wenn Eira diese Attacke einsetzt.
 @>
 
 #------------------------------------------------------------------------------
@@ -483529,6 +483793,59 @@ List of Event Commands:
 @>
 
 #------------------------------------------------------------------------------
+Event ID: 002
+Event Name: Trainer(2)
+(X,Y): (040,027)
+
+Page #1
+Conditions
+None
+
+Graphic: trainer_BOARDER_F
+
+Autonomous Movement
+Type: Fixed
+Speed: 3: Slow
+Freq: 3: Low
+Options Enabled
+Move Animation
+Trigger: Action Button
+
+List of Event Commands:
+@>Text: \xn[Snowboarderin Ylva]Hier drin schneit es ohne 
+ :    : Pause.
+@>Text: \xn[Snowboarderin Ylva]Meine Pokémon lieben das.
+@>Text: \xn[Snowboarderin Ylva]Im Schnee halten Eis-
+ :    : Pokémon physische Angriffe viel besser aus.
+@>
+
+#------------------------------------------------------------------------------
+Event ID: 003
+Event Name: Trainer(2)
+(X,Y): (023,039)
+
+Page #1
+Conditions
+None
+
+Graphic: trainer_DRAGONTAMER
+
+Autonomous Movement
+Type: Fixed
+Speed: 3: Slow
+Freq: 3: Low
+Options Enabled
+Move Animation
+Trigger: Action Button
+
+List of Event Commands:
+@>Text: \xn[Drachenzähmer Ragnar]Drachen wanken gegen 
+ :    : Eis-Attacken.
+@>Text: \xn[Drachenzähmer Ragnar]Zur Abhärtung sind Eiras 
+ :    : Drachen ständig im Schnee.
+@>
+
+#------------------------------------------------------------------------------
 Event ID: 004
 Event Name: Tür size(3,1)
 (X,Y): (037,053)
@@ -483578,6 +483895,31 @@ List of Event Commands:
 @>
 
 #------------------------------------------------------------------------------
+Event ID: 006
+Event Name: Trainer(2)
+(X,Y): (053,039)
+
+Page #1
+Conditions
+None
+
+Graphic: trainer_ACETRAINER_M
+
+Autonomous Movement
+Type: Fixed
+Speed: 3: Slow
+Freq: 3: Low
+Options Enabled
+Move Animation
+Trigger: Action Button
+
+List of Event Commands:
+@>Text: \xn[Ass-Trainer Sven]Im Schnee trifft Blizzard immer.
+@>Text: \xn[Ass-Trainer Sven]Dein Team sollte das aushalten 
+ :    : können, wenn Eira diese Attacke einsetzt.
+@>
+
+#------------------------------------------------------------------------------
 
 #==============================================================================
 Map ID: 644
@@ -483585,6 +483927,59 @@ Map Name: Arena
 Tileset: 136: Arena
 Width: 80, Height: 60
 Auto-Change BGM: B2W2 237 Humilau City Gym
+
+#------------------------------------------------------------------------------
+Event ID: 001
+Event Name: Trainer(2)
+(X,Y): (040,027)
+
+Page #1
+Conditions
+None
+
+Graphic: trainer_BOARDER_F
+
+Autonomous Movement
+Type: Fixed
+Speed: 3: Slow
+Freq: 3: Low
+Options Enabled
+Move Animation
+Trigger: Action Button
+
+List of Event Commands:
+@>Text: \xn[Snowboarderin Ylva]Hier drin schneit es ohne 
+ :    : Pause.
+@>Text: \xn[Snowboarderin Ylva]Meine Pokémon lieben das.
+@>Text: \xn[Snowboarderin Ylva]Im Schnee halten Eis-
+ :    : Pokémon physische Angriffe viel besser aus.
+@>
+
+#------------------------------------------------------------------------------
+Event ID: 002
+Event Name: Trainer(2)
+(X,Y): (023,039)
+
+Page #1
+Conditions
+None
+
+Graphic: trainer_DRAGONTAMER
+
+Autonomous Movement
+Type: Fixed
+Speed: 3: Slow
+Freq: 3: Low
+Options Enabled
+Move Animation
+Trigger: Action Button
+
+List of Event Commands:
+@>Text: \xn[Drachenzähmer Ragnar]Drachen wanken gegen 
+ :    : Eis-Attacken.
+@>Text: \xn[Drachenzähmer Ragnar]Zur Abhärtung sind Eiras 
+ :    : Drachen ständig im Schnee.
+@>
 
 #------------------------------------------------------------------------------
 Event ID: 003
@@ -483664,6 +484059,31 @@ List of Event Commands:
 @>Transfer Player:[371: Noxburgh], (007,066), Down, No Fade
 @>Change Screen Color Tone: (0,0,0,0), @6
 @>Wait: 8 frame(s)
+@>
+
+#------------------------------------------------------------------------------
+Event ID: 005
+Event Name: Trainer(2)
+(X,Y): (053,039)
+
+Page #1
+Conditions
+None
+
+Graphic: trainer_ACETRAINER_M
+
+Autonomous Movement
+Type: Fixed
+Speed: 3: Slow
+Freq: 3: Low
+Options Enabled
+Move Animation
+Trigger: Action Button
+
+List of Event Commands:
+@>Text: \xn[Ass-Trainer Sven]Im Schnee trifft Blizzard immer.
+@>Text: \xn[Ass-Trainer Sven]Dein Team sollte das aushalten 
+ :    : können, wenn Eira diese Attacke einsetzt.
 @>
 
 #------------------------------------------------------------------------------
@@ -484272,7 +484692,7 @@ List of Event Commands:
 : When [Nein]
  @>Set Move Route: Player
   :              : $>Move Down
- @>Wait: 8 frame(s)
+ @>Wait: 10 frame(s)
  @>
 : Branch End
 @>
@@ -484437,6 +484857,84 @@ Move Animation
 Trigger: Action Button
 
 List of Event Commands:
+@>
+
+#------------------------------------------------------------------------------
+Event ID: 023
+Event Name: Trainer(2)
+(X,Y): (040,027)
+
+Page #1
+Conditions
+None
+
+Graphic: trainer_BOARDER_F
+
+Autonomous Movement
+Type: Fixed
+Speed: 3: Slow
+Freq: 3: Low
+Options Enabled
+Move Animation
+Trigger: Action Button
+
+List of Event Commands:
+@>Text: \xn[Snowboarderin Ylva]Hier drin schneit es ohne 
+ :    : Pause.
+@>Text: \xn[Snowboarderin Ylva]Meine Pokémon lieben das.
+@>Text: \xn[Snowboarderin Ylva]Im Schnee halten Eis-
+ :    : Pokémon physische Angriffe viel besser aus.
+@>
+
+#------------------------------------------------------------------------------
+Event ID: 024
+Event Name: Trainer(2)
+(X,Y): (023,039)
+
+Page #1
+Conditions
+None
+
+Graphic: trainer_DRAGONTAMER
+
+Autonomous Movement
+Type: Fixed
+Speed: 3: Slow
+Freq: 3: Low
+Options Enabled
+Move Animation
+Trigger: Action Button
+
+List of Event Commands:
+@>Text: \xn[Drachenzähmer Ragnar]Drachen wanken gegen 
+ :    : Eis-Attacken.
+@>Text: \xn[Drachenzähmer Ragnar]Zur Abhärtung sind Eiras 
+ :    : Drachen ständig im Schnee.
+@>
+
+#------------------------------------------------------------------------------
+Event ID: 025
+Event Name: Trainer(2)
+(X,Y): (053,039)
+
+Page #1
+Conditions
+None
+
+Graphic: trainer_ACETRAINER_M
+
+Autonomous Movement
+Type: Fixed
+Speed: 3: Slow
+Freq: 3: Low
+Options Enabled
+Move Animation
+Trigger: Action Button
+
+List of Event Commands:
+@>Text: \xn[Ass-Trainer Sven]Im Schnee trifft Blizzard immer.
+@>Text: \xn[Ass-Trainer Sven]Dein Team sollte das aushalten 
+ :    : können, wenn Eira diese Attacke einsetzt.
 @>
 
 #------------------------------------------------------------------------------
@@ -485627,6 +486125,7 @@ List of Event Commands:
 @>Text: \xn[Elisa]Ohje, ich weiß genau, wie sie sich fühlen 
  :    : muss.
 @>Text: \xn[Elisa]Ich versuche mit Eira zu reden.
+@>Text: \xn[Elisa]Wir sehen uns in Noxburgh.
 @>Text: \xn[Elisa]Pass' gut auf dich auf.
 @>Change Screen Color Tone: (-255,-255,-255,0), @20
 @>Wait: 20 frame(s)
@@ -486046,7 +486545,7 @@ List of Event Commands:
 #------------------------------------------------------------------------------
 Event ID: 020
 Event Name: Letarking size(2,2).noshadow
-(X,Y): (001,031)
+(X,Y): (002,031)
 
 Page #1
 Conditions
@@ -492234,6 +492733,329 @@ List of Event Commands:
 @>
 
 #------------------------------------------------------------------------------
+Event ID: 009
+Event Name: EV009.sl
+(X,Y): (007,026)
+
+Page #1
+Conditions
+None
+
+Graphic: Licht
+
+Autonomous Movement
+Type: Fixed
+Speed: 1: Slowest
+Freq: 1: Lowest
+Options Enabled
+Move Animation
+Stop Animation
+Direction Fix
+Trigger: Action Button
+
+List of Event Commands:
+@>Text: Liebes Tagebuch,
+@>Text: der Tag ist gekommen.
+@>Text: Nach der Beerdigung meines großartigen Vaters, 
+ :    : Aurelius Vanderbilt, muss das Geschäft weiter 
+ :    : laufen.
+@>Text: Ich habe alles <s>genau drei Ziffern sind 
+ :    : Einsen</s> geerbt,
+@>Text: das Kraftwerk,
+@>Text: die Villa,
+@>Text: das Gold,
+@>Text: die Verantwortung.
+@>Text: Ich habe plötzlich Freunde, die ich vorher garnicht 
+ :    : kannte.
+@>Text: Alle haben es auf das Gold abgesehen, ich kann es 
+ :    : spüren.
+@>Text: Ich muss es sicher verwahren.
+@>Text: Aber wo?
+@>Text: Wem kann ich trauen?
+@>Text: <i>Evelyn Vanderbilt</i>
+@>
+
+#------------------------------------------------------------------------------
+Event ID: 010
+Event Name: EV010.sl
+(X,Y): (070,034)
+
+Page #1
+Conditions
+None
+
+Graphic: Licht
+
+Autonomous Movement
+Type: Fixed
+Speed: 1: Slowest
+Freq: 1: Lowest
+Options Enabled
+Move Animation
+Stop Animation
+Direction Fix
+Trigger: Action Button
+
+List of Event Commands:
+@>Text: Liebes Tagebuch,
+@>Text: heute musste ich meine Putzfrau rausschmeißen.
+@>Text: Sie <s>4, 7 und 9 kommen vor.</s> hat versucht das 
+ :    : Gold zu stehlen.
+@>Text: Da bin ich mir ganz sicher.
+@>Text: Ich bin auf ganz mich allein gestellt.
+@>Text: Mein Mann sagt, das Gold habe mich verändert.
+@>Text: Aber eigentlich haben sich alle um mich herum 
+ :    : geändert.
+@>Text: Das Gold wird hier verwahrt, genau!
+@>Text: Hier habe ich es im Blick, niemand wird auch nur in 
+ :    : die Nähe kommen.
+@>Text: Niemand!
+@>Text: Dafür werde ich mit meinen Drachen-Pokémon 
+ :    : sorgen.
+@>Text: <i>Evelyn Vanderbilt</i>
+@>
+
+#------------------------------------------------------------------------------
+Event ID: 011
+Event Name: EV011 .sl
+(X,Y): (004,005)
+
+Page #1
+Conditions
+None
+
+Graphic: Licht
+
+Autonomous Movement
+Type: Fixed
+Speed: 1: Slowest
+Freq: 1: Lowest
+Options Enabled
+Move Animation
+Stop Animation
+Direction Fix
+Trigger: Action Button
+
+List of Event Commands:
+@>Text: Liebes Tagebuch,
+@>Text: alle meine Drachen haben sich von mir gewandt.
+@>Text: Es kommen zu viele...
+@>Text: Abenteurer, Diebe, verzweifelte Menschen.
+@>Text: Meine Pokémon sind es Leid zu kämpfen.
+@>Text: Man kommt kaum noch dazu, wenige Stunden am 
+ :    : Stück zu schlafen, da ständig jemand eintrudelt.
+@>Text: Seit kurzer Zeit ist Ruhe eingekehrt, niemand 
+ :    : konnte etwas gegen meine Drachen ausrichten.
+@>Text: Das spricht sich rum.
+@>Text: Nun haben sie <s>keine zwei gleichen Ziffern stehen 
+ :    : nebeneinander</s> keine Kraft mehr.
+@>Text: Ich brauche einen neuen Weg, mein Gold zu 
+ :    : schützen.
+@>Text: <i>Evelyn Vanderbilt</i>
+@>
+
+#------------------------------------------------------------------------------
+Event ID: 012
+Event Name: EV012.sl
+(X,Y): (068,006)
+
+Page #1
+Conditions
+None
+
+Graphic: Licht
+
+Autonomous Movement
+Type: Fixed
+Speed: 1: Slowest
+Freq: 1: Lowest
+Options Enabled
+Move Animation
+Stop Animation
+Direction Fix
+Trigger: Action Button
+
+List of Event Commands:
+@>Text: Liebes Tagebuch,
+@>Text: ich bin einen Pakt eingegangen.
+@>Text: Traumato und Hypno sind nun an meiner Seite.
+@>Text: Die besten Pokémon, die man für Geld kaufen kann.
+@>Text: Sie sind so abgerichtet, dass sie alles kampfunfähig 
+ :    : machen, aber auf ihre eigene Art.
+@>Text: Und ohne Kämpfe.
+@>Text: Meine Falle hat heute Morgen zugeschnappt.
+@>Text: Ein Fremder lag regungslos im Goldraum.
+@>Text: Schlafend, wie ein Kind, die Hand noch nach einer 
+ :    : Kiste ausgestreckt.
+@>Text: Ich habe mich neben ihn gekniet und ihm ins Gesicht 
+ :    : gesehen.
+@>Text: Dann habe ich gelacht.
+@>Text: Ich kann mich nicht erinnern, wann ich das letzte Mal 
+ :    : so herzlich gelacht habe.
+@>Text: Durch den Schlafmangel fällt es mir manchmal 
+ :    : schwer, klar zu denken.
+@>Text: Aber ich schreibe alles auf.
+@>Text: Das hilft enorm.
+@>Text: Der <s>Code endet mit einer Eins</s> Fremde schläft 
+ :    : hoffentlich noch ein wenig.
+@>Text: So war die Vereinbarung.
+@>Text: Kommt doch her, holt euch doch das Gold, ich lasse 
+ :    : sogar die Türe offen.
+@>Text: Traumato und Hypno folgen nur einem Befehl.
+@>Text: Und sie werden ihn nie vergessen.
+@>Text: Dafür kann ich schlafen, endlich schlafen.
+@>Text: <i>Evelyn Vanderbilt</i>
+@>
+
+#------------------------------------------------------------------------------
+Event ID: 013
+Event Name: EV013 .sl
+(X,Y): (026,005)
+
+Page #1
+Conditions
+None
+
+Graphic: Licht
+
+Autonomous Movement
+Type: Fixed
+Speed: 1: Slowest
+Freq: 1: Lowest
+Options Enabled
+Move Animation
+Stop Animation
+Direction Fix
+Trigger: Action Button
+
+List of Event Commands:
+@>Text: Liebes Tagebuch,
+@>Text: der Fremde wacht nicht auf.
+@>Text: Es sind bereits <s>Vier und Neun stehen nicht 
+ :    : nebeneinander</s> vier Tage.
+@>Text: Manchmal krallt er sich in den Teppich und schreit, als 
+ :    : würde er fürchterliche Angst haben.
+@>Text: Es kamen weitere Leute.
+@>Text: Alle tief im Schlaf.
+@>Text: So tief, wie mein Schlaf.
+@>Text: <i>Evelyn Vanderbilt</i>
+@>
+
+#------------------------------------------------------------------------------
+Event ID: 014
+Event Name: EV014 .sl
+(X,Y): (029,034)
+
+Page #1
+Conditions
+None
+
+Graphic: Licht
+
+Autonomous Movement
+Type: Fixed
+Speed: 1: Slowest
+Freq: 1: Lowest
+Options Enabled
+Move Animation
+Stop Animation
+Direction Fix
+Trigger: Action Button
+
+List of Event Commands:
+@>Text: Liebes Tagebuch,
+@>Text: es kommt niemand mehr.
+@>Text: Die Stadt flüstert über dieses Haus, über mich.
+@>Text: Und er ist hungrig, so hungrig.
+@>Text: Selbst mein Mann wacht nicht mehr auf.
+@>Text: Als nächstes wird er sich mich holen.
+@>Text: Sobald ich die <s>Sieben steht nicht am 
+ :    : Rand</s> Augen schließe, kann ich ihn sehen.
+@>Text: Bin ich zu weit gegangen?
+@>Text: <i>Evelyn Vanderbilt</i>
+@>
+
+#------------------------------------------------------------------------------
+Event ID: 015
+Event Name: EV015.sl
+(X,Y): (040,005)
+
+Page #1
+Conditions
+None
+
+Graphic: Licht
+
+Autonomous Movement
+Type: Fixed
+Speed: 1: Slowest
+Freq: 1: Lowest
+Options Enabled
+Move Animation
+Stop Animation
+Direction Fix
+Trigger: Action Button
+
+List of Event Commands:
+@>Text: Liebes Tagebuch,
+@>Text: er kommt zu mir, ich kann es spüren.
+@>Text: In meinen Träumen stehe ich in meinem eigenen 
+ :    : Haus, nur dass alle Türen in Dunkelheit führen.
+@>Text: Die Flure haben kein Ende.
+@>Text: Ich laufe und laufe und laufe...
+@>Text: ich möchste eigentlich gar nicht laufen.
+@>Text: Ein einziges blaues Auge, das ist in der Ferne 
+ :    : deutlich zu erkennen.
+@>Text: Darauf laufe ich zu.
+@>Text: Es sieht mich an, als kenne es mich in und 
+ :    : auswendig.
+@>Text: <i>Ich erinner mich genau an meine Worte an ihn.</i>
+@>Text: <i>Wer nach meinem Gold greift, gehört dir.</i>
+@>Text: <i>Mit Leib und Traum.</i>
+@>Text: <i>Aber mich lässt du schlafen.</i>
+@>Text: Er hat nicht geantwortet, <s>Neun steht nicht am 
+ :    : Rand</s> nur gelächelt.
+@>Text: Aber dann habe ich geschlafen, tief und traumlos.
+@>Text: Zum ersten Mal nach so langer Zeit.
+@>Text: Und jetzt darf ich nicht mehr einschlafen.
+@>Text: <i>Evelyn Vanderbilt</i>
+@>
+
+#------------------------------------------------------------------------------
+Event ID: 016
+Event Name: EV016.sl
+(X,Y): (043,026)
+
+Page #1
+Conditions
+None
+
+Graphic: Licht
+
+Autonomous Movement
+Type: Fixed
+Speed: 1: Slowest
+Freq: 1: Lowest
+Options Enabled
+Move Animation
+Stop Animation
+Direction Fix
+Trigger: Action Button
+
+List of Event Commands:
+@>Text: Liebes Tagebuch,
+@>Text: ich bin vor dem Goldraum aufgewacht.
+@>Text: Barfuß, im Nachthemd, die Klinke der Tür in der Hand.
+@>Text: Was passiert, wenn ich den Raum betrete?
+@>Text: Ich habe mich im Traum <s>neun und sieben stehen 
+ :    : nicht nebeneinander</s> nicht unter Kontrolle.
+@>Text: Jemand bewegt meine Arme und Beine, wie ein 
+ :    : Puppenspieler.
+@>Text: Wie werde ich dem ganzen entfliehen können?
+@>Text: <i>Evelyn Vanderbilt</i>
+@>
+
+#------------------------------------------------------------------------------
 
 #==============================================================================
 Map ID: 668
@@ -492366,6 +493188,37 @@ Move Animation
 Trigger: Event Touch
 
 List of Event Commands:
+@>Text: Wie lautet der Code?
+@>Input Number: [0133: Code Villa], 6 digit(s)
+@>Conditional Branch: Variable [0133: Code Villa] == 417191
+ @>Play SE: 'GUI naming confirm', 100, 120
+ @>Wait: 10 frame(s)
+ @>Play SE: 'Klick Tür', 100, 100
+ @>Wait: 10 frame(s)
+ @>Text: Die Tür wurde entriegelt.
+ @>Control Switches: [0408: Rätsel] = ON
+ @>
+: Else
+ @>Play SE: 'PRSFX- Metal Claw1', 100, 50
+ @>
+: Branch End
+@>
+
+Page #2
+Conditions
+Switch 0408: Rätsel is ON
+
+Graphic: Tür Mansion
+
+Autonomous Movement
+Type: Fixed
+Speed: 3: Slow
+Freq: 3: Low
+Options Enabled
+Move Animation
+Trigger: Player Touch
+
+List of Event Commands:
 @>Play SE: 'Door enter', 100, 100
 @>Set Move Route: This event
  :              : $>Graphic: "Tür Mansion', 0, 4, 0
@@ -492402,7 +493255,7 @@ List of Event Commands:
 @>Wait: 8 frame(s)
 @>
 
-Page #2
+Page #3
 Conditions
 Switch 0022: s:tsOff?("A") is ON
 
@@ -492694,6 +493547,9 @@ Move Animation
 Trigger: Event Touch
 
 List of Event Commands:
+@>Text: Eine letzte eindringliche Warnung!
+@>Text: Hinter dieser Tür warten Pokémon auf dich, die 
+ :    : verflucht sind.
 @>Play SE: 'Door enter', 100, 100
 @>Set Move Route: This event
  :              : $>Graphic: "Tür Mansion', 0, 4, 0
@@ -492779,6 +493635,155 @@ List of Event Commands:
  @>
 : Branch End
 @>Script: setTempSwitchOn("A")
+@>
+
+#------------------------------------------------------------------------------
+Event ID: 008
+Event Name: EV008.sl
+(X,Y): (006,034)
+
+Page #1
+Conditions
+None
+
+Graphic: Licht
+
+Autonomous Movement
+Type: Fixed
+Speed: 1: Slowest
+Freq: 1: Lowest
+Options Enabled
+Move Animation
+Stop Animation
+Direction Fix
+Trigger: Action Button
+
+List of Event Commands:
+@>Text: Liebes Tagebuch,
+@>Text: was ist sein Ziel?
+@>Text: Ich habe es verstanden.
+@>Text: Im Traum hat er die <s>direkt nach der Sieben kommt 
+ :    : eine Eins</s> Kontrolle.
+@>Text: Aber was ist, wenn ich ihn hierher hole?
+@>Text: Hier habe ich die Kontrolle.
+@>Text: Ich muss herausfinden, wie ich das schaffe.
+@>Text: <i>Evelyn Vanderbilt</i>
+@>
+
+#------------------------------------------------------------------------------
+Event ID: 009
+Event Name: EV009.sl
+(X,Y): (007,005)
+
+Page #1
+Conditions
+None
+
+Graphic: Licht
+
+Autonomous Movement
+Type: Fixed
+Speed: 1: Slowest
+Freq: 1: Lowest
+Options Enabled
+Move Animation
+Stop Animation
+Direction Fix
+Trigger: Action Button
+
+List of Event Commands:
+@>Text: Liebes Tagebuch,
+@>Text: wenn ich in den Spiegel blicke, sehe ich eine Fremde 
+ :    : Person.
+@>Text: Ohne mein Tagebuch könnte ich Illusion von Realität 
+ :    : kaum <s>an zweiter Stelle keine vier</s> noch 
+ :    : unterscheiden.
+@>Text: Er ist böse, kalt und unberechenbar.
+@>Text: Er muss Schwachstellen habe und ich werde sie 
+ :    : finden.
+@>Text: <i>Evelyn Vanderbilt</i>
+@>
+
+#------------------------------------------------------------------------------
+Event ID: 010
+Event Name: EV010.sl
+(X,Y): (045,026)
+
+Page #1
+Conditions
+None
+
+Graphic: Licht
+
+Autonomous Movement
+Type: Fixed
+Speed: 1: Slowest
+Freq: 1: Lowest
+Options Enabled
+Move Animation
+Stop Animation
+Direction Fix
+Trigger: Action Button
+
+List of Event Commands:
+@>Text: Liebes Tagebuch,
+@>Text: lange werde ich es nicht mehr schaffen wach zu 
+ :    : bleiben.
+@>Text: Ich habe immer noch keinen Weg gefunden, ihn 
+ :    : aufzuhalten.
+@>Text: Den Kampf werde ich vermutlich verlieren.
+@>Text: Zwischendurch bleiben die <s>dritte Stelle hat keine 
+ :    : neun</s> Uhren stehen.
+@>Text: Jedes kleine Geräusch macht mich wahnsinnig.
+@>Text: Ich höre sogar manchmal das Klavier spielen.
+@>Text: Das hat mein Mann geliebt.
+@>Text: <i>Evelyn Vanderbilt</i>
+@>
+
+#------------------------------------------------------------------------------
+Event ID: 011
+Event Name: EV011.sl
+(X,Y): (041,005)
+
+Page #1
+Conditions
+None
+
+Graphic: Licht
+
+Autonomous Movement
+Type: Fixed
+Speed: 1: Slowest
+Freq: 1: Lowest
+Options Enabled
+Move Animation
+Stop Animation
+Direction Fix
+Trigger: Action Button
+
+List of Event Commands:
+@>Text: Liebes Tagebuch,
+@>Text: ich werde Aufgeben.
+@>Text: das ist nämlich die Lösung.
+@>Text: Ich habe das Schloss mit einem Zahlencode 
+ :    : versehen.
+@>Text: In meinem Zustand, kann ich mir den ohnehin nicht 
+ :    : merken.
+@>Text: Ich werde den Raum mit all meinem Gold betreten und 
+ :    : das Schicksal erleiden, in welches ich diese...
+@>Text: Leute gebracht habe.
+@>Text: Hypno und Traumato werden ein letztes Mal aktiv, 
+ :    : damit er es nicht kann.
+@>Text: Ein ewiger Schlaf für mich, ein endloses Gefängnis 
+ :    : für ihn.
+@>Text: Der Code ist im Tagebuch, die <s>Vier steht nicht an 
+ :    : vierter Stelle</s> Seiten im Haus verteilt.
+@>Text: Wo, weiß ich nicht mehr.
+@>Text: Sollte diese Seiten jemand finden ist es eine 
+ :    : Warnung.
+@>Text: Gehst du einen Pakt mit dem Teufel ein, wird er 
+ :    : gewinnen.
+@>Text: <i>Evelyn Vanderbilt</i>
 @>
 
 #------------------------------------------------------------------------------

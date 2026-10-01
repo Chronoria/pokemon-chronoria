@@ -1,7 +1,7 @@
 #-------------------------------
 [CORRUPTEDCODE]
 Name = Korruptionscode
-Description = Verstärkt Gift-Attacken. Blockiert mit 30% die Attacke eines Angreifers für 3 Runden.
+Description = Verstärkt Gift-Attacken, kann eine vom Pokémon eingesetzte Attacke deaktivieren.
 #-------------------------------
 [AQUATICBLOOD]
 Name = Aquatisches Blut
@@ -13,7 +13,7 @@ Description = Deine offensiven Attacken haben +1 Priorität.
 #-------------------------------
 [GOODLUCK]
 Name = Viel Glück
-Description = Erhöht die Volltrefferchance. Nach Trainerkämpfen gibt es doppeltes Preisgeld.
+Description = Erhöhte Volltrefferchance und Glück.
 #-------------------------------
 [TOXICWATERS]
 Name = Giftige Gewässer
@@ -61,7 +61,7 @@ Description = Normal-Attacken umgehen Resistenz von Gestein und Stahl.
 #-------------------------------
 [MAGICJAW]
 Name = Magischer Kiefer
-Description = Biss-Attacken nutzen Spezial-Werte und verursachen mit 30% ein zufälliges Statusproblem.
+Description = Biss-Attacken sind speziell und verursachen Statusveränderungen.
 #-------------------------------
 [SWEETDREAMS]
 Name = Süße Träume
@@ -69,7 +69,7 @@ Description = Heilt jedes schlafende Pokémon.
 #-------------------------------
 [PRACTICAL]
 Name = Praktisch
-Description = Senkt ein Gegner einen Statuswert, steigt der Gegenwert (z. B. Angriff -> Verteidigung).
+Description = Wenn ein Statuswert gesenkt wird, wird der Gegenwert erhöht.
 #-------------------------------
 [PARALYTICPOISON]
 Name = Lähmendes Gift
@@ -85,7 +85,7 @@ Description = Erhöht Spezialverteidigung in der Sonne, heilt Pflanzen-Verbünde
 #-------------------------------
 [COMPACTEDICE]
 Name = Verdichtetes Eis
-Description = Gestein und Stahl wirken neutral. Erhöht bei solchen Treffern die Verteidigung.
+Description = Resistenz gegen Kampf und Stahl, erhöht Verteidigung bei Treffer.
 #-------------------------------
 [NEUTRALIZE]
 Name = Neutralisieren
@@ -113,7 +113,7 @@ Description = Genauigkeit kann nicht gesenkt werden, nimmt mehr Schaden durch Sc
 #-------------------------------
 [POWERSHIELD]
 Name = Kraftschild
-Description = Halbiert Schaden, ignoriert Schwächen und Resistenzen. Eigene Attacken typlos. Nur Schlaf wirkt.
+Description = Ignoriert den Typen-Chart, immun gegen nicht-schlafende Statusveränderungen.
 #-------------------------------
 [RAGEBAITING]
 Name = Ragebaiting
@@ -121,11 +121,11 @@ Description = Beim ersten Senken eines Statuswerts wird der Gegner gefangen und 
 #-------------------------------
 [BEASTMODE]
 Name = Bestienmodus
-Description = Startet in der Bestienform und kehrt nach 5 Runden in die normale Form zurück.
+Description = Kehrt nach 5 Runden in die normale Form zurück.
 #-------------------------------
 [CONCUSSION]
 Name = Gehirnerschütterung
-Description = Explosion und Finale kosten bei vollen LP nur 75% LP statt K.O., verwirren aber.
+Description = Explosion & Finale verursachen 75% Schaden, wenn bei vollem LP eingesetzt.
 #-------------------------------
 [BOULDERBARRIER]
 Name = Felsbarriere
@@ -133,7 +133,7 @@ Description = Nach erfolgreichem Schutz werden Gesteins-Attacken verstärkt.
 #-------------------------------
 [HESSAFE]
 Name = Cheater
-Description = Würde Rückstoß das Pokémon besiegen, überlebt es mit 50% LP. Einmal pro Kampf.
+Description = Bei K.O. durch Rückstoß wird 50% der LP wiederhergestellt.
 #-------------------------------
 [ARCANEMAGE]
 Name = Arkane Magie
@@ -141,7 +141,7 @@ Description = Feuer-, Eis- und Elektro-Attacken sind stärker, Unlicht ist immun
 #-------------------------------
 [QUICKSTRIKE]
 Name = Schneller Schlag
-Description = Handelt beim ersten Einsatz im Kampf zuerst und trifft garantiert. Einmal pro Kampf.
+Description = In der ersten Runde immer zuerst und mit 100% Genauigkeit.
 #-------------------------------
 [IGNITION]
 Name = Zündung
@@ -153,4 +153,4 @@ Description = Wird bei Treffer durch eine Wasser-Attacke gelöscht. Reduziert Wa
 #-------------------------------
 [SOUPFILLER]
 Name = Suppenfüller
-Description = Setzt ein Gegner eine Heil-Attacke ein, erhält dieses Pokémon 1/8 seiner LP zurück.
+Description = Wenn ein Gegner sich heilt, wirst du ebenfalls etwas geheilt.

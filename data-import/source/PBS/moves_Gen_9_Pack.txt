@@ -142,7 +142,7 @@ Description = Fügt dem Gegner Schaden zu und senkt dessen Verteidigung mit eine
 #-------------------------------
 [BLEAKWINDSTORM]
 Name = Polarorkan
-Type = FLYING
+Type = ICE
 Category = Special
 Power = 100
 Accuracy = 80

@@ -4604,6 +4604,7 @@ Pokemon = FROSLASS,63
 #-------------------------------
 [BOARDER,Nils]
 LoseText = Na toll, jetzt hab ich kalte Füße bekommen.
+Items = MEGARING
 Pokemon = SANDSLASH,63
     Form = 1
     Moves = ICICLECRASH,IRONHEAD,DRILLRUN,SWORDSDANCE
@@ -4612,6 +4613,11 @@ Pokemon = SANDSLASH,63
 Pokemon = SALAMENCE,64
     Moves = DRAGONDANCE,DRAGONCLAW,FIREFANG,DUALWINGBEAT
     AbilityIndex = 0
+    Nature = ADAMANT
+Pokemon = STEELIX,66
+    Moves = SHEERCOLD,IRONTAIL,DIG,BLIZZARD
+    Item = STEELIXITEY
+    AbilityIndex = 2
     Nature = ADAMANT
 #-------------------------------Noxburgh
 [LEADER_Arena7,Eira] #schnee permanent

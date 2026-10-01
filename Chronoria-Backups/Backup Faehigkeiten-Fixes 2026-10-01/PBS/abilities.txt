@@ -1077,4 +1077,4 @@ Description = Kombiniert Anspannung und Dunkles Wiehern.
 #-------------------------------
 [RAWPOWER]
 Name = Rohkraft
-Description = Verstärkt alle eigenen Attacken um 20%. Amigento mit passender Disc verstärkt den Disc-Typ um weitere 20%.
+Description = Verstärkt alle eigenen Attacken um 20%.
