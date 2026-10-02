@@ -8600,7 +8600,7 @@ Pokedex = A legendary warrior said to descend from the heavens. It overwhelms fo
 Generation = 9
 #-------------------------------
 
-[TRAPINCH]
+[TRAPINCH,1]
 
 FormName = Chrono
 
@@ -8659,7 +8659,7 @@ CallRateSOS = 9
 RaidRanks = 1,2
 #-------------------------------
 
-[VIBRAVA]
+[VIBRAVA,1]
 
 FormName = Chrono
 
@@ -8714,7 +8714,7 @@ CallRateSOS = 6
 RaidRanks = 2,3
 #-------------------------------
 
-[FLYGON]
+[FLYGON,1]
 
 FormName = Chrono
 
