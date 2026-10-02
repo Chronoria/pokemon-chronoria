@@ -131,6 +131,14 @@ const eventDumpCopied = copySingleFile(
   join(outDir, "MapEvents", "EventTextDump.txt")
 );
 
+// Held-item table for regional forms (pre-evolution holds a type item while evolving). These
+// evolutions only exist in plugin code, not in pokemon.txt, so parseRegionalEvolutions.ts
+// reads the table straight from a copy of the plugin script.
+const regionalEvolutionsCopied = copySingleFile(
+  join(gameDir, "Plugins", "Chronoria Regional Evolutions", "[001] Held Item Forms.rb"),
+  join(outDir, "Plugins", "regional_evolutions.rb")
+);
+
 console.log(`Sync abgeschlossen aus ${gameDir}:`);
 console.log(`  PBS: ${pbsCount} Dateien`);
 console.log(`  Text_deutsch_core: ${deCount} Dateien`);
@@ -143,3 +151,4 @@ console.log(`  Trainer-Sprites: ${trainerSpriteCount} Dateien`);
 console.log(`  Medaillen-Icons: ${medalIconCount} Dateien`);
 console.log(`  Charakter-Sprite-Namen: ${characterCount}`);
 console.log(`  Map-Event-Dump: ${eventDumpCopied ? "kopiert" : "nicht gefunden - übersprungen"}`);
+console.log(`  Regionale Entwicklungen (Plugin): ${regionalEvolutionsCopied ? "kopiert" : "nicht gefunden - übersprungen"}`);

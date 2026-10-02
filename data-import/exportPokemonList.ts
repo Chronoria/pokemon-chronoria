@@ -94,7 +94,8 @@ const BATTLE_ONLY_FORMS: Record<string, BattleFormRule> = {
   ZYGARDE: { forms: [2], ability: "POWERCONSTRUCT" },
   WISHIWASHI: { forms: [1], ability: "SCHOOLING" },
   MIMIKYU: { forms: [1, 3, 5, 7, 9, 11], ability: "DISGUISE", base: (f) => f - 1 },
-  NECROZMA: { forms: [3], text: "Ultra-Stoß (Abendmähne/Morgenschwingen)" },
+  // Chronoria Form Fixes plugin: Ultra Burst works like Primal Reversion (form 1 -> 3, 2 -> 4)
+  NECROZMA: { forms: [3, 4], item: "ULTRANECROZIUMZ", base: (f) => f - 2, text: "Ultra-Stoß beim Einwechseln" },
   CRAMORANT: { forms: [1, 2], ability: "GULPMISSILE" },
   EISCUE: { forms: [1], ability: "ICEFACE" },
   MORPEKO: { forms: [1], ability: "HUNGERSWITCH" },

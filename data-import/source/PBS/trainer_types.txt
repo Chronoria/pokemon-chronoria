@@ -47,6 +47,7 @@ Name = Team 0 Boss
 Gender = Male
 BaseMoney = 140
 SkillLevel = 100
+Flags = ReserveLastPokemon,FixedLead
 IntroBGM = TEAM1
 BattleBGM = SM 150 Battle! (Elite Four)
 VictoryBGM = DPPT 049 Victory! (Team Galactic)
@@ -1020,6 +1021,7 @@ Name = Team 0 Boss
 Gender = Male
 BaseMoney = 140
 SkillLevel = 100
+Flags = ReserveLastPokemon,FixedLead
 IntroBGM = TEAM1
 BattleBGM = SM 150 Battle! (Elite Four)
 VictoryBGM = DPPT 049 Victory! (Team Galactic)
@@ -1212,11 +1214,22 @@ BaseMoney = 24
 SkillLevel = 85
 IntroBGM = XY 096 Trainers_ Eyes Meet (Psychic)
 #-------------------------------
+[NEXUS]
+Name = Team 0 Boss
+Gender = Male
+BaseMoney = 140
+SkillLevel = 100
+Flags = ReserveLastPokemon,FixedLead
+IntroBGM = TEAM1
+BattleBGM = SM 150 Battle! (Elite Four)
+VictoryBGM = DPPT 049 Victory! (Team Galactic)
+#-------------------------------
 [NOCTIS]
 Name = Team 0 Boss
 Gender = Male
 BaseMoney = 140
 SkillLevel = 100
+Flags = ReserveLastPokemon,FixedLead
 IntroBGM = TEAM1
 BattleBGM = SM 150 Battle! (Elite Four)
 VictoryBGM = DPPT 049 Victory! (Team Galactic)

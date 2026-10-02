@@ -19,6 +19,11 @@ export interface Evolution {
   target: string; // species id
   method: string;
   param: string;
+  /** form of the target this evolution produces, if not the base form (only set for the
+   *  held-item regional evolutions from the Chronoria Regional Evolutions plugin) */
+  targetForm?: number;
+  /** item the pre-evolution must hold while evolving (not consumed) - same plugin */
+  heldItem?: string;
 }
 
 export interface PokemonForm {

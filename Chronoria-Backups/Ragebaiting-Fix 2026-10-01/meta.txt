@@ -1,0 +1,205 @@
+Name = Chronoria Custom Abilities
+Version = 1.8.0
+Essentials = 21.1
+Credits = Chronoria Dev Team
+
+# Change logs
+#############################################
+# 1.8.0
+#############################################
+# - Added [001] Battle\[008] Ursprungsgewalt.rb: Ursprungsgewalt
+#   (URSPRUNGSGEWALT) hatte bisher keinen Code. Jetzt +20% Schaden,
+#   solange fuer den Traeger ein Wetter aktiv ist (Wolke Sieben/Schirm
+#   werden wie im Kern beruecksichtigt).
+# - Fixed [006] Piercing Drill.rb: Die "Schutz durchbrochen"-Markierung
+#   wurde nie zurueckgesetzt, dadurch machten alle spaeteren Kontakt-
+#   Treffer auf dasselbe Ziel nur noch 1/4 Schaden. Wird jetzt bei jedem
+#   Angriff neu gesetzt.
+#############################################
+# 1.7.0
+#############################################
+# - Added [002] Battle_AI\[001] Truant AI.rb: Schnarchnase (TRUANT) nach
+#   Radical-Red-Vorbild. Die KI gibt Heil-Attacken in der Faulenz-Runde
+#   +30 Punkte, sofern dem Pokemon KP fehlen. Andere Attacken werden
+#   bewusst nicht abgewertet (sonst will die KI jede zweite Runde
+#   auswechseln). Setzt die Kern-Aenderung in Battler_UseMoveSuccessChecks
+#   voraus (Faulenz-Sperre gilt nicht fuer move.healingMove?), die der User
+#   selbst im Script-Editor vornimmt. Ohne diese Kern-Aenderung wuerde die
+#   Heil-Attacke in der Faulenz-Runde weiterhin fehlschlagen.
+#############################################
+# 1.6.0
+#############################################
+# - Stichbohrer (PIERCINGDRILL) komplett neu geschrieben, jetzt gegen den
+#   echten Kern verifiziert: der User hat Battle::Battler#
+#   pbSuccessCheckAgainstTarget komplett eingefuegt. Darin durchbricht
+#   VERBORGENE FAUST (UNSEENFIST, bereits bei Mega-Golgantes im Einsatz)
+#   bereits Weite Deckung, Fixe Deckung, Schutzschild, Wehrschild,
+#   Stachelschild, Bannschild, Rankenschild und Mauerwall ueber ein
+#   einziges Gate. PIERCINGDRILL nutzt exakt dasselbe Gate (kompletter
+#   Methoden-Override noetig, da die Bedingung mitten in der Methode liegt
+#   und nicht per alias einfuegbar ist - der Rest der Methode ist 1:1 der
+#   vom User bestaetigte Code). Zusaetzlich zu Verborgene Faust merkt sich
+#   Stichbohrer pro Ziel, ob dadurch tatsaechlich ein Schutz durchbrochen
+#   wurde, und reduziert dann via final_damage_multiplier auf 25% Schaden
+#   (Verborgene Faust hat keinen Schadensabschlag). ACHTUNG: da dies ein
+#   voller Methoden-Override ist (kein alias), muss diese Datei bei
+#   kuenftigen Essentials-Updates/Hotfixes manuell mit dem dann aktuellen
+#   Kernscript abgeglichen werden.
+# - Der erste Versuch (Alias auf pbAccuracyCheck) war falsch und wurde
+#   ersetzt.
+#############################################
+# 1.5.3
+#############################################
+# - FIX: Mega Sol erneut angepasst - pbUseMove liegt auf Battle::Battler
+#   (Signatur pbUseMove(choice, specialUsage = false)), nicht Battle::Move.
+#   Per komplettem Quellcode-Einblick durch den User (Battler_UseMove.rb)
+#   bestaetigt, inkl. Bestaetigung dass @battle.pbWeather dort selbst
+#   verwendet wird (Urmeer/Endland-Check).
+#############################################
+# 1.5.2
+#############################################
+# - FIX: Mega Sol neu geschrieben. User hat per Script-Editor-Suche
+#   bestaetigt, dass die Wetterabfrage in diesem Projekt auf Battle#
+#   pbWeather liegt (nicht Battle::Field#weather wie zuerst angenommen).
+#   Alias entsprechend umgestellt, Faehigkeit wieder aktiv.
+#############################################
+# 1.5.1
+#############################################
+# - FIX: [007] Mega Sol.rb warf beim Laden NameError ("undefined method
+#   'weather' for class 'Battle::Field'") - der Alias auf Battle::Field#
+#   weather war falsch (existiert in dieser installierten Version so nicht).
+#   Datei temporaer auf einen reinen Kommentar reduziert (Faehigkeit inaktiv,
+#   kein Crash mehr), bis die tatsaechliche Wetter-Zugriffsmethode geklaert
+#   ist.
+#############################################
+# 1.5.0
+#############################################
+# - Added Stichbohrer (PIERCINGDRILL) und Mega-Solarladung (MEGASOL) doch
+#   noch umgesetzt (bestmoegliche Rekonstruktion, NICHT live gegen den
+#   Essentials-v21.1-Kern verifiziert - Nutzer hat auf das Einfuegen der
+#   Kern-Skripte verzichtet, siehe Warnhinweise in den jeweiligen Dateien):
+#   * PIERCINGDRILL: loescht bei Kontakt-Attacken des Traegers aktive
+#     Schutz-Effekte (Wehrschild, Stachelschild, Bannschild, Rankenschild,
+#     Mauerwall, Zauberwache, Weite/Fixe Deckung, Kraftfeld) beim Ziel via
+#     gealiastem pbAccuracyCheck, danach 25% Schaden via
+#     final_damage_multiplier. Bei [EXCADRILL,1] zugewiesen.
+#   * MEGASOL: zentraler Ansatz statt Einzelpatches - waehrend eine Attacke
+#     des Traegers laeuft, liefert @battle.field.weather ":Sun" (gealiast),
+#     unabhaengig vom echten Feldwetter. Wirkt dadurch automatisch auf alle
+#     wetterabhaengigen Attacken (Solarstrahl, Wetterball, Morgenflut &co.,
+#     Donner/Orkan), ohne deren Einzelimplementierung zu kennen. Bei
+#     [MEGANIUM,2] zugewiesen.
+#   DRINGEND im Spiel testen, insbesondere gegen alle Schutz-Attacken-
+#   Varianten (Stichbohrer) und bei aktivem Fremdwetter wie Regen/Sandsturm
+#   (Mega-Solarladung).
+#############################################
+# 1.4.0
+#############################################
+# - Added die Faehigkeit Emporwindung (EELEVATE), Signaturfaehigkeit von
+#   Mega-Zapplarang. Teil 1 (Boden-/Fussangeln-/Klebenetz-/Kraftfeld-
+#   Immunitaet): airborne? gealiast nach dem Vorbild der echten Schwebe-
+#   Bedingung in Data/Scripts/011_Battle/002_Battler/001_Battle_Battler.rb.
+#   Teil 2 (hoechster Statuswert +1 Stufe bei K.O.): nach dem Vorbild von
+#   Bissigkeit (MOXIE) fuer den Trigger, Prioritaetsreihenfolge bei
+#   Gleichstand (Angriff > Verteidigung > Sp.Angriff > Sp.Verteidigung >
+#   Init.) verifiziert gegen die reale Tie-Break-Regel von PROTOSYNTHESIS/
+#   QUARKDRIVE. Zuweisung bei [EELEKTROSS,1] ergaenzt (fehlte zuvor
+#   komplett).
+# - Mega-Stalobor (Mega-Excadrill) komplett neu angelegt, existierte zuvor
+#   gar nicht: [EXCADRILL,1] in pokemon_forms_Gen_9_Pack.txt (Typ/Statuswerte
+#   verifiziert gegen pokewiki.de/Stalobor), neuer Mega-Stein EXCADRILLITE
+#   ("Stalobornit") in items.txt.
+# - NICHT umgesetzt: Stichbohrer (PIERCINGDRILL, Mega-Stalobors Faehigkeit)
+#   und Mega-Solarladung (MEGASOL, Mega-Meganie X). Beide PBS-Eintraege
+#   (Name/Beschreibung) existieren, die Kampflogik fehlt aber noch. Grund:
+#   beide erfordern praezises Wissen ueber Essentials-interne Mechaniken
+#   (Schutzschild-Durchbruch bzw. mehrere einzelne Attacken-Implementierungen
+#   fuer Sonnenschein-Verhalten), die sich trotz mehrfacher Versuche nicht
+#   zuverlaessig aus dem GitHub-Kernscript verifizieren liessen (Datei zu
+#   gross fuer zuverlaessige Fetches). Nicht geraten, um dem Projektstandard
+#   "gegen echte Quelle verifizieren, nicht aus dem Gedaechtnis" treu zu
+#   bleiben - siehe Rueckfrage an den User.
+#############################################
+# 1.3.0
+#############################################
+# - Vollstaendigkeitscheck aller Faehigkeiten gegen pokewiki.de/
+#   Faehigkeiten-Liste. Ergebnis: 3 "fehlende" Eintraege waren tatsaechlich
+#   Uebersetzungsfehler bei bereits vorhandenen Faehigkeiten, in abilities.txt
+#   korrigiert: SHELLARMOR "Panzerschutz"->"Panzerhaut", GRASSPELT
+#   "Pflanzenpels"->"Pflanzenpelz", NEUROFORCE "Zelebralmacht"->
+#   "Zerebralmacht".
+# - Added die Faehigkeit Flammenmaehne (FIREMANE, +50% Feuer-Attacken),
+#   Signaturfaehigkeit von Mega-Pyroleo, verifiziert gegen
+#   pokemon-zone.com/champions/abilities/fire-mane. Zuweisung bei
+#   [PYROAR,1] ergaenzt (fehlte zuvor komplett).
+# - Added die Faehigkeit Drachenschicht (DRAGONIZE, Normal-Attacken werden
+#   zu verstaerkten Drache-Attacken), Signaturfaehigkeit von Mega-Impergator
+#   X, 1:1 nach dem Vorbild von REFRIGERATE/AERILATE/PIXILATE/GALVANIZE
+#   umgesetzt, verifiziert gegen bulbapedia.bulbagarden.net/wiki/
+#   Dragonize_(Ability). Zuweisung bei [FERALIGATR,2] ergaenzt (fehlte
+#   zuvor komplett).
+# - PBS-Eintraege (Name/Beschreibung) fuer Emporwindung (EELEVATE, Mega-
+#   Zapplarang), Mega-Solarladung (MEGASOL, Mega-Meganie X) und Stichbohrer
+#   (PIERCINGDRILL, Mega-Stalobor/Excadrill) angelegt, Kampflogik aber noch
+#   NICHT implementiert (mechanisch deutlich komplexer, siehe Ruecksprache
+#   mit dem User). Mega-Stalobor als Form existiert zudem noch gar nicht in
+#   der PBS und muesste komplett neu angelegt werden.
+#############################################
+# 1.2.0
+#############################################
+# - Added die Faehigkeit Chilispritzer (SPICYSPRAY), Signaturfaehigkeit von
+#   Mega-Halupenjo (Mega-Scovillain) aus Pokemon-Legenden: Z-A. Verbrennt den
+#   Angreifer garantiert bei jeder Schaden verursachenden Attacke (kein
+#   Kontakt-Erfordernis, keine Zufallschance), verifiziert gegen
+#   serebii.net/abilitydex/spicyspray.shtml (Essentials v21.1 hat dafuer noch
+#   kein Kernscript-Vorbild, da Legends Z-A neuer ist). PBS-Eintrag in
+#   abilities_Gen_9_Pack.txt, Zuweisung bei [SCOVILLAIN,1] (Mega Halupenjo) in
+#   pokemon_forms_Gen_9_Pack.txt ergaenzt.
+# - Fehlende Abilities=-Zuweisungen bei 10 weiteren neuen Mega-Formen aus
+#   Pokemon-Legenden: Z-A - Mega-Dimension nachgetragen (waren als reine
+#   Statuswerte-Eintraege ohne erzwungene Mega-Faehigkeit angelegt, erbten
+#   dadurch fehlerhaft die variable Basis-Faehigkeit statt der festen
+#   Mega-Faehigkeit): RAICHU,3 (Schildlos), RAICHU,4 (Elektro-Erzeuger),
+#   ABSOL,2 (Magiespiegel), STARAPTOR,1 (Umkehrung), GARCHOMP,2 (Sandgewalt),
+#   LUCARIO,2 (Anpassung), GOLURK,1 (Verborgene Faust), MEOWSTIC,2+3
+#   (Erfassen), GLIMMORA,1 (Anpassung), CRABOMINABLE,1 (Eisenfaust),
+#   BAXCALIBUR,1 (Thermowandel, Randfall). ZERAORA,1 zur Konsistenz explizit
+#   ergaenzt (war zuvor schon korrekt, da Zeraora nur eine moegliche
+#   Faehigkeit hat).
+# - Tippfehler "Mega Knackrack" -> "Mega Knakrack" in pokemon_forms.txt
+#   ([GARCHOMP,1]) und pokemon_forms_Gen_9_Pack.txt ([GARCHOMP,2]) behoben,
+#   passend zu Garchomps echtem deutschen Namen "Knakrack".
+#############################################
+# 1.1.2
+#############################################
+# - NICHT im Plugin geloest: Der kosmetische Formwechsel bei Amigento
+#   (MultipleForms.register(:SILVALLY, ...) "getForm") wurde vom User direkt
+#   im Kernscript geaendert (RKSSYSTEM -> RAWPOWER ersetzt, nicht ergaenzt).
+#   Alpha-System loest dadurch aktuell KEINEN Formwechsel mehr aus, nur noch
+#   Rohkraft. Bewusst nicht im Plugin dupliziert, um die Kern-Aenderung nicht
+#   zu ueberschreiben (MultipleForms.register ersetzt komplett, kein Merge).
+#   Hinweis: Amigentos Disc-Formen (1-18) haben in der aktiven
+#   PBS/pokemon_forms.txt keine eigenen Eintraege (nur in den Backup-Ordnern
+#   PBS/Gen 7 backup und PBS/Gen 8 backup vorhanden) - Typ faellt daher
+#   vermutlich auf die Basis-Spezies (OMNI) zurueck, wodurch sich bei
+#   Rohkraft zufaellig nur die Optik aendert, nicht der Typ.
+#############################################
+# 1.1.1
+#############################################
+# - Added NORMALMEMORY (Normal-Disc, Chronoria-eigene Ergaenzung) zur
+#   Disc->Typ-Tabelle von Rohkraft, damit der +20%-Stapel auch fuer
+#   Normal-Attacken funktioniert.
+#############################################
+# 1.1.0
+#############################################
+# - Added: Rohkraft verstaerkt bei Amigento Attacken zusaetzlich um weitere
+#   20% (stapelt multiplikativ, insgesamt +44%), wenn eine zum Attackentyp
+#   passende Disc (Memory-Item) getragen wird. Disc->Typ-Zuordnung 1:1 aus
+#   dem echten Alpha-System-Kernscript uebernommen.
+#############################################
+# 1.0.0
+#############################################
+# - Added the ability Rohkraft (RAWPOWER): verstaerkt alle eigenen Attacken
+#   des Traegers um 20%, unabhaengig von Typ oder Kategorie. Als zweite
+#   waehlbare Faehigkeit zu Nullin, Typ: Null und Amigento (PBS/pokemon.txt)
+#   hinzugefuegt, jeweils zusaetzlich zu Kampfpanzer/Alpha-System.

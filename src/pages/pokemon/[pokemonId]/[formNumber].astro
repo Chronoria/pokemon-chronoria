@@ -52,6 +52,13 @@ function pokemonFormLink(speciesId: string, formNumber: number) {
 }
 
 const evolvesFromLink = p.evolvesFrom ? pokemonFormLink(p.evolvesFrom, f.formNumber) : null;
+/** Held-item regional evolution that produces this form (Chronoria Regional Evolutions plugin):
+ *  the pre-evolution has no matching form of its own, it just holds an item while evolving. */
+const heldItemOrigin = p.evolvesFrom
+  ? pokemonById.get(p.evolvesFrom)?.evolutions.find(
+      (evo: any) => evo.target === p.id && evo.targetForm === f.formNumber && evo.heldItem
+    ) ?? null
+  : null;
 const unmegaLink = f.megaStone ? pokemonFormLink(p.id, f.unmegaForm) : null;
 /** Forms of this same species that Mega Evolve FROM this form (UnmegaForm points back at it) -
  *  the reverse of unmegaLink above, shown as a forward "can Mega Evolve into" relationship. */
@@ -151,6 +158,15 @@ const locationsByPlace = Object.groupBy
   <h2>Entwicklung</h2>
   {unmegaLink ? (
     <p>Dies ist die Mega-Form von <a href={unmegaLink.url}>{unmegaLink.label}</a>.</p>
+  ) : heldItemOrigin && evolvesFromLink ? (
+    <p>
+      Entwickelt sich aus <a href={evolvesFromLink.url}>{evolvesFromLink.label}</a>
+      {" — "}
+      {formatEvolutionCondition(heldItemOrigin.method, heldItemOrigin.param, itemName, moveName, typeName, speciesName)},
+      trägt dabei{" "}
+      <a href={href(`/items/${slugify(heldItemOrigin.heldItem)}/`)}>{itemName(heldItemOrigin.heldItem) ?? heldItemOrigin.heldItem}</a>{" "}
+      (wird nicht verbraucht).
+    </p>
   ) : (
     evolvesFromLink && <p>Entwickelt sich aus <a href={evolvesFromLink.url}>{evolvesFromLink.label}</a>.</p>
   )}

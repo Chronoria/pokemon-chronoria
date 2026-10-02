@@ -112,6 +112,7 @@ const FORMWECHSEL = new Set([
   "REVEALGLASS", // Boreos/Voltolos/Demeteros/Cupidos
   "PRISONBOTTLE", // Hoopa
   "ZYGARDECUBE", // Zygarde
+  "ROTOMCATALOG", // Rotom
   "ADAMANTCRYSTAL", "LUSTROUSGLOBE", "GRISEOUSCORE", // Dialga/Palkia/Giratina
   "RUSTEDSWORD", "RUSTEDSHIELD", // Zacian/Zamazenta
   "WELLSPRINGMASK", "HEARTHFLAMEMASK", "CORNERSTONEMASK", "TEALMASK", // Ogerpon

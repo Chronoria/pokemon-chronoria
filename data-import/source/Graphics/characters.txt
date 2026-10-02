@@ -681,6 +681,8 @@ Door Magic
 Door Mine
 Door Morastia PC
 Door Noxburgh
+Door Noxburgh 2
+Door Noxburgh 3
 Door Portal
 Door Portal (2)
 Door Regigigas
@@ -2140,6 +2142,7 @@ PIDOVE
 PIGNITE
 Pika_Chu
 PIKACHU
+Pikachu (2)
 PIKACHU_1
 PIKACHU_1_shiny
 PIKACHU_10

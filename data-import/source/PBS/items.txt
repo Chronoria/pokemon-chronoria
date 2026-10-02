@@ -2190,6 +2190,14 @@ SellPrice = 0
 BPPrice = 50
 Description = Wird der Blaue Edelstein von Kyogre getragen, führt dieses eine Protomorphose durch.
 #-------------------------------Einzigartig
+[ULTRANECROZIUMZ]
+Name = Ultranecrozium Z
+NamePlural = Ultranecrozium Z
+Pocket = 1
+Price = 0
+SellPrice = 0
+Description = Trägt Necrozma in der Form Abendmähne oder Morgenschwingen diesen Kristall, setzt es im Kampf den Ultra-Stoß ein.
+#-------------------------------Einzigartig
 [ADAMANTCRYSTAL]
 Name = Adamantkristall
 NamePlural = Adamantkristalle
@@ -7708,6 +7716,15 @@ Price = 0
 FieldUse = OnPokemon
 Flags = KeyItem
 Description = Der Einsatz des Banngefäßes ermöglicht Hoopa einen Formenwechsel zur entfesselten Form.
+#-------------------------------Einzigartig
+[ROTOMCATALOG]
+Name = Rotom-Katalog
+NamePlural = Rotom-Kataloge
+Pocket = 8
+Price = 0
+FieldUse = OnPokemon
+Flags = KeyItem
+Description = Ein Katalog voller Geräte, die Rotom mag. Damit kann Rotom in die Geräte hinein- und wieder herausschlüpfen.
 #-------------------------------Einzigartig
 [ZYGARDECUBE]
 Name = Zygarde-Würfel

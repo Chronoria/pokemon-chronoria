@@ -16,6 +16,7 @@ import { parseTypes } from "./parseTypes.ts";
 import { parseMedals } from "./parseMedals.ts";
 import { parseMapLocations } from "./parseMapLocations.ts";
 import { parseShadowPokemon } from "./parseShadowPokemon.ts";
+import { parseRegionalEvolutions } from "./parseRegionalEvolutions.ts";
 import { CATEGORY_IDS, isItemEvolutionMethod } from "./itemCategoryRules.ts";
 import { buildCalcData } from "./exportCalcData.ts";
 import { exportItemListXlsx } from "./exportItemList.ts";
@@ -55,6 +56,28 @@ async function main() {
   const abilityById = new Map(abilities.map((a) => [a.id, a]));
   const trainerById = new Map(trainers.map((t) => [t.id, t]));
   const itemById = new Map(items.map((i) => [i.id, i]));
+
+  // Held-item regional evolutions (Chronoria Regional Evolutions plugin): each of the
+  // pre-evolution's normal evolutions gets a copy that leads to the regional form instead.
+  // A new array is assigned (not pushed into) because forms without their own Evolutions line
+  // share the base species' array, and the plugin leaves other forms (e.g. Spitzohr-Pikachu)
+  // alone.
+  for (const rule of parseRegionalEvolutions()) {
+    const pre = pokemonById.get(rule.preEvolution);
+    if (!pre) {
+      console.warn(`[Regionale Entwicklungen] Unbekannte Spezies: ${rule.preEvolution}`);
+      continue;
+    }
+    const extra = pre.evolutions
+      .filter((evo) => evo.targetForm === undefined)
+      .filter((evo) => pokemonById.get(evo.target)?.forms.some((f) => f.formNumber === rule.form))
+      .map((evo) => ({ ...evo, targetForm: rule.form, heldItem: rule.heldItem }));
+    if (extra.length === 0) {
+      console.warn(`[Regionale Entwicklungen] ${rule.preEvolution}: keine Entwicklung mit Form ${rule.form} gefunden`);
+      continue;
+    }
+    pre.evolutions = [...pre.evolutions, ...extra];
+  }
 
   // evolvesFrom
   for (const p of pokemon) {
@@ -102,6 +125,7 @@ async function main() {
   for (const p of pokemon) {
     for (const evo of p.evolutions) {
       if (isItemEvolutionMethod(evo.method) && evo.param) evolutionItemIds.add(evo.param);
+      if (evo.heldItem) evolutionItemIds.add(evo.heldItem);
     }
     for (const f of p.forms) {
       for (const evo of f.evolutions) {

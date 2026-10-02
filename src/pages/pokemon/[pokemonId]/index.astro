@@ -31,6 +31,20 @@ function itemName(id: string) {
 function typeName(id: string) {
   return typeNameById.get(id);
 }
+/** Where an evolution leads: the regional form's page for held-item evolutions (targetForm),
+ *  otherwise the species page. */
+function evolutionTargetLink(evo: any) {
+  if (evo.targetForm !== undefined) {
+    const targetForm = pokemonById.get(evo.target)?.forms.find((tf: any) => tf.formNumber === evo.targetForm);
+    if (targetForm) {
+      return {
+        url: href(`/pokemon/${slugify(evo.target)}/${evo.targetForm}/`),
+        label: `${speciesName(evo.target)} (${targetForm.formName?.text || `Form ${evo.targetForm}`})`,
+      };
+    }
+  }
+  return { url: href(`/pokemon/${slugify(evo.target)}/`), label: speciesName(evo.target) };
+}
 
 const megaFormsFromHere = p.forms.filter((mf: any) => mf.megaStone && mf.unmegaForm === 0);
 // Some "forms" only exist to carry the species' female stats/moveset/abilities (PBS convention:
@@ -194,19 +208,25 @@ const nextPokemon = pokemon[(dexIndex + 1) % pokemon.length];
     )}
     {p.evolutions.length > 0 && (
       <ul>
-        {p.evolutions.map((evo: any) => (
-          <li>
-            <a href={href(`/pokemon/${slugify(evo.target)}/`)}>{speciesName(evo.target)}</a>
-            {" — "}
-            {evo.method === "HasInParty" ? (
-              <>{evolutionMethodLabel(evo.method)}: <a href={href(`/pokemon/${slugify(evo.param)}/`)}>{speciesName(evo.param)}</a></>
-            ) : isItemEvolutionMethod(evo.method) && evo.param ? (
-              <>{evolutionMethodLabel(evo.method)}: <a href={href(`/items/${slugify(evo.param)}/`)}>{itemName(evo.param) ?? evo.param}</a></>
-            ) : (
-              formatEvolutionCondition(evo.method, evo.param, itemName, moveName, typeName, speciesName)
-            )}
-          </li>
-        ))}
+        {p.evolutions.map((evo: any) => {
+          const target = evolutionTargetLink(evo);
+          return (
+            <li>
+              <a href={target.url}>{target.label}</a>
+              {" — "}
+              {evo.method === "HasInParty" ? (
+                <>{evolutionMethodLabel(evo.method)}: <a href={href(`/pokemon/${slugify(evo.param)}/`)}>{speciesName(evo.param)}</a></>
+              ) : isItemEvolutionMethod(evo.method) && evo.param ? (
+                <>{evolutionMethodLabel(evo.method)}: <a href={href(`/items/${slugify(evo.param)}/`)}>{itemName(evo.param) ?? evo.param}</a></>
+              ) : (
+                formatEvolutionCondition(evo.method, evo.param, itemName, moveName, typeName, speciesName)
+              )}
+              {evo.heldItem && (
+                <>, trägt dabei <a href={href(`/items/${slugify(evo.heldItem)}/`)}>{itemName(evo.heldItem) ?? evo.heldItem}</a> (wird nicht verbraucht)</>
+              )}
+            </li>
+          );
+        })}
       </ul>
     )}
     {megaFormsFromHere.length > 0 && (
