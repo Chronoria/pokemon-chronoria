@@ -418,6 +418,8 @@ Pokedex = Its bond with its Trainer is the source of its power. It boasts speed 
 
 Generation = 6
 
+Color = Red
+
 UnmegaForm = 1
 
 #-------------------------------
@@ -2310,6 +2312,10 @@ Pokedex = The energy of Mega Evolution awakened it. It sinks into another dimens
 
 Generation = 6
 
+Category = Hellfire
+
+Color = Red
+
 UnmegaForm = 1
 
 #-------------------------------
@@ -2607,6 +2613,8 @@ HiddenAbilities = PARENTALBOND
 Weight = 100.0
 
 Pokedex = The explosive energy the child is bathed in causes temporary growth. The mother is beside herself with worry about it.
+
+Color = Purple
 
 UnmegaForm = 1
 
@@ -3662,6 +3670,10 @@ Generation = 6
 
 MegaStone = STEELIXITEY
 
+Color = White
+
+Pokedex = Es heißt dieses Stahlos sei gegen Wasser immun.
+
 UnmegaForm = 1
 
 #-------------------------------
@@ -4011,6 +4023,12 @@ BaseExp = 315
 
 Abilities = SPEEDBOOST
 
+Category = Blaze
+
+Color = Red
+
+Pokedex = It learns martial arts that use punches and kicks. Every several years, its old feathers burn off, and new, supple feathers grow back in their place.
+
 UnmegaForm = 1
 
 Generation = 6
@@ -4228,6 +4246,8 @@ HiddenAbilities = SHELLARMOR
 Height = 2.2
 
 Weight = 310.0
+
+Color = Green
 
 UnmegaForm = 1
 
@@ -4566,6 +4586,12 @@ BaseStats = 75,50,100,90,135,140
 Abilities = LIGHTNINGROD
 
 HiddenAbilities = LIGHTNINGROD
+
+Category = Storm Cloud
+
+Color = Yellow
+
+Pokedex = These Altaria fly into stormy clouds to attract lightning as a means of healing themselves and boosting their own power.
 
 UnmegaForm = 1
 
@@ -7588,6 +7614,8 @@ FormName = Mega Metagross
 MegaStone = METAGROSSITEY
 
 Types = GRASS,ROCK
+
+Color = Green
 
 UnmegaForm = 1
 
