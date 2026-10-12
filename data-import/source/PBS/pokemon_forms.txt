@@ -4225,6 +4225,10 @@ Abilities = SHELLARMOR
 
 HiddenAbilities = SHELLARMOR
 
+Height = 2.2
+
+Weight = 310.0
+
 UnmegaForm = 1
 
 #-------------------------------
