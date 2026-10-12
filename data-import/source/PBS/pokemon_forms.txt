@@ -2294,6 +2294,8 @@ FormName = Mega Gengar
 
 MegaStone = GENGARITE
 
+Types = GHOST,FIRE
+
 BaseStats = 60,65,80,130,170,95
 
 BaseExp = 300
@@ -2591,6 +2593,8 @@ Generation = 6
 FormName = Mega Kangama
 
 MegaStone = KANGASKHANITEY
+
+Types = FIRE,GHOST
 
 BaseStats = 105,60,100,100,125,100
 
@@ -4550,6 +4554,8 @@ Generation = 6
 FormName = Mega Altaria
 
 MegaStone = ALTARIANITE2
+
+Types = ELECTRIC,DRAGON
 
 BaseStats = 75,50,100,90,135,140
 
@@ -7576,6 +7582,8 @@ WildItemUncommon = METALCOAT
 FormName = Mega Metagross
 
 MegaStone = METAGROSSITEY
+
+Types = GRASS,ROCK
 
 UnmegaForm = 1
 
