@@ -190,6 +190,8 @@ FormName = Mega Bisaflor Y
 
 MegaStone = VENUSAURITEY
 
+Types = GRASS,POISON
+
 BaseStats = 80,100,123,80,122,120
 
 BaseExp = 313
@@ -631,6 +633,8 @@ UnmegaForm = 0
 FormName = Mega Turtok Y
 
 MegaStone = BLASTOISINITEY
+
+Types = WATER
 
 BaseStats = 79,103,120,78,135,115
 
@@ -3995,6 +3999,8 @@ FormName = Mega Lohgock
 
 MegaStone = BLAZIKENITEY
 
+Types = FIRE,FIGHTING
+
 BaseStats = 80,160,80,100,130,80
 
 BaseExp = 315
@@ -4206,6 +4212,8 @@ UnmegaForm = 0
 FormName = Mega Chelterrar
 
 MegaStone = TORTERRANITEY
+
+Types = GRASS,GROUND
 
 BaseStats = 135,149,105,56,95,85
 

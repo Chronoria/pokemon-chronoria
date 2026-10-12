@@ -187,6 +187,7 @@ RaidRanks = 3,4,5
 [TYPHLOSION,2]
 FormName = Mega Tornupto
 MegaStone = TORNUPTONITX
+Types = FIRE
 BaseStats = 78,110,80,95,175,110
 UnmegaForm = 1
 BaseExp = 350

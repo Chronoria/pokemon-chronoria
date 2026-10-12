@@ -497322,7 +497322,7 @@ List of Event Commands:
 @>Text: \xn[Team 0 Nexus]Die Testläufe auf den 
  :    : Dracheninseln waren nur der Anfang.
 @>Text: \xn[Team 0 Nexus]Das wahre Gesicht von Team 0 
- :    : bekommst du schon bald zu sehen.
+ :    : bekommen Sie schon bald zu sehen.
 @>Text: \xn[Team 0 Nexus]Ich wünsche Ihnen viel Erfolg beim 
  :    : Versuch, dieses Kraftwerk wieder zu verlassen.
 @>Text: \xn[Team 0 Nexus]Hahahaha!
@@ -509839,6 +509839,30 @@ List of Event Commands:
 @>
 
 #------------------------------------------------------------------------------
+
+#==============================================================================
+Map ID: 707
+Map Name: Drachenzähmerclub EG
+Tileset: 150: Drachenzähmerclub
+Width: 90, Height: 40
+
+#==============================================================================
+Map ID: 708
+Map Name: MAP708
+Tileset: 150: Drachenzähmerclub
+Width: 20, Height: 20
+
+#==============================================================================
+Map ID: 709
+Map Name: Drachenzähmerclub 1UG
+Tileset: 150: Drachenzähmerclub
+Width: 98, Height: 40
+
+#==============================================================================
+Map ID: 710
+Map Name: Drachenzähmerclub 1UG Räume
+Tileset: 150: Drachenzähmerclub
+Width: 90, Height: 40
 
 #==============================================================================
 
