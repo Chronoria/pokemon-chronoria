@@ -7938,3 +7938,28 @@ Pocket = 8
 Price = 0
 FieldUse = OnPokemon
 Description = Öffnet eine Tür im Dojo in Solhaven.
+#-------------------------------
+[VANDERBILTKEY]
+Name = Vanderbilt-Schlüssel
+NamePlural = Vanderbilt-Schlüssel
+Pocket = 8
+Price = 0
+FieldUse = OnPokemon
+Description = Öffnet eine Tür im Dojo in Solhaven.
+#-------------------------------
+[MEDALBOX]
+Name = Medaillenbox
+NamePlural = Medaillenboxen
+Pocket = 8
+Price = 0
+Flags = KeyItem
+Description = Eine Sammlung deiner bisher verdienten Medallien.
+#-------------------------------
+[EGGINCUBATOR]
+Name = Brutkasten
+NamePlural = Brutkästen
+Pocket = 8
+Price = 0
+FieldUse = Direct
+Flags = KeyItem
+Description = Ein Brutkasten, in dem bis zu 6 Eier aufbewahrt werden, bis sie schlüpfen.

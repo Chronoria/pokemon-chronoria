@@ -195,3 +195,7 @@ Description = Attacken des Pokémon wirken, als herrsche Sonnenschein, unabhäng
 [PIERCINGDRILL]
 Name = Stichbohrer
 Description = Kontakt-Attacken des Pokémon durchbrechen Schutz-Attacken, fügen dann aber nur 1/4 des Schadens zu.
+#-------------------------------
+[AURAGUARD]
+Name = Aura-Abwehr
+Description = Halbiert den Schaden, der durch Attacken erlitten würde, die Kontakt aufnehmen.

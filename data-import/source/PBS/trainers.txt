@@ -4825,6 +4825,7 @@ Pokemon = SALAMENCE,64
     AbilityIndex = 0
     Nature = ADAMANT
 Pokemon = STEELIX,66
+    Form = 1
     Moves = SHEERCOLD,IRONTAIL,DIG,BLIZZARD
     Item = STEELIXITEY
     AbilityIndex = 2
@@ -5109,7 +5110,6 @@ Pokemon = SHARPEDO,67
 #-------------------------------Pfad der Drachen
 [DRAGONTAMER,Orion]
 LoseText = Unglaublich... Dein Wille brennt heißer als das reinste Drachenfeuer!
-Items = MEGARING
 Pokemon = DRAKLOAK,65
     Moves = DRAGONPULSE,PHANTOMFORCE,UTURN,DRAGONDANCE
     AbilityIndex = 1
@@ -5258,7 +5258,29 @@ Pokemon = KINGDRA,71
     Shiny = true
     Gender = female
     Ball = NETBALL
-	#-------------------------------Route 20
+#-------------------------------Route 20
+[SCIENTIST_M4,Linus]
+LoseText = Jetzt habe ich das Pokémon nicht gefunden und auch noch verloren.
+Pokemon = ELECTABUZZ,67
+    Moves = THUNDERBOLT,VOLTSWITCH,TAUNT,THUNDERPUNCH
+    AbilityIndex = 0
+    Nature = HASTY
+    Gender = male
+    Ball = ELECTRICBALL
+Pokemon = MAGMAR,68
+    Moves = FLAMETHROWER,FIRESPIN,TAUNT,FIREPUNCH
+    AbilityIndex = 0
+    Nature = MODEST
+	Item = WIDELENS
+    Gender = male
+    Ball = MAGMARBALL
+Pokemon = JYNX,67
+    Moves = ICEBEAM,PSYCHIC,LOVELYKISS,ICEPUNCH
+    AbilityIndex = 0
+    Nature = TIMID
+    Gender = female
+    Ball = LUXURYBALL
+#-------------------------------Route 20
 [DRAGONTAMER3,Tiamat]
 LoseText = Unglaublich... Du hast die Urgewalt meiner Drachen gebändigt!
 Pokemon = MILOTIC,67
@@ -5281,6 +5303,125 @@ Pokemon = GYARADOS,70
 	Form = 1
     Gender = female
     Ball = NETBALL
+#-------------------------------Route 21
+[DRAGONTAMER,Ignis]
+LoseText = Das Feuer meiner Pokémon ist erloschen.
+Items = MEGARING
+Pokemon = KOMMOO,68
+    Moves = NOBLEROAR,DRAGONCLAW,CLOSECOMBAT,CLANGINGSCALES
+    AbilityIndex = 1
+    Nature = IMPISH
+    Gender = male
+    Ball = ULTRABALL
+Pokemon = DRUDDIGON,65
+    Moves = SUPERPOWER,FIREFANG,SUNNYDAY,FIREPUNCH
+    Item = HEATROCK
+    AbilityIndex = 0
+    Nature = TIMID
+    Gender = male
+    Ball = ULTRABALL
+Pokemon = CHARIZARD,68
+    Moves = FLAREBLITZ,DRAGONPULSE,DRAGONCLAW,OVERHEAT
+    Item = CHARIZARDITEX
+    AbilityIndex = 1
+    Nature = SERIOUS
+    Gender = male
+    Ball = LUXURYBALL
+#-------------------------------Route 21
+[GENTLEMAN7,Wellington]
+LoseText = Der Sand in meinen Schuhen hat mich abgelenkt.
+Items = HYPERPOTION,HYPERPOTION
+Pokemon = POLTEAGEIST,67
+    Moves = CURSE,MEMENTO,SHADOWBALL,TEATIME
+    Item = FOCUSBAND
+    AbilityIndex = 0
+    Nature = HASTY
+    Gender = male
+    Ball = LUXURYBALL
+Pokemon = PERSIAN,68
+    Moves = POWERGEM,PLAYROUGH,SLASH,HYPERBEAM
+    AbilityIndex = 0
+    Nature = TIMID
+    Gender = male
+    Ball = LUXURYBALL
+Pokemon = AEGISLASH,69
+    Moves = KINGSSHIELD,SACREDSWORD,AERIALACE,SWORDSDANCE
+    AbilityIndex = 0
+    Nature = LONELY
+    Gender = male
+    Ball = LUXURYBALL
+#-------------------------------Route 21
+[LADY4,Naomi]
+LoseText = Eine Niederlage im Sand ist wie ein Peeling für das Ego.
+Pokemon = BELLOSSOM,68
+    Moves = GIGADRAIN,QUIVERDANCE,STRENGTHSAP,MOONBLAST
+    Item = LEFTOVERS
+    AbilityIndex = 2
+    Nature = TIMID
+    Gender = female
+    Ball = POKEBALL
+Pokemon = BLISSEY,67
+    Moves = STEALTHROCK,THUNDERWAVE,HEALBELL,SOFTBOILED
+    AbilityIndex = 0
+    Nature = BOLD
+	Item = HEAVYDUTYBOOTS
+    Gender = female
+    Ball = POKEBALL
+Pokemon = WIGGLYTUFF,68
+    Moves = REST,SING,SLEEPTALK,DISABLE
+    Item = FOCUSBAND
+    AbilityIndex = 0
+    Nature = HASTY
+    Gender = male
+    Ball = POKEBALL
+Pokemon = MILTANK,69
+    Moves = TOXIC,ROLLOUT,HEALBELL,MILKDRINK
+    AbilityIndex = 0
+    Nature = CALM
+	Item = LEFTOVERS
+    Gender = female
+    Ball = POKEBALL
+#-------------------------------Route 21
+[DRAGONTAMER2,Leif]
+LoseText = Du hast die Ausdauer bewiesen, die ich angezweifelt habe.
+Pokemon = SALAMENCE,68
+    Moves = ROOST,FLAMETHROWER,DRACOMETEOR,FLY
+    AbilityIndex = 0
+    Nature = TIMID
+    Gender = male
+    Ball = ULTRABALL
+Pokemon = HAXORUS,70
+    Moves = SCALESHOT,IRONHEAD,SWORDSDANCE,EARTHQUAKE
+    Item = LOADEDDICE
+    AbilityIndex = 1
+    Nature = ADAMANT
+    Gender = male
+    Ball = LUXURYBALL
+#-------------------------------Route 21
+[DRAGONTAMER3,Amalia]
+LoseText = Meine Pokémon und ich müssen wohl noch härter trainieren.
+Items = MEGARING
+Pokemon = NOIVERN,68
+    Moves = HURRICANE,SUPERFANG,TAILWIND,DRAGONPULSE
+    AbilityIndex = 1
+	Item = FOCUSSASH
+    Nature = TIMID
+    Gender = female
+    Ball = FASTBALL
+Pokemon = AURORUS,70
+    Moves = HYPERVOICE,EARTHPOWER,METEORBEAM,ROCKPOLISH
+    AbilityIndex = 0
+	Item = POWERHERB
+    Nature = TIMID
+    Gender = female
+    Ball = ULTRABALL
+Pokemon = ALTARIA,68
+    Moves = DRAGONDANCE,DRAGONCLAW,STEELWING,ROOST
+    AbilityIndex = 0
+	Item = ALTARIANITE
+    Nature = ADAMANT
+    Gender = female
+    Ball = GREATBALL
 #-------------------------------
 [BLACKBELT,Björn]
 LoseText = ...Ein Treffer. Mehr hat's nicht gebraucht. Respekt.

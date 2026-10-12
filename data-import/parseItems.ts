@@ -86,6 +86,9 @@ export function parseItems(ctx: TranslationContext): Item[] {
   const icons = loadIconIndex();
   const items = new Map<string, Item>();
   for (const file of ITEM_FILES) {
+    // An expansion file can disappear when its plugin is removed from the game (sync deletes the
+    // snapshot copy too) - that must not break the whole build.
+    if (!existsSync(join(SOURCE_DIR, file))) continue;
     for (const block of parsePbsBlocks(load(file))) {
       const id = block.headerParts[0];
       if (HIDDEN_DUPLICATE_ITEM_IDS.has(id)) continue;

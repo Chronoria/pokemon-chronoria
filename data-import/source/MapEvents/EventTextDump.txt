@@ -118075,7 +118075,7 @@ $>Wait: 10 frame(s)
 $>Move Left
 $>Change Speed: 2
 
-Speed: 2: Slower
+Speed: 1: Slowest
 Freq: 6: Highest
 Options Enabled
 Move Animation
@@ -118332,7 +118332,7 @@ $>Wait: 10 frame(s)
 $>Move Left
 $>Change Speed: 2
 
-Speed: 2: Slower
+Speed: 1: Slowest
 Freq: 6: Highest
 Options Enabled
 Move Animation
@@ -118671,7 +118671,7 @@ $>Wait: 10 frame(s)
 $>Move Left
 $>Change Speed: 2
 
-Speed: 2: Slower
+Speed: 1: Slowest
 Freq: 6: Highest
 Options Enabled
 Move Animation
@@ -118801,7 +118801,7 @@ $>Wait: 10 frame(s)
 $>Move Left
 $>Change Speed: 2
 
-Speed: 2: Slower
+Speed: 1: Slowest
 Freq: 6: Highest
 Options Enabled
 Move Animation
@@ -118890,7 +118890,7 @@ $>Wait: 10 frame(s)
 $>Move Left
 $>Change Speed: 2
 
-Speed: 2: Slower
+Speed: 3: Slow
 Freq: 6: Highest
 Options Enabled
 Move Animation
@@ -118971,6 +118971,9 @@ Trigger: Action Button
 
 List of Event Commands:
 @>Text: Willkommen im Spheal-Life.
+@>Text: Hier kannst du Wasser-Pokémon aus der ganzen 
+ :    : Region bestaunen.
+@>Text: Aber bitte nicht an die Scheibe klopfen.
 @>
 
 #------------------------------------------------------------------------------
@@ -119297,6 +119300,229 @@ Move Animation
 Trigger: Action Button
 
 List of Event Commands:
+@>
+
+#------------------------------------------------------------------------------
+Event ID: 043
+Event Name: NPC
+(X,Y): (027,046)
+
+Page #1
+Conditions
+None
+
+Graphic: NPC_Mann 12
+
+Autonomous Movement
+Type: Fixed
+Speed: 3: Slow
+Freq: 3: Low
+Options Enabled
+Move Animation
+Trigger: Action Button
+
+List of Event Commands:
+@>Text: Entschuldigung, weißt du, wo hier die Seemops 
+ :    : sind?
+@>Text: Das Ding heißt doch "Spheal-Life"!
+@>Text: Auf dem Gebäude ist sogar eins drauf!
+@>Text: Ich bin jetzt dreimal durchgelaufen.
+@>Text: Kein einziges Seemops.
+@>Set Move Route: This event
+ :              : $>Turn Left
+@>
+
+#------------------------------------------------------------------------------
+Event ID: 044
+Event Name: NPC
+(X,Y): (009,032)
+
+Page #1
+Conditions
+None
+
+Graphic: NPC_Frau 8
+
+Autonomous Movement
+Type: Random
+Speed: 3: Slow
+Freq: 3: Low
+Options Enabled
+Move Animation
+Trigger: Action Button
+
+List of Event Commands:
+@>Text: Quabbel können unterschiedliche Farben haben.
+@>Text: Die rosanen sind weiblich und die blauen männlich.
+@>
+
+#------------------------------------------------------------------------------
+Event ID: 045
+Event Name: NPC
+(X,Y): (034,024)
+
+Page #1
+Conditions
+None
+
+Graphic: NPC_Frau 10
+
+Autonomous Movement
+Type: Random
+Speed: 3: Slow
+Freq: 3: Low
+Options Enabled
+Move Animation
+Trigger: Action Button
+
+List of Event Commands:
+@>Text: Früher gab es hier ein Barschwa.
+@>Text: Sie nannten es "das hässlichste Pokémon".
+@>Text: Dann hat ihm jemand heimlich eine schimmernde 
+ :    : Schuppe gegeben.
+@>Text: Seitdem war es das schönste Pokémon der Region.
+@>Text: Ich habe noch eine Schuppe übrig.
+@>Text: Vielleicht kennst du auch ein Barschwa, das eine 
+ :    : Chance verdient hat.
+@>Script: pbReceiveItem(:PRISMSCALE)
+@>Control Self Switch: A =ON
+@>
+
+Page #2
+Conditions
+Self Switch A is ON
+
+Graphic: NPC_Frau 10
+
+Autonomous Movement
+Type: Random
+Speed: 3: Slow
+Freq: 3: Low
+Options Enabled
+Move Animation
+Trigger: Action Button
+
+List of Event Commands:
+@>Text: Schönheit steckt manchmal in denen, an denen alle 
+ :    : vorbeilaufen.
+@>
+
+#------------------------------------------------------------------------------
+Event ID: 046
+Event Name: EV046
+(X,Y): (022,041)
+
+Page #1
+Conditions
+None
+
+Graphic: NPC_Frau 15
+
+Autonomous Movement
+Type: Fixed
+Speed: 3: Slow
+Freq: 3: Low
+Options Enabled
+Move Animation
+Trigger: Action Button
+
+List of Event Commands:
+@>Text: Willkommen im Spheal-Life-Shop!
+@>Text: Alles was dein Herz eines Wasser-Trainers begehrt.
+@>Script: pbPokemonMart([:NETBALL, :LUREBALL, 
+:       : :FRESHWATER, :MYSTICWATER, 
+:       : :HEARTSCALE])
+@>
+
+#------------------------------------------------------------------------------
+Event ID: 047
+Event Name: NPC
+(X,Y): (006,016)
+
+Page #1
+Conditions
+None
+
+Graphic: NPC_Junge 3
+
+Autonomous Movement
+Type: Fixed
+Speed: 3: Slow
+Freq: 3: Low
+Options Enabled
+Move Animation
+Trigger: Action Button
+
+List of Event Commands:
+@>Text: Meine Perlu sind mein ganzer Stolz.
+@>Text: Jedes sitzt in seiner eigenen Muschel.
+@>Text: Es kann sich auf zwei Arten entwickeln.
+@>Text: Mit einem Abysszahn wird es zum grimmigen 
+ :    : Aalabyss.
+@>Text: Mit einer Abyssschuppe zum eleganten Saganabyss.
+@>Text: Möchtest du eines davon ausprobieren?
+@>Show Choices: Abysszahn, Abyssschuppe, Zurück
+(When Cancel: Choice 3)
+: When [Abysszahn]
+ @>Script: pbReceiveItem(:DEEPSEATOOTH)
+ @>Text: Gute Wahl. Du musst es nur noch bei einem Perlu 
+  :    : anwenden.
+ @>Control Self Switch: A =ON
+ @>
+: When [Abyssschuppe]
+ @>Script: pbReceiveItem(:DEEPSEASCALE)
+ @>Text: Gute Wahl. Du musst es nur noch bei einem Perlu 
+  :    : anwenden.
+ @>Control Self Switch: A =ON
+ @>
+: When [Zurück]
+ @>Text: Wie du magst.
+ @>
+: Branch End
+@>
+
+Page #2
+Conditions
+Self Switch A is ON
+
+Graphic: NPC_Junge 3
+
+Autonomous Movement
+Type: Fixed
+Speed: 3: Slow
+Freq: 3: Low
+Options Enabled
+Move Animation
+Trigger: Action Button
+
+List of Event Commands:
+@>Text: Hast du dein Perlu schon entwickelt?
+@>Text: Ich bin gespannt, was aus ihm geworden ist!
+@>
+
+#------------------------------------------------------------------------------
+Event ID: 048
+Event Name: EV048
+(X,Y): (007,016)
+
+Page #1
+Conditions
+None
+
+Graphic: CLAMPERL
+
+Autonomous Movement
+Type: Fixed
+Speed: 3: Slow
+Freq: 3: Low
+Options Enabled
+Move Animation
+Direction Fix
+Trigger: Action Button
+
+List of Event Commands:
+@>Play SE: 'CLAMPERL', 100, 100
+@>Wait: 10 frame(s)
 @>
 
 #------------------------------------------------------------------------------
@@ -286200,7 +286426,7 @@ Trigger: Player Touch
 
 List of Event Commands:
 @>Set Move Route: This event
- :              : $>SE: 'Door enter', 100, 90
+ :              : $>SE: 'Door enter', 100, 100
  :              : $>Turn Left
  :              : $>Wait: 2 frame(s)
  :              : $>Turn Right
@@ -286256,7 +286482,7 @@ List of Event Commands:
  @>Script: Followers.hide_followers
  @>Set Move Route: This event
                    (Ignore If Can't Move)
-  :              : $>SE: 'Door enter', 100, 90
+  :              : $>SE: 'Door enter', 100, 100
   :              : $>Wait: 2 frame(s)
   :              : $>Turn Left
   :              : $>Wait: 2 frame(s)
@@ -286309,7 +286535,7 @@ Trigger: Player Touch
 
 List of Event Commands:
 @>Set Move Route: This event
- :              : $>SE: 'Door enter', 100, 90
+ :              : $>SE: 'Door enter', 100, 100
  :              : $>Turn Left
  :              : $>Wait: 2 frame(s)
  :              : $>Turn Right
@@ -286365,7 +286591,7 @@ List of Event Commands:
  @>Script: Followers.hide_followers
  @>Set Move Route: This event
                    (Ignore If Can't Move)
-  :              : $>SE: 'Door enter', 100, 90
+  :              : $>SE: 'Door enter', 100, 100
   :              : $>Wait: 2 frame(s)
   :              : $>Turn Left
   :              : $>Wait: 2 frame(s)
@@ -286418,7 +286644,7 @@ Trigger: Player Touch
 
 List of Event Commands:
 @>Set Move Route: This event
- :              : $>SE: 'Door enter', 100, 90
+ :              : $>SE: 'Door enter', 100, 100
  :              : $>Turn Left
  :              : $>Wait: 2 frame(s)
  :              : $>Turn Right
@@ -286474,7 +286700,7 @@ List of Event Commands:
  @>Script: Followers.hide_followers
  @>Set Move Route: This event
                    (Ignore If Can't Move)
-  :              : $>SE: 'Door enter', 100, 90
+  :              : $>SE: 'Door enter', 100, 100
   :              : $>Wait: 2 frame(s)
   :              : $>Turn Left
   :              : $>Wait: 2 frame(s)
@@ -286527,7 +286753,7 @@ Trigger: Player Touch
 
 List of Event Commands:
 @>Set Move Route: This event
- :              : $>SE: 'Door enter', 100, 90
+ :              : $>SE: 'Door enter', 100, 100
  :              : $>Turn Left
  :              : $>Wait: 2 frame(s)
  :              : $>Turn Right
@@ -286583,7 +286809,7 @@ List of Event Commands:
  @>Script: Followers.hide_followers
  @>Set Move Route: This event
                    (Ignore If Can't Move)
-  :              : $>SE: 'Door enter', 100, 90
+  :              : $>SE: 'Door enter', 100, 100
   :              : $>Wait: 2 frame(s)
   :              : $>Turn Left
   :              : $>Wait: 2 frame(s)
@@ -286633,48 +286859,17 @@ Move Animation
 Trigger: Event Touch
 
 List of Event Commands:
-@>Set Move Route: This event
-                  (Ignore If Can't Move)
- :              : $>SE: 'Door enter', 100, 100
- :              : $>Wait: 2 frame(s)
- :              : $>Turn Left
- :              : $>Wait: 2 frame(s)
- :              : $>Turn Right
- :              : $>Wait: 2 frame(s)
- :              : $>Turn Up
- :              : $>Wait: 2 frame(s)
-@>Wait for Move's Completion
-@>Set Move Route: Player
-                  (Ignore If Can't Move)
- :              : $>Through ON
- :              : $>Move Up
- :              : $>Through OFF
-@>Wait for Move's Completion
-@>Change Transparent Flag: Transparency
-@>Script: Followers.follow_into_door
-@>Wait for Move's Completion
-@>Set Move Route: This event
-                  (Ignore If Can't Move)
- :              : $>Wait: 2 frame(s)
- :              : $>Turn Right
- :              : $>Wait: 2 frame(s)
- :              : $>Turn Left
- :              : $>Wait: 2 frame(s)
- :              : $>Turn Down
- :              : $>Wait: 2 frame(s)
-@>Wait for Move's Completion
+@>Play SE: 'Door exit', 100, 100
 @>Change Screen Color Tone: (-255,-255,-255,0), @6
 @>Wait: 8 frame(s)
-@>Change Transparent Flag: Normal
 @>Transfer Player:[372: Noxburgh], (017,027), Up, No Fade
 @>Change Screen Color Tone: (0,0,0,0), @6
+@>Wait: 8 frame(s)
 @>
 
 Page #2
 Conditions
 Switch 0022: s:tsOff?("A") is ON
-
-Graphic: Door Noxburgh
 
 Autonomous Movement
 Type: Fixed
@@ -286686,28 +286881,12 @@ Trigger: Autorun
 
 List of Event Commands:
 @>Conditional Branch: Script: get_self.onEvent?
- @>Change Transparent Flag: Transparency
  @>Script: Followers.hide_followers
- @>Set Move Route: This event
-                   (Ignore If Can't Move)
-  :              : $>Turn Left
-  :              : $>Wait: 6 frame(s)
- @>Wait for Move's Completion
  @>Change Transparent Flag: Normal
  @>Set Move Route: Player
                    (Ignore If Can't Move)
   :              : $>Move Down
- @>Wait for Move's Completion
  @>Script: Followers.put_followers_on_player
- @>Set Move Route: This event
-                   (Ignore If Can't Move)
-  :              : $>Turn Up
-  :              : $>Wait: 2 frame(s)
-  :              : $>Turn Right
-  :              : $>Wait: 2 frame(s)
-  :              : $>Turn Down
-  :              : $>Wait: 2 frame(s)
- @>Wait for Move's Completion
  @>
 : Branch End
 @>Script: setTempSwitchOn("A")
@@ -287100,7 +287279,7 @@ None
 Graphic: Door Noxburgh
 
 Autonomous Movement
-Type: Fixed
+Type: Random
 Speed: 3: Slow
 Freq: 3: Low
 Options Enabled
@@ -288036,6 +288215,8 @@ List of Event Commands:
 @>Text: Früher hat man hier abends den Himmel bestaunt.
 @>Text: Das Nordlicht tanzt über der Stadt, wenn es 
  :    : ruhig genug ist.
+@>Set Move Route: This event
+ :              : $>Turn Down
 @>
 
 #------------------------------------------------------------------------------
@@ -288725,7 +288906,7 @@ None
 Graphic: trainer_YOUNGSTER4
 
 Autonomous Movement
-Type: Random
+Type: Fixed
 Speed: 3: Slow
 Freq: 3: Low
 Options Enabled
@@ -288890,6 +289071,7 @@ Options Enabled
 Move Animation
 Stop Animation
 Direction Fix
+Through
 Always on Top
 Trigger: Action Button
 
@@ -289140,6 +289322,7 @@ Options Enabled
 Move Animation
 Stop Animation
 Direction Fix
+Through
 Always on Top
 Trigger: Action Button
 
@@ -289165,6 +289348,7 @@ Options Enabled
 Move Animation
 Stop Animation
 Direction Fix
+Through
 Always on Top
 Trigger: Action Button
 
@@ -289244,6 +289428,167 @@ Always on Top
 Trigger: Action Button
 
 List of Event Commands:
+@>
+
+#------------------------------------------------------------------------------
+Event ID: 073
+Event Name: EV073
+(X,Y): (009,036)
+
+Page #1
+Conditions
+None
+
+Graphic: Deko Vogel 2
+
+Autonomous Movement
+Type: Fixed
+Speed: 1: Slowest
+Freq: 1: Lowest
+Options Enabled
+Move Animation
+Stop Animation
+Direction Fix
+Always on Top
+Trigger: Action Button
+
+List of Event Commands:
+@>
+
+#------------------------------------------------------------------------------
+Event ID: 074
+Event Name: Deino
+(X,Y): (046,020)
+
+Page #1
+Conditions
+None
+
+Graphic: Sleep Trikephalo
+
+Autonomous Movement
+Type: Fixed
+Speed: 1: Slowest
+Freq: 1: Lowest
+Options Enabled
+Move Animation
+Stop Animation
+Always on Top
+Trigger: Action Button
+
+List of Event Commands:
+@>
+
+#------------------------------------------------------------------------------
+Event ID: 075
+Event Name: Tür .sl
+(X,Y): (046,026)
+
+Page #1
+Conditions
+None
+
+Graphic: Door Bruchhain
+
+Autonomous Movement
+Type: Custom
+Custom Move Route:
+(Repeat Action)
+
+Speed: 3: Slow
+Freq: 3: Low
+Options Enabled
+Move Animation
+Trigger: Player Touch
+
+List of Event Commands:
+@>Set Move Route: This event
+ :              : $>SE: 'Door slide', 100, 90
+ :              : $>Turn Left
+ :              : $>Wait: 2 frame(s)
+ :              : $>Turn Right
+ :              : $>Wait: 2 frame(s)
+ :              : $>Turn Up
+ :              : $>Wait: 2 frame(s)
+@>Wait: 6 frame(s)
+@>Set Move Route: Player
+                  (Ignore If Can't Move)
+ :              : $>Through ON
+ :              : $>Move Up
+ :              : $>Through OFF
+@>Wait: 8 frame(s)
+@>Change Transparent Flag: Transparency
+@>Script: Followers.follow_into_door
+@>Wait: 8 frame(s)
+@>Set Move Route: This event
+                  (Ignore If Can't Move)
+ :              : $>SE: 'Door slide', 100, 90
+ :              : $>Wait: 2 frame(s)
+ :              : $>Turn Right
+ :              : $>Wait: 2 frame(s)
+ :              : $>Turn Left
+ :              : $>Wait: 2 frame(s)
+ :              : $>Turn Down
+ :              : $>Wait: 2 frame(s)
+@>Wait: 8 frame(s)
+@>Change Screen Color Tone: (-255,-255,-255,0), @6
+@>Wait: 8 frame(s)
+@>Change Transparent Flag: Normal
+@>Transfer Player:[641: Noxburgh], (009,031), Up, No Fade
+@>Change Screen Color Tone: (0,0,0,0), @6
+@>Wait: 8 frame(s)
+@>
+
+Page #2
+Conditions
+Switch 0022: s:tsOff?("A") is ON
+
+Graphic: Door Bruchhain
+
+Autonomous Movement
+Type: Fixed
+Speed: 3: Slow
+Freq: 3: Low
+Options Enabled
+Move Animation
+Trigger: Autorun
+
+List of Event Commands:
+@>Conditional Branch: Script: get_self.onEvent?
+ @>Change Transparent Flag: Transparency
+ @>Script: Followers.hide_followers
+ @>Set Move Route: This event
+                   (Ignore If Can't Move)
+  :              : $>SE: 'Door slide', 100, 90
+  :              : $>Wait: 2 frame(s)
+  :              : $>Turn Left
+  :              : $>Wait: 2 frame(s)
+  :              : $>Turn Right
+  :              : $>Wait: 2 frame(s)
+  :              : $>Turn Up
+  :              : $>Wait: 2 frame(s)
+ @>Wait: 8 frame(s)
+ @>Change Transparent Flag: Normal
+ @>Set Move Route: Player
+                   (Ignore If Can't Move)
+  :              : $>Through ON
+  :              : $>Move Down
+  :              : $>Through OFF
+ @>Wait: 8 frame(s)
+ @>Script: Followers.put_followers_on_player
+ @>Set Move Route: This event
+                   (Ignore If Can't Move)
+  :              : $>SE: 'Door slide', 100, 90
+  :              : $>Turn Right
+  :              : $>Wait: 2 frame(s)
+  :              : $>Turn Left
+  :              : $>Wait: 2 frame(s)
+  :              : $>Turn Down
+  :              : $>Wait: 2 frame(s)
+ @>Wait: 8 frame(s)
+ @>
+: Branch End
+@>Script: setTempSwitchOn("A")
 @>
 
 #------------------------------------------------------------------------------
@@ -333444,34 +333789,19 @@ Move Animation
 Trigger: Action Button
 
 List of Event Commands:
-@>Conditional Branch: Script: $player.first_pokemon.isSpecies?(:RELICANTH)
- @>Conditional Branch: Script: $player.party[5].species == :WAILORD
-  @>Conditional Branch: Script: pbTilePuzzle(5, "RegiRock")
-   @>Play SE: 'PRSFX- Celebrate5', 60, 50
-   @>Text: Das Leben wächst, doch wahrer Stillstand ist der 
-    :    : Schlüssel.
-   @>Text: Bringe an die Spitze deiner Gefährten jenen, der die 
-    :    : Zeit verweigert, weiterzuziehen.
-   @>Control Switches: [0243: Regirock 2] = ON
-   @>
-  : Else
-   @>Text: Vielleicht später...
-   @>
-  : Branch End
-  @>
- : Else
-  @>
- : Branch End
+@>Conditional Branch: Script: pbTilePuzzle(5, "RegiRock")
+ @>Play SE: 'PRSFX- Celebrate5', 60, 50
+ @>Control Switches: [0244: Tür 1 geöffnet] = ON
  @>
 : Else
- @>Text: Dir scheint etwas zu fehlen...
+ @>Text: Vielleicht später...
  @>
 : Branch End
 @>
 
 Page #2
 Conditions
-Switch 0243: Regirock 2 is ON
+Switch 0244: Tür 1 geöffnet is ON
 
 Autonomous Movement
 Type: Fixed
@@ -333482,10 +333812,6 @@ Move Animation
 Trigger: Action Button
 
 List of Event Commands:
-@>Text: Das Leben wächst, doch wahrer Stillstand ist der 
- :    : Schlüssel.
-@>Text: Bringe an die Spitze deiner Gefährten jenen, der die 
- :    : Zeit verweigert, weiterzuziehen.
 @>
 
 #------------------------------------------------------------------------------
@@ -333509,8 +333835,7 @@ List of Event Commands:
 @>Conditional Branch: Script: $player.has_species?(:REGICE)
  @>Conditional Branch: Script: pbTilePuzzle(5, "RegiSteel")
   @>Play SE: 'PRSFX- Celebrate5', 60, 50
-  @>Text: Der Stahl schläft, nur der Klang kann ihn erwecken.
-  @>Control Switches: [0247: Registeel 2] = ON
+  @>Control Switches: [0248: Tür 3 geöffnet] = ON
   @>
  : Else
   @>Text: Vielleicht später...
@@ -333525,7 +333850,7 @@ List of Event Commands:
 
 Page #2
 Conditions
-Switch 0247: Registeel 2 is ON
+Switch 0248: Tür 3 geöffnet is ON
 
 Autonomous Movement
 Type: Fixed
@@ -333536,7 +333861,6 @@ Move Animation
 Trigger: Action Button
 
 List of Event Commands:
-@>Text: Der Stahl schläft, nur der Klang kann ihn erwecken.
 @>
 
 #------------------------------------------------------------------------------
@@ -333560,10 +333884,7 @@ List of Event Commands:
 @>Conditional Branch: Script: $player.has_species?(:REGIROCK)
  @>Conditional Branch: Script: pbTilePuzzle(5, "RegiIce")
   @>Play SE: 'PRSFX- Celebrate5', 60, 50
-  @>Text: Nur der, der selbst kein Leben atmet, kann den Frost 
-   :    : erwecken.
-  @>Text: Führe ihn voran und das Eis wird sich beugen.
-  @>Control Switches: [0245: Regice 2] = ON
+  @>Control Switches: [0246: Tür 2 geöffnet] = ON
   @>
  : Else
   @>Text: Vielleicht später...
@@ -333578,7 +333899,7 @@ List of Event Commands:
 
 Page #2
 Conditions
-Switch 0245: Regice 2 is ON
+Switch 0246: Tür 2 geöffnet is ON
 
 Autonomous Movement
 Type: Fixed
@@ -333589,9 +333910,6 @@ Move Animation
 Trigger: Action Button
 
 List of Event Commands:
-@>Text: Nur der, der selbst kein Leben atmet, kann den Frost 
- :    : erwecken.
-@>Text: Führe ihn voran und das Eis wird sich beugen.
 @>
 
 #------------------------------------------------------------------------------
@@ -338336,7 +338654,7 @@ List of Event Commands:
 @>Text: Das Leben wächst, doch wahrer Stillstand ist der 
  :    : Schlüssel.
 @>Text: Bringe an die Spitze deiner Gefährten jenen, der die 
- :    : Zeit verweigert, weiterzuziehen.
+ :    : Zeit verweigert und Evolution leugnet.
 @>Script: first_pkmn = $player.party[0]
 :       : if first_pkmn && first_pkmn.item == 
 :       : :EVERSTONE
@@ -340181,11 +340499,7 @@ List of Event Commands:
 @>Conditional Branch: Script: $player.has_species?(:REGISTEEL)
  @>Conditional Branch: Script: pbTilePuzzle(5, "RegiElectric")
   @>Play SE: 'PRSFX- Celebrate5', 60, 50
-  @>Text: Nur wer den Funken in Händen trägt, kann das 
-   :    : schlafende Licht erwecken.
-  @>Text: Ein uralter Strom in der Tiefe.
-  @>Text: Der Schlüssel liegt im Stein, der den Blitz bewahrt.
-  @>Control Switches: [0251: Regielecki 2] = ON
+  @>Control Switches: [0252: Tür 4 geöffnet] = ON
   @>
  : Else
   @>Text: Vielleicht später...
@@ -340200,7 +340514,7 @@ List of Event Commands:
 
 Page #2
 Conditions
-Switch 0251: Regielecki 2 is ON
+Switch 0252: Tür 4 geöffnet is ON
 
 Autonomous Movement
 Type: Fixed
@@ -340238,11 +340552,7 @@ List of Event Commands:
 @>Conditional Branch: Script: $player.has_species?(:REGIELEKI)
  @>Conditional Branch: Script: pbTilePuzzle(5, "RegiDragon")
   @>Play SE: 'PRSFX- Celebrate5', 60, 50
-  @>Text: Nur wer Schmerz kennt, darf den Atem des Drachen 
-   :    : wecken.
-  @>Text: Das Blut des Drachen fließt nur für jene, die selbst 
-   :    : Wunden tragen.
-  @>Control Switches: [0253: Regidrago 2] = ON
+  @>Control Switches: [0254: Tür 5 geöffnet] = ON
   @>
  : Else
   @>Text: Vielleicht später...
@@ -340257,7 +340567,7 @@ List of Event Commands:
 
 Page #2
 Conditions
-Switch 0253: Regidrago 2 is ON
+Switch 0254: Tür 5 geöffnet is ON
 
 Autonomous Movement
 Type: Fixed
@@ -340268,10 +340578,6 @@ Move Animation
 Trigger: Action Button
 
 List of Event Commands:
-@>Text: Nur wer Schmerz kennt, darf den Atem des Drachen 
- :    : wecken.
-@>Text: Das Blut des Drachen fließt nur für jene, die selbst 
- :    : Wunden tragen.
 @>
 
 #------------------------------------------------------------------------------
@@ -352226,7 +352532,7 @@ List of Event Commands:
 @>Wait: 4 frame(s)
 @>Set Move Route: This event
  :              : $>Graphic: "Interruptor', 0, 2, 0
-@>Play SE: 'PRSFX- Present2', 100, 50
+@>Play SE: 'Schalter', 100, 100
 @>Wait: 20 frame(s)
 @>Control Switches: [0399: Alle aus] = ON
 @>Control Self Switch: A =ON
@@ -352339,7 +352645,7 @@ Move Animation
 Trigger: Action Button
 
 List of Event Commands:
-@>Play SE: 'Boton', 85, 100
+@>Play SE: 'Paralyze1', 85, 100
 @>Control Switches: [0398: Schalter Strom Blau] = ON
 @>Control Switches: [0397: Schalter Strom Rot] = OFF
 @>Play SE: 'Electricidad', 90, 100
@@ -352595,29 +352901,14 @@ List of Event Commands:
 #------------------------------------------------------------------------------
 Event ID: 007
 Event Name: Strom .sl
-(X,Y): (023,039)
+(X,Y): (010,018)
 
 Page #1
 Conditions
 Switch 0397: Schalter Strom Rot is ON
 
 Autonomous Movement
-Type: Custom
-Custom Move Route:
-(Repeat Action)
-$>Graphic: "Electricidad', 0, 2, 0
-$>Wait: 4 frame(s)
-$>Graphic: "Electricidad', 0, 2, 1
-$>Wait: 4 frame(s)
-$>Graphic: "Electricidad', 0, 2, 2
-$>Wait: 4 frame(s)
-$>Graphic: "Electricidad', 0, 2, 3
-$>Wait: 4 frame(s)
-$>Graphic: "Electricidad', 0, 4, 1
-$>Wait: 4 frame(s)
-$>Graphic: "Electricidad', 0, 4, 2
-$>Wait: 4 frame(s)
-
+Type: Fixed
 Speed: 6: Fastest
 Freq: 6: Highest
 Options Enabled
@@ -353516,7 +353807,7 @@ Move Animation
 Trigger: Action Button
 
 List of Event Commands:
-@>Play SE: 'Boton', 85, 100
+@>Play SE: 'Paralyze1', 85, 100
 @>Control Switches: [0398: Schalter Strom Blau] = ON
 @>Control Switches: [0397: Schalter Strom Rot] = OFF
 @>Play SE: 'Electricidad', 90, 100
@@ -353574,7 +353865,7 @@ Move Animation
 Trigger: Action Button
 
 List of Event Commands:
-@>Play SE: 'Boton', 85, 100
+@>Play SE: 'Paralyze1', 85, 100
 @>Control Switches: [0398: Schalter Strom Blau] = ON
 @>Control Switches: [0397: Schalter Strom Rot] = OFF
 @>Play SE: 'Electricidad', 90, 100
@@ -353632,7 +353923,7 @@ Move Animation
 Trigger: Action Button
 
 List of Event Commands:
-@>Play SE: 'Boton', 85, 100
+@>Play SE: 'Paralyze1', 85, 100
 @>Control Switches: [0398: Schalter Strom Blau] = ON
 @>Control Switches: [0397: Schalter Strom Rot] = OFF
 @>Play SE: 'Electricidad', 90, 100
@@ -353690,7 +353981,7 @@ Move Animation
 Trigger: Action Button
 
 List of Event Commands:
-@>Play SE: 'Boton', 85, 100
+@>Play SE: 'Paralyze1', 85, 100
 @>Control Switches: [0398: Schalter Strom Blau] = ON
 @>Control Switches: [0397: Schalter Strom Rot] = OFF
 @>Play SE: 'Electricidad', 90, 100
@@ -353748,7 +354039,7 @@ Move Animation
 Trigger: Action Button
 
 List of Event Commands:
-@>Play SE: 'Boton', 85, 100
+@>Play SE: 'Paralyze1', 85, 100
 @>Control Switches: [0398: Schalter Strom Blau] = ON
 @>Control Switches: [0397: Schalter Strom Rot] = OFF
 @>Play SE: 'Electricidad', 90, 100
@@ -353806,7 +354097,7 @@ Move Animation
 Trigger: Action Button
 
 List of Event Commands:
-@>Play SE: 'Boton', 85, 100
+@>Play SE: 'Paralyze1', 85, 100
 @>Control Switches: [0398: Schalter Strom Blau] = ON
 @>Control Switches: [0397: Schalter Strom Rot] = OFF
 @>Play SE: 'Electricidad', 90, 100
@@ -353856,22 +354147,7 @@ Conditions
 Switch 0398: Schalter Strom Blau is ON
 
 Autonomous Movement
-Type: Custom
-Custom Move Route:
-(Repeat Action)
-$>Graphic: "Electricidad', 0, 2, 0
-$>Wait: 4 frame(s)
-$>Graphic: "Electricidad', 0, 2, 1
-$>Wait: 4 frame(s)
-$>Graphic: "Electricidad', 0, 2, 2
-$>Wait: 4 frame(s)
-$>Graphic: "Electricidad', 0, 2, 3
-$>Wait: 4 frame(s)
-$>Graphic: "Electricidad', 0, 4, 1
-$>Wait: 4 frame(s)
-$>Graphic: "Electricidad', 0, 4, 2
-$>Wait: 4 frame(s)
-
+Type: Fixed
 Speed: 6: Fastest
 Freq: 6: Highest
 Options Enabled
@@ -353925,22 +354201,7 @@ Conditions
 Switch 0398: Schalter Strom Blau is ON
 
 Autonomous Movement
-Type: Custom
-Custom Move Route:
-(Repeat Action)
-$>Graphic: "Electricidad', 0, 2, 0
-$>Wait: 4 frame(s)
-$>Graphic: "Electricidad', 0, 2, 1
-$>Wait: 4 frame(s)
-$>Graphic: "Electricidad', 0, 2, 2
-$>Wait: 4 frame(s)
-$>Graphic: "Electricidad', 0, 2, 3
-$>Wait: 4 frame(s)
-$>Graphic: "Electricidad', 0, 4, 1
-$>Wait: 4 frame(s)
-$>Graphic: "Electricidad', 0, 4, 2
-$>Wait: 4 frame(s)
-
+Type: Fixed
 Speed: 6: Fastest
 Freq: 6: Highest
 Options Enabled
@@ -353987,29 +354248,14 @@ List of Event Commands:
 #------------------------------------------------------------------------------
 Event ID: 028
 Event Name: Strom .sl
-(X,Y): (031,022)
+(X,Y): (031,024)
 
 Page #1
 Conditions
 Switch 0398: Schalter Strom Blau is ON
 
 Autonomous Movement
-Type: Custom
-Custom Move Route:
-(Repeat Action)
-$>Graphic: "Electricidad', 0, 2, 0
-$>Wait: 4 frame(s)
-$>Graphic: "Electricidad', 0, 2, 1
-$>Wait: 4 frame(s)
-$>Graphic: "Electricidad', 0, 2, 2
-$>Wait: 4 frame(s)
-$>Graphic: "Electricidad', 0, 2, 3
-$>Wait: 4 frame(s)
-$>Graphic: "Electricidad', 0, 4, 1
-$>Wait: 4 frame(s)
-$>Graphic: "Electricidad', 0, 4, 2
-$>Wait: 4 frame(s)
-
+Type: Fixed
 Speed: 6: Fastest
 Freq: 6: Highest
 Options Enabled
@@ -354056,29 +354302,14 @@ List of Event Commands:
 #------------------------------------------------------------------------------
 Event ID: 029
 Event Name: Strom .sl
-(X,Y): (031,024)
+(X,Y): (031,022)
 
 Page #1
 Conditions
 Switch 0398: Schalter Strom Blau is ON
 
 Autonomous Movement
-Type: Custom
-Custom Move Route:
-(Repeat Action)
-$>Graphic: "Electricidad', 0, 2, 0
-$>Wait: 4 frame(s)
-$>Graphic: "Electricidad', 0, 2, 1
-$>Wait: 4 frame(s)
-$>Graphic: "Electricidad', 0, 2, 2
-$>Wait: 4 frame(s)
-$>Graphic: "Electricidad', 0, 2, 3
-$>Wait: 4 frame(s)
-$>Graphic: "Electricidad', 0, 4, 1
-$>Wait: 4 frame(s)
-$>Graphic: "Electricidad', 0, 4, 2
-$>Wait: 4 frame(s)
-
+Type: Fixed
 Speed: 6: Fastest
 Freq: 6: Highest
 Options Enabled
@@ -354125,29 +354356,14 @@ List of Event Commands:
 #------------------------------------------------------------------------------
 Event ID: 030
 Event Name: Strom .sl
-(X,Y): (026,039)
+(X,Y): (042,034)
 
 Page #1
 Conditions
 Switch 0398: Schalter Strom Blau is ON
 
 Autonomous Movement
-Type: Custom
-Custom Move Route:
-(Repeat Action)
-$>Graphic: "Electricidad', 0, 2, 0
-$>Wait: 4 frame(s)
-$>Graphic: "Electricidad', 0, 2, 1
-$>Wait: 4 frame(s)
-$>Graphic: "Electricidad', 0, 2, 2
-$>Wait: 4 frame(s)
-$>Graphic: "Electricidad', 0, 2, 3
-$>Wait: 4 frame(s)
-$>Graphic: "Electricidad', 0, 4, 1
-$>Wait: 4 frame(s)
-$>Graphic: "Electricidad', 0, 4, 2
-$>Wait: 4 frame(s)
-
+Type: Fixed
 Speed: 6: Fastest
 Freq: 6: Highest
 Options Enabled
@@ -354194,29 +354410,14 @@ List of Event Commands:
 #------------------------------------------------------------------------------
 Event ID: 031
 Event Name: Strom .sl
-(X,Y): (028,039)
+(X,Y): (044,034)
 
 Page #1
 Conditions
 Switch 0398: Schalter Strom Blau is ON
 
 Autonomous Movement
-Type: Custom
-Custom Move Route:
-(Repeat Action)
-$>Graphic: "Electricidad', 0, 2, 0
-$>Wait: 4 frame(s)
-$>Graphic: "Electricidad', 0, 2, 1
-$>Wait: 4 frame(s)
-$>Graphic: "Electricidad', 0, 2, 2
-$>Wait: 4 frame(s)
-$>Graphic: "Electricidad', 0, 2, 3
-$>Wait: 4 frame(s)
-$>Graphic: "Electricidad', 0, 4, 1
-$>Wait: 4 frame(s)
-$>Graphic: "Electricidad', 0, 4, 2
-$>Wait: 4 frame(s)
-
+Type: Fixed
 Speed: 6: Fastest
 Freq: 6: Highest
 Options Enabled
@@ -354263,29 +354464,14 @@ List of Event Commands:
 #------------------------------------------------------------------------------
 Event ID: 032
 Event Name: Strom .sl
-(X,Y): (042,034)
+(X,Y): (026,039)
 
 Page #1
 Conditions
 Switch 0398: Schalter Strom Blau is ON
 
 Autonomous Movement
-Type: Custom
-Custom Move Route:
-(Repeat Action)
-$>Graphic: "Electricidad', 0, 2, 0
-$>Wait: 4 frame(s)
-$>Graphic: "Electricidad', 0, 2, 1
-$>Wait: 4 frame(s)
-$>Graphic: "Electricidad', 0, 2, 2
-$>Wait: 4 frame(s)
-$>Graphic: "Electricidad', 0, 2, 3
-$>Wait: 4 frame(s)
-$>Graphic: "Electricidad', 0, 4, 1
-$>Wait: 4 frame(s)
-$>Graphic: "Electricidad', 0, 4, 2
-$>Wait: 4 frame(s)
-
+Type: Fixed
 Speed: 6: Fastest
 Freq: 6: Highest
 Options Enabled
@@ -354332,29 +354518,14 @@ List of Event Commands:
 #------------------------------------------------------------------------------
 Event ID: 033
 Event Name: Strom .sl
-(X,Y): (044,034)
+(X,Y): (028,039)
 
 Page #1
 Conditions
 Switch 0398: Schalter Strom Blau is ON
 
 Autonomous Movement
-Type: Custom
-Custom Move Route:
-(Repeat Action)
-$>Graphic: "Electricidad', 0, 2, 0
-$>Wait: 4 frame(s)
-$>Graphic: "Electricidad', 0, 2, 1
-$>Wait: 4 frame(s)
-$>Graphic: "Electricidad', 0, 2, 2
-$>Wait: 4 frame(s)
-$>Graphic: "Electricidad', 0, 2, 3
-$>Wait: 4 frame(s)
-$>Graphic: "Electricidad', 0, 4, 1
-$>Wait: 4 frame(s)
-$>Graphic: "Electricidad', 0, 4, 2
-$>Wait: 4 frame(s)
-
+Type: Fixed
 Speed: 6: Fastest
 Freq: 6: Highest
 Options Enabled
@@ -354401,29 +354572,14 @@ List of Event Commands:
 #------------------------------------------------------------------------------
 Event ID: 034
 Event Name: Strom .sl
-(X,Y): (014,059)
+(X,Y): (023,046)
 
 Page #1
 Conditions
 Switch 0398: Schalter Strom Blau is ON
 
 Autonomous Movement
-Type: Custom
-Custom Move Route:
-(Repeat Action)
-$>Graphic: "Electricidad', 0, 2, 0
-$>Wait: 4 frame(s)
-$>Graphic: "Electricidad', 0, 2, 1
-$>Wait: 4 frame(s)
-$>Graphic: "Electricidad', 0, 2, 2
-$>Wait: 4 frame(s)
-$>Graphic: "Electricidad', 0, 2, 3
-$>Wait: 4 frame(s)
-$>Graphic: "Electricidad', 0, 4, 1
-$>Wait: 4 frame(s)
-$>Graphic: "Electricidad', 0, 4, 2
-$>Wait: 4 frame(s)
-
+Type: Fixed
 Speed: 6: Fastest
 Freq: 6: Highest
 Options Enabled
@@ -354470,29 +354626,14 @@ List of Event Commands:
 #------------------------------------------------------------------------------
 Event ID: 035
 Event Name: Strom .sl
-(X,Y): (016,059)
+(X,Y): (023,048)
 
 Page #1
 Conditions
 Switch 0398: Schalter Strom Blau is ON
 
 Autonomous Movement
-Type: Custom
-Custom Move Route:
-(Repeat Action)
-$>Graphic: "Electricidad', 0, 2, 0
-$>Wait: 4 frame(s)
-$>Graphic: "Electricidad', 0, 2, 1
-$>Wait: 4 frame(s)
-$>Graphic: "Electricidad', 0, 2, 2
-$>Wait: 4 frame(s)
-$>Graphic: "Electricidad', 0, 2, 3
-$>Wait: 4 frame(s)
-$>Graphic: "Electricidad', 0, 4, 1
-$>Wait: 4 frame(s)
-$>Graphic: "Electricidad', 0, 4, 2
-$>Wait: 4 frame(s)
-
+Type: Fixed
 Speed: 6: Fastest
 Freq: 6: Highest
 Options Enabled
@@ -354539,29 +354680,14 @@ List of Event Commands:
 #------------------------------------------------------------------------------
 Event ID: 036
 Event Name: Strom .sl
-(X,Y): (021,068)
+(X,Y): (010,016)
 
 Page #1
 Conditions
-Switch 0398: Schalter Strom Blau is ON
+Switch 0397: Schalter Strom Rot is ON
 
 Autonomous Movement
-Type: Custom
-Custom Move Route:
-(Repeat Action)
-$>Graphic: "Electricidad', 0, 2, 0
-$>Wait: 4 frame(s)
-$>Graphic: "Electricidad', 0, 2, 1
-$>Wait: 4 frame(s)
-$>Graphic: "Electricidad', 0, 2, 2
-$>Wait: 4 frame(s)
-$>Graphic: "Electricidad', 0, 2, 3
-$>Wait: 4 frame(s)
-$>Graphic: "Electricidad', 0, 4, 1
-$>Wait: 4 frame(s)
-$>Graphic: "Electricidad', 0, 4, 2
-$>Wait: 4 frame(s)
-
+Type: Fixed
 Speed: 6: Fastest
 Freq: 6: Highest
 Options Enabled
@@ -354577,7 +354703,7 @@ List of Event Commands:
 
 Page #2
 Conditions
-Switch 0397: Schalter Strom Rot is ON
+Switch 0398: Schalter Strom Blau is ON
 
 Autonomous Movement
 Type: Fixed
@@ -354608,29 +354734,14 @@ List of Event Commands:
 #------------------------------------------------------------------------------
 Event ID: 037
 Event Name: Strom .sl
-(X,Y): (023,068)
+(X,Y): (037,022)
 
 Page #1
 Conditions
 Switch 0397: Schalter Strom Rot is ON
 
 Autonomous Movement
-Type: Custom
-Custom Move Route:
-(Repeat Action)
-$>Graphic: "Electricidad', 0, 2, 0
-$>Wait: 4 frame(s)
-$>Graphic: "Electricidad', 0, 2, 1
-$>Wait: 4 frame(s)
-$>Graphic: "Electricidad', 0, 2, 2
-$>Wait: 4 frame(s)
-$>Graphic: "Electricidad', 0, 2, 3
-$>Wait: 4 frame(s)
-$>Graphic: "Electricidad', 0, 4, 1
-$>Wait: 4 frame(s)
-$>Graphic: "Electricidad', 0, 4, 2
-$>Wait: 4 frame(s)
-
+Type: Fixed
 Speed: 6: Fastest
 Freq: 6: Highest
 Options Enabled
@@ -354677,29 +354788,14 @@ List of Event Commands:
 #------------------------------------------------------------------------------
 Event ID: 038
 Event Name: Strom .sl
-(X,Y): (037,062)
+(X,Y): (014,059)
 
 Page #1
 Conditions
 Switch 0398: Schalter Strom Blau is ON
 
 Autonomous Movement
-Type: Custom
-Custom Move Route:
-(Repeat Action)
-$>Graphic: "Electricidad', 0, 2, 0
-$>Wait: 4 frame(s)
-$>Graphic: "Electricidad', 0, 2, 1
-$>Wait: 4 frame(s)
-$>Graphic: "Electricidad', 0, 2, 2
-$>Wait: 4 frame(s)
-$>Graphic: "Electricidad', 0, 2, 3
-$>Wait: 4 frame(s)
-$>Graphic: "Electricidad', 0, 4, 1
-$>Wait: 4 frame(s)
-$>Graphic: "Electricidad', 0, 4, 2
-$>Wait: 4 frame(s)
-
+Type: Fixed
 Speed: 6: Fastest
 Freq: 6: Highest
 Options Enabled
@@ -354716,6 +354812,21 @@ List of Event Commands:
 Page #2
 Conditions
 Switch 0397: Schalter Strom Rot is ON
+
+Autonomous Movement
+Type: Fixed
+Speed: 3: Slow
+Freq: 3: Low
+Options Enabled
+Move Animation
+Trigger: Action Button
+
+List of Event Commands:
+@>
+
+Page #3
+Conditions
+Switch 0399: Alle aus is ON
 
 Autonomous Movement
 Type: Fixed
@@ -354731,29 +354842,14 @@ List of Event Commands:
 #------------------------------------------------------------------------------
 Event ID: 039
 Event Name: Strom .sl
-(X,Y): (037,064)
+(X,Y): (016,059)
 
 Page #1
 Conditions
 Switch 0398: Schalter Strom Blau is ON
 
 Autonomous Movement
-Type: Custom
-Custom Move Route:
-(Repeat Action)
-$>Graphic: "Electricidad', 0, 2, 0
-$>Wait: 4 frame(s)
-$>Graphic: "Electricidad', 0, 2, 1
-$>Wait: 4 frame(s)
-$>Graphic: "Electricidad', 0, 2, 2
-$>Wait: 4 frame(s)
-$>Graphic: "Electricidad', 0, 2, 3
-$>Wait: 4 frame(s)
-$>Graphic: "Electricidad', 0, 4, 1
-$>Wait: 4 frame(s)
-$>Graphic: "Electricidad', 0, 4, 2
-$>Wait: 4 frame(s)
-
+Type: Fixed
 Speed: 6: Fastest
 Freq: 6: Highest
 Options Enabled
@@ -354782,32 +354878,32 @@ Trigger: Action Button
 List of Event Commands:
 @>
 
+Page #3
+Conditions
+Switch 0399: Alle aus is ON
+
+Autonomous Movement
+Type: Fixed
+Speed: 3: Slow
+Freq: 3: Low
+Options Enabled
+Move Animation
+Trigger: Action Button
+
+List of Event Commands:
+@>
+
 #------------------------------------------------------------------------------
 Event ID: 040
 Event Name: Strom .sl
-(X,Y): (023,046)
+(X,Y): (023,067)
 
 Page #1
 Conditions
 Switch 0398: Schalter Strom Blau is ON
 
 Autonomous Movement
-Type: Custom
-Custom Move Route:
-(Repeat Action)
-$>Graphic: "Electricidad', 0, 2, 0
-$>Wait: 4 frame(s)
-$>Graphic: "Electricidad', 0, 2, 1
-$>Wait: 4 frame(s)
-$>Graphic: "Electricidad', 0, 2, 2
-$>Wait: 4 frame(s)
-$>Graphic: "Electricidad', 0, 2, 3
-$>Wait: 4 frame(s)
-$>Graphic: "Electricidad', 0, 4, 1
-$>Wait: 4 frame(s)
-$>Graphic: "Electricidad', 0, 4, 2
-$>Wait: 4 frame(s)
-
+Type: Fixed
 Speed: 6: Fastest
 Freq: 6: Highest
 Options Enabled
@@ -354854,29 +354950,14 @@ List of Event Commands:
 #------------------------------------------------------------------------------
 Event ID: 041
 Event Name: Strom .sl
-(X,Y): (023,048)
+(X,Y): (037,062)
 
 Page #1
 Conditions
 Switch 0398: Schalter Strom Blau is ON
 
 Autonomous Movement
-Type: Custom
-Custom Move Route:
-(Repeat Action)
-$>Graphic: "Electricidad', 0, 2, 0
-$>Wait: 4 frame(s)
-$>Graphic: "Electricidad', 0, 2, 1
-$>Wait: 4 frame(s)
-$>Graphic: "Electricidad', 0, 2, 2
-$>Wait: 4 frame(s)
-$>Graphic: "Electricidad', 0, 2, 3
-$>Wait: 4 frame(s)
-$>Graphic: "Electricidad', 0, 4, 1
-$>Wait: 4 frame(s)
-$>Graphic: "Electricidad', 0, 4, 2
-$>Wait: 4 frame(s)
-
+Type: Fixed
 Speed: 6: Fastest
 Freq: 6: Highest
 Options Enabled
@@ -354930,22 +355011,7 @@ Conditions
 Switch 0397: Schalter Strom Rot is ON
 
 Autonomous Movement
-Type: Custom
-Custom Move Route:
-(Repeat Action)
-$>Graphic: "Electricidad', 0, 2, 0
-$>Wait: 4 frame(s)
-$>Graphic: "Electricidad', 0, 2, 1
-$>Wait: 4 frame(s)
-$>Graphic: "Electricidad', 0, 2, 2
-$>Wait: 4 frame(s)
-$>Graphic: "Electricidad', 0, 2, 3
-$>Wait: 4 frame(s)
-$>Graphic: "Electricidad', 0, 4, 1
-$>Wait: 4 frame(s)
-$>Graphic: "Electricidad', 0, 4, 2
-$>Wait: 4 frame(s)
-
+Type: Fixed
 Speed: 6: Fastest
 Freq: 6: Highest
 Options Enabled
@@ -354999,22 +355065,7 @@ Conditions
 Switch 0397: Schalter Strom Rot is ON
 
 Autonomous Movement
-Type: Custom
-Custom Move Route:
-(Repeat Action)
-$>Graphic: "Electricidad', 0, 2, 0
-$>Wait: 4 frame(s)
-$>Graphic: "Electricidad', 0, 2, 1
-$>Wait: 4 frame(s)
-$>Graphic: "Electricidad', 0, 2, 2
-$>Wait: 4 frame(s)
-$>Graphic: "Electricidad', 0, 2, 3
-$>Wait: 4 frame(s)
-$>Graphic: "Electricidad', 0, 4, 1
-$>Wait: 4 frame(s)
-$>Graphic: "Electricidad', 0, 4, 2
-$>Wait: 4 frame(s)
-
+Type: Fixed
 Speed: 6: Fastest
 Freq: 6: Highest
 Options Enabled
@@ -355061,29 +355112,14 @@ List of Event Commands:
 #------------------------------------------------------------------------------
 Event ID: 044
 Event Name: Strom .sl
-(X,Y): (010,016)
+(X,Y): (037,024)
 
 Page #1
 Conditions
 Switch 0397: Schalter Strom Rot is ON
 
 Autonomous Movement
-Type: Custom
-Custom Move Route:
-(Repeat Action)
-$>Graphic: "Electricidad', 0, 2, 0
-$>Wait: 4 frame(s)
-$>Graphic: "Electricidad', 0, 2, 1
-$>Wait: 4 frame(s)
-$>Graphic: "Electricidad', 0, 2, 2
-$>Wait: 4 frame(s)
-$>Graphic: "Electricidad', 0, 2, 3
-$>Wait: 4 frame(s)
-$>Graphic: "Electricidad', 0, 4, 1
-$>Wait: 4 frame(s)
-$>Graphic: "Electricidad', 0, 4, 2
-$>Wait: 4 frame(s)
-
+Type: Fixed
 Speed: 6: Fastest
 Freq: 6: Highest
 Options Enabled
@@ -355130,29 +355166,14 @@ List of Event Commands:
 #------------------------------------------------------------------------------
 Event ID: 045
 Event Name: Strom .sl
-(X,Y): (010,018)
+(X,Y): (042,013)
 
 Page #1
 Conditions
 Switch 0397: Schalter Strom Rot is ON
 
 Autonomous Movement
-Type: Custom
-Custom Move Route:
-(Repeat Action)
-$>Graphic: "Electricidad', 0, 2, 0
-$>Wait: 4 frame(s)
-$>Graphic: "Electricidad', 0, 2, 1
-$>Wait: 4 frame(s)
-$>Graphic: "Electricidad', 0, 2, 2
-$>Wait: 4 frame(s)
-$>Graphic: "Electricidad', 0, 2, 3
-$>Wait: 4 frame(s)
-$>Graphic: "Electricidad', 0, 4, 1
-$>Wait: 4 frame(s)
-$>Graphic: "Electricidad', 0, 4, 2
-$>Wait: 4 frame(s)
-
+Type: Fixed
 Speed: 6: Fastest
 Freq: 6: Highest
 Options Enabled
@@ -355199,29 +355220,14 @@ List of Event Commands:
 #------------------------------------------------------------------------------
 Event ID: 046
 Event Name: Strom .sl
-(X,Y): (042,013)
+(X,Y): (044,013)
 
 Page #1
 Conditions
 Switch 0397: Schalter Strom Rot is ON
 
 Autonomous Movement
-Type: Custom
-Custom Move Route:
-(Repeat Action)
-$>Graphic: "Electricidad', 0, 2, 0
-$>Wait: 4 frame(s)
-$>Graphic: "Electricidad', 0, 2, 1
-$>Wait: 4 frame(s)
-$>Graphic: "Electricidad', 0, 2, 2
-$>Wait: 4 frame(s)
-$>Graphic: "Electricidad', 0, 2, 3
-$>Wait: 4 frame(s)
-$>Graphic: "Electricidad', 0, 4, 1
-$>Wait: 4 frame(s)
-$>Graphic: "Electricidad', 0, 4, 2
-$>Wait: 4 frame(s)
-
+Type: Fixed
 Speed: 6: Fastest
 Freq: 6: Highest
 Options Enabled
@@ -355268,29 +355274,14 @@ List of Event Commands:
 #------------------------------------------------------------------------------
 Event ID: 047
 Event Name: Strom .sl
-(X,Y): (044,013)
+(X,Y): (023,039)
 
 Page #1
 Conditions
 Switch 0397: Schalter Strom Rot is ON
 
 Autonomous Movement
-Type: Custom
-Custom Move Route:
-(Repeat Action)
-$>Graphic: "Electricidad', 0, 2, 0
-$>Wait: 4 frame(s)
-$>Graphic: "Electricidad', 0, 2, 1
-$>Wait: 4 frame(s)
-$>Graphic: "Electricidad', 0, 2, 2
-$>Wait: 4 frame(s)
-$>Graphic: "Electricidad', 0, 2, 3
-$>Wait: 4 frame(s)
-$>Graphic: "Electricidad', 0, 4, 1
-$>Wait: 4 frame(s)
-$>Graphic: "Electricidad', 0, 4, 2
-$>Wait: 4 frame(s)
-
+Type: Fixed
 Speed: 6: Fastest
 Freq: 6: Highest
 Options Enabled
@@ -355337,29 +355328,14 @@ List of Event Commands:
 #------------------------------------------------------------------------------
 Event ID: 048
 Event Name: Strom .sl
-(X,Y): (037,022)
+(X,Y): (025,039)
 
 Page #1
 Conditions
 Switch 0397: Schalter Strom Rot is ON
 
 Autonomous Movement
-Type: Custom
-Custom Move Route:
-(Repeat Action)
-$>Graphic: "Electricidad', 0, 2, 0
-$>Wait: 4 frame(s)
-$>Graphic: "Electricidad', 0, 2, 1
-$>Wait: 4 frame(s)
-$>Graphic: "Electricidad', 0, 2, 2
-$>Wait: 4 frame(s)
-$>Graphic: "Electricidad', 0, 2, 3
-$>Wait: 4 frame(s)
-$>Graphic: "Electricidad', 0, 4, 1
-$>Wait: 4 frame(s)
-$>Graphic: "Electricidad', 0, 4, 2
-$>Wait: 4 frame(s)
-
+Type: Fixed
 Speed: 6: Fastest
 Freq: 6: Highest
 Options Enabled
@@ -355406,29 +355382,14 @@ List of Event Commands:
 #------------------------------------------------------------------------------
 Event ID: 049
 Event Name: Strom .sl
-(X,Y): (037,024)
+(X,Y): (014,057)
 
 Page #1
 Conditions
 Switch 0397: Schalter Strom Rot is ON
 
 Autonomous Movement
-Type: Custom
-Custom Move Route:
-(Repeat Action)
-$>Graphic: "Electricidad', 0, 2, 0
-$>Wait: 4 frame(s)
-$>Graphic: "Electricidad', 0, 2, 1
-$>Wait: 4 frame(s)
-$>Graphic: "Electricidad', 0, 2, 2
-$>Wait: 4 frame(s)
-$>Graphic: "Electricidad', 0, 2, 3
-$>Wait: 4 frame(s)
-$>Graphic: "Electricidad', 0, 4, 1
-$>Wait: 4 frame(s)
-$>Graphic: "Electricidad', 0, 4, 2
-$>Wait: 4 frame(s)
-
+Type: Fixed
 Speed: 6: Fastest
 Freq: 6: Highest
 Options Enabled
@@ -355475,29 +355436,14 @@ List of Event Commands:
 #------------------------------------------------------------------------------
 Event ID: 050
 Event Name: Strom .sl
-(X,Y): (014,057)
+(X,Y): (016,057)
 
 Page #1
 Conditions
 Switch 0397: Schalter Strom Rot is ON
 
 Autonomous Movement
-Type: Custom
-Custom Move Route:
-(Repeat Action)
-$>Graphic: "Electricidad', 0, 2, 0
-$>Wait: 4 frame(s)
-$>Graphic: "Electricidad', 0, 2, 1
-$>Wait: 4 frame(s)
-$>Graphic: "Electricidad', 0, 2, 2
-$>Wait: 4 frame(s)
-$>Graphic: "Electricidad', 0, 2, 3
-$>Wait: 4 frame(s)
-$>Graphic: "Electricidad', 0, 4, 1
-$>Wait: 4 frame(s)
-$>Graphic: "Electricidad', 0, 4, 2
-$>Wait: 4 frame(s)
-
+Type: Fixed
 Speed: 6: Fastest
 Freq: 6: Highest
 Options Enabled
@@ -355544,29 +355490,14 @@ List of Event Commands:
 #------------------------------------------------------------------------------
 Event ID: 051
 Event Name: Strom .sl
-(X,Y): (016,057)
+(X,Y): (021,066)
 
 Page #1
 Conditions
 Switch 0397: Schalter Strom Rot is ON
 
 Autonomous Movement
-Type: Custom
-Custom Move Route:
-(Repeat Action)
-$>Graphic: "Electricidad', 0, 2, 0
-$>Wait: 4 frame(s)
-$>Graphic: "Electricidad', 0, 2, 1
-$>Wait: 4 frame(s)
-$>Graphic: "Electricidad', 0, 2, 2
-$>Wait: 4 frame(s)
-$>Graphic: "Electricidad', 0, 2, 3
-$>Wait: 4 frame(s)
-$>Graphic: "Electricidad', 0, 4, 1
-$>Wait: 4 frame(s)
-$>Graphic: "Electricidad', 0, 4, 2
-$>Wait: 4 frame(s)
-
+Type: Fixed
 Speed: 6: Fastest
 Freq: 6: Highest
 Options Enabled
@@ -355620,22 +355551,7 @@ Conditions
 Switch 0398: Schalter Strom Blau is ON
 
 Autonomous Movement
-Type: Custom
-Custom Move Route:
-(Repeat Action)
-$>Graphic: "Electricidad', 0, 2, 0
-$>Wait: 4 frame(s)
-$>Graphic: "Electricidad', 0, 2, 1
-$>Wait: 4 frame(s)
-$>Graphic: "Electricidad', 0, 2, 2
-$>Wait: 4 frame(s)
-$>Graphic: "Electricidad', 0, 2, 3
-$>Wait: 4 frame(s)
-$>Graphic: "Electricidad', 0, 4, 1
-$>Wait: 4 frame(s)
-$>Graphic: "Electricidad', 0, 4, 2
-$>Wait: 4 frame(s)
-
+Type: Fixed
 Speed: 6: Fastest
 Freq: 6: Highest
 Options Enabled
@@ -355689,22 +355605,7 @@ Conditions
 Switch 0397: Schalter Strom Rot is ON
 
 Autonomous Movement
-Type: Custom
-Custom Move Route:
-(Repeat Action)
-$>Graphic: "Electricidad', 0, 2, 0
-$>Wait: 4 frame(s)
-$>Graphic: "Electricidad', 0, 2, 1
-$>Wait: 4 frame(s)
-$>Graphic: "Electricidad', 0, 2, 2
-$>Wait: 4 frame(s)
-$>Graphic: "Electricidad', 0, 2, 3
-$>Wait: 4 frame(s)
-$>Graphic: "Electricidad', 0, 4, 1
-$>Wait: 4 frame(s)
-$>Graphic: "Electricidad', 0, 4, 2
-$>Wait: 4 frame(s)
-
+Type: Fixed
 Speed: 6: Fastest
 Freq: 6: Highest
 Options Enabled
@@ -355751,29 +355652,14 @@ List of Event Commands:
 #------------------------------------------------------------------------------
 Event ID: 054
 Event Name: Strom .sl
-(X,Y): (021,066)
+(X,Y): (021,068)
 
 Page #1
 Conditions
-Switch 0398: Schalter Strom Blau is ON
+Switch 0397: Schalter Strom Rot is ON
 
 Autonomous Movement
-Type: Custom
-Custom Move Route:
-(Repeat Action)
-$>Graphic: "Electricidad', 0, 2, 0
-$>Wait: 4 frame(s)
-$>Graphic: "Electricidad', 0, 2, 1
-$>Wait: 4 frame(s)
-$>Graphic: "Electricidad', 0, 2, 2
-$>Wait: 4 frame(s)
-$>Graphic: "Electricidad', 0, 2, 3
-$>Wait: 4 frame(s)
-$>Graphic: "Electricidad', 0, 4, 1
-$>Wait: 4 frame(s)
-$>Graphic: "Electricidad', 0, 4, 2
-$>Wait: 4 frame(s)
-
+Type: Fixed
 Speed: 6: Fastest
 Freq: 6: Highest
 Options Enabled
@@ -355789,7 +355675,7 @@ List of Event Commands:
 
 Page #2
 Conditions
-Switch 0397: Schalter Strom Rot is ON
+Switch 0398: Schalter Strom Blau is ON
 
 Autonomous Movement
 Type: Fixed
@@ -355820,29 +355706,14 @@ List of Event Commands:
 #------------------------------------------------------------------------------
 Event ID: 055
 Event Name: Strom .sl
-(X,Y): (023,067)
+(X,Y): (037,064)
 
 Page #1
 Conditions
 Switch 0398: Schalter Strom Blau is ON
 
 Autonomous Movement
-Type: Custom
-Custom Move Route:
-(Repeat Action)
-$>Graphic: "Electricidad', 0, 2, 0
-$>Wait: 4 frame(s)
-$>Graphic: "Electricidad', 0, 2, 1
-$>Wait: 4 frame(s)
-$>Graphic: "Electricidad', 0, 2, 2
-$>Wait: 4 frame(s)
-$>Graphic: "Electricidad', 0, 2, 3
-$>Wait: 4 frame(s)
-$>Graphic: "Electricidad', 0, 4, 1
-$>Wait: 4 frame(s)
-$>Graphic: "Electricidad', 0, 4, 2
-$>Wait: 4 frame(s)
-
+Type: Fixed
 Speed: 6: Fastest
 Freq: 6: Highest
 Options Enabled
@@ -356001,33 +355872,16 @@ List of Event Commands:
 @>
 
 #------------------------------------------------------------------------------
-Event ID: 061
+Event ID: 060
 Event Name: Strom .sl
-(X,Y): (024,039)
+(X,Y): (023,068)
 
 Page #1
 Conditions
 Switch 0397: Schalter Strom Rot is ON
 
-Graphic: Electricidad
-
 Autonomous Movement
-Type: Custom
-Custom Move Route:
-(Repeat Action)
-$>Graphic: "Electricidad', 0, 2, 0
-$>Wait: 4 frame(s)
-$>Graphic: "Electricidad', 0, 2, 1
-$>Wait: 4 frame(s)
-$>Graphic: "Electricidad', 0, 2, 2
-$>Wait: 4 frame(s)
-$>Graphic: "Electricidad', 0, 2, 3
-$>Wait: 4 frame(s)
-$>Graphic: "Electricidad', 0, 4, 1
-$>Wait: 4 frame(s)
-$>Graphic: "Electricidad', 0, 4, 2
-$>Wait: 4 frame(s)
-
+Type: Fixed
 Speed: 6: Fastest
 Freq: 6: Highest
 Options Enabled
@@ -356072,13 +355926,15 @@ List of Event Commands:
 @>
 
 #------------------------------------------------------------------------------
-Event ID: 062
+Event ID: 061
 Event Name: Strom .sl
-(X,Y): (025,039)
+(X,Y): (024,039)
 
 Page #1
 Conditions
 Switch 0397: Schalter Strom Rot is ON
+
+Graphic: Electricidad
 
 Autonomous Movement
 Type: Custom
@@ -450797,6 +450653,8 @@ Trigger: Action Button
 List of Event Commands:
 @>Text: Diese ganzen Erdbeben, ständige Unruhe...
 @>Text: Ich kann so nicht arbeiten!
+@>Set Move Route: This event
+ :              : $>Turn Down
 @>
 
 Page #2
@@ -478426,6 +478284,171 @@ List of Event Commands:
 @>
 
 #------------------------------------------------------------------------------
+Event ID: 027
+Event Name: Haus 1 Tür
+(X,Y): (004,055)
+
+Page #1
+Conditions
+None
+
+Autonomous Movement
+Type: Fixed
+Speed: 3: Slow
+Freq: 3: Low
+Options Enabled
+Move Animation
+Trigger: Player Touch
+
+List of Event Commands:
+@>Play SE: 'Door enter', 100, 100
+@>Change Screen Color Tone: (-255,-255,-255,0), @6
+@>Wait: 8 frame(s)
+@>Transfer Player:[671: Durchgang], (018,008), Left, No Fade
+@>Change Screen Color Tone: (0,0,0,0), @6
+@>Wait: 8 frame(s)
+@>
+
+Page #2
+Conditions
+Switch 0010: Defeated Gym 7 is ON
+
+Autonomous Movement
+Type: Fixed
+Speed: 3: Slow
+Freq: 3: Low
+Options Enabled
+Move Animation
+Trigger: Player Touch
+
+List of Event Commands:
+@>Conditional Branch: Switch [0409: Mit Nexus gesprochen] == ON
+ @>Play SE: 'Door enter', 100, 100
+ @>Change Screen Color Tone: (-255,-255,-255,0), @6
+ @>Wait: 8 frame(s)
+ @>Transfer Player:[672: Durchgang], (018,008), Left, No Fade
+ @>Change Screen Color Tone: (0,0,0,0), @6
+ @>Wait: 8 frame(s)
+ @>
+: Else
+ @>Text: Du solltest zunächst mit Nexus reden.
+ @>Set Move Route: Player
+  :              : $>Move Right
+ @>
+: Branch End
+@>
+
+#------------------------------------------------------------------------------
+Event ID: 028
+Event Name: Haus 1 Tür
+(X,Y): (004,056)
+
+Page #1
+Conditions
+None
+
+Autonomous Movement
+Type: Fixed
+Speed: 3: Slow
+Freq: 3: Low
+Options Enabled
+Move Animation
+Trigger: Player Touch
+
+List of Event Commands:
+@>Play SE: 'Door enter', 100, 100
+@>Change Screen Color Tone: (-255,-255,-255,0), @6
+@>Wait: 8 frame(s)
+@>Transfer Player:[671: Durchgang], (018,009), Left, No Fade
+@>Change Screen Color Tone: (0,0,0,0), @6
+@>Wait: 8 frame(s)
+@>
+
+Page #2
+Conditions
+Switch 0010: Defeated Gym 7 is ON
+
+Autonomous Movement
+Type: Fixed
+Speed: 3: Slow
+Freq: 3: Low
+Options Enabled
+Move Animation
+Trigger: Player Touch
+
+List of Event Commands:
+@>Conditional Branch: Switch [0409: Mit Nexus gesprochen] == ON
+ @>Play SE: 'Door enter', 100, 100
+ @>Change Screen Color Tone: (-255,-255,-255,0), @6
+ @>Wait: 8 frame(s)
+ @>Transfer Player:[672: Durchgang], (018,008), Left, No Fade
+ @>Change Screen Color Tone: (0,0,0,0), @6
+ @>Wait: 8 frame(s)
+ @>
+: Else
+ @>Text: Du solltest zunächst mit Nexus reden.
+ @>Set Move Route: Player
+  :              : $>Move Right
+ @>
+: Branch End
+@>
+
+#------------------------------------------------------------------------------
+Event ID: 029
+Event Name: Haus 1 Tür
+(X,Y): (004,057)
+
+Page #1
+Conditions
+None
+
+Autonomous Movement
+Type: Fixed
+Speed: 3: Slow
+Freq: 3: Low
+Options Enabled
+Move Animation
+Trigger: Player Touch
+
+List of Event Commands:
+@>Play SE: 'Door enter', 100, 100
+@>Change Screen Color Tone: (-255,-255,-255,0), @6
+@>Wait: 8 frame(s)
+@>Transfer Player:[671: Durchgang], (018,010), Left, No Fade
+@>Change Screen Color Tone: (0,0,0,0), @6
+@>Wait: 8 frame(s)
+@>
+
+Page #2
+Conditions
+Switch 0010: Defeated Gym 7 is ON
+
+Autonomous Movement
+Type: Fixed
+Speed: 3: Slow
+Freq: 3: Low
+Options Enabled
+Move Animation
+Trigger: Player Touch
+
+List of Event Commands:
+@>Conditional Branch: Switch [0409: Mit Nexus gesprochen] == ON
+ @>Play SE: 'Door enter', 100, 100
+ @>Change Screen Color Tone: (-255,-255,-255,0), @6
+ @>Wait: 8 frame(s)
+ @>Transfer Player:[672: Durchgang], (018,008), Left, No Fade
+ @>Change Screen Color Tone: (0,0,0,0), @6
+ @>Wait: 8 frame(s)
+ @>
+: Else
+ @>Text: Du solltest zunächst mit Nexus reden.
+ @>Set Move Route: Player
+  :              : $>Move Right
+ @>
+: Branch End
+@>
+
+#------------------------------------------------------------------------------
 
 #==============================================================================
 Map ID: 632
@@ -484740,81 +484763,6 @@ List of Event Commands:
 @>
 
 #------------------------------------------------------------------------------
-Event ID: 005
-Event Name: Trainer(5)
-(X,Y): (006,008)
-
-Page #1
-Conditions
-None
-
-Graphic: TEAM_0
-
-Autonomous Movement
-Type: Custom
-Custom Move Route:
-(Repeat Action)
-$>Turn at Random
-
-Speed: 3: Slow
-Freq: 4: High
-Options Enabled
-Move Animation
-Trigger: Event Touch
-
-List of Event Commands:
-@>Script: pbTrainerIntro(:TEAM1)
-@>Script: pbNoticePlayer(get_self)
-@>Text: \xn[Team 0 Rüpel]Meine Pokémon sind heute 
- :    : besonders aggressiv.
-@>Conditional Branch: Script: TrainerBattle.start(:TEAM0, "Rüpel",3)
- @>Control Self Switch: A =ON
- @>
-: Else
- @>
-: Branch End
-@>Script: pbTrainerEnd
-@>
-
-Page #2
-Conditions
-Self Switch A is ON
-
-Graphic: TEAM_0_1
-
-Autonomous Movement
-Type: Custom
-Custom Move Route:
-(Repeat Action)
-$>Turn at Random
-
-Speed: 3: Slow
-Freq: 4: High
-Options Enabled
-Move Animation
-Trigger: Action Button
-
-List of Event Commands:
-@>Text: \xn[Team 0 Rüpel]Das gehört alles zum Plan.
-@>Text: \xn[Team 0 Rüpel]Hat man mir gesagt.
-@>
-
-Page #3
-Conditions
-Switch 0311: Wüste Ende is ON
-
-Autonomous Movement
-Type: Fixed
-Speed: 3: Slow
-Freq: 3: Low
-Options Enabled
-Move Animation
-Trigger: Action Button
-
-List of Event Commands:
-@>
-
-#------------------------------------------------------------------------------
 
 #==============================================================================
 Map ID: 638
@@ -486254,7 +486202,7 @@ List of Event Commands:
 @>Text: \xn[Drachenzähmer Ragnar]Du wunderst dich, was 
  :    : ein Drachenzähmer in einer Eis-Arena macht?
 @>Text: \xn[Drachenzähmer Ragnar]Eira hat mir gezeigt, dass 
- :    : Drachen und EIs sich nicht ausschließen.
+ :    : Drachen und Eis sich nicht ausschließen.
 @>Text: \xn[Drachenzähmer Ragnar]Die Kälte macht meine 
  :    : Drachen zäh und ziemlich schlecht gelaunt.
 @>Text: \xn[Drachenzähmer Ragnar]Diese Laune bekommst 
@@ -486529,7 +486477,7 @@ List of Event Commands:
  :    : meistern, ist eine Kunst für sich.
 @>Text: \xn[Ass-Trainer Sven]Zeig mir, ob du beides 
  :    : durchschaust.
-@>Conditional Branch: Script: TrainerBattle.start(:DRAGONTAMER, "Ragnar")
+@>Conditional Branch: Script: TrainerBattle.start(:ACETRAINER_M, "Sven")
  @>Control Self Switch: A =ON
  @>
 : Branch End
@@ -487079,7 +487027,7 @@ Event Name: Eira
 
 Page #1
 Conditions
-Variable 0132: Arena 7 is 3 or above
+None
 
 Graphic: LEADER_EIRA
 
@@ -487097,6 +487045,8 @@ List of Event Commands:
 Page #2
 Conditions
 Self Switch A is ON
+
+Graphic: LEADER_EIRA
 
 Autonomous Movement
 Type: Fixed
@@ -487124,7 +487074,22 @@ Speed: 3: Slow
 Freq: 3: Low
 Options Enabled
 Move Animation
-Trigger: Event Touch
+Trigger: Action Button
+
+List of Event Commands:
+@>
+
+Page #2
+Conditions
+Self Switch A is ON
+
+Autonomous Movement
+Type: Fixed
+Speed: 3: Slow
+Freq: 3: Low
+Options Enabled
+Move Animation
+Trigger: Player Touch
 
 List of Event Commands:
 @>Text: Arenaleiterin herausfordern?
@@ -487134,23 +487099,37 @@ List of Event Commands:
  @>Script: $stats.gym_leader_attempts[0] += 1
  @>Script: pbTrainerIntro(:LEADER_Arena7)
  @>Text: \xn[Arenaleiterin Eira]Hi, \PN!
- @>Script: setBattleRule("outcome", 48)
- :       : setBattleRule("midbattleScript", 
- :       : :ARENALEITER_EIRA)
- :       : v = rand(4); setBattleRule("weather", 
- :       : :Hail) if [0, 3].include?(v); 
- :       : TrainerBattle.start(:LEADER_Arena7, 
- :       : "Eira", v)
+ @>Text: \xn[Arenaleiterin Eira]Elisa und ich hatten ein gutes 
+  :    : Gespräch über das, was mit Aeon und ihrem Bruder 
+  :    : passiert ist.
+ @>Text: \xn[Arenaleiterin Eira]Allerdings habe ich noch nicht 
+  :    : verstanden wie ihr meinen Aeon besiegen konntet.
+ @>Text: \xn[Arenaleiterin Eira]Ihre Leidenschaft brannte zwar 
+  :    : heiß,...
+ @>Text: \xn[Arenaleiterin Eira]jedoch hat es nicht ausgereicht 
+  :    : mich zu besiegen.
+ @>Text: \xn[Arenaleiterin Eira]Mal schauen, ob dein Feuer 
+  :    : heißer ist.
  @>Conditional Branch: Variable [0048: Kampf-Ergebnis] == 1
+  @>Text: \xn[Arenaleiterin Eira]Ich bin dir noch eine 
+   :    : Entschuldigung fällig.
+  @>Text: \xn[Arenaleiterin Eira]Wie mein Bruder alles 
+   :    : vergessen hat,...
+  @>Text: \xn[Arenaleiterin Eira]so habe ich vergessen, was es 
+   :    : heißt eine Arenaleiterin zu sein.
+  @>Text: \xn[Arenaleiterin Eira]Es tut mir leid, dass ich meine 
+   :    : Gefühl über die Pflicht als Arenaleiterin gestellt habe.
+  @>Text: \xn[Arenaleiterin Eira]Den hier hast du dir verdient.
   @>Text: \me[Badge get]\xn[Arenaleiterin Eira]Du erhältst den 
    :    : Nordlichtorden.\wtnp[110]
   @>Script: $stats.set_time_to_badge(0)
   :       : $player.badges[6] = true
-  @>Script: pbReceiveItem(:ABILITYCAPSULE)
-  @>Script: pbReceiveItem(:ABILITYPATCH)
+  @>Text: \xn[Arenaleiterin Eira]Und als kleines Geschenk und 
+   :    : Entschuldigung erhältst du noch das hier.
+  @>Script: pbReceiveItem(:ABOMASITE)
   @>Control Variables: [0198] = 76
   @>Control Switches: [0010: Defeated Gym 7] = ON
-  @>Control Self Switch: A =ON
+  @>Control Self Switch: B =ON
   @>Script: pbTrainerEnd
   @>
  : Else
@@ -487162,14 +487141,14 @@ List of Event Commands:
 : When [Nein]
  @>Set Move Route: Player
   :              : $>Move Down
- @>Wait: 10 frame(s)
+ @>Wait: 16 frame(s)
  @>
 : Branch End
 @>
 
-Page #2
+Page #3
 Conditions
-Self Switch A is ON
+Self Switch B is ON
 
 Autonomous Movement
 Type: Fixed
@@ -487408,6 +487387,138 @@ List of Event Commands:
 @>
 
 #------------------------------------------------------------------------------
+Event ID: 027
+Event Name: Trainer(3)
+(X,Y): (039,041)
+
+Page #1
+Conditions
+None
+
+Graphic: trainer_BOARDER
+
+Autonomous Movement
+Type: Fixed
+Speed: 3: Slow
+Freq: 4: High
+Options Enabled
+Move Animation
+Trigger: Event Touch
+
+List of Event Commands:
+@>Script: pbTrainerIntro(:BOARDER)
+@>Script: pbNoticePlayer(get_self)
+@>Text: \xn[Snowboarder Nils]Eine letzte Prüfung bevor du 
+ :    : gegen Eira antreten kannst.
+@>Set Move Route: Player
+ :              : $>Turn Left
+@>Text: \xn[Ass-Trainerin Liv]Wenn du uns zwei besiegst, 
+ :    : bist du würdig gegen Eira zu kämpfen.
+@>Script: setBattleRule("2v2")
+@>Conditional Branch: Script: TrainerBattle.start(:BOARDER, "Nils", :ACETRAINER_F, "Liv")
+ @>Change Screen Color Tone: (-255,-255,-255,0), @20
+ @>Wait: 20 frame(s)
+ @>Control Self Switch: A =ON
+ @>Script: pbSetSelfSwitch(28,"A",true)
+ @>Script: pbSetSelfSwitch(15,"A",true)
+ @>Set Event Location: [Trainer(3)],(041,040)
+ @>Set Event Location: [Trainer(3)],(035,040)
+ @>Transfer Player:[645: Arena], (038,042), Down
+ @>Change Screen Color Tone: (0,0,0,0), @20
+ @>Wait: 20 frame(s)
+ @>
+: Else
+ @>
+: Branch End
+@>Script: pbTrainerEnd
+@>
+
+Page #2
+Conditions
+Self Switch A is ON
+
+Graphic: trainer_BOARDER
+
+Autonomous Movement
+Type: Fixed
+Speed: 3: Slow
+Freq: 4: High
+Options Enabled
+Move Animation
+Trigger: Action Button
+
+List of Event Commands:
+@>Text: \xn[Snowboarder Nils]Die Arenaleiterin setzt nicht 
+ :    : immer das gleiche Pokémon als erstes ein.
+@>
+
+#------------------------------------------------------------------------------
+Event ID: 028
+Event Name: Trainer(3)
+(X,Y): (037,041)
+
+Page #1
+Conditions
+None
+
+Graphic: trainer_ACETRAINER_F
+
+Autonomous Movement
+Type: Fixed
+Speed: 3: Slow
+Freq: 4: High
+Options Enabled
+Move Animation
+Trigger: Event Touch
+
+List of Event Commands:
+@>Script: pbTrainerIntro(:ACETRAINER_F)
+@>Script: pbNoticePlayer(get_self)
+@>Text: \xn[Ass-Trainerin Liv]Wenn du uns zwei besiegst, 
+ :    : bist du würdig gegen Eira zu kämpfen.
+@>Set Move Route: Player
+ :              : $>Turn Right
+@>Text: \xn[Snowboarder Nils]Eine letzte Prüfung bevor du 
+ :    : gegen Eira antreten kannst.
+@>Script: setBattleRule("2v2")
+@>Conditional Branch: Script: TrainerBattle.start(:BOARDER, "Nils", :ACETRAINER_F, "Liv")
+ @>Change Screen Color Tone: (-255,-255,-255,0), @20
+ @>Wait: 20 frame(s)
+ @>Control Self Switch: A =ON
+ @>Script: pbSetSelfSwitch(27,"A",true)
+ @>Script: pbSetSelfSwitch(15,"A",true)
+ @>Set Event Location: [Trainer(3)],(041,040)
+ @>Set Event Location: [Trainer(3)],(035,040)
+ @>Transfer Player:[645: Arena], (038,042), Down
+ @>Change Screen Color Tone: (0,0,0,0), @20
+ @>Wait: 20 frame(s)
+ @>
+: Else
+ @>
+: Branch End
+@>Script: pbTrainerEnd
+@>
+
+Page #2
+Conditions
+Self Switch A is ON
+
+Graphic: trainer_ACETRAINER_F
+
+Autonomous Movement
+Type: Fixed
+Speed: 3: Slow
+Freq: 4: High
+Options Enabled
+Move Animation
+Trigger: Action Button
+
+List of Event Commands:
+@>Text: \xn[Ass-Trainerin Liv]Jeder Kampf gegen Eira ist 
+ :    : unterschiedlich.
+@>
+
+#------------------------------------------------------------------------------
 
 #==============================================================================
 Map ID: 646
@@ -487458,6 +487569,48 @@ Trigger: Player Touch
 
 List of Event Commands:
 @>Script: pbBridgeOn
+@>
+
+#------------------------------------------------------------------------------
+Event ID: 003
+Event Name: BerryPlant
+(X,Y): (004,033)
+
+Page #1
+Conditions
+None
+
+Graphic: berrytree_HABANBERRY
+
+Autonomous Movement
+Type: Fixed
+Speed: 3: Slow
+Freq: 3: Low
+Options Enabled
+Stop Animation
+Direction Fix
+Trigger: Action Button
+
+List of Event Commands:
+@>Script: pbPickBerry(:HABANBERRY, 2)
+@>
+
+Page #2
+Conditions
+Self Switch A is ON
+
+Graphic: invisible
+
+Autonomous Movement
+Type: Fixed
+Speed: 3: Slow
+Freq: 2: Lower
+Options Enabled
+Stop Animation
+Trigger: Action Button
+
+List of Event Commands:
+@>Script: pbBerryPlant
 @>
 
 #------------------------------------------------------------------------------
@@ -488738,6 +488891,132 @@ List of Event Commands:
 @>
 
 #------------------------------------------------------------------------------
+Event ID: 035
+Event Name: BerryPlant
+(X,Y): (005,033)
+
+Page #1
+Conditions
+None
+
+Graphic: berrytree_HABANBERRY
+
+Autonomous Movement
+Type: Fixed
+Speed: 3: Slow
+Freq: 3: Low
+Options Enabled
+Stop Animation
+Direction Fix
+Trigger: Action Button
+
+List of Event Commands:
+@>Script: pbPickBerry(:HABANBERRY, 2)
+@>
+
+Page #2
+Conditions
+Self Switch A is ON
+
+Graphic: invisible
+
+Autonomous Movement
+Type: Fixed
+Speed: 3: Slow
+Freq: 2: Lower
+Options Enabled
+Stop Animation
+Trigger: Action Button
+
+List of Event Commands:
+@>Script: pbBerryPlant
+@>
+
+#------------------------------------------------------------------------------
+Event ID: 036
+Event Name: BerryPlant
+(X,Y): (029,053)
+
+Page #1
+Conditions
+None
+
+Graphic: berrytree_HABANBERRY
+
+Autonomous Movement
+Type: Fixed
+Speed: 3: Slow
+Freq: 3: Low
+Options Enabled
+Stop Animation
+Direction Fix
+Trigger: Action Button
+
+List of Event Commands:
+@>Script: pbPickBerry(:HABANBERRY, 2)
+@>
+
+Page #2
+Conditions
+Self Switch A is ON
+
+Graphic: invisible
+
+Autonomous Movement
+Type: Fixed
+Speed: 3: Slow
+Freq: 2: Lower
+Options Enabled
+Stop Animation
+Trigger: Action Button
+
+List of Event Commands:
+@>Script: pbBerryPlant
+@>
+
+#------------------------------------------------------------------------------
+Event ID: 037
+Event Name: BerryPlant
+(X,Y): (030,053)
+
+Page #1
+Conditions
+None
+
+Graphic: berrytree_HABANBERRY
+
+Autonomous Movement
+Type: Fixed
+Speed: 3: Slow
+Freq: 3: Low
+Options Enabled
+Stop Animation
+Direction Fix
+Trigger: Action Button
+
+List of Event Commands:
+@>Script: pbPickBerry(:HABANBERRY, 2)
+@>
+
+Page #2
+Conditions
+Self Switch A is ON
+
+Graphic: invisible
+
+Autonomous Movement
+Type: Fixed
+Speed: 3: Slow
+Freq: 2: Lower
+Options Enabled
+Stop Animation
+Trigger: Action Button
+
+List of Event Commands:
+@>Script: pbBerryPlant
+@>
+
+#------------------------------------------------------------------------------
 
 #==============================================================================
 Map ID: 647
@@ -488877,9 +489156,78 @@ List of Event Commands:
 @>
 
 #------------------------------------------------------------------------------
-Event ID: 008
-Event Name: EV008
-(X,Y): (048,022)
+Event ID: 006
+Event Name: EV006
+(X,Y): (004,028)
+
+Page #1
+Conditions
+None
+
+Graphic: NPC_Mann 8
+
+Autonomous Movement
+Type: Fixed
+Speed: 3: Slow
+Freq: 3: Low
+Options Enabled
+Move Animation
+Trigger: Action Button
+
+List of Event Commands:
+@>Text: Das Letarking ist überhaupt nicht aus der Ruhe zu 
+ :    : bringen.
+@>Show Animation: This event, [Exclaim bubble]
+@>Wait: 10 frame(s)
+@>Text: Du siehst aus, als wärst du ein starker Trainer.
+@>Text: Du hast das Zeug dazu, das sehe ich.
+@>Text: Diese Villa hier ist angeblich verflucht.
+@>Text: Das ist das ehemalige Anwesen der Vanderbilts 
+ :    : gewesen.
+@>Text: Es heißt, dort soll heute noch ein Schatz schlummern.
+@>Text: Und da kommst du ins Spiel.
+@>Text: Die Tür zum Goldraum ist mit einem Code 
+ :    : verschlossen.
+@>Text: Ich bin mir sicher, du schaffst es ihn zu knacken.
+@>Text: Die Türe ist verschlossen, das ist richtig, aber ich 
+ :    : habe den Schlüssel.
+@>Text: Wir machen das so:
+@>Text: Du kanckst den Code, sagst mir Bescheid und wir 
+ :    : teilen das Gold fair auf.
+@>Text: 80% für mich, 20% für dich.
+@>Text: Na gut, 75:25.
+@>Show Animation: This event, [Thinking bubble]
+@>Wait: 20 frame(s)
+@>Text: 50:50, jaja!
+@>Text: Also haben wir einen Deal!
+@>Script: pbReceiveItem(:VANDERBILTKEY)
+@>Control Self Switch: A =ON
+@>
+
+Page #2
+Conditions
+Self Switch A is ON
+
+Graphic: NPC_Mann 8
+
+Autonomous Movement
+Type: Fixed
+Speed: 3: Slow
+Freq: 3: Low
+Options Enabled
+Move Animation
+Trigger: Action Button
+
+List of Event Commands:
+@>Text: Ich dachte, wir hätten einen Deal?!
+@>Text: Du knackst den Code in der Vanderbilt Villa und jetzt 
+ :    : Abmarsch!
+@>
+
+#------------------------------------------------------------------------------
+Event ID: 007
+Event Name: EV007
+(X,Y): (021,012)
 
 Page #1
 Conditions
@@ -488891,28 +489239,10 @@ Speed: 3: Slow
 Freq: 3: Low
 Options Enabled
 Move Animation
-Trigger: Player Touch
-
-List of Event Commands:
-@>Set Move Route: Player
- :              : $>Move Down
- :              : $>Turn Left
-@>Control Self Switch: A =ON
-@>
-
-Page #2
-Conditions
-Self Switch A is ON
-
-Autonomous Movement
-Type: Fixed
-Speed: 3: Slow
-Freq: 3: Low
-Options Enabled
-Move Animation
 Trigger: Action Button
 
 List of Event Commands:
+@>Text: <i>Fam. Vanderbilt</i>
 @>
 
 #------------------------------------------------------------------------------
@@ -488935,41 +489265,47 @@ Move Animation
 Trigger: Player Touch
 
 List of Event Commands:
-@>Set Move Route: This event
- :              : $>SE: 'Door enter', 100, 90
- :              : $>Turn Left
- :              : $>Wait: 2 frame(s)
- :              : $>Turn Right
- :              : $>Wait: 2 frame(s)
- :              : $>Turn Up
- :              : $>Wait: 2 frame(s)
-@>Wait: 6 frame(s)
-@>Set Move Route: Player
-                  (Ignore If Can't Move)
- :              : $>Through ON
- :              : $>Move Up
- :              : $>Through OFF
-@>Wait: 8 frame(s)
-@>Change Transparent Flag: Transparency
-@>Script: Followers.follow_into_door
-@>Wait: 8 frame(s)
-@>Set Move Route: This event
-                  (Ignore If Can't Move)
- :              : $>SE: 'Door enter', 100, 90
- :              : $>Wait: 2 frame(s)
- :              : $>Turn Right
- :              : $>Wait: 2 frame(s)
- :              : $>Turn Left
- :              : $>Wait: 2 frame(s)
- :              : $>Turn Down
- :              : $>Wait: 2 frame(s)
-@>Wait: 8 frame(s)
-@>Change Screen Color Tone: (-255,-255,-255,0), @6
-@>Wait: 8 frame(s)
-@>Change Transparent Flag: Normal
-@>Transfer Player:[666: Mansion], (031,040), Up, No Fade
-@>Change Screen Color Tone: (0,0,0,0), @6
-@>Wait: 8 frame(s)
+@>Conditional Branch: Script: $bag.has?(:VANDERBILTKEY)
+ @>Set Move Route: This event
+  :              : $>SE: 'Door enter', 100, 90
+  :              : $>Turn Left
+  :              : $>Wait: 2 frame(s)
+  :              : $>Turn Right
+  :              : $>Wait: 2 frame(s)
+  :              : $>Turn Up
+  :              : $>Wait: 2 frame(s)
+ @>Wait: 6 frame(s)
+ @>Set Move Route: Player
+                   (Ignore If Can't Move)
+  :              : $>Through ON
+  :              : $>Move Up
+  :              : $>Through OFF
+ @>Wait: 8 frame(s)
+ @>Change Transparent Flag: Transparency
+ @>Script: Followers.follow_into_door
+ @>Wait: 8 frame(s)
+ @>Set Move Route: This event
+                   (Ignore If Can't Move)
+  :              : $>SE: 'Door enter', 100, 90
+  :              : $>Wait: 2 frame(s)
+  :              : $>Turn Right
+  :              : $>Wait: 2 frame(s)
+  :              : $>Turn Left
+  :              : $>Wait: 2 frame(s)
+  :              : $>Turn Down
+  :              : $>Wait: 2 frame(s)
+ @>Wait: 8 frame(s)
+ @>Change Screen Color Tone: (-255,-255,-255,0), @6
+ @>Wait: 8 frame(s)
+ @>Change Transparent Flag: Normal
+ @>Transfer Player:[666: Mansion], (031,040), Up, No Fade
+ @>Change Screen Color Tone: (0,0,0,0), @6
+ @>Wait: 8 frame(s)
+ @>
+: Else
+ @>Text: Die Tür ist verschlossen.
+ @>
+: Branch End
 @>
 
 Page #2
@@ -489293,7 +489629,7 @@ List of Event Commands:
 
 Page #2
 Conditions
-Switch 0404: Letarking Start is ON
+None
 
 Graphic: Sleep Letarking
 
@@ -489308,30 +489644,22 @@ Direction Fix
 Trigger: Action Button
 
 List of Event Commands:
-@>Conditional Branch: Script: $bag.has?(:POKEFLUTE)
- @>Script: $bag.remove(:POKEFLUTE)
- @>Play SE: 'OoT 25 Ocarina - Zelda_s Lullaby', 100, 100
- @>Wait: 200 frame(s)
- @>Show Animation: This event, [Angry bubble]
- @>Wait: 20 frame(s)
- @>Play SE: 'SLAKING', 100, 100
- @>Script: setBattleRule("cannotRun")
- :       : setBattleRule("outcome", 48)
- :       : pkmn = Pokemon.new(:SLAKING, 60)
- :       : pkmn.calc_stats
- :       : WildBattle.start(pkmn)
- @>Conditional Branch: Variable [0048: Kampf-Ergebnis] == 2
-  @>Exit Event Processing
+@>Text: Das Letarking scheint tief und fest zu schlafen.
+@>Text: Möchtest du die Pokéflöte benutzen?
+@>Show Choices: Ja, Nein
+(When Cancel: Choice 2)
+: When [Ja]
+ @>Conditional Branch: Script: $bag.has?(:POKEFLUTE)
+  @>Script: $bag.remove(:POKEFLUTE)
+  @>Play SE: 'OoT 25 Ocarina - Zelda_s Lullaby', 100, 100
+  @>Wait: 200 frame(s)
+  @>Text: Nichts geschieht.
   @>
  : Else
-  @>Script: pbSetSelfSwitch(19,"B",true)
-  @>Script: pbReceiveItem(:FULLINCENSE)
-  @>Control Switches: [0403: Letarking] = ON
-  @>Control Self Switch: B =ON
   @>
  : Branch End
  @>
-: Else
+: When [Nein]
  @>
 : Branch End
 @>
@@ -492291,6 +492619,56 @@ Width: 80, Height: 60
 Auto-Change BGM: FF6 213 The Empire Gestahl
 
 #------------------------------------------------------------------------------
+Event ID: 001
+Event Name: Trainer(4)
+(X,Y): (031,020)
+
+Page #1
+Conditions
+None
+
+Graphic: trainer_SCIENTIST_M4
+
+Autonomous Movement
+Type: Fixed
+Speed: 3: Slow
+Freq: 3: Low
+Options Enabled
+Move Animation
+Trigger: Event Touch
+
+List of Event Commands:
+@>Script: pbTrainerIntro(:SCIENTIST_M4)
+@>Script: pbNoticePlayer(get_self)
+@>Text: \xn[Forscher Linus]Hier soll es eine besondere Form 
+ :    : von Raichu geben.
+@>Conditional Branch: Script: TrainerBattle.start(:SCIENTIST__M4, "Linus")
+ @>Control Self Switch: A =ON
+ @>
+: Branch End
+@>Script: pbTrainerEnd
+@>
+
+Page #2
+Conditions
+Self Switch A is ON
+
+Graphic: trainer_SCIENTIST_M4
+
+Autonomous Movement
+Type: Fixed
+Speed: 3: Slow
+Freq: 3: Low
+Options Enabled
+Move Animation
+Trigger: Action Button
+
+List of Event Commands:
+@>Text: \xn[Forscher Linus]Hier soll es eine besondere Form 
+ :    : von Raichu geben.
+@>
+
+#------------------------------------------------------------------------------
 Event ID: 002
 Event Name: Riesenzahn
 (X,Y): (074,011)
@@ -492472,6 +492850,108 @@ Map Name: Route 21
 Tileset: 141: 
 Width: 65, Height: 40
 Auto-Change BGM: FF6 213 The Empire Gestahl
+
+#------------------------------------------------------------------------------
+Event ID: 001
+Event Name: Trainer(2)
+(X,Y): (030,023)
+
+Page #1
+Conditions
+None
+
+Graphic: trainer_DRAGONTAMER
+
+Autonomous Movement
+Type: Fixed
+Speed: 3: Slow
+Freq: 3: Low
+Options Enabled
+Move Animation
+Trigger: Event Touch
+
+List of Event Commands:
+@>Script: pbTrainerIntro(:DRAGONTAMER)
+@>Script: pbNoticePlayer(get_self)
+@>Text: \xn[Drachenzähmer Ignis]Meine Pokémon sind heißer 
+ :    : als Feuer!
+@>Conditional Branch: Script: TrainerBattle.start(:DRAGONTAMER, "Ignis")
+ @>Control Self Switch: A =ON
+ @>
+: Branch End
+@>Script: pbTrainerEnd
+@>
+
+Page #2
+Conditions
+Self Switch A is ON
+
+Graphic: trainer_DRAGONTAMER
+
+Autonomous Movement
+Type: Fixed
+Speed: 3: Slow
+Freq: 3: Low
+Options Enabled
+Move Animation
+Trigger: Action Button
+
+List of Event Commands:
+@>Text: \xn[Drachenzähmer Ignis]Heiße Feuer brennen heller, 
+ :    : jedoch erlöschen sie schneller.
+@>
+
+#------------------------------------------------------------------------------
+Event ID: 002
+Event Name: Trainer(5)
+(X,Y): (045,011)
+
+Page #1
+Conditions
+None
+
+Graphic: trainer_GENTLEMAN7
+
+Autonomous Movement
+Type: Fixed
+Speed: 3: Slow
+Freq: 3: Low
+Options Enabled
+Move Animation
+Trigger: Event Touch
+
+List of Event Commands:
+@>Script: pbTrainerIntro(:GENTLEMAN7)
+@>Script: pbNoticePlayer(get_self)
+@>Text: \xn[Gentleman Wellington]Der Sand ist garnichts für 
+ :    : meine schicken Schuhe!
+@>Conditional Branch: Script: TrainerBattle.start(:GENTLEMAN7, "Wellington")
+ @>Control Self Switch: A =ON
+ @>
+: Branch End
+@>Script: pbTrainerEnd
+@>
+
+Page #2
+Conditions
+Self Switch A is ON
+
+Graphic: trainer_GENTLEMAN7
+
+Autonomous Movement
+Type: Fixed
+Speed: 3: Slow
+Freq: 3: Low
+Options Enabled
+Move Animation
+Trigger: Action Button
+
+List of Event Commands:
+@>Text: \xn[Gentleman Wellington]Der Sand ist garnichts für 
+ :    : meine schicken Schuhe!
+@>
+
+#------------------------------------------------------------------------------
 
 #==============================================================================
 Map ID: 654
@@ -492965,6 +493445,58 @@ List of Event Commands:
 @>
 
 #------------------------------------------------------------------------------
+Event ID: 010
+Event Name: Trainer(2)
+(X,Y): (032,043)
+
+Page #1
+Conditions
+None
+
+Graphic: trainer_DRAGONTAMER3
+
+Autonomous Movement
+Type: Fixed
+Speed: 3: Slow
+Freq: 3: Low
+Options Enabled
+Move Animation
+Trigger: Event Touch
+
+List of Event Commands:
+@>Script: pbTrainerIntro(:DRAGONTAMER3)
+@>Script: pbNoticePlayer(get_self)
+@>Text: \xn[Drachenzähmerin Amalia]Ich trainiere mein 
+ :    : Leben lang Drachen-Pokémon.
+@>Conditional Branch: Script: TrainerBattle.start(:DRAGONTAMER3, "Amalia")
+ @>Control Self Switch: A =ON
+ @>
+: Branch End
+@>Script: pbTrainerEnd
+@>
+
+Page #2
+Conditions
+Self Switch A is ON
+
+Graphic: trainer_DRAGONTAMER3
+
+Autonomous Movement
+Type: Fixed
+Speed: 3: Slow
+Freq: 3: Low
+Options Enabled
+Move Animation
+Trigger: Action Button
+
+List of Event Commands:
+@>Text: \xn[Drachenzähmerin Amalia]Ich trainiere mein 
+ :    : Leben lang Drachen-Pokémon.
+@>Text: \xn[Drachenzähmerin Amalia]Jetzt werden wir noch 
+ :    : härter trainieren.
+@>
+
+#------------------------------------------------------------------------------
 
 #==============================================================================
 Map ID: 655
@@ -492972,6 +493504,114 @@ Map Name: Route 21
 Tileset: 141: 
 Width: 40, Height: 40
 Auto-Change BGM: FF6 213 The Empire Gestahl
+
+#------------------------------------------------------------------------------
+Event ID: 001
+Event Name: Trainer(5)
+(X,Y): (021,007)
+
+Page #1
+Conditions
+None
+
+Graphic: trainer_LADY4
+
+Autonomous Movement
+Type: Fixed
+Speed: 3: Slow
+Freq: 3: Low
+Options Enabled
+Move Animation
+Trigger: Event Touch
+
+List of Event Commands:
+@>Script: pbTrainerIntro(:LADY4)
+@>Script: pbNoticePlayer(get_self)
+@>Text: \xn[Lady Naomi]Mein Lippenstift hat Lichtschutzfaktor 
+ :    : 50 und mein Parfum riecht nach reinem Willen.
+@>Script: setBattleRule("double")
+@>Conditional Branch: Script: TrainerBattle.start(:LADY4, "Naomi")
+ @>Control Self Switch: A =ON
+ @>
+: Branch End
+@>Script: pbTrainerEnd
+@>
+
+Page #2
+Conditions
+Self Switch A is ON
+
+Graphic: trainer_LADY4
+
+Autonomous Movement
+Type: Fixed
+Speed: 3: Slow
+Freq: 3: Low
+Options Enabled
+Move Animation
+Trigger: Action Button
+
+List of Event Commands:
+@>Text: \xn[Lady Naomi]Der Sand ist wie ein Peeling für das 
+ :    : Ego. Es brennt kurz, aber danach ist man bereit für 
+ :    : den nächsten Kampf.
+@>
+
+#------------------------------------------------------------------------------
+Event ID: 002
+Event Name: Trainer(2)
+(X,Y): (012,027)
+
+Page #1
+Conditions
+None
+
+Graphic: trainer_DRAGONTAMER2
+
+Autonomous Movement
+Type: Fixed
+Speed: 3: Slow
+Freq: 3: Low
+Options Enabled
+Move Animation
+Trigger: Event Touch
+
+List of Event Commands:
+@>Script: pbTrainerIntro(:DRAGONTAMER2)
+@>Script: pbNoticePlayer(get_self)
+@>Text: \xn[Drachenzähmer Leif]Du hast Mut, dich uns in den 
+ :    : Weg zu stellen.
+@>Text: \xn[Drachenzähmer Leif]Hoffentlich hast du auch 
+ :    : Ausdauer.
+@>Conditional Branch: Script: TrainerBattle.start(:DRAGONTAMER2, "Leif")
+ @>Control Self Switch: A =ON
+ @>
+: Branch End
+@>Script: pbTrainerEnd
+@>
+
+Page #2
+Conditions
+Self Switch A is ON
+
+Graphic: trainer_DRAGONTAMER2
+
+Autonomous Movement
+Type: Fixed
+Speed: 3: Slow
+Freq: 3: Low
+Options Enabled
+Move Animation
+Trigger: Action Button
+
+List of Event Commands:
+@>Text: \xn[Drachenzähmer Leif]Ich habe viel über unsere 
+ :    : Fehler nachgedacht.
+@>Text: \xn[Drachenzähmer Leif]Du hast mir eine Lektion 
+ :    : erteilt, die ich so schnell nicht vergessen werde.
+@>
+
+#------------------------------------------------------------------------------
 
 #==============================================================================
 Map ID: 656
@@ -493433,6 +494073,27 @@ List of Event Commands:
 @>
 
 #------------------------------------------------------------------------------
+Event ID: 004
+Event Name: EV004
+(X,Y): (000,000)
+
+Page #1
+Conditions
+Switch 0411: Kraftwerk Ende is ON
+
+Autonomous Movement
+Type: Fixed
+Speed: 3: Slow
+Freq: 3: Low
+Options Enabled
+Move Animation
+Trigger: Parallel Process
+
+List of Event Commands:
+@>Play BGS: 'Industrial Ambience', 50, 100
+@>
+
+#------------------------------------------------------------------------------
 
 #==============================================================================
 Map ID: 659
@@ -493519,6 +494180,27 @@ List of Event Commands:
  @>
 : Branch End
 @>Script: setTempSwitchOn("A")
+@>
+
+#------------------------------------------------------------------------------
+Event ID: 003
+Event Name: EV003
+(X,Y): (000,000)
+
+Page #1
+Conditions
+Switch 0411: Kraftwerk Ende is ON
+
+Autonomous Movement
+Type: Fixed
+Speed: 3: Slow
+Freq: 3: Low
+Options Enabled
+Move Animation
+Trigger: Parallel Process
+
+List of Event Commands:
+@>Play BGS: 'Industrial Ambience', 50, 100
 @>
 
 #------------------------------------------------------------------------------
@@ -494476,6 +495158,27 @@ List of Event Commands:
 @>
 
 #------------------------------------------------------------------------------
+Event ID: 016
+Event Name: EV016
+(X,Y): (000,000)
+
+Page #1
+Conditions
+Switch 0411: Kraftwerk Ende is ON
+
+Autonomous Movement
+Type: Fixed
+Speed: 3: Slow
+Freq: 3: Low
+Options Enabled
+Move Animation
+Trigger: Parallel Process
+
+List of Event Commands:
+@>Play BGS: 'Industrial Ambience', 50, 100
+@>
+
+#------------------------------------------------------------------------------
 
 #==============================================================================
 Map ID: 661
@@ -494841,6 +495544,21 @@ List of Event Commands:
 @>Show Animation: This event, [Heart Emote]
 @>
 
+Page #3
+Conditions
+Switch 0411: Kraftwerk Ende is ON
+
+Autonomous Movement
+Type: Fixed
+Speed: 3: Slow
+Freq: 3: Low
+Options Enabled
+Move Animation
+Trigger: Action Button
+
+List of Event Commands:
+@>
+
 #------------------------------------------------------------------------------
 Event ID: 007
 Event Name: EV007
@@ -494885,6 +495603,21 @@ Trigger: Action Button
 List of Event Commands:
 @>Play SE: 'MUDSDALE', 100, 110
 @>Show Animation: This event, [Heart Emote]
+@>
+
+Page #3
+Conditions
+Switch 0411: Kraftwerk Ende is ON
+
+Autonomous Movement
+Type: Fixed
+Speed: 3: Slow
+Freq: 3: Low
+Options Enabled
+Move Animation
+Trigger: Action Button
+
+List of Event Commands:
 @>
 
 #------------------------------------------------------------------------------
@@ -494933,6 +495666,21 @@ List of Event Commands:
 @>Show Animation: This event, [Heart Emote]
 @>
 
+Page #3
+Conditions
+Switch 0411: Kraftwerk Ende is ON
+
+Autonomous Movement
+Type: Fixed
+Speed: 3: Slow
+Freq: 3: Low
+Options Enabled
+Move Animation
+Trigger: Action Button
+
+List of Event Commands:
+@>
+
 #------------------------------------------------------------------------------
 Event ID: 009
 Event Name: EV009
@@ -494977,6 +495725,21 @@ Trigger: Action Button
 List of Event Commands:
 @>Play SE: 'MUDSDALE', 100, 110
 @>Show Animation: This event, [Heart Emote]
+@>
+
+Page #3
+Conditions
+Switch 0411: Kraftwerk Ende is ON
+
+Autonomous Movement
+Type: Fixed
+Speed: 3: Slow
+Freq: 3: Low
+Options Enabled
+Move Animation
+Trigger: Action Button
+
+List of Event Commands:
 @>
 
 #------------------------------------------------------------------------------
@@ -495025,6 +495788,21 @@ List of Event Commands:
 @>Show Animation: This event, [Heart Emote]
 @>
 
+Page #3
+Conditions
+Switch 0411: Kraftwerk Ende is ON
+
+Autonomous Movement
+Type: Fixed
+Speed: 3: Slow
+Freq: 3: Low
+Options Enabled
+Move Animation
+Trigger: Action Button
+
+List of Event Commands:
+@>
+
 #------------------------------------------------------------------------------
 Event ID: 011
 Event Name: EV011
@@ -495069,6 +495847,21 @@ Trigger: Action Button
 List of Event Commands:
 @>Play SE: 'MUDSDALE', 100, 110
 @>Show Animation: This event, [Heart Emote]
+@>
+
+Page #3
+Conditions
+Switch 0411: Kraftwerk Ende is ON
+
+Autonomous Movement
+Type: Fixed
+Speed: 3: Slow
+Freq: 3: Low
+Options Enabled
+Move Animation
+Trigger: Action Button
+
+List of Event Commands:
 @>
 
 #------------------------------------------------------------------------------
@@ -495117,6 +495910,21 @@ List of Event Commands:
 @>Show Animation: This event, [Heart Emote]
 @>
 
+Page #3
+Conditions
+Switch 0411: Kraftwerk Ende is ON
+
+Autonomous Movement
+Type: Fixed
+Speed: 3: Slow
+Freq: 3: Low
+Options Enabled
+Move Animation
+Trigger: Action Button
+
+List of Event Commands:
+@>
+
 #------------------------------------------------------------------------------
 Event ID: 013
 Event Name: EV013
@@ -495161,6 +495969,21 @@ Trigger: Action Button
 List of Event Commands:
 @>Play SE: 'MUDSDALE', 100, 110
 @>Show Animation: This event, [Heart Emote]
+@>
+
+Page #3
+Conditions
+Switch 0411: Kraftwerk Ende is ON
+
+Autonomous Movement
+Type: Fixed
+Speed: 3: Slow
+Freq: 3: Low
+Options Enabled
+Move Animation
+Trigger: Action Button
+
+List of Event Commands:
 @>
 
 #------------------------------------------------------------------------------
@@ -495209,6 +496032,21 @@ List of Event Commands:
 @>Show Animation: This event, [Heart Emote]
 @>
 
+Page #3
+Conditions
+Switch 0411: Kraftwerk Ende is ON
+
+Autonomous Movement
+Type: Fixed
+Speed: 3: Slow
+Freq: 3: Low
+Options Enabled
+Move Animation
+Trigger: Action Button
+
+List of Event Commands:
+@>
+
 #------------------------------------------------------------------------------
 Event ID: 015
 Event Name: EV015
@@ -495253,6 +496091,21 @@ Trigger: Action Button
 List of Event Commands:
 @>Play SE: 'MUDSDALE', 100, 110
 @>Show Animation: This event, [Heart Emote]
+@>
+
+Page #3
+Conditions
+Switch 0411: Kraftwerk Ende is ON
+
+Autonomous Movement
+Type: Fixed
+Speed: 3: Slow
+Freq: 3: Low
+Options Enabled
+Move Animation
+Trigger: Action Button
+
+List of Event Commands:
 @>
 
 #------------------------------------------------------------------------------
@@ -495301,6 +496154,21 @@ List of Event Commands:
 @>Show Animation: This event, [Heart Emote]
 @>
 
+Page #3
+Conditions
+Switch 0411: Kraftwerk Ende is ON
+
+Autonomous Movement
+Type: Fixed
+Speed: 3: Slow
+Freq: 3: Low
+Options Enabled
+Move Animation
+Trigger: Action Button
+
+List of Event Commands:
+@>
+
 #------------------------------------------------------------------------------
 Event ID: 017
 Event Name: EV017
@@ -495345,6 +496213,21 @@ Trigger: Action Button
 List of Event Commands:
 @>Play SE: 'MUDSDALE', 100, 110
 @>Show Animation: This event, [Heart Emote]
+@>
+
+Page #3
+Conditions
+Switch 0411: Kraftwerk Ende is ON
+
+Autonomous Movement
+Type: Fixed
+Speed: 3: Slow
+Freq: 3: Low
+Options Enabled
+Move Animation
+Trigger: Action Button
+
+List of Event Commands:
 @>
 
 #------------------------------------------------------------------------------
@@ -495860,6 +496743,27 @@ List of Event Commands:
 @>
 
 #------------------------------------------------------------------------------
+Event ID: 007
+Event Name: EV007
+(X,Y): (000,000)
+
+Page #1
+Conditions
+Switch 0411: Kraftwerk Ende is ON
+
+Autonomous Movement
+Type: Fixed
+Speed: 3: Slow
+Freq: 3: Low
+Options Enabled
+Move Animation
+Trigger: Parallel Process
+
+List of Event Commands:
+@>Play BGS: 'Industrial Ambience', 50, 100
+@>
+
+#------------------------------------------------------------------------------
 
 #==============================================================================
 Map ID: 664
@@ -496215,6 +497119,10 @@ Move Animation
 Trigger: Autorun
 
 List of Event Commands:
+@>Memorize BGM/BGS
+@>Fade Out BGM: 1 sec.
+@>Play BGM: 'Spannung', 80, 100
+@>Play BGS: 'Portal', 100, 100
 @>Set Event Location: [Katagami],(000,019)
 @>Wait: 20 frame(s)
 @>Set Move Route: Player
@@ -496285,6 +497193,7 @@ List of Event Commands:
 @>Set Move Route: [EV005]
  :              : $>Jump: +0,+2
 @>Wait: 4 frame(s)
+@>Play SE: 'portal jump', 70, 100
 @>Set Event Location: [EV006],(007,005)
 @>Set Move Route: [EV006]
  :              : $>Jump: +0,+2
@@ -496308,6 +497217,7 @@ List of Event Commands:
  :              : $>Move Down
  :              : $>Move Down
 @>Wait: 4 frame(s)
+@>Play SE: 'portal jump', 70, 100
 @>Set Event Location: [EV007],(007,005)
 @>Set Move Route: [EV007]
  :              : $>Jump: +0,+2
@@ -496321,6 +497231,7 @@ List of Event Commands:
  :              : $>Move Down
  :              : $>Move Down
 @>Wait: 4 frame(s)
+@>Play SE: 'portal jump', 70, 100
 @>Set Event Location: [EV008],(007,005)
 @>Set Move Route: [EV008]
  :              : $>Jump: +0,+2
@@ -496334,6 +497245,7 @@ List of Event Commands:
  :              : $>Move Down
  :              : $>Move Down
 @>Wait: 4 frame(s)
+@>Play SE: 'portal jump', 70, 100
 @>Set Event Location: [EV009],(007,005)
 @>Set Move Route: [EV009]
  :              : $>Jump: +0,+2
@@ -496347,6 +497259,7 @@ List of Event Commands:
  :              : $>Move Down
  :              : $>Move Down
 @>Wait: 4 frame(s)
+@>Play SE: 'portal jump', 70, 100
 @>Set Event Location: [EV010],(007,005)
 @>Set Move Route: [EV010]
  :              : $>Jump: +0,+2
@@ -496360,6 +497273,7 @@ List of Event Commands:
  :              : $>Move Down
  :              : $>Move Down
 @>Wait: 4 frame(s)
+@>Play SE: 'portal jump', 70, 100
 @>Set Event Location: [EV011],(007,005)
 @>Set Move Route: [EV011]
  :              : $>Jump: +0,+2
@@ -496373,6 +497287,7 @@ List of Event Commands:
  :              : $>Move Down
  :              : $>Move Down
 @>Wait: 4 frame(s)
+@>Play SE: 'portal jump', 70, 100
 @>Set Event Location: [EV012],(007,005)
 @>Set Move Route: [EV012]
  :              : $>Jump: +0,+2
@@ -496418,6 +497333,7 @@ List of Event Commands:
  :              : $>Move Up
  :              : $>Jump: +0,-2
 @>Wait for Move's Completion
+@>Play SE: 'portal jump', 70, 100
 @>Script: pbSetSelfSwitch(3,"A",true)
 @>Script: pbSetSelfSwitch(15,"A",true)
 @>Play SE: 'KARTANA', 100, 100
@@ -496426,6 +497342,7 @@ List of Event Commands:
 @>Set Move Route: [Katagami]
  :              : $>Through ON
  :              : $>Change Speed: 1
+ :              : $>SE: 'Portal2', 80, 100
  :              : $>Move Down
  :              : $>Move Down
  :              : $>Move Down
@@ -496539,7 +497456,7 @@ List of Event Commands:
 @>Wait: 20 frame(s)
 @>Set Event Location: [Marvin],(014,013), Left
 @>Script: pbSetSelfSwitch(13,"A",true)
-@>Control Self Switch: A =ON
+@>Control Self Switch: B =ON
 @>Change Screen Color Tone: (0,0,0,0), @20
 @>Wait: 20 frame(s)
 @>
@@ -496906,6 +497823,11 @@ List of Event Commands:
  :    : kämpfen und die Pokémon befreien.
 @>Text: \xn[Arenaleiter Marvin]Ich folge dir anschließend, 
  :    : sobald die Luft rein ist.
+@>Text: \xn[Arenaleiter Marvin]Am Bett kannst du dich mit 
+ :    : deinem Team kurz ausruhen.
+@>Text: \xn[Arenaleiter Marvin]Und den PC habe ich so 
+ :    : eingestellt, dass du jederzeit auf deine Boxen 
+ :    : zugreifen kannst.
 @>
 
 Page #3
@@ -497003,6 +497925,7 @@ List of Event Commands:
    :              : $>Through ON
    :              : $>Move Up
    :              : $>Move Up
+   :              : $>SE: 'Portal2', 80, 85
    :              : $>Move Up
    :              : $>Change Opacity: 225
    :              : $>Wait: 2 frame(s)
@@ -497028,6 +497951,8 @@ List of Event Commands:
   @>Wait: 10 frame(s)
   @>Script: pbSetSelfSwitch(2,"A",true)
   @>Control Switches: [0412: Katagami besiegt] = ON
+  @>Fade Out BGS: 1 sec.
+  @>Restore BGM/BGS
   @>
  : Else
   @>
@@ -501340,7 +502265,7 @@ List of Event Commands:
 @>Play SE: 'Door enter', 100, 100
 @>Change Screen Color Tone: (-255,-255,-255,0), @6
 @>Wait: 8 frame(s)
-@>Transfer Player:[671: Durchgang], (003,008), Right, No Fade
+@>Transfer Player:[672: Durchgang], (003,008), Right, No Fade
 @>Change Screen Color Tone: (0,0,0,0), @6
 @>Wait: 8 frame(s)
 @>
@@ -501366,7 +502291,7 @@ List of Event Commands:
 @>Play SE: 'Door enter', 100, 100
 @>Change Screen Color Tone: (-255,-255,-255,0), @6
 @>Wait: 8 frame(s)
-@>Transfer Player:[671: Durchgang], (003,009), Right, No Fade
+@>Transfer Player:[672: Durchgang], (003,009), Right, No Fade
 @>Change Screen Color Tone: (0,0,0,0), @6
 @>Wait: 8 frame(s)
 @>
@@ -501392,7 +502317,7 @@ List of Event Commands:
 @>Play SE: 'Door enter', 100, 100
 @>Change Screen Color Tone: (-255,-255,-255,0), @6
 @>Wait: 8 frame(s)
-@>Transfer Player:[671: Durchgang], (003,010), Right, No Fade
+@>Transfer Player:[672: Durchgang], (003,010), Right, No Fade
 @>Change Screen Color Tone: (0,0,0,0), @6
 @>Wait: 8 frame(s)
 @>

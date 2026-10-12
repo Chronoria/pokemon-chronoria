@@ -3603,7 +3603,9 @@ MapPosition = 0,17,12
 SnapEdges = true
 BattleBack = desert
 WildBattleBGM = battle wild 2
+TrainerBattleBGM = FF6 105 Battle Theme
 WildVictoryBGM = Victory! (Wild Pokemon)_9
+TrainerVictoryBGM = SM 026 Victory! (Trainer)
 Environment = Sand
 Flags = Levels
 #-------------------------------
@@ -4492,68 +4494,82 @@ BattleBack = cave
 Flags = BugContest,Levels
 #-------------------------------
 [679]   # MAP679
+Name = MAP679
 ShowArea = true
 SnapEdges = true
 Flags = Levels
 #-------------------------------
 [680]   # MAP680
+Name = MAP680
 ShowArea = true
 SnapEdges = true
 Flags = Levels
 #-------------------------------
 [681]   # MAP681
+Name = MAP681
 ShowArea = true
 SnapEdges = true
 BattleBack = cave
 Flags = Levels
 #-------------------------------
 [682]   # MAP682
+Name = MAP682
 ShowArea = true
 SnapEdges = true
 BattleBack = cave
 Flags = Levels
 #-------------------------------
 [683]   # MAP683
+Name = MAP683
 ShowArea = true
 SnapEdges = true
 BattleBack = cave
 Flags = Levels
 #-------------------------------
 [684]   # MAP684
+Name = MAP684
 ShowArea = true
 SnapEdges = true
 BattleBack = cave
 Flags = Levels
 #-------------------------------
 [685]   # MAP685
+Name = MAP685
 ShowArea = true
 SnapEdges = true
 BattleBack = draconic
 Flags = Levels
 #-------------------------------
 [686]   # MAP686
+Name = MAP686
 ShowArea = true
 SnapEdges = true
 BattleBack = draconic
 Flags = Levels
 #-------------------------------
 [687]   # MAP687
+Name = MAP687
 ShowArea = true
 SnapEdges = true
 BattleBack = draconic
 Flags = Levels
 #-------------------------------
 [688]   # MAP688
+Name = MAP688
 SnapEdges = true
 #-------------------------------
 [689]   # MAP689
+Name = MAP689
 SnapEdges = true
 #-------------------------------
 [690]   # MAP690
+Name = MAP690
 SnapEdges = true
 #-------------------------------
 [691]   # MAP691
+Name = MAP691
 SnapEdges = true
 #-------------------------------
 [692]   # MAP692
+Name = MAP692
 SnapEdges = true

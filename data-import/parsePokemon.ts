@@ -242,6 +242,13 @@ function isUnnamedDuplicate(form: PokemonForm, base: Pokemon, hasOwnFormName: bo
  */
 const FORMS_WITHOUT_ART = new Set(["SINISTEA:1", "POLTEAGEIST:1", "POLTCHAGEIST:1", "SINISTCHA:1"]);
 
+/**
+ * Species whose forms are left off the wiki entirely, so only the base form is shown.
+ * Amigento's 18 disc forms all share the base form's type (Omni) and stats in Chronoria - they
+ * only differ in artwork, so listing them adds nothing but 18 near-identical rows and pages.
+ */
+const SPECIES_SHOWN_WITHOUT_FORMS = new Set(["SILVALLY"]);
+
 export function parsePokemon(ctx: TranslationContext): Pokemon[] {
   const sprites = loadSpriteIndex(SPRITES_DIR);
   const shinySprites = loadSpriteIndex(SHINY_SPRITES_DIR);
@@ -271,6 +278,7 @@ export function parsePokemon(ctx: TranslationContext): Pokemon[] {
       console.warn(`[Pokémon] Form für unbekannte Spezies ${speciesId} übersprungen.`);
       continue;
     }
+    if (SPECIES_SHOWN_WITHOUT_FORMS.has(speciesId)) continue;
     const form = blockToForm(block, ctx, sprites, shinySprites, base);
     const hasOwnFormName = (blockToRecord(block).FormName ?? "").trim() !== "";
     if (isUnnamedDuplicate(form, base, hasOwnFormName)) continue;

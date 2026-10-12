@@ -1136,7 +1136,7 @@ Flags = ReserveLastPokemon,FixedLead
 Name = Arenaleiterin
 Gender = Female
 BaseMoney = 100
-BattleBGM = DPPT 035 Battle! (Gym Leader)
+BattleBGM = Battle Zinnia
 VictoryBGM = Battle victory leader
 Flags = ReserveLastPokemon,FixedLead
 #-------------------------------
@@ -1221,7 +1221,7 @@ BaseMoney = 140
 SkillLevel = 100
 Flags = ReserveLastPokemon,FixedLead
 IntroBGM = TEAM1
-BattleBGM = SM 150 Battle! (Elite Four)
+BattleBGM = SV 315 Battle! (Elite Four)
 VictoryBGM = DPPT 049 Victory! (Team Galactic)
 #-------------------------------
 [NOCTIS]
