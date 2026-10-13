@@ -140,8 +140,8 @@ const regionalEvolutionsCopied = copySingleFile(
   join(outDir, "Plugins", "regional_evolutions.rb")
 );
 
-// Map screenshots for the /fundorte/ pages (needs the encounters.txt copied above).
-const mapScreenshots = await syncMapScreenshots(join(outDir, "PBS"), publicDir);
+// Map screenshots for the /fundorte/ pages (needs the PBS files and the event dump copied above).
+const mapScreenshots = await syncMapScreenshots(outDir, publicDir);
 
 console.log(`Sync abgeschlossen aus ${gameDir}:`);
 console.log(`  PBS: ${pbsCount} Dateien`);
