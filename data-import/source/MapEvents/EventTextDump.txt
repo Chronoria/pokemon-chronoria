@@ -237455,6 +237455,7 @@ Move Animation
 Trigger: Player Touch
 
 List of Event Commands:
+@>Play SE: 'Door exit', 100, 100
 @>Change Screen Color Tone: (-255,-255,-255,0), @6
 @>Wait: 8 frame(s)
 @>Transfer Player:[352: Route 1], (031,001), Down, No Fade
@@ -237499,7 +237500,7 @@ List of Event Commands:
  @>Script: pbReceiveItem(:HONEY)
  @>Text: \xn[Antonia]Echter Waldhonig.
  @>Script: activateQuest(:Quest94)
- @>Script: pbSetSelfSwitch(7,"A",true)
+ @>Script: pbSetSelfSwitch(5,"A",true)
  @>Control Switches: [0419: Bienenstock Start] = ON
  @>
 : When [Nein]
@@ -237530,7 +237531,7 @@ List of Event Commands:
 
 Page #3
 Conditions
-Switch 0169: Quest 13 is ON
+Switch 0423: Honweisel is ON
 
 Graphic: trainer_SCIENTIST_F
 
@@ -237543,20 +237544,29 @@ Move Animation
 Trigger: Action Button
 
 List of Event Commands:
-@>Text: \xn[Lara]Vielen Dank, dass du meinen kleinen Bruder 
- :    : zurückgebracht hast.
-@>Text: \xn[Lara]Das gebe ich dir das Belohnung:
-@>Conditional Branch: Script: pbReceiveItem(:CLEARAMULET)
- @>Script: completeQuest(:Quest13)
- @>Script: pbSetSelfSwitch(7,"B",true)
- @>Control Self Switch: B =ON
+@>Text: \xn[Antonia]Hörst du das?
+@>Text: \xn[Antonia]Sie summen wieder, ganz ruhig.
+@>Text: \xn[Antonia]Ein Teddiursa?
+@>Text: \xn[Antonia]Hah, natürlich!
+@>Text: \xn[Antonia]Die riechen Honig über drei Täler hinweg.
+@>Text: \xn[Antonia]Das arme Ding hatte bestimmt nur 
+ :    : Hunger.
+@>Text: \xn[Antonia]Du hast mir die Ernte gerettet, das hier 
+ :    : hast du dir verdient.
+@>Script: pbReceiveItem(:SILVERPOWDER)
+@>Conditional Branch: Script: pbReceiveItem(:EXPLORERKIT)
+ @>Script: completeQuest(:Quest94)
+ @>Script: pbSetSelfSwitch(5,"B",true)
+ @>Text: \xn[Antonia]Komm ruhig jeden Tag vorbei, eine Wabe 
+  :    : ist immer für dich übrig.
+ @>Control Switches: [0424: Quest Ende] = ON
  @>
 : Branch End
 @>
 
 Page #4
 Conditions
-Self Switch B is ON
+Switch 0424: Quest Ende is ON
 
 Graphic: trainer_SCIENTIST_F
 
@@ -237569,8 +237579,50 @@ Move Animation
 Trigger: Action Button
 
 List of Event Commands:
-@>Text: \xn[Lara]Vielen Dank, dass du meinen kleinen Bruder 
- :    : zurückgebracht hast.
+@>Text: \xn[Antonia]Da bist du ja, eine Wabe von heute liegt 
+ :    : schon bereit.
+@>Script: pbReceiveItem(:HONEY)
+@>Script: pbSetEventTime
+@>
+
+Page #5
+Conditions
+Switch 0424: Quest Ende is ON
+Self Switch A is ON
+
+Graphic: trainer_SCIENTIST_F
+
+Autonomous Movement
+Type: Fixed
+Speed: 3: Slow
+Freq: 3: Low
+Options Enabled
+Move Animation
+Trigger: Action Button
+
+List of Event Commands:
+@>Text: \xn[Antonia]Heute habe ich nichts mehr.
+@>Text: \xn[Antonia]Die Wadribie haben auch irgendwann 
+ :    : Feierabend.
+@>
+
+Page #6
+Conditions
+Switch 0024: s:cooledDownDays?(1) is ON
+Self Switch A is ON
+
+Graphic: trainer_SCIENTIST_F
+
+Autonomous Movement
+Type: Fixed
+Speed: 3: Slow
+Freq: 3: Low
+Options Enabled
+Move Animation
+Trigger: Autorun
+
+List of Event Commands:
+@>Control Self Switch: A =OFF
 @>
 
 #------------------------------------------------------------------------------
@@ -262976,6 +263028,104 @@ List of Event Commands:
 @>
 
 #------------------------------------------------------------------------------
+Event ID: 055
+Event Name: CutTree
+(X,Y): (031,008)
+
+Page #1
+Conditions
+None
+
+Graphic: [RD]Obstacles2
+
+Autonomous Movement
+Type: Fixed
+Speed: 3: Slow
+Freq: 3: Low
+Options Enabled
+Move Animation
+Trigger: Action Button
+
+List of Event Commands:
+@>Set Move Route: This event
+ :              : $>Turn Down
+@>Conditional Branch: Script: pbCut
+ @>Set Move Route: Player
+  :              : $>Stop Animation ON
+  :              : $>Wait: 6 frame(s)
+  :              : $>Stop Animation OFF
+ @>Show Animation: This event, [Cut]
+ @>Script: pbSmashThisEvent
+ @>Control Self Switch: A =ON
+ @>
+: Branch End
+@>
+
+Page #2
+Conditions
+Self Switch A is ON
+
+Autonomous Movement
+Type: Fixed
+Speed: 3: Slow
+Freq: 3: Low
+Options Enabled
+Move Animation
+Trigger: Action Button
+
+List of Event Commands:
+@>
+
+#------------------------------------------------------------------------------
+Event ID: 056
+Event Name: CutTree
+(X,Y): (031,005)
+
+Page #1
+Conditions
+None
+
+Graphic: [RD]Obstacles2
+
+Autonomous Movement
+Type: Fixed
+Speed: 3: Slow
+Freq: 3: Low
+Options Enabled
+Move Animation
+Trigger: Action Button
+
+List of Event Commands:
+@>Set Move Route: This event
+ :              : $>Turn Down
+@>Conditional Branch: Script: pbCut
+ @>Set Move Route: Player
+  :              : $>Stop Animation ON
+  :              : $>Wait: 6 frame(s)
+  :              : $>Stop Animation OFF
+ @>Show Animation: This event, [Cut]
+ @>Script: pbSmashThisEvent
+ @>Control Self Switch: A =ON
+ @>
+: Branch End
+@>
+
+Page #2
+Conditions
+Self Switch A is ON
+
+Autonomous Movement
+Type: Fixed
+Speed: 3: Slow
+Freq: 3: Low
+Options Enabled
+Move Animation
+Trigger: Action Button
+
+List of Event Commands:
+@>
+
+#------------------------------------------------------------------------------
 Event ID: 057
 Event Name: EV057
 (X,Y): (009,015)
@@ -263145,6 +263295,31 @@ Trigger: Player Touch
 List of Event Commands:
 @>Script: pbBridgeOn
 @>Script: $PokemonGlobal.encounter_version = 2
+@>
+
+#------------------------------------------------------------------------------
+Event ID: 065
+Event Name: Haus 1 Tür
+(X,Y): (031,000)
+
+Page #1
+Conditions
+None
+
+Autonomous Movement
+Type: Fixed
+Speed: 3: Slow
+Freq: 3: Low
+Options Enabled
+Move Animation
+Trigger: Player Touch
+
+List of Event Commands:
+@>Play SE: 'Door exit', 100, 100
+@>Change Screen Color Tone: (-255,-255,-255,0), @6
+@>Wait: 8 frame(s)
+@>Transfer Player:[312: Wald], (013,023), Up, No Fade
+@>Change Screen Color Tone: (0,0,0,0), @6
 @>
 
 #------------------------------------------------------------------------------
@@ -264073,30 +264248,6 @@ List of Event Commands:
 @>Text: Ich habe gerade ein Shiny Pokémon gesehen!
 @>Text: Aber vielleicht war es auch nur der Tau...
 @>Text: oder mein Fernglas ist dreckig...
-@>
-
-#------------------------------------------------------------------------------
-Event ID: 122
-Event Name: Haus 1 Tür
-(X,Y): (031,000)
-
-Page #1
-Conditions
-None
-
-Autonomous Movement
-Type: Fixed
-Speed: 3: Slow
-Freq: 3: Low
-Options Enabled
-Move Animation
-Trigger: Player Touch
-
-List of Event Commands:
-@>Change Screen Color Tone: (-255,-255,-255,0), @6
-@>Wait: 8 frame(s)
-@>Transfer Player:[312: Wald], (013,023), Up, No Fade
-@>Change Screen Color Tone: (0,0,0,0), @6
 @>
 
 #------------------------------------------------------------------------------
@@ -511163,6 +511314,29 @@ List of Event Commands:
 @>
 
 #------------------------------------------------------------------------------
+Event ID: 002
+Event Name: EV002
+(X,Y): (010,005)
+
+Page #1
+Conditions
+None
+
+Graphic: Item003
+
+Autonomous Movement
+Type: Fixed
+Speed: 3: Slow
+Freq: 3: Low
+Options Enabled
+Move Animation
+Trigger: Action Button
+
+List of Event Commands:
+@>Script: pbReceiveItem(:SILVERPOWDER)
+@>
+
+#------------------------------------------------------------------------------
 
 #==============================================================================
 Map ID: 715
@@ -511666,6 +511840,186 @@ List of Event Commands:
  @>
 : Branch End
 @>Script: setTempSwitchOn("A")
+@>
+
+#------------------------------------------------------------------------------
+Event ID: 002
+Event Name: EV002
+(X,Y): (000,014)
+
+Page #1
+Conditions
+None
+
+Autonomous Movement
+Type: Fixed
+Speed: 3: Slow
+Freq: 3: Low
+Options Enabled
+Move Animation
+Trigger: Autorun
+
+List of Event Commands:
+@>Wait: 20 frame(s)
+@>Play SE: 'BEEDRILL', 100, 100
+@>Set Move Route: [Bibor]
+ :              : $>Move Down
+ :              : $>Move Down
+ :              : $>Move Down
+@>Set Move Route: [Bibor]
+ :              : $>Move Down
+ :              : $>Move Down
+ :              : $>Move Down
+@>Wait: 20 frame(s)
+@>Script: setBattleRule("double")
+:       : setBattleRule("cannotRun")
+:       : setBattleRule("outcome", 48)
+:       : WildBattle.start(:BEEDRILL, 16, 
+:       : :BEEDRILL, 16)
+@>Conditional Branch: Variable [0048: Kampf-Ergebnis] == 1
+ @>Control Switches: [0425: Bibor 3] = ON
+ @>Control Self Switch: A =ON
+ @>
+: Else
+ @>Conditional Branch: Variable [0048: Kampf-Ergebnis] == 4
+  @>Control Switches: [0425: Bibor 3] = ON
+  @>Control Self Switch: A =ON
+  @>
+ : Else
+  @>Exit Event Processing
+  @>
+ : Branch End
+ @>
+: Branch End
+@>
+
+Page #2
+Conditions
+Self Switch A is ON
+
+Autonomous Movement
+Type: Fixed
+Speed: 3: Slow
+Freq: 3: Low
+Options Enabled
+Move Animation
+Trigger: Action Button
+
+List of Event Commands:
+@>
+
+Page #3
+Conditions
+Switch 0421: Bibor is ON
+
+Autonomous Movement
+Type: Fixed
+Speed: 3: Slow
+Freq: 3: Low
+Options Enabled
+Move Animation
+Trigger: Action Button
+
+List of Event Commands:
+@>
+
+#------------------------------------------------------------------------------
+Event ID: 003
+Event Name: Bibor
+(X,Y): (009,009)
+
+Page #1
+Conditions
+None
+
+Graphic: BEEDRILLEVENT
+
+Autonomous Movement
+Type: Fixed
+Speed: 3: Slow
+Freq: 3: Low
+Options Enabled
+Move Animation
+Stop Animation
+Trigger: Action Button
+
+List of Event Commands:
+@>
+
+Page #2
+Conditions
+Switch 0425: Bibor 3 is ON
+
+Autonomous Movement
+Type: Fixed
+Speed: 3: Slow
+Freq: 3: Low
+Options Enabled
+Move Animation
+Trigger: Action Button
+
+List of Event Commands:
+@>
+
+#------------------------------------------------------------------------------
+Event ID: 004
+Event Name: Bibor
+(X,Y): (011,009)
+
+Page #1
+Conditions
+None
+
+Graphic: BEEDRILLEVENT
+
+Autonomous Movement
+Type: Fixed
+Speed: 3: Slow
+Freq: 3: Low
+Options Enabled
+Move Animation
+Stop Animation
+Trigger: Action Button
+
+List of Event Commands:
+@>
+
+Page #2
+Conditions
+Switch 0425: Bibor 3 is ON
+
+Autonomous Movement
+Type: Fixed
+Speed: 3: Slow
+Freq: 3: Low
+Options Enabled
+Move Animation
+Trigger: Action Button
+
+List of Event Commands:
+@>
+
+#------------------------------------------------------------------------------
+Event ID: 005
+Event Name: EV005
+(X,Y): (010,011)
+
+Page #1
+Conditions
+None
+
+Graphic: Items Megasteine 3
+
+Autonomous Movement
+Type: Fixed
+Speed: 3: Slow
+Freq: 3: Low
+Options Enabled
+Move Animation
+Trigger: Action Button
+
+List of Event Commands:
+@>Script: pbReceiveItem(:BEEDRILLITE)
 @>
 
 #------------------------------------------------------------------------------
@@ -512537,10 +512891,11 @@ List of Event Commands:
 @>Script: setBattleRule("midbattleScript",
 :       : :KOENIGIN_HONWEISEL)
 :       : WildBattle.start(:VESPIQUEN, 22)
-@>Conditional Branch: Variable [0048: Kampf-Ergebnis] == 2
- @>Exit Event Processing
+@>Conditional Branch: Variable [0048: Kampf-Ergebnis] == 4
+ @>Control Switches: [0423: Honweisel] = ON
  @>
 : Else
+ @>Exit Event Processing
  @>
 : Branch End
 @>
