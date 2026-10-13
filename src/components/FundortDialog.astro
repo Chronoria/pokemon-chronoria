@@ -1,0 +1,73 @@
+---
+// Pop-up for the "Fundorte" table on the Pokémon pages: a click on a place loads that place's
+// /fundorte/ page and shows its encounter tables in a dialog. Without JavaScript the place name
+// is still a normal link to the same page.
+//
+// `current` is the encounters.txt key of the Pokémon whose page this is ("RATTATA", "RATTATA_1"),
+// so its own rows can be highlighted in the list.
+interface Props {
+  current: string;
+}
+const { current } = Astro.props;
+---
+
+<dialog id="fundort-dialog" class="fundort-dialog" data-current={current} aria-labelledby="fundort-dialog-title">
+  <div class="fundort-dialog-head">
+    <h2 id="fundort-dialog-title"></h2>
+    <button type="button" class="fundort-dialog-close" aria-label="Schließen">×</button>
+  </div>
+  <div class="fundort-dialog-body"></div>
+</dialog>
+
+<script data-astro-rerun>
+  // Block-scoped plain JS, like the other data-astro-rerun scripts (see items/index.astro).
+  {
+  const dialog = document.getElementById("fundort-dialog");
+  if (dialog && typeof dialog.showModal === "function") {
+    const title = dialog.querySelector("#fundort-dialog-title");
+    const body = dialog.querySelector(".fundort-dialog-body");
+    const current = dialog.getAttribute("data-current");
+    let request = 0;
+
+    const open = async (link) => {
+      const id = ++request;
+      title.textContent = link.textContent.trim();
+      body.innerHTML = '<p class="section-empty">Lädt …</p>';
+      dialog.showModal();
+      try {
+        const response = await fetch(link.href);
+        if (!response.ok) throw new Error(String(response.status));
+        const page = new DOMParser().parseFromString(await response.text(), "text/html");
+        const content = page.getElementById("fundort-inhalt");
+        if (id !== request) return;
+        if (!content) throw new Error("kein Inhalt");
+        body.replaceChildren(...content.childNodes);
+        for (const row of body.querySelectorAll("tr[data-species]")) {
+          if (row.getAttribute("data-species") === current) row.classList.add("is-current");
+        }
+        body.scrollTop = 0;
+      } catch (err) {
+        if (id !== request) return;
+        // fall back to the page itself rather than leaving an empty box
+        window.location.href = link.href;
+      }
+    };
+
+    // Listening on <main>, which is replaced on every navigation, so no listener outlives its
+    // page. preventDefault is enough to keep the view-transition router from following the link.
+    (dialog.closest("main") || document).addEventListener("click", (e) => {
+      const link = e.target.closest("a.fundort-link");
+      if (!link) return;
+      if (e.metaKey || e.ctrlKey || e.shiftKey || e.button !== 0) return;
+      e.preventDefault();
+      open(link);
+    });
+
+    dialog.querySelector(".fundort-dialog-close").addEventListener("click", () => dialog.close());
+    // a click on the backdrop lands on the <dialog> element itself
+    dialog.addEventListener("click", (e) => { if (e.target === dialog) dialog.close(); });
+    // following a Pokémon link inside the box navigates away, so close it first
+    body.addEventListener("click", (e) => { if (e.target.closest("a")) dialog.close(); });
+  }
+  }
+</script>

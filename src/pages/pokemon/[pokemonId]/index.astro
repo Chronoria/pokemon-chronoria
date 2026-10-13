@@ -9,6 +9,8 @@ import { encounterMethodLabel, formatEncounterChance } from "../../../lib/encoun
 import { eggGroupLabel } from "../../../lib/eggGroups";
 import { wildItemRows } from "../../../lib/wildItems";
 import { href } from "../../../lib/url";
+import { wildLocationPath } from "../../../lib/locations";
+import FundortDialog from "../../../components/FundortDialog.astro";
 
 export function getStaticPaths() {
   return pokemon.map((p) => ({ params: { pokemonId: slugify(p.id) }, props: { p } }));
@@ -353,7 +355,7 @@ const nextPokemon = pokemon[(dexIndex + 1) % pokemon.length];
             {Object.entries(v.locationsByPlace).map(([place, refs]: [string, any]) => (
               refs.map((r: any, i: number) => (
                 <tr>
-                  {i === 0 ? <td rowspan={refs.length}>{place}</td> : null}
+                  {i === 0 ? <td rowspan={refs.length}>{wildLocationPath(place) ? <a class="fundort-link" href={href(wildLocationPath(place)!)}>{place}</a> : place}</td> : null}
                   <td>{encounterMethodLabel(r.method)}</td>
                   <td>{r.minLevel === r.maxLevel ? r.minLevel : `${r.minLevel}–${r.maxLevel}`}</td>
                   <td>{formatEncounterChance(r.chance)}</td>
@@ -365,6 +367,7 @@ const nextPokemon = pokemon[(dexIndex + 1) % pokemon.length];
       </div>
     ))}
   </div>
+  <FundortDialog current={p.id} />
 </Layout>
 
 <style>

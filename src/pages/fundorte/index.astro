@@ -1,0 +1,68 @@
+---
+// Overview of every place with wild encounters, in three groups. Each card leads to the place's
+// own page (the same content the pop-up on the Pokémon pages shows).
+import Layout from "../../layouts/Layout.astro";
+import { wildLocations, LOCATION_CATEGORIES, isUnnamedLocation } from "../../lib/locations";
+import { href } from "../../lib/url";
+
+// Maps that have encounters but no name yet would show up as "MAP681" - left out until named.
+const listed = wildLocations.filter((l) => !isUnnamedLocation(l.name));
+const groups = LOCATION_CATEGORIES.map((category) => ({
+  ...category,
+  locations: listed.filter((l) => l.category === category.id),
+}));
+---
+
+<Layout title="Fundorte">
+  <h1>Fundorte ({listed.length})</h1>
+
+  <input
+    type="search"
+    id="name-search"
+    class="text-input"
+    placeholder="Nach Ort suchen…"
+    aria-label="Fundorte nach Namen durchsuchen"
+  />
+
+  <p class="meta-note" id="result-count"></p>
+
+  {groups.map((group) => (
+    <section class="fundort-group" data-group>
+      <h2>{group.label} ({group.locations.length})</h2>
+      <div class="card-grid">
+        {group.locations.map((l) => (
+          <a class="card" href={href(`/fundorte/${l.slug}/`)} data-name={l.name.toLowerCase()}>
+            <div class="card-name">{l.name}</div>
+            <div class="meta-note">{l.speciesCount} Pokémon</div>
+          </a>
+        ))}
+      </div>
+    </section>
+  ))}
+</Layout>
+
+<script data-astro-rerun>
+  // Block-scoped plain JS, like the other data-astro-rerun scripts (see items/index.astro).
+  {
+  const nameSearch = document.getElementById("name-search");
+  const resultCount = document.getElementById("result-count");
+  const groups = [...document.querySelectorAll("[data-group]")];
+
+  nameSearch.addEventListener("input", () => {
+    const query = nameSearch.value.trim().toLowerCase();
+    let visible = 0;
+    for (const group of groups) {
+      let inGroup = 0;
+      for (const card of group.querySelectorAll("[data-name]")) {
+        const show = query === "" || (card.dataset.name ?? "").includes(query);
+        card.style.display = show ? "" : "none";
+        if (show) inGroup++;
+      }
+      // a group without any hit disappears together with its heading
+      group.style.display = inGroup > 0 ? "" : "none";
+      visible += inGroup;
+    }
+    resultCount.textContent = query ? `${visible} Treffer` : "";
+  });
+  }
+</script>

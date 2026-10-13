@@ -1537,3 +1537,93 @@ tr:hover td {
     animation: none;
   }
 }
+
+/* ==========================================================================
+   Fundorte: pop-up on the Pokémon pages and the /fundorte/ pages
+   ========================================================================== */
+.fundort-link {
+  cursor: pointer;
+  text-decoration: underline dotted;
+  text-underline-offset: 3px;
+}
+.fundort-species {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.6rem;
+}
+.fundort-species img {
+  image-rendering: pixelated;
+  flex: none;
+}
+.fundort-table {
+  margin-bottom: 1rem;
+}
+.fundort-table td {
+  padding-top: 0.3rem;
+  padding-bottom: 0.3rem;
+}
+.fundort-table tr.is-current td {
+  background: rgba(96, 165, 250, 0.16);
+  font-weight: 600;
+}
+.fundort-block + .fundort-block {
+  margin-top: 2rem;
+}
+.fundort-dialog {
+  width: min(680px, calc(100vw - 2rem));
+  max-height: min(80vh, 760px);
+  padding: 0;
+  border: 1px solid var(--border-glass);
+  border-radius: var(--radius-lg);
+  background: var(--bg-elevated);
+  color: var(--text);
+  box-shadow: var(--shadow-lift);
+  overflow: hidden;
+}
+.fundort-dialog[open] {
+  display: flex;
+  flex-direction: column;
+}
+.fundort-dialog::backdrop {
+  background: rgba(0, 0, 0, 0.55);
+  backdrop-filter: blur(2px);
+}
+.fundort-dialog-head {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+  padding: 0.9rem 1.2rem;
+  border-bottom: 1px solid var(--border-glass);
+}
+.fundort-dialog-head h2 {
+  margin: 0;
+  font-size: 1.25rem;
+}
+.fundort-dialog-close {
+  flex: none;
+  width: 2.2rem;
+  height: 2.2rem;
+  border: 1px solid var(--border-glass);
+  border-radius: 50%;
+  background: transparent;
+  color: var(--text);
+  font-size: 1.3rem;
+  line-height: 1;
+  cursor: pointer;
+}
+.fundort-dialog-close:hover {
+  background: var(--border-glass);
+}
+.fundort-dialog-body {
+  padding: 0.4rem 1.2rem 1.2rem;
+  overflow-y: auto;
+}
+.fundort-dialog-body h2 {
+  font-size: 1.05rem;
+  margin: 1.2rem 0 0.2rem;
+}
+.fundort-dialog-body h3 {
+  font-size: 0.95rem;
+  margin: 1rem 0 0.4rem;
+}

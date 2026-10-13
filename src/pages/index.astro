@@ -4,6 +4,7 @@ import Card from "../components/Card.astro";
 import TypeChart from "../components/TypeChart.astro";
 import { meta, pokemon, medals } from "../lib/data";
 import { href } from "../lib/url";
+import { wildLocations, isUnnamedLocation } from "../lib/locations";
 
 const formsCount = pokemon.reduce((sum, p) => sum + p.forms.filter((f) => !f.isFemaleForm).length, 0);
 const shinyCount = pokemon.filter((p) => p.shinySprite).length;
@@ -15,6 +16,7 @@ const categories = [
   { href: href("/attacken/"), label: "Attacken", count: meta.counts.moves },
   { href: href("/faehigkeiten/"), label: "Fähigkeiten", count: meta.counts.abilities },
   { href: href("/items/"), label: "Items", count: meta.counts.items },
+  { href: href("/fundorte/"), label: "Fundorte", count: wildLocations.filter((l) => !isUnnamedLocation(l.name)).length },
   { href: href("/trainer/"), label: "Trainer", count: meta.counts.trainers },
   { href: href("/medaillen/"), label: "Medaillen", count: medals.length },
   { href: href("/rechner/"), label: "Rechner", count: "Schaden berechnen" },

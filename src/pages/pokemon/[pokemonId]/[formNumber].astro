@@ -8,6 +8,8 @@ import { formatEvolutionCondition, evolutionMethodLabel, isItemEvolutionMethod }
 import { eggGroupLabel } from "../../../lib/eggGroups";
 import { wildItemRows } from "../../../lib/wildItems";
 import { href } from "../../../lib/url";
+import { wildLocationPath } from "../../../lib/locations";
+import FundortDialog from "../../../components/FundortDialog.astro";
 
 export function getStaticPaths() {
   return pokemon.flatMap((p) =>
@@ -268,7 +270,7 @@ const locationsByPlace = Object.groupBy
       {Object.entries(locationsByPlace).map(([place, refs]: [string, any]) => (
         refs.map((r: any, i: number) => (
           <tr>
-            {i === 0 ? <td rowspan={refs.length}>{place}</td> : null}
+            {i === 0 ? <td rowspan={refs.length}>{wildLocationPath(place) ? <a class="fundort-link" href={href(wildLocationPath(place)!)}>{place}</a> : place}</td> : null}
             <td>{encounterMethodLabel(r.method)}</td>
             <td>{r.minLevel === r.maxLevel ? r.minLevel : `${r.minLevel}–${r.maxLevel}`}</td>
             <td>{formatEncounterChance(r.chance)}</td>
@@ -277,4 +279,5 @@ const locationsByPlace = Object.groupBy
       ))}
     </table>
   ) : <p class="section-empty">Kein bekannter wilder Fundort für diese Form.</p>}
+  <FundortDialog current={`${p.id}_${f.formNumber}`} />
 </Layout>

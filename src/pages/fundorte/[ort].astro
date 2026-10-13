@@ -1,0 +1,51 @@
+---
+// One page per place with wild encounters. It works as a normal page, and the Pokémon pages load
+// its #fundort-inhalt block into a pop-up (see components/FundortDialog.astro).
+import Layout from "../../layouts/Layout.astro";
+import PageHeader from "../../components/PageHeader.astro";
+import { wildLocations } from "../../lib/locations";
+import { encounterMethodLabel, formatEncounterChance } from "../../lib/encounterMethods";
+import { href } from "../../lib/url";
+
+export function getStaticPaths() {
+  return wildLocations.map((location) => ({ params: { ort: location.slug }, props: { location } }));
+}
+
+const { location } = Astro.props;
+---
+
+<Layout title={`Fundort: ${location.name}`}>
+  <PageHeader backHref={href("/fundorte/")} backLabel="← Alle Fundorte" title={location.name} />
+  <div id="fundort-inhalt">
+    <p class="meta-note">
+      {location.speciesCount} wilde Pokémon. Die Häufigkeit gilt jeweils innerhalb einer Methode.
+    </p>
+    {location.blocks.map((block) => (
+      <section class="fundort-block">
+        {location.blocks.length > 1 && (
+          <h2>{block.mapIds.length > 1 ? "Karten" : "Karte"} {block.mapIds.join(", ")}</h2>
+        )}
+        {block.tables.map((table) => (
+          <>
+            <h3>{encounterMethodLabel(table.method)}</h3>
+            <table class="fundort-table">
+              <tr><th>Pokémon</th><th>Level</th><th>Häufigkeit</th></tr>
+              {table.slots.map((slot) => (
+                <tr data-species={slot.speciesKey}>
+                  <td>
+                    <span class="fundort-species">
+                      {slot.sprite && <img src={href(`/sprites/${slot.sprite}`)} alt="" loading="lazy" width="40" height="40" />}
+                      {slot.path ? <a href={href(slot.path)}>{slot.name}</a> : slot.name}
+                    </span>
+                  </td>
+                  <td>{slot.minLevel === slot.maxLevel ? slot.minLevel : `${slot.minLevel}–${slot.maxLevel}`}</td>
+                  <td>{formatEncounterChance(slot.chance)}</td>
+                </tr>
+              ))}
+            </table>
+          </>
+        ))}
+      </section>
+    ))}
+  </div>
+</Layout>

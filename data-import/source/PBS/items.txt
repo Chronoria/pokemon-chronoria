@@ -2113,8 +2113,9 @@ Name = Herzschuppe
 NamePlural = Herzschuppen
 Pocket = 1
 Price = 100
-Flags = Fling_30
-Description = Hübsche Schuppe, höchst begehrt bei Sammlern. 
+FieldUse = OnPokemon
+Flags = EvolutionStone,Fling_30
+Description = Hübsche Schuppe, höchst begehrt bei Sammlern. Löst bei einem bestimmten Pokémon die Entwicklung aus.
 #-------------------------------Einzigartig
 [ABILITYSHIELD]
 Name = Fähigkeitenschild

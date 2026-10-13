@@ -10476,7 +10476,7 @@ Generation = 3
 WildItemCommon = HEARTSCALE
 CallRateSOS = 6
 RaidRanks = 1,2
-Evolutions = ALOMOMOLA,Happiness
+Evolutions = ALOMOMOLA,Item,HEARTSCALE
 #-------------------------------
 [BAGON]
 Name = Kindwurm
