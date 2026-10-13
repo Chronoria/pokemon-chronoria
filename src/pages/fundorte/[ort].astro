@@ -1,6 +1,10 @@
 ---
 // One page per place with wild encounters. It works as a normal page, and the Pokémon pages load
 // its #fundort-inhalt block into a pop-up (see components/FundortDialog.astro).
+//
+// A place can consist of several parts with different encounters. Each part shows the
+// screenshots of its maps on top; a part without any screenshot yet gets a plain "Bereich N"
+// heading instead, so the parts can still be told apart.
 import Layout from "../../layouts/Layout.astro";
 import PageHeader from "../../components/PageHeader.astro";
 import { wildLocations } from "../../lib/locations";
@@ -20,10 +24,18 @@ const { location } = Astro.props;
     <p class="meta-note">
       {location.speciesCount} wilde Pokémon. Die Häufigkeit gilt jeweils innerhalb einer Methode.
     </p>
-    {location.blocks.map((block) => (
+    {location.blocks.map((block, index) => (
       <section class="fundort-block">
-        {location.blocks.length > 1 && (
-          <h2>{block.mapIds.length > 1 ? "Karten" : "Karte"} {block.mapIds.join(", ")}</h2>
+        {block.images.length > 0 ? (
+          <div class={`fundort-maps${block.images.length === 1 ? " is-single" : ""}`}>
+            {block.images.map((image) => (
+              <a href={href(image)} target="_blank" rel="noopener" title="Karte in voller Größe öffnen">
+                <img src={href(image)} alt={`Karte: ${location.name}`} loading="lazy" />
+              </a>
+            ))}
+          </div>
+        ) : location.blocks.length > 1 && (
+          <h2>Bereich {index + 1}</h2>
         )}
         {block.tables.map((table) => (
           <>

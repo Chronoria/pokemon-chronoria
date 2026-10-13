@@ -8,6 +8,7 @@
 
 import { existsSync, mkdirSync, readdirSync, copyFileSync, unlinkSync, writeFileSync } from "node:fs";
 import { join } from "node:path";
+import { syncMapScreenshots } from "./syncMapScreenshots.ts";
 
 const gameDir = process.argv[2] ?? "E:/Test";
 const outDir = join(import.meta.dirname, "source");
@@ -139,6 +140,9 @@ const regionalEvolutionsCopied = copySingleFile(
   join(outDir, "Plugins", "regional_evolutions.rb")
 );
 
+// Map screenshots for the /fundorte/ pages (needs the encounters.txt copied above).
+const mapScreenshots = await syncMapScreenshots(join(outDir, "PBS"), publicDir);
+
 console.log(`Sync abgeschlossen aus ${gameDir}:`);
 console.log(`  PBS: ${pbsCount} Dateien`);
 console.log(`  Text_deutsch_core: ${deCount} Dateien`);
@@ -152,3 +156,4 @@ console.log(`  Medaillen-Icons: ${medalIconCount} Dateien`);
 console.log(`  Charakter-Sprite-Namen: ${characterCount}`);
 console.log(`  Map-Event-Dump: ${eventDumpCopied ? "kopiert" : "nicht gefunden - übersprungen"}`);
 console.log(`  Regionale Entwicklungen (Plugin): ${regionalEvolutionsCopied ? "kopiert" : "nicht gefunden - übersprungen"}`);
+console.log(`  Karten-Screenshots: ${mapScreenshots}`);

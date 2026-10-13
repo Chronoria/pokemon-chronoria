@@ -3,7 +3,18 @@
 // three maps, the Lucenhöhle ten). The wiki lists a place once, so maps are grouped by name here,
 // and maps whose encounter tables are identical are merged into a single block.
 import encountersData from "../data/encounters.json";
+import { existsSync, readdirSync } from "node:fs";
+import { join } from "node:path";
 import { pokemonById, slugify } from "./data";
+
+// Map screenshots converted by data-import/syncMapScreenshots.ts: "<mapId>.webp" for a single
+// map, "name-<slug>.webp" for a place as a whole. Not every map has one yet. Read from disk at
+// build time (the project root is the working directory for both `astro dev` and `astro build`).
+const MAP_IMAGE_DIR = join(process.cwd(), "public", "maps");
+const mapImageFiles = new Set(existsSync(MAP_IMAGE_DIR) ? readdirSync(MAP_IMAGE_DIR) : []);
+function mapImagePath(fileName: string): string | null {
+  return mapImageFiles.has(fileName) ? `/maps/${fileName}` : null;
+}
 
 interface Slot {
   chance: number;
@@ -39,6 +50,8 @@ export interface LocationTable {
 }
 export interface LocationBlock {
   mapIds: string[];
+  /** screenshot paths below the site root for those of this block's maps that have one */
+  images: string[];
   tables: LocationTable[];
 }
 export type LocationCategory = "routen" | "staedte" | "besondere";
@@ -121,6 +134,7 @@ function buildLocations(): WildLocation[] {
       }
       blocks.set(key, {
         mapIds: [map.mapId],
+        images: [],
         tables: map.tables.map((t) => {
           const total = t.slots.reduce((sum, s) => sum + s.chance, 0);
           return { method: t.method, slots: t.slots.map((s) => resolveSlot(s, total)) };
@@ -133,6 +147,12 @@ function buildLocations(): WildLocation[] {
     usedSlugs.set(slug, seen + 1);
     if (seen > 0) slug = `${slug}-${seen + 1}`;
     const blockList = [...blocks.values()];
+    for (const block of blockList) {
+      block.images = block.mapIds.map((id) => mapImagePath(`${id}.webp`)).filter((p): p is string => p !== null);
+    }
+    // an older screenshot without a map id stands for the whole place, if nothing more exact exists
+    const placeImage = mapImagePath(`name-${slugify(name)}.webp`);
+    if (placeImage && blockList.every((b) => b.images.length === 0)) blockList[0].images = [placeImage];
     const speciesCount = new Set(blockList.flatMap((b) => b.tables.flatMap((t) => t.slots.map((s) => s.speciesKey)))).size;
     result.push({ name, slug, category: categoryOf(name), speciesCount, blocks: blockList });
   }
