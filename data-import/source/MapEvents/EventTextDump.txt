@@ -115171,6 +115171,27 @@ List of Event Commands:
 @>
 
 #------------------------------------------------------------------------------
+Event ID: 099
+Event Name: BasicRaidDen
+(X,Y): (047,006)
+
+Page #1
+Conditions
+None
+
+Autonomous Movement
+Type: Fixed
+Speed: 3: Slow
+Freq: 3: Low
+Options Enabled
+Move Animation
+Trigger: Action Button
+
+List of Event Commands:
+@>Script: pbRaidDen
+@>
+
+#------------------------------------------------------------------------------
 
 #==============================================================================
 Map ID: 162
@@ -492988,6 +493009,30 @@ List of Event Commands:
 @>Transfer Player:[653: Route 21], (001,025), Right, No Fade
 @>Change Screen Color Tone: (0,0,0,0), @6
 @>Wait: 8 frame(s)
+@>
+
+#------------------------------------------------------------------------------
+Event ID: 009
+Event Name: BasicRaidDen
+(X,Y): (016,017)
+
+Page #1
+Conditions
+None
+
+Autonomous Movement
+Type: Fixed
+Speed: 3: Slow
+Freq: 3: Low
+Options Enabled
+Stop Animation
+Trigger: Action Button
+
+List of Event Commands:
+@>Script: RaidBattle.start(nil, {
+:       :   :rank          => 6,
+:       :   :shield_hp     => 8
+:       : })
 @>
 
 #------------------------------------------------------------------------------

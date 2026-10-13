@@ -187,7 +187,6 @@ Category = Love-Hate
 Pokedex = When it flies to this land from across the sea, the bitter winter comes to an end. According to legend, this Pokémon's love gives rise to the budding of fresh life across Hisui.
 Generation = 8
 Flags = Legendary,ForcesOfNature
-RaidRanks = 6
 #-------------------------------
 [SPRIGATITO]
 Name = Felori
@@ -2839,7 +2838,6 @@ Category = Ruinous
 Pokedex = The grudge of a person punished for writing the king’s evil deeds upon wooden tablets has clad itself in dead leaves to become a Pokémon.
 Generation = 9
 Flags = Legendary
-RaidRanks = 6
 #-------------------------------
 [CHIENPAO]
 Name = Baojian
@@ -2865,7 +2863,6 @@ Category = Ruinous
 Pokedex = This Pokémon can control 100 tons of fallen snow. It plays around innocently by leaping in and out of avalanches it has caused.
 Generation = 9
 Flags = Legendary
-RaidRanks = 6
 #-------------------------------
 [TINGLU]
 Name = Dinglu
@@ -2891,7 +2888,6 @@ Category = Ruinous
 Pokedex = The fear poured into an ancient ritual vessel has clad itself in rocks and dirt to become a Pokémon.
 Generation = 9
 Flags = Legendary
-RaidRanks = 6
 #-------------------------------
 [CHIYU]
 Name = Yuyu
@@ -2917,7 +2913,6 @@ Category = Ruinous
 Pokedex = It controls flames burning at over 5,400 degrees Fahrenheit. It casually swims through the sea of lava it creates by melting rock and sand.
 Generation = 9
 Flags = Legendary
-RaidRanks = 6
 #-------------------------------
 [ROARINGMOON]
 Name = Donnersichel
@@ -3190,7 +3185,6 @@ Category = Retainer
 Pokedex = After all its muscles were stimulated by the toxic chain around its neck, Okidogi transformed and gained a powerful physique.
 Generation = 9
 Flags = Legendary
-RaidRanks = 6
 #-------------------------------
 [MUNKIDORI]
 Name = Benesaru
@@ -3217,7 +3211,6 @@ Category = Retainer
 Pokedex = The chain is made from toxins that enhance capabilities. It stimulated Munkidori's brain and caused the Pokémon's psychic powers to bloom.
 Generation = 9
 Flags = Legendary
-RaidRanks = 6
 #-------------------------------
 [FEZANDIPITI]
 Name = Beatori
@@ -3244,7 +3237,6 @@ Category = Retainer
 Pokedex = Fezandipiti owes its beautiful looks and lovely voice to the toxic stimulants emanating from the chain wrapped around its body.
 Generation = 9
 Flags = Legendary
-RaidRanks = 6
 #-------------------------------
 [OGERPON]
 Name = Ogerpon
@@ -3271,7 +3263,6 @@ Category = Mask
 Pokedex = This Pokémon's type changes based on which mask it's wearing. It confounds its enemies with nimble movements and kicks.
 Generation = 9
 Flags = Legendary,TeraType_GRASS
-RaidRanks = 6
 #-------------------------------
 [ARCHALUDON]
 Name = Briduradon

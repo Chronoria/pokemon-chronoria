@@ -4084,7 +4084,6 @@ Category = Freeze
 Pokedex = Articuno is a legendary bird Pokémon that can control ice. The flapping of its wings chills the air. As a result, it is said that when this Pokémon flies, snow will fall.
 Generation = 1
 Flags = Legendary
-RaidRanks = 6
 #-------------------------------
 [ZAPDOS]
 Name = Zapdos
@@ -4111,7 +4110,6 @@ Category = Electric
 Pokedex = Zapdos is a legendary bird Pokémon that has the ability to control electricity. It usually lives in thunderclouds. It gains power if it is stricken by lightning bolts.
 Generation = 1
 Flags = Legendary
-RaidRanks = 6
 #-------------------------------
 [MOLTRES]
 Name = Lavados
@@ -4138,7 +4136,6 @@ Category = Flame
 Pokedex = Moltres is a legendary bird Pokémon that can control fire. If injured, it is said to dip its body in the molten magma of a volcano to burn and heal itself.
 Generation = 1
 Flags = Legendary
-RaidRanks = 6
 #-------------------------------
 [DRATINI]
 Name = Dratini
@@ -4252,7 +4249,6 @@ Category = Genetic
 Pokedex = A Pokémon that was created by genetic manipulation. However, even though the scientific power of humans made its body, they failed to give it a warm heart.
 Generation = 1
 Flags = Legendary
-RaidRanks = 6
 #-------------------------------
 [MEW]
 Name = Mew
@@ -4281,7 +4277,6 @@ Flags = Mythical
 WildItemCommon = LUMBERRY
 WildItemUncommon = LUMBERRY
 WildItemRare = LUMBERRY
-RaidRanks = 6
 #-------------------------------
 [CHIKORITA]
 Name = Endivie
@@ -6872,7 +6867,6 @@ Category = Thunder
 Pokedex = Raikou embodies the speed of lightning. Its roars send shock waves shuddering through the air and ground as if lightning bolts were crashing down.
 Generation = 2
 Flags = Legendary
-RaidRanks = 6
 #-------------------------------
 [ENTEI]
 Name = Entei
@@ -6899,7 +6893,6 @@ Category = Volcano
 Pokedex = Entei embodies the passion of magma. It is thought to have been born in the eruption of a volcano. It blasts fire that consumes all that it touches.
 Generation = 2
 Flags = Legendary
-RaidRanks = 6
 #-------------------------------
 [SUICUNE]
 Name = Suicune
@@ -6926,7 +6919,6 @@ Category = Aurora
 Pokedex = Suicune embodies the compassion of a pure spring of water. It runs across the land with gliding elegance. It has the power to purify dirty water.
 Generation = 2
 Flags = Legendary
-RaidRanks = 6
 #-------------------------------
 [LARVITAR]
 Name = Larvitar
@@ -7035,7 +7027,6 @@ Category = Diving
 Pokedex = Lugia is so powerful even a light fluttering of its wings can blow apart houses. As a result, it chooses to live out of sight deep under the sea.
 Generation = 2
 Flags = Legendary
-RaidRanks = 6
 #-------------------------------
 [HOOH]
 Name = Ho-Oh
@@ -7065,7 +7056,6 @@ Flags = Legendary
 WildItemCommon = SACREDASH
 WildItemUncommon = SACREDASH
 WildItemRare = SACREDASH
-RaidRanks = 6
 #-------------------------------
 [CELEBI]
 Name = Celebi
@@ -7094,7 +7084,6 @@ Flags = Mythical
 WildItemCommon = LUMBERRY
 WildItemUncommon = LUMBERRY
 WildItemRare = LUMBERRY
-RaidRanks = 6
 #-------------------------------
 [TREECKO]
 Name = Geckarbor
@@ -10674,7 +10663,6 @@ Category = Rock Peak
 Pokedex = A Pokémon that is made entirely of rocks and boulders. If parts of its body chip off in battle, Regirock repairs itself by adding new rocks.
 Generation = 3
 Flags = Legendary
-RaidRanks = 6
 #-------------------------------
 [REGICE]
 Name = Regiice
@@ -10701,7 +10689,6 @@ Category = Iceberg
 Pokedex = Its entire body is made of Antarctic ice. After extensive studies, researchers believe the ice was formed during an ice age.
 Generation = 3
 Flags = Legendary
-RaidRanks = 6
 #-------------------------------
 [REGISTEEL]
 Name = Registeel
@@ -10728,7 +10715,6 @@ Category = Iron
 Pokedex = Its body is harder than any other kind of metal. The body metal is composed of a mysterious substance. Not only is it hard, it shrinks and stretches flexibly.
 Generation = 3
 Flags = Legendary
-RaidRanks = 6
 #-------------------------------
 [LATIAS]
 Name = Latias
@@ -10754,7 +10740,6 @@ Category = Eon
 Pokedex = They make a small herd of only several members. They rarely make contact with people or other Pokémon. They disappear if they sense enemies.
 Generation = 3
 Flags = Legendary
-RaidRanks = 6
 #-------------------------------
 [LATIOS]
 Name = Latios
@@ -10780,7 +10765,6 @@ Category = Eon
 Pokedex = Even in hiding, it can detect the locations of others and sense their emotions since it has telepathy. Its intelligence allows it to understand human languages.
 Generation = 3
 Flags = Legendary
-RaidRanks = 6
 #-------------------------------
 [KYOGRE]
 Name = Kyogre
@@ -10806,7 +10790,6 @@ Category = Sea Basin
 Pokedex = Kyogre has appeared in mythology as the creator of the sea. After long years of feuding with Groudon, it took to sleep at the bottom of the sea.
 Generation = 3
 Flags = Legendary
-RaidRanks = 6
 #-------------------------------
 [GROUDON]
 Name = Groudon
@@ -10832,7 +10815,6 @@ Category = Continent
 Pokedex = Groudon has appeared in mythology as the creator of the land. It sleeps in magma underground and is said to make volcanoes erupt on awakening.
 Generation = 3
 Flags = Legendary
-RaidRanks = 6
 #-------------------------------
 [RAYQUAZA]
 Name = Rayquaza
@@ -10858,7 +10840,6 @@ Category = Sky High
 Pokedex = A Pokémon that flies endlessly in the ozone layer. It is said it would descend to the ground if Kyogre and Groudon were to fight.
 Generation = 3
 Flags = Legendary
-RaidRanks = 6
 #-------------------------------
 [JIRACHI]
 Name = Jirachi
@@ -10887,7 +10868,6 @@ Flags = Mythical
 WildItemCommon = STARPIECE
 WildItemUncommon = STARPIECE
 WildItemRare = STARPIECE
-RaidRanks = 6
 #-------------------------------
 [DEOXYS]
 Name = Deoxys
@@ -10914,7 +10894,6 @@ Category = DNA
 Pokedex = A Pokémon that mutated from an extraterrestrial virus exposed to a laser beam. Its body is configured for superior agility and speed.
 Generation = 3
 Flags = Mythical
-RaidRanks = 6
 #-------------------------------
 [TURTWIG]
 Name = Chelast
@@ -13617,7 +13596,6 @@ Category = Temporal
 Pokedex = It has the power to control time. It appears in Sinnoh-region myths as an ancient deity.
 Generation = 4
 Flags = Legendary
-RaidRanks = 6
 #-------------------------------
 [PALKIA]
 Name = Palkia
@@ -13644,7 +13622,6 @@ Category = Spatial
 Pokedex = It has the ability to distort space. It is described as a deity in Sinnoh-region mythology.
 Generation = 4
 Flags = Legendary
-RaidRanks = 6
 #-------------------------------
 [HEATRAN]
 Name = Heatran
@@ -13697,7 +13674,6 @@ Category = Colossal
 Pokedex = There is an enduring legend that states this Pokémon towed continents with ropes.
 Generation = 4
 Flags = Legendary
-RaidRanks = 6
 #-------------------------------
 [GIRATINA]
 Name = Giratina
@@ -13725,7 +13701,6 @@ Category = Renegade
 Pokedex = A Pokémon that is said to live in a world on the reverse side of ours. It appears in an ancient cemetery.
 Generation = 4
 Flags = Legendary
-RaidRanks = 6
 #-------------------------------
 [CRESSELIA]
 Name = Cresselia
@@ -13751,7 +13726,6 @@ Category = Lunar
 Pokedex = Shiny particles are released from its wings like a veil. It is said to represent the crescent moon.
 Generation = 4
 Flags = Legendary
-RaidRanks = 6
 #-------------------------------
 [PHIONE]
 Name = Phione
@@ -13830,7 +13804,6 @@ Category = Pitch-Black
 Pokedex = It can lull people to sleep and make them dream. It is active during nights of the new moon.
 Generation = 4
 Flags = Mythical
-RaidRanks = 6
 #-------------------------------
 [SHAYMIN]
 Name = Shaymin
@@ -13860,7 +13833,6 @@ Flags = Mythical
 WildItemCommon = LUMBERRY
 WildItemUncommon = LUMBERRY
 WildItemRare = LUMBERRY
-RaidRanks = 6
 #-------------------------------
 [ARCEUS]
 Name = Arceus
@@ -13887,7 +13859,6 @@ Category = Alpha
 Pokedex = It is described in mythology as the Pokémon that shaped the universe with its 1,000 arms.
 Generation = 4
 Flags = Mythical
-RaidRanks = 6
 #-------------------------------
 [VICTINI]
 Name = Victini
@@ -17963,7 +17934,6 @@ Category = Iron Will
 Pokedex = It has a body and heart of steel. Its glare is sufficient to make even an unruly Pokémon obey it.
 Generation = 5
 Flags = Legendary
-RaidRanks = 6
 #-------------------------------
 [TERRAKION]
 Name = Terrakium
@@ -17989,7 +17959,6 @@ Category = Cavern
 Pokedex = Its charge is strong enough to break through a giant castle wall in one blow. This Pokémon is spoken of in legends.
 Generation = 5
 Flags = Legendary
-RaidRanks = 6
 #-------------------------------
 [VIRIZION]
 Name = Viridium
@@ -18015,7 +17984,6 @@ Category = Grassland
 Pokedex = Its head sprouts horns as sharp as blades. Using whirlwind-like movements, it confounds and swiftly cuts opponents.
 Generation = 5
 Flags = Legendary
-RaidRanks = 6
 #-------------------------------
 [TORNADUS]
 Name = Boreos
@@ -18097,7 +18065,6 @@ Category = Vast White
 Pokedex = When Reshiram's tail flares, the heat energy moves the atmosphere and changes the world's weather.
 Generation = 5
 Flags = Legendary
-RaidRanks = 6
 #-------------------------------
 [ZEKROM]
 Name = Zekrom
@@ -18123,7 +18090,6 @@ Category = Deep Black
 Pokedex = This Pokémon appears in legends. In its tail, it has a giant generator that creates electricity.
 Generation = 5
 Flags = Legendary
-RaidRanks = 6
 #-------------------------------
 [LANDORUS]
 Name = Demeteros
@@ -18151,7 +18117,6 @@ Category = Abundance
 Pokedex = The energy that comes pouring from its tail increases the nutrition in the soil, making crops grow to great size.
 Generation = 5
 Flags = Legendary,ForcesOfNature
-RaidRanks = 6
 #-------------------------------
 [KYUREM]
 Name = Kyurem
@@ -18177,7 +18142,6 @@ Category = Boundary
 Pokedex = It generates a powerful, freezing energy inside itself, but its body became frozen when the energy leaked out.
 Generation = 5
 Flags = Legendary
-RaidRanks = 6
 #-------------------------------
 [KELDEO]
 Name = Keldeo
@@ -18205,7 +18169,6 @@ Category = Colt
 Pokedex = It crosses the world, running over the surfaces of oceans and rivers. It appears at scenic waterfronts.
 Generation = 5
 Flags = Mythical
-RaidRanks = 6
 #-------------------------------
 [MELOETTA]
 Name = Meloetta
@@ -20125,7 +20088,6 @@ Category = Life
 Pokedex = Legends say it can share eternal life. It slept for a thousand years in the form of a tree before its revival.
 Generation = 6
 Flags = Legendary
-RaidRanks = 6
 #-------------------------------
 [YVELTAL]
 Name = Yveltal
@@ -20151,7 +20113,6 @@ Category = Destruction
 Pokedex = When its life comes to an end, it absorbs the life energy of every living thing and turns into a cocoon once more.
 Generation = 6
 Flags = Legendary
-RaidRanks = 6
 #-------------------------------
 [ZYGARDE]
 Name = Zygarde
@@ -20178,7 +20139,6 @@ Category = Order
 Pokedex = It's thought to be monitoring the ecosystem. There are rumors that even greater power lies hidden within it.
 Generation = 6
 Flags = Legendary
-RaidRanks = 6
 #-------------------------------
 [DIANCIE]
 Name = Diancie
@@ -20204,7 +20164,6 @@ Category = Jewel
 Pokedex = A sudden transformation of Carbink, its pink, glimmering body is said to be the loveliest sight in the whole world.
 Generation = 6
 Flags = Mythical
-RaidRanks = 6
 #-------------------------------
 [HOOPA]
 Name = Hoopa
@@ -20231,7 +20190,6 @@ Category = Mischief
 Pokedex = This troublemaker sends anything and everything to faraway places using its loop, which can warp space.
 Generation = 6
 Flags = Mythical
-RaidRanks = 6
 #-------------------------------
 [VOLCANION]
 Name = Volcanion
@@ -20257,7 +20215,6 @@ Category = Steam
 Pokedex = It lets out billows of steam and disappears into the dense fog. It's said to live in mountains where humans do not tread.
 Generation = 6
 Flags = Mythical
-RaidRanks = 6
 #-------------------------------
 [ROWLET]
 Name = Bauz
@@ -21702,7 +21659,6 @@ Pokedex = The heavy control mask it wears suppresses its intrinsic capabilities.
 Generation = 7
 Flags = Legendary
 Evolutions = TYPENULL,Level,45
-RaidRanks = 6
 #-------------------------------
 [TYPENULL]
 Name = Typ:Null
@@ -21729,7 +21685,6 @@ Pokedex = The heavy control mask it wears suppresses its intrinsic capabilities.
 Generation = 7
 Flags = Legendary
 Evolutions = SILVALLY,Level,55
-RaidRanks = 6
 #-------------------------------
 [SILVALLY]
 Name = Amigento
@@ -21756,7 +21711,6 @@ Category = Synthetic
 Pokedex = Its trust in its partner is what awakens it. This Pokémon is capable of changing its type, a flexibility that is well displayed in battle.
 Generation = 7
 Flags = Legendary
-RaidRanks = 6
 #-------------------------------
 [MINIOR]
 Name = Meteno
@@ -22198,7 +22152,6 @@ Pokedex = Whether or not it's a Pokémon from this world is a mystery. When it's
 Generation = 7
 Flags = Legendary
 Evolutions = COSMOEM,Level,43
-RaidRanks = 6
 #-------------------------------
 [COSMOEM]
 Name = Cosmovum
@@ -22225,7 +22178,6 @@ Pokedex = Motionless as if dead, its body is faintly warm to the touch. In the d
 Generation = 7
 Flags = Legendary
 Evolutions = SOLGALEO,LevelDay,53,LUNALA,LevelNight,53
-RaidRanks = 6
 #-------------------------------
 [SOLGALEO]
 Name = Solgaleo
@@ -22251,7 +22203,6 @@ Category = Sunne
 Pokedex = It is said to live in another world. The intense light it radiates from the surface of its body can make the darkest of nights light up like midday.
 Generation = 7
 Flags = Legendary
-RaidRanks = 6
 #-------------------------------
 [LUNALA]
 Name = Lunala
@@ -22277,7 +22228,6 @@ Category = Moone
 Pokedex = Said to live in another world, this Pokémon devours light, drawing the moonless dark veil of night over the brightness of day.
 Generation = 7
 Flags = Legendary
-RaidRanks = 6
 #-------------------------------
 [NIHILEGO]
 Name = Anego
@@ -22303,7 +22253,6 @@ Category = Parasite
 Pokedex = One of several mysterious Ultra Beasts. People on the street report observing those infested by it suddenly becoming violent.
 Generation = 7
 Flags = UltraBeast
-RaidRanks = 6
 #-------------------------------
 [BUZZWOLE]
 Name = Masskito
@@ -22329,7 +22278,6 @@ Category = Swollen
 Pokedex = This Ultra Beast appeared from another world. It shows off its body, but whether that display is a boast or a threat remains unclear.
 Generation = 7
 Flags = UltraBeast
-RaidRanks = 6
 #-------------------------------
 [PHEROMOSA]
 Name = Schabelle
@@ -22355,7 +22303,6 @@ Category = Lissome
 Pokedex = One of the Ultra Beasts. It refuses to touch anything, perhaps because it senses some uncleanness in this world.
 Generation = 7
 Flags = UltraBeast
-RaidRanks = 6
 #-------------------------------
 [XURKITREE]
 Name = Voltriant
@@ -22381,7 +22328,6 @@ Category = Glowing
 Pokedex = One of the mysterious life-forms known as Ultra Beasts. Astonishing electric shocks emanate from its entire body, according to witnesses.
 Generation = 7
 Flags = UltraBeast
-RaidRanks = 6
 #-------------------------------
 [CELESTEELA]
 Name = Kaguron
@@ -22407,7 +22353,6 @@ Category = Launch
 Pokedex = One kind of Ultra Beast. Witnesses have seen it burn down a forest by expelling gas from its two arms.
 Generation = 7
 Flags = UltraBeast
-RaidRanks = 6
 #-------------------------------
 [KARTANA]
 Name = Katagami
@@ -22433,7 +22378,6 @@ Category = Drawn Sword
 Pokedex = One of the Ultra Beast life-forms, it was observed cutting down a gigantic steel tower with one stroke of its blade.
 Generation = 7
 Flags = UltraBeast
-RaidRanks = 6
 #-------------------------------
 [GUZZLORD]
 Name = Schlingking
@@ -22459,7 +22403,6 @@ Category = Junkivore
 Pokedex = A dangerous Ultra Beast, it appears to be eating constantly, but for some reason its droppings have never been found.
 Generation = 7
 Flags = UltraBeast
-RaidRanks = 6
 #-------------------------------
 [NECROZMA]
 Name = Necrozma
@@ -22485,7 +22428,6 @@ Category = Prism
 Pokedex = Light is apparently the source of its energy. It has an extraordinarily vicious disposition and is constantly firing off laser beams.
 Generation = 7
 Flags = Legendary
-RaidRanks = 6
 #-------------------------------
 [MAGEARNA]
 Name = Magearna
@@ -22564,7 +22506,6 @@ Pokedex = An Ultra Beast that lives in a different world, it cackles wildly as i
 Generation = 7
 Flags = UltraBeast
 Evolutions = NAGANADEL,HasMove,DRAGONPULSE
-RaidRanks = 6
 #-------------------------------
 [NAGANADEL]
 Name = Agoyon
@@ -22590,7 +22531,6 @@ Category = Poison Pin
 Pokedex = One kind of Ultra Beast, it fires a glowing, venomous liquid from its needles. This liquid is also immensely adhesive.
 Generation = 7
 Flags = UltraBeast
-RaidRanks = 6
 #-------------------------------
 [STAKATAKA]
 Name = Muramura
@@ -22616,7 +22556,6 @@ Category = Rampart
 Pokedex = When stone walls started moving and attacking, the brute's true identity was this mysterious life-form, which brings to mind an Ultra Beast.
 Generation = 7
 Flags = UltraBeast
-RaidRanks = 6
 #-------------------------------
 [BLACEPHALON]
 Name = Kopplosio
@@ -22642,7 +22581,6 @@ Category = Fireworks
 Pokedex = It slithers toward people. Then, without warning, it triggers the explosion of its own head. It's apparently one kind of Ultra Beast.
 Generation = 7
 Flags = UltraBeast
-RaidRanks = 6
 #-------------------------------
 [ZERAORA]
 Name = Zeraora
@@ -22695,7 +22633,6 @@ Pokedex = It melts particles of iron and other metals found in the subsoil, so i
 Generation = 7
 Flags = Mythical
 Evolutions = MELMETAL,Item,METALCOAT
-RaidRanks = 6
 #-------------------------------
 [MELMETAL]
 Name = Melmetal
@@ -22722,7 +22659,6 @@ Category = Hex Nut
 Pokedex = Revered long ago for its capacity to create iron from nothing, for some reason it has come back to life after 3,000 years.
 Generation = 7
 Flags = Mythical
-RaidRanks = 6
 #-------------------------------
 [GROOKEY]
 Name = Chimpep
@@ -24933,7 +24869,6 @@ Flags = Legendary,CannotDynamax
 WildItemCommon = RUSTEDSWORD
 WildItemUncommon = RUSTEDSWORD
 WildItemRare = RUSTEDSWORD
-RaidRanks = 6
 #-------------------------------
 [ZAMAZENTA]
 Name = Zamazenta
@@ -24963,7 +24898,6 @@ Flags = Legendary,CannotDynamax
 WildItemCommon = RUSTEDSHIELD
 WildItemUncommon = RUSTEDSHIELD
 WildItemRare = RUSTEDSHIELD
-RaidRanks = 6
 #-------------------------------
 [ETERNATUS]
 Name = Endynalos
@@ -24989,7 +24923,6 @@ Category = Gigantic
 Pokedex = The core on its chest absorbs energy emanating from the lands of the Galar region. This energy is what allows Eternatus to stay active.
 Generation = 8
 Flags = Legendary
-RaidRanks = 6
 #-------------------------------
 [KUBFU]
 Name = Dakuma
@@ -25016,7 +24949,6 @@ Pokedex = Kubfu trains hard to perfect its moves. The moves it masters will dete
 Generation = 8
 Flags = Legendary
 Evolutions = URSHIFU,Item,SCROLLOFDARKNESS,URSHIFU,Item,SCROLLOFWATERS
-RaidRanks = 6
 #-------------------------------
 [URSHIFU]
 Name = Wulaosu
@@ -25043,7 +24975,6 @@ Category = Wushu
 Pokedex = Inhabiting the mountains of a distant region, this Pokémon races across sheer cliffs, training its legs and refining its moves.
 Generation = 8
 Flags = Legendary
-RaidRanks = 6
 #-------------------------------
 [ZARUDE]
 Name = Zarude
@@ -25070,7 +25001,6 @@ Category = Rogue Monkey
 Pokedex = Once the vines on Zarude's body tear off, they become nutrients in the soil. This helps the plants of the forest grow.
 Generation = 8
 Flags = Mythical
-RaidRanks = 6
 #-------------------------------
 [REGIELEKI]
 Name = Regieleki
@@ -25096,7 +25026,6 @@ Category = Electron
 Pokedex = This Pokémon is a cluster of electrical energy. It's said that removing the rings on Regieleki's body will unleash the Pokémon's latent power.
 Generation = 8
 Flags = Legendary
-RaidRanks = 6
 #-------------------------------
 [REGIDRAGO]
 Name = Regidrago
@@ -25122,7 +25051,6 @@ Category = Dragon Orb
 Pokedex = Its body is composed of crystallized dragon energy. Regidrago is said to have the powers of every dragon Pokémon.
 Generation = 8
 Flags = Legendary
-RaidRanks = 6
 #-------------------------------
 [GLASTRIER]
 Name = Polaross
