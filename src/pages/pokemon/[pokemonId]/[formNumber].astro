@@ -3,7 +3,7 @@ import Layout from "../../../layouts/Layout.astro";
 import TypeBadge from "../../../components/TypeBadge.astro";
 import StatBar from "../../../components/StatBar.astro";
 import { pokemon, pokemonById, moveById, abilityById, itemById, slugify, pokemonDexNumber, typeNameById } from "../../../lib/data";
-import { encounterMethodLabel } from "../../../lib/encounterMethods";
+import { encounterMethodLabel, formatEncounterChance } from "../../../lib/encounterMethods";
 import { formatEvolutionCondition, evolutionMethodLabel, isItemEvolutionMethod } from "../../../lib/evolutionMethods";
 import { eggGroupLabel } from "../../../lib/eggGroups";
 import { wildItemRows } from "../../../lib/wildItems";
@@ -264,13 +264,14 @@ const locationsByPlace = Object.groupBy
   <h2>Fundorte (wild)</h2>
   {Object.keys(locationsByPlace).length > 0 ? (
     <table>
-      <tr><th>Ort</th><th>Methode</th><th>Level</th></tr>
+      <tr><th>Ort</th><th>Methode</th><th>Level</th><th>Häufigkeit</th></tr>
       {Object.entries(locationsByPlace).map(([place, refs]: [string, any]) => (
         refs.map((r: any, i: number) => (
           <tr>
             {i === 0 ? <td rowspan={refs.length}>{place}</td> : null}
             <td>{encounterMethodLabel(r.method)}</td>
             <td>{r.minLevel === r.maxLevel ? r.minLevel : `${r.minLevel}–${r.maxLevel}`}</td>
+            <td>{formatEncounterChance(r.chance)}</td>
           </tr>
         ))
       ))}

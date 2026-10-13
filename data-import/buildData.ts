@@ -144,6 +144,7 @@ async function main() {
   let unresolvedEncounterSpecies = 0;
   for (const location of encounters) {
     for (const table of location.tables) {
+      const totalWeight = table.slots.reduce((sum, s) => sum + s.chance, 0);
       for (const slot of table.slots) {
         const target = resolveEncounterTarget(slot.species, pokemonById);
         if (!target) {
@@ -156,6 +157,7 @@ async function main() {
           method: table.method,
           minLevel: slot.minLevel,
           maxLevel: slot.maxLevel,
+          chance: totalWeight > 0 ? Math.round((slot.chance / totalWeight) * 1000) / 10 : 0,
         };
         const species = pokemonById.get(target.speciesId)!;
         if (target.formNumber === null) {
@@ -238,54 +240,67 @@ async function main() {
     },
   });
 
-  const xlsxResult = await exportItemListXlsx(items, pokemon);
-  console.log(
+  const xlsxResult = await xlsxOrSkip("Item-Uebersicht.xlsx", () => exportItemListXlsx(items, pokemon));
+  if (xlsxResult) console.log(
     `Item-Uebersicht.xlsx aktualisiert: ${xlsxResult.available} erhältlich, ${xlsxResult.unavailable} noch nicht platziert, ` +
       `${xlsxResult.prices} mit Preisvorschlag, ${xlsxResult.byPocket} in der Tasche-Übersicht.`
   );
 
-  const pokemonXlsxResult = await exportPokemonListXlsx(pokemon, items, moves, abilities);
-  console.log(
+  const pokemonXlsxResult = await xlsxOrSkip("Pokemon-Uebersicht.xlsx", () => exportPokemonListXlsx(pokemon, items, moves, abilities));
+  if (pokemonXlsxResult) console.log(
     `Pokemon-Uebersicht.xlsx aktualisiert: ${pokemonXlsxResult.used} verwendet, ${pokemonXlsxResult.unused} noch nicht verwendet, ` +
       `${pokemonXlsxResult.megaDone} von ${pokemonXlsxResult.megaTotal} Mega-Entwicklungen und ` +
       `${pokemonXlsxResult.battleDone} von ${pokemonXlsxResult.battleTotal} Kampfformen erledigt.`
   );
 
-  const encounterXlsxResult = await exportEncounterListXlsx(encounters, pokemon);
-  console.log(
+  const encounterXlsxResult = await xlsxOrSkip("Routen-Uebersicht.xlsx", () => exportEncounterListXlsx(encounters, pokemon));
+  if (encounterXlsxResult) console.log(
     `Routen-Uebersicht.xlsx aktualisiert: ${encounterXlsxResult.locations} Routen, ${encounterXlsxResult.rows} Encounter-Einträge, ` +
       `${encounterXlsxResult.bstEntries} Pokémon in der BST-Rangliste.`
   );
 
-  const fishingXlsxResult = await exportFishingListXlsx(encounters, pokemon);
-  console.log(
+  const fishingXlsxResult = await xlsxOrSkip("Angel-Uebersicht.xlsx", () => exportFishingListXlsx(encounters, pokemon));
+  if (fishingXlsxResult) console.log(
     `Angel-Uebersicht.xlsx aktualisiert: ${fishingXlsxResult.rodsWithData} von ${fishingXlsxResult.rods} Angeln mit ` +
       `Fangdaten, ${fishingXlsxResult.species} angelbare Pokémon.`
   );
-  if (fishingXlsxResult.missingGeneration.length > 0) {
+  if (fishingXlsxResult && fishingXlsxResult.missingGeneration.length > 0) {
     console.warn(
       `  [Angeln] ohne Generationsangabe und daher nicht auf dem Generationen-Blatt: ` +
         fishingXlsxResult.missingGeneration.join(", ")
     );
   }
 
-  const trainerXlsxResult = await exportTrainerListXlsx(trainers);
-  console.log(
+  const trainerXlsxResult = await xlsxOrSkip("Trainer-Uebersicht.xlsx", () => exportTrainerListXlsx(trainers));
+  if (trainerXlsxResult) console.log(
     `Trainer-Uebersicht.xlsx aktualisiert: ${trainerXlsxResult.rows} Auftritte von ` +
       `${trainerXlsxResult.distinct} Trainern auf ${trainerXlsxResult.maps} Karten.`
   );
-  console.log(
+  if (trainerXlsxResult) console.log(
     `  [Trainerklassen] ${trainerXlsxResult.unusedTypes.total} von ${trainerXlsxResult.typesTotal} nicht auf einer Karte: ` +
       `${trainerXlsxResult.unusedTypes.ready} mit beiden Sprites einsatzbereit, ` +
       `${trainerXlsxResult.unusedTypes.dataOnly} davon sogar mit fertigem Team, ` +
       `${trainerXlsxResult.unusedTypes.noSprites} ganz ohne Grafik.`
   );
-  if (trainerXlsxResult.missingPbs > 0) {
+  if (trainerXlsxResult && trainerXlsxResult.missingPbs > 0) {
     console.warn(`  [Trainer] ${trainerXlsxResult.missingPbs} Kampf/Kaempfe ohne Eintrag in trainers.txt - siehe Blatt "Ohne PBS-Eintrag".`);
   }
 
   console.log(`Fertig: ${pokemon.length} Pokémon, ${moves.length} Attacken, ${abilities.length} Fähigkeiten, ` +
     `${items.length} Items, ${trainers.length} Trainer, ${encounters.length} Orte, ${medals.length} Medaillen.`);
+}
+
+// An Excel export fails with EBUSY/EPERM while its file is open in Excel. That must not abort
+// the build (the wiki JSON is already written by then) or block the other Excel files.
+async function xlsxOrSkip<T>(file: string, run: () => Promise<T>): Promise<T | null> {
+  try {
+    return await run();
+  } catch (err) {
+    const code = (err as NodeJS.ErrnoException).code;
+    if (code !== "EBUSY" && code !== "EPERM") throw err;
+    console.warn(`  [Excel] ${file} ist geöffnet und wurde NICHT aktualisiert. Datei schließen und erneut bauen.`);
+    return null;
+  }
 }
 
 await main();

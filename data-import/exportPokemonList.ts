@@ -110,6 +110,43 @@ const BATTLE_ONLY_FORMS: Record<string, BattleFormRule> = {
   TERAPAGOS: { forms: [1, 2], text: (f) => (f === 1 ? "Fähigkeit: Tera-Wandel" : "Terakristallisierung") },
 };
 
+// Forms a Pokémon takes outside of battle through an item: either held (MultipleForms "getForm"
+// handlers) or used on it (ItemHandlers::UseOnPokemon, incl. the fusion items). They have no
+// location of their own: they count as available as soon as another form of the species, the
+// item and - for fusions - the partner species are all obtainable. Taken from the core
+// FormHandlers / Item_Effects scripts and the Generation 9 Pack; keep in sync by hand, like
+// BATTLE_ONLY_FORMS.
+interface ItemFormRule {
+  item: string;
+  partner?: string;
+}
+const plate = (item: string): ItemFormRule => ({ item });
+const ITEM_FORMS: Record<string, Record<number, ItemFormRule>> = {
+  OGERPON: { 1: plate("WELLSPRINGMASK"), 2: plate("HEARTHFLAMEMASK"), 3: plate("CORNERSTONEMASK") },
+  DIALGA: { 1: plate("ADAMANTCRYSTAL") },
+  PALKIA: { 1: plate("LUSTROUSGLOBE") },
+  GIRATINA: { 1: plate("GRISEOUSCORE") },
+  GENESECT: { 1: plate("SHOCKDRIVE"), 2: plate("BURNDRIVE"), 3: plate("CHILLDRIVE"), 4: plate("DOUSEDRIVE") },
+  ARCEUS: {
+    1: plate("FISTPLATE"), 2: plate("SKYPLATE"), 3: plate("TOXICPLATE"), 4: plate("EARTHPLATE"),
+    5: plate("STONEPLATE"), 6: plate("INSECTPLATE"), 7: plate("SPOOKYPLATE"), 8: plate("IRONPLATE"),
+    10: plate("FLAMEPLATE"), 11: plate("SPLASHPLATE"), 12: plate("MEADOWPLATE"), 13: plate("ZAPPLATE"),
+    14: plate("MINDPLATE"), 15: plate("ICICLEPLATE"), 16: plate("DRACOPLATE"), 17: plate("DREADPLATE"),
+    18: plate("PIXIEPLATE"),
+  },
+  SHAYMIN: { 1: plate("GRACIDEA") },
+  TORNADUS: { 1: plate("REVEALGLASS") },
+  THUNDURUS: { 1: plate("REVEALGLASS") },
+  LANDORUS: { 1: plate("REVEALGLASS") },
+  ENAMORUS: { 1: plate("REVEALGLASS") },
+  HOOPA: { 1: plate("PRISONBOTTLE") },
+  ROTOM: { 1: plate("ROTOMCATALOG"), 2: plate("ROTOMCATALOG"), 3: plate("ROTOMCATALOG"), 4: plate("ROTOMCATALOG"), 5: plate("ROTOMCATALOG") },
+  ORICORIO: { 0: plate("REDNECTAR"), 1: plate("YELLOWNECTAR"), 2: plate("PINKNECTAR"), 3: plate("PURPLENECTAR") },
+  KYUREM: { 1: { item: "DNASPLICERS", partner: "RESHIRAM" }, 2: { item: "DNASPLICERS", partner: "ZEKROM" } },
+  NECROZMA: { 1: { item: "NSOLARIZER", partner: "SOLGALEO" }, 2: { item: "NLUNARIZER", partner: "LUNALA" } },
+  CALYREX: { 1: { item: "REINSOFUNITY", partner: "GLASTRIER" }, 2: { item: "REINSOFUNITY", partner: "SPECTRIER" } },
+};
+
 const MEGA_DONE_STYLE: RowStyle = {
   fill: { type: "pattern", pattern: "solid", fgColor: { argb: "FFC6EFCE" } },
   fontColor: "FF006100",
@@ -209,9 +246,27 @@ export async function exportPokemonListXlsx(pokemon: Pokemon[], items: Item[], m
         });
         continue;
       }
-      const locationNames = [...new Set(locationsOf(f.formNumber, f.foundIn))].sort((a, b) =>
+      let locationNames = [...new Set(locationsOf(f.formNumber, f.foundIn))].sort((a, b) =>
         a.localeCompare(b, "de")
       );
+      const itemRule = ITEM_FORMS[p.id]?.[f.formNumber];
+      const formItem = itemRule ? itemById.get(itemRule.item) : undefined;
+      if (locationNames.length === 0 && itemRule && formItem) {
+        const otherFormObtainable = forms.some(
+          (o) => o.formNumber !== f.formNumber && locationsOf(o.formNumber, o.foundIn).length > 0
+        );
+        const partner = itemRule.partner ? pokemonById.get(itemRule.partner) : undefined;
+        const partnerObtainable =
+          !itemRule.partner ||
+          (partner !== undefined &&
+            [...partner.foundIn, ...(eventLocations.get(partner.id)?.get(0) ?? [])].length > 0);
+        if (otherFormObtainable && partnerObtainable) {
+          const suffix = partner ? ` + ${partner.name}` : "";
+          locationNames = [
+            ...new Set(formItem.locations.map((l) => `${formItem.name}${suffix}: ${l.locationName}`)),
+          ].sort((a, b) => a.localeCompare(b, "de"));
+        }
+      }
       const row: Row = {
         dexNumber,
         name: formLabel(p.name, f),

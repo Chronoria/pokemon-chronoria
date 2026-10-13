@@ -12,6 +12,8 @@
 [RD]Obstacles5
 [RD]RockCrack
 000
+0Vine
+0Vine_1
 142_1_Shadow
 144(1)
 180-Switch03

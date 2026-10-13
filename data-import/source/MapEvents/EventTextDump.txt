@@ -146765,27 +146765,6 @@ List of Event Commands:
 @>
 
 #------------------------------------------------------------------------------
-Event ID: 004
-Event Name: BasicRaidDen
-(X,Y): (007,004)
-
-Page #1
-Conditions
-None
-
-Autonomous Movement
-Type: Fixed
-Speed: 3: Slow
-Freq: 3: Low
-Options Enabled
-Stop Animation
-Trigger: Action Button
-
-List of Event Commands:
-@>Script: pbRaidDen
-@>
-
-#------------------------------------------------------------------------------
 
 #==============================================================================
 Map ID: 187
@@ -171227,27 +171206,6 @@ List of Event Commands:
 @>
 
 #------------------------------------------------------------------------------
-Event ID: 052
-Event Name: BasicRaidDen
-(X,Y): (021,007)
-
-Page #1
-Conditions
-None
-
-Autonomous Movement
-Type: Fixed
-Speed: 3: Slow
-Freq: 3: Low
-Options Enabled
-Stop Animation
-Trigger: Action Button
-
-List of Event Commands:
-@>Script: pbRaidDen
-@>
-
-#------------------------------------------------------------------------------
 Event ID: 053
 Event Name: Item
 (X,Y): (068,035)
@@ -184507,65 +184465,6 @@ Move Animation
 Trigger: Action Button
 
 List of Event Commands:
-@>
-
-#------------------------------------------------------------------------------
-Event ID: 066
-Event Name: BasicRaidDen
-(X,Y): (046,007)
-
-Page #1
-Conditions
-None
-
-Autonomous Movement
-Type: Fixed
-Speed: 3: Slow
-Freq: 3: Low
-Options Enabled
-Move Animation
-Direction Fix
-Trigger: Action Button
-
-List of Event Commands:
-@>Script: pbRaidDen
-@>Script: pbSetEventTime
-@>
-
-Page #2
-Conditions
-Self Switch A is ON
-
-Autonomous Movement
-Type: Fixed
-Speed: 3: Slow
-Freq: 3: Low
-Options Enabled
-Move Animation
-Direction Fix
-Trigger: Action Button
-
-List of Event Commands:
-@>Text: Komme morgen wieder.
-@>
-
-Page #3
-Conditions
-Switch 0024: s:cooledDownDays?(1) is ON
-Self Switch A is ON
-
-Autonomous Movement
-Type: Fixed
-Speed: 3: Slow
-Freq: 3: Low
-Options Enabled
-Move Animation
-Direction Fix
-Trigger: Autorun
-
-List of Event Commands:
-@>Control Self Switch: A =OFF
-@>Script: setTempSwitchOn("A")
 @>
 
 #------------------------------------------------------------------------------
@@ -287213,12 +287112,6 @@ List of Event Commands:
  :    : muss gestoppt werden.
 @>Text: \xn[Arenaleiter Marvin]Folge dem Weg nach Osten.
 @>Text: \xn[Arenaleiter Marvin]Dort führen die Leitungen hin.
-@>Text: \xn[Arenaleiter Marvin]Hier, das dürfte in deinen 
- :    : Händen besser aufgehoben sein.
-@>Script: pbReceiveItem(:CAMOUFLAGEITEM)
-@>Text: \xn[Arenaleiter Marvin]Damit kannst du dich 
- :    : vorübergehend fast unsichtbar machen.
-@>Text: \xn[Arenaleiter Marvin]So, wie ein Kecleon!
 @>Text: \xn[Arenaleiter Marvin]Ich glaube daran, dass du 
  :    : stark genug bist, Nexus aufzuhalten.
 @>Text: \xn[Arenaleiter Marvin]Pass auf dich auf!
@@ -298230,257 +298123,6 @@ List of Event Commands:
 @>Transfer Player:[340: Ariduna], (025,079), Up, No Fade
 @>Change Screen Color Tone: (0,0,0,0), @6
 @>Wait: 8 frame(s)
-@>
-
-#------------------------------------------------------------------------------
-Event ID: 099
-Event Name: EV099
-(X,Y): (049,099)
-
-Page #1
-Conditions
-None
-
-Graphic: UMBREON
-
-Autonomous Movement
-Type: Fixed
-Speed: 3: Slow
-Freq: 3: Low
-Options Enabled
-Move Animation
-Trigger: Action Button
-
-List of Event Commands:
-@>Script: if $player.pokedex.owned_count >= 
-:       : 1026
-:       : pbMessage("Wow! Du hast alle Pokémon 
-:       : gefangen!")
-:       : pbEarnMedal(:SCHNAPPSIEDIRALLE)
-:       : else
-:       : end
-@>
-
-#------------------------------------------------------------------------------
-Event ID: 100
-Event Name: EV100
-(X,Y): (052,099)
-
-Page #1
-Conditions
-Variable 0049:  is 3 or above
-
-Graphic: KABUTO
-
-Autonomous Movement
-Type: Fixed
-Speed: 3: Slow
-Freq: 3: Low
-Options Enabled
-Move Animation
-Trigger: Autorun
-
-List of Event Commands:
-@>Script: WildBattle.start(:LUGIA, 70)
-@>Control Self Switch: A =ON
-@>
-
-Page #2
-Conditions
-Self Switch A is ON
-
-Autonomous Movement
-Type: Fixed
-Speed: 3: Slow
-Freq: 3: Low
-Options Enabled
-Move Animation
-Trigger: Action Button
-
-List of Event Commands:
-@>
-
-#------------------------------------------------------------------------------
-Event ID: 101
-Event Name: EV101
-(X,Y): (050,099)
-
-Page #1
-Conditions
-None
-
-Graphic: HAKAMOO
-
-Autonomous Movement
-Type: Fixed
-Speed: 3: Slow
-Freq: 3: Low
-Options Enabled
-Move Animation
-Trigger: Action Button
-
-List of Event Commands:
-@>Script: setBattleRule("midbattleScript", {
-:       : "RoundStartCommand_1_foe" => {
-:       : "battlerHPCap" => 90
-:       :  },
-:       : "BattlerReachedHPCap_foe" => {
-:       : "battlerHPCap" => 10
-:       : }
-:       : })
-:       : pkmn = Pokemon.new(:ONIX, 50)
-:       : pkmn.calc_stats
-:       : WildBattle.start(pkmn)
-@>
-
-#------------------------------------------------------------------------------
-Event ID: 102
-Event Name: EV102
-(X,Y): (051,099)
-
-Page #1
-Conditions
-None
-
-Graphic: GABITE
-
-Autonomous Movement
-Type: Fixed
-Speed: 3: Slow
-Freq: 3: Low
-Options Enabled
-Move Animation
-Trigger: Action Button
-
-List of Event Commands:
-@>Script: setBattleRule("canLose")
-:       : setBattleRule("noMoney")
-:       : setBattleRule("noExp")
-:       : setBattleRule("midbattleScript", 
-:       : :DEMO_BATTLE_QUIZMASTER2)
-@>Conditional Branch: Script: TrainerBattle.start(:TEAM0DUO,"Duo",1)
- @>Control Self Switch: A =ON
- @>
-: Else
- @>
-: Branch End
-@>Script: pbTrainerEnd
-@>
-
-Page #2
-Conditions
-None
-
-Graphic: ABOMASNOW
-
-Autonomous Movement
-Type: Fixed
-Speed: 3: Slow
-Freq: 3: Low
-Options Enabled
-Move Animation
-Trigger: Action Button
-
-List of Event Commands:
-@>Script: pbRandomTeamGenerator(3)
-@>
-
-#------------------------------------------------------------------------------
-Event ID: 103
-Event Name: EV103
-(X,Y): (048,099)
-
-Page #1
-Conditions
-None
-
-Graphic: TALONFLAME
-
-Autonomous Movement
-Type: Fixed
-Speed: 3: Slow
-Freq: 3: Low
-Options Enabled
-Move Animation
-Trigger: Action Button
-
-List of Event Commands:
-@>Script: species_medals_check
-@>Script: receive_all_NPC
-@>
-
-#------------------------------------------------------------------------------
-Event ID: 104
-Event Name: EV104
-(X,Y): (047,099)
-
-Page #1
-Conditions
-None
-
-Graphic: JANGMOO
-
-Autonomous Movement
-Type: Fixed
-Speed: 3: Slow
-Freq: 3: Low
-Options Enabled
-Move Animation
-Trigger: Action Button
-
-List of Event Commands:
-@>Script: pbReceiveItem(:MEDALBOX)
-@>Text: Die Medallienbox ist im Menü auswählbar.
-@>Text: Dort kannst du alle deine bereits erhaltenen Medallien 
- :    : anschauen.
-@>Script: pbEarnMedal(:FIRSTSTEP)
-@>Text: Damit du dir ein Bild machen kannst, wie das ganze 
- :    : aussieht, hast du dir hier bereits die erste Medallie 
- :    : verdient.
-@>Text: Du kannst die Medallie in jedem Pokécenter abholen.
-@>Text: Zeige dort einfach die Medallienbox vor.
-@>Text: Oder hier rechts beim Vogel.
-@>Control Self Switch: A =ON
-@>
-
-Page #2
-Conditions
-Self Switch A is ON
-
-Graphic: JANGMOO
-
-Autonomous Movement
-Type: Fixed
-Speed: 3: Slow
-Freq: 3: Low
-Options Enabled
-Move Animation
-Trigger: Action Button
-
-List of Event Commands:
-@>
-
-#------------------------------------------------------------------------------
-Event ID: 105
-Event Name: EV105
-(X,Y): (046,099)
-
-Page #1
-Conditions
-None
-
-Graphic: UMBREON
-
-Autonomous Movement
-Type: Fixed
-Speed: 3: Slow
-Freq: 3: Low
-Options Enabled
-Move Animation
-Trigger: Action Button
-
-List of Event Commands:
-@>Script: species_medals_check
 @>
 
 #------------------------------------------------------------------------------
@@ -356776,7 +356418,7 @@ List of Event Commands:
 
 #------------------------------------------------------------------------------
 Event ID: 010
-Event Name:  
+Event Name: Mining
 (X,Y): (008,007)
 
 Page #1
@@ -356839,7 +356481,7 @@ List of Event Commands:
 
 #------------------------------------------------------------------------------
 Event ID: 011
-Event Name: EV011
+Event Name: Mining2
 (X,Y): (008,006)
 
 Page #1
@@ -359391,7 +359033,7 @@ List of Event Commands:
 
 #------------------------------------------------------------------------------
 Event ID: 051
-Event Name:  
+Event Name: Mining
 (X,Y): (042,046)
 
 Page #1
@@ -359454,7 +359096,7 @@ List of Event Commands:
 
 #------------------------------------------------------------------------------
 Event ID: 052
-Event Name:  
+Event Name: Mining
 (X,Y): (042,012)
 
 Page #1
@@ -359517,7 +359159,7 @@ List of Event Commands:
 
 #------------------------------------------------------------------------------
 Event ID: 053
-Event Name: EV053
+Event Name: Mining2
 (X,Y): (042,011)
 
 Page #1
@@ -359570,7 +359212,7 @@ List of Event Commands:
 
 #------------------------------------------------------------------------------
 Event ID: 054
-Event Name: EV054
+Event Name: Mining2
 (X,Y): (042,045)
 
 Page #1
@@ -360899,7 +360541,7 @@ List of Event Commands:
 
 #------------------------------------------------------------------------------
 Event ID: 018
-Event Name:  
+Event Name: Mining
 (X,Y): (014,007)
 
 Page #1
@@ -360962,7 +360604,7 @@ List of Event Commands:
 
 #------------------------------------------------------------------------------
 Event ID: 019
-Event Name: EV019
+Event Name: Mining2
 (X,Y): (014,006)
 
 Page #1
@@ -361642,7 +361284,7 @@ List of Event Commands:
 
 #------------------------------------------------------------------------------
 Event ID: 018
-Event Name: EV018
+Event Name: Mining
 (X,Y): (030,039)
 
 Page #1
@@ -362055,7 +361697,7 @@ List of Event Commands:
 
 #------------------------------------------------------------------------------
 Event ID: 025
-Event Name: EV025
+Event Name: Mining2
 (X,Y): (030,038)
 
 Page #1
@@ -364540,7 +364182,7 @@ List of Event Commands:
 
 #------------------------------------------------------------------------------
 Event ID: 079
-Event Name: EV079
+Event Name: Mining
 (X,Y): (009,041)
 
 Page #1
@@ -364603,7 +364245,7 @@ List of Event Commands:
 
 #------------------------------------------------------------------------------
 Event ID: 080
-Event Name: EV080
+Event Name: Mining2
 (X,Y): (009,040)
 
 Page #1
@@ -365457,7 +365099,7 @@ List of Event Commands:
 
 #------------------------------------------------------------------------------
 Event ID: 008
-Event Name:  
+Event Name: Mining
 (X,Y): (036,014)
 
 Page #1
@@ -365520,7 +365162,7 @@ List of Event Commands:
 
 #------------------------------------------------------------------------------
 Event ID: 009
-Event Name: EV009
+Event Name: Mining2
 (X,Y): (036,013)
 
 Page #1
@@ -492837,6 +492479,84 @@ List of Event Commands:
 @>
 
 #------------------------------------------------------------------------------
+Event ID: 006
+Event Name: Haus 1 Tür
+(X,Y): (079,036)
+
+Page #1
+Conditions
+None
+
+Autonomous Movement
+Type: Fixed
+Speed: 3: Slow
+Freq: 3: Low
+Options Enabled
+Move Animation
+Trigger: Player Touch
+
+List of Event Commands:
+@>Play SE: 'Door exit', 100, 100
+@>Change Screen Color Tone: (-255,-255,-255,0), @6
+@>Wait: 8 frame(s)
+@>Transfer Player:[653: Route 21], (001,023), Right, No Fade
+@>Change Screen Color Tone: (0,0,0,0), @6
+@>Wait: 8 frame(s)
+@>
+
+#------------------------------------------------------------------------------
+Event ID: 007
+Event Name: Haus 1 Tür
+(X,Y): (079,037)
+
+Page #1
+Conditions
+None
+
+Autonomous Movement
+Type: Fixed
+Speed: 3: Slow
+Freq: 3: Low
+Options Enabled
+Move Animation
+Trigger: Player Touch
+
+List of Event Commands:
+@>Play SE: 'Door exit', 100, 100
+@>Change Screen Color Tone: (-255,-255,-255,0), @6
+@>Wait: 8 frame(s)
+@>Transfer Player:[653: Route 21], (001,024), Right, No Fade
+@>Change Screen Color Tone: (0,0,0,0), @6
+@>Wait: 8 frame(s)
+@>
+
+#------------------------------------------------------------------------------
+Event ID: 008
+Event Name: Haus 1 Tür
+(X,Y): (079,038)
+
+Page #1
+Conditions
+None
+
+Autonomous Movement
+Type: Fixed
+Speed: 3: Slow
+Freq: 3: Low
+Options Enabled
+Move Animation
+Trigger: Player Touch
+
+List of Event Commands:
+@>Play SE: 'Door exit', 100, 100
+@>Change Screen Color Tone: (-255,-255,-255,0), @6
+@>Wait: 8 frame(s)
+@>Transfer Player:[653: Route 21], (001,025), Right, No Fade
+@>Change Screen Color Tone: (0,0,0,0), @6
+@>Wait: 8 frame(s)
+@>
+
+#------------------------------------------------------------------------------
 
 #==============================================================================
 Map ID: 652
@@ -492949,6 +492669,162 @@ Trigger: Action Button
 List of Event Commands:
 @>Text: \xn[Gentleman Wellington]Der Sand ist garnichts für 
  :    : meine schicken Schuhe!
+@>
+
+#------------------------------------------------------------------------------
+Event ID: 003
+Event Name: Haus 1 Tür
+(X,Y): (000,023)
+
+Page #1
+Conditions
+None
+
+Autonomous Movement
+Type: Fixed
+Speed: 3: Slow
+Freq: 3: Low
+Options Enabled
+Move Animation
+Trigger: Player Touch
+
+List of Event Commands:
+@>Play SE: 'Door exit', 100, 100
+@>Change Screen Color Tone: (-255,-255,-255,0), @6
+@>Wait: 8 frame(s)
+@>Transfer Player:[651: Route 20], (078,036), Left, No Fade
+@>Change Screen Color Tone: (0,0,0,0), @6
+@>Wait: 8 frame(s)
+@>
+
+#------------------------------------------------------------------------------
+Event ID: 004
+Event Name: Haus 1 Tür
+(X,Y): (000,024)
+
+Page #1
+Conditions
+None
+
+Autonomous Movement
+Type: Fixed
+Speed: 3: Slow
+Freq: 3: Low
+Options Enabled
+Move Animation
+Trigger: Player Touch
+
+List of Event Commands:
+@>Play SE: 'Door exit', 100, 100
+@>Change Screen Color Tone: (-255,-255,-255,0), @6
+@>Wait: 8 frame(s)
+@>Transfer Player:[651: Route 20], (078,037), Left, No Fade
+@>Change Screen Color Tone: (0,0,0,0), @6
+@>Wait: 8 frame(s)
+@>
+
+#------------------------------------------------------------------------------
+Event ID: 005
+Event Name: Haus 1 Tür
+(X,Y): (000,025)
+
+Page #1
+Conditions
+None
+
+Autonomous Movement
+Type: Fixed
+Speed: 3: Slow
+Freq: 3: Low
+Options Enabled
+Move Animation
+Trigger: Player Touch
+
+List of Event Commands:
+@>Play SE: 'Door exit', 100, 100
+@>Change Screen Color Tone: (-255,-255,-255,0), @6
+@>Wait: 8 frame(s)
+@>Transfer Player:[651: Route 20], (078,038), Left, No Fade
+@>Change Screen Color Tone: (0,0,0,0), @6
+@>Wait: 8 frame(s)
+@>
+
+#------------------------------------------------------------------------------
+Event ID: 006
+Event Name: Haus 1 Tür
+(X,Y): (064,010)
+
+Page #1
+Conditions
+None
+
+Autonomous Movement
+Type: Fixed
+Speed: 3: Slow
+Freq: 3: Low
+Options Enabled
+Move Animation
+Trigger: Player Touch
+
+List of Event Commands:
+@>Play SE: 'Door exit', 100, 100
+@>Change Screen Color Tone: (-255,-255,-255,0), @6
+@>Wait: 8 frame(s)
+@>Transfer Player:[654: Route 21], (001,030), Right, No Fade
+@>Change Screen Color Tone: (0,0,0,0), @6
+@>Wait: 8 frame(s)
+@>
+
+#------------------------------------------------------------------------------
+Event ID: 007
+Event Name: Haus 1 Tür
+(X,Y): (064,011)
+
+Page #1
+Conditions
+None
+
+Autonomous Movement
+Type: Fixed
+Speed: 3: Slow
+Freq: 3: Low
+Options Enabled
+Move Animation
+Trigger: Player Touch
+
+List of Event Commands:
+@>Play SE: 'Door exit', 100, 100
+@>Change Screen Color Tone: (-255,-255,-255,0), @6
+@>Wait: 8 frame(s)
+@>Transfer Player:[654: Route 21], (001,031), Right, No Fade
+@>Change Screen Color Tone: (0,0,0,0), @6
+@>Wait: 8 frame(s)
+@>
+
+#------------------------------------------------------------------------------
+Event ID: 008
+Event Name: Haus 1 Tür
+(X,Y): (064,012)
+
+Page #1
+Conditions
+None
+
+Autonomous Movement
+Type: Fixed
+Speed: 3: Slow
+Freq: 3: Low
+Options Enabled
+Move Animation
+Trigger: Player Touch
+
+List of Event Commands:
+@>Play SE: 'Door exit', 100, 100
+@>Change Screen Color Tone: (-255,-255,-255,0), @6
+@>Wait: 8 frame(s)
+@>Transfer Player:[654: Route 21], (001,032), Right, No Fade
+@>Change Screen Color Tone: (0,0,0,0), @6
+@>Wait: 8 frame(s)
 @>
 
 #------------------------------------------------------------------------------
@@ -493497,6 +493373,162 @@ List of Event Commands:
 @>
 
 #------------------------------------------------------------------------------
+Event ID: 011
+Event Name: Haus 1 Tür
+(X,Y): (000,030)
+
+Page #1
+Conditions
+None
+
+Autonomous Movement
+Type: Fixed
+Speed: 3: Slow
+Freq: 3: Low
+Options Enabled
+Move Animation
+Trigger: Player Touch
+
+List of Event Commands:
+@>Play SE: 'Door exit', 100, 100
+@>Change Screen Color Tone: (-255,-255,-255,0), @6
+@>Wait: 8 frame(s)
+@>Transfer Player:[653: Route 21], (063,010), Left, No Fade
+@>Change Screen Color Tone: (0,0,0,0), @6
+@>Wait: 8 frame(s)
+@>
+
+#------------------------------------------------------------------------------
+Event ID: 012
+Event Name: Haus 1 Tür
+(X,Y): (000,031)
+
+Page #1
+Conditions
+None
+
+Autonomous Movement
+Type: Fixed
+Speed: 3: Slow
+Freq: 3: Low
+Options Enabled
+Move Animation
+Trigger: Player Touch
+
+List of Event Commands:
+@>Play SE: 'Door exit', 100, 100
+@>Change Screen Color Tone: (-255,-255,-255,0), @6
+@>Wait: 8 frame(s)
+@>Transfer Player:[653: Route 21], (063,011), Left, No Fade
+@>Change Screen Color Tone: (0,0,0,0), @6
+@>Wait: 8 frame(s)
+@>
+
+#------------------------------------------------------------------------------
+Event ID: 013
+Event Name: Haus 1 Tür
+(X,Y): (000,032)
+
+Page #1
+Conditions
+None
+
+Autonomous Movement
+Type: Fixed
+Speed: 3: Slow
+Freq: 3: Low
+Options Enabled
+Move Animation
+Trigger: Player Touch
+
+List of Event Commands:
+@>Play SE: 'Door exit', 100, 100
+@>Change Screen Color Tone: (-255,-255,-255,0), @6
+@>Wait: 8 frame(s)
+@>Transfer Player:[653: Route 21], (063,012), Left, No Fade
+@>Change Screen Color Tone: (0,0,0,0), @6
+@>Wait: 8 frame(s)
+@>
+
+#------------------------------------------------------------------------------
+Event ID: 014
+Event Name: Haus 1 Tür
+(X,Y): (024,074)
+
+Page #1
+Conditions
+None
+
+Autonomous Movement
+Type: Fixed
+Speed: 3: Slow
+Freq: 3: Low
+Options Enabled
+Move Animation
+Trigger: Player Touch
+
+List of Event Commands:
+@>Play SE: 'Door exit', 100, 100
+@>Change Screen Color Tone: (-255,-255,-255,0), @6
+@>Wait: 8 frame(s)
+@>Transfer Player:[655: Route 21], (008,001), Down, No Fade
+@>Change Screen Color Tone: (0,0,0,0), @6
+@>Wait: 8 frame(s)
+@>
+
+#------------------------------------------------------------------------------
+Event ID: 015
+Event Name: Haus 1 Tür
+(X,Y): (025,074)
+
+Page #1
+Conditions
+None
+
+Autonomous Movement
+Type: Fixed
+Speed: 3: Slow
+Freq: 3: Low
+Options Enabled
+Move Animation
+Trigger: Player Touch
+
+List of Event Commands:
+@>Play SE: 'Door exit', 100, 100
+@>Change Screen Color Tone: (-255,-255,-255,0), @6
+@>Wait: 8 frame(s)
+@>Transfer Player:[655: Route 21], (009,001), Down, No Fade
+@>Change Screen Color Tone: (0,0,0,0), @6
+@>Wait: 8 frame(s)
+@>
+
+#------------------------------------------------------------------------------
+Event ID: 016
+Event Name: Haus 1 Tür
+(X,Y): (026,074)
+
+Page #1
+Conditions
+None
+
+Autonomous Movement
+Type: Fixed
+Speed: 3: Slow
+Freq: 3: Low
+Options Enabled
+Move Animation
+Trigger: Player Touch
+
+List of Event Commands:
+@>Play SE: 'Door exit', 100, 100
+@>Change Screen Color Tone: (-255,-255,-255,0), @6
+@>Wait: 8 frame(s)
+@>Transfer Player:[655: Route 21], (010,001), Down, No Fade
+@>Change Screen Color Tone: (0,0,0,0), @6
+@>Wait: 8 frame(s)
+@>
+
+#------------------------------------------------------------------------------
 
 #==============================================================================
 Map ID: 655
@@ -493609,6 +493641,84 @@ List of Event Commands:
  :    : Fehler nachgedacht.
 @>Text: \xn[Drachenzähmer Leif]Du hast mir eine Lektion 
  :    : erteilt, die ich so schnell nicht vergessen werde.
+@>
+
+#------------------------------------------------------------------------------
+Event ID: 003
+Event Name: Haus 1 Tür
+(X,Y): (008,000)
+
+Page #1
+Conditions
+None
+
+Autonomous Movement
+Type: Fixed
+Speed: 3: Slow
+Freq: 3: Low
+Options Enabled
+Move Animation
+Trigger: Player Touch
+
+List of Event Commands:
+@>Play SE: 'Door exit', 100, 100
+@>Change Screen Color Tone: (-255,-255,-255,0), @6
+@>Wait: 8 frame(s)
+@>Transfer Player:[654: Route 21], (024,073), Up, No Fade
+@>Change Screen Color Tone: (0,0,0,0), @6
+@>Wait: 8 frame(s)
+@>
+
+#------------------------------------------------------------------------------
+Event ID: 004
+Event Name: Haus 1 Tür
+(X,Y): (009,000)
+
+Page #1
+Conditions
+None
+
+Autonomous Movement
+Type: Fixed
+Speed: 3: Slow
+Freq: 3: Low
+Options Enabled
+Move Animation
+Trigger: Player Touch
+
+List of Event Commands:
+@>Play SE: 'Door exit', 100, 100
+@>Change Screen Color Tone: (-255,-255,-255,0), @6
+@>Wait: 8 frame(s)
+@>Transfer Player:[654: Route 21], (025,073), Up, No Fade
+@>Change Screen Color Tone: (0,0,0,0), @6
+@>Wait: 8 frame(s)
+@>
+
+#------------------------------------------------------------------------------
+Event ID: 005
+Event Name: Haus 1 Tür
+(X,Y): (010,000)
+
+Page #1
+Conditions
+None
+
+Autonomous Movement
+Type: Fixed
+Speed: 3: Slow
+Freq: 3: Low
+Options Enabled
+Move Animation
+Trigger: Player Touch
+
+List of Event Commands:
+@>Play SE: 'Door exit', 100, 100
+@>Change Screen Color Tone: (-255,-255,-255,0), @6
+@>Wait: 8 frame(s)
+@>Transfer Player:[654: Route 21], (026,073), Up, No Fade
+@>Change Screen Color Tone: (0,0,0,0), @6
+@>Wait: 8 frame(s)
 @>
 
 #------------------------------------------------------------------------------
@@ -497028,8 +497138,8 @@ List of Event Commands:
 
 #------------------------------------------------------------------------------
 Event ID: 002
-Event Name: Portal
-(X,Y): (007,006)
+Event Name: Portal size(3,1)
+(X,Y): (006,006)
 
 Page #1
 Conditions
@@ -497452,6 +497562,15 @@ List of Event Commands:
  :    : kämpfen und die Pokémon befreien.
 @>Text: \xn[Arenaleiter Marvin]Ich folge dir anschließend, 
  :    : sobald die Luft rein ist.
+@>Text: \xn[Arenaleiter Marvin]Achja, das hier habe ich von 
+ :    : Elena bekommen.
+@>Text: \xn[Arenaleiter Marvin]Sie sagte, ich soll es dir 
+ :    : überreichen, sobald ich dich sehe.
+@>Script: pbReceiveItem(:SNAGMACHINE)
+@>Text: \xn[Arenaleiter Marvin]Damit sollst du Crypto-
+ :    : Pokémon von Trainern fangen können.
+@>Text: \xn[Arenaleiter Marvin]Keine Ahnung, wie das 
+ :    : funktionieren soll.
 @>Change Screen Color Tone: (-255,-255,-255,0), @20
 @>Wait: 20 frame(s)
 @>Set Event Location: [Marvin],(014,013), Left

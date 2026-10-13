@@ -7963,3 +7963,12 @@ Price = 0
 FieldUse = Direct
 Flags = KeyItem
 Description = Ein Brutkasten, in dem bis zu 6 Eier aufbewahrt werden, bis sie schlüpfen.
+#-------------------------------
+[SNAGMACHINE]
+Name = Krallmaschine
+NamePlural = Krallmaschinen
+Pocket = 8
+Price = 0
+FieldUse = Direct
+Flags = KeyItem
+Description = Eine Vorrichtung, um Crypto-Pokémon von Trainern fangen zu können.

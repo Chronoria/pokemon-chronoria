@@ -250,6 +250,9 @@ export interface EncounterSlot {
   species: string;
   minLevel: number;
   maxLevel: number;
+  /** Share of this slot within its encounter table, in percent (one decimal). The PBS weights
+   *  need not add up to 100, so this is weight / sum of the table's weights. */
+  chance: number;
 }
 
 export interface EncounterTable {

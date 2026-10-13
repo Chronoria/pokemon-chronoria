@@ -31,3 +31,10 @@ const METHOD_LABELS: Record<string, string> = {
 export function encounterMethodLabel(method: string): string {
   return METHOD_LABELS[method] ?? method;
 }
+
+/** "12,5 %" - share of an encounter slot within its table, with a German decimal comma. */
+export function formatEncounterChance(chance: number | undefined): string {
+  if (chance === undefined) return "–";
+  if (chance > 0 && chance < 0.1) return "< 0,1 %";
+  return `${String(chance).replace(".", ",")} %`;
+}

@@ -9369,6 +9369,7 @@ Pokedex = When it senses danger, it discharges positive and negative electricity
 Generation = 2
 WildItemUncommon = DEEPSEASCALE
 Evolutions = LANTURN,Level,27
+RaidRanks = 1,2
 #-------------------------------
 [LANTURN]
 Name = Lanturn
@@ -9395,6 +9396,7 @@ Category = Light
 Pokedex = The light-emitting orbs on its back are very bright. They are formed from a part of its dorsal fin. This Pokémon illuminates the inky darkness of deep seas.
 Generation = 2
 WildItemUncommon = DEEPSEASCALE
+RaidRanks = 3,4
 #-------------------------------
 
 [PICHU]
@@ -11460,6 +11462,7 @@ Category = Fairy
 Pokedex = By baring its fangs and making a scary face, it sends smaller Pokémon scurrying in terror. The Snubbull does seem a little sad at making its foes flee.
 Generation = 2
 Evolutions = GRANBULL,Level,23
+RaidRanks = 1,2
 #-------------------------------
 [GRANBULL]
 Name = Granbull
@@ -11485,6 +11488,7 @@ Habitat = Urban
 Category = Fairy
 Pokedex = It has a particularly well-developed lower jaw. The huge fangs are heavy, causing it to tilt its head. Unless it is startled, it will not try to bite.
 Generation = 2
+RaidRanks = 3,4
 #-------------------------------
 
 [QWILFISH]
@@ -12788,7 +12792,7 @@ Abilities = INTIMIDATE,FRISK
 
 HiddenAbilities = SAPSIPPER
 
-Moves = 1,TACKLE,3,LEER,7,ASTONISH,10,HYPNOSIS,13,STOMP,16,SANDATTACK,21,TAKEDOWN,23,CONFUSERAY,27,CALMMIND,32,ROLEPLAY,37,ZENHEADBUTT,49,IMPRISON,55,DOUBLEEDGE
+Moves = 1,TACKLE,3,LEER,7,ASTONISH,10,HYPNOSIS,13,STOMP,16,SANDATTACK,21,PSYSHIELDBASH,21,TAKEDOWN,23,CONFUSERAY,27,CALMMIND,32,ROLEPLAY,37,ZENHEADBUTT,49,IMPRISON,55,DOUBLEEDGE
 
 TutorMoves = AGILITY,BODYSLAM,BULLDOZE,CALMMIND,CHARGEBEAM,CONFUSERAY,CURSE,DIG,DOUBLEEDGE,EARTHPOWER,EARTHQUAKE,ENDURE,ENERGYBALL,FACADE,FUTURESIGHT,GIGAIMPACT,GRAVITY,HELPINGHAND,HIDDENPOWER,HYPERBEAM,IMPRISON,LIGHTSCREEN,LUNGE,PROTECT,PSYBEAM,PSYCHIC,PSYCHUP,PSYSHOCK,RAINDANCE,REFLECT,REST,ROAR,SCARYFACE,SHADOWBALL,SKILLSWAP,SLEEPTALK,SOLARBEAM,SPITE,STOREDPOWER,SUBSTITUTE,SUNNYDAY,SWIFT,TAKEDOWN,THIEF,THROATCHOP,THUNDER,THUNDERBOLT,THUNDERWAVE,TRAILBLAZE,TRICK,TRICKROOM,UPROAR,WILDCHARGE,ZENHEADBUTT
 
@@ -12871,6 +12875,7 @@ Generation = 2
 
 CallRateSOS = 9
 
+RaidRanks = 1,2
 #-------------------------------
 
 [TYROGUE]
@@ -18052,6 +18057,7 @@ Pokedex = Its big jaws crunch through boulders. Because its head is so big, it h
 Generation = 3
 WildItemUncommon = SOFTSAND
 Evolutions = VIBRAVA,Level,35
+RaidRanks = 1,2
 #-------------------------------
 [VIBRAVA]
 Name = Vibrava
@@ -18077,6 +18083,7 @@ Category = Vibration
 Pokedex = It looses ultrasonic waves by rubbing its wings together. Since a Vibrava's wings are still in the process of growing, it can only fly short distances.
 Generation = 3
 Evolutions = FLYGON,Level,45
+RaidRanks = 2,3
 #-------------------------------
 [FLYGON]
 Name = Flygon
@@ -18101,6 +18108,7 @@ Habitat = RoughTerrain
 Category = Mystic
 Pokedex = The flapping of its wings sounds like singing. To prevent detection by enemies, it hides itself by flapping up a cloud of desert sand.
 Generation = 3
+RaidRanks = 3,4,5
 #-------------------------------
 
 [CACNEA]
@@ -26815,6 +26823,7 @@ Generation = 4
 
 Flags = Mythical
 
+RaidRanks = 6
 #-------------------------------
 
 [MANAPHY]
@@ -42383,6 +42392,7 @@ Flags = Legendary
 
 Evolutions = TYPENULL,Level,45
 
+RaidRanks = 6
 #-------------------------------
 
 [TYPENULL]
@@ -42435,6 +42445,7 @@ Flags = Legendary
 
 Evolutions = SILVALLY,Level,55
 
+RaidRanks = 6
 #-------------------------------
 
 [SILVALLY]
@@ -42487,6 +42498,7 @@ Generation = 7
 
 Flags = Legendary
 
+RaidRanks = 6
 #-------------------------------
 
 [MINIOR]
@@ -43354,6 +43366,7 @@ Flags = Legendary
 
 Evolutions = COSMOEM,Level,43
 
+RaidRanks = 6
 #-------------------------------
 
 [COSMOEM]
@@ -43406,6 +43419,7 @@ Flags = Legendary
 
 Evolutions = SOLGALEO,LevelDay,53,LUNALA,LevelNight,53
 
+RaidRanks = 6
 #-------------------------------
 
 [SOLGALEO]
@@ -44070,6 +44084,7 @@ Flags = UltraBeast
 
 Evolutions = NAGANADEL,HasMove,DRAGONPULSE
 
+RaidRanks = 6
 #-------------------------------
 
 [NAGANADEL]
@@ -44326,6 +44341,7 @@ Flags = Mythical
 
 Evolutions = MELMETAL,Item,METALCOAT
 
+RaidRanks = 6
 #-------------------------------
 
 [MELMETAL]
@@ -48884,6 +48900,7 @@ Flags = Legendary
 
 Evolutions = URSHIFU,Item,SCROLLOFDARKNESS,URSHIFU,Item,SCROLLOFWATERS
 
+RaidRanks = 6
 #-------------------------------
 
 [URSHIFU]
