@@ -1430,7 +1430,7 @@ Price = 5000
 SellPrice = 1250
 BPPrice = 10
 Flags = Fling_30
-Description = Erhöht die Initiative, wenn es von der Fähigkeit Bedroher getroffen wird.
+Description = Erhöht die Initiative, wenn der Träger von Bedroher getroffen wird. Im Kampf eingesetzt, macht es wilde Pokémon nervös: Sie rufen häufiger um Hilfe.
 BattleUse = Direct
 #-------------------------------Einzigartig
 [ROOMSERVICE]

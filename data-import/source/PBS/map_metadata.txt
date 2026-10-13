@@ -2064,6 +2064,141 @@ WildVictoryBGM = Victory! (Wild Pokemon)_4
 Environment = Forest
 Flags = Levels
 #-------------------------------
+[711]   # MAP711
+Name = Bienenstock
+MapPosition = 0,9,10
+SnapEdges = true
+BattleBack = honig
+WildBattleBGM = Battle! (Wild Pokémon)_5
+WildVictoryBGM = Victory! (Wild Pokemon)_4
+Flags = Levels
+#-------------------------------
+[712]   # MAP712
+Name = Bienenstock
+MapPosition = 0,9,10
+SnapEdges = true
+BattleBack = honig
+WildBattleBGM = Battle! (Wild Pokémon)_5
+WildVictoryBGM = Victory! (Wild Pokemon)_4
+Flags = Levels
+#-------------------------------
+[713]   # MAP714
+Name = Bienenstock
+MapPosition = 0,9,10
+SnapEdges = true
+BattleBack = honig
+WildBattleBGM = Battle! (Wild Pokémon)_5
+WildVictoryBGM = Victory! (Wild Pokemon)_4
+Flags = Levels
+#-------------------------------
+[714]   # MAP714
+Name = Bienenstock
+MapPosition = 0,9,10
+SnapEdges = true
+BattleBack = honig
+WildBattleBGM = Battle! (Wild Pokémon)_5
+WildVictoryBGM = Victory! (Wild Pokemon)_4
+Flags = Levels
+#-------------------------------
+[715]   # MAP715
+Name = Bienenstock
+MapPosition = 0,9,10
+SnapEdges = true
+BattleBack = honig
+WildBattleBGM = Battle! (Wild Pokémon)_5
+WildVictoryBGM = Victory! (Wild Pokemon)_4
+Flags = Levels
+#-------------------------------
+[716]   # MAP716
+Name = Bienenstock
+MapPosition = 0,9,10
+SnapEdges = true
+BattleBack = honig
+WildBattleBGM = Battle! (Wild Pokémon)_5
+WildVictoryBGM = Victory! (Wild Pokemon)_4
+Flags = Levels
+#-------------------------------
+[717]   # MAP717
+Name = Bienenstock
+MapPosition = 0,9,10
+SnapEdges = true
+BattleBack = honig
+WildBattleBGM = Battle! (Wild Pokémon)_5
+WildVictoryBGM = Victory! (Wild Pokemon)_4
+Flags = Levels
+#-------------------------------
+[718]   # MAP718
+Name = Bienenstock
+MapPosition = 0,9,10
+SnapEdges = true
+BattleBack = honig
+WildBattleBGM = Battle! (Wild Pokémon)_5
+WildVictoryBGM = Victory! (Wild Pokemon)_4
+Flags = Levels
+#-------------------------------
+[719]   # MAP719
+Name = Bienenstock
+MapPosition = 0,9,10
+SnapEdges = true
+BattleBack = honig
+WildBattleBGM = Battle! (Wild Pokémon)_5
+WildVictoryBGM = Victory! (Wild Pokemon)_4
+Flags = Levels
+#-------------------------------
+[720]   # MAP720
+Name = Bienenstock
+MapPosition = 0,9,10
+SnapEdges = true
+BattleBack = honig
+WildBattleBGM = Battle! (Wild Pokémon)_5
+WildVictoryBGM = Victory! (Wild Pokemon)_4
+Flags = Levels
+#-------------------------------
+[721]   # MAP721
+Name = Bienenstock
+MapPosition = 0,9,10
+SnapEdges = true
+BattleBack = honig
+WildBattleBGM = Battle! (Wild Pokémon)_5
+WildVictoryBGM = Victory! (Wild Pokemon)_4
+Flags = Levels
+#-------------------------------
+[722]   # MAP722
+Name = Bienenstock
+MapPosition = 0,9,10
+SnapEdges = true
+BattleBack = honig
+WildBattleBGM = Battle! (Wild Pokémon)_5
+WildVictoryBGM = Victory! (Wild Pokemon)_4
+Flags = Levels
+#-------------------------------
+[723]   # MAP723
+Name = Bienenstock
+MapPosition = 0,9,10
+SnapEdges = true
+BattleBack = honig
+WildBattleBGM = Battle! (Wild Pokémon)_5
+WildVictoryBGM = Victory! (Wild Pokemon)_4
+Flags = Levels
+#-------------------------------
+[724]   # MAP724
+Name = Bienenstock
+MapPosition = 0,9,10
+SnapEdges = true
+BattleBack = honig
+WildBattleBGM = Battle! (Wild Pokémon)_5
+WildVictoryBGM = Victory! (Wild Pokemon)_4
+Flags = Levels
+#-------------------------------
+[725]   # MAP725
+Name = Saal der Königin
+MapPosition = 0,9,10
+SnapEdges = true
+BattleBack = honig
+WildBattleBGM = Battle! (Wild Pokémon)_5
+WildVictoryBGM = Victory! (Wild Pokemon)_4
+Flags = Levels
+#-------------------------------
 [314]   # Spiegelräume
 Name = Spiegelräume
 ShowArea = true

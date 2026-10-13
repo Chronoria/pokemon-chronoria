@@ -237463,7 +237463,119 @@ List of Event Commands:
 
 #------------------------------------------------------------------------------
 Event ID: 002
-Event Name: EV002
+Event Name: Quest94
+(X,Y): (013,012)
+
+Page #1
+Conditions
+None
+
+Graphic: trainer_SCIENTIST_F
+
+Autonomous Movement
+Type: Fixed
+Speed: 3: Slow
+Freq: 3: Low
+Options Enabled
+Move Animation
+Trigger: Event Touch
+
+List of Event Commands:
+@>Text: \xn[Antonia]Vorsicht!
+@>Text: \xn[Antonia]Geh da nicht zu nah ran!
+@>Text: \xn[Antonia]Die Wadribie greifen seit Tagen alles an, 
+ :    : was sich bewegt.
+@>Text: \xn[Antonia]So aufgebracht habe ich sie selten 
+ :    : erlebt.
+@>Text: \xn[Antonia]Die Ursache könnte da drinnen liegen, 
+ :    : aber ich bin kein Trainer.
+@>Text: \xn[Antonia]Du hast doch Pokémon dabei, würdest 
+ :    : du nachsehen?
+@>Show Choices: Ja, Nein
+(When Cancel: Choice 2)
+: When [Ja]
+ @>Text: \xn[Antonia]Du bist ein Schatz!
+ @>Text: \xn[Antonia]Hier, nimm das mit.
+ @>Script: pbReceiveItem(:HONEY)
+ @>Text: \xn[Antonia]Echter Waldhonig.
+ @>Script: activateQuest(:Quest94)
+ @>Script: pbSetSelfSwitch(7,"A",true)
+ @>Control Switches: [0419: Bienenstock Start] = ON
+ @>
+: When [Nein]
+ @>
+: Branch End
+@>
+
+Page #2
+Conditions
+Switch 0419: Bienenstock Start is ON
+
+Graphic: trainer_SCIENTIST_F
+
+Autonomous Movement
+Type: Fixed
+Speed: 3: Slow
+Freq: 3: Low
+Options Enabled
+Move Animation
+Trigger: Action Button
+
+List of Event Commands:
+@>Text: \xn[Antonia]Und? Hast du schon etwas 
+ :    : herausgefunden?
+@>Text: \xn[Antonia]Pass auf die Bibor auf!
+@>Text: \xn[Antonia]Die sind besonders aggressiv.
+@>
+
+Page #3
+Conditions
+Switch 0169: Quest 13 is ON
+
+Graphic: trainer_SCIENTIST_F
+
+Autonomous Movement
+Type: Fixed
+Speed: 3: Slow
+Freq: 3: Low
+Options Enabled
+Move Animation
+Trigger: Action Button
+
+List of Event Commands:
+@>Text: \xn[Lara]Vielen Dank, dass du meinen kleinen Bruder 
+ :    : zurückgebracht hast.
+@>Text: \xn[Lara]Das gebe ich dir das Belohnung:
+@>Conditional Branch: Script: pbReceiveItem(:CLEARAMULET)
+ @>Script: completeQuest(:Quest13)
+ @>Script: pbSetSelfSwitch(7,"B",true)
+ @>Control Self Switch: B =ON
+ @>
+: Branch End
+@>
+
+Page #4
+Conditions
+Self Switch B is ON
+
+Graphic: trainer_SCIENTIST_F
+
+Autonomous Movement
+Type: Fixed
+Speed: 3: Slow
+Freq: 3: Low
+Options Enabled
+Move Animation
+Trigger: Action Button
+
+List of Event Commands:
+@>Text: \xn[Lara]Vielen Dank, dass du meinen kleinen Bruder 
+ :    : zurückgebracht hast.
+@>
+
+#------------------------------------------------------------------------------
+Event ID: 003
+Event Name: Cave entrance
 (X,Y): (012,011)
 
 Page #1
@@ -237476,10 +237588,181 @@ Speed: 3: Slow
 Freq: 3: Low
 Options Enabled
 Move Animation
+Trigger: Event Touch
+
+List of Event Commands:
+@>Play SE: 'Door exit', 100, 100
+@>Change Screen Color Tone: (-255,-255,-255,0), @6
+@>Wait: 8 frame(s)
+@>Transfer Player:[711: Bienenstock], (010,015), Up, No Fade
+@>Change Screen Color Tone: (0,0,0,0), @6
+@>Wait: 6 frame(s)
+@>
+
+Page #2
+Conditions
+Switch 0022: s:tsOff?("A") is ON
+
+Autonomous Movement
+Type: Fixed
+Speed: 3: Slow
+Freq: 3: Low
+Options Enabled
+Move Animation
+Trigger: Autorun
+
+List of Event Commands:
+@>Conditional Branch: Script: get_self.onEvent?
+ @>Script: Followers.hide_followers
+ @>Set Move Route: Player
+                   (Ignore If Can't Move)
+  :              : $>Through ON
+  :              : $>Move Down
+  :              : $>Through OFF
+ @>Wait: 6 frame(s)
+ @>Script: Followers.put_followers_on_player
+ @>
+: Branch End
+@>Script: setTempSwitchOn("A")
+@>
+
+#------------------------------------------------------------------------------
+Event ID: 004
+Event Name: EV004
+(X,Y): (012,012)
+
+Page #1
+Conditions
+None
+
+Autonomous Movement
+Type: Fixed
+Speed: 3: Slow
+Freq: 3: Low
+Options Enabled
+Move Animation
+Trigger: Player Touch
+
+List of Event Commands:
+@>Text: \xn[Antonia]Vorsicht!
+@>Set Move Route: Player
+ :              : $>Turn Right
+@>Text: \xn[Antonia]Geh da nicht zu nah ran!
+@>Text: \xn[Antonia]Die Wadribie greifen seit Tagen alles an, 
+ :    : was sich bewegt.
+@>Text: \xn[Antonia]So aufgebracht habe ich sie selten 
+ :    : erlebt.
+@>Text: \xn[Antonia]Die Ursache könnte da drinnen liegen, 
+ :    : aber ich bin kein Trainer.
+@>Text: \xn[Antonia]Du hast doch Pokémon dabei, würdest 
+ :    : du nachsehen?
+@>Show Choices: Ja, Nein
+(When Cancel: Choice 2)
+: When [Ja]
+ @>Text: \xn[Antonia]Du bist ein Schatz!
+ @>Text: \xn[Antonia]Hier, nimm das mit.
+ @>Script: pbReceiveItem(:HONEY)
+ @>Text: \xn[Antonia]Echter Waldhonig.
+ @>Script: activateQuest(:Quest94)
+ @>Script: pbSetSelfSwitch(5,"A",true)
+ @>Control Switches: [0419: Bienenstock Start] = ON
+ @>Control Self Switch: A =ON
+ @>
+: When [Nein]
+ @>
+: Branch End
+@>
+
+Page #2
+Conditions
+Self Switch A is ON
+
+Autonomous Movement
+Type: Fixed
+Speed: 3: Slow
+Freq: 3: Low
+Options Enabled
+Move Animation
 Trigger: Action Button
 
 List of Event Commands:
-@>Text: Du spürst eine seltsame Präsenz.
+@>
+
+Page #3
+Conditions
+Switch 0419: Bienenstock Start is ON
+
+Autonomous Movement
+Type: Fixed
+Speed: 3: Slow
+Freq: 3: Low
+Options Enabled
+Move Animation
+Trigger: Action Button
+
+List of Event Commands:
+@>
+
+#------------------------------------------------------------------------------
+Event ID: 005
+Event Name: EV005
+(X,Y): (013,011)
+
+Page #1
+Conditions
+None
+
+Graphic: Quest Symbol
+
+Autonomous Movement
+Type: Fixed
+Speed: 2: Slower
+Freq: 6: Highest
+Options Enabled
+Move Animation
+Stop Animation
+Direction Fix
+Through
+Always on Top
+Trigger: Action Button
+
+List of Event Commands:
+@>
+
+Page #2
+Conditions
+Self Switch A is ON
+
+Graphic: Quest Symbol Solved
+
+Autonomous Movement
+Type: Fixed
+Speed: 2: Slower
+Freq: 6: Highest
+Options Enabled
+Move Animation
+Stop Animation
+Direction Fix
+Through
+Always on Top
+Trigger: Action Button
+
+List of Event Commands:
+@>
+
+Page #3
+Conditions
+Self Switch B is ON
+
+Autonomous Movement
+Type: Fixed
+Speed: 3: Slow
+Freq: 3: Low
+Options Enabled
+Move Animation
+Trigger: Action Button
+
+List of Event Commands:
 @>
 
 #------------------------------------------------------------------------------
@@ -509982,6 +510265,2374 @@ Map ID: 710
 Map Name: Drachenzähmerclub 1UG Räume
 Tileset: 150: Drachenzähmerclub
 Width: 90, Height: 40
+
+#==============================================================================
+Map ID: 711
+Map Name: Bienenstock
+Tileset: 136: Arena
+Width: 20, Height: 17
+
+#------------------------------------------------------------------------------
+Event ID: 001
+Event Name: Teddiursa
+(X,Y): (010,009)
+
+Page #1
+Conditions
+None
+
+Graphic: TEDDIURSAEVENT
+
+Autonomous Movement
+Type: Fixed
+Speed: 1: Slowest
+Freq: 1: Lowest
+Options Enabled
+Move Animation
+Stop Animation
+Trigger: Action Button
+
+List of Event Commands:
+@>
+
+Page #2
+Conditions
+Self Switch A is ON
+
+Autonomous Movement
+Type: Fixed
+Speed: 3: Slow
+Freq: 3: Low
+Options Enabled
+Move Animation
+Trigger: Action Button
+
+List of Event Commands:
+@>
+
+#------------------------------------------------------------------------------
+Event ID: 002
+Event Name: Haus 1 Tür
+(X,Y): (010,016)
+
+Page #1
+Conditions
+None
+
+Autonomous Movement
+Type: Fixed
+Speed: 3: Slow
+Freq: 3: Low
+Options Enabled
+Move Animation
+Trigger: Player Touch
+
+List of Event Commands:
+@>Play SE: 'Door exit', 100, 100
+@>Change Screen Color Tone: (-255,-255,-255,0), @6
+@>Wait: 8 frame(s)
+@>Transfer Player:[312: Wald], (012,011), Down, No Fade
+@>Change Screen Color Tone: (0,0,0,0), @6
+@>Wait: 8 frame(s)
+@>
+
+#------------------------------------------------------------------------------
+Event ID: 003
+Event Name: EV003
+(X,Y): (000,016)
+
+Page #1
+Conditions
+None
+
+Autonomous Movement
+Type: Fixed
+Speed: 3: Slow
+Freq: 3: Low
+Options Enabled
+Move Animation
+Trigger: Autorun
+
+List of Event Commands:
+@>Wait: 10 frame(s)
+@>Play SE: 'TEDDIURSA', 100, 100
+@>Show Animation: [Teddiursa], [Exclaim bubble]
+@>Wait: 12 frame(s)
+@>Set Move Route: [Teddiursa]
+ :              : $>Through ON
+ :              : $>Change Speed: 3
+ :              : $>Change Freq: 3
+ :              : $>Graphic: "TEDDIURSAEVENT2', 0, 2, 0
+ :              : $>Move Up
+ :              : $>Move Left
+ :              : $>Move Left
+ :              : $>Move Left
+ :              : $>Move Up
+ :              : $>Move Up
+ :              : $>Move Up
+@>Wait: 35 frame(s)
+@>Set Event Location: [Teddiursa],(019,000)
+@>Script: pbSetSelfSwitch(1,"A",true)
+@>Control Self Switch: A =ON
+@>
+
+Page #2
+Conditions
+Self Switch A is ON
+
+Autonomous Movement
+Type: Fixed
+Speed: 3: Slow
+Freq: 3: Low
+Options Enabled
+Move Animation
+Trigger: Action Button
+
+List of Event Commands:
+@>
+
+#------------------------------------------------------------------------------
+Event ID: 004
+Event Name: Cave entrance
+(X,Y): (007,005)
+
+Page #1
+Conditions
+None
+
+Autonomous Movement
+Type: Fixed
+Speed: 3: Slow
+Freq: 3: Low
+Options Enabled
+Move Animation
+Trigger: Event Touch
+
+List of Event Commands:
+@>Play SE: 'Door exit', 100, 100
+@>Change Screen Color Tone: (-255,-255,-255,0), @6
+@>Wait: 8 frame(s)
+@>Transfer Player:[713: Bienenstock], (010,012), Up, No Fade
+@>Change Screen Color Tone: (0,0,0,0), @6
+@>Wait: 6 frame(s)
+@>
+
+Page #2
+Conditions
+Switch 0022: s:tsOff?("A") is ON
+
+Autonomous Movement
+Type: Fixed
+Speed: 3: Slow
+Freq: 3: Low
+Options Enabled
+Move Animation
+Trigger: Autorun
+
+List of Event Commands:
+@>Conditional Branch: Script: get_self.onEvent?
+ @>Script: Followers.hide_followers
+ @>Set Move Route: Player
+                   (Ignore If Can't Move)
+  :              : $>Through ON
+  :              : $>Move Down
+  :              : $>Through OFF
+ @>Wait: 6 frame(s)
+ @>Script: Followers.put_followers_on_player
+ @>
+: Branch End
+@>Script: setTempSwitchOn("A")
+@>
+
+#------------------------------------------------------------------------------
+Event ID: 005
+Event Name: Cave entrance
+(X,Y): (013,005)
+
+Page #1
+Conditions
+None
+
+Autonomous Movement
+Type: Fixed
+Speed: 3: Slow
+Freq: 3: Low
+Options Enabled
+Move Animation
+Trigger: Event Touch
+
+List of Event Commands:
+@>Play SE: 'Door exit', 100, 100
+@>Change Screen Color Tone: (-255,-255,-255,0), @6
+@>Wait: 8 frame(s)
+@>Transfer Player:[712: Bienenstock], (010,012), Up, No Fade
+@>Change Screen Color Tone: (0,0,0,0), @6
+@>Wait: 6 frame(s)
+@>
+
+Page #2
+Conditions
+Switch 0022: s:tsOff?("A") is ON
+
+Autonomous Movement
+Type: Fixed
+Speed: 3: Slow
+Freq: 3: Low
+Options Enabled
+Move Animation
+Trigger: Autorun
+
+List of Event Commands:
+@>Conditional Branch: Script: get_self.onEvent?
+ @>Script: Followers.hide_followers
+ @>Set Move Route: Player
+                   (Ignore If Can't Move)
+  :              : $>Through ON
+  :              : $>Move Down
+  :              : $>Through OFF
+ @>Wait: 6 frame(s)
+ @>Script: Followers.put_followers_on_player
+ @>
+: Branch End
+@>Script: setTempSwitchOn("A")
+@>
+
+#------------------------------------------------------------------------------
+Event ID: 006
+Event Name: Wadribie
+(X,Y): (010,002)
+
+Page #1
+Conditions
+None
+
+Graphic: COMBEE
+
+Autonomous Movement
+Type: Fixed
+Speed: 3: Slow
+Freq: 3: Low
+Options Enabled
+Move Animation
+Stop Animation
+Always on Top
+Trigger: Action Button
+
+List of Event Commands:
+@>
+
+#------------------------------------------------------------------------------
+Event ID: 007
+Event Name: Wadribie
+(X,Y): (004,005)
+
+Page #1
+Conditions
+None
+
+Graphic: COMBEE
+
+Autonomous Movement
+Type: Fixed
+Speed: 1: Slowest
+Freq: 3: Low
+Options Enabled
+Move Animation
+Stop Animation
+Always on Top
+Trigger: Action Button
+
+List of Event Commands:
+@>
+
+#------------------------------------------------------------------------------
+Event ID: 008
+Event Name: Wadribie
+(X,Y): (016,005)
+
+Page #1
+Conditions
+None
+
+Graphic: COMBEE
+
+Autonomous Movement
+Type: Fixed
+Speed: 2: Slower
+Freq: 3: Low
+Options Enabled
+Move Animation
+Stop Animation
+Always on Top
+Trigger: Action Button
+
+List of Event Commands:
+@>
+
+#------------------------------------------------------------------------------
+
+#==============================================================================
+Map ID: 712
+Map Name: Bienenstock
+Tileset: 136: Arena
+Width: 20, Height: 15
+
+#------------------------------------------------------------------------------
+Event ID: 001
+Event Name: Haus 1 Tür
+(X,Y): (010,013)
+
+Page #1
+Conditions
+None
+
+Autonomous Movement
+Type: Fixed
+Speed: 3: Slow
+Freq: 3: Low
+Options Enabled
+Move Animation
+Trigger: Player Touch
+
+List of Event Commands:
+@>Play SE: 'Door exit', 100, 100
+@>Change Screen Color Tone: (-255,-255,-255,0), @6
+@>Wait: 8 frame(s)
+@>Transfer Player:[711: Bienenstock], (013,005), Down, No Fade
+@>Change Screen Color Tone: (0,0,0,0), @6
+@>Wait: 8 frame(s)
+@>
+
+#------------------------------------------------------------------------------
+Event ID: 002
+Event Name: EV002
+(X,Y): (000,014)
+
+Page #1
+Conditions
+None
+
+Autonomous Movement
+Type: Fixed
+Speed: 3: Slow
+Freq: 3: Low
+Options Enabled
+Move Animation
+Trigger: Autorun
+
+List of Event Commands:
+@>Wait: 20 frame(s)
+@>Play SE: 'BEEDRILL', 100, 100
+@>Set Move Route: [Bibor]
+ :              : $>Move Down
+ :              : $>Move Down
+ :              : $>Move Down
+@>Set Move Route: [Bibor]
+ :              : $>Move Down
+ :              : $>Move Down
+ :              : $>Move Down
+@>Wait: 20 frame(s)
+@>Script: setBattleRule("double")
+:       : setBattleRule("cannotRun")
+:       : setBattleRule("outcome", 48)
+:       : WildBattle.start(:BEEDRILL, 16, 
+:       : :BEEDRILL, 16)
+@>Conditional Branch: Variable [0048: Kampf-Ergebnis] == 1
+ @>Control Switches: [0421: Bibor] = ON
+ @>Control Self Switch: A =ON
+ @>
+: Else
+ @>Conditional Branch: Variable [0048: Kampf-Ergebnis] == 4
+  @>Control Switches: [0421: Bibor] = ON
+  @>Control Self Switch: A =ON
+  @>
+ : Else
+  @>Exit Event Processing
+  @>
+ : Branch End
+ @>
+: Branch End
+@>
+
+Page #2
+Conditions
+Self Switch A is ON
+
+Autonomous Movement
+Type: Fixed
+Speed: 3: Slow
+Freq: 3: Low
+Options Enabled
+Move Animation
+Trigger: Action Button
+
+List of Event Commands:
+@>
+
+Page #3
+Conditions
+Switch 0421: Bibor is ON
+
+Autonomous Movement
+Type: Fixed
+Speed: 3: Slow
+Freq: 3: Low
+Options Enabled
+Move Animation
+Trigger: Action Button
+
+List of Event Commands:
+@>
+
+#------------------------------------------------------------------------------
+Event ID: 003
+Event Name: Haus 1 Tür
+(X,Y): (016,007)
+
+Page #1
+Conditions
+None
+
+Autonomous Movement
+Type: Fixed
+Speed: 3: Slow
+Freq: 3: Low
+Options Enabled
+Move Animation
+Trigger: Player Touch
+
+List of Event Commands:
+@>Play SE: 'Door exit', 100, 100
+@>Change Screen Color Tone: (-255,-255,-255,0), @6
+@>Wait: 8 frame(s)
+@>Transfer Player:[715: Bienenstock], (005,007), Right, No Fade
+@>Change Screen Color Tone: (0,0,0,0), @6
+@>Wait: 8 frame(s)
+@>
+
+#------------------------------------------------------------------------------
+Event ID: 004
+Event Name: Bibor
+(X,Y): (009,007)
+
+Page #1
+Conditions
+None
+
+Graphic: BEEDRILLEVENT
+
+Autonomous Movement
+Type: Fixed
+Speed: 3: Slow
+Freq: 3: Low
+Options Enabled
+Move Animation
+Stop Animation
+Trigger: Action Button
+
+List of Event Commands:
+@>
+
+Page #2
+Conditions
+Switch 0421: Bibor is ON
+
+Autonomous Movement
+Type: Fixed
+Speed: 3: Slow
+Freq: 3: Low
+Options Enabled
+Move Animation
+Trigger: Action Button
+
+List of Event Commands:
+@>
+
+#------------------------------------------------------------------------------
+Event ID: 005
+Event Name: Bibor
+(X,Y): (011,007)
+
+Page #1
+Conditions
+None
+
+Graphic: BEEDRILLEVENT
+
+Autonomous Movement
+Type: Fixed
+Speed: 3: Slow
+Freq: 3: Low
+Options Enabled
+Move Animation
+Stop Animation
+Trigger: Action Button
+
+List of Event Commands:
+@>
+
+Page #2
+Conditions
+Switch 0421: Bibor is ON
+
+Autonomous Movement
+Type: Fixed
+Speed: 3: Slow
+Freq: 3: Low
+Options Enabled
+Move Animation
+Trigger: Action Button
+
+List of Event Commands:
+@>
+
+#------------------------------------------------------------------------------
+Event ID: 006
+Event Name: Wadribie
+(X,Y): (006,003)
+
+Page #1
+Conditions
+None
+
+Graphic: COMBEE
+
+Autonomous Movement
+Type: Fixed
+Speed: 3: Slow
+Freq: 3: Low
+Options Enabled
+Move Animation
+Stop Animation
+Always on Top
+Trigger: Action Button
+
+List of Event Commands:
+@>
+
+#------------------------------------------------------------------------------
+Event ID: 007
+Event Name: Wadribie
+(X,Y): (011,001)
+
+Page #1
+Conditions
+None
+
+Graphic: COMBEE
+
+Autonomous Movement
+Type: Fixed
+Speed: 2: Slower
+Freq: 3: Low
+Options Enabled
+Move Animation
+Stop Animation
+Always on Top
+Trigger: Action Button
+
+List of Event Commands:
+@>
+
+#------------------------------------------------------------------------------
+
+#==============================================================================
+Map ID: 713
+Map Name: Bienenstock
+Tileset: 136: Arena
+Width: 20, Height: 15
+
+#------------------------------------------------------------------------------
+Event ID: 001
+Event Name: Haus 1 Tür
+(X,Y): (010,013)
+
+Page #1
+Conditions
+None
+
+Autonomous Movement
+Type: Fixed
+Speed: 3: Slow
+Freq: 3: Low
+Options Enabled
+Move Animation
+Trigger: Player Touch
+
+List of Event Commands:
+@>Play SE: 'Door exit', 100, 100
+@>Change Screen Color Tone: (-255,-255,-255,0), @6
+@>Wait: 8 frame(s)
+@>Transfer Player:[711: Bienenstock], (007,005), Down, No Fade
+@>Change Screen Color Tone: (0,0,0,0), @6
+@>Wait: 8 frame(s)
+@>
+
+#------------------------------------------------------------------------------
+Event ID: 002
+Event Name: Wadribie
+(X,Y): (006,002)
+
+Page #1
+Conditions
+None
+
+Graphic: COMBEE
+
+Autonomous Movement
+Type: Fixed
+Speed: 1: Slowest
+Freq: 3: Low
+Options Enabled
+Move Animation
+Stop Animation
+Always on Top
+Trigger: Action Button
+
+List of Event Commands:
+@>
+
+#------------------------------------------------------------------------------
+Event ID: 003
+Event Name: Haus 1 Tür
+(X,Y): (004,007)
+
+Page #1
+Conditions
+None
+
+Autonomous Movement
+Type: Fixed
+Speed: 3: Slow
+Freq: 3: Low
+Options Enabled
+Move Animation
+Trigger: Player Touch
+
+List of Event Commands:
+@>Play SE: 'Door exit', 100, 100
+@>Change Screen Color Tone: (-255,-255,-255,0), @6
+@>Wait: 8 frame(s)
+@>Transfer Player:[714: Bienenstock], (015,007), Left, No Fade
+@>Change Screen Color Tone: (0,0,0,0), @6
+@>Wait: 8 frame(s)
+@>
+
+#------------------------------------------------------------------------------
+Event ID: 004
+Event Name: Cave entrance
+(X,Y): (010,003)
+
+Page #1
+Conditions
+None
+
+Autonomous Movement
+Type: Fixed
+Speed: 3: Slow
+Freq: 3: Low
+Options Enabled
+Move Animation
+Trigger: Event Touch
+
+List of Event Commands:
+@>Play SE: 'Door exit', 100, 100
+@>Change Screen Color Tone: (-255,-255,-255,0), @6
+@>Wait: 8 frame(s)
+@>Transfer Player:[718: Bienenstock], (010,012), Up, No Fade
+@>Change Screen Color Tone: (0,0,0,0), @6
+@>Wait: 6 frame(s)
+@>
+
+Page #2
+Conditions
+Switch 0022: s:tsOff?("A") is ON
+
+Autonomous Movement
+Type: Fixed
+Speed: 3: Slow
+Freq: 3: Low
+Options Enabled
+Move Animation
+Trigger: Autorun
+
+List of Event Commands:
+@>Conditional Branch: Script: get_self.onEvent?
+ @>Script: Followers.hide_followers
+ @>Set Move Route: Player
+                   (Ignore If Can't Move)
+  :              : $>Through ON
+  :              : $>Move Down
+  :              : $>Through OFF
+ @>Wait: 6 frame(s)
+ @>Script: Followers.put_followers_on_player
+ @>
+: Branch End
+@>Script: setTempSwitchOn("A")
+@>
+
+#------------------------------------------------------------------------------
+Event ID: 005
+Event Name: Bibor
+(X,Y): (009,007)
+
+Page #1
+Conditions
+None
+
+Graphic: BEEDRILLEVENT
+
+Autonomous Movement
+Type: Fixed
+Speed: 3: Slow
+Freq: 3: Low
+Options Enabled
+Move Animation
+Stop Animation
+Trigger: Action Button
+
+List of Event Commands:
+@>
+
+Page #2
+Conditions
+Switch 0421: Bibor is ON
+
+Autonomous Movement
+Type: Fixed
+Speed: 3: Slow
+Freq: 3: Low
+Options Enabled
+Move Animation
+Trigger: Action Button
+
+List of Event Commands:
+@>
+
+#------------------------------------------------------------------------------
+Event ID: 006
+Event Name: Bibor
+(X,Y): (011,007)
+
+Page #1
+Conditions
+None
+
+Graphic: BEEDRILLEVENT
+
+Autonomous Movement
+Type: Fixed
+Speed: 3: Slow
+Freq: 3: Low
+Options Enabled
+Move Animation
+Stop Animation
+Trigger: Action Button
+
+List of Event Commands:
+@>
+
+Page #2
+Conditions
+Switch 0421: Bibor is ON
+
+Autonomous Movement
+Type: Fixed
+Speed: 3: Slow
+Freq: 3: Low
+Options Enabled
+Move Animation
+Trigger: Action Button
+
+List of Event Commands:
+@>
+
+#------------------------------------------------------------------------------
+Event ID: 007
+Event Name: EV007
+(X,Y): (000,014)
+
+Page #1
+Conditions
+None
+
+Autonomous Movement
+Type: Fixed
+Speed: 3: Slow
+Freq: 3: Low
+Options Enabled
+Move Animation
+Trigger: Autorun
+
+List of Event Commands:
+@>Wait: 20 frame(s)
+@>Play SE: 'BEEDRILL', 100, 100
+@>Set Move Route: [Bibor]
+ :              : $>Move Down
+ :              : $>Move Down
+ :              : $>Move Down
+@>Set Move Route: [Bibor]
+ :              : $>Move Down
+ :              : $>Move Down
+ :              : $>Move Down
+@>Wait: 20 frame(s)
+@>Script: setBattleRule("double")
+:       : setBattleRule("cannotRun")
+:       : setBattleRule("outcome", 48)
+:       : WildBattle.start(:BEEDRILL, 16, 
+:       : :BEEDRILL, 16)
+@>Conditional Branch: Variable [0048: Kampf-Ergebnis] == 1
+ @>Control Switches: [0421: Bibor] = ON
+ @>Control Self Switch: A =ON
+ @>
+: Else
+ @>Conditional Branch: Variable [0048: Kampf-Ergebnis] == 4
+  @>Control Switches: [0421: Bibor] = ON
+  @>Control Self Switch: A =ON
+  @>
+ : Else
+  @>Exit Event Processing
+  @>
+ : Branch End
+ @>
+: Branch End
+@>
+
+Page #2
+Conditions
+Self Switch A is ON
+
+Autonomous Movement
+Type: Fixed
+Speed: 3: Slow
+Freq: 3: Low
+Options Enabled
+Move Animation
+Trigger: Action Button
+
+List of Event Commands:
+@>
+
+Page #3
+Conditions
+Switch 0421: Bibor is ON
+
+Autonomous Movement
+Type: Fixed
+Speed: 3: Slow
+Freq: 3: Low
+Options Enabled
+Move Animation
+Trigger: Action Button
+
+List of Event Commands:
+@>
+
+#------------------------------------------------------------------------------
+
+#==============================================================================
+Map ID: 714
+Map Name: Bienenstock
+Tileset: 136: Arena
+Width: 20, Height: 15
+
+#------------------------------------------------------------------------------
+Event ID: 001
+Event Name: Haus 1 Tür
+(X,Y): (016,007)
+
+Page #1
+Conditions
+None
+
+Autonomous Movement
+Type: Fixed
+Speed: 3: Slow
+Freq: 3: Low
+Options Enabled
+Move Animation
+Trigger: Player Touch
+
+List of Event Commands:
+@>Play SE: 'Door exit', 100, 100
+@>Change Screen Color Tone: (-255,-255,-255,0), @6
+@>Wait: 8 frame(s)
+@>Transfer Player:[713: Bienenstock], (005,007), Right, No Fade
+@>Change Screen Color Tone: (0,0,0,0), @6
+@>Wait: 8 frame(s)
+@>
+
+#------------------------------------------------------------------------------
+
+#==============================================================================
+Map ID: 715
+Map Name: Bienenstock
+Tileset: 136: Arena
+Width: 20, Height: 15
+
+#------------------------------------------------------------------------------
+Event ID: 001
+Event Name: Haus 1 Tür
+(X,Y): (004,007)
+
+Page #1
+Conditions
+None
+
+Autonomous Movement
+Type: Fixed
+Speed: 3: Slow
+Freq: 3: Low
+Options Enabled
+Move Animation
+Trigger: Player Touch
+
+List of Event Commands:
+@>Play SE: 'Door exit', 100, 100
+@>Change Screen Color Tone: (-255,-255,-255,0), @6
+@>Wait: 8 frame(s)
+@>Transfer Player:[712: Bienenstock], (015,007), Left, No Fade
+@>Change Screen Color Tone: (0,0,0,0), @6
+@>Wait: 8 frame(s)
+@>
+
+#------------------------------------------------------------------------------
+Event ID: 002
+Event Name: Cave entrance
+(X,Y): (010,003)
+
+Page #1
+Conditions
+None
+
+Autonomous Movement
+Type: Fixed
+Speed: 3: Slow
+Freq: 3: Low
+Options Enabled
+Move Animation
+Trigger: Event Touch
+
+List of Event Commands:
+@>Play SE: 'Door exit', 100, 100
+@>Change Screen Color Tone: (-255,-255,-255,0), @6
+@>Wait: 8 frame(s)
+@>Transfer Player:[716: Bienenstock], (010,012), Up, No Fade
+@>Change Screen Color Tone: (0,0,0,0), @6
+@>Wait: 6 frame(s)
+@>
+
+Page #2
+Conditions
+Switch 0022: s:tsOff?("A") is ON
+
+Autonomous Movement
+Type: Fixed
+Speed: 3: Slow
+Freq: 3: Low
+Options Enabled
+Move Animation
+Trigger: Autorun
+
+List of Event Commands:
+@>Conditional Branch: Script: get_self.onEvent?
+ @>Script: Followers.hide_followers
+ @>Set Move Route: Player
+                   (Ignore If Can't Move)
+  :              : $>Through ON
+  :              : $>Move Down
+  :              : $>Through OFF
+ @>Wait: 6 frame(s)
+ @>Script: Followers.put_followers_on_player
+ @>
+: Branch End
+@>Script: setTempSwitchOn("A")
+@>
+
+#------------------------------------------------------------------------------
+Event ID: 003
+Event Name: Wadribie
+(X,Y): (007,003)
+
+Page #1
+Conditions
+None
+
+Graphic: COMBEE
+
+Autonomous Movement
+Type: Fixed
+Speed: 3: Slow
+Freq: 3: Low
+Options Enabled
+Move Animation
+Stop Animation
+Always on Top
+Trigger: Action Button
+
+List of Event Commands:
+@>
+
+#------------------------------------------------------------------------------
+
+#==============================================================================
+Map ID: 716
+Map Name: Bienenstock
+Tileset: 136: Arena
+Width: 20, Height: 15
+
+#------------------------------------------------------------------------------
+Event ID: 001
+Event Name: Haus 1 Tür
+(X,Y): (010,013)
+
+Page #1
+Conditions
+None
+
+Autonomous Movement
+Type: Fixed
+Speed: 3: Slow
+Freq: 3: Low
+Options Enabled
+Move Animation
+Trigger: Player Touch
+
+List of Event Commands:
+@>Play SE: 'Door exit', 100, 100
+@>Change Screen Color Tone: (-255,-255,-255,0), @6
+@>Wait: 8 frame(s)
+@>Transfer Player:[715: Bienenstock], (010,003), Down, No Fade
+@>Change Screen Color Tone: (0,0,0,0), @6
+@>Wait: 8 frame(s)
+@>
+
+#------------------------------------------------------------------------------
+Event ID: 002
+Event Name: Haus 1 Tür
+(X,Y): (004,007)
+
+Page #1
+Conditions
+None
+
+Autonomous Movement
+Type: Fixed
+Speed: 3: Slow
+Freq: 3: Low
+Options Enabled
+Move Animation
+Trigger: Player Touch
+
+List of Event Commands:
+@>Play SE: 'Door exit', 100, 100
+@>Change Screen Color Tone: (-255,-255,-255,0), @6
+@>Wait: 8 frame(s)
+@>Transfer Player:[717: Bienenstock], (015,007), Left, No Fade
+@>Change Screen Color Tone: (0,0,0,0), @6
+@>Wait: 8 frame(s)
+@>
+
+#------------------------------------------------------------------------------
+Event ID: 003
+Event Name: Cave entrance
+(X,Y): (010,003)
+
+Page #1
+Conditions
+None
+
+Autonomous Movement
+Type: Fixed
+Speed: 3: Slow
+Freq: 3: Low
+Options Enabled
+Move Animation
+Trigger: Event Touch
+
+List of Event Commands:
+@>Play SE: 'Door exit', 100, 100
+@>Change Screen Color Tone: (-255,-255,-255,0), @6
+@>Wait: 8 frame(s)
+@>Transfer Player:[723: Bienenstock], (010,012), Up, No Fade
+@>Change Screen Color Tone: (0,0,0,0), @6
+@>Wait: 6 frame(s)
+@>
+
+Page #2
+Conditions
+Switch 0022: s:tsOff?("A") is ON
+
+Autonomous Movement
+Type: Fixed
+Speed: 3: Slow
+Freq: 3: Low
+Options Enabled
+Move Animation
+Trigger: Autorun
+
+List of Event Commands:
+@>Conditional Branch: Script: get_self.onEvent?
+ @>Script: Followers.hide_followers
+ @>Set Move Route: Player
+                   (Ignore If Can't Move)
+  :              : $>Through ON
+  :              : $>Move Down
+  :              : $>Through OFF
+ @>Wait: 6 frame(s)
+ @>Script: Followers.put_followers_on_player
+ @>
+: Branch End
+@>Script: setTempSwitchOn("A")
+@>
+
+#------------------------------------------------------------------------------
+Event ID: 004
+Event Name: Wadribie
+(X,Y): (006,003)
+
+Page #1
+Conditions
+None
+
+Graphic: COMBEE
+
+Autonomous Movement
+Type: Fixed
+Speed: 3: Slow
+Freq: 3: Low
+Options Enabled
+Move Animation
+Stop Animation
+Always on Top
+Trigger: Action Button
+
+List of Event Commands:
+@>
+
+#------------------------------------------------------------------------------
+Event ID: 005
+Event Name: Wadribie
+(X,Y): (014,002)
+
+Page #1
+Conditions
+None
+
+Graphic: COMBEE
+
+Autonomous Movement
+Type: Fixed
+Speed: 2: Slower
+Freq: 3: Low
+Options Enabled
+Move Animation
+Stop Animation
+Always on Top
+Trigger: Action Button
+
+List of Event Commands:
+@>
+
+#------------------------------------------------------------------------------
+
+#==============================================================================
+Map ID: 717
+Map Name: Bienenstock
+Tileset: 136: Arena
+Width: 20, Height: 15
+
+#------------------------------------------------------------------------------
+Event ID: 001
+Event Name: Haus 1 Tür
+(X,Y): (004,007)
+
+Page #1
+Conditions
+None
+
+Autonomous Movement
+Type: Fixed
+Speed: 3: Slow
+Freq: 3: Low
+Options Enabled
+Move Animation
+Trigger: Player Touch
+
+List of Event Commands:
+@>Play SE: 'Door exit', 100, 100
+@>Change Screen Color Tone: (-255,-255,-255,0), @6
+@>Wait: 8 frame(s)
+@>Transfer Player:[718: Bienenstock], (015,007), Left, No Fade
+@>Change Screen Color Tone: (0,0,0,0), @6
+@>Wait: 8 frame(s)
+@>
+
+#------------------------------------------------------------------------------
+Event ID: 002
+Event Name: Haus 1 Tür
+(X,Y): (016,007)
+
+Page #1
+Conditions
+None
+
+Autonomous Movement
+Type: Fixed
+Speed: 3: Slow
+Freq: 3: Low
+Options Enabled
+Move Animation
+Trigger: Player Touch
+
+List of Event Commands:
+@>Play SE: 'Door exit', 100, 100
+@>Change Screen Color Tone: (-255,-255,-255,0), @6
+@>Wait: 8 frame(s)
+@>Transfer Player:[716: Bienenstock], (005,007), Right, No Fade
+@>Change Screen Color Tone: (0,0,0,0), @6
+@>Wait: 8 frame(s)
+@>
+
+#------------------------------------------------------------------------------
+Event ID: 003
+Event Name: Cave entrance
+(X,Y): (010,003)
+
+Page #1
+Conditions
+None
+
+Autonomous Movement
+Type: Fixed
+Speed: 3: Slow
+Freq: 3: Low
+Options Enabled
+Move Animation
+Trigger: Event Touch
+
+List of Event Commands:
+@>Play SE: 'Door exit', 100, 100
+@>Change Screen Color Tone: (-255,-255,-255,0), @6
+@>Wait: 8 frame(s)
+@>Transfer Player:[722: Bienenstock], (010,012), Up, No Fade
+@>Change Screen Color Tone: (0,0,0,0), @6
+@>Wait: 6 frame(s)
+@>
+
+Page #2
+Conditions
+Switch 0022: s:tsOff?("A") is ON
+
+Autonomous Movement
+Type: Fixed
+Speed: 3: Slow
+Freq: 3: Low
+Options Enabled
+Move Animation
+Trigger: Autorun
+
+List of Event Commands:
+@>Conditional Branch: Script: get_self.onEvent?
+ @>Script: Followers.hide_followers
+ @>Set Move Route: Player
+                   (Ignore If Can't Move)
+  :              : $>Through ON
+  :              : $>Move Down
+  :              : $>Through OFF
+ @>Wait: 6 frame(s)
+ @>Script: Followers.put_followers_on_player
+ @>
+: Branch End
+@>Script: setTempSwitchOn("A")
+@>
+
+#------------------------------------------------------------------------------
+
+#==============================================================================
+Map ID: 718
+Map Name: Bienenstock
+Tileset: 136: Arena
+Width: 20, Height: 15
+
+#------------------------------------------------------------------------------
+Event ID: 001
+Event Name: Haus 1 Tür
+(X,Y): (010,013)
+
+Page #1
+Conditions
+None
+
+Autonomous Movement
+Type: Fixed
+Speed: 3: Slow
+Freq: 3: Low
+Options Enabled
+Move Animation
+Trigger: Player Touch
+
+List of Event Commands:
+@>Play SE: 'Door exit', 100, 100
+@>Change Screen Color Tone: (-255,-255,-255,0), @6
+@>Wait: 8 frame(s)
+@>Transfer Player:[713: Bienenstock], (010,003), Down, No Fade
+@>Change Screen Color Tone: (0,0,0,0), @6
+@>Wait: 8 frame(s)
+@>
+
+#------------------------------------------------------------------------------
+Event ID: 002
+Event Name: Haus 1 Tür
+(X,Y): (016,007)
+
+Page #1
+Conditions
+None
+
+Autonomous Movement
+Type: Fixed
+Speed: 3: Slow
+Freq: 3: Low
+Options Enabled
+Move Animation
+Trigger: Player Touch
+
+List of Event Commands:
+@>Play SE: 'Door exit', 100, 100
+@>Change Screen Color Tone: (-255,-255,-255,0), @6
+@>Wait: 8 frame(s)
+@>Transfer Player:[717: Bienenstock], (005,007), Right, No Fade
+@>Change Screen Color Tone: (0,0,0,0), @6
+@>Wait: 8 frame(s)
+@>
+
+#------------------------------------------------------------------------------
+
+#==============================================================================
+Map ID: 719
+Map Name: Bienenstock
+Tileset: 136: Arena
+Width: 20, Height: 15
+
+#------------------------------------------------------------------------------
+Event ID: 001
+Event Name: Cave entrance
+(X,Y): (010,003)
+
+Page #1
+Conditions
+None
+
+Autonomous Movement
+Type: Fixed
+Speed: 3: Slow
+Freq: 3: Low
+Options Enabled
+Move Animation
+Trigger: Event Touch
+
+List of Event Commands:
+@>Play SE: 'Door exit', 100, 100
+@>Change Screen Color Tone: (-255,-255,-255,0), @6
+@>Wait: 8 frame(s)
+@>Transfer Player:[720: Bienenstock], (010,012), Up, No Fade
+@>Change Screen Color Tone: (0,0,0,0), @6
+@>Wait: 6 frame(s)
+@>
+
+Page #2
+Conditions
+Switch 0022: s:tsOff?("A") is ON
+
+Autonomous Movement
+Type: Fixed
+Speed: 3: Slow
+Freq: 3: Low
+Options Enabled
+Move Animation
+Trigger: Autorun
+
+List of Event Commands:
+@>Conditional Branch: Script: get_self.onEvent?
+ @>Script: Followers.hide_followers
+ @>Set Move Route: Player
+                   (Ignore If Can't Move)
+  :              : $>Through ON
+  :              : $>Move Down
+  :              : $>Through OFF
+ @>Wait: 6 frame(s)
+ @>Script: Followers.put_followers_on_player
+ @>
+: Branch End
+@>Script: setTempSwitchOn("A")
+@>
+
+#------------------------------------------------------------------------------
+
+#==============================================================================
+Map ID: 720
+Map Name: Bienenstock
+Tileset: 136: Arena
+Width: 20, Height: 15
+
+#------------------------------------------------------------------------------
+Event ID: 001
+Event Name: Haus 1 Tür
+(X,Y): (010,013)
+
+Page #1
+Conditions
+None
+
+Autonomous Movement
+Type: Fixed
+Speed: 3: Slow
+Freq: 3: Low
+Options Enabled
+Move Animation
+Trigger: Player Touch
+
+List of Event Commands:
+@>Play SE: 'Door exit', 100, 100
+@>Change Screen Color Tone: (-255,-255,-255,0), @6
+@>Wait: 8 frame(s)
+@>Transfer Player:[719: Bienenstock], (010,003), Down, No Fade
+@>Change Screen Color Tone: (0,0,0,0), @6
+@>Wait: 8 frame(s)
+@>
+
+#------------------------------------------------------------------------------
+Event ID: 002
+Event Name: Haus 1 Tür
+(X,Y): (016,007)
+
+Page #1
+Conditions
+None
+
+Autonomous Movement
+Type: Fixed
+Speed: 3: Slow
+Freq: 3: Low
+Options Enabled
+Move Animation
+Trigger: Player Touch
+
+List of Event Commands:
+@>Play SE: 'Door exit', 100, 100
+@>Change Screen Color Tone: (-255,-255,-255,0), @6
+@>Wait: 8 frame(s)
+@>Transfer Player:[721: Bienenstock], (005,007), Right, No Fade
+@>Change Screen Color Tone: (0,0,0,0), @6
+@>Wait: 8 frame(s)
+@>
+
+#------------------------------------------------------------------------------
+Event ID: 003
+Event Name: Cave entrance
+(X,Y): (010,003)
+
+Page #1
+Conditions
+None
+
+Autonomous Movement
+Type: Fixed
+Speed: 3: Slow
+Freq: 3: Low
+Options Enabled
+Move Animation
+Trigger: Event Touch
+
+List of Event Commands:
+@>Play SE: 'Door exit', 100, 100
+@>Change Screen Color Tone: (-255,-255,-255,0), @6
+@>Wait: 8 frame(s)
+@>Transfer Player:[725: Saal der Königin], (010,015), Up, No Fade
+@>Change Screen Color Tone: (0,0,0,0), @6
+@>Wait: 6 frame(s)
+@>
+
+Page #2
+Conditions
+Switch 0022: s:tsOff?("A") is ON
+
+Autonomous Movement
+Type: Fixed
+Speed: 3: Slow
+Freq: 3: Low
+Options Enabled
+Move Animation
+Trigger: Autorun
+
+List of Event Commands:
+@>Conditional Branch: Script: get_self.onEvent?
+ @>Script: Followers.hide_followers
+ @>Set Move Route: Player
+                   (Ignore If Can't Move)
+  :              : $>Through ON
+  :              : $>Move Down
+  :              : $>Through OFF
+ @>Wait: 6 frame(s)
+ @>Script: Followers.put_followers_on_player
+ @>
+: Branch End
+@>Script: setTempSwitchOn("A")
+@>
+
+#------------------------------------------------------------------------------
+Event ID: 004
+Event Name: Wadribie
+(X,Y): (007,003)
+
+Page #1
+Conditions
+None
+
+Graphic: COMBEE_1
+
+Autonomous Movement
+Type: Fixed
+Speed: 1: Slowest
+Freq: 1: Lowest
+Options Enabled
+Move Animation
+Stop Animation
+Always on Top
+Trigger: Action Button
+
+List of Event Commands:
+@>
+
+#------------------------------------------------------------------------------
+Event ID: 005
+Event Name: Wadribie
+(X,Y): (013,003)
+
+Page #1
+Conditions
+None
+
+Graphic: COMBEE
+
+Autonomous Movement
+Type: Fixed
+Speed: 3: Slow
+Freq: 3: Low
+Options Enabled
+Move Animation
+Stop Animation
+Always on Top
+Trigger: Action Button
+
+List of Event Commands:
+@>
+
+#------------------------------------------------------------------------------
+
+#==============================================================================
+Map ID: 721
+Map Name: Bienenstock
+Tileset: 136: Arena
+Width: 20, Height: 15
+
+#------------------------------------------------------------------------------
+Event ID: 001
+Event Name: Haus 1 Tür
+(X,Y): (004,007)
+
+Page #1
+Conditions
+None
+
+Autonomous Movement
+Type: Fixed
+Speed: 3: Slow
+Freq: 3: Low
+Options Enabled
+Move Animation
+Trigger: Player Touch
+
+List of Event Commands:
+@>Play SE: 'Door exit', 100, 100
+@>Change Screen Color Tone: (-255,-255,-255,0), @6
+@>Wait: 8 frame(s)
+@>Transfer Player:[720: Bienenstock], (015,007), Left, No Fade
+@>Change Screen Color Tone: (0,0,0,0), @6
+@>Wait: 8 frame(s)
+@>
+
+#------------------------------------------------------------------------------
+Event ID: 002
+Event Name: Haus 1 Tür
+(X,Y): (016,007)
+
+Page #1
+Conditions
+None
+
+Autonomous Movement
+Type: Fixed
+Speed: 3: Slow
+Freq: 3: Low
+Options Enabled
+Move Animation
+Trigger: Player Touch
+
+List of Event Commands:
+@>Play SE: 'Door exit', 100, 100
+@>Change Screen Color Tone: (-255,-255,-255,0), @6
+@>Wait: 8 frame(s)
+@>Transfer Player:[722: Bienenstock], (005,007), Right, No Fade
+@>Change Screen Color Tone: (0,0,0,0), @6
+@>Wait: 8 frame(s)
+@>
+
+#------------------------------------------------------------------------------
+
+#==============================================================================
+Map ID: 722
+Map Name: Bienenstock
+Tileset: 136: Arena
+Width: 20, Height: 15
+
+#------------------------------------------------------------------------------
+Event ID: 001
+Event Name: Haus 1 Tür
+(X,Y): (010,013)
+
+Page #1
+Conditions
+None
+
+Autonomous Movement
+Type: Fixed
+Speed: 3: Slow
+Freq: 3: Low
+Options Enabled
+Move Animation
+Trigger: Player Touch
+
+List of Event Commands:
+@>Play SE: 'Door exit', 100, 100
+@>Change Screen Color Tone: (-255,-255,-255,0), @6
+@>Wait: 8 frame(s)
+@>Transfer Player:[717: Bienenstock], (010,003), Down, No Fade
+@>Change Screen Color Tone: (0,0,0,0), @6
+@>Wait: 8 frame(s)
+@>
+
+#------------------------------------------------------------------------------
+Event ID: 002
+Event Name: Haus 1 Tür
+(X,Y): (004,007)
+
+Page #1
+Conditions
+None
+
+Autonomous Movement
+Type: Fixed
+Speed: 3: Slow
+Freq: 3: Low
+Options Enabled
+Move Animation
+Trigger: Player Touch
+
+List of Event Commands:
+@>Play SE: 'Door exit', 100, 100
+@>Change Screen Color Tone: (-255,-255,-255,0), @6
+@>Wait: 8 frame(s)
+@>Transfer Player:[721: Bienenstock], (015,007), Left, No Fade
+@>Change Screen Color Tone: (0,0,0,0), @6
+@>Wait: 8 frame(s)
+@>
+
+#------------------------------------------------------------------------------
+Event ID: 003
+Event Name: Haus 1 Tür
+(X,Y): (016,007)
+
+Page #1
+Conditions
+None
+
+Autonomous Movement
+Type: Fixed
+Speed: 3: Slow
+Freq: 3: Low
+Options Enabled
+Move Animation
+Trigger: Player Touch
+
+List of Event Commands:
+@>Play SE: 'Door exit', 100, 100
+@>Change Screen Color Tone: (-255,-255,-255,0), @6
+@>Wait: 8 frame(s)
+@>Transfer Player:[723: Bienenstock], (005,007), Right, No Fade
+@>Change Screen Color Tone: (0,0,0,0), @6
+@>Wait: 8 frame(s)
+@>
+
+#------------------------------------------------------------------------------
+Event ID: 004
+Event Name: Wadribie
+(X,Y): (013,003)
+
+Page #1
+Conditions
+None
+
+Graphic: COMBEE_1
+
+Autonomous Movement
+Type: Fixed
+Speed: 1: Slowest
+Freq: 1: Lowest
+Options Enabled
+Move Animation
+Stop Animation
+Always on Top
+Trigger: Action Button
+
+List of Event Commands:
+@>
+
+#------------------------------------------------------------------------------
+
+#==============================================================================
+Map ID: 723
+Map Name: Bienenstock
+Tileset: 136: Arena
+Width: 20, Height: 15
+
+#------------------------------------------------------------------------------
+Event ID: 001
+Event Name: Haus 1 Tür
+(X,Y): (004,007)
+
+Page #1
+Conditions
+None
+
+Autonomous Movement
+Type: Fixed
+Speed: 3: Slow
+Freq: 3: Low
+Options Enabled
+Move Animation
+Trigger: Player Touch
+
+List of Event Commands:
+@>Play SE: 'Door exit', 100, 100
+@>Change Screen Color Tone: (-255,-255,-255,0), @6
+@>Wait: 8 frame(s)
+@>Transfer Player:[722: Bienenstock], (015,007), Left, No Fade
+@>Change Screen Color Tone: (0,0,0,0), @6
+@>Wait: 8 frame(s)
+@>
+
+#------------------------------------------------------------------------------
+Event ID: 002
+Event Name: Haus 1 Tür
+(X,Y): (010,013)
+
+Page #1
+Conditions
+None
+
+Autonomous Movement
+Type: Fixed
+Speed: 3: Slow
+Freq: 3: Low
+Options Enabled
+Move Animation
+Trigger: Player Touch
+
+List of Event Commands:
+@>Play SE: 'Door exit', 100, 100
+@>Change Screen Color Tone: (-255,-255,-255,0), @6
+@>Wait: 8 frame(s)
+@>Transfer Player:[716: Bienenstock], (010,003), Down, No Fade
+@>Change Screen Color Tone: (0,0,0,0), @6
+@>Wait: 8 frame(s)
+@>
+
+#------------------------------------------------------------------------------
+Event ID: 003
+Event Name: Cave entrance
+(X,Y): (010,003)
+
+Page #1
+Conditions
+None
+
+Autonomous Movement
+Type: Fixed
+Speed: 3: Slow
+Freq: 3: Low
+Options Enabled
+Move Animation
+Trigger: Event Touch
+
+List of Event Commands:
+@>Play SE: 'Door exit', 100, 100
+@>Change Screen Color Tone: (-255,-255,-255,0), @6
+@>Wait: 8 frame(s)
+@>Transfer Player:[724: Bienenstock], (010,012), Up, No Fade
+@>Change Screen Color Tone: (0,0,0,0), @6
+@>Wait: 6 frame(s)
+@>
+
+Page #2
+Conditions
+Switch 0022: s:tsOff?("A") is ON
+
+Autonomous Movement
+Type: Fixed
+Speed: 3: Slow
+Freq: 3: Low
+Options Enabled
+Move Animation
+Trigger: Autorun
+
+List of Event Commands:
+@>Conditional Branch: Script: get_self.onEvent?
+ @>Script: Followers.hide_followers
+ @>Set Move Route: Player
+                   (Ignore If Can't Move)
+  :              : $>Through ON
+  :              : $>Move Down
+  :              : $>Through OFF
+ @>Wait: 6 frame(s)
+ @>Script: Followers.put_followers_on_player
+ @>
+: Branch End
+@>Script: setTempSwitchOn("A")
+@>
+
+#------------------------------------------------------------------------------
+Event ID: 004
+Event Name: Wadribie
+(X,Y): (006,002)
+
+Page #1
+Conditions
+None
+
+Graphic: COMBEE_1
+
+Autonomous Movement
+Type: Fixed
+Speed: 1: Slowest
+Freq: 1: Lowest
+Options Enabled
+Move Animation
+Stop Animation
+Always on Top
+Trigger: Action Button
+
+List of Event Commands:
+@>
+
+#------------------------------------------------------------------------------
+
+#==============================================================================
+Map ID: 724
+Map Name: Bienenstock
+Tileset: 136: Arena
+Width: 20, Height: 15
+
+#------------------------------------------------------------------------------
+Event ID: 001
+Event Name: Haus 1 Tür
+(X,Y): (010,013)
+
+Page #1
+Conditions
+None
+
+Autonomous Movement
+Type: Fixed
+Speed: 3: Slow
+Freq: 3: Low
+Options Enabled
+Move Animation
+Trigger: Player Touch
+
+List of Event Commands:
+@>Play SE: 'Door exit', 100, 100
+@>Change Screen Color Tone: (-255,-255,-255,0), @6
+@>Wait: 8 frame(s)
+@>Transfer Player:[723: Bienenstock], (010,003), Down, No Fade
+@>Change Screen Color Tone: (0,0,0,0), @6
+@>Wait: 8 frame(s)
+@>
+
+#------------------------------------------------------------------------------
+Event ID: 002
+Event Name: EV002
+(X,Y): (010,007)
+
+Page #1
+Conditions
+None
+
+Graphic: TEDDIURSAEVENT2
+
+Autonomous Movement
+Type: Fixed
+Speed: 1: Slowest
+Freq: 1: Lowest
+Options Enabled
+Move Animation
+Trigger: Action Button
+
+List of Event Commands:
+@>Text: Möchtest du dem Teddiursa Honig anbieten?
+@>Show Choices: Ja, Nein
+(When Cancel: Choice 2)
+: When [Ja]
+ @>Conditional Branch: Script: $bag.has?(:HONEY)
+  @>Script: $bag.remove(:HONEY)
+  @>Play SE: 'TEDDIURSA', 100, 100
+  @>Wait: 10 frame(s)
+  @>Set Move Route: This event
+   :              : $>Change Speed: 3
+   :              : $>1 Step Backward
+   :              : $>Wait: 6 frame(s)
+   :              : $>Turn Down
+   :              : $>Wait: 20 frame(s)
+   :              : $>Graphic: "TEDDIURSAEVENT', 0, 2, 0
+   :              : $>Change Speed: 5
+   :              : $>Stop Animation ON
+   :              : $>Wait: 40 frame(s)
+   :              : $>Change Speed: 1
+   :              : $>Stop Animation OFF
+   :              : $>Graphic: "TEDDIURSAEVENT2', 0, 2, 0
+   :              : $>Change Speed: 3
+   :              : $>Turn toward Player
+  @>Wait: 66 frame(s)
+  @>Show Animation: This event, [Heart Emote]
+  @>Play SE: 'TEDDIURSA', 100, 100
+  @>Wait: 24 frame(s)
+  @>Set Move Route: This event
+   :              : $>SE: 'Player jump', 100, 100
+   :              : $>Jump: +0,+0
+   :              : $>Wait: 6 frame(s)
+   :              : $>SE: 'Player jump', 100, 100
+   :              : $>Jump: +0,+0
+   :              : $>Wait: 6 frame(s)
+   :              : $>Move toward Player
+  @>Wait: 24 frame(s)
+  @>Script: pkmn = Pokemon.new(:TEDDIURSA, 18)
+  :       : pkmn.ability_index = 2
+  :       : pbAddPokemon(pkmn)
+  @>Control Switches: [0420: Teddiursa Ende] = ON
+  @>
+ : Else
+  @>Text: Du hast keinen Honig.
+  @>Jump to Label: Kampf
+  @>
+ : Branch End
+ @>
+: When [Nein]
+ @>Label: Kampf
+ @>Script: setBattleRule("outcome", 48)
+ :       : setBattleRule("editWildPokemon", {
+ :       :   :ability_index => 2
+ :       : })
+ :       : WildBattle.start(:TEDDIURSA, 18)
+ @>Conditional Branch: Variable [0048: Kampf-Ergebnis] == 4
+  @>Control Switches: [0420: Teddiursa Ende] = ON
+  @>
+ : Else
+  @>Conditional Branch: Variable [0048: Kampf-Ergebnis] == 1
+   @>Control Switches: [0420: Teddiursa Ende] = ON
+   @>
+  : Else
+   @>Exit Event Processing
+   @>
+  : Branch End
+  @>
+ : Branch End
+ @>
+: Branch End
+@>
+
+Page #2
+Conditions
+Switch 0420: Teddiursa Ende is ON
+
+Autonomous Movement
+Type: Fixed
+Speed: 3: Slow
+Freq: 3: Low
+Options Enabled
+Move Animation
+Trigger: Action Button
+
+List of Event Commands:
+@>
+
+#------------------------------------------------------------------------------
+
+#==============================================================================
+Map ID: 725
+Map Name: Saal der Königin
+Tileset: 136: Arena
+Width: 20, Height: 20
+
+#------------------------------------------------------------------------------
+Event ID: 001
+Event Name: Haus 1 Tür
+(X,Y): (010,016)
+
+Page #1
+Conditions
+None
+
+Autonomous Movement
+Type: Fixed
+Speed: 3: Slow
+Freq: 3: Low
+Options Enabled
+Move Animation
+Trigger: Player Touch
+
+List of Event Commands:
+@>Play SE: 'Door exit', 100, 100
+@>Change Screen Color Tone: (-255,-255,-255,0), @6
+@>Wait: 8 frame(s)
+@>Transfer Player:[720: Bienenstock], (010,003), Down, No Fade
+@>Change Screen Color Tone: (0,0,0,0), @6
+@>Wait: 8 frame(s)
+@>
+
+#------------------------------------------------------------------------------
+Event ID: 002
+Event Name: EV002
+(X,Y): (000,019)
+
+Page #1
+Conditions
+None
+
+Autonomous Movement
+Type: Fixed
+Speed: 3: Slow
+Freq: 3: Low
+Options Enabled
+Move Animation
+Trigger: Autorun
+
+List of Event Commands:
+@>Wait: 20 frame(s)
+@>Play SE: 'BEEDRILL', 100, 100
+@>Set Move Route: [Bibor]
+ :              : $>Move Down
+ :              : $>Move Down
+ :              : $>Move Down
+@>Set Move Route: [Bibor]
+ :              : $>Move Down
+ :              : $>Move Down
+ :              : $>Move Down
+@>Wait: 20 frame(s)
+@>Script: setBattleRule("double")
+:       : setBattleRule("cannotRun")
+:       : setBattleRule("outcome", 48)
+:       : WildBattle.start(:BEEDRILL, 18, 
+:       : :BEEDRILL, 18)
+@>Conditional Branch: Variable [0048: Kampf-Ergebnis] == 1
+ @>Control Switches: [0422: Bibor 2] = ON
+ @>Control Self Switch: A =ON
+ @>
+: Else
+ @>Conditional Branch: Variable [0048: Kampf-Ergebnis] == 4
+  @>Control Switches: [0422: Bibor 2] = ON
+  @>Control Self Switch: A =ON
+  @>
+ : Else
+  @>Exit Event Processing
+  @>
+ : Branch End
+ @>
+: Branch End
+@>
+
+Page #2
+Conditions
+Self Switch A is ON
+
+Autonomous Movement
+Type: Fixed
+Speed: 3: Slow
+Freq: 3: Low
+Options Enabled
+Move Animation
+Trigger: Action Button
+
+List of Event Commands:
+@>
+
+Page #3
+Conditions
+Switch 0422: Bibor 2 is ON
+
+Autonomous Movement
+Type: Fixed
+Speed: 3: Slow
+Freq: 3: Low
+Options Enabled
+Move Animation
+Trigger: Action Button
+
+List of Event Commands:
+@>
+
+#------------------------------------------------------------------------------
+Event ID: 003
+Event Name: Bibor
+(X,Y): (009,010)
+
+Page #1
+Conditions
+None
+
+Graphic: BEEDRILLEVENT
+
+Autonomous Movement
+Type: Fixed
+Speed: 3: Slow
+Freq: 3: Low
+Options Enabled
+Move Animation
+Stop Animation
+Trigger: Action Button
+
+List of Event Commands:
+@>
+
+Page #2
+Conditions
+Switch 0422: Bibor 2 is ON
+
+Autonomous Movement
+Type: Fixed
+Speed: 3: Slow
+Freq: 3: Low
+Options Enabled
+Move Animation
+Trigger: Action Button
+
+List of Event Commands:
+@>
+
+#------------------------------------------------------------------------------
+Event ID: 004
+Event Name: Bibor
+(X,Y): (011,010)
+
+Page #1
+Conditions
+None
+
+Graphic: BEEDRILLEVENT
+
+Autonomous Movement
+Type: Fixed
+Speed: 3: Slow
+Freq: 3: Low
+Options Enabled
+Move Animation
+Stop Animation
+Trigger: Action Button
+
+List of Event Commands:
+@>
+
+Page #2
+Conditions
+Switch 0422: Bibor 2 is ON
+
+Autonomous Movement
+Type: Fixed
+Speed: 3: Slow
+Freq: 3: Low
+Options Enabled
+Move Animation
+Trigger: Action Button
+
+List of Event Commands:
+@>
+
+#------------------------------------------------------------------------------
+Event ID: 005
+Event Name: EV005
+(X,Y): (010,006)
+
+Page #1
+Conditions
+None
+
+Graphic: VESPIQUENEVENT
+
+Autonomous Movement
+Type: Custom
+Custom Move Route:
+(Repeat Action)
+$>Wait: 2 frame(s)
+$>Graphic: "VESPIQUENEVENT', 0, 2, 1
+$>Wait: 2 frame(s)
+$>Graphic: "VESPIQUENEVENT', 0, 2, 2
+$>Wait: 2 frame(s)
+$>Graphic: "VESPIQUENEVENT', 0, 2, 3
+$>Wait: 2 frame(s)
+$>Graphic: "VESPIQUENEVENT', 0, 2, 2
+$>Wait: 2 frame(s)
+$>Graphic: "VESPIQUENEVENT', 0, 2, 1
+$>Wait: 2 frame(s)
+$>Graphic: "VESPIQUENEVENT', 0, 2, 0
+$>Wait: 2 frame(s)
+$>Graphic: "VESPIQUENEVENT', 0, 4, 1
+$>Wait: 2 frame(s)
+$>Graphic: "VESPIQUENEVENT', 0, 4, 2
+$>Wait: 2 frame(s)
+$>Graphic: "VESPIQUENEVENT', 0, 4, 3
+$>Wait: 2 frame(s)
+$>Graphic: "VESPIQUENEVENT', 0, 4, 2
+$>Wait: 2 frame(s)
+$>Graphic: "VESPIQUENEVENT', 0, 4, 1
+$>Wait: 2 frame(s)
+$>Graphic: "VESPIQUENEVENT', 0, 2, 0
+
+Speed: 3: Slow
+Freq: 4: High
+Options Enabled
+Move Animation
+Direction Fix
+Trigger: Action Button
+
+List of Event Commands:
+@>Play SE: 'VESPIQUEN', 100, 100
+@>Wait: 20 frame(s)
+@>Script: setBattleRule("cannotRun")
+:       : setBattleRule("outcome", 48)
+:       : setBattleRule("neverCapture")
+:       : setBattleRule("raidStyleCapture", {
+:       :   :capture_chance => 100,
+:       :   :flee_msg =>
+:       : "{1} zieht sich tief in den Stock 
+:       : zurück."
+:       : })
+@>Script: setBattleRule("editWildPokemon", {
+:       :   :hp_level => 2,
+:       :   :ability_index => 2,
+:       :   :item => :HONEY,
+:       :   :immunities => [:OHKO],
+:       :   :moves => [:ATTACKORDER,
+:       : :DEFENDORDER, :HEALORDER, :SYRUPBOMB]
+:       : })
+@>Script: setBattleRule("midbattleScript",
+:       : :KOENIGIN_HONWEISEL)
+:       : WildBattle.start(:VESPIQUEN, 22)
+@>Conditional Branch: Variable [0048: Kampf-Ergebnis] == 2
+ @>Exit Event Processing
+ @>
+: Else
+ @>
+: Branch End
+@>
+
+Page #2
+Conditions
+Self Switch A is ON
+
+Autonomous Movement
+Type: Fixed
+Speed: 3: Slow
+Freq: 3: Low
+Options Enabled
+Move Animation
+Trigger: Action Button
+
+List of Event Commands:
+@>
+
+#------------------------------------------------------------------------------
+Event ID: 006
+Event Name: Wadribie
+(X,Y): (006,003)
+
+Page #1
+Conditions
+None
+
+Graphic: COMBEE
+
+Autonomous Movement
+Type: Fixed
+Speed: 3: Slow
+Freq: 3: Low
+Options Enabled
+Move Animation
+Stop Animation
+Always on Top
+Trigger: Action Button
+
+List of Event Commands:
+@>
+
+#------------------------------------------------------------------------------
+Event ID: 007
+Event Name: Wadribie
+(X,Y): (014,003)
+
+Page #1
+Conditions
+None
+
+Graphic: COMBEE_1
+
+Autonomous Movement
+Type: Fixed
+Speed: 1: Slowest
+Freq: 1: Lowest
+Options Enabled
+Move Animation
+Stop Animation
+Always on Top
+Trigger: Action Button
+
+List of Event Commands:
+@>
+
+#------------------------------------------------------------------------------
+Event ID: 008
+Event Name: Wadribie
+(X,Y): (010,001)
+
+Page #1
+Conditions
+None
+
+Graphic: COMBEE
+
+Autonomous Movement
+Type: Fixed
+Speed: 2: Slower
+Freq: 2: Lower
+Options Enabled
+Move Animation
+Stop Animation
+Always on Top
+Trigger: Action Button
+
+List of Event Commands:
+@>
+
+#------------------------------------------------------------------------------
 
 #==============================================================================
 

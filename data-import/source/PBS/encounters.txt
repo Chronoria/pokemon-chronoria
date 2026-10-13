@@ -10756,3 +10756,120 @@ Land,21
 	5,MINIOR,60,65
 	8,SIGILYPH,60,65
 	2,GUMSHOOS,60,65
+#-------------------------------
+[711] # Bienenstock
+Cave,21
+    40,COMBEE,14,18
+    20,WEEDLE,13,16
+    15,KAKUNA,15,17
+    12,CUTIEFLY,14,17
+    8,BURMY,14,17
+    5,BEEDRILL,18,19
+#-------------------------------
+[712] # Bienenstock
+Cave,21
+    40,COMBEE,14,18
+    20,WEEDLE,13,16
+    15,KAKUNA,15,17
+    12,CUTIEFLY,14,17
+    8,BURMY,14,17
+    5,BEEDRILL,18,19
+#-------------------------------
+[713] # Bienenstock
+Cave,21
+    40,COMBEE,14,18
+    20,WEEDLE,13,16
+    15,KAKUNA,15,17
+    12,CUTIEFLY,14,17
+    8,BURMY,14,17
+    5,BEEDRILL,18,19
+#-------------------------------
+[714] # Bienenstock
+Cave,21
+    40,COMBEE,14,18
+    20,WEEDLE,13,16
+    15,KAKUNA,15,17
+    12,CUTIEFLY,14,17
+    8,BURMY,14,17
+    5,BEEDRILL,18,19
+#-------------------------------
+[715] # Bienenstock
+Cave,21
+    40,COMBEE,14,18
+    20,WEEDLE,13,16
+    15,KAKUNA,15,17
+    12,CUTIEFLY,14,17
+    8,BURMY,14,17
+    5,BEEDRILL,18,19
+#-------------------------------
+[716] # Bienenstock
+Cave,21
+    40,COMBEE,14,18
+    20,WEEDLE,13,16
+    15,KAKUNA,15,17
+    12,CUTIEFLY,14,17
+    8,BURMY,14,17
+    5,BEEDRILL,18,19
+#-------------------------------
+[717] # Bienenstock
+Cave,21
+    40,COMBEE,14,18
+    20,WEEDLE,13,16
+    15,KAKUNA,15,17
+    12,CUTIEFLY,14,17
+    8,BURMY,14,17
+    5,BEEDRILL,18,19
+#-------------------------------
+[718] # Bienenstock
+Cave,21
+    40,COMBEE,14,18
+    20,WEEDLE,13,16
+    15,KAKUNA,15,17
+    12,CUTIEFLY,14,17
+    8,BURMY,14,17
+    5,BEEDRILL,18,19
+#-------------------------------
+[719] # Bienenstock
+Cave,21
+    40,COMBEE,14,18
+    20,WEEDLE,13,16
+    15,KAKUNA,15,17
+    12,CUTIEFLY,14,17
+    8,BURMY,14,17
+    5,BEEDRILL,18,19
+#-------------------------------
+[720] # Bienenstock
+Cave,21
+    40,COMBEE,14,18
+    20,WEEDLE,13,16
+    15,KAKUNA,15,17
+    12,CUTIEFLY,14,17
+    8,BURMY,14,17
+    5,BEEDRILL,18,19
+#-------------------------------
+[721] # Bienenstock
+Cave,21
+    40,COMBEE,14,18
+    20,WEEDLE,13,16
+    15,KAKUNA,15,17
+    12,CUTIEFLY,14,17
+    8,BURMY,14,17
+    5,BEEDRILL,18,19
+#-------------------------------
+[722] # Bienenstock
+Cave,21
+    40,COMBEE,14,18
+    20,WEEDLE,13,16
+    15,KAKUNA,15,17
+    12,CUTIEFLY,14,17
+    8,BURMY,14,17
+    5,BEEDRILL,18,19
+#-------------------------------
+[723] # Bienenstock
+Cave,21
+    40,COMBEE,14,18
+    20,WEEDLE,13,16
+    15,KAKUNA,15,17
+    12,CUTIEFLY,14,17
+    8,BURMY,14,17
+    5,BEEDRILL,18,19
