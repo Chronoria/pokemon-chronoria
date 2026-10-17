@@ -92489,6 +92489,27 @@ List of Event Commands:
 @>
 
 #------------------------------------------------------------------------------
+Event ID: 020
+Event Name: BasicRaidDen2
+(X,Y): (016,008)
+
+Page #1
+Conditions
+None
+
+Autonomous Movement
+Type: Fixed
+Speed: 3: Slow
+Freq: 3: Low
+Options Enabled
+Stop Animation
+Trigger: Action Button
+
+List of Event Commands:
+@>Script: chronoria_raid_den(4)
+@>
+
+#------------------------------------------------------------------------------
 
 #==============================================================================
 Map ID: 143
@@ -109009,6 +109030,27 @@ List of Event Commands:
 @>
 
 #------------------------------------------------------------------------------
+Event ID: 023
+Event Name: BasicRaidDen2
+(X,Y): (021,016)
+
+Page #1
+Conditions
+None
+
+Autonomous Movement
+Type: Fixed
+Speed: 3: Slow
+Freq: 3: Low
+Options Enabled
+Stop Animation
+Trigger: Action Button
+
+List of Event Commands:
+@>Script: chronoria_raid_den(5)
+@>
+
+#------------------------------------------------------------------------------
 
 #==============================================================================
 Map ID: 158
@@ -115168,27 +115210,6 @@ List of Event Commands:
 @>Text: Je mehr verschiedene Arten du gefangen hast, desto 
  :    : häufiger kommt das vor.
 @>Text: Erfahrung zahlt sich eben aus.
-@>
-
-#------------------------------------------------------------------------------
-Event ID: 099
-Event Name: BasicRaidDen
-(X,Y): (047,006)
-
-Page #1
-Conditions
-None
-
-Autonomous Movement
-Type: Fixed
-Speed: 3: Slow
-Freq: 3: Low
-Options Enabled
-Move Animation
-Trigger: Action Button
-
-List of Event Commands:
-@>Script: pbRaidDen
 @>
 
 #------------------------------------------------------------------------------
@@ -160382,6 +160403,27 @@ List of Event Commands:
 @>
 
 #------------------------------------------------------------------------------
+Event ID: 012
+Event Name: BasicRaidDen2
+(X,Y): (017,016)
+
+Page #1
+Conditions
+None
+
+Autonomous Movement
+Type: Fixed
+Speed: 3: Slow
+Freq: 3: Low
+Options Enabled
+Stop Animation
+Trigger: Action Button
+
+List of Event Commands:
+@>Script: chronoria_raid_den(11)
+@>
+
+#------------------------------------------------------------------------------
 
 #==============================================================================
 Map ID: 194
@@ -162867,6 +162909,27 @@ List of Event Commands:
 : Else
  @>
 : Branch End
+@>
+
+#------------------------------------------------------------------------------
+Event ID: 043
+Event Name: BasicRaidDen2
+(X,Y): (077,039)
+
+Page #1
+Conditions
+None
+
+Autonomous Movement
+Type: Fixed
+Speed: 3: Slow
+Freq: 3: Low
+Options Enabled
+Stop Animation
+Trigger: Action Button
+
+List of Event Commands:
+@>Script: chronoria_raid_den(9)
 @>
 
 #------------------------------------------------------------------------------
@@ -184486,6 +184549,27 @@ Move Animation
 Trigger: Action Button
 
 List of Event Commands:
+@>
+
+#------------------------------------------------------------------------------
+Event ID: 066
+Event Name: BasicRaidDen2
+(X,Y): (047,007)
+
+Page #1
+Conditions
+None
+
+Autonomous Movement
+Type: Fixed
+Speed: 3: Slow
+Freq: 3: Low
+Options Enabled
+Stop Animation
+Trigger: Action Button
+
+List of Event Commands:
+@>Script: chronoria_raid_den(7)
 @>
 
 #------------------------------------------------------------------------------
@@ -233506,6 +233590,27 @@ List of Event Commands:
 @>
 
 #------------------------------------------------------------------------------
+Event ID: 079
+Event Name: BasicRaidDen2
+(X,Y): (047,008)
+
+Page #1
+Conditions
+None
+
+Autonomous Movement
+Type: Fixed
+Speed: 3: Slow
+Freq: 3: Low
+Options Enabled
+Stop Animation
+Trigger: Action Button
+
+List of Event Commands:
+@>Script: chronoria_raid_den(2)
+@>
+
+#------------------------------------------------------------------------------
 
 #==============================================================================
 Map ID: 292
@@ -237836,6 +237941,27 @@ Move Animation
 Trigger: Action Button
 
 List of Event Commands:
+@>
+
+#------------------------------------------------------------------------------
+Event ID: 006
+Event Name: BasicRaidDen2
+(X,Y): (018,009)
+
+Page #1
+Conditions
+None
+
+Autonomous Movement
+Type: Fixed
+Speed: 3: Slow
+Freq: 3: Low
+Options Enabled
+Stop Animation
+Trigger: Action Button
+
+List of Event Commands:
+@>Script: chronoria_raid_den(1)
 @>
 
 #------------------------------------------------------------------------------
@@ -253587,6 +253713,27 @@ List of Event Commands:
  :    : solche Attacken sogar doppelt so stark.
 @>Text: Das kann in Kämpfen den entscheidenden 
  :    : Unterschied ausmachen.
+@>
+
+#------------------------------------------------------------------------------
+Event ID: 117
+Event Name: BasicRaidDen2
+(X,Y): (032,009)
+
+Page #1
+Conditions
+None
+
+Autonomous Movement
+Type: Fixed
+Speed: 3: Slow
+Freq: 3: Low
+Options Enabled
+Stop Animation
+Trigger: Action Button
+
+List of Event Commands:
+@>Script: chronoria_raid_den(8)
 @>
 
 #------------------------------------------------------------------------------
@@ -284959,6 +285106,27 @@ List of Event Commands:
 @>Text: Das gleiche gilt auch bei Magnetfalle für Stahl-
  :    : Pokémon,
 @>Text: oder Feuerfänger für Feuer-Pokémon.
+@>
+
+#------------------------------------------------------------------------------
+Event ID: 053
+Event Name: BasicRaidDen2
+(X,Y): (024,016)
+
+Page #1
+Conditions
+None
+
+Autonomous Movement
+Type: Fixed
+Speed: 3: Slow
+Freq: 3: Low
+Options Enabled
+Stop Animation
+Trigger: Action Button
+
+List of Event Commands:
+@>Script: chronoria_raid_den(3)
 @>
 
 #------------------------------------------------------------------------------
@@ -370419,6 +370587,27 @@ List of Event Commands:
 @>
 
 #------------------------------------------------------------------------------
+Event ID: 012
+Event Name: BasicRaidDen2
+(X,Y): (003,017)
+
+Page #1
+Conditions
+None
+
+Autonomous Movement
+Type: Fixed
+Speed: 3: Slow
+Freq: 3: Low
+Options Enabled
+Stop Animation
+Trigger: Action Button
+
+List of Event Commands:
+@>Script: chronoria_raid_den(10)
+@>
+
+#------------------------------------------------------------------------------
 
 #==============================================================================
 Map ID: 447
@@ -379409,6 +379598,27 @@ List of Event Commands:
 @>
 
 #------------------------------------------------------------------------------
+Event ID: 086
+Event Name: BasicRaidDen2
+(X,Y): (033,029)
+
+Page #1
+Conditions
+None
+
+Autonomous Movement
+Type: Fixed
+Speed: 3: Slow
+Freq: 3: Low
+Options Enabled
+Stop Animation
+Trigger: Action Button
+
+List of Event Commands:
+@>Script: chronoria_raid_den(15)
+@>
+
+#------------------------------------------------------------------------------
 
 #==============================================================================
 Map ID: 453
@@ -382961,6 +383171,27 @@ Trigger: Event Touch
 List of Event Commands:
 @>Control Switches: [0188: Ast] = OFF
 @>Control Self Switch: A =OFF
+@>
+
+#------------------------------------------------------------------------------
+Event ID: 020
+Event Name: BasicRaidDen2
+(X,Y): (054,012)
+
+Page #1
+Conditions
+None
+
+Autonomous Movement
+Type: Fixed
+Speed: 3: Slow
+Freq: 3: Low
+Options Enabled
+Stop Animation
+Trigger: Action Button
+
+List of Event Commands:
+@>Script: chronoria_raid_den(12)
 @>
 
 #------------------------------------------------------------------------------
@@ -450973,6 +451204,27 @@ List of Event Commands:
 @>
 
 #------------------------------------------------------------------------------
+Event ID: 032
+Event Name: BasicRaidDen2
+(X,Y): (023,008)
+
+Page #1
+Conditions
+None
+
+Autonomous Movement
+Type: Fixed
+Speed: 3: Slow
+Freq: 3: Low
+Options Enabled
+Stop Animation
+Trigger: Action Button
+
+List of Event Commands:
+@>Script: chronoria_raid_den(16)
+@>
+
+#------------------------------------------------------------------------------
 Event ID: 033
 Event Name: Solosis
 (X,Y): (001,027)
@@ -463638,7 +463890,7 @@ Move Animation
 Trigger: Player Touch
 
 List of Event Commands:
-@>Play SE: 'Door exit', 80, 100
+@>Play SE: 'Door exit', 100, 100
 @>Change Screen Color Tone: (-255,-255,-255,0), @6
 @>Wait: 12 frame(s)
 @>Script: pbCaveExit
@@ -463665,7 +463917,7 @@ Move Animation
 Trigger: Player Touch
 
 List of Event Commands:
-@>Play SE: 'Door exit', 80, 100
+@>Play SE: 'Door exit', 100, 100
 @>Change Screen Color Tone: (-255,-255,-255,0), @6
 @>Wait: 12 frame(s)
 @>Transfer Player:[575: MAP575], (007,007), Right, No Fade
@@ -463691,7 +463943,7 @@ Move Animation
 Trigger: Player Touch
 
 List of Event Commands:
-@>Play SE: 'Door exit', 80, 100
+@>Play SE: 'Door exit', 100, 100
 @>Change Screen Color Tone: (-255,-255,-255,0), @6
 @>Wait: 12 frame(s)
 @>Transfer Player:[590: MAP590], (015,008), Up, No Fade
@@ -463725,7 +463977,7 @@ Move Animation
 Trigger: Player Touch
 
 List of Event Commands:
-@>Play SE: 'Door exit', 80, 100
+@>Play SE: 'Door exit', 100, 100
 @>Change Screen Color Tone: (-255,-255,-255,0), @6
 @>Wait: 12 frame(s)
 @>Transfer Player:[574: MAP574], (012,005), Left, No Fade
@@ -463751,7 +464003,7 @@ Move Animation
 Trigger: Player Touch
 
 List of Event Commands:
-@>Play SE: 'Door exit', 80, 100
+@>Play SE: 'Door exit', 100, 100
 @>Change Screen Color Tone: (-255,-255,-255,0), @6
 @>Wait: 12 frame(s)
 @>Script: pbCaveExit
@@ -463786,7 +464038,7 @@ Move Animation
 Trigger: Player Touch
 
 List of Event Commands:
-@>Play SE: 'Door exit', 80, 100
+@>Play SE: 'Door exit', 100, 100
 @>Change Screen Color Tone: (-255,-255,-255,0), @6
 @>Wait: 12 frame(s)
 @>Script: pbCaveExit
@@ -463813,7 +464065,7 @@ Move Animation
 Trigger: Player Touch
 
 List of Event Commands:
-@>Play SE: 'Door exit', 80, 100
+@>Play SE: 'Door exit', 100, 100
 @>Change Screen Color Tone: (-255,-255,-255,0), @6
 @>Wait: 12 frame(s)
 @>Transfer Player:[588: MAP588], (004,005), Right, No Fade
@@ -463839,7 +464091,7 @@ Move Animation
 Trigger: Player Touch
 
 List of Event Commands:
-@>Play SE: 'Door exit', 80, 100
+@>Play SE: 'Door exit', 100, 100
 @>Change Screen Color Tone: (255,255,255,255), @6
 @>Wait: 8 frame(s)
 @>Transfer Player:[577: MAP577], (006,028), Up, No Fade
@@ -463864,7 +464116,6 @@ List of Event Commands:
  @>Script: Followers.hide_followers
  @>Set Move Route: Player
                    (Ignore If Can't Move)
-  :              : $>SE: 'Door exit', 80, 100
   :              : $>Move Down
  @>Wait for Move's Completion
  @>Script: Followers.put_followers_on_player
@@ -463899,7 +464150,7 @@ Move Animation
 Trigger: Player Touch
 
 List of Event Commands:
-@>Play SE: 'Door exit', 80, 100
+@>Play SE: 'Door exit', 100, 100
 @>Change Screen Color Tone: (-255,-255,-255,0), @6
 @>Wait: 12 frame(s)
 @>Transfer Player:[576: MAP576], (012,002), Down, No Fade
@@ -463925,7 +464176,7 @@ Move Animation
 Trigger: Player Touch
 
 List of Event Commands:
-@>Play SE: 'Door exit', 80, 100
+@>Play SE: 'Door exit', 100, 100
 @>Change Screen Color Tone: (255,255,255,255), @6
 @>Wait: 8 frame(s)
 @>Transfer Player:[578: MAP578], (009,013), Up, No Fade
@@ -463950,7 +464201,6 @@ List of Event Commands:
  @>Script: Followers.hide_followers
  @>Set Move Route: Player
                    (Ignore If Can't Move)
-  :              : $>SE: 'Door exit', 80, 100
   :              : $>Move Down
  @>Wait for Move's Completion
  @>Script: Followers.put_followers_on_player
@@ -463985,7 +464235,7 @@ Move Animation
 Trigger: Player Touch
 
 List of Event Commands:
-@>Play SE: 'Door exit', 80, 100
+@>Play SE: 'Door exit', 100, 100
 @>Change Screen Color Tone: (-255,-255,-255,0), @6
 @>Wait: 12 frame(s)
 @>Transfer Player:[577: MAP577], (018,005), Down, No Fade
@@ -463994,7 +464244,7 @@ List of Event Commands:
 @>
 
 #------------------------------------------------------------------------------
-Event ID: 002
+Event ID: 003
 Event Name: Puerta
 (X,Y): (009,005)
 
@@ -464015,7 +464265,7 @@ Trigger: Player Touch
 List of Event Commands:
 @>Set Move Route: This event
                   (Ignore If Can't Move)
- :              : $>SE: 'Exit Door', 100, 100
+ :              : $>SE: 'Door slide', 100, 80
  :              : $>Wait: 2 frame(s)
  :              : $>Turn Left
  :              : $>Wait: 2 frame(s)
@@ -464033,6 +464283,7 @@ List of Event Commands:
 @>Change Transparent Flag: Transparency
 @>Set Move Route: This event
                   (Ignore If Can't Move)
+ :              : $>SE: 'Door slide', 100, 70
  :              : $>Wait: 2 frame(s)
  :              : $>Turn Right
  :              : $>Wait: 2 frame(s)
@@ -464046,6 +464297,7 @@ List of Event Commands:
 @>Change Transparent Flag: Normal
 @>Transfer Player:[581: MAP581], (014,024), Up, No Fade
 @>Change Screen Color Tone: (0,0,0,0), @6
+@>Wait: 8 frame(s)
 @>
 
 Page #2
@@ -464067,7 +464319,7 @@ List of Event Commands:
  @>Change Transparent Flag: Transparency
  @>Set Move Route: This event
                    (Ignore If Can't Move)
-  :              : $>SE: 'Exit Door', 100, 100
+  :              : $>SE: 'Door slide', 100, 80
   :              : $>Wait: 2 frame(s)
   :              : $>Turn Left
   :              : $>Wait: 2 frame(s)
@@ -464083,6 +464335,7 @@ List of Event Commands:
  @>Wait for Move's Completion
  @>Set Move Route: This event
                    (Ignore If Can't Move)
+  :              : $>SE: 'Door slide', 100, 70
   :              : $>Turn Right
   :              : $>Wait: 2 frame(s)
   :              : $>Turn Left
@@ -464121,7 +464374,7 @@ Move Animation
 Trigger: Player Touch
 
 List of Event Commands:
-@>Play SE: 'Door exit', 80, 100
+@>Play SE: 'Door exit', 100, 100
 @>Change Screen Color Tone: (-255,-255,-255,0), @6
 @>Wait: 12 frame(s)
 @>Transfer Player:[578: MAP578], (009,005), Down, No Fade
@@ -464131,108 +464384,6 @@ List of Event Commands:
 
 #------------------------------------------------------------------------------
 Event ID: 002
-Event Name: Puerta
-(X,Y): (009,005)
-
-Page #1
-Conditions
-None
-
-Graphic: Tür Dracheninsel
-
-Autonomous Movement
-Type: Fixed
-Speed: 3: Slow
-Freq: 3: Low
-Options Enabled
-Move Animation
-Trigger: Player Touch
-
-List of Event Commands:
-@>Set Move Route: This event
-                  (Ignore If Can't Move)
- :              : $>SE: 'Exit Door', 100, 100
- :              : $>Wait: 2 frame(s)
- :              : $>Turn Left
- :              : $>Wait: 2 frame(s)
- :              : $>Turn Right
- :              : $>Wait: 2 frame(s)
- :              : $>Turn Up
- :              : $>Wait: 2 frame(s)
-@>Wait for Move's Completion
-@>Set Move Route: Player
-                  (Ignore If Can't Move)
- :              : $>Through ON
- :              : $>Move Up
- :              : $>Through OFF
-@>Wait for Move's Completion
-@>Change Transparent Flag: Transparency
-@>Set Move Route: This event
-                  (Ignore If Can't Move)
- :              : $>Wait: 2 frame(s)
- :              : $>Turn Right
- :              : $>Wait: 2 frame(s)
- :              : $>Turn Left
- :              : $>Wait: 2 frame(s)
- :              : $>Turn Down
- :              : $>Wait: 2 frame(s)
-@>Wait for Move's Completion
-@>Change Screen Color Tone: (-255,-255,-255,0), @6
-@>Wait: 8 frame(s)
-@>Change Transparent Flag: Normal
-@>Transfer Player:[585: MAP585], (010,015), Up, No Fade
-@>Change Screen Color Tone: (0,0,0,0), @6
-@>
-
-Page #2
-Conditions
-Switch 0022: s:tsOff?("A") is ON
-
-Graphic: Tür Dracheninsel
-
-Autonomous Movement
-Type: Fixed
-Speed: 3: Slow
-Freq: 3: Low
-Options Enabled
-Move Animation
-Trigger: Autorun
-
-List of Event Commands:
-@>Conditional Branch: Script: get_self.onEvent?
- @>Change Transparent Flag: Transparency
- @>Set Move Route: This event
-                   (Ignore If Can't Move)
-  :              : $>SE: 'Exit Door', 100, 100
-  :              : $>Wait: 2 frame(s)
-  :              : $>Turn Left
-  :              : $>Wait: 2 frame(s)
-  :              : $>Turn Right
-  :              : $>Wait: 2 frame(s)
-  :              : $>Turn Up
-  :              : $>Wait: 2 frame(s)
- @>Wait for Move's Completion
- @>Change Transparent Flag: Normal
- @>Set Move Route: Player
-                   (Ignore If Can't Move)
-  :              : $>Move Down
- @>Wait for Move's Completion
- @>Set Move Route: This event
-                   (Ignore If Can't Move)
-  :              : $>Turn Right
-  :              : $>Wait: 2 frame(s)
-  :              : $>Turn Left
-  :              : $>Wait: 2 frame(s)
-  :              : $>Turn Down
-  :              : $>Wait: 2 frame(s)
- @>Wait for Move's Completion
- @>
-: Branch End
-@>Script: setTempSwitchOn("A")
-@>
-
-#------------------------------------------------------------------------------
-Event ID: 003
 Event Name: Puerta
 (X,Y): (015,006)
 
@@ -464253,7 +464404,7 @@ Trigger: Player Touch
 List of Event Commands:
 @>Set Move Route: This event
                   (Ignore If Can't Move)
- :              : $>SE: 'Exit Door', 100, 100
+ :              : $>SE: 'Door slide', 100, 80
  :              : $>Wait: 2 frame(s)
  :              : $>Turn Left
  :              : $>Wait: 2 frame(s)
@@ -464271,6 +464422,7 @@ List of Event Commands:
 @>Change Transparent Flag: Transparency
 @>Set Move Route: This event
                   (Ignore If Can't Move)
+ :              : $>SE: 'Door slide', 100, 70
  :              : $>Wait: 2 frame(s)
  :              : $>Turn Right
  :              : $>Wait: 2 frame(s)
@@ -464284,6 +464436,7 @@ List of Event Commands:
 @>Change Transparent Flag: Normal
 @>Transfer Player:[586: MAP586], (013,019), Up, No Fade
 @>Change Screen Color Tone: (0,0,0,0), @6
+@>Wait: 8 frame(s)
 @>
 
 Page #2
@@ -464305,7 +464458,7 @@ List of Event Commands:
  @>Change Transparent Flag: Transparency
  @>Set Move Route: This event
                    (Ignore If Can't Move)
-  :              : $>SE: 'Exit Door', 100, 100
+  :              : $>SE: 'Door slide', 100, 80
   :              : $>Wait: 2 frame(s)
   :              : $>Turn Left
   :              : $>Wait: 2 frame(s)
@@ -464321,6 +464474,7 @@ List of Event Commands:
  @>Wait for Move's Completion
  @>Set Move Route: This event
                    (Ignore If Can't Move)
+  :              : $>SE: 'Door slide', 100, 70
   :              : $>Turn Right
   :              : $>Wait: 2 frame(s)
   :              : $>Turn Left
@@ -464334,7 +464488,7 @@ List of Event Commands:
 @>
 
 #------------------------------------------------------------------------------
-Event ID: 004
+Event ID: 003
 Event Name: Puerta
 (X,Y): (034,012)
 
@@ -464355,7 +464509,7 @@ Trigger: Player Touch
 List of Event Commands:
 @>Set Move Route: This event
                   (Ignore If Can't Move)
- :              : $>SE: 'Exit Door', 100, 100
+ :              : $>SE: 'Door slide', 100, 80
  :              : $>Wait: 2 frame(s)
  :              : $>Turn Left
  :              : $>Wait: 2 frame(s)
@@ -464373,6 +464527,7 @@ List of Event Commands:
 @>Change Transparent Flag: Transparency
 @>Set Move Route: This event
                   (Ignore If Can't Move)
+ :              : $>SE: 'Door slide', 100, 70
  :              : $>Wait: 2 frame(s)
  :              : $>Turn Right
  :              : $>Wait: 2 frame(s)
@@ -464386,6 +464541,7 @@ List of Event Commands:
 @>Change Transparent Flag: Normal
 @>Transfer Player:[580: MAP580], (009,016), Up, No Fade
 @>Change Screen Color Tone: (0,0,0,0), @6
+@>Wait: 8 frame(s)
 @>
 
 Page #2
@@ -464407,7 +464563,7 @@ List of Event Commands:
  @>Change Transparent Flag: Transparency
  @>Set Move Route: This event
                    (Ignore If Can't Move)
-  :              : $>SE: 'Exit Door', 100, 100
+  :              : $>SE: 'Door slide', 100, 80
   :              : $>Wait: 2 frame(s)
   :              : $>Turn Left
   :              : $>Wait: 2 frame(s)
@@ -464423,6 +464579,112 @@ List of Event Commands:
  @>Wait for Move's Completion
  @>Set Move Route: This event
                    (Ignore If Can't Move)
+  :              : $>SE: 'Door slide', 100, 70
+  :              : $>Turn Right
+  :              : $>Wait: 2 frame(s)
+  :              : $>Turn Left
+  :              : $>Wait: 2 frame(s)
+  :              : $>Turn Down
+  :              : $>Wait: 2 frame(s)
+ @>Wait for Move's Completion
+ @>
+: Branch End
+@>Script: setTempSwitchOn("A")
+@>
+
+#------------------------------------------------------------------------------
+Event ID: 005
+Event Name: Puerta
+(X,Y): (009,005)
+
+Page #1
+Conditions
+None
+
+Graphic: Tür Dracheninsel
+
+Autonomous Movement
+Type: Fixed
+Speed: 3: Slow
+Freq: 3: Low
+Options Enabled
+Move Animation
+Trigger: Player Touch
+
+List of Event Commands:
+@>Set Move Route: This event
+                  (Ignore If Can't Move)
+ :              : $>SE: 'Door slide', 100, 80
+ :              : $>Wait: 2 frame(s)
+ :              : $>Turn Left
+ :              : $>Wait: 2 frame(s)
+ :              : $>Turn Right
+ :              : $>Wait: 2 frame(s)
+ :              : $>Turn Up
+ :              : $>Wait: 2 frame(s)
+@>Wait for Move's Completion
+@>Set Move Route: Player
+                  (Ignore If Can't Move)
+ :              : $>Through ON
+ :              : $>Move Up
+ :              : $>Through OFF
+@>Wait for Move's Completion
+@>Change Transparent Flag: Transparency
+@>Set Move Route: This event
+                  (Ignore If Can't Move)
+ :              : $>SE: 'Door slide', 100, 70
+ :              : $>Wait: 2 frame(s)
+ :              : $>Turn Right
+ :              : $>Wait: 2 frame(s)
+ :              : $>Turn Left
+ :              : $>Wait: 2 frame(s)
+ :              : $>Turn Down
+ :              : $>Wait: 2 frame(s)
+@>Wait for Move's Completion
+@>Change Screen Color Tone: (-255,-255,-255,0), @6
+@>Wait: 8 frame(s)
+@>Change Transparent Flag: Normal
+@>Transfer Player:[585: MAP585], (010,015), Up, No Fade
+@>Change Screen Color Tone: (0,0,0,0), @6
+@>Wait: 8 frame(s)
+@>
+
+Page #2
+Conditions
+Switch 0022: s:tsOff?("A") is ON
+
+Graphic: Tür Dracheninsel
+
+Autonomous Movement
+Type: Fixed
+Speed: 3: Slow
+Freq: 3: Low
+Options Enabled
+Move Animation
+Trigger: Autorun
+
+List of Event Commands:
+@>Conditional Branch: Script: get_self.onEvent?
+ @>Change Transparent Flag: Transparency
+ @>Set Move Route: This event
+                   (Ignore If Can't Move)
+  :              : $>SE: 'Door slide', 100, 80
+  :              : $>Wait: 2 frame(s)
+  :              : $>Turn Left
+  :              : $>Wait: 2 frame(s)
+  :              : $>Turn Right
+  :              : $>Wait: 2 frame(s)
+  :              : $>Turn Up
+  :              : $>Wait: 2 frame(s)
+ @>Wait for Move's Completion
+ @>Change Transparent Flag: Normal
+ @>Set Move Route: Player
+                   (Ignore If Can't Move)
+  :              : $>Move Down
+ @>Wait for Move's Completion
+ @>Set Move Route: This event
+                   (Ignore If Can't Move)
+  :              : $>SE: 'Door slide', 100, 70
   :              : $>Turn Right
   :              : $>Wait: 2 frame(s)
   :              : $>Turn Left
@@ -464444,7 +464706,33 @@ Tileset: 120: Höhle Dracheninsel
 Width: 20, Height: 20
 
 #------------------------------------------------------------------------------
-Event ID: 001
+Event ID: 002
+Event Name: Exit
+(X,Y): (009,017)
+
+Page #1
+Conditions
+None
+
+Autonomous Movement
+Type: Fixed
+Speed: 3: Slow
+Freq: 3: Low
+Options Enabled
+Move Animation
+Trigger: Player Touch
+
+List of Event Commands:
+@>Play SE: 'Door exit', 100, 100
+@>Change Screen Color Tone: (-255,-255,-255,0), @6
+@>Wait: 12 frame(s)
+@>Transfer Player:[579: MAP579], (034,012), Down, No Fade
+@>Change Screen Color Tone: (0,0,0,0), @6
+@>Wait: 6 frame(s)
+@>
+
+#------------------------------------------------------------------------------
+Event ID: 003
 Event Name: Puerta
 (X,Y): (009,004)
 
@@ -464465,7 +464753,7 @@ Trigger: Player Touch
 List of Event Commands:
 @>Set Move Route: This event
                   (Ignore If Can't Move)
- :              : $>SE: 'Exit Door', 100, 100
+ :              : $>SE: 'Door slide', 100, 80
  :              : $>Wait: 2 frame(s)
  :              : $>Turn Left
  :              : $>Wait: 2 frame(s)
@@ -464483,6 +464771,7 @@ List of Event Commands:
 @>Change Transparent Flag: Transparency
 @>Set Move Route: This event
                   (Ignore If Can't Move)
+ :              : $>SE: 'Door slide', 100, 70
  :              : $>Wait: 2 frame(s)
  :              : $>Turn Right
  :              : $>Wait: 2 frame(s)
@@ -464496,6 +464785,7 @@ List of Event Commands:
 @>Change Transparent Flag: Normal
 @>Transfer Player:[581: MAP581], (014,024), Up, No Fade
 @>Change Screen Color Tone: (0,0,0,0), @6
+@>Wait: 8 frame(s)
 @>
 
 Page #2
@@ -464517,7 +464807,7 @@ List of Event Commands:
  @>Change Transparent Flag: Transparency
  @>Set Move Route: This event
                    (Ignore If Can't Move)
-  :              : $>SE: 'Exit Door', 100, 100
+  :              : $>SE: 'Door slide', 100, 80
   :              : $>Wait: 2 frame(s)
   :              : $>Turn Left
   :              : $>Wait: 2 frame(s)
@@ -464533,6 +464823,7 @@ List of Event Commands:
  @>Wait for Move's Completion
  @>Set Move Route: This event
                    (Ignore If Can't Move)
+  :              : $>SE: 'Door slide', 100, 70
   :              : $>Turn Right
   :              : $>Wait: 2 frame(s)
   :              : $>Turn Left
@@ -464546,32 +464837,6 @@ List of Event Commands:
 @>
 
 #------------------------------------------------------------------------------
-Event ID: 002
-Event Name: Exit
-(X,Y): (009,017)
-
-Page #1
-Conditions
-None
-
-Autonomous Movement
-Type: Fixed
-Speed: 3: Slow
-Freq: 3: Low
-Options Enabled
-Move Animation
-Trigger: Player Touch
-
-List of Event Commands:
-@>Play SE: 'Door exit', 80, 100
-@>Change Screen Color Tone: (-255,-255,-255,0), @6
-@>Wait: 12 frame(s)
-@>Transfer Player:[579: MAP579], (034,012), Down, No Fade
-@>Change Screen Color Tone: (0,0,0,0), @6
-@>Wait: 6 frame(s)
-@>
-
-#------------------------------------------------------------------------------
 
 #==============================================================================
 Map ID: 581
@@ -464580,7 +464845,7 @@ Tileset: 120: Höhle Dracheninsel
 Width: 34, Height: 27
 
 #------------------------------------------------------------------------------
-Event ID: 002
+Event ID: 001
 Event Name: Puerta
 (X,Y): (014,008)
 
@@ -464601,7 +464866,7 @@ Trigger: Player Touch
 List of Event Commands:
 @>Set Move Route: This event
                   (Ignore If Can't Move)
- :              : $>SE: 'Exit Door', 100, 100
+ :              : $>SE: 'Door slide', 100, 80
  :              : $>Wait: 2 frame(s)
  :              : $>Turn Left
  :              : $>Wait: 2 frame(s)
@@ -464619,6 +464884,7 @@ List of Event Commands:
 @>Change Transparent Flag: Transparency
 @>Set Move Route: This event
                   (Ignore If Can't Move)
+ :              : $>SE: 'Door slide', 100, 70
  :              : $>Wait: 2 frame(s)
  :              : $>Turn Right
  :              : $>Wait: 2 frame(s)
@@ -464630,8 +464896,9 @@ List of Event Commands:
 @>Change Screen Color Tone: (-255,-255,-255,0), @6
 @>Wait: 8 frame(s)
 @>Change Transparent Flag: Normal
-@>Transfer Player:[582: MAP582], (013,024), Up, No Fade
+@>Transfer Player:[583: MAP583], (022,032), Up, No Fade
 @>Change Screen Color Tone: (0,0,0,0), @6
+@>Wait: 8 frame(s)
 @>
 
 Page #2
@@ -464653,7 +464920,7 @@ List of Event Commands:
  @>Change Transparent Flag: Transparency
  @>Set Move Route: This event
                    (Ignore If Can't Move)
-  :              : $>SE: 'Exit Door', 100, 100
+  :              : $>SE: 'Door slide', 100, 80
   :              : $>Wait: 2 frame(s)
   :              : $>Turn Left
   :              : $>Wait: 2 frame(s)
@@ -464669,6 +464936,7 @@ List of Event Commands:
  @>Wait for Move's Completion
  @>Set Move Route: This event
                    (Ignore If Can't Move)
+  :              : $>SE: 'Door slide', 100, 70
   :              : $>Turn Right
   :              : $>Wait: 2 frame(s)
   :              : $>Turn Left
@@ -464699,7 +464967,7 @@ Move Animation
 Trigger: Player Touch
 
 List of Event Commands:
-@>Play SE: 'Door exit', 80, 100
+@>Play SE: 'Door exit', 100, 100
 @>Change Screen Color Tone: (-255,-255,-255,0), @6
 @>Wait: 12 frame(s)
 @>Transfer Player:[580: MAP580], (009,004), Down, No Fade
@@ -464713,12 +464981,12 @@ List of Event Commands:
 Map ID: 582
 Map Name: MAP582
 Tileset: 120: Höhle Dracheninsel
-Width: 30, Height: 30
+Width: 50, Height: 50
 
 #------------------------------------------------------------------------------
 Event ID: 001
 Event Name: Exit
-(X,Y): (013,025)
+(X,Y): (023,045)
 
 Page #1
 Conditions
@@ -464733,10 +465001,10 @@ Move Animation
 Trigger: Player Touch
 
 List of Event Commands:
-@>Play SE: 'Door exit', 80, 100
+@>Play SE: 'Door exit', 100, 100
 @>Change Screen Color Tone: (-255,-255,-255,0), @6
 @>Wait: 12 frame(s)
-@>Transfer Player:[581: MAP581], (014,008), Down, No Fade
+@>Transfer Player:[583: MAP583], (022,010), Down, No Fade
 @>Change Screen Color Tone: (0,0,0,0), @6
 @>Wait: 6 frame(s)
 @>
@@ -464794,6 +465062,209 @@ List of Event Commands:
 @>
 
 #------------------------------------------------------------------------------
+Event ID: 003
+Event Name: Palkia.sl
+(X,Y): (019,021)
+
+Page #1
+Conditions
+None
+
+Autonomous Movement
+Type: Fixed
+Speed: 1: Slowest
+Freq: 1: Lowest
+Options Enabled
+Move Animation
+Through
+Trigger: Action Button
+
+List of Event Commands:
+@>
+
+#------------------------------------------------------------------------------
+Event ID: 004
+Event Name: Dialga.sl
+(X,Y): (025,021)
+
+Page #1
+Conditions
+None
+
+Autonomous Movement
+Type: Fixed
+Speed: 1: Slowest
+Freq: 1: Lowest
+Options Enabled
+Move Animation
+Through
+Trigger: Action Button
+
+List of Event Commands:
+@>
+
+#------------------------------------------------------------------------------
+Event ID: 005
+Event Name: EV005
+(X,Y): (020,025)
+
+Page #1
+Conditions
+None
+
+Autonomous Movement
+Type: Fixed
+Speed: 3: Slow
+Freq: 3: Low
+Options Enabled
+Move Animation
+Trigger: Action Button
+
+List of Event Commands:
+@>Scroll Map: Up, 4, 4
+@>Screen Shake: 2, 5, @20
+@>Show Animation: [Palkia.sl], [Zekrom 1]
+@>Show Animation: [Dialga.sl], [Zekrom 1]
+@>Wait: 3 frame(s)
+@>Show Animation: [Palkia.sl], [Zekrom 2]
+@>Show Animation: [Dialga.sl], [Zekrom 2]
+@>Wait: 35 frame(s)
+@>Screen Shake: 2, 8, @24
+@>Show Animation: [Palkia.sl], [Zekrom 3]
+@>Show Animation: [Dialga.sl], [Zekrom 3]
+@>Wait: 16 frame(s)
+@>Screen Flash: (255,255,255,255), @10
+@>Play SE: 'PALKIA', 100, 100
+@>Play SE: 'DIALGA', 100, 100
+@>Set Move Route: [Dialga.sl]
+ :              : $>Graphic: "DIALGAEVENT', 0, 2, 0
+@>Set Move Route: [Palkia.sl]
+ :              : $>Graphic: "PALKIAEVENT', 0, 2, 0
+@>Wait: 20 frame(s)
+@>Set Move Route: [Palkia.sl]
+ :              : $>Stop Animation OFF
+ :              : $>Wait: 20 frame(s)
+ :              : $>Graphic: "PALKIAEVENT', 0, 4, 0
+ :              : $>Wait: 4 frame(s)
+ :              : $>Graphic: "PALKIAEVENT', 0, 6, 0
+ :              : $>Wait: 20 frame(s)
+ :              : $>Graphic: "PALKIAEVENT', 0, 6, 1
+ :              : $>Wait: 1 frame(s)
+ :              : $>Graphic: "PALKIAEVENT', 0, 6, 2
+ :              : $>Wait: 1 frame(s)
+ :              : $>SE: 'PALKIA', 100, 100
+ :              : $>Graphic: "PALKIAEVENT', 0, 6, 1
+ :              : $>Wait: 1 frame(s)
+ :              : $>Graphic: "PALKIAEVENT', 0, 6, 2
+ :              : $>Wait: 1 frame(s)
+ :              : $>Graphic: "PALKIAEVENT', 0, 6, 1
+ :              : $>Wait: 1 frame(s)
+ :              : $>Graphic: "PALKIAEVENT', 0, 6, 2
+ :              : $>Wait: 1 frame(s)
+ :              : $>Graphic: "PALKIAEVENT', 0, 6, 1
+ :              : $>Wait: 1 frame(s)
+ :              : $>Graphic: "PALKIAEVENT', 0, 6, 2
+ :              : $>Wait: 1 frame(s)
+ :              : $>Graphic: "PALKIAEVENT', 0, 6, 1
+ :              : $>Wait: 1 frame(s)
+ :              : $>Graphic: "PALKIAEVENT', 0, 6, 2
+ :              : $>Wait: 1 frame(s)
+@>Set Move Route: [Dialga.sl]
+ :              : $>Stop Animation OFF
+ :              : $>Wait: 20 frame(s)
+ :              : $>Graphic: "DIALGAEVENT', 0, 4, 0
+ :              : $>Wait: 4 frame(s)
+ :              : $>Graphic: "DIALGAEVENT', 0, 4, 1
+ :              : $>Wait: 20 frame(s)
+ :              : $>Graphic: "DIALGAEVENT', 0, 4, 2
+ :              : $>Wait: 1 frame(s)
+ :              : $>Graphic: "DIALGAEVENT', 0, 4, 3
+ :              : $>Wait: 1 frame(s)
+ :              : $>SE: 'DIALGA', 100, 100
+ :              : $>Graphic: "DIALGAEVENT', 0, 4, 2
+ :              : $>Wait: 1 frame(s)
+ :              : $>Graphic: "DIALGAEVENT', 0, 4, 3
+ :              : $>Wait: 1 frame(s)
+ :              : $>Graphic: "DIALGAEVENT', 0, 4, 2
+ :              : $>Wait: 1 frame(s)
+ :              : $>Graphic: "DIALGAEVENT', 0, 4, 3
+ :              : $>Wait: 1 frame(s)
+ :              : $>Graphic: "DIALGAEVENT', 0, 4, 2
+ :              : $>Wait: 1 frame(s)
+ :              : $>Graphic: "DIALGAEVENT', 0, 4, 3
+ :              : $>Wait: 1 frame(s)
+ :              : $>Graphic: "DIALGAEVENT', 0, 4, 2
+ :              : $>Wait: 1 frame(s)
+ :              : $>Graphic: "DIALGAEVENT', 0, 4, 3
+ :              : $>Wait: 1 frame(s)
+@>Wait: 38 frame(s)
+@>Control Switches: [0426: Chef Portal] = ON
+@>Wait: 10 frame(s)
+@>Set Move Route: [Portal size (5,3) .sl]
+ :              : $>Wait: 8 frame(s)
+ :              : $>Graphic: "Portal 5', 0, 4, 0
+ :              : $>Wait: 8 frame(s)
+ :              : $>Graphic: "Portal 5', 0, 6, 0
+ :              : $>Wait: 8 frame(s)
+ :              : $>Graphic: "Portal 5', 0, 8, 0
+ :              : $>Wait: 8 frame(s)
+ :              : $>Graphic: "Portal 5_1', 0, 2, 0
+ :              : $>Wait: 8 frame(s)
+ :              : $>Graphic: "Portal 5_1', 0, 4, 0
+ :              : $>Wait: 8 frame(s)
+ :              : $>Graphic: "Portal 5_1', 0, 6, 0
+ :              : $>Wait: 8 frame(s)
+ :              : $>Graphic: "Portal 5_1', 0, 8, 0
+@>Wait: 56 frame(s)
+@>Set Move Route: [Dialga.sl]
+ :              : $>Graphic: "DIALGAEVENT', 0, 2, 0
+ :              : $>Stop Animation ON
+@>Set Move Route: [Palkia.sl]
+ :              : $>Graphic: "PALKIAEVENT', 0, 2, 0
+ :              : $>Stop Animation ON
+@>Control Self Switch: A =ON
+@>
+
+Page #2
+Conditions
+Self Switch A is ON
+
+Autonomous Movement
+Type: Fixed
+Speed: 3: Slow
+Freq: 3: Low
+Options Enabled
+Move Animation
+Trigger: Action Button
+
+List of Event Commands:
+@>
+
+#------------------------------------------------------------------------------
+Event ID: 006
+Event Name: Portal size (5,3) .sl
+(X,Y): (022,018)
+
+Page #1
+Conditions
+Switch 0426: Chef Portal is ON
+
+Graphic: Portal 5
+
+Autonomous Movement
+Type: Fixed
+Speed: 3: Slow
+Freq: 3: Low
+Options Enabled
+Move Animation
+Stop Animation
+Through
+Trigger: Action Button
+
+List of Event Commands:
+@>
+
+#------------------------------------------------------------------------------
 
 #==============================================================================
 Map ID: 583
@@ -464819,10 +465290,10 @@ Move Animation
 Trigger: Player Touch
 
 List of Event Commands:
-@>Play SE: 'Door exit', 80, 100
+@>Play SE: 'Door exit', 100, 100
 @>Change Screen Color Tone: (-255,-255,-255,0), @6
 @>Wait: 12 frame(s)
-@>Transfer Player:[582: MAP582], (013,004), Down, No Fade
+@>Transfer Player:[581: MAP581], (014,008), Down, No Fade
 @>Change Screen Color Tone: (0,0,0,0), @6
 @>Wait: 6 frame(s)
 @>
@@ -464845,10 +465316,10 @@ Move Animation
 Trigger: Player Touch
 
 List of Event Commands:
-@>Play SE: 'Door exit', 80, 100
+@>Play SE: 'Door exit', 100, 100
 @>Change Screen Color Tone: (255,255,255,255), @6
 @>Wait: 8 frame(s)
-@>Transfer Player:[584: MAP584], (009,014), Up, No Fade
+@>Transfer Player:[582: MAP582], (023,044), Up, No Fade
 @>Change Screen Color Tone: (0,0,0,0), @6
 @>Wait: 8 frame(s)
 @>
@@ -464870,47 +465341,12 @@ List of Event Commands:
  @>Script: Followers.hide_followers
  @>Set Move Route: Player
                    (Ignore If Can't Move)
-  :              : $>SE: 'Door exit', 80, 100
   :              : $>Move Down
  @>Wait for Move's Completion
  @>Script: Followers.put_followers_on_player
  @>
 : Branch End
 @>Script: setTempSwitchOn("A")
-@>
-
-#------------------------------------------------------------------------------
-
-#==============================================================================
-Map ID: 584
-Map Name: MAP584
-Tileset: 120: Höhle Dracheninsel
-Width: 20, Height: 18
-
-#------------------------------------------------------------------------------
-Event ID: 001
-Event Name: Exit
-(X,Y): (009,015)
-
-Page #1
-Conditions
-None
-
-Autonomous Movement
-Type: Fixed
-Speed: 3: Slow
-Freq: 3: Low
-Options Enabled
-Move Animation
-Trigger: Player Touch
-
-List of Event Commands:
-@>Play SE: 'Door exit', 80, 100
-@>Change Screen Color Tone: (-255,-255,-255,0), @6
-@>Wait: 12 frame(s)
-@>Transfer Player:[583: MAP583], (022,010), Down, No Fade
-@>Change Screen Color Tone: (0,0,0,0), @6
-@>Wait: 6 frame(s)
 @>
 
 #------------------------------------------------------------------------------
@@ -464939,7 +465375,7 @@ Move Animation
 Trigger: Player Touch
 
 List of Event Commands:
-@>Play SE: 'Door exit', 80, 100
+@>Play SE: 'Door exit', 100, 100
 @>Change Screen Color Tone: (-255,-255,-255,0), @6
 @>Wait: 12 frame(s)
 @>Transfer Player:[579: MAP579], (009,005), Down, No Fade
@@ -464973,7 +465409,7 @@ Move Animation
 Trigger: Player Touch
 
 List of Event Commands:
-@>Play SE: 'Door exit', 80, 100
+@>Play SE: 'Door exit', 100, 100
 @>Change Screen Color Tone: (-255,-255,-255,0), @6
 @>Wait: 12 frame(s)
 @>Transfer Player:[579: MAP579], (015,006), Down, No Fade
@@ -464999,7 +465435,7 @@ Move Animation
 Trigger: Player Touch
 
 List of Event Commands:
-@>Play SE: 'Door exit', 80, 100
+@>Play SE: 'Door exit', 100, 100
 @>Change Screen Color Tone: (255,255,255,255), @6
 @>Wait: 8 frame(s)
 @>Transfer Player:[587: MAP587], (010,009), Up, No Fade
@@ -465024,7 +465460,6 @@ List of Event Commands:
  @>Script: Followers.hide_followers
  @>Set Move Route: Player
                    (Ignore If Can't Move)
-  :              : $>SE: 'Door exit', 80, 100
   :              : $>Move Down
  @>Wait for Move's Completion
  @>Script: Followers.put_followers_on_player
@@ -465059,12 +465494,144 @@ Move Animation
 Trigger: Player Touch
 
 List of Event Commands:
-@>Play SE: 'Door exit', 80, 100
+@>Play SE: 'Door exit', 100, 100
 @>Change Screen Color Tone: (-255,-255,-255,0), @6
 @>Wait: 12 frame(s)
 @>Transfer Player:[586: MAP586], (018,007), Down, No Fade
 @>Change Screen Color Tone: (0,0,0,0), @6
 @>Wait: 6 frame(s)
+@>
+
+#------------------------------------------------------------------------------
+Event ID: 002
+Event Name: BRUNNEN size(2,1).sl
+(X,Y): (009,005)
+
+Page #1
+Conditions
+None
+
+Autonomous Movement
+Type: Fixed
+Speed: 3: Slow
+Freq: 3: Low
+Options Enabled
+Move Animation
+Trigger: Action Button
+
+List of Event Commands:
+@>Text: Ein alter ausgetrockneter Brunnen.
+@>Text: Aus der Tiefe steigt kalte Luft.
+@>Text: Ganz unten auf dem Grund schimmert etwas.
+@>Text: Möchtest du hineingreifen?
+@>Show Choices: Ja, Nein
+(When Cancel: Choice 2)
+: When [Ja]
+ @>Script: pbReceiveItem(:ODDKEYSTONE)
+ @>Script: kryppuk_start_count
+ @>Control Self Switch: A =ON
+ @>
+: When [Nein]
+ @>Text: Manche Dinge liegt man besser liegen.
+ @>
+: Branch End
+@>
+
+Page #2
+Conditions
+Self Switch A is ON
+
+Autonomous Movement
+Type: Fixed
+Speed: 1: Slowest
+Freq: 1: Lowest
+Options Enabled
+Move Animation
+Stop Animation
+Trigger: Action Button
+
+List of Event Commands:
+@>Conditional Branch: Script: $bag.has?(:ODDKEYSTONE)
+ @>Conditional Branch: Script: !kryppuk_complete?
+  @>Script: kryppuk_progress_message
+  @>
+ : Else
+  @>Text: Die Stimmen sind vollzählig.
+  @>Text: Hundertacht.
+  @>Text: Der Spiritkern in deiner Tasche ist eiskalt geworden.
+  @>Text: Die Stimmen sprechen durcheinander.
+  @>Text: Spiritkern ablegen?
+  @>Show Choices: Ja, Nein
+  (When Cancel: Choice 2)
+  : When [Ja]
+   @>Set Move Route: Player
+    :              : $>1 Step Backward
+   @>Wait: 20 frame(s)
+   @>Text: Der Riss im Spiritkern bricht auf!
+   @>Memorize BGM/BGS
+   @>Change Screen Color Tone: (-120,-120,-60,80), @40
+   @>Wait: 40 frame(s)
+   @>Screen Shake: 6, 8, @30
+   @>Set Move Route: This event
+    :              : $>Graphic: "SPIRITOMB', 0, 2, 0
+   @>Play BGM: 'SituationJesusTenseEnls', 60, 100
+   @>Play SE: 'SPIRITOMB', 100, 100
+   @>Wait: 50 frame(s)
+   @>Script: setBattleRule("raidStyleCapture", {
+   :       :   :capture_chance => 100,
+   :       :   :flee_msg => "{1} sinkt zurück in 
+   :       : den Spiritkern."
+   :       : })
+   :       : setBattleRule("cannotRun")
+   :       : setBattleRule("outcome", 48)
+   @>Script: setBattleRule("editWildPokemon", {
+   :       :   :hp_level   => 2,
+   :       :   :immunities => [:OHKO],
+   :       :   :moves      => [:HEX, :WILLOWISP, 
+   :       : :DARKPULSE, :PAINSPLIT]
+   :       : })
+   @>Script: setBattleRule("midbattleScript", 
+   :       : :KRYPPUK_108)
+   :       : WildBattle.start(:SPIRITOMB, 60)
+   @>Set Move Route: This event
+    :              : $>Graphic: (None)
+   @>Change Screen Color Tone: (0,0,0,0), @20
+   @>Conditional Branch: Variable [0048: Kampf-Ergebnis] == 4
+    @>Script: $bag.remove(:ODDKEYSTONE)
+    @>Text: Der Spiritkern auf dem Brunnenrand zerfällt zu Staub.
+    @>Control Self Switch: B =ON
+    @>Restore BGM/BGS
+    @>
+   : Else
+    @>Text: Der Spiritkern liegt wieder kalt in deiner Hand.
+    @>Exit Event Processing
+    @>
+   : Branch End
+   @>
+  : When [Nein]
+   @>
+  : Branch End
+  @>
+ : Branch End
+ @>
+: Else
+ @>
+: Branch End
+@>
+
+Page #3
+Conditions
+Self Switch B is ON
+
+Autonomous Movement
+Type: Fixed
+Speed: 3: Slow
+Freq: 3: Low
+Options Enabled
+Move Animation
+Trigger: Action Button
+
+List of Event Commands:
 @>
 
 #------------------------------------------------------------------------------
@@ -465093,7 +465660,7 @@ Move Animation
 Trigger: Player Touch
 
 List of Event Commands:
-@>Play SE: 'Door exit', 80, 100
+@>Play SE: 'Door exit', 100, 100
 @>Change Screen Color Tone: (-255,-255,-255,0), @6
 @>Wait: 12 frame(s)
 @>Transfer Player:[590: MAP590], (004,023), Right, No Fade
@@ -465119,7 +465686,7 @@ Move Animation
 Trigger: Player Touch
 
 List of Event Commands:
-@>Play SE: 'Door exit', 80, 100
+@>Play SE: 'Door exit', 100, 100
 @>Change Screen Color Tone: (-255,-255,-255,0), @6
 @>Wait: 12 frame(s)
 @>Transfer Player:[576: MAP576], (013,009), Left, No Fade
@@ -465145,8 +465712,8 @@ Move Animation
 Trigger: Player Touch
 
 List of Event Commands:
-@>Play SE: 'Door enter', 80, 100
-@>Change Screen Color Tone: (255,255,255,255), @6
+@>Play SE: 'Door exit', 100, 100
+@>Change Screen Color Tone: (-255,-255,-255,0), @6
 @>Wait: 8 frame(s)
 @>Transfer Player:[589: MAP589], (009,010), Up, No Fade
 @>Change Screen Color Tone: (0,0,0,0), @6
@@ -465170,7 +465737,6 @@ List of Event Commands:
  @>Script: Followers.hide_followers
  @>Set Move Route: Player
                    (Ignore If Can't Move)
-  :              : $>SE: 'Door exit', 80, 100
   :              : $>Move Down
  @>Wait for Move's Completion
  @>Script: Followers.put_followers_on_player
@@ -465205,7 +465771,7 @@ Move Animation
 Trigger: Player Touch
 
 List of Event Commands:
-@>Play SE: 'Door exit', 80, 100
+@>Play SE: 'Door exit', 100, 100
 @>Change Screen Color Tone: (-255,-255,-255,0), @6
 @>Wait: 12 frame(s)
 @>Transfer Player:[588: MAP588], (013,003), Down, No Fade
@@ -465231,7 +465797,7 @@ Move Animation
 Trigger: Player Touch
 
 List of Event Commands:
-@>Play SE: 'Door exit', 80, 100
+@>Play SE: 'Door exit', 100, 100
 @>Change Screen Color Tone: (-255,-255,-255,0), @6
 @>Wait: 12 frame(s)
 @>Transfer Player:[593: MAP593], (010,008), Down, No Fade
@@ -465265,7 +465831,7 @@ Move Animation
 Trigger: Player Touch
 
 List of Event Commands:
-@>Play SE: 'Door exit', 80, 100
+@>Play SE: 'Door exit', 100, 100
 @>Change Screen Color Tone: (-255,-255,-255,0), @6
 @>Wait: 12 frame(s)
 @>Transfer Player:[588: MAP588], (015,010), Left, No Fade
@@ -465291,7 +465857,7 @@ Move Animation
 Trigger: Player Touch
 
 List of Event Commands:
-@>Play SE: 'Door exit', 80, 100
+@>Play SE: 'Door exit', 100, 100
 @>Change Screen Color Tone: (-255,-255,-255,0), @6
 @>Wait: 12 frame(s)
 @>Script: pbCaveExit
@@ -465318,7 +465884,7 @@ Move Animation
 Trigger: Player Touch
 
 List of Event Commands:
-@>Play SE: 'Door exit', 80, 100
+@>Play SE: 'Door exit', 100, 100
 @>Change Screen Color Tone: (-255,-255,-255,0), @6
 @>Wait: 12 frame(s)
 @>Transfer Player:[592: MAP592], (005,004), Right, No Fade
@@ -465344,7 +465910,7 @@ Move Animation
 Trigger: Player Touch
 
 List of Event Commands:
-@>Play SE: 'Door exit', 80, 100
+@>Play SE: 'Door exit', 100, 100
 @>Change Screen Color Tone: (-255,-255,-255,0), @6
 @>Wait: 12 frame(s)
 @>Transfer Player:[574: MAP574], (008,004), Down, No Fade
@@ -465378,7 +465944,7 @@ Move Animation
 Trigger: Player Touch
 
 List of Event Commands:
-@>Play SE: 'Door exit', 80, 100
+@>Play SE: 'Door exit', 100, 100
 @>Change Screen Color Tone: (255,255,255,255), @6
 @>Wait: 8 frame(s)
 @>Transfer Player:[592: MAP592], (005,011), Up, No Fade
@@ -465403,7 +465969,6 @@ List of Event Commands:
  @>Script: Followers.hide_followers
  @>Set Move Route: Player
                    (Ignore If Can't Move)
-  :              : $>SE: 'Door exit', 80, 100
   :              : $>Move Down
  @>Wait for Move's Completion
  @>Script: Followers.put_followers_on_player
@@ -465430,7 +465995,7 @@ Move Animation
 Trigger: Player Touch
 
 List of Event Commands:
-@>Play SE: 'Door exit', 80, 100
+@>Play SE: 'Door exit', 100, 100
 @>Change Screen Color Tone: (-255,-255,-255,0), @6
 @>Wait: 12 frame(s)
 @>Script: pbCaveExit
@@ -465465,7 +466030,7 @@ Move Animation
 Trigger: Player Touch
 
 List of Event Commands:
-@>Play SE: 'Door exit', 80, 100
+@>Play SE: 'Door exit', 100, 100
 @>Change Screen Color Tone: (-255,-255,-255,0), @6
 @>Wait: 12 frame(s)
 @>Transfer Player:[590: MAP590], (008,015), Down, No Fade
@@ -465491,7 +466056,7 @@ Move Animation
 Trigger: Player Touch
 
 List of Event Commands:
-@>Play SE: 'Door exit', 80, 100
+@>Play SE: 'Door exit', 100, 100
 @>Change Screen Color Tone: (-255,-255,-255,0), @6
 @>Wait: 12 frame(s)
 @>Transfer Player:[591: MAP591], (015,003), Down, No Fade
@@ -465525,7 +466090,7 @@ Move Animation
 Trigger: Player Touch
 
 List of Event Commands:
-@>Play SE: 'Door exit', 80, 100
+@>Play SE: 'Door exit', 100, 100
 @>Change Screen Color Tone: (-255,-255,-255,0), @6
 @>Wait: 12 frame(s)
 @>Transfer Player:[589: MAP589], (010,005), Down, No Fade
@@ -465551,7 +466116,7 @@ Move Animation
 Trigger: Player Touch
 
 List of Event Commands:
-@>Play SE: 'Door exit', 80, 100
+@>Play SE: 'Door exit', 100, 100
 @>Change Screen Color Tone: (-255,-255,-255,0), @6
 @>Wait: 12 frame(s)
 @>Transfer Player:[594: MAP594], (016,004), Down, No Fade
@@ -465585,7 +466150,7 @@ Move Animation
 Trigger: Player Touch
 
 List of Event Commands:
-@>Play SE: 'Door exit', 80, 100
+@>Play SE: 'Door exit', 100, 100
 @>Change Screen Color Tone: (-255,-255,-255,0), @6
 @>Wait: 12 frame(s)
 @>Transfer Player:[593: MAP593], (007,008), Down, No Fade
@@ -465611,7 +466176,7 @@ Move Animation
 Trigger: Player Touch
 
 List of Event Commands:
-@>Play SE: 'Door exit', 80, 100
+@>Play SE: 'Door exit', 100, 100
 @>Change Screen Color Tone: (-255,-255,-255,0), @6
 @>Wait: 12 frame(s)
 @>Transfer Player:[595: MAP595], (010,002), Down, No Fade
@@ -465645,7 +466210,7 @@ Move Animation
 Trigger: Player Touch
 
 List of Event Commands:
-@>Play SE: 'Door exit', 80, 100
+@>Play SE: 'Door exit', 100, 100
 @>Change Screen Color Tone: (255,255,255,255), @6
 @>Wait: 8 frame(s)
 @>Transfer Player:[594: MAP594], (010,012), Up, No Fade
@@ -465670,7 +466235,6 @@ List of Event Commands:
  @>Script: Followers.hide_followers
  @>Set Move Route: Player
                    (Ignore If Can't Move)
-  :              : $>SE: 'Door exit', 80, 100
   :              : $>Move Down
  @>Wait for Move's Completion
  @>Script: Followers.put_followers_on_player
@@ -465697,7 +466261,7 @@ Move Animation
 Trigger: Player Touch
 
 List of Event Commands:
-@>Play SE: 'Door exit', 80, 100
+@>Play SE: 'Door exit', 100, 100
 @>Change Screen Color Tone: (-255,-255,-255,0), @6
 @>Wait: 12 frame(s)
 @>Transfer Player:[596: MAP596], (007,008), Down, No Fade
@@ -465731,7 +466295,7 @@ Move Animation
 Trigger: Player Touch
 
 List of Event Commands:
-@>Play SE: 'Door exit', 80, 100
+@>Play SE: 'Door exit', 100, 100
 @>Change Screen Color Tone: (255,255,255,255), @6
 @>Wait: 8 frame(s)
 @>Transfer Player:[595: MAP595], (013,026), Up, No Fade
@@ -465756,7 +466320,6 @@ List of Event Commands:
  @>Script: Followers.hide_followers
  @>Set Move Route: Player
                    (Ignore If Can't Move)
-  :              : $>SE: 'Door exit', 80, 100
   :              : $>Move Down
  @>Wait for Move's Completion
  @>Script: Followers.put_followers_on_player
@@ -465783,7 +466346,7 @@ Move Animation
 Trigger: Player Touch
 
 List of Event Commands:
-@>Play SE: 'Door exit', 80, 100
+@>Play SE: 'Door exit', 100, 100
 @>Change Screen Color Tone: (255,255,255,255), @6
 @>Wait: 8 frame(s)
 @>Transfer Player:[597: MAP597], (009,015), Up, No Fade
@@ -465808,7 +466371,6 @@ List of Event Commands:
  @>Script: Followers.hide_followers
  @>Set Move Route: Player
                    (Ignore If Can't Move)
-  :              : $>SE: 'Door exit', 80, 100
   :              : $>Move Down
  @>Wait for Move's Completion
  @>Script: Followers.put_followers_on_player
@@ -465843,7 +466405,7 @@ Move Animation
 Trigger: Player Touch
 
 List of Event Commands:
-@>Play SE: 'Door exit', 80, 100
+@>Play SE: 'Door exit', 100, 100
 @>Change Screen Color Tone: (-255,-255,-255,0), @6
 @>Wait: 12 frame(s)
 @>Transfer Player:[596: MAP596], (015,006), Down, No Fade
@@ -465877,7 +466439,7 @@ Move Animation
 Trigger: Player Touch
 
 List of Event Commands:
-@>Play SE: 'Door exit', 80, 100
+@>Play SE: 'Door exit', 100, 100
 @>Change Screen Color Tone: (-255,-255,-255,0), @6
 @>Wait: 12 frame(s)
 @>Transfer Player:[599: MAP599], (019,009), Left, No Fade
@@ -465903,7 +466465,7 @@ Move Animation
 Trigger: Player Touch
 
 List of Event Commands:
-@>Play SE: 'Door exit', 80, 100
+@>Play SE: 'Door exit', 100, 100
 @>Change Screen Color Tone: (255,255,255,255), @6
 @>Wait: 8 frame(s)
 @>Transfer Player:[600: MAP600], (014,012), Up, No Fade
@@ -465928,7 +466490,6 @@ List of Event Commands:
  @>Script: Followers.hide_followers
  @>Set Move Route: Player
                    (Ignore If Can't Move)
-  :              : $>SE: 'Door exit', 80, 100
   :              : $>Move Down
  @>Wait for Move's Completion
  @>Script: Followers.hide_followers
@@ -465956,7 +466517,7 @@ Move Animation
 Trigger: Player Touch
 
 List of Event Commands:
-@>Play SE: 'Door exit', 80, 100
+@>Play SE: 'Door exit', 100, 100
 @>Change Screen Color Tone: (-255,-255,-255,0), @6
 @>Wait: 12 frame(s)
 @>Script: pbCaveExit
@@ -465991,7 +466552,7 @@ Move Animation
 Trigger: Player Touch
 
 List of Event Commands:
-@>Play SE: 'Door exit', 80, 100
+@>Play SE: 'Door exit', 100, 100
 @>Change Screen Color Tone: (-255,-255,-255,0), @6
 @>Wait: 12 frame(s)
 @>Transfer Player:[598: MAP598], (007,004), Right, No Fade
@@ -466017,7 +466578,7 @@ Move Animation
 Trigger: Player Touch
 
 List of Event Commands:
-@>Play SE: 'Door exit', 80, 100
+@>Play SE: 'Door exit', 100, 100
 @>Change Screen Color Tone: (-255,-255,-255,0), @6
 @>Wait: 12 frame(s)
 @>Transfer Player:[600: MAP600], (004,006), Right, No Fade
@@ -466043,7 +466604,7 @@ Move Animation
 Trigger: Player Touch
 
 List of Event Commands:
-@>Play SE: 'Door exit', 80, 100
+@>Play SE: 'Door exit', 100, 100
 @>Change Screen Color Tone: (-255,-255,-255,0), @6
 @>Wait: 12 frame(s)
 @>Script: pbCaveExit
@@ -466078,7 +466639,7 @@ Move Animation
 Trigger: Player Touch
 
 List of Event Commands:
-@>Play SE: 'Door exit', 80, 100
+@>Play SE: 'Door exit', 100, 100
 @>Change Screen Color Tone: (-255,-255,-255,0), @6
 @>Wait: 12 frame(s)
 @>Transfer Player:[598: MAP598], (018,005), Down, No Fade
@@ -466104,7 +466665,7 @@ Move Animation
 Trigger: Player Touch
 
 List of Event Commands:
-@>Play SE: 'Door exit', 80, 100
+@>Play SE: 'Door exit', 100, 100
 @>Change Screen Color Tone: (-255,-255,-255,0), @6
 @>Wait: 12 frame(s)
 @>Transfer Player:[599: MAP599], (012,004), Left, No Fade
@@ -473870,6 +474431,27 @@ List of Event Commands:
 @>
 
 #------------------------------------------------------------------------------
+Event ID: 035
+Event Name: BasicRaidDen2
+(X,Y): (049,006)
+
+Page #1
+Conditions
+None
+
+Autonomous Movement
+Type: Fixed
+Speed: 3: Slow
+Freq: 3: Low
+Options Enabled
+Stop Animation
+Trigger: Action Button
+
+List of Event Commands:
+@>Script: chronoria_raid_den(19)
+@>
+
+#------------------------------------------------------------------------------
 
 #==============================================================================
 Map ID: 614
@@ -479560,6 +480142,27 @@ List of Event Commands:
  @>
 : Branch End
 @>Script: setTempSwitchOn("A")
+@>
+
+#------------------------------------------------------------------------------
+Event ID: 032
+Event Name: BasicRaidDen2
+(X,Y): (042,034)
+
+Page #1
+Conditions
+None
+
+Autonomous Movement
+Type: Fixed
+Speed: 3: Slow
+Freq: 3: Low
+Options Enabled
+Stop Animation
+Trigger: Action Button
+
+List of Event Commands:
+@>Script: chronoria_raid_den(17)
 @>
 
 #------------------------------------------------------------------------------
@@ -489114,6 +489717,27 @@ List of Event Commands:
 @>
 
 #------------------------------------------------------------------------------
+Event ID: 038
+Event Name: BasicRaidDen2
+(X,Y): (037,054)
+
+Page #1
+Conditions
+None
+
+Autonomous Movement
+Type: Fixed
+Speed: 3: Slow
+Freq: 3: Low
+Options Enabled
+Stop Animation
+Trigger: Action Button
+
+List of Event Commands:
+@>Script: chronoria_raid_den(18)
+@>
+
+#------------------------------------------------------------------------------
 
 #==============================================================================
 Map ID: 647
@@ -493012,30 +493636,6 @@ List of Event Commands:
 @>
 
 #------------------------------------------------------------------------------
-Event ID: 009
-Event Name: BasicRaidDen
-(X,Y): (016,017)
-
-Page #1
-Conditions
-None
-
-Autonomous Movement
-Type: Fixed
-Speed: 3: Slow
-Freq: 3: Low
-Options Enabled
-Stop Animation
-Trigger: Action Button
-
-List of Event Commands:
-@>Script: RaidBattle.start(nil, {
-:       :   :rank          => 6,
-:       :   :shield_hp     => 8
-:       : })
-@>
-
-#------------------------------------------------------------------------------
 
 #==============================================================================
 Map ID: 652
@@ -494005,6 +494605,27 @@ List of Event Commands:
 @>Transfer Player:[655: Route 21], (010,001), Down, No Fade
 @>Change Screen Color Tone: (0,0,0,0), @6
 @>Wait: 8 frame(s)
+@>
+
+#------------------------------------------------------------------------------
+Event ID: 017
+Event Name: BasicRaidDen2
+(X,Y): (005,017)
+
+Page #1
+Conditions
+None
+
+Autonomous Movement
+Type: Fixed
+Speed: 3: Slow
+Freq: 3: Low
+Options Enabled
+Stop Animation
+Trigger: Action Button
+
+List of Event Commands:
+@>Script: chronoria_raid_den(13)
 @>
 
 #------------------------------------------------------------------------------
@@ -498506,7 +499127,7 @@ List of Event Commands:
  :       : setBattleRule("outcome", 48)
  :       : setBattleRule("neverCapture")
  :       : setBattleRule("databoxStyle", 
- :       : [:Long])
+ :       : [:Basic])
  @>Script: setBattleRule("editWildPokemon", {
  :       :   :hp_level => 4,
  :       :   :immunities => [:OHKO],
@@ -501513,6 +502134,27 @@ List of Event Commands:
 @>
 
 #------------------------------------------------------------------------------
+Event ID: 017
+Event Name: BasicRaidDen2
+(X,Y): (011,009)
+
+Page #1
+Conditions
+None
+
+Autonomous Movement
+Type: Fixed
+Speed: 3: Slow
+Freq: 3: Low
+Options Enabled
+Stop Animation
+Trigger: Action Button
+
+List of Event Commands:
+@>Script: chronoria_raid_den(14)
+@>
+
+#------------------------------------------------------------------------------
 
 #==============================================================================
 Map ID: 671
@@ -502921,6 +503563,27 @@ List of Event Commands:
 @>
 
 #------------------------------------------------------------------------------
+Event ID: 004
+Event Name: BasicRaidDen2
+(X,Y): (057,048)
+
+Page #1
+Conditions
+None
+
+Autonomous Movement
+Type: Fixed
+Speed: 3: Slow
+Freq: 3: Low
+Options Enabled
+Stop Animation
+Trigger: Action Button
+
+List of Event Commands:
+@>Script: chronoria_raid_den(20)
+@>
+
+#------------------------------------------------------------------------------
 
 #==============================================================================
 Map ID: 675
@@ -503165,6 +503828,27 @@ List of Event Commands:
 @>Text: Ich habe eine Decke, belegte Brote und 20 
  :    : Prüfungsbälle.
 @>Text: Ich warte einfach, bis die Käfer zu mir kommen.
+@>
+
+#------------------------------------------------------------------------------
+Event ID: 009
+Event Name: BasicRaidDen2
+(X,Y): (030,002)
+
+Page #1
+Conditions
+None
+
+Autonomous Movement
+Type: Fixed
+Speed: 3: Slow
+Freq: 3: Low
+Options Enabled
+Stop Animation
+Trigger: Action Button
+
+List of Event Commands:
+@>Script: chronoria_raid_den(6)
 @>
 
 #------------------------------------------------------------------------------
@@ -509105,11 +509789,119 @@ Map Name: MAP688
 Tileset: 147: Zwischenwelt
 Width: 20, Height: 20
 
+#------------------------------------------------------------------------------
+Event ID: 001
+Event Name: EV001
+(X,Y): (009,014)
+
+Page #1
+Conditions
+None
+
+Autonomous Movement
+Type: Fixed
+Speed: 3: Slow
+Freq: 3: Low
+Options Enabled
+Move Animation
+Trigger: Player Touch
+
+List of Event Commands:
+@>Play SE: 'Door exit', 100, 100
+@>Change Screen Color Tone: (-255,-255,-255,0), @6
+@>Wait: 8 frame(s)
+@>Transfer Player:[680: MAP680], (008,007), Down, No Fade
+@>Change Screen Color Tone: (0,0,0,0), @6
+@>Wait: 6 frame(s)
+@>
+
+#------------------------------------------------------------------------------
+Event ID: 002
+Event Name: EV002
+(X,Y): (010,014)
+
+Page #1
+Conditions
+None
+
+Autonomous Movement
+Type: Fixed
+Speed: 3: Slow
+Freq: 3: Low
+Options Enabled
+Move Animation
+Trigger: Player Touch
+
+List of Event Commands:
+@>Play SE: 'Door exit', 100, 100
+@>Change Screen Color Tone: (-255,-255,-255,0), @6
+@>Wait: 8 frame(s)
+@>Transfer Player:[680: MAP680], (008,007), Down, No Fade
+@>Change Screen Color Tone: (0,0,0,0), @6
+@>Wait: 6 frame(s)
+@>
+
+#------------------------------------------------------------------------------
+
 #==============================================================================
 Map ID: 689
 Map Name: MAP689
 Tileset: 147: Zwischenwelt
 Width: 20, Height: 20
+
+#------------------------------------------------------------------------------
+Event ID: 001
+Event Name: EV001
+(X,Y): (009,014)
+
+Page #1
+Conditions
+None
+
+Autonomous Movement
+Type: Fixed
+Speed: 3: Slow
+Freq: 3: Low
+Options Enabled
+Move Animation
+Trigger: Player Touch
+
+List of Event Commands:
+@>Play SE: 'Door exit', 100, 100
+@>Change Screen Color Tone: (-255,-255,-255,0), @6
+@>Wait: 8 frame(s)
+@>Transfer Player:[680: MAP680], (031,014), Down, No Fade
+@>Change Screen Color Tone: (0,0,0,0), @6
+@>Wait: 6 frame(s)
+@>
+
+#------------------------------------------------------------------------------
+Event ID: 002
+Event Name: EV002
+(X,Y): (010,014)
+
+Page #1
+Conditions
+None
+
+Autonomous Movement
+Type: Fixed
+Speed: 3: Slow
+Freq: 3: Low
+Options Enabled
+Move Animation
+Trigger: Player Touch
+
+List of Event Commands:
+@>Play SE: 'Door exit', 100, 100
+@>Change Screen Color Tone: (-255,-255,-255,0), @6
+@>Wait: 8 frame(s)
+@>Transfer Player:[680: MAP680], (031,014), Down, No Fade
+@>Change Screen Color Tone: (0,0,0,0), @6
+@>Wait: 6 frame(s)
+@>
+
+#------------------------------------------------------------------------------
 
 #==============================================================================
 Map ID: 690
@@ -509117,11 +509909,119 @@ Map Name: MAP690
 Tileset: 147: Zwischenwelt
 Width: 20, Height: 20
 
+#------------------------------------------------------------------------------
+Event ID: 001
+Event Name: EV001
+(X,Y): (009,014)
+
+Page #1
+Conditions
+None
+
+Autonomous Movement
+Type: Fixed
+Speed: 3: Slow
+Freq: 3: Low
+Options Enabled
+Move Animation
+Trigger: Player Touch
+
+List of Event Commands:
+@>Play SE: 'Door exit', 100, 100
+@>Change Screen Color Tone: (-255,-255,-255,0), @6
+@>Wait: 8 frame(s)
+@>Transfer Player:[680: MAP680], (027,021), Down, No Fade
+@>Change Screen Color Tone: (0,0,0,0), @6
+@>Wait: 6 frame(s)
+@>
+
+#------------------------------------------------------------------------------
+Event ID: 002
+Event Name: EV002
+(X,Y): (010,014)
+
+Page #1
+Conditions
+None
+
+Autonomous Movement
+Type: Fixed
+Speed: 3: Slow
+Freq: 3: Low
+Options Enabled
+Move Animation
+Trigger: Player Touch
+
+List of Event Commands:
+@>Play SE: 'Door exit', 100, 100
+@>Change Screen Color Tone: (-255,-255,-255,0), @6
+@>Wait: 8 frame(s)
+@>Transfer Player:[680: MAP680], (027,021), Down, No Fade
+@>Change Screen Color Tone: (0,0,0,0), @6
+@>Wait: 6 frame(s)
+@>
+
+#------------------------------------------------------------------------------
+
 #==============================================================================
 Map ID: 691
 Map Name: MAP691
 Tileset: 147: Zwischenwelt
 Width: 20, Height: 20
+
+#------------------------------------------------------------------------------
+Event ID: 001
+Event Name: EV001
+(X,Y): (009,014)
+
+Page #1
+Conditions
+None
+
+Autonomous Movement
+Type: Fixed
+Speed: 3: Slow
+Freq: 3: Low
+Options Enabled
+Move Animation
+Trigger: Player Touch
+
+List of Event Commands:
+@>Play SE: 'Door exit', 100, 100
+@>Change Screen Color Tone: (-255,-255,-255,0), @6
+@>Wait: 8 frame(s)
+@>Transfer Player:[680: MAP680], (009,019), Down, No Fade
+@>Change Screen Color Tone: (0,0,0,0), @6
+@>Wait: 6 frame(s)
+@>
+
+#------------------------------------------------------------------------------
+Event ID: 002
+Event Name: EV002
+(X,Y): (010,014)
+
+Page #1
+Conditions
+None
+
+Autonomous Movement
+Type: Fixed
+Speed: 3: Slow
+Freq: 3: Low
+Options Enabled
+Move Animation
+Trigger: Player Touch
+
+List of Event Commands:
+@>Play SE: 'Door exit', 100, 100
+@>Change Screen Color Tone: (-255,-255,-255,0), @6
+@>Wait: 8 frame(s)
+@>Transfer Player:[680: MAP680], (009,019), Down, No Fade
+@>Change Screen Color Tone: (0,0,0,0), @6
+@>Wait: 6 frame(s)
+@>
+
+#------------------------------------------------------------------------------
 
 #==============================================================================
 Map ID: 692
@@ -509219,6 +510119,32 @@ Stop Animation
 Trigger: Action Button
 
 List of Event Commands:
+@>
+
+#------------------------------------------------------------------------------
+Event ID: 005
+Event Name: Tür size(5,1)
+(X,Y): (007,015)
+
+Page #1
+Conditions
+None
+
+Autonomous Movement
+Type: Fixed
+Speed: 3: Slow
+Freq: 3: Low
+Options Enabled
+Move Animation
+Trigger: Player Touch
+
+List of Event Commands:
+@>Play SE: 'Door exit', 100, 100
+@>Change Screen Color Tone: (-255,-255,-255,0), @6
+@>Wait: 8 frame(s)
+@>Transfer Player:[680: MAP680], (018,012), Down, No Fade
+@>Change Screen Color Tone: (0,0,0,0), @6
+@>Wait: 6 frame(s)
 @>
 
 #------------------------------------------------------------------------------
@@ -513033,6 +513959,42 @@ List of Event Commands:
 @>
 
 #------------------------------------------------------------------------------
+
+#==============================================================================
+Map ID: 726
+Map Name: MAP726
+Tileset: 151: Dracheninsel3
+Width: 40, Height: 50
+
+#==============================================================================
+Map ID: 727
+Map Name: MAP727
+Tileset: 151: Dracheninsel3
+Width: 29, Height: 40
+
+#==============================================================================
+Map ID: 728
+Map Name: MAP728
+Tileset: 151: Dracheninsel3
+Width: 60, Height: 80
+
+#==============================================================================
+Map ID: 729
+Map Name: MAP729
+Tileset: 084: Terrakium
+Width: 38, Height: 34
+
+#==============================================================================
+Map ID: 730
+Map Name: MAP730
+Tileset: 084: Terrakium
+Width: 70, Height: 60
+
+#==============================================================================
+Map ID: 731
+Map Name: MAP731
+Tileset: 084: Terrakium
+Width: 34, Height: 34
 
 #==============================================================================
 
