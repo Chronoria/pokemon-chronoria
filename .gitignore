@@ -10,6 +10,7 @@ Pokemon-Uebersicht.xlsx
 Routen-Uebersicht.xlsx
 Angel-Uebersicht.xlsx
 Trainer-Uebersicht.xlsx
+Trainer-Pokemon-Uebersicht.xlsx
 # Excel lock files for the two xlsx exports above - created while either is open, harmless but
 # shouldn't be tracked (one slipped into a past commit while Excel had Item-Uebersicht.xlsx open)
 ~$*.xlsx

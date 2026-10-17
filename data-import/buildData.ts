@@ -12,6 +12,9 @@ import { parseAbilities } from "./parseAbilities.ts";
 import { parseItems } from "./parseItems.ts";
 import { parseTrainers } from "./parseTrainers.ts";
 import { parseEncounters } from "./parseEncounters.ts";
+import { parseRaids, mergeExtraEncounters } from "./parseRaids.ts";
+import { parseRoaming } from "./parseRoaming.ts";
+import { hasEncounterShare } from "../src/lib/encounterMethods.ts";
 import { parseTypes } from "./parseTypes.ts";
 import { parseMedals } from "./parseMedals.ts";
 import { parseMapLocations } from "./parseMapLocations.ts";
@@ -24,6 +27,7 @@ import { exportPokemonListXlsx } from "./exportPokemonList.ts";
 import { exportEncounterListXlsx } from "./exportEncounterList.ts";
 import { exportFishingListXlsx } from "./exportFishingList.ts";
 import { exportTrainerListXlsx } from "./exportTrainerList.ts";
+import { exportTrainerPokemonListXlsx } from "./exportTrainerPokemonList.ts";
 import { resolveEncounterTarget } from "./resolveEncounterTarget.ts";
 import type { EncounterRef } from "./dataModel.ts";
 
@@ -45,6 +49,10 @@ async function main() {
   const items = parseItems(ctx);
   const trainers = parseTrainers(ctx);
   const encounters = parseEncounters();
+  // Raid dens (event scripts) and roaming Pokémon (core Settings) become extra encounter tables,
+  // so pages and Excel files list them like any other wild encounter.
+  const raidTables = mergeExtraEncounters(encounters, parseRaids());
+  const roamingTables = mergeExtraEncounters(encounters, parseRoaming());
   const types = parseTypes(ctx);
   const medals = parseMedals();
   const mapLocations = parseMapLocations();
@@ -157,7 +165,9 @@ async function main() {
           method: table.method,
           minLevel: slot.minLevel,
           maxLevel: slot.maxLevel,
-          chance: totalWeight > 0 ? Math.round((slot.chance / totalWeight) * 1000) / 10 : 0,
+          chance: !hasEncounterShare(table.method)
+            ? undefined
+            : totalWeight > 0 ? Math.round((slot.chance / totalWeight) * 1000) / 10 : 0,
         };
         const species = pokemonById.get(target.speciesId)!;
         if (target.formNumber === null) {
@@ -174,6 +184,14 @@ async function main() {
 
   // map-event dump -> trainer.locations / item.locations
   for (const [trainerId, refs] of mapLocations.trainerLocations) {
+    // "TYPE-Name-*": the event picks a version at random, so every version is placed there.
+    if (trainerId.endsWith("-*")) {
+      const base = trainerId.slice(0, -2);
+      for (const t of trainers) {
+        if (t.id === base || (t.id.startsWith(`${base}-`) && /^\d+$/.test(t.id.slice(base.length + 1)))) t.locations.push(...refs);
+      }
+      continue;
+    }
     const trainer = trainerById.get(trainerId);
     if (trainer) trainer.locations.push(...refs);
   }
@@ -248,7 +266,8 @@ async function main() {
 
   const pokemonXlsxResult = await xlsxOrSkip("Pokemon-Uebersicht.xlsx", () => exportPokemonListXlsx(pokemon, items, moves, abilities));
   if (pokemonXlsxResult) console.log(
-    `Pokemon-Uebersicht.xlsx aktualisiert: ${pokemonXlsxResult.used} verwendet, ${pokemonXlsxResult.unused} noch nicht verwendet, ` +
+    `Pokemon-Uebersicht.xlsx aktualisiert: ${pokemonXlsxResult.used} verwendet (davon ${pokemonXlsxResult.evolutionOnly} nur über Entwicklung), ` +
+      `${pokemonXlsxResult.unused} noch nicht verwendet, ` +
       `${pokemonXlsxResult.megaDone} von ${pokemonXlsxResult.megaTotal} Mega-Entwicklungen und ` +
       `${pokemonXlsxResult.battleDone} von ${pokemonXlsxResult.battleTotal} Kampfformen erledigt.`
   );
@@ -282,12 +301,20 @@ async function main() {
       `${trainerXlsxResult.unusedTypes.dataOnly} davon sogar mit fertigem Team, ` +
       `${trainerXlsxResult.unusedTypes.noSprites} ganz ohne Grafik.`
   );
+  const trainerPokemonXlsxResult = await xlsxOrSkip("Trainer-Pokemon-Uebersicht.xlsx", () =>
+    exportTrainerPokemonListXlsx(pokemon, trainers)
+  );
+  if (trainerPokemonXlsxResult) console.log(
+    `Trainer-Pokemon-Uebersicht.xlsx aktualisiert: ${trainerPokemonXlsxResult.used} Pokémon/Formen in Trainer-Teams, ` +
+      `${trainerPokemonXlsxResult.unused} noch unbenutzt, ${trainerPokemonXlsxResult.unplaced} nicht platzierte Trainer.`
+  );
   if (trainerXlsxResult && trainerXlsxResult.missingPbs > 0) {
     console.warn(`  [Trainer] ${trainerXlsxResult.missingPbs} Kampf/Kaempfe ohne Eintrag in trainers.txt - siehe Blatt "Ohne PBS-Eintrag".`);
   }
 
   console.log(`Fertig: ${pokemon.length} Pokémon, ${moves.length} Attacken, ${abilities.length} Fähigkeiten, ` +
-    `${items.length} Items, ${trainers.length} Trainer, ${encounters.length} Orte, ${medals.length} Medaillen.`);
+    `${items.length} Items, ${trainers.length} Trainer, ${encounters.length} Orte, ${medals.length} Medaillen, ` +
+    `${raidTables} Raid-Höhlen, ${roamingTables} Roaming-Tabellen.`);
 }
 
 // An Excel export fails with EBUSY/EPERM while its file is open in Excel. That must not abort

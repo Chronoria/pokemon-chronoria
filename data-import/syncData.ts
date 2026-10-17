@@ -9,6 +9,7 @@
 import { existsSync, mkdirSync, readdirSync, copyFileSync, unlinkSync, writeFileSync } from "node:fs";
 import { join } from "node:path";
 import { syncMapScreenshots } from "./syncMapScreenshots.ts";
+import { extractScript } from "./extractScript.ts";
 
 const gameDir = process.argv[2] ?? "E:/Test";
 const outDir = join(import.meta.dirname, "source");
@@ -140,6 +141,27 @@ const regionalEvolutionsCopied = copySingleFile(
   join(outDir, "Plugins", "regional_evolutions.rb")
 );
 
+// The 20 raid dens and their Pokémon pools only exist in plugin code - parseRaids.ts reads the
+// DENS table from a copy of the plugin script.
+const raidPoolCopied = copySingleFile(
+  join(gameDir, "Plugins", "Chronoria Battle Fixes", "[006] Raid Pool.rb"),
+  join(outDir, "Plugins", "raid_pool.rb")
+);
+
+// Roaming Pokémon (Settings::ROAMING_SPECIES) live in the core scripts - parseRoaming.ts reads
+// them from the extracted "Settings" section.
+let settingsCopied = false;
+try {
+  const settings = extractScript(join(gameDir, "Data", "Scripts.rxdata"), "Settings");
+  if (settings) {
+    mkdirSync(join(outDir, "Plugins"), { recursive: true });
+    writeFileSync(join(outDir, "Plugins", "settings.rb"), settings, "utf8");
+    settingsCopied = true;
+  }
+} catch (e) {
+  console.warn(`  Settings aus Scripts.rxdata nicht lesbar: ${(e as Error).message}`);
+}
+
 // Map screenshots for the /fundorte/ pages (needs the PBS files and the event dump copied above).
 const mapScreenshots = await syncMapScreenshots(outDir, publicDir);
 
@@ -156,4 +178,6 @@ console.log(`  Medaillen-Icons: ${medalIconCount} Dateien`);
 console.log(`  Charakter-Sprite-Namen: ${characterCount}`);
 console.log(`  Map-Event-Dump: ${eventDumpCopied ? "kopiert" : "nicht gefunden - übersprungen"}`);
 console.log(`  Regionale Entwicklungen (Plugin): ${regionalEvolutionsCopied ? "kopiert" : "nicht gefunden - übersprungen"}`);
+console.log(`  Raid-Höhlen (Plugin): ${raidPoolCopied ? "kopiert" : "nicht gefunden - übersprungen"}`);
+console.log(`  Settings (Roaming-Pokémon): ${settingsCopied ? "kopiert" : "nicht gefunden - übersprungen"}`);
 console.log(`  Karten-Screenshots: ${mapScreenshots}`);

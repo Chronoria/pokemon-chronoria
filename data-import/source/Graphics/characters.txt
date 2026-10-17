@@ -1934,6 +1934,7 @@ object flame
 Object Ice
 Object Mega Stone
 Object mirror
+Object Orb Raetsel
 Object OrbDragon
 Object OrbElectric
 Object OrbIce
@@ -3256,6 +3257,7 @@ TUBER_M
 TUBER_M2
 Tür Dracheninsel
 Tür Geisterhaus
+Tür Genesect
 Tür Labor Team 0
 Tür Mansion
 Tür Mansion 2

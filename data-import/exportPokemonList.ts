@@ -19,6 +19,8 @@ interface Row {
   id: string;
   count: number;
   locationNames: string;
+  /** not obtainable itself, only by evolving an obtainable pre-evolution (coloured row) */
+  viaEvolution?: boolean;
 }
 
 const AVAILABLE_COLUMNS: ColumnDef<Row>[] = [
@@ -151,6 +153,47 @@ const MEGA_DONE_STYLE: RowStyle = {
   fill: { type: "pattern", pattern: "solid", fgColor: { argb: "FFC6EFCE" } },
   fontColor: "FF006100",
 };
+// Rows that only count as obtainable because a pre-evolution can be caught.
+const EVOLUTION_STYLE: RowStyle = {
+  fill: { type: "pattern", pattern: "solid", fgColor: { argb: "FFDDEBF7" } },
+  fontColor: "FF1F4E79",
+};
+
+/** "SPECIES" for form 0, else "SPECIES_N" - same keys as encounters.txt. */
+const formKey = (speciesId: string, formNumber: number) => (formNumber === 0 ? speciesId : `${speciesId}_${formNumber}`);
+
+/**
+ * Species/forms that cannot be obtained directly but by evolving something obtainable, mapped to
+ * the display name of the pre-evolution they come from. Follows whole chains (Glumanda -> Glutexo
+ * -> Glurak). An evolved Pokémon keeps its form number when the target species has that form
+ * (regional and Chronoria forms), otherwise it becomes form 0 - unless the evolution names a form.
+ */
+function evolutionOnlyForms(pokemon: Pokemon[], isDirect: (key: string) => boolean): Map<string, string> {
+  const pokemonById = new Map(pokemon.map((p) => [p.id, p]));
+  const result = new Map<string, string>();
+  const queue: { species: Pokemon; formNumber: number }[] = [];
+  const formsOf = (p: Pokemon) => [{ formNumber: 0, formName: null, evolutions: p.evolutions, megaStone: null, megaMove: null, isFemaleForm: false }, ...p.forms];
+  for (const p of pokemon) {
+    for (const f of formsOf(p)) if (!f.isFemaleForm && isDirect(formKey(p.id, f.formNumber))) queue.push({ species: p, formNumber: f.formNumber });
+  }
+  while (queue.length > 0) {
+    const { species, formNumber } = queue.shift()!;
+    const form = formsOf(species).find((f) => f.formNumber === formNumber);
+    if (!form) continue;
+    for (const evo of form.evolutions) {
+      const target = pokemonById.get(evo.target);
+      if (!target) continue;
+      const sameForm = target.forms.find((f) => f.formNumber === formNumber && !f.megaStone && !f.megaMove && !f.isFemaleForm);
+      const targetForm = evo.targetForm ?? (sameForm ? formNumber : 0);
+      const key = formKey(target.id, targetForm);
+      if (isDirect(key) || result.has(key)) continue;
+      const sourceForm = formNumber === 0 ? { formNumber: 0, formName: null } : species.forms.find((f) => f.formNumber === formNumber)!;
+      result.set(key, formLabel(species.name, sourceForm));
+      queue.push({ species: target, formNumber: targetForm });
+    }
+  }
+  return result;
+}
 
 export function formLabel(speciesName: string, form: { formNumber: number; formName: { text: string } | null }): string {
   if (form.formNumber === 0) return speciesName;
@@ -168,6 +211,16 @@ export async function exportPokemonListXlsx(pokemon: Pokemon[], items: Item[], m
   const moveById = new Map(moves.map((m) => [m.id, m]));
   const abilityById = new Map(abilities.map((a) => [a.id, a]));
   const eventLocations = parsePokemonMapLocations(pokemonById);
+  // Directly obtainable species/forms (wild, raid, event, gift, trade, egg) and, on top of
+  // that, those reachable only by evolving one of them.
+  const directKeys = new Set<string>();
+  for (const p of pokemon) {
+    if (p.foundIn.length > 0 || (eventLocations.get(p.id)?.get(0)?.length ?? 0) > 0) directKeys.add(p.id);
+    for (const f of p.forms) {
+      if (f.foundIn.length > 0 || (eventLocations.get(p.id)?.get(f.formNumber)?.length ?? 0) > 0) directKeys.add(formKey(p.id, f.formNumber));
+    }
+  }
+  const evolvedFrom = evolutionOnlyForms(pokemon, (key) => directKeys.has(key));
 
   const availableByGen = new Map<string | number, Row[]>();
   const unavailableByGen = new Map<string | number, Row[]>();
@@ -201,6 +254,8 @@ export async function exportPokemonListXlsx(pokemon: Pokemon[], items: Item[], m
           ? stone.locations.map((l) => (l.source === "shop" ? `${l.locationName} (Shop)` : l.locationName))
           : locationsOf(f.unmegaForm, baseForm ? baseForm.foundIn : p.foundIn);
         const unique = [...new Set(locationNames)].sort((a, b) => a.localeCompare(b, "de"));
+        const baseEvolvedFrom = evolvedFrom.get(formKey(p.id, f.unmegaForm));
+        if (!stone && unique.length === 0 && baseEvolvedFrom) unique.push(`Entwicklung aus ${baseEvolvedFrom}`);
         const moveName = f.megaMove ? (moveById.get(f.megaMove)?.name ?? f.megaMove) : "";
         megaByGen.get(p.generation ?? 1)!.push({
           dexNumber,
@@ -217,9 +272,11 @@ export async function exportPokemonListXlsx(pokemon: Pokemon[], items: Item[], m
       if (battleRule && battleRule.forms.includes(f.formNumber)) {
         const baseNumber = battleRule.base ? battleRule.base(f.formNumber) : 0;
         const baseForm = forms.find((bf) => bf.formNumber === baseNumber) ?? forms[0];
-        const baseNames = [...new Set(locationsOf(baseForm.formNumber, baseForm.foundIn))].sort((a, b) =>
+        let baseNames = [...new Set(locationsOf(baseForm.formNumber, baseForm.foundIn))].sort((a, b) =>
           a.localeCompare(b, "de")
         );
+        const baseEvolvedFrom = evolvedFrom.get(formKey(p.id, baseForm.formNumber));
+        if (baseNames.length === 0 && baseEvolvedFrom) baseNames = [`Entwicklung aus ${baseEvolvedFrom}`];
         const itemId = typeof battleRule.item === "function" ? battleRule.item(f.formNumber) : battleRule.item;
         const item = itemId ? itemById.get(itemId) : undefined;
         const itemNames = item
@@ -253,13 +310,14 @@ export async function exportPokemonListXlsx(pokemon: Pokemon[], items: Item[], m
       const formItem = itemRule ? itemById.get(itemRule.item) : undefined;
       if (locationNames.length === 0 && itemRule && formItem) {
         const otherFormObtainable = forms.some(
-          (o) => o.formNumber !== f.formNumber && locationsOf(o.formNumber, o.foundIn).length > 0
+          (o) =>
+            o.formNumber !== f.formNumber &&
+            (locationsOf(o.formNumber, o.foundIn).length > 0 || evolvedFrom.has(formKey(p.id, o.formNumber)))
         );
         const partner = itemRule.partner ? pokemonById.get(itemRule.partner) : undefined;
         const partnerObtainable =
           !itemRule.partner ||
-          (partner !== undefined &&
-            [...partner.foundIn, ...(eventLocations.get(partner.id)?.get(0) ?? [])].length > 0);
+          (partner !== undefined && (directKeys.has(partner.id) || evolvedFrom.has(partner.id)));
         if (otherFormObtainable && partnerObtainable) {
           const suffix = partner ? ` + ${partner.name}` : "";
           locationNames = [
@@ -267,14 +325,19 @@ export async function exportPokemonListXlsx(pokemon: Pokemon[], items: Item[], m
           ].sort((a, b) => a.localeCompare(b, "de"));
         }
       }
+      // Not obtainable itself, but its pre-evolution is: counts as obtainable, coloured.
+      const evolutionSource = evolvedFrom.get(formKey(p.id, f.formNumber));
+      const viaEvolution = locationNames.length === 0 && evolutionSource !== undefined;
+      if (viaEvolution) locationNames = [`Entwicklung aus ${evolutionSource}`];
       const row: Row = {
         dexNumber,
         name: formLabel(p.name, f),
         id: f.formNumber === 0 ? p.id : `${p.id}_${f.formNumber}`,
-        count: locationNames.length,
+        count: viaEvolution ? 0 : locationNames.length,
         locationNames: locationNames.join(", "),
+        viaEvolution,
       };
-      const target = row.count > 0 ? availableByGen : unavailableByGen;
+      const target = locationNames.length > 0 ? availableByGen : unavailableByGen;
       target.get(p.generation ?? 1)!.push(row);
     }
   });
@@ -285,6 +348,7 @@ export async function exportPokemonListXlsx(pokemon: Pokemon[], items: Item[], m
     battleByGen.get(gen)!.sort((a, b) => a.dexNumber - b.dexNumber);
   }
   const availableTotal = [...availableByGen.values()].reduce((s, l) => s + l.length, 0);
+  const evolutionOnly = [...availableByGen.values()].flat().filter((r) => r.viaEvolution).length;
   const unavailableTotal = [...unavailableByGen.values()].reduce((s, l) => s + l.length, 0);
   const megaRows = [...megaByGen.values()].flat();
   const megaDone = megaRows.filter((r) => r.done).length;
@@ -306,8 +370,9 @@ export async function exportPokemonListXlsx(pokemon: Pokemon[], items: Item[], m
   sheet.getCell(row, 1).font = TITLE_FONT;
   row += 1;
   sheet.getCell(row, 1).value =
-    "Generiert aus Wildfang-Encounterdaten (parseEncounters.ts) und dem Map-Event-Dump (parsePokemonMapLocations.ts: " +
+    "Generiert aus Wildfang-Encounterdaten (parseEncounters.ts), den Raid-Höhlen (parseRaids.ts) und dem Map-Event-Dump (parsePokemonMapLocations.ts: " +
     "pbAddPokemon/pbAddPokemonSilent, pbGenerateEgg, Pokemon.new, pbStartTrade), automatisch bei jedem build-data-Lauf. " +
+    "Blau hinterlegt: selbst nirgends zu finden, aber aus einer erhältlichen Vorstufe entwickelbar - zählt als verwendet. " +
     "Mega-Entwicklungen stehen in einer eigenen Liste ganz unten und gelten als erledigt (grün), sobald ihr " +
     "auslösender Mega-Stein irgendwo auffindbar oder kaufbar ist (Mega-Rayquaza: sobald Rayquaza erhältlich ist). " +
     "Darunter folgen die Formen, die nur im Kampf entstehen (z.B. Proto-Formen, Formeo, Durengard): erledigt, sobald " +
@@ -324,12 +389,13 @@ export async function exportPokemonListXlsx(pokemon: Pokemon[], items: Item[], m
   row = writeGroupedSection(
     sheet,
     row,
-    "Bereits verwendete Pokémon (Wildfang, Event, Geschenk, Tausch, Ei)",
+    `Bereits verwendete Pokémon (Wildfang, Raid, Event, Geschenk, Tausch, Ei; blau = nur über Entwicklung: ${evolutionOnly})`,
     "Anzahl:",
     GENERATIONS,
     (gen) => `Generation ${gen}`,
     availableByGen,
-    AVAILABLE_COLUMNS
+    AVAILABLE_COLUMNS,
+    (r) => (r.viaEvolution ? EVOLUTION_STYLE : null)
   );
   row += 2;
   row = writeGroupedSection(
@@ -370,6 +436,7 @@ export async function exportPokemonListXlsx(pokemon: Pokemon[], items: Item[], m
   await wb.xlsx.writeFile(OUT_PATH);
   return {
     used: availableTotal,
+    evolutionOnly,
     unused: unavailableTotal,
     megaDone,
     megaTotal: megaRows.length,

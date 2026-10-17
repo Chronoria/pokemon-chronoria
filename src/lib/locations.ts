@@ -6,6 +6,7 @@ import encountersData from "../data/encounters.json";
 import { existsSync, readdirSync } from "node:fs";
 import { join } from "node:path";
 import { pokemonById, slugify } from "./data";
+import { hasEncounterShare } from "./encounterMethods";
 
 // Map screenshots converted by data-import/syncMapScreenshots.ts: "<mapId>.webp" for a single
 // map, "name-<slug>.webp" for a place as a whole. Not every map has one yet. Read from disk at
@@ -41,8 +42,8 @@ export interface LocationSlot {
   path: string;
   minLevel: number;
   maxLevel: number;
-  /** share of the table in percent, one decimal */
-  chance: number;
+  /** share of the table in percent, one decimal - undefined for roaming Pokémon */
+  chance: number | undefined;
 }
 export interface LocationTable {
   method: string;
@@ -88,7 +89,7 @@ export function isUnnamedLocation(name: string): boolean {
   return /^MAP\d+$/.test(name);
 }
 
-function resolveSlot(slot: Slot, total: number): LocationSlot {
+function resolveSlot(slot: Slot, total: number | null): LocationSlot {
   const direct = pokemonById.get(slot.species);
   const match = direct ? null : slot.species.match(/^(.+)_(\d+)$/);
   const species = direct ?? (match ? pokemonById.get(match[1]) : undefined);
@@ -97,7 +98,7 @@ function resolveSlot(slot: Slot, total: number): LocationSlot {
     speciesKey: slot.species,
     minLevel: slot.minLevel,
     maxLevel: slot.maxLevel,
-    chance: total > 0 ? Math.round((slot.chance / total) * 1000) / 10 : 0,
+    chance: total === null ? undefined : total > 0 ? Math.round((slot.chance / total) * 1000) / 10 : 0,
   };
   if (!species) return { ...base, name: slot.species, sprite: null, path: "" };
   if (form) {
@@ -136,7 +137,7 @@ function buildLocations(): WildLocation[] {
         mapIds: [map.mapId],
         images: [],
         tables: map.tables.map((t) => {
-          const total = t.slots.reduce((sum, s) => sum + s.chance, 0);
+          const total = hasEncounterShare(t.method) ? t.slots.reduce((sum, s) => sum + s.chance, 0) : null;
           return { method: t.method, slots: t.slots.map((s) => resolveSlot(s, total)) };
         }),
       });

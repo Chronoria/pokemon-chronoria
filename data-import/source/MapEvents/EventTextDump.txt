@@ -379619,6 +379619,60 @@ List of Event Commands:
 @>
 
 #------------------------------------------------------------------------------
+Event ID: 087
+Event Name: Cave entrance
+(X,Y): (027,011)
+
+Page #1
+Conditions
+None
+
+Autonomous Movement
+Type: Fixed
+Speed: 3: Slow
+Freq: 3: Low
+Options Enabled
+Move Animation
+Trigger: Player Touch
+
+List of Event Commands:
+@>Play SE: 'Door exit', 100, 100
+@>Change Screen Color Tone: (-255,-255,-255,0), @6
+@>Wait: 8 frame(s)
+@>Script: pbCaveEntrance
+@>Transfer Player:[584: MAP584], (013,023), Up, No Fade
+@>Change Screen Color Tone: (0,0,0,0), @6
+@>Wait: 6 frame(s)
+@>
+
+Page #2
+Conditions
+Switch 0022: s:tsOff?("A") is ON
+
+Autonomous Movement
+Type: Fixed
+Speed: 3: Slow
+Freq: 3: Low
+Options Enabled
+Move Animation
+Trigger: Autorun
+
+List of Event Commands:
+@>Conditional Branch: Script: get_self.onEvent?
+ @>Script: Followers.hide_followers
+ @>Set Move Route: Player
+                   (Ignore If Can't Move)
+  :              : $>Through ON
+  :              : $>Move Down
+  :              : $>Through OFF
+ @>Wait: 6 frame(s)
+ @>Script: Followers.put_followers_on_player
+ @>
+: Branch End
+@>Script: setTempSwitchOn("A")
+@>
+
+#------------------------------------------------------------------------------
 
 #==============================================================================
 Map ID: 453
@@ -465352,6 +465406,816 @@ List of Event Commands:
 #------------------------------------------------------------------------------
 
 #==============================================================================
+Map ID: 584
+Map Name: MAP584
+Tileset: 152: Genesect
+Width: 30, Height: 30
+
+#------------------------------------------------------------------------------
+Event ID: 001
+Event Name: Stein
+(X,Y): (010,012)
+
+Page #1
+Conditions
+None
+
+Graphic: Object Orb Raetsel
+
+Autonomous Movement
+Type: Fixed
+Speed: 3: Slow
+Freq: 3: Low
+Options Enabled
+Direction Fix
+Trigger: Action Button
+
+List of Event Commands:
+@>Script: stone_puzzle_press(1)
+@>
+
+Page #2
+Conditions
+Variable 0134: Stein Genesect 1 is 1 or above
+
+Graphic: Object Orb Raetsel
+
+Autonomous Movement
+Type: Fixed
+Speed: 3: Slow
+Freq: 3: Low
+Options Enabled
+Direction Fix
+Trigger: Action Button
+
+List of Event Commands:
+@>Script: stone_puzzle_press(1)
+@>
+
+Page #3
+Conditions
+Variable 0134: Stein Genesect 1 is 2 or above
+
+Graphic: Object Orb Raetsel
+
+Autonomous Movement
+Type: Fixed
+Speed: 3: Slow
+Freq: 3: Low
+Options Enabled
+Direction Fix
+Trigger: Action Button
+
+List of Event Commands:
+@>Script: stone_puzzle_press(1)
+@>
+
+Page #4
+Conditions
+Variable 0134: Stein Genesect 1 is 3 or above
+
+Graphic: Object Orb Raetsel
+
+Autonomous Movement
+Type: Fixed
+Speed: 3: Slow
+Freq: 3: Low
+Options Enabled
+Direction Fix
+Trigger: Action Button
+
+List of Event Commands:
+@>Script: stone_puzzle_press(1)
+@>
+
+Page #5
+Conditions
+Variable 0134: Stein Genesect 1 is 4 or above
+
+Graphic: Object Orb Raetsel
+
+Autonomous Movement
+Type: Fixed
+Speed: 3: Slow
+Freq: 3: Low
+Options Enabled
+Direction Fix
+Trigger: Action Button
+
+List of Event Commands:
+@>Script: stone_puzzle_press(1)
+@>
+
+Page #6
+Conditions
+Variable 0134: Stein Genesect 1 is 5 or above
+
+Graphic: Object Orb Raetsel
+
+Autonomous Movement
+Type: Fixed
+Speed: 3: Slow
+Freq: 3: Low
+Options Enabled
+Direction Fix
+Trigger: Action Button
+
+List of Event Commands:
+@>Script: stone_puzzle_press(1)
+@>
+
+#------------------------------------------------------------------------------
+Event ID: 002
+Event Name: Stein
+(X,Y): (011,012)
+
+Page #1
+Conditions
+None
+
+Graphic: Object Orb Raetsel
+
+Autonomous Movement
+Type: Fixed
+Speed: 3: Slow
+Freq: 3: Low
+Options Enabled
+Direction Fix
+Trigger: Action Button
+
+List of Event Commands:
+@>Script: stone_puzzle_press(2)
+@>
+
+Page #2
+Conditions
+Variable 0135: Stein Genesect 2 is 1 or above
+
+Graphic: Object Orb Raetsel
+
+Autonomous Movement
+Type: Fixed
+Speed: 3: Slow
+Freq: 3: Low
+Options Enabled
+Direction Fix
+Trigger: Action Button
+
+List of Event Commands:
+@>Script: stone_puzzle_press(2)
+@>
+
+Page #3
+Conditions
+Variable 0135: Stein Genesect 2 is 2 or above
+
+Graphic: Object Orb Raetsel
+
+Autonomous Movement
+Type: Fixed
+Speed: 3: Slow
+Freq: 3: Low
+Options Enabled
+Direction Fix
+Trigger: Action Button
+
+List of Event Commands:
+@>Script: stone_puzzle_press(2)
+@>
+
+Page #4
+Conditions
+Variable 0135: Stein Genesect 2 is 3 or above
+
+Graphic: Object Orb Raetsel
+
+Autonomous Movement
+Type: Fixed
+Speed: 3: Slow
+Freq: 3: Low
+Options Enabled
+Direction Fix
+Trigger: Action Button
+
+List of Event Commands:
+@>Script: stone_puzzle_press(2)
+@>
+
+Page #5
+Conditions
+Variable 0135: Stein Genesect 2 is 4 or above
+
+Graphic: Object Orb Raetsel
+
+Autonomous Movement
+Type: Fixed
+Speed: 3: Slow
+Freq: 3: Low
+Options Enabled
+Direction Fix
+Trigger: Action Button
+
+List of Event Commands:
+@>Script: stone_puzzle_press(2)
+@>
+
+Page #6
+Conditions
+Variable 0135: Stein Genesect 2 is 5 or above
+
+Graphic: Object Orb Raetsel
+
+Autonomous Movement
+Type: Fixed
+Speed: 3: Slow
+Freq: 3: Low
+Options Enabled
+Direction Fix
+Trigger: Action Button
+
+List of Event Commands:
+@>Script: stone_puzzle_press(2)
+@>
+
+#------------------------------------------------------------------------------
+Event ID: 003
+Event Name: Stein
+(X,Y): (012,012)
+
+Page #1
+Conditions
+None
+
+Graphic: Object Orb Raetsel
+
+Autonomous Movement
+Type: Fixed
+Speed: 3: Slow
+Freq: 3: Low
+Options Enabled
+Direction Fix
+Trigger: Action Button
+
+List of Event Commands:
+@>Script: stone_puzzle_press(3)
+@>
+
+Page #2
+Conditions
+Variable 0136: Stein Genesect 3 is 1 or above
+
+Graphic: Object Orb Raetsel
+
+Autonomous Movement
+Type: Fixed
+Speed: 3: Slow
+Freq: 3: Low
+Options Enabled
+Direction Fix
+Trigger: Action Button
+
+List of Event Commands:
+@>Script: stone_puzzle_press(3)
+@>
+
+Page #3
+Conditions
+Variable 0136: Stein Genesect 3 is 2 or above
+
+Graphic: Object Orb Raetsel
+
+Autonomous Movement
+Type: Fixed
+Speed: 3: Slow
+Freq: 3: Low
+Options Enabled
+Direction Fix
+Trigger: Action Button
+
+List of Event Commands:
+@>Script: stone_puzzle_press(3)
+@>
+
+Page #4
+Conditions
+Variable 0136: Stein Genesect 3 is 3 or above
+
+Graphic: Object Orb Raetsel
+
+Autonomous Movement
+Type: Fixed
+Speed: 3: Slow
+Freq: 3: Low
+Options Enabled
+Direction Fix
+Trigger: Action Button
+
+List of Event Commands:
+@>Script: stone_puzzle_press(3)
+@>
+
+Page #5
+Conditions
+Variable 0136: Stein Genesect 3 is 4 or above
+
+Graphic: Object Orb Raetsel
+
+Autonomous Movement
+Type: Fixed
+Speed: 3: Slow
+Freq: 3: Low
+Options Enabled
+Direction Fix
+Trigger: Action Button
+
+List of Event Commands:
+@>Script: stone_puzzle_press(3)
+@>
+
+Page #6
+Conditions
+Variable 0136: Stein Genesect 3 is 5 or above
+
+Graphic: Object Orb Raetsel
+
+Autonomous Movement
+Type: Fixed
+Speed: 3: Slow
+Freq: 3: Low
+Options Enabled
+Direction Fix
+Trigger: Action Button
+
+List of Event Commands:
+@>Script: stone_puzzle_press(3)
+@>
+
+#------------------------------------------------------------------------------
+Event ID: 004
+Event Name: Stein
+(X,Y): (013,012)
+
+Page #1
+Conditions
+None
+
+Graphic: Object Orb Raetsel
+
+Autonomous Movement
+Type: Fixed
+Speed: 3: Slow
+Freq: 3: Low
+Options Enabled
+Direction Fix
+Trigger: Action Button
+
+List of Event Commands:
+@>Script: stone_puzzle_press(4)
+@>
+
+Page #2
+Conditions
+Variable 0137: Stein Genesect 4 is 1 or above
+
+Graphic: Object Orb Raetsel
+
+Autonomous Movement
+Type: Fixed
+Speed: 3: Slow
+Freq: 3: Low
+Options Enabled
+Direction Fix
+Trigger: Action Button
+
+List of Event Commands:
+@>Script: stone_puzzle_press(4)
+@>
+
+Page #3
+Conditions
+Variable 0137: Stein Genesect 4 is 2 or above
+
+Graphic: Object Orb Raetsel
+
+Autonomous Movement
+Type: Fixed
+Speed: 3: Slow
+Freq: 3: Low
+Options Enabled
+Direction Fix
+Trigger: Action Button
+
+List of Event Commands:
+@>Script: stone_puzzle_press(4)
+@>
+
+Page #4
+Conditions
+Variable 0137: Stein Genesect 4 is 3 or above
+
+Graphic: Object Orb Raetsel
+
+Autonomous Movement
+Type: Fixed
+Speed: 3: Slow
+Freq: 3: Low
+Options Enabled
+Direction Fix
+Trigger: Action Button
+
+List of Event Commands:
+@>Script: stone_puzzle_press(4)
+@>
+
+Page #5
+Conditions
+Variable 0137: Stein Genesect 4 is 4 or above
+
+Graphic: Object Orb Raetsel
+
+Autonomous Movement
+Type: Fixed
+Speed: 3: Slow
+Freq: 3: Low
+Options Enabled
+Direction Fix
+Trigger: Action Button
+
+List of Event Commands:
+@>Script: stone_puzzle_press(4)
+@>
+
+Page #6
+Conditions
+Variable 0137: Stein Genesect 4 is 5 or above
+
+Graphic: Object Orb Raetsel
+
+Autonomous Movement
+Type: Fixed
+Speed: 3: Slow
+Freq: 3: Low
+Options Enabled
+Direction Fix
+Trigger: Action Button
+
+List of Event Commands:
+@>Script: stone_puzzle_press(4)
+@>
+
+#------------------------------------------------------------------------------
+Event ID: 005
+Event Name: Stein
+(X,Y): (014,012)
+
+Page #1
+Conditions
+None
+
+Graphic: Object Orb Raetsel
+
+Autonomous Movement
+Type: Fixed
+Speed: 3: Slow
+Freq: 3: Low
+Options Enabled
+Direction Fix
+Trigger: Action Button
+
+List of Event Commands:
+@>Script: stone_puzzle_press(5)
+@>
+
+Page #2
+Conditions
+Variable 0138: Stein Genesect 5 is 1 or above
+
+Graphic: Object Orb Raetsel
+
+Autonomous Movement
+Type: Fixed
+Speed: 3: Slow
+Freq: 3: Low
+Options Enabled
+Direction Fix
+Trigger: Action Button
+
+List of Event Commands:
+@>Script: stone_puzzle_press(5)
+@>
+
+Page #3
+Conditions
+Variable 0138: Stein Genesect 5 is 2 or above
+
+Graphic: Object Orb Raetsel
+
+Autonomous Movement
+Type: Fixed
+Speed: 3: Slow
+Freq: 3: Low
+Options Enabled
+Direction Fix
+Trigger: Action Button
+
+List of Event Commands:
+@>Script: stone_puzzle_press(5)
+@>
+
+Page #4
+Conditions
+Variable 0138: Stein Genesect 5 is 3 or above
+
+Graphic: Object Orb Raetsel
+
+Autonomous Movement
+Type: Fixed
+Speed: 3: Slow
+Freq: 3: Low
+Options Enabled
+Direction Fix
+Trigger: Action Button
+
+List of Event Commands:
+@>Script: stone_puzzle_press(5)
+@>
+
+Page #5
+Conditions
+Variable 0138: Stein Genesect 5 is 4 or above
+
+Graphic: Object Orb Raetsel
+
+Autonomous Movement
+Type: Fixed
+Speed: 3: Slow
+Freq: 3: Low
+Options Enabled
+Direction Fix
+Trigger: Action Button
+
+List of Event Commands:
+@>Script: stone_puzzle_press(5)
+@>
+
+Page #6
+Conditions
+Variable 0138: Stein Genesect 5 is 5 or above
+
+Graphic: Object Orb Raetsel
+
+Autonomous Movement
+Type: Fixed
+Speed: 3: Slow
+Freq: 3: Low
+Options Enabled
+Direction Fix
+Trigger: Action Button
+
+List of Event Commands:
+@>Script: stone_puzzle_press(5)
+@>
+
+#------------------------------------------------------------------------------
+Event ID: 006
+Event Name: Stein
+(X,Y): (015,012)
+
+Page #1
+Conditions
+None
+
+Graphic: Object Orb Raetsel
+
+Autonomous Movement
+Type: Fixed
+Speed: 3: Slow
+Freq: 3: Low
+Options Enabled
+Direction Fix
+Trigger: Action Button
+
+List of Event Commands:
+@>Script: stone_puzzle_press(6)
+@>
+
+Page #2
+Conditions
+Variable 0139: Stein Genesect 6 is 1 or above
+
+Graphic: Object Orb Raetsel
+
+Autonomous Movement
+Type: Fixed
+Speed: 3: Slow
+Freq: 3: Low
+Options Enabled
+Direction Fix
+Trigger: Action Button
+
+List of Event Commands:
+@>Script: stone_puzzle_press(6)
+@>
+
+Page #3
+Conditions
+Variable 0139: Stein Genesect 6 is 2 or above
+
+Graphic: Object Orb Raetsel
+
+Autonomous Movement
+Type: Fixed
+Speed: 3: Slow
+Freq: 3: Low
+Options Enabled
+Direction Fix
+Trigger: Action Button
+
+List of Event Commands:
+@>Script: stone_puzzle_press(6)
+@>
+
+Page #4
+Conditions
+Variable 0139: Stein Genesect 6 is 3 or above
+
+Graphic: Object Orb Raetsel
+
+Autonomous Movement
+Type: Fixed
+Speed: 3: Slow
+Freq: 3: Low
+Options Enabled
+Direction Fix
+Trigger: Action Button
+
+List of Event Commands:
+@>Script: stone_puzzle_press(6)
+@>
+
+Page #5
+Conditions
+Variable 0139: Stein Genesect 6 is 4 or above
+
+Graphic: Object Orb Raetsel
+
+Autonomous Movement
+Type: Fixed
+Speed: 3: Slow
+Freq: 3: Low
+Options Enabled
+Direction Fix
+Trigger: Action Button
+
+List of Event Commands:
+@>Script: stone_puzzle_press(6)
+@>
+
+Page #6
+Conditions
+Variable 0139: Stein Genesect 6 is 5 or above
+
+Graphic: Object Orb Raetsel
+
+Autonomous Movement
+Type: Fixed
+Speed: 3: Slow
+Freq: 3: Low
+Options Enabled
+Direction Fix
+Trigger: Action Button
+
+List of Event Commands:
+@>Script: stone_puzzle_press(6)
+@>
+
+#------------------------------------------------------------------------------
+Event ID: 007
+Event Name: EV007
+(X,Y): (012,003)
+
+Page #1
+Conditions
+Switch 0427: Genesect is ON
+
+Autonomous Movement
+Type: Fixed
+Speed: 3: Slow
+Freq: 3: Low
+Options Enabled
+Move Animation
+Trigger: Action Button
+
+List of Event Commands:
+@>
+
+#------------------------------------------------------------------------------
+Event ID: 008
+Event Name: EV008
+(X,Y): (014,003)
+
+Page #1
+Conditions
+Switch 0427: Genesect is ON
+
+Autonomous Movement
+Type: Fixed
+Speed: 3: Slow
+Freq: 3: Low
+Options Enabled
+Move Animation
+Trigger: Action Button
+
+List of Event Commands:
+@>
+
+#------------------------------------------------------------------------------
+Event ID: 009
+Event Name: EV009
+(X,Y): (013,002)
+
+Page #1
+Conditions
+Switch 0427: Genesect is ON
+
+Graphic: Tür Genesect
+
+Autonomous Movement
+Type: Fixed
+Speed: 3: Slow
+Freq: 3: Low
+Options Enabled
+Move Animation
+Trigger: Action Button
+
+List of Event Commands:
+@>Play SE: 'Door exit', 100, 100
+@>Change Screen Color Tone: (-255,-255,-255,0), @6
+@>Wait: 8 frame(s)
+@>Script: pbCaveEntrance
+@>Transfer Player:[732: MAP732], (010,066), Up, No Fade
+@>Change Screen Color Tone: (0,0,0,0), @6
+@>Wait: 6 frame(s)
+@>
+
+Page #2
+Conditions
+Switch 0022: s:tsOff?("A") is ON
+
+Autonomous Movement
+Type: Fixed
+Speed: 3: Slow
+Freq: 3: Low
+Options Enabled
+Move Animation
+Trigger: Autorun
+
+List of Event Commands:
+@>Conditional Branch: Script: get_self.onEvent?
+ @>Script: Followers.hide_followers
+ @>Set Move Route: Player
+                   (Ignore If Can't Move)
+  :              : $>Through ON
+  :              : $>Move Down
+  :              : $>Through OFF
+ @>Wait: 6 frame(s)
+ @>Script: Followers.put_followers_on_player
+ @>
+: Branch End
+@>Script: setTempSwitchOn("A")
+@>
+
+#------------------------------------------------------------------------------
+Event ID: 010
+Event Name: Exit
+(X,Y): (013,024)
+
+Page #1
+Conditions
+None
+
+Autonomous Movement
+Type: Fixed
+Speed: 3: Slow
+Freq: 3: Low
+Options Enabled
+Move Animation
+Trigger: Player Touch
+
+List of Event Commands:
+@>Play SE: 'Door exit', 100, 100
+@>Change Screen Color Tone: (-255,-255,-255,0), @6
+@>Wait: 8 frame(s)
+@>Script: stone_puzzle_reset
+@>Script: pbCaveExit
+@>Transfer Player:[452: Route 16], (027,011), Down, No Fade
+@>Change Screen Color Tone: (0,0,0,0), @6
+@>Wait: 8 frame(s)
+@>
+
+#------------------------------------------------------------------------------
+
+#==============================================================================
 Map ID: 585
 Map Name: MAP585
 Tileset: 120: Höhle Dracheninsel
@@ -465556,6 +466420,7 @@ List of Event Commands:
   @>Script: kryppuk_progress_message
   @>
  : Else
+  @>Play BGM: 'SituationJesusTenseEnls', 60, 100
   @>Text: Die Stimmen sind vollzählig.
   @>Text: Hundertacht.
   @>Text: Der Spiritkern in deiner Tasche ist eiskalt geworden.
@@ -465574,7 +466439,6 @@ List of Event Commands:
    @>Screen Shake: 6, 8, @30
    @>Set Move Route: This event
     :              : $>Graphic: "SPIRITOMB', 0, 2, 0
-   @>Play BGM: 'SituationJesusTenseEnls', 60, 100
    @>Play SE: 'SPIRITOMB', 100, 100
    @>Wait: 50 frame(s)
    @>Script: setBattleRule("raidStyleCapture", {
@@ -465596,11 +466460,11 @@ List of Event Commands:
    @>Set Move Route: This event
     :              : $>Graphic: (None)
    @>Change Screen Color Tone: (0,0,0,0), @20
+   @>Restore BGM/BGS
    @>Conditional Branch: Variable [0048: Kampf-Ergebnis] == 4
     @>Script: $bag.remove(:ODDKEYSTONE)
     @>Text: Der Spiritkern auf dem Brunnenrand zerfällt zu Staub.
     @>Control Self Switch: B =ON
-    @>Restore BGM/BGS
     @>
    : Else
     @>Text: Der Spiritkern liegt wieder kalt in deiner Hand.
@@ -487740,23 +488604,10 @@ Move Animation
 Trigger: Action Button
 
 List of Event Commands:
-@>
-
-Page #2
-Conditions
-Self Switch A is ON
-
-Graphic: LEADER_EIRA
-
-Autonomous Movement
-Type: Fixed
-Speed: 3: Slow
-Freq: 3: Low
-Options Enabled
-Move Animation
-Trigger: Action Button
-
-List of Event Commands:
+@>Text: \xn[Arenaleiterin Eira]Das war ein beeindruckender 
+ :    : Kampf gegen dich.
+@>Text: \xn[Arenaleiterin Eira]Bei diesen Bedingungen 
+ :    : bekommen viele schnell kalte Füße.
 @>
 
 #------------------------------------------------------------------------------
@@ -487810,6 +488661,11 @@ List of Event Commands:
   :    : mich zu besiegen.
  @>Text: \xn[Arenaleiterin Eira]Mal schauen, ob dein Feuer 
   :    : heißer ist.
+ @>Script: setBattleRule("midbattleScript", 
+ :       : :ARENALEITER_EIRA)
+ :       : setBattleRule("outcome", 48)
+ @>Script: TrainerBattle.start(:LEADER_Arena7, 
+ :       : "Eira", rand(4))
  @>Conditional Branch: Variable [0048: Kampf-Ergebnis] == 1
   @>Text: \xn[Arenaleiterin Eira]Ich bin dir noch eine 
    :    : Entschuldigung fällig.
@@ -513995,6 +514851,232 @@ Map ID: 731
 Map Name: MAP731
 Tileset: 084: Terrakium
 Width: 34, Height: 34
+
+#==============================================================================
+Map ID: 732
+Map Name: MAP732
+Tileset: 152: Genesect
+Width: 70, Height: 70
+
+#------------------------------------------------------------------------------
+Event ID: 001
+Event Name: Exit
+(X,Y): (010,067)
+
+Page #1
+Conditions
+None
+
+Autonomous Movement
+Type: Fixed
+Speed: 3: Slow
+Freq: 3: Low
+Options Enabled
+Move Animation
+Trigger: Player Touch
+
+List of Event Commands:
+@>Play SE: 'Door exit', 100, 100
+@>Change Screen Color Tone: (-255,-255,-255,0), @6
+@>Wait: 8 frame(s)
+@>Transfer Player:[584: MAP584], (013,002), Down, No Fade
+@>Change Screen Color Tone: (0,0,0,0), @6
+@>Wait: 8 frame(s)
+@>
+
+#------------------------------------------------------------------------------
+Event ID: 002
+Event Name: Bridge
+(X,Y): (029,033)
+
+Page #1
+Conditions
+None
+
+Autonomous Movement
+Type: Fixed
+Speed: 3: Slow
+Freq: 3: Low
+Options Enabled
+Move Animation
+Through
+Trigger: Player Touch
+
+List of Event Commands:
+@>Conditional Branch: Player is facing Down
+ @>Script: Followers.hide_followers
+ @>Set Move Route: Player
+  :              : $>Always on Top ON
+  :              : $>Through ON
+  :              : $>Turn Up
+  :              : $>Direction Fix ON
+  :              : $>Change Speed: 2
+  :              : $>Move Down
+  :              : $>Move Down
+  :              : $>Move Down
+  :              : $>Move Down
+  :              : $>Direction Fix OFF
+  :              : $>Through OFF
+  :              : $>Always on Top OFF
+ @>Wait: 40 frame(s)
+ @>Script: pbBridgeOff
+ @>Script: Followers.put_followers_on_player
+ @>
+: Else
+ @>
+: Branch End
+@>
+
+#------------------------------------------------------------------------------
+Event ID: 003
+Event Name: Bridge
+(X,Y): (029,035)
+
+Page #1
+Conditions
+None
+
+Autonomous Movement
+Type: Fixed
+Speed: 3: Slow
+Freq: 3: Low
+Options Enabled
+Move Animation
+Through
+Trigger: Player Touch
+
+List of Event Commands:
+@>Conditional Branch: Player is facing Up
+ @>Script: Followers.hide_followers
+ @>Set Move Route: Player
+  :              : $>Always on Top ON
+  :              : $>Through ON
+  :              : $>Change Speed: 2
+  :              : $>Move Up
+  :              : $>Move Up
+  :              : $>Move Up
+  :              : $>Move Up
+  :              : $>Change Speed: 3
+  :              : $>Through OFF
+  :              : $>Always on Top OFF
+ @>Wait: 40 frame(s)
+ @>Script: pbBridgeOn
+ @>Script: Followers.put_followers_on_player
+ @>
+: Else
+ @>
+: Branch End
+@>
+
+#------------------------------------------------------------------------------
+Event ID: 004
+Event Name: Bridge size(3,1)
+(X,Y): (028,011)
+
+Page #1
+Conditions
+None
+
+Autonomous Movement
+Type: Fixed
+Speed: 3: Slow
+Freq: 3: Low
+Options Enabled
+Move Animation
+Through
+Trigger: Player Touch
+
+List of Event Commands:
+@>Script: pbBridgeOn
+@>
+
+#------------------------------------------------------------------------------
+Event ID: 005
+Event Name: Bridge
+(X,Y): (041,024)
+
+Page #1
+Conditions
+None
+
+Autonomous Movement
+Type: Fixed
+Speed: 3: Slow
+Freq: 3: Low
+Options Enabled
+Move Animation
+Through
+Trigger: Player Touch
+
+List of Event Commands:
+@>Script: pbBridgeOn
+@>
+
+#------------------------------------------------------------------------------
+Event ID: 006
+Event Name: Bridge
+(X,Y): (041,028)
+
+Page #1
+Conditions
+None
+
+Autonomous Movement
+Type: Fixed
+Speed: 3: Slow
+Freq: 3: Low
+Options Enabled
+Move Animation
+Through
+Trigger: Player Touch
+
+List of Event Commands:
+@>Script: pbBridgeOff
+@>
+
+#------------------------------------------------------------------------------
+Event ID: 007
+Event Name: Bridge size(3,1)
+(X,Y): (028,010)
+
+Page #1
+Conditions
+None
+
+Autonomous Movement
+Type: Fixed
+Speed: 3: Slow
+Freq: 3: Low
+Options Enabled
+Move Animation
+Through
+Trigger: Player Touch
+
+List of Event Commands:
+@>Script: pbBridgeOff
+@>
+
+#------------------------------------------------------------------------------
+Event ID: 008
+Event Name: EV008
+(X,Y): (027,021)
+
+Page #1
+Conditions
+None
+
+Autonomous Movement
+Type: Fixed
+Speed: 3: Slow
+Freq: 3: Low
+Options Enabled
+Move Animation
+Trigger: Player Touch
+
+List of Event Commands:
+@>
+
+#------------------------------------------------------------------------------
 
 #==============================================================================
 

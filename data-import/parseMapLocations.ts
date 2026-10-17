@@ -15,8 +15,11 @@ const DUMP_PATH = join(import.meta.dirname, "source", "MapEvents", "EventTextDum
 const MAP_ID_RE = /^Map ID: (\d+)/;
 const EVENT_NAME_RE = /^Event Name: (.+)/;
 // TrainerBattle.start(:TRAINER_TYPE, "Name"[, rematchNumber]) - matches parseTrainers.ts's
-// id = [trainerType, name, disambiguator].filter(Boolean).join("-") exactly.
-const TRAINER_BATTLE_RE = /TrainerBattle\.start\(:(\w+),\s*"([^"]+)"(?:,\s*(\d+))?\)/;
+// id = [trainerType, name, disambiguator].filter(Boolean).join("-") exactly. pbRegisterPartner
+// with the same arguments counts too: that trainer's team fights alongside the player.
+// The version may also be an expression such as rand(4) or pbGet(51) (a team picked at random):
+// then every version of that trainer counts, written as the id "TYPE-Name-*" for buildData.ts.
+const TRAINER_BATTLE_RE = /(?:TrainerBattle\.start|pbRegisterPartner)\(:(\w+),\s*"([^"]+)"\s*(?:,\s*([^,)]+(?:\([^)]*\))?))?/;
 const ITEM_BALL_RE = /pbItemBall\(:(\w+)/; // ground items and hidden (Itemfinder) items alike
 const RECEIVE_ITEM_RE = /pbReceiveItem\(:(\w+)/; // items given by an NPC
 const PICK_BERRY_RE = /pbPickBerry\(:(\w+)/; // berry trees
@@ -68,7 +71,22 @@ export function parseMapLocations(): MapLocationsResult {
   if (!existsSync(DUMP_PATH)) return { trainerLocations, itemLocations };
 
   const locationNames = loadMapLocationNames();
-  const lines = readFileSync(DUMP_PATH, "utf-8").split("\n");
+  // A TrainerBattle.start(...) call that the dump wraps onto ":   :" continuation lines (e.g.
+  // `TrainerBattle.start(:LEADER_Arena6,` + `"Bodhi & Raya")`) is joined back into one line, so
+  // TRAINER_BATTLE_RE sees the whole call.
+  const rawLines = readFileSync(DUMP_PATH, "utf-8").split("\n");
+  const lines: string[] = [];
+  for (let i = 0; i < rawLines.length; i++) {
+    let line = rawLines[i];
+    if (/(?:TrainerBattle\.start|pbRegisterPartner)\([^)]*$/.test(line.trimEnd())) {
+      while (i + 1 < rawLines.length && /^\s*:\s+:/.test(rawLines[i + 1])) {
+        const next = rawLines[++i];
+        line = `${line.trimEnd()} ${next.replace(/^\s*:\s+:\s*/, "").trimEnd()}`;
+        if (next.includes(")")) break;
+      }
+    }
+    lines.push(line);
+  }
 
   let mapId = "";
   let locationName = "";
@@ -107,8 +125,12 @@ export function parseMapLocations(): MapLocationsResult {
 
     const trainerMatch = TRAINER_BATTLE_RE.exec(line);
     if (trainerMatch) {
-      const [, trainerType, name, rematch] = trainerMatch;
-      const id = [trainerType, name, rematch].filter(Boolean).join("-");
+      const [, trainerType, name, rawVersion] = trainerMatch;
+      const version = rawVersion?.trim();
+      // An explicit version 0 is the base entry, which has no "-0" in its id; anything that is
+      // not a plain number stands for all versions.
+      const suffix = !version || version === "0" ? undefined : /^\d+$/.test(version) ? version : "*";
+      const id = [trainerType, name, suffix].filter(Boolean).join("-");
       addLocation(trainerLocations, id, { mapId, locationName }, (r) => r.mapId);
       continue;
     }

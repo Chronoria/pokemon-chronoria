@@ -26,7 +26,28 @@ const METHOD_LABELS: Record<string, string> = {
   HeadbuttLow: "Kopfnuss (Baum, niedrig)",
   HeadbuttHigh: "Kopfnuss (Baum, hoch)",
   DarkGrass: "Dunkles Gras",
+  // Raid dens (data-import/parseRaids.ts): "Raid" = rank depends on the player's badges.
+  Raid: "Raid-Höhle",
+  Raid1: "Raid-Höhle (Rang 1)",
+  Raid2: "Raid-Höhle (Rang 2)",
+  Raid3: "Raid-Höhle (Rang 3)",
+  Raid4: "Raid-Höhle (Rang 4)",
+  Raid5: "Raid-Höhle (Rang 5)",
+  Raid6: "Raid-Höhle (Rang 6)",
+  Raid7: "Raid-Höhle (Rang 7)",
+  // Roaming Pokémon (data-import/parseRoaming.ts), suffix = roamer encounter type.
+  Roaming0: "Umherstreifend",
+  Roaming1: "Umherstreifend (Gras/Höhle)",
+  Roaming2: "Umherstreifend (Surfer)",
+  Roaming3: "Umherstreifend (Angel)",
+  Roaming4: "Umherstreifend (Surfer/Angel)",
 };
+
+/** Roaming Pokémon are not drawn from a table: while one is on the current map, a quarter of
+ *  the wild encounters become it. Their tables therefore get no percentage ("–"). */
+export function hasEncounterShare(method: string): boolean {
+  return !method.startsWith("Roaming");
+}
 
 export function encounterMethodLabel(method: string): string {
   return METHOD_LABELS[method] ?? method;

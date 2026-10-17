@@ -9,7 +9,7 @@ import ExcelJS from "exceljs";
 import { join } from "node:path";
 import { TITLE_FONT, NOTE_FONT, COL_HEADER_FONT, COL_HEADER_FILL, FONT, writeGroupedSection, type ColumnDef, type RowStyle } from "./xlsxGroupedSection.ts";
 import { speciesDisplayName } from "./resolveEncounterTarget.ts";
-import { encounterMethodLabel } from "../src/lib/encounterMethods.ts";
+import { encounterMethodLabel, hasEncounterShare } from "../src/lib/encounterMethods.ts";
 import { formLabel } from "./exportPokemonList.ts";
 import { parsePokemonMapLocations } from "./parsePokemonMapLocations.ts";
 import type { EncounterLocation, Pokemon } from "./dataModel.ts";
@@ -21,7 +21,8 @@ const COLUMN_HEADERS = ["Route", "Methode", "Pokémon", "Level", "Chance"];
 interface Row {
   speciesName: string;
   levelLabel: string;
-  chancePercent: number;
+  /** null for roaming Pokémon, which are not drawn from a table */
+  chancePercent: number | null;
 }
 
 interface MethodGroup {
@@ -192,7 +193,7 @@ function buildLocationGroups(encounters: EncounterLocation[], pokemonById: Map<s
         .map((slot) => ({
           speciesName: speciesDisplayName(slot.species, pokemonById),
           levelLabel: slot.minLevel === slot.maxLevel ? String(slot.minLevel) : `${slot.minLevel}–${slot.maxLevel}`,
-          chancePercent: total > 0 ? Math.round((slot.chance / total) * 100) : 0,
+          chancePercent: !hasEncounterShare(table.method) ? null : total > 0 ? Math.round((slot.chance / total) * 100) : 0,
         }));
       methods.push({ method: encounterMethodLabel(table.method), rows });
       locationRowCount += rows.length;
@@ -258,7 +259,7 @@ export async function exportEncounterListXlsx(encounters: EncounterLocation[], p
         sheet.getCell(row, 2).value = methodGroup.method;
         sheet.getCell(row, 3).value = r.speciesName;
         sheet.getCell(row, 4).value = r.levelLabel;
-        sheet.getCell(row, 5).value = `${r.chancePercent}%`;
+        sheet.getCell(row, 5).value = r.chancePercent === null ? "–" : `${r.chancePercent}%`;
         for (let c = 1; c <= COLUMN_WIDTHS.length; c++) {
           const cell = sheet.getCell(row, c);
           cell.font = FONT;
