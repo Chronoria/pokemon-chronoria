@@ -45,8 +45,8 @@ export const EXCLUDED_MAP_IDS = new Set<number>([
   // interspersed among these ids and are intentionally NOT included here).
   ...Array.from({ length: 75 }, (_, i) => i + 1).filter((id) => ![22, 32, 33, 42, 43, 48].includes(id)),
   83, // stray leftover duplicate of the demo's "Route 1"
-  203, // "Nicht verwendet Test Map leuchtende Kristalle" - explicitly marked unused by the devs
   288, // "VM-Testmap" - developer test map
+  366, // "Testmap" - developer test map (trainer, gift Pokémon, item ball, raid den for testing)
 ]);
 
 export interface MapLocationsResult {
