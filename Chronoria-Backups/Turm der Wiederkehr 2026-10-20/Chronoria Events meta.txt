@@ -1,0 +1,18 @@
+Name = Chronoria Events
+Version = 1.1.0
+Essentials = 21.1
+Credits = Chronoria Dev Team
+
+# Change logs
+#############################################
+# 1.1.0
+#############################################
+# - Neu: [002] Steinraetsel.rb. Sechs Steine auf Map 584 nach dem Vorbild des
+#   Sicherungskastens aus Blue Prince (Farben aus/gruen/rot/blau/lila/weiss,
+#   Nachbarregeln). Variablen 134-139, Schalter 427 = geloest.
+#############################################
+# 1.0.0
+#############################################
+# - Neu: [001] Kryppuk Brunnen.rb. Hilfsbefehle fuer den Brunnen der
+#   hundertacht Stimmen (Dracheninsel, Karte 587): Zaehler fuer gewonnene
+#   Kaempfe seit dem Fund des Spiritkerns, Fortschrittsmeldung.

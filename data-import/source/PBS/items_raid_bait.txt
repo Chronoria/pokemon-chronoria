@@ -3,9 +3,7 @@
 [RAIDBAIT]
 Name = Raid-Köder
 NamePlural = Raid-Köder
-PortionName = Portion Raid-Köder
-PortionNamePlural = Portionen Raid-Köder
 Pocket = 1
-Price = 100
+Price = 2000
 Flags = Fling_10
 Description = Eine Schachtel mit einer Portion Spezialköder. Damit lassen sich wilde Pokémon in eine Raid-Höhle locken.

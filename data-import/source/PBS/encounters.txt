@@ -7924,7 +7924,7 @@ TreasureRod,21
 	8,GYARADOS_1,60,65
 	2,BASCULEGION,60,65
 #-------------------------------
-[177] # Noxburgh
+[177] # Tonishi
 LandMorning,21
 	10,LECHONK,50,60
 	10,SQUAWKABILLY,50,60

@@ -1,0 +1,318 @@
+==========================================================================
+ DRACHENINSEL – DIE RÜCKKEHR DES CHEFS
+ Höhle mit den beiden Toren. Kein Endkampf, sondern der Tiefpunkt der Story.
+==========================================================================
+
+LEITGEDANKE DER SZENE
+  Wahl gegen Zweck. Drei Figuren stehen für drei Antworten:
+    Nexus  : Es gibt keine Wahl, nur Ursache und Wirkung.
+    Chef   : Es gibt keine Wahl, nur ein Skript. Und er kennt es.
+    Matteo : trifft eine echte Wahl. Die falsche, aus dem richtigen Grund.
+  Die Bindung (zu Elisa, zu den Pokémon) ist das, was keiner der beiden
+  berechnen kann. Niemand spricht das hier aus. Die Szene stellt nur die Frage.
+
+WER IST DABEI
+  \PN, Elisa, Nexus, Matteo (mit Team-0-Brille), später der Chef.
+  Dialga und Palkia erscheinen erst durch den letzten Schalter.
+  Marvin nur als Stimme / Auswirkung (optional, siehe Abschnitt 7).
+
+VORBEREITUNG
+  Trainer-ID in eine freie Variable schreiben, damit der Chef den Spieler
+  als Nummer ansprechen kann (Variable 180, laut Event-Dump und Plugins frei):
+      pbSet(180, sprintf("%05d", $player.public_ID))
+  Im Text dann: \v[180]
+
+  Belegung der Variablen für den Chef (180-192, in keinem Event oder Plugin benutzt):
+      180       Trainer-Nummer
+      181-190   Wochentag, Datum, Uhrzeit, Spieldaten  (chronoria_meta_data(181))
+      191       Tageszeit-Stufe                        (chronoria_daytime(191))
+      192       Vorname am Computer                    (chronoria_real_name?(192))
+
+
+--------------------------------------------------------------------------
+1. ANKUNFT
+--------------------------------------------------------------------------
+(Die Höhle. Zwei Tore, noch dunkel. Dazwischen ein Pult mit einem einzelnen
+ Hebel. Daneben steht Matteo, Brille auf, regungslos. Nexus wartet.)
+
+Elisa: Matteo!
+Elisa: Matteo, ich bin's! Sieh mich an!
+(Keine Reaktion.)
+Elisa: ...Er hört mich nicht.
+
+Nexus: Er hört Sie sehr gut, Mademoiselle. Er hat nur nichts dazu zu sagen.
+Nexus: Die Brille nimmt einem diese lästige Angewohnheit ab. Das Abwägen.
+Nexus: \PN. Pünktlich. Ich habe es nicht anders erwartet.
+Nexus: Sie sind gekommen, um mich aufzuhalten. Naturellement.
+Nexus: Dann halten Sie mich auf.
+
+    [Kampf gegen Nexus]
+
+
+--------------------------------------------------------------------------
+2. NACH DEM KAMPF – DIE UMKEHRUNG
+--------------------------------------------------------------------------
+Nexus: Bravo. Sie haben gewonnen. Das stand nie in Frage.
+Nexus: Die Frage war nur, wie lange Sie dafür brauchen.
+Nexus: Die Speicher sind voll. Seit Sie in der Kanalisation die Schalter
+       umgelegt haben, fließt alles hierher.
+Nexus: Ursache, mon ami. Und nun fehlt nur noch die Wirkung.
+Nexus: Ein Hebel. Ein einziger.
+
+Elisa: Dann legen Sie ihn doch um! Worauf warten Sie?
+
+Nexus: Ich könnte. Aber wo bliebe da die Eleganz?
+Nexus: Sie beide glauben an die Wahl. An den freien Willen. C'est charmant.
+Nexus: Ich möchte Ihnen zeigen, was eine Wahl wert ist.
+
+(Nexus geht zu Matteo und nimmt ihm die Brille ab.)
+
+
+--------------------------------------------------------------------------
+3. MATTEO OHNE BRILLE
+--------------------------------------------------------------------------
+(Matteo blinzelt, schwankt, sieht sich um.)
+
+Matteo: ...
+Matteo: ...Elisa?
+
+Elisa: Matteo!
+(Elisa läuft zu ihm.)
+Elisa: Du Idiot! Weißt du, wie lange ich dich gesucht habe?!
+
+Matteo: Ich war die ganze Zeit da. Ich habe alles gesehen.
+Matteo: Ich konnte nur nichts davon wollen.
+Matteo: Schwesterchen, es tut mir...
+
+Elisa: Nenn mich nicht so.
+Elisa: ...Doch. Nenn mich so.
+
+Nexus: Rührend. Wirklich.
+Nexus: Monsieur Matteo. Sie sind jetzt frei. Niemand lenkt Ihre Hand.
+Nexus: Deshalb frage ich Sie und nicht die Brille.
+Nexus: Legen Sie den Hebel um.
+
+Matteo: Warum sollte ich?
+
+Nexus: Weil der Chef zurückkehrt. Mit Ihrer Hilfe oder ohne sie.
+Nexus: Ohne sie dauert es länger. Und er wird sich merken, wer im Weg stand.
+Nexus: Mit ihr gebe ich Ihnen mein Wort: Ihrer Schwester geschieht nichts.
+Nexus: Ich breche viele Regeln. Mein Wort gehört nicht dazu.
+
+Elisa: Hör nicht auf ihn! Wir sind zu dritt, wir schaffen das!
+Elisa: \PN hat ihn gerade besiegt!
+
+Matteo: Und was hat es geändert?
+Matteo: ...
+Matteo: Aeon hat mich etwas gefragt, damals bei dem Kaguron.
+Matteo: Ob sich je etwas ändert, wenn ihr gewinnt.
+Matteo: Ich wusste keine Antwort. Ich weiß sie immer noch nicht.
+
+Elisa: Matteo...
+
+Matteo: Aber eines weiß ich.
+Matteo: Ich bin jedes Mal zu spät gekommen. Diesmal nicht.
+
+(Matteo geht zum Pult. Elisa hält ihn am Arm fest. Er löst ihre Hand.)
+
+Elisa: Du hast gesagt, Pokémon sind keine Ersatzteile!
+Elisa: Weißt du, was die da durch diese Tore zerren?!
+
+Matteo: Ja.
+Matteo: Und ich tue es trotzdem. Diesmal bin ich es selbst.
+
+(Matteo legt den Hebel um.)
+
+Nexus: Voilà.
+Nexus: Sehen Sie, \PN? Ich habe ihm die Freiheit gegeben.
+Nexus: Und er hat genau das getan, was die Ursachen verlangen.
+
+
+--------------------------------------------------------------------------
+4. DIALGA UND PALKIA
+--------------------------------------------------------------------------
+(Beben. Beide Tore reißen auf. Dialga und Palkia werden hindurchgezogen
+ und von den Vorrichtungen gepackt – dieselbe Bauart wie bei den Pampross
+ im Kraftwerk, nur riesig. Beide brüllen. Die Tore beginnen, ineinander
+ zu fließen.)
+
+    [Schreie von Dialga und Palkia, Bildschirm flackert]
+
+Elisa: Das sind... Dialga und Palkia. Die sehen aus wie die Pampross.
+Elisa: Die hängen da drin wie Batterien!
+
+(Zwischen den Toren entsteht ein dritter Riss. Eine Gestalt tritt heraus.
+ Nexus verbeugt sich. Matteo sieht zu Boden.)
+
+
+--------------------------------------------------------------------------
+5. DER CHEF
+--------------------------------------------------------------------------
+Namensfeld bis zur späteren Enthüllung: ???
+
+???: ...
+???: Dieselbe Höhle. Derselbe Tropfen dort an der Decke.
+???: \v[181], \v[183] Uhr.
+???: Es hat sich nichts verändert. Es verändert sich nie etwas.
+
+    (Die echte Uhrzeit des Computers, ganz beiläufig. Hier fällt sie niemandem
+     auf. Im Finale merkt der Spieler rückblickend, dass er das schon konnte.
+     Vorher im Event: Script: chronoria_meta_data(181))
+
+Nexus: Willkommen zurück, Chef. Alles ist vorbereitet, wie ver...
+
+???: Ich weiß, was vorbereitet ist.
+???: Trainer Nummer \v[180].
+???: Ich muss mich bei Ihnen bedanken.
+???: Sie haben die Schalter umgelegt. Sie haben den Weg hierher freigeräumt.
+???: Sie tun immer genau das, was man von Ihnen erwartet.
+
+Elisa: Sein Name ist \PN!
+
+???: Namen sind austauschbar. Die Nummer nicht.
+???: Ich kenne Sie, Nummer \v[180]. Besser, als Sie sich selbst kennen.
+???: Ich weiß, welches Pokémon Sie am ersten Tag wählen wollten.
+???: Ich weiß, wie viele Orden Sie tragen. Und wie viele Sie noch holen.
+???: Ich weiß, wie das hier endet.
+???: Sie gewinnen.
+???: Am Ende gewinnen Sie immer.
+
+(Pause.)
+
+???: Deshalb werde ich nicht gegen Sie kämpfen.
+???: Das habe ich bereits versucht.
+???: Man besiegt nicht, was man entfernen kann.
+
+(Der Chef sieht zum Team des Spielers.)
+
+???: Nur eines stimmt nicht mit der Rechnung überein.
+???: Ihre Pokémon. Es sind Werte. Zahlen in einer Reihe.
+???: Die hier (er deutet auf Dialga und Palkia) brauchen Ketten.
+???: Ihre nicht. Sie könnten gehen. Niemand hält sie.
+???: Warum bleiben sie?
+
+(Keine Antwort. Lange Pause.)
+
+???: Das dachte ich mir. Sie wissen es selbst nicht.
+???: Dann spielt es keine Rolle.
+
+
+--------------------------------------------------------------------------
+6. DER CHEF ÜBERSCHREIBT – NEXUS VERLIERT DIE KONTROLLE
+--------------------------------------------------------------------------
+(Der Chef hebt die Hand. Dialga und Palkia verstummen. Ihre Augen werden
+ leer – Crypto-Effekt. Die Vorrichtungen öffnen sich: Sie brauchen keine
+ Ketten mehr.)
+
+Elisa: Er hat sie... verschlossen. Einfach so.
+
+Nexus: Chef. Das... war nicht die vereinbarte Wirkung.
+Nexus: Die beiden sollten das Tor halten. Mehr nicht.
+
+???: Nein, Nexus. Das war die Ursache.
+???: Die Wirkung kommt jetzt.
+
+(Der Chef dreht sich zu Matteo.)
+
+???: Und Sie. Ohne Brille.
+    (Wait 30 frames. Er mustert Matteo.)
+???: Gleichgültig. Der Hebel ist umgelegt. Das Ergebnis ist dasselbe.
+???: Bleiben Sie, wo Sie sind.
+
+    (Er bemerkt die fehlende Brille, hakt sie aber ab: Am Ergebnis hat sie
+     nichts geändert. Der Hebel wäre so oder so umgelegt worden.)
+
+    (Der Chef will an dieser Stelle nur den Spieler verbannen.)
+
+
+--------------------------------------------------------------------------
+7. (OPTIONAL) MARVIN
+--------------------------------------------------------------------------
+(Die Lichter der Anlage flackern, die Maschinen fahren herunter.
+ Marvin hat in Noxburgh die Leitung gekappt.)
+
+Nexus: Die Zufuhr. Jemand hat die Leitung getrennt.
+
+???: Zu spät. Ich bin bereits hier.
+???: Aber es genügt nur noch für einen Sprung.
+
+    (Zweck: erklärt, warum der Chef das nicht beliebig wiederholen kann
+     und warum er danach nicht sofort die ganze Region überrennt.)
+
+
+--------------------------------------------------------------------------
+8. DIE VERBANNUNG
+--------------------------------------------------------------------------
+(Dialga und Palkia wenden sich \PN zu.)
+
+???: Leben Sie wohl, Nummer \v[180].
+
+(Matteo läuft los und stellt sich vor \PN. Ausrufezeichen-Blase bei Elisa.)
+
+Matteo: Nein!
+Matteo: Das war nicht abgemacht! Nur der Hebel, mehr nicht!
+
+    (Wait 40 frames. Der Chef senkt die Hand ein Stück.)
+
+???: ...
+???: Das war beim letzten Mal anders.
+
+    (WICHTIG: Der einzige Moment, in dem der Chef stockt. Er kennt nur, was
+     geschrieben steht. Dass sich jemand vor den Spieler stellt, steht
+     nirgends. Erster Hinweis, dass er das Skript kennt, nicht die Entscheidungen.)
+
+???: Zweimal entschieden. Zweimal anders.
+???: Wer das einmal tut, tut es wieder. Ich kann keine Abweichung gebrauchen.
+???: Dann gehen Sie mit.
+
+Nexus: Chef, ich habe ihm zugesichert...
+
+???: Sie haben ihm die Schwester zugesichert. Von ihm selbst war nie die Rede.
+???: Halten Sie Ihr Wort, Nexus. Ich halte Sie nicht auf.
+
+(Elisa rennt auf die beiden zu.)
+
+Elisa: Nein! Dann mich auch!
+
+(Nexus zieht Elisa zur Seite, aus dem Wirkungsbereich.)
+
+Nexus: Non, Mademoiselle. Sie bleiben.
+Nexus: Ich habe es versprochen.
+
+Elisa: Lassen Sie mich los! MATTEO!
+
+Matteo: \PN. Es tut mir leid. Ich dachte, ich hätte keine Wahl.
+Matteo: Ich hatte sie. Das ist das Schlimme daran.
+Matteo: Elisa!
+Matteo: Pass auf dich auf.
+Matteo: Man sieht sich, Schwesterchen.
+
+???: Diesmal gibt es keinen nächsten Versuch.
+
+    [Schrei von Dialga und Palkia, weißer Bildschirm, Stille]
+    [Ortswechsel: \PN an den Verbannungsort]
+
+(Zurück bleibt, falls du noch einen Schlussblick zeigen willst:)
+
+Elisa: ...
+Nexus: Ich habe mein Wort gehalten, Mademoiselle.
+Nexus: Merken Sie sich das. Es unterscheidet mich von ihm.
+(Nexus sieht dem Chef nach. Er wirkt zum ersten Mal unsicher.)
+
+
+==========================================================================
+ WAS DIE SZENE FÜR SPÄTER ANLEGT
+==========================================================================
+- "Warum bleiben sie?"            -> bleibt unbeantwortet. Antwort im Finale,
+                                     am besten durch die Pokémon, nicht in Worten.
+- "Das war beim letzten Mal anders" -> sein Wissen ist nicht das, wofür er es hält.
+- "Trainer Nummer ..."            -> im Finale nennt er zum ersten Mal den Namen.
+- Der Chef verbannt den Spieler so, wie Celebi ihn verbannt hat (nur Hintergrund,
+  wird in der Szene nicht erwähnt).
+                                  -> Er ist selbst zurückgekommen, also geht es auch.
+- Nexus hält sein Wort, der Chef bricht den Sinn der Abmachung.
+                                  -> Riss zwischen den beiden, später nutzbar.
+- Matteo ist mit dem Spieler verbannt, ohne Brille, mit seinen Zweifeln.
+                                  -> Am Verbannungsort kann er die Antwort finden,
+                                     die er Aeon nicht geben konnte.
+- Elisa bleibt allein zurück und weiß, dass ihr Bruder es freiwillig getan hat.

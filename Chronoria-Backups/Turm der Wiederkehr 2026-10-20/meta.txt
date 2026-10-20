@@ -1,0 +1,87 @@
+Name = Chronoria Battle Fixes
+Version = 1.9.0
+Essentials = 21.1
+Requires = Generation 9 Pack,3.3.3
+Requires = Deluxe Battle Kit,1.3.1
+Requires = Ultra Beast Ball Lock,1.0
+Requires = [DBK] Raid Battles,2.0
+Credits = Chronoria Dev Team
+
+# Change logs
+#############################################
+# 1.9.0
+#############################################
+# - Neu: [010] Raid Rewards.rb. EP-Bonbons und Sonderbonbons in kleineren
+#   Mengen je Rang (ChronoriaRaidRewards::CANDY_TABLE). Minzen, Kronkorken,
+#   Level-/Sympaball und TRs aus der Belohnungsliste entfernt (gibt es im
+#   Spiel nicht). Bonus-Loot (RaidLoot) stuerzt nicht mehr ab.
+#############################################
+# 1.8.0
+#############################################
+# - Neu: [009] Raid Den Graphics.rb. Normale Raid-Hoehlen koennen die
+#   Grafiken der Max-, Ultra- und Tera-Hoehlen nutzen, ohne deren Mechanik:
+#   Eventname BasicRaidDen2 (Max), BasicRaidDen3 (Ultra), BasicRaidDen4 (Tera).
+# - Raid-Hoehlen drehen sich beim Ansprechen nicht mehr zum Spieler (die
+#   Richtung ist ihr Zustand) - kein kurzes Flackern mehr.
+#############################################
+# 1.7.0
+#############################################
+# - Neu: [007] Event Timer Guard.rb. Absturz "undefined method `to_i' for
+#   Hash" in expiredDays? behoben: Steht in der Event-Variable eines Events
+#   mit Zeit-Seiten (cooledDownDays?) noch ein Raid-Datensatz, gilt die
+#   Wartezeit als abgelaufen statt das Spiel abstuerzen zu lassen.
+# - Neu: [008] Raid Den Memory.rb. Raid-Hoehlen speichern ihr Pokemon als
+#   Hash, pbRaidDen erwartete ein Array und wuerfelte deshalb bei jedem
+#   Besuch neu. Jetzt bleibt das Pokemon bis zum Sieg oder Tageswechsel.
+#############################################
+# 1.6.0
+#############################################
+# - [006] Raid Pool.rb: 20 feste Raid-Hoehlen mit je eigenem Rang und 20
+#   eigenen Pokemon (4 Hoehlen je Rang 1-5). Event-Befehl
+#   chronoria_raid_den(1) bis chronoria_raid_den(20).
+# - [004] Raid Explicit Species.rb: ausdruecklich genannte Formen ohne eigene
+#   RaidRanks (z. B. :BULBASAUR_1) fallen nicht mehr auf Form 0 zurueck.
+#############################################
+# 1.5.0
+#############################################
+# - Neu: [006] Raid Pool.rb. Event-Befehl chronoria_raid_den fuer die verteilten
+#   Raid-Hoehlen: zieht aus 20 ausgewaehlten Pokemon, Rang nach Orden.
+#############################################
+# 1.4.0
+#############################################
+# - Neu: [005] Raid Rank By Badges.rb. Eigene Staffelung fuer zufaellige
+#   Raid-Hoehlen: 0-1 Orden Rang 1, 2-3 Orden Rang 1-3, 4-6 Orden Rang 2-4,
+#   ab 7 Orden Rang 3-5. Einstellbar in ChronoriaRaidRanks::RANKS_BY_BADGES.
+#############################################
+# 1.3.0
+#############################################
+# - Neu: [004] Raid Explicit Species.rb. Ein Raid mit ausdruecklich genannter
+#   Art (RaidBattle.start(:DARKRAI, ...)) funktioniert auch, wenn die Art keinen
+#   Raid-Rang hat. Ohne das ersetzt das Raid-Plugin sie durch Ditto.
+#   Hintergrund: Ultrabestien und viele Legendaere haben keinen Rang mehr, damit
+#   sie nie zufaellig in einer Hoehle erscheinen.
+# - Requires [DBK] Raid Battles (Ladereihenfolge).
+#############################################
+# 1.2.0
+#############################################
+# - Neu: [003] Wild Fled Trigger.rb. Kampfskript-Ausloeser "WildFled" (auch
+#   "WildFled_ART"), wenn ein wildes Pokemon den Kampf verlaesst und noch
+#   andere Gegner uebrig sind. Der Honweisel-Kampf endet damit auch dann
+#   sofort, wenn der Spieler "Nicht fangen" waehlt.
+#############################################
+# 1.1.0
+#############################################
+# - Neu: [002] Midbattle Self Switch.rb. Kampfskript-Befehl "selfSwitch", der
+#   einen Self Switch des Events einschaltet, das den Kampf gestartet hat.
+#   Genutzt vom Honweisel-Kampf (KOENIGIN_HONWEISEL), in dem echte Wadribie
+#   dazukommen und das Kampfergebnis allein nicht mehr sagt, ob Honweisel
+#   gefangen wurde.
+#############################################
+# 1.0.0
+#############################################
+# - DBK-Fangregeln wirkten nicht: alwaysCapture, neverCapture und die
+#   Fangchance von raidStyleCapture. DBK aendert pbCaptureCalc nur im Modul
+#   Battle::CatchAndStoreMixin, das Gen-9-Pack (laedt vorher) ersetzt die
+#   Methode aber in der Klasse Battle mit einem Alias auf die Originalversion.
+#   Dadurch wurde DBKs Version nie aufgerufen.
+#   Jetzt wird @captureSuccess ganz vorne in Battle#pbCaptureCalc geprueft.

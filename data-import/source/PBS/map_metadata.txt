@@ -1033,6 +1033,7 @@ Outdoor = true
 ShowArea = true
 MapPosition = 0,19,7
 SnapEdges = true
+BattleBack = field
 Flags = Levels
 #-------------------------------
 [163]   # Spheal-Life
@@ -1146,6 +1147,7 @@ ShowArea = true
 HealingSpot = 177,10,7
 MapPosition = 0,18,7
 SnapEdges = true
+BattleBack = tonishi
 Flags = Levels
 #-------------------------------
 [178]   # Arena 4
@@ -1349,22 +1351,29 @@ BattleBack = cave1
 WildBattleBGM = Battle! (Wild Pokémon)_10
 Flags = Levels,ShowFollowingPkmn
 #-------------------------------
-[200]   # Hafen/Strand
-Name = Hafen/Strand
-MapPosition = 0,12,8
+[200]   # Turm der Wiederkehr
+Name = Turm der Wiederkehr
+ShowArea = true
+MapPosition = 0,18,7
+SnapEdges = true
 #-------------------------------
-[201]   # Nicht verwendet Eis-Puzzle
-Name = Nicht verwendet Eis-Puzzle
-MapPosition = 0,12,8
+[201]   # Turm der Wiederkehr
+Name = Turm der Wiederkehr
+ShowArea = true
+MapPosition = 0,18,7
+SnapEdges = true
 #-------------------------------
-[202]   # Nicht verwendet Teleport-Puzzle
-Name = Nicht verwendet Teleport-Puzzle
-MapPosition = 0,12,8
+[202]   # Turm der Wiederkehr
+Name = Turm der Wiederkehr
+ShowArea = true
+MapPosition = 0,18,7
+SnapEdges = true
 #-------------------------------
-[203]   # Nicht verwendet Test Map leuchtende Kristalle
-Name = MAP203
-MapPosition = 0,12,8
-DarkMap = true
+[203]   # Turm der Wiederkehr
+Name = Turm der Wiederkehr
+ShowArea = true
+MapPosition = 0,18,7
+SnapEdges = true
 #-------------------------------
 [204]   # Aufzug
 Name = Lunafeld Arena
@@ -1414,13 +1423,16 @@ BattleBack = cave1
 Environment = Cave
 Flags = Levels,ShowFollowingPkmn
 #-------------------------------
-[210]   # Nicht verwendet
-Name = Nicht verwendet
-MapPosition = 0,12,8
+[210]   # Turm der Wiederkehr
+Name = Turm der Wiederkehr
+ShowArea = true
+MapPosition = 0,18,7
+SnapEdges = true
 #-------------------------------
 [211]   # Solhaven
 Name = Solhaven
 MapPosition = 0,11,8
+BattleBack = indoor
 #-------------------------------
 [212]   # Solhaven
 Name = Solhaven
@@ -1516,7 +1528,7 @@ ShowArea = true
 Weather = Snow,50
 MapPosition = 0,7,6
 SnapEdges = true
-BattleBack = snowy
+BattleBack = snow
 WildBattleBGM = Battle! (Wild Pokémon)_9
 WildVictoryBGM = Victory! (Wild Pokemon)_9
 Environment = Snow
@@ -1526,6 +1538,7 @@ Flags = Levels
 Name = Solhaven Arena
 MapPosition = 0,11,8
 SnapEdges = true
+BattleBack = gym3
 #-------------------------------
 [233]   # Route 5 (Tropius)
 Name = Route 5
@@ -1702,7 +1715,7 @@ Outdoor = true
 ShowArea = true
 MapPosition = 0,5,6
 SnapEdges = true
-BattleBack = snowy
+BattleBack = snow
 WildBattleBGM = Battle! (Wild Pokémon)_9
 WildVictoryBGM = Victory! (Wild Pokemon)_9
 Environment = Snow
@@ -1853,7 +1866,7 @@ WildBattleBGM = Battle! (Wild Pokémon)_9
 Environment = Forest
 Flags = Levels
 #-------------------------------
-[276]   # Wüste
+[276]
 Name = Wüste
 MapPosition = 0,12,8
 #-------------------------------
@@ -1963,47 +1976,47 @@ Name = Vermächtnis des Codes
 MapPosition = 0,1,18
 SnapEdges = true
 #-------------------------------
-[294]   # Hotel Klefki
+[294]
 Name = Azumaris
 MapPosition = 0,2,12
 #-------------------------------
-[295]   # Hotel Klefki P1
+[295]
 Name = Azumaris
 MapPosition = 0,2,12
 #-------------------------------
-[296]   # Zimmer
+[296]
 Name = Azumaris
 MapPosition = 0,2,12
 #-------------------------------
-[297]   # Zimmer
+[297]
 Name = Azumaris
 MapPosition = 0,2,12
 #-------------------------------
-[298]   # Zimmer
+[298]
 Name = Azumaris
 MapPosition = 0,2,12
 #-------------------------------
-[299]   # Zimmer
+[299]
 Name = Azumaris
 MapPosition = 0,2,12
 #-------------------------------
-[300]   # Hotel Klefki P2
+[300]
 Name = Azumaris
 MapPosition = 0,2,12
 #-------------------------------
-[301]   # Zimmer
+[301]
 Name = Azumaris
 MapPosition = 0,2,12
 #-------------------------------
-[302]   # Zimmer
+[302]
 Name = Azumaris
 MapPosition = 0,2,12
 #-------------------------------
-[303]   # Zimmer
+[303]
 Name = Azumaris
 MapPosition = 0,2,12
 #-------------------------------
-[304]   # Zimmer
+[304]
 Name = Azumaris
 MapPosition = 0,2,12
 #-------------------------------
@@ -2021,6 +2034,7 @@ Name = Lucenhöhle
 ShowArea = true
 MapPosition = 0,19,7
 SnapEdges = true
+BattleBack = cave7
 #-------------------------------
 [307]   # Lucenhöhle
 Name = Lucenhöhle
@@ -2028,6 +2042,7 @@ ShowArea = true
 MapPosition = 0,19,7
 DarkMap = true
 SnapEdges = true
+BattleBack = cave7
 #-------------------------------
 [308]   # Rätsel-Haus
 Name = Route 5
@@ -2062,141 +2077,6 @@ SnapEdges = true
 WildBattleBGM = Battle! (Wild Pokémon)_5
 WildVictoryBGM = Victory! (Wild Pokemon)_4
 Environment = Forest
-Flags = Levels
-#-------------------------------
-[711]   # MAP711
-Name = Bienenstock
-MapPosition = 0,9,10
-SnapEdges = true
-BattleBack = honig
-WildBattleBGM = Battle! (Wild Pokémon)_5
-WildVictoryBGM = Victory! (Wild Pokemon)_4
-Flags = Levels
-#-------------------------------
-[712]   # MAP712
-Name = Bienenstock
-MapPosition = 0,9,10
-SnapEdges = true
-BattleBack = honig
-WildBattleBGM = Battle! (Wild Pokémon)_5
-WildVictoryBGM = Victory! (Wild Pokemon)_4
-Flags = Levels
-#-------------------------------
-[713]   # MAP714
-Name = Bienenstock
-MapPosition = 0,9,10
-SnapEdges = true
-BattleBack = honig
-WildBattleBGM = Battle! (Wild Pokémon)_5
-WildVictoryBGM = Victory! (Wild Pokemon)_4
-Flags = Levels
-#-------------------------------
-[714]   # MAP714
-Name = Bienenstock
-MapPosition = 0,9,10
-SnapEdges = true
-BattleBack = honig
-WildBattleBGM = Battle! (Wild Pokémon)_5
-WildVictoryBGM = Victory! (Wild Pokemon)_4
-Flags = Levels
-#-------------------------------
-[715]   # MAP715
-Name = Bienenstock
-MapPosition = 0,9,10
-SnapEdges = true
-BattleBack = honig
-WildBattleBGM = Battle! (Wild Pokémon)_5
-WildVictoryBGM = Victory! (Wild Pokemon)_4
-Flags = Levels
-#-------------------------------
-[716]   # MAP716
-Name = Bienenstock
-MapPosition = 0,9,10
-SnapEdges = true
-BattleBack = honig
-WildBattleBGM = Battle! (Wild Pokémon)_5
-WildVictoryBGM = Victory! (Wild Pokemon)_4
-Flags = Levels
-#-------------------------------
-[717]   # MAP717
-Name = Bienenstock
-MapPosition = 0,9,10
-SnapEdges = true
-BattleBack = honig
-WildBattleBGM = Battle! (Wild Pokémon)_5
-WildVictoryBGM = Victory! (Wild Pokemon)_4
-Flags = Levels
-#-------------------------------
-[718]   # MAP718
-Name = Bienenstock
-MapPosition = 0,9,10
-SnapEdges = true
-BattleBack = honig
-WildBattleBGM = Battle! (Wild Pokémon)_5
-WildVictoryBGM = Victory! (Wild Pokemon)_4
-Flags = Levels
-#-------------------------------
-[719]   # MAP719
-Name = Bienenstock
-MapPosition = 0,9,10
-SnapEdges = true
-BattleBack = honig
-WildBattleBGM = Battle! (Wild Pokémon)_5
-WildVictoryBGM = Victory! (Wild Pokemon)_4
-Flags = Levels
-#-------------------------------
-[720]   # MAP720
-Name = Bienenstock
-MapPosition = 0,9,10
-SnapEdges = true
-BattleBack = honig
-WildBattleBGM = Battle! (Wild Pokémon)_5
-WildVictoryBGM = Victory! (Wild Pokemon)_4
-Flags = Levels
-#-------------------------------
-[721]   # MAP721
-Name = Bienenstock
-MapPosition = 0,9,10
-SnapEdges = true
-BattleBack = honig
-WildBattleBGM = Battle! (Wild Pokémon)_5
-WildVictoryBGM = Victory! (Wild Pokemon)_4
-Flags = Levels
-#-------------------------------
-[722]   # MAP722
-Name = Bienenstock
-MapPosition = 0,9,10
-SnapEdges = true
-BattleBack = honig
-WildBattleBGM = Battle! (Wild Pokémon)_5
-WildVictoryBGM = Victory! (Wild Pokemon)_4
-Flags = Levels
-#-------------------------------
-[723]   # MAP723
-Name = Bienenstock
-MapPosition = 0,9,10
-SnapEdges = true
-BattleBack = honig
-WildBattleBGM = Battle! (Wild Pokémon)_5
-WildVictoryBGM = Victory! (Wild Pokemon)_4
-Flags = Levels
-#-------------------------------
-[724]   # MAP724
-Name = Bienenstock
-MapPosition = 0,9,10
-SnapEdges = true
-BattleBack = honig
-WildBattleBGM = Battle! (Wild Pokémon)_5
-WildVictoryBGM = Victory! (Wild Pokemon)_4
-Flags = Levels
-#-------------------------------
-[725]   # MAP725
-Name = Saal der Königin
-MapPosition = 0,9,10
-SnapEdges = true
-BattleBack = honig
-WildBattleBGM = Battle! (Wild Pokémon)_5
-WildVictoryBGM = Victory! (Wild Pokemon)_4
 Flags = Levels
 #-------------------------------
 [314]   # Spiegelräume
@@ -2276,27 +2156,27 @@ MapPosition = 0,3,10
 Name = Sender
 MapPosition = 0,11,10
 #-------------------------------
-[331]   # Sender 1OG
+[331]
 Name = Sender 1OG
 MapPosition = 0,11,10
 #-------------------------------
-[332]   # Sender 2OG
+[332]
 Name = Sender 2OG
 MapPosition = 0,11,10
 #-------------------------------
-[333]   # Sender 3OG
+[333]
 Name = Sender 3OG
 MapPosition = 0,11,10
 #-------------------------------
-[334]   # Sender 4OG
+[334]
 Name = Sender 4OG
 MapPosition = 0,11,10
 #-------------------------------
-[335]   # Sender 5OG
+[335]
 Name = Sender 5OG
 MapPosition = 0,11,10
 #-------------------------------
-[336]   # Aufzug EG
+[336]
 Name = Aufzug EG
 MapPosition = 0,11,10
 #-------------------------------
@@ -2344,19 +2224,19 @@ WildVictoryBGM = Victory! (Wild Pokemon)_9
 Environment = Forest
 Flags = Levels
 #-------------------------------
-[343]   # RADiO/TV OG2
+[343]
 Name = RADiO/TV OG2
 MapPosition = 0,11,10
 #-------------------------------
-[344]   # RADiO/TV OG3
+[344]
 Name = RADiO/TV OG3
 MapPosition = 0,11,10
 #-------------------------------
-[345]   # RADiO/TV OG4
+[345]
 Name = RADiO/TV OG4
 MapPosition = 0,11,10
 #-------------------------------
-[346]   # RADiO/TV OG5
+[346]
 Name = RADiO/TV OG5
 MapPosition = 0,11,10
 #-------------------------------
@@ -2990,6 +2870,7 @@ Name = Kanalisation
 ShowArea = true
 MapPosition = 0,15,5
 SnapEdges = true
+BattleBack = brunnen
 Flags = Levels
 #-------------------------------
 [434]   # MAP434
@@ -2997,6 +2878,7 @@ Name = Kanalisation
 ShowArea = true
 MapPosition = 0,15,5
 SnapEdges = true
+BattleBack = brunnen
 Flags = Levels
 #-------------------------------
 [435]   # Mooswind-Kaverne
@@ -3296,7 +3178,7 @@ ShowArea = true
 MapPosition = 0,12,1
 SnapEdges = true
 #-------------------------------
-[463]   # MAP463
+[463]
 Name = Knowhere
 ShowArea = true
 MapPosition = 0,11,9
@@ -3379,6 +3261,7 @@ ShowArea = true
 MapPosition = 0,19,7
 DarkMap = true
 SnapEdges = true
+BattleBack = cave7
 #-------------------------------
 [473]   # Lucenhöhle
 Name = Lucenhöhle
@@ -3467,12 +3350,14 @@ Name = Turm der Wiederkehr
 ShowArea = true
 MapPosition = 0,18,7
 SnapEdges = true
+BattleBack = tdw
 #-------------------------------
 [487]   # Turm der Wiederkehr
 Name = Turm der Wiederkehr
 MapPosition = 0,18,7
 DarkMap = true
 SnapEdges = true
+BattleBack = tdw
 Flags = Levels
 #-------------------------------
 [488]   # Turm der Wiederkehr
@@ -3480,6 +3365,7 @@ Name = Turm der Wiederkehr
 MapPosition = 0,18,7
 DarkMap = true
 SnapEdges = true
+BattleBack = tdw
 Flags = Levels
 #-------------------------------
 [489]   # Turm der Wiederkehr
@@ -3487,6 +3373,7 @@ Name = Turm der Wiederkehr
 MapPosition = 0,18,7
 DarkMap = true
 SnapEdges = true
+BattleBack = tdw
 Flags = Levels
 #-------------------------------
 [490]   # Dojo
@@ -4118,6 +4005,7 @@ Name = Tao
 ShowArea = true
 MapPosition = 0,20,6
 SnapEdges = true
+BattleBack = frozen
 Flags = Levels
 #-------------------------------
 [568]   # Pokécenter
@@ -4142,6 +4030,15 @@ SnapEdges = true
 Name = Mansion
 MapPosition = 0,22,9
 SnapEdges = true
+#-------------------------------
+[584]   # Kernkammer
+Name = Kernkammer
+ShowArea = true
+MapPosition = 0,20,7
+SnapEdges = true
+BattleBack = cave3
+Environment = Cave
+Flags = Levels
 #-------------------------------
 [601]   # Klartrug Arena
 Name = Morastia Arena
@@ -4188,6 +4085,7 @@ Name = Tao
 ShowArea = true
 MapPosition = 0,20,6
 SnapEdges = true
+BattleBack = frozen
 Flags = Levels
 #-------------------------------
 [607]   # MAP607
@@ -4351,6 +4249,11 @@ DarkMap = true
 SnapEdges = true
 BattleBack = cave7
 #-------------------------------
+[629]   # Hohlfels
+Name = Hohlfels
+ShowArea = true
+BattleBack = cave3
+#-------------------------------
 [630]   # Reliktstein
 Name = Relikt-Stein
 ShowArea = true
@@ -4363,6 +4266,7 @@ Outdoor = true
 ShowArea = true
 MapPosition = 0,16,5
 SnapEdges = true
+BattleBack = dracheninsel
 Flags = Levels
 #-------------------------------
 [632]   # Pfad der Drachen
@@ -4371,6 +4275,7 @@ Outdoor = true
 ShowArea = true
 MapPosition = 0,16,4
 SnapEdges = true
+BattleBack = dracheninsel
 Flags = Levels
 #-------------------------------
 [633]   # Tonishi
@@ -4408,6 +4313,7 @@ ShowArea = true
 Weather = Snow,100
 MapPosition = 0,15,5
 SnapEdges = true
+BattleBack = arena7
 #-------------------------------
 [643]   # Arena
 Name = Arena
@@ -4415,6 +4321,7 @@ ShowArea = true
 Weather = Snow,100
 MapPosition = 0,15,5
 SnapEdges = true
+BattleBack = arena7
 #-------------------------------
 [644]   # Arena
 Name = Arena
@@ -4422,6 +4329,7 @@ ShowArea = true
 Weather = Snow,100
 MapPosition = 0,15,5
 SnapEdges = true
+BattleBack = arena7
 #-------------------------------
 [645]   # Arena
 Name = Arena
@@ -4429,6 +4337,7 @@ ShowArea = true
 Weather = Snow,100
 MapPosition = 0,15,5
 SnapEdges = true
+BattleBack = arena7
 #-------------------------------
 [646]   # Route 19
 Name = Route 19
@@ -4436,6 +4345,7 @@ Outdoor = true
 ShowArea = true
 MapPosition = 0,15,6
 SnapEdges = true
+BattleBack = field2
 Flags = Levels
 #-------------------------------
 [647]   # Route 19
@@ -4444,6 +4354,7 @@ Outdoor = true
 ShowArea = true
 MapPosition = 0,16,6
 SnapEdges = true
+BattleBack = field2
 Flags = Levels
 #-------------------------------
 [648]   # Route 18
@@ -4452,6 +4363,7 @@ Outdoor = true
 ShowArea = true
 MapPosition = 0,16,7
 SnapEdges = true
+BattleBack = wasser
 Flags = Levels
 #-------------------------------
 [649]   # Zwischengebäude
@@ -4464,6 +4376,7 @@ Name = Kanalisation
 ShowArea = true
 MapPosition = 0,15,5
 SnapEdges = true
+BattleBack = brunnen
 Flags = Levels
 #-------------------------------
 [651]   # Route 20
@@ -4472,6 +4385,7 @@ Outdoor = true
 ShowArea = true
 MapPosition = 0,17,4
 SnapEdges = true
+BattleBack = route20
 Flags = Levels
 #-------------------------------
 [653]   # Route 21
@@ -4480,6 +4394,7 @@ Outdoor = true
 ShowArea = true
 MapPosition = 0,17,4
 SnapEdges = true
+BattleBack = desert
 Flags = Levels
 #-------------------------------
 [654]   # Route 21
@@ -4488,6 +4403,7 @@ Outdoor = true
 ShowArea = true
 MapPosition = 0,18,4
 SnapEdges = true
+BattleBack = desert
 Flags = Levels
 #-------------------------------
 [655]   # Route 21
@@ -4496,6 +4412,7 @@ Outdoor = true
 ShowArea = true
 MapPosition = 0,18,5
 SnapEdges = true
+BattleBack = desert
 Flags = Levels
 #-------------------------------
 [656]   # Drachen Mons
@@ -4504,6 +4421,7 @@ Outdoor = true
 ShowArea = true
 MapPosition = 0,18,5
 SnapEdges = true
+BattleBack = draconic
 Flags = Levels
 #-------------------------------
 [657]   # Kraftwerk
@@ -4529,30 +4447,35 @@ Name = Kraftwerk
 ShowArea = true
 MapPosition = 0,15,6
 SnapEdges = true
+BattleBack = industrial
 #-------------------------------
 [661]   # Kraftwerk
 Name = Kraftwerk
 ShowArea = true
 MapPosition = 0,15,6
 SnapEdges = true
+BattleBack = industrial
 #-------------------------------
 [662]   # Kraftwerk
 Name = Kraftwerk
 ShowArea = true
 MapPosition = 0,15,6
 SnapEdges = true
+BattleBack = industrial
 #-------------------------------
 [663]   # Kraftwerk
 Name = Kraftwerk
 ShowArea = true
 MapPosition = 0,15,6
 SnapEdges = true
+BattleBack = industrial
 #-------------------------------
 [664]   # Kraftwerk
 Name = Kraftwerk
 ShowArea = true
 MapPosition = 0,15,6
 SnapEdges = true
+BattleBack = industrial
 #-------------------------------
 [665]   # Kraftwerk
 Name = Kraftwerk
@@ -4594,6 +4517,7 @@ Outdoor = true
 ShowArea = true
 MapPosition = 0,17,5
 SnapEdges = true
+BattleBack = wasser
 Flags = Levels
 #-------------------------------
 [675]   # Webarak-Nest
@@ -4708,3 +4632,148 @@ SnapEdges = true
 [692]   # MAP692
 Name = MAP692
 SnapEdges = true
+#-------------------------------
+[711]   # Bienenstock
+Name = Bienenstock
+MapPosition = 0,9,10
+SnapEdges = true
+BattleBack = honig
+WildBattleBGM = Battle! (Wild Pokémon)_5
+WildVictoryBGM = Victory! (Wild Pokemon)_4
+Flags = Levels
+#-------------------------------
+[712]   # Bienenstock
+Name = Bienenstock
+MapPosition = 0,9,10
+SnapEdges = true
+BattleBack = honig
+WildBattleBGM = Battle! (Wild Pokémon)_5
+WildVictoryBGM = Victory! (Wild Pokemon)_4
+Flags = Levels
+#-------------------------------
+[713]   # Bienenstock
+Name = Bienenstock
+MapPosition = 0,9,10
+SnapEdges = true
+BattleBack = honig
+WildBattleBGM = Battle! (Wild Pokémon)_5
+WildVictoryBGM = Victory! (Wild Pokemon)_4
+Flags = Levels
+#-------------------------------
+[714]   # Bienenstock
+Name = Bienenstock
+MapPosition = 0,9,10
+SnapEdges = true
+BattleBack = honig
+WildBattleBGM = Battle! (Wild Pokémon)_5
+WildVictoryBGM = Victory! (Wild Pokemon)_4
+Flags = Levels
+#-------------------------------
+[715]   # Bienenstock
+Name = Bienenstock
+MapPosition = 0,9,10
+SnapEdges = true
+BattleBack = honig
+WildBattleBGM = Battle! (Wild Pokémon)_5
+WildVictoryBGM = Victory! (Wild Pokemon)_4
+Flags = Levels
+#-------------------------------
+[716]   # Bienenstock
+Name = Bienenstock
+MapPosition = 0,9,10
+SnapEdges = true
+BattleBack = honig
+WildBattleBGM = Battle! (Wild Pokémon)_5
+WildVictoryBGM = Victory! (Wild Pokemon)_4
+Flags = Levels
+#-------------------------------
+[717]   # Bienenstock
+Name = Bienenstock
+MapPosition = 0,9,10
+SnapEdges = true
+BattleBack = honig
+WildBattleBGM = Battle! (Wild Pokémon)_5
+WildVictoryBGM = Victory! (Wild Pokemon)_4
+Flags = Levels
+#-------------------------------
+[718]   # Bienenstock
+Name = Bienenstock
+MapPosition = 0,9,10
+SnapEdges = true
+BattleBack = honig
+WildBattleBGM = Battle! (Wild Pokémon)_5
+WildVictoryBGM = Victory! (Wild Pokemon)_4
+Flags = Levels
+#-------------------------------
+[719]   # Bienenstock
+Name = Bienenstock
+MapPosition = 0,9,10
+SnapEdges = true
+BattleBack = honig
+WildBattleBGM = Battle! (Wild Pokémon)_5
+WildVictoryBGM = Victory! (Wild Pokemon)_4
+Flags = Levels
+#-------------------------------
+[720]   # Bienenstock
+Name = Bienenstock
+MapPosition = 0,9,10
+SnapEdges = true
+BattleBack = honig
+WildBattleBGM = Battle! (Wild Pokémon)_5
+WildVictoryBGM = Victory! (Wild Pokemon)_4
+Flags = Levels
+#-------------------------------
+[721]   # Bienenstock
+Name = Bienenstock
+MapPosition = 0,9,10
+SnapEdges = true
+BattleBack = honig
+WildBattleBGM = Battle! (Wild Pokémon)_5
+WildVictoryBGM = Victory! (Wild Pokemon)_4
+Flags = Levels
+#-------------------------------
+[722]   # Bienenstock
+Name = Bienenstock
+MapPosition = 0,9,10
+SnapEdges = true
+BattleBack = honig
+WildBattleBGM = Battle! (Wild Pokémon)_5
+WildVictoryBGM = Victory! (Wild Pokemon)_4
+Flags = Levels
+#-------------------------------
+[723]   # Bienenstock
+Name = Bienenstock
+MapPosition = 0,9,10
+SnapEdges = true
+BattleBack = honig
+WildBattleBGM = Battle! (Wild Pokémon)_5
+WildVictoryBGM = Victory! (Wild Pokemon)_4
+Flags = Levels
+#-------------------------------
+[724]   # Bienenstock
+Name = Bienenstock
+MapPosition = 0,9,10
+SnapEdges = true
+BattleBack = honig
+WildBattleBGM = Battle! (Wild Pokémon)_5
+WildVictoryBGM = Victory! (Wild Pokemon)_4
+Flags = Levels
+#-------------------------------
+[725]   # Saal der Königin
+Name = Saal der Königin
+MapPosition = 0,9,10
+SnapEdges = true
+BattleBack = honig
+WildBattleBGM = Battle! (Wild Pokémon)_5
+WildVictoryBGM = Victory! (Wild Pokemon)_4
+Flags = Levels
+#-------------------------------
+[732]   # Kernkammer
+Name = Kernkammer
+ShowArea = true
+MapPosition = 0,20,7
+DarkMap = true
+SnapEdges = true
+BattleBack = cave3
+Environment = Cave
+Flags = Levels

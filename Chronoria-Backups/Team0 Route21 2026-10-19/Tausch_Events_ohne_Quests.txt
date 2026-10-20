@@ -1,0 +1,193 @@
+==========================================================================
+ TAUSCH-EVENTS 1, 3, 5, 7
+==========================================================================
+Alle vier nach demselben Muster wie Claudias Tausch auf Route 3, nur wird
+das neue Pokémon vorher mit Pokemon.new gebaut. So lassen sich Fähigkeit,
+Attacken, Form, Shiny und Geschlecht festlegen.
+
+Variablen wie bei allen Essentials-Tauschen:
+  Variable 1 = gewähltes Pokémon (-1 = abgebrochen), Variable 2 = sein Name.
+Jedes Event hat 2 Seiten:
+  Seite 1 (keine Bedingung, Aktionstaste)   Angebot und Tausch
+  Seite 2 (Self Switch A, Aktionstaste)     Text nach dem Tausch
+Grafik und Ort wählst du selbst; die Orte unten sind Vorschläge.
+
+Hinweis zu "Script"-Befehlen mit mehreren Zeilen: alles in EINEN
+Script-Befehl schreiben (Zeilenumbruch mit Enter im Script-Fenster).
+
+
+--------------------------------------------------------------------------
+ TAUSCH 1 – Riolu mit Kreuzhieb         Lunafeld, vor Arena 1 (Jil, Unlicht)
+--------------------------------------------------------------------------
+Gesucht: Tragosso (Route 1)          NPC: Kampfsportschüler Tobi
+
+[Seite 1]
+Text: \xn[Kampfsportschüler Tobi]Ich trainiere für die Arena hier. Aber mein Riolu und ich kommen einfach nicht voran.
+Text: \xn[Kampfsportschüler Tobi]Mein Meister meint, mir fehlt die Ruhe. Ein Tragosso würde mir die beibringen, sagt er.
+Text: \xn[Kampfsportschüler Tobi]Hast du ein Tragosso? Ich würde dir dafür mein Riolu geben.
+Text: \xn[Kampfsportschüler Tobi]Es kann Kreuzhieb! Das hat ihm sein Vater beigebracht.
+Show Choices: Tauschen, Nein danke
+  When [Tauschen]
+    Script: pbChoosePokemonForTrade(1, 2, :CUBONE)
+    Conditional Branch: Variable [0001] == -1
+      Text: \xn[Kampfsportschüler Tobi]Kein Tragosso? Schade. Vielleicht findest du eins auf Route 1.
+    Else
+      Script: pkmn = Pokemon.new(:RIOLU, 12)
+              pkmn.ability_index = 0     # Felsenfest
+              pkmn.nature = :ADAMANT
+              pkmn.forget_all_moves
+              pkmn.learn_move(:QUICKATTACK)
+              pkmn.learn_move(:CROSSCHOP)
+              pkmn.learn_move(:COUNTER)
+              pkmn.learn_move(:METALCLAW)
+              pkmn.makeMale
+              pkmn.calc_stats
+      Script: pbStartTrade(pbGet(1), pkmn, _I("Pfote"), _I("Tobi"), 0)
+      Text: \PN tauscht \v[2] gegen Riolu!
+      Text: \xn[Kampfsportschüler Tobi]Danke! Pfote ist vielleicht noch klein, aber sein Kreuzhieb sitzt.
+      Text: \xn[Kampfsportschüler Tobi]Jil kämpft mit Unlicht-Pokémon. Gegen Kampf-Attacken sehen die ganz schön alt aus!
+      Control Self Switch: A = ON
+    Branch End
+  When [Nein danke]
+    Text: \xn[Kampfsportschüler Tobi]Okay... Falls du es dir anders überlegst, ich bin hier.
+Branch End
+
+[Seite 2 – Self Switch A]
+Text: \xn[Kampfsportschüler Tobi]Mein Tragosso ist wirklich ruhig. Ich glaube, ich lerne was von ihm.
+Text: \xn[Kampfsportschüler Tobi]Pass gut auf Pfote auf, ja?
+
+
+--------------------------------------------------------------------------
+ TAUSCH 3 – Dartignis mit Orkanschwingen     Solhaven, vor Arena 3 (Sakura)
+--------------------------------------------------------------------------
+Gesucht: Mähikel (Solhaven)          NPC: Bergbäuerin Hanna
+
+[Seite 1]
+Text: \xn[Bergbäuerin Hanna]Puh, mein Hof liegt ganz oben am Hang. Jeden Tag den ganzen Weg zu Fuß...
+Text: \xn[Bergbäuerin Hanna]Ein Mähikel bräuchte ich! Darauf kann man reiten, und es frisst den Rasen gleich mit.
+Text: \xn[Bergbäuerin Hanna]Hast du eins? Dann bekommst du mein Dartignis.
+Text: \xn[Bergbäuerin Hanna]Das ist nicht irgendeins. Solange es fit ist, ist es mit Flug-Attacken immer zuerst dran!
+Show Choices: Tauschen, Nein danke
+  When [Tauschen]
+    Script: pbChoosePokemonForTrade(1, 2, :SKIDDO)
+    Conditional Branch: Variable [0001] == -1
+      Text: \xn[Bergbäuerin Hanna]Kein Mähikel dabei? Die grasen hier überall in der Gegend.
+    Else
+      Script: pkmn = Pokemon.new(:FLETCHINDER, 26)
+              pkmn.ability_index = 2     # versteckt: Orkanschwingen
+              pkmn.nature = :JOLLY
+              pkmn.forget_all_moves
+              pkmn.learn_move(:ACROBATICS)
+              pkmn.learn_move(:FLAMECHARGE)
+              pkmn.learn_move(:QUICKATTACK)
+              pkmn.learn_move(:DEFOG)        # Ei-Attacke Auflockern
+              pkmn.makeFemale
+              pkmn.calc_stats
+      Script: pbStartTrade(pbGet(1), pkmn, _I("Windsbraut"), _I("Hanna"), 1)
+      Text: \PN tauscht \v[2] gegen Dartignis!
+      Text: \xn[Bergbäuerin Hanna]Wunderbar! Jetzt komme ich endlich trocken den Berg hoch.
+      Text: \xn[Bergbäuerin Hanna]Windsbraut fliegt dir allen davon. Sakuras Pflanzen-Pokémon mögen weder Feuer noch Flug-Attacken!
+      Control Self Switch: A = ON
+    Branch End
+  When [Nein danke]
+    Text: \xn[Bergbäuerin Hanna]Na gut. Mein Rücken wird es überleben. Irgendwie.
+Branch End
+
+[Seite 2 – Self Switch A]
+Text: \xn[Bergbäuerin Hanna]Mein Mähikel und ich sind schon ein richtiges Team!
+Text: \xn[Bergbäuerin Hanna]Wenn Windsbraut groß ist, wird sie zu Fiaro. Dann fliegt sie erst richtig los.
+
+
+--------------------------------------------------------------------------
+ TAUSCH 5 – Impergator (Jotho) mit Rohe Gewalt   Ariduna, vor Arena 5 (Flint)
+--------------------------------------------------------------------------
+Gesucht: Knacklion (Ariduna, Route 10)     NPC: Minenarbeiter Bruno
+
+[Seite 1]
+Text: \xn[Minenarbeiter Bruno]Die Mine hier ist voller loser Gänge. Wir bräuchten jemanden, der Tunnel gräbt.
+Text: \xn[Minenarbeiter Bruno]Ein Knacklion wär ideal. Die graben Trichter schneller als jeder Bagger.
+Text: \xn[Minenarbeiter Bruno]Ich hab dafür was ganz Besonderes. Ein Impergator, so wie es früher in Jotho gelebt hat.
+Text: \xn[Minenarbeiter Bruno]Es hat Rohe Gewalt. Damit trifft es härter, als es eigentlich dürfte.
+Show Choices: Tauschen, Nein danke
+  When [Tauschen]
+    Script: pbChoosePokemonForTrade(1, 2, :TRAPINCH)
+    Conditional Branch: Variable [0001] == -1
+      Text: \xn[Minenarbeiter Bruno]Kein Knacklion? In der Wüste rund um Ariduna gibt's welche.
+    Else
+      Script: pkmn = Pokemon.new(:FERALIGATR, 44)
+              pkmn.form = 1              # Jotho-Form
+              pkmn.ability_index = 2     # versteckt: Rohe Gewalt
+              pkmn.nature = :ADAMANT
+              pkmn.forget_all_moves
+              pkmn.learn_move(:WATERFALL)
+              pkmn.learn_move(:CRUNCH)
+              pkmn.learn_move(:AQUAJET)       # Ei-Attacke
+              pkmn.learn_move(:ANCIENTPOWER)  # Ei-Attacke
+              pkmn.makeMale
+              pkmn.calc_stats
+      Script: pbStartTrade(pbGet(1), pkmn, _I("Brecher"), _I("Bruno"), 0)
+      Text: \PN tauscht \v[2] gegen Impergator!
+      Text: \xn[Minenarbeiter Bruno]Klasse! Brecher hat mir oft genug den Weg freigebissen.
+      Text: \xn[Minenarbeiter Bruno]Flint setzt auf Feuer und Gestein. Wasser macht beides nass, und Rohe Gewalt den Rest!
+      Control Self Switch: A = ON
+    Branch End
+  When [Nein danke]
+    Text: \xn[Minenarbeiter Bruno]Hm. Dann graben wir eben weiter mit der Schaufel.
+Branch End
+
+[Seite 2 – Self Switch A]
+Text: \xn[Minenarbeiter Bruno]Das Knacklion buddelt schon! In einer Woche haben wir einen neuen Stollen.
+Text: \xn[Minenarbeiter Bruno]Brecher schwimmt übrigens gerne. Lass ihn ab und zu ins Wasser.
+
+
+--------------------------------------------------------------------------
+ TAUSCH 7 – Clavion (Shiny)              Noxburgh, vor Arena 7 (Eira)
+--------------------------------------------------------------------------
+Gesucht: Sniebel (Route 6, Celestia)      NPC: Hotelpage Lio (vom Hotel Klefki)
+
+[Seite 1]
+Text: \xn[Hotelpage Lio]Guten Tag! Ich bin Page im Hotel Klefki in Azumaris. Gerade habe ich Urlaub.
+Text: \xn[Hotelpage Lio]Unser Hotel hat ein Problem: Die Gäste verlieren dauernd ihre Schlüssel im Schnee.
+Text: \xn[Hotelpage Lio]Ein Sniebel findet alles, was glitzert. Hast du eins?
+Text: \xn[Hotelpage Lio]Dafür bekommst du mein Clavion. Es ist... na ja. Es glänzt ein bisschen anders als die anderen.
+Show Choices: Tauschen, Nein danke
+  When [Tauschen]
+    Script: pbChoosePokemonForTrade(1, 2, :SNEASEL)
+    Conditional Branch: Variable [0001] == -1
+      Text: \xn[Hotelpage Lio]Kein Sniebel? Auf Route 6 und in Celestia gibt es welche.
+    Else
+      Script: pkmn = Pokemon.new(:KLEFKI, 63)
+              pkmn.shiny = true
+              pkmn.ability_index = 0     # Strolch
+              pkmn.nature = :BOLD
+              pkmn.forget_all_moves
+              pkmn.learn_move(:DAZZLINGGLEAM)
+              pkmn.learn_move(:FLASHCANNON)
+              pkmn.learn_move(:THUNDERWAVE)
+              pkmn.learn_move(:MAGNETRISE)    # Ei-Attacke Magnetflug
+              pkmn.calc_stats
+      Script: pbStartTrade(pbGet(1), pkmn, _I("Generalschlüssel"), _I("Lio"), 0)
+      Text: \PN tauscht \v[2] gegen Clavion!
+      Text: \xn[Hotelpage Lio]Danke! Der Generalschlüssel passt in jedes Schloss. Und er schließt auch jeden Kampf auf.
+      Text: \xn[Hotelpage Lio]Eira hat Eis- und Drachen-Pokémon. Stahl hält Eis aus, und gegen Feen sind Drachen machtlos!
+      Control Self Switch: A = ON
+    Branch End
+  When [Nein danke]
+    Text: \xn[Hotelpage Lio]Schade. Dann suche ich weiter Schlüssel im Schnee...
+Branch End
+
+[Seite 2 – Self Switch A]
+Text: \xn[Hotelpage Lio]Mein Sniebel hat schon drei Schlüssel gefunden. Und eine Uhr. Und einen Löffel.
+Text: \xn[Hotelpage Lio]Wenn du mal im Hotel Klefki übernachtest, sag, dass Lio dich schickt!
+
+
+--------------------------------------------------------------------------
+ HINWEISE
+--------------------------------------------------------------------------
+- Ei-Attacken: Kreuzhieb (Riolu), Auflockern (Dartiri), Wasserdüse und
+  Antik-Kraft (Karnimani), Magnetflug (Clavion) - sonst nur durch Zucht.
+- Versteckte Fähigkeiten: ability_index = 2 ist die erste versteckte.
+- pbStartTrade(Wahl, Pokémon, Spitzname, Trainername, Geschlecht 0/1):
+  Der Spieler bekommt das Pokémon mit fremdem Trainernamen (Tauschbonus
+  bei Erfahrung wie bei echten Tauschen).
+- Zum Testen kurz: Tragosso, Mähikel, Knacklion oder Sniebel ins Team.
