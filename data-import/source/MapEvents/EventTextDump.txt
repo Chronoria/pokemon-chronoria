@@ -126244,81 +126244,6 @@ List of Event Commands:
 @>
 
 #------------------------------------------------------------------------------
-Event ID: 053
-Event Name: Ausgang unten
-(X,Y): (028,041)
-
-Page #1
-Conditions
-None
-
-Autonomous Movement
-Type: Fixed
-Speed: 3: Slow
-Freq: 3: Low
-Options Enabled
-Move Animation
-Trigger: Player Touch
-
-List of Event Commands:
-@>Play SE: 'Door exit', 80, 100
-@>Change Screen Color Tone: (-255,-255,-255,0), @6
-@>Wait: 8 frame(s)
-@>Transfer Player:[206: Insel], (028,001), Down, No Fade
-@>Change Screen Color Tone: (0,0,0,0), @6
-@>
-
-#------------------------------------------------------------------------------
-Event ID: 054
-Event Name: Ausgang unten
-(X,Y): (029,041)
-
-Page #1
-Conditions
-None
-
-Autonomous Movement
-Type: Fixed
-Speed: 3: Slow
-Freq: 3: Low
-Options Enabled
-Move Animation
-Trigger: Player Touch
-
-List of Event Commands:
-@>Play SE: 'Door exit', 80, 100
-@>Change Screen Color Tone: (-255,-255,-255,0), @6
-@>Wait: 8 frame(s)
-@>Transfer Player:[206: Insel], (029,001), Down, No Fade
-@>Change Screen Color Tone: (0,0,0,0), @6
-@>
-
-#------------------------------------------------------------------------------
-Event ID: 055
-Event Name: Ausgang unten
-(X,Y): (030,041)
-
-Page #1
-Conditions
-None
-
-Autonomous Movement
-Type: Fixed
-Speed: 3: Slow
-Freq: 3: Low
-Options Enabled
-Move Animation
-Trigger: Player Touch
-
-List of Event Commands:
-@>Play SE: 'Door exit', 80, 100
-@>Change Screen Color Tone: (-255,-255,-255,0), @6
-@>Wait: 8 frame(s)
-@>Transfer Player:[206: Insel], (030,001), Down, No Fade
-@>Change Screen Color Tone: (0,0,0,0), @6
-@>
-
-#------------------------------------------------------------------------------
 Event ID: 056
 Event Name: Tourist 3
 (X,Y): (017,035)
@@ -168518,356 +168443,6 @@ Trigger: Action Button
 
 List of Event Commands:
 @>Conditional Branch: Script: pbItemBall(:EXPCANDYL)
- @>Control Self Switch: A =ON
- @>
-: Branch End
-@>
-
-Page #2
-Conditions
-Self Switch A is ON
-
-Autonomous Movement
-Type: Fixed
-Speed: 3: Slow
-Freq: 3: Low
-Options Enabled
-Move Animation
-Trigger: Action Button
-
-List of Event Commands:
-@>
-
-#------------------------------------------------------------------------------
-
-#==============================================================================
-Map ID: 206
-Map Name: Insel
-Tileset: 041: Hafen
-Width: 63, Height: 50
-Auto-Change BGM: Cedolan City
-
-#------------------------------------------------------------------------------
-Event ID: 001
-Event Name: Item
-(X,Y): (026,025)
-
-Page #1
-Conditions
-None
-
-Graphic: Item010
-
-Autonomous Movement
-Type: Fixed
-Speed: 3: Slow
-Freq: 3: Low
-Options Enabled
-Move Animation
-Direction Fix
-Trigger: Action Button
-
-List of Event Commands:
-@>Conditional Branch: Script: pbItemBall(:DRAGONFANG)
- @>Control Self Switch: A =ON
- @>
-: Branch End
-@>
-
-Page #2
-Conditions
-Self Switch A is ON
-
-Autonomous Movement
-Type: Fixed
-Speed: 3: Slow
-Freq: 3: Low
-Options Enabled
-Move Animation
-Trigger: Action Button
-
-List of Event Commands:
-@>
-
-#------------------------------------------------------------------------------
-Event ID: 002
-Event Name: Trainer(3)
-(X,Y): (021,021)
-
-Page #1
-Conditions
-None
-
-Graphic: SWIMMER_M4_WALKING3
-
-Autonomous Movement
-Type: Fixed
-Speed: 3: Slow
-Freq: 3: Low
-Options Enabled
-Move Animation
-Trigger: Event Touch
-
-List of Event Commands:
-@>Script: pbNoticePlayer(get_self)
-@>Text: \xn[Schwimmer Basti]Ich wollte gerade eine Pause 
- :    : machen!
-@>Conditional Branch: Script: TrainerBattle.start(:SWIMMER_M4_3, "Basti")
- @>Control Self Switch: A =ON
- @>
-: Branch End
-@>Script: pbTrainerEnd
-@>
-
-Page #2
-Conditions
-Self Switch A is ON
-
-Graphic: SWIMMER_M4_WALKING3
-
-Autonomous Movement
-Type: Fixed
-Speed: 3: Slow
-Freq: 3: Low
-Options Enabled
-Move Animation
-Trigger: Action Button
-
-List of Event Commands:
-@>Text: \xn[Schwimmer Basti]Ich wollte gerade eine Pause 
- :    : machen!
-@>
-
-#------------------------------------------------------------------------------
-Event ID: 003
-Event Name: Item
-(X,Y): (032,013)
-
-Page #1
-Conditions
-None
-
-Graphic: Item002
-
-Autonomous Movement
-Type: Fixed
-Speed: 3: Slow
-Freq: 3: Low
-Options Enabled
-Move Animation
-Direction Fix
-Trigger: Action Button
-
-List of Event Commands:
-@>Conditional Branch: Script: pbItemBall(:SUPERPOTION)
- @>Control Self Switch: A =ON
- @>
-: Branch End
-@>
-
-Page #2
-Conditions
-Self Switch A is ON
-
-Autonomous Movement
-Type: Fixed
-Speed: 3: Slow
-Freq: 3: Low
-Options Enabled
-Move Animation
-Trigger: Action Button
-
-List of Event Commands:
-@>
-
-#------------------------------------------------------------------------------
-Event ID: 004
-Event Name: Trainer(3)
-(X,Y): (020,038)
-
-Page #1
-Conditions
-None
-
-Graphic: SWIMMER_M4_WALKING
-
-Autonomous Movement
-Type: Fixed
-Speed: 3: Slow
-Freq: 3: Low
-Options Enabled
-Move Animation
-Trigger: Event Touch
-
-List of Event Commands:
-@>Script: pbNoticePlayer(get_self)
-@>Text: \xn[Schwimmer Kai]Ich überlege zu den anderen 
- :    : Drachen-Inseln zu schwimmen.
-@>Conditional Branch: Script: TrainerBattle.start(:SWIMMER_M4, "Kai")
- @>Control Self Switch: A =ON
- @>
-: Branch End
-@>Script: pbTrainerEnd
-@>
-
-Page #2
-Conditions
-Self Switch A is ON
-
-Graphic: SWIMMER_M4_WALKING
-
-Autonomous Movement
-Type: Fixed
-Speed: 3: Slow
-Freq: 3: Low
-Options Enabled
-Move Animation
-Trigger: Action Button
-
-List of Event Commands:
-@>Text: \xn[Schwimmer Kai]Bis zu den anderen Drachen-
- :    : Inseln kann ich nicht schwimmen.
-@>
-
-#------------------------------------------------------------------------------
-Event ID: 005
-Event Name: Ausgang unten
-(X,Y): (030,000)
-
-Page #1
-Conditions
-None
-
-Autonomous Movement
-Type: Fixed
-Speed: 3: Slow
-Freq: 3: Low
-Options Enabled
-Move Animation
-Trigger: Player Touch
-
-List of Event Commands:
-@>Play SE: 'Door exit', 80, 100
-@>Change Screen Color Tone: (-255,-255,-255,0), @6
-@>Wait: 8 frame(s)
-@>Transfer Player:[174: Azumaris], (030,040), Up, No Fade
-@>Change Screen Color Tone: (0,0,0,0), @6
-@>
-
-#------------------------------------------------------------------------------
-Event ID: 006
-Event Name: Ausgang unten
-(X,Y): (029,000)
-
-Page #1
-Conditions
-None
-
-Autonomous Movement
-Type: Fixed
-Speed: 3: Slow
-Freq: 3: Low
-Options Enabled
-Move Animation
-Trigger: Player Touch
-
-List of Event Commands:
-@>Play SE: 'Door exit', 80, 100
-@>Change Screen Color Tone: (-255,-255,-255,0), @6
-@>Wait: 8 frame(s)
-@>Transfer Player:[174: Azumaris], (029,040), Up, No Fade
-@>Change Screen Color Tone: (0,0,0,0), @6
-@>
-
-#------------------------------------------------------------------------------
-Event ID: 007
-Event Name: Ausgang unten
-(X,Y): (028,000)
-
-Page #1
-Conditions
-None
-
-Autonomous Movement
-Type: Fixed
-Speed: 3: Slow
-Freq: 3: Low
-Options Enabled
-Move Animation
-Trigger: Player Touch
-
-List of Event Commands:
-@>Play SE: 'Door exit', 80, 100
-@>Change Screen Color Tone: (-255,-255,-255,0), @6
-@>Wait: 8 frame(s)
-@>Transfer Player:[174: Azumaris], (028,039), Up, No Fade
-@>Change Screen Color Tone: (0,0,0,0), @6
-@>
-
-#------------------------------------------------------------------------------
-Event ID: 008
-Event Name: Item
-(X,Y): (029,037)
-
-Page #1
-Conditions
-None
-
-Graphic: Item017
-
-Autonomous Movement
-Type: Fixed
-Speed: 3: Slow
-Freq: 3: Low
-Options Enabled
-Move Animation
-Direction Fix
-Trigger: Action Button
-
-List of Event Commands:
-@>Conditional Branch: Script: pbItemBall(:DRAGONMEMORY)
- @>Control Self Switch: A =ON
- @>
-: Branch End
-@>
-
-Page #2
-Conditions
-Self Switch A is ON
-
-Autonomous Movement
-Type: Fixed
-Speed: 3: Slow
-Freq: 3: Low
-Options Enabled
-Move Animation
-Trigger: Action Button
-
-List of Event Commands:
-@>
-
-#------------------------------------------------------------------------------
-Event ID: 009
-Event Name: Item
-(X,Y): (019,038)
-
-Page #1
-Conditions
-None
-
-Graphic: Item003
-
-Autonomous Movement
-Type: Fixed
-Speed: 3: Slow
-Freq: 3: Low
-Options Enabled
-Move Animation
-Direction Fix
-Trigger: Action Button
-
-List of Event Commands:
-@>Conditional Branch: Script: pbItemBall(:RARECANDY)
  @>Control Self Switch: A =ON
  @>
 : Branch End
@@ -314588,6 +314163,114 @@ List of Event Commands:
 @>
 
 #------------------------------------------------------------------------------
+Event ID: 019
+Event Name: EV019
+(X,Y): (008,021)
+
+Page #1
+Conditions
+None
+
+Graphic: trainer_POKEMONRANGER_F3
+
+Autonomous Movement
+Type: Fixed
+Speed: 3: Slow
+Freq: 3: Low
+Options Enabled
+Move Animation
+Trigger: Action Button
+
+List of Event Commands:
+@>Text: Zweilmal habe ich jetzt gegen Isaac verloren.
+@>Text: Seine Wasser-Pokémon spülen mich weg und seine 
+ :    : Wind-Pokémon fegen den Rest vom Feld.
+@>Text: Ein Elektro-Pokémon wäre perfekt.
+@>Text: Es trifft beide typen sehr effektiv.
+@>Set Move Route: This event
+ :              : $>Turn Left
+@>
+
+#------------------------------------------------------------------------------
+Event ID: 020
+Event Name: EV020
+(X,Y): (008,020)
+
+Page #1
+Conditions
+None
+
+Graphic: CACNEA
+
+Autonomous Movement
+Type: Fixed
+Speed: 3: Slow
+Freq: 3: Low
+Options Enabled
+Move Animation
+Trigger: Action Button
+
+List of Event Commands:
+@>Play SE: 'CACNEA', 100, 100
+@>Wait: 10 frame(s)
+@>Set Move Route: This event
+ :              : $>Turn Left
+@>
+
+#------------------------------------------------------------------------------
+Event ID: 021
+Event Name: EV021
+(X,Y): (024,020)
+
+Page #1
+Conditions
+None
+
+Graphic: trainer_POKEMONBREEDER_F2
+
+Autonomous Movement
+Type: Fixed
+Speed: 3: Slow
+Freq: 3: Low
+Options Enabled
+Move Animation
+Trigger: Action Button
+
+List of Event Commands:
+@>Text: Hallo!
+@>Text: Das hier findet man nur selten, bestimmt findest du 
+ :    : Verwendung dafür.
+@>Script: pbReceiveItem(:WHITEHERB)
+@>Control Self Switch: A =ON
+@>Set Move Route: This event
+ :              : $>Turn Left
+@>
+
+Page #2
+Conditions
+Self Switch A is ON
+
+Graphic: trainer_POKEMONBREEDER_F2
+
+Autonomous Movement
+Type: Fixed
+Speed: 3: Slow
+Freq: 3: Low
+Options Enabled
+Move Animation
+Trigger: Action Button
+
+List of Event Commands:
+@>Text: Schlohkraut kann man einem Pokémon zum Tragen 
+ :    : geben.
+@>Text: Sollte es eine oder mehrere negative 
+ :    : Statusänderungen erhalten, werden sie dadurch 
+ :    : aufgehoben.
+@>Set Move Route: This event
+ :              : $>Turn Left
+@>
+
+#------------------------------------------------------------------------------
 
 #==============================================================================
 Map ID: 397
@@ -315450,6 +315133,71 @@ Trigger: Parallel Process
 
 List of Event Commands:
 @>Change Map Settings:Fog = 'Velmora_043', 140, 255, Normal, 100, 0, 0
+@>
+
+#------------------------------------------------------------------------------
+Event ID: 019
+Event Name: EV019
+(X,Y): (008,020)
+
+Page #1
+Conditions
+None
+
+Graphic: NPC_Mann 16
+
+Autonomous Movement
+Type: Fixed
+Speed: 3: Slow
+Freq: 3: Low
+Options Enabled
+Move Animation
+Trigger: Action Button
+
+List of Event Commands:
+@>Conditional Branch: Script: $player.badge_count >= 3
+ @>Text: Du hast Sakura schon besiegt?
+ @>Text: Mein Voltrel und ich versuchen es morgen, ganz 
+  :    : bestimmt.
+ @>Set Move Route: This event
+  :              : $>Turn Left
+ @>
+: Else
+ @>Text: Ich bin auf dem Weg nach Solhaven.
+ @>Text: Die Arenaleiterin dort heißt Sakura.
+ @>Text: Pflanze und Kampf, sagt man.
+ @>Text: Eine gemeine Mischung.
+ @>Text: Aber gegen beide hilft dasselbe: Wind-Attacken!
+ @>Set Move Route: This event
+  :              : $>Turn Left
+ @>
+: Branch End
+@>
+
+#------------------------------------------------------------------------------
+Event ID: 020
+Event Name: EV020
+(X,Y): (008,021)
+
+Page #1
+Conditions
+None
+
+Graphic: WATTREL
+
+Autonomous Movement
+Type: Fixed
+Speed: 3: Slow
+Freq: 3: Low
+Options Enabled
+Move Animation
+Trigger: Action Button
+
+List of Event Commands:
+@>Play SE: 'WATTREL', 100, 100
+@>Wait: 10 frame(s)
+@>Set Move Route: This event
+ :              : $>Turn Left
 @>
 
 #------------------------------------------------------------------------------
@@ -321668,1213 +321416,6 @@ Trigger: Action Button
 List of Event Commands:
 @>Text: \xn[Jongleur Sandro]Ich trete manchmal in Solhaven 
  :    : beim Weinfest auf.
-@>
-
-#------------------------------------------------------------------------------
-
-#==============================================================================
-Map ID: 402
-Map Name: Stromspeicher
-Tileset: 081: Kraftwerk
-Width: 20, Height: 20
-Auto-Change BGM: SM 147 The Path to the League
-
-#------------------------------------------------------------------------------
-Event ID: 001
-Event Name: EV001
-(X,Y): (014,010)
-
-Page #1
-Conditions
-None
-
-Graphic: Kraftwerk Lampe
-
-Autonomous Movement
-Type: Fixed
-Speed: 2: Slower
-Freq: 3: Low
-Options Enabled
-Stop Animation
-Through
-Always on Top
-Trigger: Action Button
-
-List of Event Commands:
-@>
-
-Page #2
-Conditions
-Switch 0119: VOLTRIANT1 besiegt is ON
-
-Autonomous Movement
-Type: Fixed
-Speed: 3: Slow
-Freq: 3: Low
-Options Enabled
-Move Animation
-Trigger: Action Button
-
-List of Event Commands:
-@>
-
-#------------------------------------------------------------------------------
-Event ID: 005
-Event Name: Eingang OG
-(X,Y): (002,011)
-
-Page #1
-Conditions
-None
-
-Autonomous Movement
-Type: Fixed
-Speed: 3: Slow
-Freq: 3: Low
-Options Enabled
-Move Animation
-Trigger: Event Touch
-
-List of Event Commands:
-@>Conditional Branch: Switch [0119: VOLTRIANT1 besiegt] == ON
- @>Play SE: 'Door enter', 80, 100
- @>Change Screen Color Tone: (-255,-255,-255,0), @6
- @>Wait: 8 frame(s)
- @>Transfer Player:[187: Kraftwerk OG], (011,031), Left, No Fade
- @>Change Screen Color Tone: (0,0,0,0), @6
- @>
-: Else
- @>Control Switches: [0107: Schwarzblende] = ON
- @>Play SE: 'Door enter', 80, 100
- @>Change Screen Color Tone: (-255,-255,-255,0), @6
- @>Wait: 8 frame(s)
- @>Transfer Player:[187: Kraftwerk OG], (011,031), Left, No Fade
- @>Change Screen Color Tone: (0,0,0,0), @6
- @>Control Switches: [0107: Schwarzblende] = OFF
- @>
-: Branch End
-@>
-
-#------------------------------------------------------------------------------
-Event ID: 006
-Event Name: Eingang UG
-(X,Y): (015,006)
-
-Page #1
-Conditions
-None
-
-Autonomous Movement
-Type: Fixed
-Speed: 3: Slow
-Freq: 3: Low
-Options Enabled
-Move Animation
-Trigger: Event Touch
-
-List of Event Commands:
-@>Conditional Branch: Switch [0119: VOLTRIANT1 besiegt] == ON
- @>Play SE: 'Door enter', 80, 100
- @>Change Screen Color Tone: (-255,-255,-255,0), @6
- @>Wait: 8 frame(s)
- @>Transfer Player:[189: Kraftwerk UG], (037,037), Right, No Fade
- @>Change Screen Color Tone: (0,0,0,0), @6
- @>
-: Else
- @>Control Switches: [0107: Schwarzblende] = ON
- @>Play SE: 'Door enter', 80, 100
- @>Change Screen Color Tone: (-255,-255,-255,0), @6
- @>Wait: 8 frame(s)
- @>Transfer Player:[189: Kraftwerk UG], (037,037), Right, No Fade
- @>Change Screen Color Tone: (0,0,0,0), @6
- @>Control Switches: [0107: Schwarzblende] = OFF
- @>
-: Branch End
-@>
-
-Page #2
-Conditions
-Switch 0119: VOLTRIANT1 besiegt is ON
-
-Autonomous Movement
-Type: Fixed
-Speed: 3: Slow
-Freq: 3: Low
-Options Enabled
-Move Animation
-Trigger: Player Touch
-
-List of Event Commands:
-@>Play SE: 'Door enter', 80, 100
-@>Change Screen Color Tone: (-255,-255,-255,0), @6
-@>Wait: 8 frame(s)
-@>Transfer Player:[189: Kraftwerk UG], (037,037), Right, No Fade
-@>Change Screen Color Tone: (0,0,0,0), @6
-@>
-
-#------------------------------------------------------------------------------
-Event ID: 007
-Event Name: Eingang EG
-(X,Y): (005,004)
-
-Page #1
-Conditions
-None
-
-Autonomous Movement
-Type: Fixed
-Speed: 3: Slow
-Freq: 3: Low
-Options Enabled
-Move Animation
-Trigger: Event Touch
-
-List of Event Commands:
-@>Conditional Branch: Switch [0119: VOLTRIANT1 besiegt] == ON
- @>Conditional Branch: Player is facing Up
-  @>Play SE: 'Door enter', 80, 100
-  @>Change Screen Color Tone: (-255,-255,-255,0), @6
-  @>Wait: 8 frame(s)
-  @>Transfer Player:[188: Kraftwerk EG], (024,033), Up, No Fade
-  @>Change Screen Color Tone: (0,0,0,0), @6
-  @>
- : Else
-  @>Set Move Route: Player
-   :              : $>Move Down
-  @>Wait for Move's Completion
-  @>
- : Branch End
- @>
-: Else
- @>Control Switches: [0107: Schwarzblende] = ON
- @>Conditional Branch: Player is facing Up
-  @>Play SE: 'Door enter', 80, 100
-  @>Change Screen Color Tone: (-255,-255,-255,0), @6
-  @>Wait: 8 frame(s)
-  @>Transfer Player:[188: Kraftwerk EG], (024,033), Up, No Fade
-  @>Change Screen Color Tone: (0,0,0,0), @6
-  @>
- : Else
-  @>Set Move Route: Player
-   :              : $>Move Down
-  @>Wait for Move's Completion
-  @>
- : Branch End
- @>Control Switches: [0107: Schwarzblende] = OFF
- @>
-: Branch End
-@>
-
-Page #2
-Conditions
-Switch 0119: VOLTRIANT1 besiegt is ON
-
-Autonomous Movement
-Type: Fixed
-Speed: 3: Slow
-Freq: 3: Low
-Options Enabled
-Move Animation
-Trigger: Player Touch
-
-List of Event Commands:
-@>Conditional Branch: Player is facing Up
- @>Play SE: 'Door enter', 80, 100
- @>Change Screen Color Tone: (-255,-255,-255,0), @6
- @>Wait: 8 frame(s)
- @>Transfer Player:[188: Kraftwerk EG], (024,033), Up, No Fade
- @>Change Screen Color Tone: (0,0,0,0), @6
- @>
-: Else
- @>Set Move Route: Player
-  :              : $>Move Down
- @>Wait for Move's Completion
- @>
-: Branch End
-@>
-
-#------------------------------------------------------------------------------
-Event ID: 008
-Event Name: Exit
-(X,Y): (008,014)
-
-Page #1
-Conditions
-None
-
-Autonomous Movement
-Type: Fixed
-Speed: 3: Slow
-Freq: 3: Low
-Options Enabled
-Move Animation
-Trigger: Player Touch
-
-List of Event Commands:
-@>Play SE: 'Door exit', 80, 100
-@>Change Screen Color Tone: (-255,-255,-255,0), @6
-@>Wait: 8 frame(s)
-@>Transfer Player:[185: Kraftwerk], (020,027), Down, No Fade
-@>Change Screen Color Tone: (0,0,0,0), @6
-@>
-
-#------------------------------------------------------------------------------
-Event ID: 009
-Event Name: EV009
-(X,Y): (002,005)
-
-Page #1
-Conditions
-None
-
-Graphic: Kraftwerk Lampe
-
-Autonomous Movement
-Type: Fixed
-Speed: 2: Slower
-Freq: 3: Low
-Options Enabled
-Stop Animation
-Through
-Always on Top
-Trigger: Action Button
-
-List of Event Commands:
-@>
-
-Page #2
-Conditions
-Switch 0119: VOLTRIANT1 besiegt is ON
-
-Autonomous Movement
-Type: Fixed
-Speed: 3: Slow
-Freq: 3: Low
-Options Enabled
-Move Animation
-Trigger: Action Button
-
-List of Event Commands:
-@>
-
-#------------------------------------------------------------------------------
-Event ID: 010
-Event Name: Nurse
-(X,Y): (003,009)
-
-Page #1
-Conditions
-None
-
-Graphic: NPC 16
-
-Autonomous Movement
-Type: Fixed
-Speed: 3: Slow
-Freq: 3: Low
-Options Enabled
-Move Animation
-Trigger: Action Button
-
-List of Event Commands:
-@>Text: Möchtest du, dass ich deine Pokémon heile?
-@>Show Choices: Ja, Nein
-(When Cancel: Choice 2)
-: When [Ja]
- @>Play ME: 'Pkmn healing', 100, 100
- @>Recover All: Entire Party
- @>Wait: 35 frame(s)
- @>
-: When [Nein]
- @>
-: Branch End
-@>
-
-#------------------------------------------------------------------------------
-Event ID: 012
-Event Name: EV012
-(X,Y): (013,013)
-
-Page #1
-Conditions
-None
-
-Graphic: WORKER6
-
-Autonomous Movement
-Type: Fixed
-Speed: 4: Fast
-Freq: 6: Highest
-Options Enabled
-Move Animation
-Trigger: Action Button
-
-List of Event Commands:
-@>Text: Keine Ahnung warum das Kraftwerk sich 
- :    : bageschaltet hat.
-@>Wait: 8 frame(s)
-@>Set Move Route: This event
- :              : $>Turn Up
-@>
-
-Page #2
-Conditions
-Switch 0119: VOLTRIANT1 besiegt is ON
-
-Autonomous Movement
-Type: Custom
-Custom Move Route:
-(Repeat Action)
-$>Move Down
-$>Move Down
-$>Move Down
-$>Move Down
-$>Move Down
-$>Move Down
-$>Move Down
-$>Move Down
-$>Move Down
-$>Move Down
-$>Move Down
-$>Move Down
-$>Move Left
-$>Move Left
-$>Move Left
-$>Move Down
-$>Move Down
-$>Move Down
-
-Speed: 4: Fast
-Freq: 6: Highest
-Options Enabled
-Move Animation
-Trigger: Action Button
-
-List of Event Commands:
-@>
-
-#------------------------------------------------------------------------------
-Event ID: 013
-Event Name: EV013
-(X,Y): (008,006)
-
-Page #1
-Conditions
-None
-
-Graphic: WORKER6
-
-Autonomous Movement
-Type: Fixed
-Speed: 4: Fast
-Freq: 6: Highest
-Options Enabled
-Move Animation
-Trigger: Action Button
-
-List of Event Commands:
-@>Text: Wir müssen schnell handeln...
-@>Text: und das Kraftwerk wieder in Betrieb nehmen.
-@>
-
-Page #2
-Conditions
-Switch 0119: VOLTRIANT1 besiegt is ON
-
-Autonomous Movement
-Type: Custom
-Custom Move Route:
-(Repeat Action)
-$>Move Down
-$>Move Down
-$>Move Down
-$>Move Down
-$>Move Down
-$>Move Down
-$>Move Down
-$>Move Down
-$>Move Down
-$>Move Down
-$>Move Down
-$>Move Down
-$>Move Left
-$>Move Left
-$>Move Left
-$>Move Down
-$>Move Down
-$>Move Down
-
-Speed: 4: Fast
-Freq: 6: Highest
-Options Enabled
-Move Animation
-Trigger: Action Button
-
-List of Event Commands:
-@>
-
-#------------------------------------------------------------------------------
-Event ID: 014
-Event Name: EV014
-(X,Y): (012,009)
-
-Page #1
-Conditions
-None
-
-Graphic: WORKER6
-
-Autonomous Movement
-Type: Fixed
-Speed: 4: Fast
-Freq: 6: Highest
-Options Enabled
-Move Animation
-Trigger: Action Button
-
-List of Event Commands:
-@>Text: Immer diese Sonderschichten.
-@>Wait: 8 frame(s)
-@>Set Move Route: This event
- :              : $>Turn Right
-@>
-
-Page #2
-Conditions
-Self Switch A is ON
-
-Autonomous Movement
-Type: Custom
-Custom Move Route:
-(Repeat Action)
-$>Move Down
-$>Move Down
-$>Move Down
-$>Move Down
-$>Move Down
-$>Move Down
-$>Move Down
-$>Move Down
-$>Move Down
-$>Move Down
-$>Move Down
-$>Move Down
-$>Move Left
-$>Move Left
-$>Move Left
-$>Move Down
-$>Move Down
-$>Move Down
-
-Speed: 4: Fast
-Freq: 6: Highest
-Options Enabled
-Move Animation
-Trigger: Action Button
-
-List of Event Commands:
-@>
-
-#------------------------------------------------------------------------------
-Event ID: 015
-Event Name: Heiteira
-(X,Y): (004,009)
-
-Page #1
-Conditions
-None
-
-Graphic: BLISSEY
-
-Autonomous Movement
-Type: Fixed
-Speed: 3: Slow
-Freq: 3: Low
-Options Enabled
-Move Animation
-Stop Animation
-Trigger: Action Button
-
-List of Event Commands:
-@>Play SE: 'BLISSEY', 80, 100
-@>
-
-#------------------------------------------------------------------------------
-Event ID: 016
-Event Name: Item
-(X,Y): (006,005)
-
-Page #1
-Conditions
-None
-
-Autonomous Movement
-Type: Fixed
-Speed: 3: Slow
-Freq: 3: Low
-Options Enabled
-Move Animation
-Direction Fix
-Trigger: Action Button
-
-List of Event Commands:
-@>Conditional Branch: Script: pbItemBall(:IRON)
- @>Control Self Switch: A =ON
- @>
-: Branch End
-@>
-
-Page #2
-Conditions
-Self Switch A is ON
-
-Autonomous Movement
-Type: Fixed
-Speed: 3: Slow
-Freq: 3: Low
-Options Enabled
-Move Animation
-Trigger: Action Button
-
-List of Event Commands:
-@>Text: Hier ist nichts...
-@>
-
-#------------------------------------------------------------------------------
-
-#==============================================================================
-Map ID: 403
-Map Name: Kraftwerk UG
-Tileset: 054: Drinnen
-Width: 50, Height: 40
-Auto-Change BGM: SwSh 147 Battle! (Calyrex)
-
-#------------------------------------------------------------------------------
-Event ID: 001
-Event Name: Rotes licht .sl
-(X,Y): (008,013)
-
-Page #1
-Conditions
-None
-
-Graphic: Kraftwerk Lampe
-
-Autonomous Movement
-Type: Fixed
-Speed: 2: Slower
-Freq: 3: Low
-Options Enabled
-Stop Animation
-Through
-Always on Top
-Trigger: Action Button
-
-List of Event Commands:
-@>
-
-Page #2
-Conditions
-Switch 0119: VOLTRIANT1 besiegt is ON
-
-Autonomous Movement
-Type: Fixed
-Speed: 3: Slow
-Freq: 3: Low
-Options Enabled
-Move Animation
-Trigger: Action Button
-
-List of Event Commands:
-@>
-
-#------------------------------------------------------------------------------
-Event ID: 013
-Event Name: EV013
-(X,Y): (042,027)
-
-Page #1
-Conditions
-None
-
-Autonomous Movement
-Type: Fixed
-Speed: 3: Slow
-Freq: 3: Low
-Options Enabled
-Move Animation
-Trigger: Parallel Process
-
-List of Event Commands:
-@>Conditional Branch: Switch [0111: Junge Route 3] == ON
- @>Conditional Branch: Switch [0112: frei] == ON
-  @>Conditional Branch: Switch [0113: frei] == ON
-   @>Control Switches: [0114: frei] = ON
-   @>Control Self Switch: A =ON
-   @>
-  : Else
-   @>
-  : Branch End
-  @>
- : Else
-  @>
- : Branch End
- @>
-: Else
- @>
-: Branch End
-@>
-
-Page #2
-Conditions
-Self Switch A is ON
-
-Autonomous Movement
-Type: Fixed
-Speed: 3: Slow
-Freq: 3: Low
-Options Enabled
-Move Animation
-Trigger: Action Button
-
-List of Event Commands:
-@>
-
-#------------------------------------------------------------------------------
-Event ID: 020
-Event Name: Rotes licht .sl
-(X,Y): (040,032)
-
-Page #1
-Conditions
-None
-
-Graphic: Kraftwerk Lampe
-
-Autonomous Movement
-Type: Fixed
-Speed: 2: Slower
-Freq: 3: Low
-Options Enabled
-Stop Animation
-Through
-Always on Top
-Trigger: Action Button
-
-List of Event Commands:
-@>
-
-Page #2
-Conditions
-Switch 0119: VOLTRIANT1 besiegt is ON
-
-Autonomous Movement
-Type: Fixed
-Speed: 3: Slow
-Freq: 3: Low
-Options Enabled
-Move Animation
-Trigger: Action Button
-
-List of Event Commands:
-@>
-
-#------------------------------------------------------------------------------
-Event ID: 021
-Event Name: Rotes licht .sl
-(X,Y): (040,013)
-
-Page #1
-Conditions
-None
-
-Graphic: Kraftwerk Lampe
-
-Autonomous Movement
-Type: Fixed
-Speed: 2: Slower
-Freq: 3: Low
-Options Enabled
-Stop Animation
-Through
-Always on Top
-Trigger: Action Button
-
-List of Event Commands:
-@>
-
-Page #2
-Conditions
-Switch 0119: VOLTRIANT1 besiegt is ON
-
-Autonomous Movement
-Type: Fixed
-Speed: 3: Slow
-Freq: 3: Low
-Options Enabled
-Move Animation
-Trigger: Action Button
-
-List of Event Commands:
-@>
-
-#------------------------------------------------------------------------------
-Event ID: 023
-Event Name: Rotes licht .sl
-(X,Y): (008,032)
-
-Page #1
-Conditions
-None
-
-Graphic: Kraftwerk Lampe
-
-Autonomous Movement
-Type: Fixed
-Speed: 2: Slower
-Freq: 3: Low
-Options Enabled
-Stop Animation
-Through
-Always on Top
-Trigger: Action Button
-
-List of Event Commands:
-@>
-
-Page #2
-Conditions
-Switch 0119: VOLTRIANT1 besiegt is ON
-
-Autonomous Movement
-Type: Fixed
-Speed: 3: Slow
-Freq: 3: Low
-Options Enabled
-Move Animation
-Trigger: Action Button
-
-List of Event Commands:
-@>
-
-#------------------------------------------------------------------------------
-Event ID: 082
-Event Name: .noShadow
-(X,Y): (038,002)
-
-Page #1
-Conditions
-None
-
-Autonomous Movement
-Type: Fixed
-Speed: 3: Slow
-Freq: 3: Low
-Options Enabled
-Move Animation
-Trigger: Action Button
-
-List of Event Commands:
-@>
-
-Page #2
-Conditions
-Switch 0119: VOLTRIANT1 besiegt is ON
-
-Autonomous Movement
-Type: Fixed
-Speed: 3: Slow
-Freq: 3: Low
-Options Enabled
-Move Animation
-Trigger: Parallel Process
-
-List of Event Commands:
-@>Set Event Location: This event,(015,028)
-@>Set Move Route: This event
-                  (Repeat Action)
- :              : $>Wait: 2 frame(s)
- :              : $>Graphic: "Strom', 0, 2, 2
- :              : $>Wait: 2 frame(s)
- :              : $>Graphic: "Strom', 0, 2, 0
- :              : $>Wait: 2 frame(s)
- :              : $>Graphic: "Strom', 0, 2, 1
-@>Wait for Move's Completion
-@>
-
-#------------------------------------------------------------------------------
-Event ID: 083
-Event Name: .noShadow
-(X,Y): (038,003)
-
-Page #1
-Conditions
-None
-
-Autonomous Movement
-Type: Fixed
-Speed: 3: Slow
-Freq: 3: Low
-Options Enabled
-Move Animation
-Trigger: Action Button
-
-List of Event Commands:
-@>
-
-Page #2
-Conditions
-Switch 0119: VOLTRIANT1 besiegt is ON
-
-Autonomous Movement
-Type: Fixed
-Speed: 3: Slow
-Freq: 3: Low
-Options Enabled
-Move Animation
-Trigger: Parallel Process
-
-List of Event Commands:
-@>Set Event Location: This event,(015,029)
-@>Set Move Route: This event
-                  (Repeat Action)
- :              : $>Wait: 2 frame(s)
- :              : $>Graphic: "Strom', 0, 2, 0
- :              : $>Wait: 2 frame(s)
- :              : $>Graphic: "Strom', 0, 2, 1
- :              : $>Wait: 2 frame(s)
- :              : $>Graphic: "Strom', 0, 2, 2
-@>Wait for Move's Completion
-@>
-
-#------------------------------------------------------------------------------
-Event ID: 084
-Event Name: .noShadow
-(X,Y): (038,004)
-
-Page #1
-Conditions
-None
-
-Autonomous Movement
-Type: Fixed
-Speed: 3: Slow
-Freq: 3: Low
-Options Enabled
-Move Animation
-Trigger: Action Button
-
-List of Event Commands:
-@>
-
-Page #2
-Conditions
-Switch 0119: VOLTRIANT1 besiegt is ON
-
-Autonomous Movement
-Type: Fixed
-Speed: 3: Slow
-Freq: 3: Low
-Options Enabled
-Move Animation
-Direction Fix
-Trigger: Parallel Process
-
-List of Event Commands:
-@>Set Event Location: This event,(015,030)
-@>Set Move Route: This event
-                  (Repeat Action)
- :              : $>Wait: 2 frame(s)
- :              : $>Graphic: "Strom', 0, 2, 1
- :              : $>Wait: 2 frame(s)
- :              : $>Graphic: "Strom', 0, 2, 2
- :              : $>Wait: 2 frame(s)
- :              : $>Graphic: "Strom', 0, 2, 0
-@>Wait for Move's Completion
-@>
-
-#------------------------------------------------------------------------------
-Event ID: 085
-Event Name: .noShadow
-(X,Y): (042,004)
-
-Page #1
-Conditions
-None
-
-Autonomous Movement
-Type: Fixed
-Speed: 3: Slow
-Freq: 3: Low
-Options Enabled
-Move Animation
-Trigger: Action Button
-
-List of Event Commands:
-@>
-
-Page #2
-Conditions
-Switch 0119: VOLTRIANT1 besiegt is ON
-
-Autonomous Movement
-Type: Fixed
-Speed: 3: Slow
-Freq: 3: Low
-Options Enabled
-Move Animation
-Trigger: Parallel Process
-
-List of Event Commands:
-@>Set Event Location: This event,(033,030)
-@>Set Move Route: This event
-                  (Repeat Action)
- :              : $>Wait: 2 frame(s)
- :              : $>Graphic: "Strom', 0, 2, 2
- :              : $>Wait: 2 frame(s)
- :              : $>Graphic: "Strom', 0, 2, 0
- :              : $>Wait: 2 frame(s)
- :              : $>Graphic: "Strom', 0, 2, 1
-@>Wait for Move's Completion
-@>
-
-#------------------------------------------------------------------------------
-Event ID: 086
-Event Name: .noShadow
-(X,Y): (042,002)
-
-Page #1
-Conditions
-None
-
-Autonomous Movement
-Type: Fixed
-Speed: 3: Slow
-Freq: 3: Low
-Options Enabled
-Move Animation
-Trigger: Action Button
-
-List of Event Commands:
-@>
-
-Page #2
-Conditions
-Switch 0119: VOLTRIANT1 besiegt is ON
-
-Autonomous Movement
-Type: Fixed
-Speed: 3: Slow
-Freq: 3: Low
-Options Enabled
-Move Animation
-Trigger: Parallel Process
-
-List of Event Commands:
-@>Set Event Location: This event,(033,028)
-@>Set Move Route: This event
-                  (Repeat Action)
- :              : $>Wait: 2 frame(s)
- :              : $>Graphic: "Strom', 0, 2, 0
- :              : $>Wait: 2 frame(s)
- :              : $>Graphic: "Strom', 0, 2, 1
- :              : $>Wait: 2 frame(s)
- :              : $>Graphic: "Strom', 0, 2, 2
-@>Wait for Move's Completion
-@>
-
-#------------------------------------------------------------------------------
-Event ID: 087
-Event Name: .noShadow
-(X,Y): (042,003)
-
-Page #1
-Conditions
-None
-
-Autonomous Movement
-Type: Fixed
-Speed: 3: Slow
-Freq: 3: Low
-Options Enabled
-Move Animation
-Trigger: Action Button
-
-List of Event Commands:
-@>
-
-Page #2
-Conditions
-Switch 0119: VOLTRIANT1 besiegt is ON
-
-Autonomous Movement
-Type: Fixed
-Speed: 3: Slow
-Freq: 3: Low
-Options Enabled
-Move Animation
-Direction Fix
-Trigger: Parallel Process
-
-List of Event Commands:
-@>Set Event Location: This event,(033,029)
-@>Set Move Route: This event
-                  (Repeat Action)
- :              : $>Wait: 2 frame(s)
- :              : $>Graphic: "Strom', 0, 2, 1
- :              : $>Wait: 2 frame(s)
- :              : $>Graphic: "Strom', 0, 2, 2
- :              : $>Wait: 2 frame(s)
- :              : $>Graphic: "Strom', 0, 2, 0
-@>Wait for Move's Completion
-@>
-
-#------------------------------------------------------------------------------
-Event ID: 088
-Event Name: .noShadow
-(X,Y): (037,002)
-
-Page #1
-Conditions
-None
-
-Autonomous Movement
-Type: Fixed
-Speed: 3: Slow
-Freq: 3: Low
-Options Enabled
-Move Animation
-Trigger: Action Button
-
-List of Event Commands:
-@>
-
-Page #2
-Conditions
-Switch 0119: VOLTRIANT1 besiegt is ON
-
-Autonomous Movement
-Type: Fixed
-Speed: 3: Slow
-Freq: 3: Low
-Options Enabled
-Move Animation
-Trigger: Parallel Process
-
-List of Event Commands:
-@>Set Event Location: This event,(014,027)
-@>Wait for Move's Completion
-@>
-
-#------------------------------------------------------------------------------
-Event ID: 091
-Event Name: .noShadow
-(X,Y): (039,002)
-
-Page #1
-Conditions
-None
-
-Autonomous Movement
-Type: Fixed
-Speed: 3: Slow
-Freq: 3: Low
-Options Enabled
-Move Animation
-Trigger: Action Button
-
-List of Event Commands:
-@>
-
-Page #2
-Conditions
-Switch 0119: VOLTRIANT1 besiegt is ON
-
-Autonomous Movement
-Type: Fixed
-Speed: 3: Slow
-Freq: 3: Low
-Options Enabled
-Move Animation
-Trigger: Parallel Process
-
-List of Event Commands:
-@>Set Event Location: This event,(016,027)
-@>Wait for Move's Completion
-@>
-
-#------------------------------------------------------------------------------
-Event ID: 092
-Event Name: .noShadow
-(X,Y): (041,002)
-
-Page #1
-Conditions
-None
-
-Autonomous Movement
-Type: Fixed
-Speed: 3: Slow
-Freq: 3: Low
-Options Enabled
-Move Animation
-Trigger: Action Button
-
-List of Event Commands:
-@>
-
-Page #2
-Conditions
-Switch 0119: VOLTRIANT1 besiegt is ON
-
-Autonomous Movement
-Type: Fixed
-Speed: 3: Slow
-Freq: 3: Low
-Options Enabled
-Move Animation
-Trigger: Parallel Process
-
-List of Event Commands:
-@>Set Event Location: This event,(032,027)
-@>Wait for Move's Completion
-@>
-
-#------------------------------------------------------------------------------
-Event ID: 093
-Event Name: .noShadow
-(X,Y): (043,002)
-
-Page #1
-Conditions
-None
-
-Autonomous Movement
-Type: Fixed
-Speed: 3: Slow
-Freq: 3: Low
-Options Enabled
-Move Animation
-Trigger: Action Button
-
-List of Event Commands:
-@>
-
-Page #2
-Conditions
-Switch 0119: VOLTRIANT1 besiegt is ON
-
-Autonomous Movement
-Type: Fixed
-Speed: 3: Slow
-Freq: 3: Low
-Options Enabled
-Move Animation
-Trigger: Parallel Process
-
-List of Event Commands:
-@>Set Event Location: This event,(034,027)
-@>Wait for Move's Completion
 @>
 
 #------------------------------------------------------------------------------
@@ -516588,6 +515129,28 @@ Map ID: 734
 Map Name: MAP734
 Tileset: 153: Route 23
 Width: 50, Height: 74
+
+#------------------------------------------------------------------------------
+Event ID: 001
+Event Name: EV001
+(X,Y): (033,061)
+
+Page #1
+Conditions
+None
+
+Autonomous Movement
+Type: Fixed
+Speed: 3: Slow
+Freq: 3: Low
+Options Enabled
+Move Animation
+Trigger: Action Button
+
+List of Event Commands:
+@>
+
+#------------------------------------------------------------------------------
 
 #==============================================================================
 Map ID: 735
