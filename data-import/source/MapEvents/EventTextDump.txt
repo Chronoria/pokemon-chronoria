@@ -58869,7 +58869,7 @@ List of Event Commands:
 @>Conditional Branch: Script: rand(100) < 10
  @>Script: level = $player.party.map { |p| 
  :       : p.level }.max
- :       : WildBattle.start(:TRUBBISH, level)
+ :       : WildBattle.start(:TRUBBISH_1, level)
  @>
 : Else
  @>Text: Da klebt ein Zettel: "Nicht hineinsehen"
@@ -60761,7 +60761,7 @@ List of Event Commands:
 @>Conditional Branch: Script: rand(100) < 10
  @>Script: level = $player.party.map { |p| 
  :       : p.level }.max
- :       : WildBattle.start(:TRUBBISH, level)
+ :       : WildBattle.start(:TRUBBISH_1, level)
  @>
 : Else
  @>Text: Nur Müll...
@@ -62427,7 +62427,7 @@ List of Event Commands:
 @>Conditional Branch: Script: rand(100) < 10
  @>Script: level = $player.party.map { |p| 
  :       : p.level }.max
- :       : WildBattle.start(:TRUBBISH, level)
+ :       : WildBattle.start(:TRUBBISH_1, level)
  @>
 : Else
  @>Text: Ein Mülleimer.
@@ -75024,7 +75024,7 @@ List of Event Commands:
 @>Conditional Branch: Script: rand(100) < 10
  @>Script: level = $player.party.map { |p| 
  :       : p.level }.max
- :       : WildBattle.start(:TRUBBISH, level)
+ :       : WildBattle.start(:TRUBBISH_1, level)
  @>
 : Else
  @>Text: Du wühlst kurz und bereust es sofort.
@@ -78364,7 +78364,7 @@ List of Event Commands:
 @>Conditional Branch: Script: rand(100) < 10
  @>Script: level = $player.party.map { |p| 
  :       : p.level }.max
- :       : WildBattle.start(:TRUBBISH, level)
+ :       : WildBattle.start(:TRUBBISH_1, level)
  @>
 : Else
  @>Text: Du findest nichts, Klassiker!
@@ -93480,7 +93480,7 @@ List of Event Commands:
 @>Conditional Branch: Script: rand(100) < 10
  @>Script: level = $player.party.map { |p| 
  :       : p.level }.max
- :       : WildBattle.start(:TRUBBISH, level)
+ :       : WildBattle.start(:TRUBBISH_1, level)
  @>
 : Else
  @>Text: Hier ist nichts...
@@ -95251,7 +95251,7 @@ List of Event Commands:
 @>Conditional Branch: Script: rand(100) < 10
  @>Script: level = $player.party.map { |p| 
  :       : p.level }.max
- :       : WildBattle.start(:TRUBBISH, level)
+ :       : WildBattle.start(:TRUBBISH_1, level)
  @>
 : Else
  @>Text: Nichts, und doch wirkt es bedeutungsvoll.
@@ -127157,7 +127157,7 @@ List of Event Commands:
 #------------------------------------------------------------------------------
 Event ID: 068
 Event Name: Item
-(X,Y): (047,014)
+(X,Y): (048,014)
 
 Page #1
 Conditions
@@ -134376,7 +134376,7 @@ List of Event Commands:
 @>Conditional Branch: Script: rand(100) < 10
  @>Script: level = $player.party.map { |p| 
  :       : p.level }.max
- :       : WildBattle.start(:TRUBBISH, level)
+ :       : WildBattle.start(:TRUBBISH_1, level)
  @>
 : Else
  @>Text: Diesmal leider kein Glück.
@@ -141367,6 +141367,48 @@ Trigger: Action Button
 
 List of Event Commands:
 @>Play SE: 'BUTTERFREE', 100, 100
+@>
+
+#------------------------------------------------------------------------------
+Event ID: 128
+Event Name: Item
+(X,Y): (022,061)
+
+Page #1
+Conditions
+None
+
+Graphic: Item017
+
+Autonomous Movement
+Type: Fixed
+Speed: 3: Slow
+Freq: 3: Low
+Options Enabled
+Move Animation
+Direction Fix
+Trigger: Action Button
+
+List of Event Commands:
+@>Conditional Branch: Script: pbItemBall(:TM68)
+ @>Control Self Switch: A =ON
+ @>
+: Branch End
+@>
+
+Page #2
+Conditions
+Self Switch A is ON
+
+Autonomous Movement
+Type: Fixed
+Speed: 3: Slow
+Freq: 3: Low
+Options Enabled
+Move Animation
+Trigger: Action Button
+
+List of Event Commands:
 @>
 
 #------------------------------------------------------------------------------
@@ -177813,7 +177855,7 @@ List of Event Commands:
 @>Conditional Branch: Script: rand(100) < 10
  @>Script: level = $player.party.map { |p| 
  :       : p.level }.max
- :       : WildBattle.start(:TRUBBISH, level)
+ :       : WildBattle.start(:TRUBBISH_1, level)
  @>
 : Else
  @>Text: Hier ist nichts...
@@ -178090,7 +178132,7 @@ List of Event Commands:
 @>Conditional Branch: Script: rand(100) < 10
  @>Script: level = $player.party.map { |p| 
  :       : p.level }.max
- :       : WildBattle.start(:TRUBBISH, level)
+ :       : WildBattle.start(:TRUBBISH_1, level)
  @>
 : Else
  @>Text: Hier ist nichts...
@@ -180076,7 +180118,7 @@ List of Event Commands:
 @>Conditional Branch: Script: rand(100) < 10
  @>Script: level = $player.party.map { |p| 
  :       : p.level }.max
- :       : WildBattle.start(:TRUBBISH, level)
+ :       : WildBattle.start(:TRUBBISH_1, level)
  @>
 : Else
  @>Text: Hier ist nichts...
@@ -207942,7 +207984,7 @@ List of Event Commands:
 @>Conditional Branch: Script: rand(100) < 10
  @>Script: level = $player.party.map { |p| 
  :       : p.level }.max
- :       : WildBattle.start(:TRUBBISH, level)
+ :       : WildBattle.start(:TRUBBISH_1, level)
  @>
 : Else
  @>Text: Nur Müll...
@@ -223072,7 +223114,7 @@ List of Event Commands:
 
 #------------------------------------------------------------------------------
 Event ID: 010
-Event Name: EV010
+Event Name: EV010.sl
 (X,Y): (011,036)
 
 Page #1
@@ -223097,7 +223139,7 @@ List of Event Commands:
 
 #------------------------------------------------------------------------------
 Event ID: 011
-Event Name: EV011
+Event Name: EV011.sl
 (X,Y): (082,001)
 
 Page #1
@@ -223122,7 +223164,7 @@ List of Event Commands:
 
 #------------------------------------------------------------------------------
 Event ID: 012
-Event Name: EV012
+Event Name: EV012.sl
 (X,Y): (012,003)
 
 Page #1
@@ -223147,7 +223189,7 @@ List of Event Commands:
 
 #------------------------------------------------------------------------------
 Event ID: 013
-Event Name: EV013
+Event Name: EV013.sl
 (X,Y): (086,035)
 
 Page #1
@@ -223172,7 +223214,7 @@ List of Event Commands:
 
 #------------------------------------------------------------------------------
 Event ID: 014
-Event Name: EV014
+Event Name: EV014.sl
 (X,Y): (090,004)
 
 Page #1
@@ -223197,7 +223239,7 @@ List of Event Commands:
 
 #------------------------------------------------------------------------------
 Event ID: 015
-Event Name: EV015
+Event Name: EV015.sl
 (X,Y): (093,024)
 
 Page #1
@@ -223222,7 +223264,7 @@ List of Event Commands:
 
 #------------------------------------------------------------------------------
 Event ID: 016
-Event Name: EV016
+Event Name: EV016.sl
 (X,Y): (041,034)
 
 Page #1
@@ -223247,7 +223289,7 @@ List of Event Commands:
 
 #------------------------------------------------------------------------------
 Event ID: 017
-Event Name: EV017
+Event Name: EV017.sl
 (X,Y): (028,005)
 
 Page #1
@@ -223826,6 +223868,56 @@ Speed: 3: Slow
 Freq: 3: Low
 Options Enabled
 Move Animation
+Trigger: Action Button
+
+List of Event Commands:
+@>
+
+#------------------------------------------------------------------------------
+Event ID: 031
+Event Name: EV031.sl
+(X,Y): (040,022)
+
+Page #1
+Conditions
+None
+
+Graphic: WINGULL_female_shadow
+
+Autonomous Movement
+Type: Fixed
+Speed: 1: Slowest
+Freq: 4: High
+Options Enabled
+Move Animation
+Stop Animation
+Through
+Always on Top
+Trigger: Action Button
+
+List of Event Commands:
+@>
+
+#------------------------------------------------------------------------------
+Event ID: 032
+Event Name: EV032.sl
+(X,Y): (066,019)
+
+Page #1
+Conditions
+None
+
+Graphic: WINGULL_female_shadow
+
+Autonomous Movement
+Type: Fixed
+Speed: 1: Slowest
+Freq: 4: High
+Options Enabled
+Move Animation
+Stop Animation
+Through
+Always on Top
 Trigger: Action Button
 
 List of Event Commands:
@@ -245011,7 +245103,7 @@ List of Event Commands:
 @>Conditional Branch: Script: rand(100) < 10
  @>Script: level = $player.party.map { |p| 
  :       : p.level }.max
- :       : WildBattle.start(:TRUBBISH, level)
+ :       : WildBattle.start(:TRUBBISH_1, level)
  @>
 : Else
  @>Text: Hier ist nichts...
@@ -246344,7 +246436,7 @@ List of Event Commands:
 @>Conditional Branch: Script: rand(100) < 10
  @>Script: level = $player.party.map { |p| 
  :       : p.level }.max
- :       : WildBattle.start(:TRUBBISH, level)
+ :       : WildBattle.start(:TRUBBISH_1, level)
  @>
 : Else
  @>Text: Hier ist nichts...
@@ -460216,7 +460308,7 @@ List of Event Commands:
 @>Conditional Branch: Script: rand(100) < 10
  @>Script: level = $player.party.map { |p| 
  :       : p.level }.max
- :       : WildBattle.start(:TRUBBISH, level)
+ :       : WildBattle.start(:GRIMER, level)
  @>
 : Else
  @>Text: Immernoch schleimig.
@@ -499721,7 +499813,7 @@ List of Event Commands:
 
 #------------------------------------------------------------------------------
 Event ID: 021
-Event Name: EV021
+Event Name: EV021.sl
 (X,Y): (008,054)
 
 Page #1
@@ -499746,7 +499838,7 @@ List of Event Commands:
 
 #------------------------------------------------------------------------------
 Event ID: 022
-Event Name: EV022
+Event Name: EV022.sl
 (X,Y): (015,024)
 
 Page #1
@@ -499771,7 +499863,7 @@ List of Event Commands:
 
 #------------------------------------------------------------------------------
 Event ID: 023
-Event Name: EV023
+Event Name: EV023.sl
 (X,Y): (044,021)
 
 Page #1
@@ -499796,7 +499888,7 @@ List of Event Commands:
 
 #------------------------------------------------------------------------------
 Event ID: 024
-Event Name: EV024
+Event Name: EV024.sl
 (X,Y): (051,008)
 
 Page #1
@@ -499821,7 +499913,7 @@ List of Event Commands:
 
 #------------------------------------------------------------------------------
 Event ID: 025
-Event Name: EV025
+Event Name: EV025.sl
 (X,Y): (050,059)
 
 Page #1
@@ -499846,7 +499938,7 @@ List of Event Commands:
 
 #------------------------------------------------------------------------------
 Event ID: 026
-Event Name: EV026
+Event Name: EV026.sl
 (X,Y): (052,092)
 
 Page #1
@@ -499871,7 +499963,7 @@ List of Event Commands:
 
 #------------------------------------------------------------------------------
 Event ID: 027
-Event Name: EV027
+Event Name: EV027.sl
 (X,Y): (032,092)
 
 Page #1
@@ -499896,7 +499988,7 @@ List of Event Commands:
 
 #------------------------------------------------------------------------------
 Event ID: 028
-Event Name: EV028
+Event Name: EV028.sl
 (X,Y): (032,075)
 
 Page #1
@@ -499921,7 +500013,7 @@ List of Event Commands:
 
 #------------------------------------------------------------------------------
 Event ID: 029
-Event Name: EV029
+Event Name: EV029.sl
 (X,Y): (020,084)
 
 Page #1
@@ -499946,7 +500038,7 @@ List of Event Commands:
 
 #------------------------------------------------------------------------------
 Event ID: 030
-Event Name: EV030
+Event Name: EV030.sl
 (X,Y): (008,095)
 
 Page #1
@@ -499971,7 +500063,7 @@ List of Event Commands:
 
 #------------------------------------------------------------------------------
 Event ID: 031
-Event Name: EV031
+Event Name: EV031.sl
 (X,Y): (011,071)
 
 Page #1
@@ -499996,7 +500088,7 @@ List of Event Commands:
 
 #------------------------------------------------------------------------------
 Event ID: 032
-Event Name: EV032
+Event Name: EV032.sl
 (X,Y): (053,076)
 
 Page #1
@@ -500021,7 +500113,7 @@ List of Event Commands:
 
 #------------------------------------------------------------------------------
 Event ID: 033
-Event Name: EV033
+Event Name: EV033.sl
 (X,Y): (052,071)
 
 Page #1
@@ -500096,7 +500188,7 @@ List of Event Commands:
 
 #------------------------------------------------------------------------------
 Event ID: 036
-Event Name: EV036
+Event Name: EV036.sl
 (X,Y): (054,025)
 
 Page #1
@@ -500121,7 +500213,7 @@ List of Event Commands:
 
 #------------------------------------------------------------------------------
 Event ID: 037
-Event Name: EV037
+Event Name: EV037.sl
 (X,Y): (055,018)
 
 Page #1
@@ -500146,7 +500238,7 @@ List of Event Commands:
 
 #------------------------------------------------------------------------------
 Event ID: 038
-Event Name: EV038
+Event Name: EV038.sl
 (X,Y): (036,011)
 
 Page #1
@@ -500171,7 +500263,7 @@ List of Event Commands:
 
 #------------------------------------------------------------------------------
 Event ID: 039
-Event Name: EV039
+Event Name: EV039.sl
 (X,Y): (022,022)
 
 Page #1
@@ -500196,7 +500288,7 @@ List of Event Commands:
 
 #------------------------------------------------------------------------------
 Event ID: 040
-Event Name: EV040
+Event Name: EV040.sl
 (X,Y): (004,016)
 
 Page #1
@@ -501870,6 +501962,356 @@ List of Event Commands:
 @>
 
 #------------------------------------------------------------------------------
+Event ID: 011
+Event Name: EV011.sl
+(X,Y): (007,050)
+
+Page #1
+Conditions
+None
+
+Graphic: WINGULL_female_shadow
+
+Autonomous Movement
+Type: Fixed
+Speed: 1: Slowest
+Freq: 4: High
+Options Enabled
+Move Animation
+Stop Animation
+Through
+Always on Top
+Trigger: Action Button
+
+List of Event Commands:
+@>
+
+#------------------------------------------------------------------------------
+Event ID: 012
+Event Name: EV012.sl
+(X,Y): (020,055)
+
+Page #1
+Conditions
+None
+
+Graphic: WINGULL_female_shadow
+
+Autonomous Movement
+Type: Fixed
+Speed: 1: Slowest
+Freq: 4: High
+Options Enabled
+Move Animation
+Stop Animation
+Through
+Always on Top
+Trigger: Action Button
+
+List of Event Commands:
+@>
+
+#------------------------------------------------------------------------------
+Event ID: 013
+Event Name: EV013.sl
+(X,Y): (043,054)
+
+Page #1
+Conditions
+None
+
+Graphic: WINGULL_female_shadow
+
+Autonomous Movement
+Type: Fixed
+Speed: 1: Slowest
+Freq: 4: High
+Options Enabled
+Move Animation
+Stop Animation
+Through
+Always on Top
+Trigger: Action Button
+
+List of Event Commands:
+@>
+
+#------------------------------------------------------------------------------
+Event ID: 014
+Event Name: EV014.sl
+(X,Y): (054,050)
+
+Page #1
+Conditions
+None
+
+Graphic: WINGULL_female_shadow
+
+Autonomous Movement
+Type: Fixed
+Speed: 1: Slowest
+Freq: 4: High
+Options Enabled
+Move Animation
+Stop Animation
+Through
+Always on Top
+Trigger: Action Button
+
+List of Event Commands:
+@>
+
+#------------------------------------------------------------------------------
+Event ID: 015
+Event Name: EV015.sl
+(X,Y): (002,007)
+
+Page #1
+Conditions
+None
+
+Graphic: WINGULL_female_shadow
+
+Autonomous Movement
+Type: Fixed
+Speed: 1: Slowest
+Freq: 4: High
+Options Enabled
+Move Animation
+Stop Animation
+Through
+Always on Top
+Trigger: Action Button
+
+List of Event Commands:
+@>
+
+#------------------------------------------------------------------------------
+Event ID: 016
+Event Name: EV016.sl
+(X,Y): (022,001)
+
+Page #1
+Conditions
+None
+
+Graphic: WINGULL_female_shadow
+
+Autonomous Movement
+Type: Fixed
+Speed: 1: Slowest
+Freq: 4: High
+Options Enabled
+Move Animation
+Stop Animation
+Through
+Always on Top
+Trigger: Action Button
+
+List of Event Commands:
+@>
+
+#------------------------------------------------------------------------------
+Event ID: 017
+Event Name: EV017.s
+(X,Y): (050,002)
+
+Page #1
+Conditions
+None
+
+Graphic: WINGULL_female_shadow
+
+Autonomous Movement
+Type: Fixed
+Speed: 1: Slowest
+Freq: 4: High
+Options Enabled
+Move Animation
+Stop Animation
+Through
+Always on Top
+Trigger: Action Button
+
+List of Event Commands:
+@>
+
+#------------------------------------------------------------------------------
+Event ID: 018
+Event Name: EV018.sl
+(X,Y): (029,009)
+
+Page #1
+Conditions
+None
+
+Graphic: WINGULL_female_shadow
+
+Autonomous Movement
+Type: Fixed
+Speed: 1: Slowest
+Freq: 4: High
+Options Enabled
+Move Animation
+Stop Animation
+Through
+Always on Top
+Trigger: Action Button
+
+List of Event Commands:
+@>
+
+#------------------------------------------------------------------------------
+Event ID: 019
+Event Name: EV019.sl
+(X,Y): (051,038)
+
+Page #1
+Conditions
+None
+
+Graphic: WINGULL_female_shadow
+
+Autonomous Movement
+Type: Fixed
+Speed: 1: Slowest
+Freq: 4: High
+Options Enabled
+Move Animation
+Stop Animation
+Through
+Always on Top
+Trigger: Action Button
+
+List of Event Commands:
+@>
+
+#------------------------------------------------------------------------------
+Event ID: 020
+Event Name: EV020.sl
+(X,Y): (015,041)
+
+Page #1
+Conditions
+None
+
+Graphic: WINGULL_female_shadow
+
+Autonomous Movement
+Type: Fixed
+Speed: 1: Slowest
+Freq: 4: High
+Options Enabled
+Move Animation
+Stop Animation
+Through
+Always on Top
+Trigger: Action Button
+
+List of Event Commands:
+@>
+
+#------------------------------------------------------------------------------
+Event ID: 021
+Event Name: EV021.sl
+(X,Y): (008,013)
+
+Page #1
+Conditions
+None
+
+Graphic: WINGULL_shadow
+
+Autonomous Movement
+Type: Fixed
+Speed: 1: Slowest
+Freq: 4: High
+Options Enabled
+Move Animation
+Stop Animation
+Through
+Always on Top
+Trigger: Action Button
+
+List of Event Commands:
+@>
+
+#------------------------------------------------------------------------------
+Event ID: 022
+Event Name: EV022.sl
+(X,Y): (003,041)
+
+Page #1
+Conditions
+None
+
+Graphic: WINGULL_shadow
+
+Autonomous Movement
+Type: Fixed
+Speed: 1: Slowest
+Freq: 4: High
+Options Enabled
+Move Animation
+Stop Animation
+Through
+Always on Top
+Trigger: Action Button
+
+List of Event Commands:
+@>
+
+#------------------------------------------------------------------------------
+Event ID: 023
+Event Name: EV023.sl
+(X,Y): (034,048)
+
+Page #1
+Conditions
+None
+
+Graphic: WINGULL_shadow
+
+Autonomous Movement
+Type: Fixed
+Speed: 1: Slowest
+Freq: 4: High
+Options Enabled
+Move Animation
+Stop Animation
+Through
+Always on Top
+Trigger: Action Button
+
+List of Event Commands:
+@>
+
+#------------------------------------------------------------------------------
+Event ID: 024
+Event Name: EV024.sl
+(X,Y): (039,005)
+
+Page #1
+Conditions
+None
+
+Graphic: WINGULL_shadow
+
+Autonomous Movement
+Type: Fixed
+Speed: 1: Slowest
+Freq: 4: High
+Options Enabled
+Move Animation
+Stop Animation
+Through
+Always on Top
+Trigger: Action Button
+
+List of Event Commands:
+@>
+
+#------------------------------------------------------------------------------
 
 #==============================================================================
 Map ID: 652
@@ -502977,6 +503419,40 @@ List of Event Commands:
 @>
 
 #------------------------------------------------------------------------------
+Event ID: 020
+Event Name: smashrock
+(X,Y): (010,027)
+
+Page #1
+Conditions
+None
+
+Graphic: [RD]Obstacles3
+
+Autonomous Movement
+Type: Fixed
+Speed: 3: Slow
+Freq: 3: Low
+Options Enabled
+Move Animation
+Trigger: Action Button
+
+List of Event Commands:
+@>Set Move Route: This event
+ :              : $>Turn Down
+@>Conditional Branch: Script: pbRockSmash
+ @>Set Move Route: Player
+  :              : $>Stop Animation ON
+  :              : $>Wait: 6 frame(s)
+  :              : $>Stop Animation OFF
+ @>Script: pbSmashThisEvent
+ @>Script: pbRockSmashRandomEncounter
+ @>Script: pbRockSmashBonusItem
+ @>
+: Branch End
+@>
+
+#------------------------------------------------------------------------------
 
 #==============================================================================
 Map ID: 655
@@ -503212,6 +503688,82 @@ List of Event Commands:
 @>
 
 #------------------------------------------------------------------------------
+Event ID: 007
+Event Name: smashrock
+(X,Y): (032,029)
+
+Page #1
+Conditions
+None
+
+Graphic: [RD]Obstacles3
+
+Autonomous Movement
+Type: Fixed
+Speed: 3: Slow
+Freq: 3: Low
+Options Enabled
+Move Animation
+Trigger: Action Button
+
+List of Event Commands:
+@>Set Move Route: This event
+ :              : $>Turn Down
+@>Conditional Branch: Script: pbRockSmash
+ @>Set Move Route: Player
+  :              : $>Stop Animation ON
+  :              : $>Wait: 6 frame(s)
+  :              : $>Stop Animation OFF
+ @>Script: pbSmashThisEvent
+ @>Script: pbRockSmashRandomEncounter
+ @>Script: pbRockSmashBonusItem
+ @>
+: Branch End
+@>
+
+#------------------------------------------------------------------------------
+Event ID: 008
+Event Name: Item
+(X,Y): (029,019)
+
+Page #1
+Conditions
+None
+
+Graphic: Item017
+
+Autonomous Movement
+Type: Fixed
+Speed: 3: Slow
+Freq: 3: Low
+Options Enabled
+Move Animation
+Direction Fix
+Trigger: Action Button
+
+List of Event Commands:
+@>Conditional Branch: Script: pbItemBall(:TM98)
+ @>Control Self Switch: A =ON
+ @>
+: Branch End
+@>
+
+Page #2
+Conditions
+Self Switch A is ON
+
+Autonomous Movement
+Type: Fixed
+Speed: 3: Slow
+Freq: 3: Low
+Options Enabled
+Move Animation
+Trigger: Action Button
+
+List of Event Commands:
+@>
+
+#------------------------------------------------------------------------------
 
 #==============================================================================
 Map ID: 656
@@ -503402,6 +503954,48 @@ List of Event Commands:
  : Else
   @>
  : Branch End
+ @>Control Self Switch: A =ON
+ @>
+: Branch End
+@>
+
+Page #2
+Conditions
+Self Switch A is ON
+
+Autonomous Movement
+Type: Fixed
+Speed: 3: Slow
+Freq: 3: Low
+Options Enabled
+Move Animation
+Trigger: Action Button
+
+List of Event Commands:
+@>
+
+#------------------------------------------------------------------------------
+Event ID: 005
+Event Name: Item
+(X,Y): (051,045)
+
+Page #1
+Conditions
+None
+
+Graphic: Item017
+
+Autonomous Movement
+Type: Fixed
+Speed: 3: Slow
+Freq: 3: Low
+Options Enabled
+Move Animation
+Direction Fix
+Trigger: Action Button
+
+List of Event Commands:
+@>Conditional Branch: Script: pbItemBall(:TM72)
  @>Control Self Switch: A =ON
  @>
 : Branch End
@@ -511554,6 +512148,331 @@ List of Event Commands:
 @>
 
 #------------------------------------------------------------------------------
+Event ID: 022
+Event Name: EV022.sl
+(X,Y): (005,003)
+
+Page #1
+Conditions
+None
+
+Graphic: WINGULL_female_shadow
+
+Autonomous Movement
+Type: Fixed
+Speed: 1: Slowest
+Freq: 4: High
+Options Enabled
+Move Animation
+Stop Animation
+Through
+Always on Top
+Trigger: Action Button
+
+List of Event Commands:
+@>
+
+#------------------------------------------------------------------------------
+Event ID: 023
+Event Name: EV023.sl
+(X,Y): (008,022)
+
+Page #1
+Conditions
+None
+
+Graphic: WINGULL_female_shadow
+
+Autonomous Movement
+Type: Fixed
+Speed: 1: Slowest
+Freq: 4: High
+Options Enabled
+Move Animation
+Stop Animation
+Through
+Always on Top
+Trigger: Action Button
+
+List of Event Commands:
+@>
+
+#------------------------------------------------------------------------------
+Event ID: 024
+Event Name: EV024.sl
+(X,Y): (036,002)
+
+Page #1
+Conditions
+None
+
+Graphic: WINGULL_female_shadow
+
+Autonomous Movement
+Type: Fixed
+Speed: 1: Slowest
+Freq: 4: High
+Options Enabled
+Move Animation
+Stop Animation
+Through
+Always on Top
+Trigger: Action Button
+
+List of Event Commands:
+@>
+
+#------------------------------------------------------------------------------
+Event ID: 025
+Event Name: EV025.sl
+(X,Y): (062,003)
+
+Page #1
+Conditions
+None
+
+Graphic: WINGULL_female_shadow
+
+Autonomous Movement
+Type: Fixed
+Speed: 1: Slowest
+Freq: 4: High
+Options Enabled
+Move Animation
+Stop Animation
+Through
+Always on Top
+Trigger: Action Button
+
+List of Event Commands:
+@>
+
+#------------------------------------------------------------------------------
+Event ID: 026
+Event Name: EV026.sl
+(X,Y): (082,016)
+
+Page #1
+Conditions
+None
+
+Graphic: WINGULL_female_shadow
+
+Autonomous Movement
+Type: Fixed
+Speed: 1: Slowest
+Freq: 4: High
+Options Enabled
+Move Animation
+Stop Animation
+Through
+Always on Top
+Trigger: Action Button
+
+List of Event Commands:
+@>
+
+#------------------------------------------------------------------------------
+Event ID: 027
+Event Name: EV027.sl
+(X,Y): (081,030)
+
+Page #1
+Conditions
+None
+
+Graphic: WINGULL_female_shadow
+
+Autonomous Movement
+Type: Fixed
+Speed: 1: Slowest
+Freq: 4: High
+Options Enabled
+Move Animation
+Stop Animation
+Through
+Always on Top
+Trigger: Action Button
+
+List of Event Commands:
+@>
+
+#------------------------------------------------------------------------------
+Event ID: 028
+Event Name: EV028.sl
+(X,Y): (035,034)
+
+Page #1
+Conditions
+None
+
+Graphic: WINGULL_female_shadow
+
+Autonomous Movement
+Type: Fixed
+Speed: 1: Slowest
+Freq: 4: High
+Options Enabled
+Move Animation
+Stop Animation
+Through
+Always on Top
+Trigger: Action Button
+
+List of Event Commands:
+@>
+
+#------------------------------------------------------------------------------
+Event ID: 029
+Event Name: EV029.sl
+(X,Y): (061,034)
+
+Page #1
+Conditions
+None
+
+Graphic: WINGULL_female_shadow
+
+Autonomous Movement
+Type: Fixed
+Speed: 1: Slowest
+Freq: 4: High
+Options Enabled
+Move Animation
+Stop Animation
+Through
+Always on Top
+Trigger: Action Button
+
+List of Event Commands:
+@>
+
+#------------------------------------------------------------------------------
+Event ID: 030
+Event Name: EV030.sl
+(X,Y): (018,008)
+
+Page #1
+Conditions
+None
+
+Graphic: WINGULL_shadow
+
+Autonomous Movement
+Type: Fixed
+Speed: 1: Slowest
+Freq: 4: High
+Options Enabled
+Move Animation
+Stop Animation
+Through
+Always on Top
+Trigger: Action Button
+
+List of Event Commands:
+@>
+
+#------------------------------------------------------------------------------
+Event ID: 031
+Event Name: EV031.sl
+(X,Y): (058,017)
+
+Page #1
+Conditions
+None
+
+Graphic: WINGULL_shadow
+
+Autonomous Movement
+Type: Fixed
+Speed: 1: Slowest
+Freq: 4: High
+Options Enabled
+Move Animation
+Stop Animation
+Through
+Always on Top
+Trigger: Action Button
+
+List of Event Commands:
+@>
+
+#------------------------------------------------------------------------------
+Event ID: 032
+Event Name: EV032.sl
+(X,Y): (052,005)
+
+Page #1
+Conditions
+None
+
+Graphic: WINGULL_shadow
+
+Autonomous Movement
+Type: Fixed
+Speed: 1: Slowest
+Freq: 4: High
+Options Enabled
+Move Animation
+Stop Animation
+Through
+Always on Top
+Trigger: Action Button
+
+List of Event Commands:
+@>
+
+#------------------------------------------------------------------------------
+Event ID: 033
+Event Name: EV033.sl
+(X,Y): (071,035)
+
+Page #1
+Conditions
+None
+
+Graphic: WINGULL_shadow
+
+Autonomous Movement
+Type: Fixed
+Speed: 1: Slowest
+Freq: 4: High
+Options Enabled
+Move Animation
+Stop Animation
+Through
+Always on Top
+Trigger: Action Button
+
+List of Event Commands:
+@>
+
+#------------------------------------------------------------------------------
+Event ID: 034
+Event Name: EV034-sl
+(X,Y): (029,031)
+
+Page #1
+Conditions
+None
+
+Graphic: WINGULL_shadow
+
+Autonomous Movement
+Type: Fixed
+Speed: 1: Slowest
+Freq: 4: High
+Options Enabled
+Move Animation
+Stop Animation
+Through
+Always on Top
+Trigger: Action Button
+
+List of Event Commands:
+@>
+
+#------------------------------------------------------------------------------
 
 #==============================================================================
 Map ID: 671
@@ -513061,7 +513980,7 @@ List of Event Commands:
 
 #------------------------------------------------------------------------------
 Event ID: 005
-Event Name: EV005
+Event Name: EV005.sl
 (X,Y): (004,035)
 
 Page #1
@@ -513086,7 +514005,7 @@ List of Event Commands:
 
 #------------------------------------------------------------------------------
 Event ID: 006
-Event Name: EV006
+Event Name: EV006.sl
 (X,Y): (005,063)
 
 Page #1
@@ -513111,7 +514030,7 @@ List of Event Commands:
 
 #------------------------------------------------------------------------------
 Event ID: 007
-Event Name: EV007
+Event Name: EV007.sl
 (X,Y): (004,012)
 
 Page #1
@@ -513136,7 +514055,7 @@ List of Event Commands:
 
 #------------------------------------------------------------------------------
 Event ID: 008
-Event Name: EV008
+Event Name: EV008.sl
 (X,Y): (021,002)
 
 Page #1
@@ -513161,7 +514080,7 @@ List of Event Commands:
 
 #------------------------------------------------------------------------------
 Event ID: 009
-Event Name: EV009
+Event Name: EV009.sl
 (X,Y): (013,013)
 
 Page #1
@@ -513186,7 +514105,7 @@ List of Event Commands:
 
 #------------------------------------------------------------------------------
 Event ID: 010
-Event Name: EV010
+Event Name: EV010.sl
 (X,Y): (007,057)
 
 Page #1
@@ -513643,6 +514562,239 @@ Trigger: Action Button
 
 List of Event Commands:
 @>Script: pbBerryPlant
+@>
+
+#------------------------------------------------------------------------------
+Event ID: 022
+Event Name: Trader - Basic
+(X,Y): (007,053)
+
+Page #1
+Conditions
+None
+
+Graphic: NPC_Frau 13
+
+Autonomous Movement
+Type: Fixed
+Speed: 3: Slow
+Freq: 3: Low
+Options Enabled
+Move Animation
+Trigger: Action Button
+
+List of Event Commands:
+@>Text: \xn[Trainer Mia]Hey, ich suche ein Dragoran.
+@>Text: \xn[Trainer Mia]Ich traue mich aber nicht ins tiefe 
+ :    : Wasser.
+@>Text: \xn[Trainer Mia]Wenn man den Boden nicht sehen 
+ :    : kann, finde ich es gruselig.
+@>Text: \xn[Trainer Mia]Würdest du mir ein Dragoran 
+ :    : besorgen?
+@>Text: \xn[Trainer Mia]Du würdest von mir auch mein 
+ :    : besonderes Kokowei bekommen.
+@>Script: activateQuest(:Quest99)
+@>Script: pbSetSelfSwitch(23,"A",true)
+@>Control Self Switch: A =ON
+@>
+
+Page #2
+Conditions
+Self Switch A is ON
+
+Graphic: NPC_Frau 13
+
+Autonomous Movement
+Type: Fixed
+Speed: 3: Slow
+Freq: 3: Low
+Options Enabled
+Move Animation
+Trigger: Action Button
+
+List of Event Commands:
+@>Text: \xn[Trainer Mia]Hast du ein Dragoran?
+@>Show Choices: Ja, Nein
+(When Cancel: Choice 2)
+: When [Ja]
+ @>Text: \xn[Trainer Mia]Möchtest du es gegen mein 
+  :    : Kokowei tauschen?
+ @>Show Choices: Ja, Nein
+ (When Cancel: Choice 2)
+ : When [Ja]
+  @>Comment: The chosen Pokémon's party index goes in Game 
+   :       : Variable 1. A value of -1 means no Pokémon was 
+   :       : chosen.
+   :       : The chosen Pokémon's name goes in Game Variable 2.
+  @>Script: pbChoosePokemonForTrade(1, 2,
+  :       :   :DRAGONITE
+  :       : )
+  @>Conditional Branch: Variable [0001: Temp Pokemon Choice] == -1
+   @>Text: \xn[Trainer Mia]Du hast garkein Dragoran?
+   @>Text: \xn[Trainer Mia]Schade.
+   @>
+  : Else
+   @>Text: \xn[Trainer Mia]OK, dann lass uns tauschen!
+   @>Script: pbStartTrade(pbGet(1),
+   :       :   :EXEGGUTOR_1, _I("Langhals"), 
+   :       : _I("Mia")
+   :       : )
+   @>Text: \PN tauscht Dragoran gegen Kokowei!
+   @>Text: \xn[Trainer Mia]Vielen Dank!
+   @>Show Animation: [], [Pokemon Ball Out]
+   @>Wait: 10 frame(s)
+   @>Script: pbSetSelfSwitch(23,"B",true)
+   @>Show Animation: This event, [Happy bubble]
+   @>Wait: 24 frame(s)
+   @>Script: completeQuest(:Quest99)
+   @>Control Self Switch: B =ON
+   @>
+  : Branch End
+  @>
+ : When [Nein]
+  @>Text: \xn[Trainer Mia]Willst du wirklich nicht tauschen? 
+  @>Text: \xn[Trainer Mia]Schade.
+  @>Text: \xn[Trainer Mia]Ich hoffe du überlegst es dir nochmal.
+  @>
+ : Branch End
+ @>
+: When [Nein]
+ @>Text: \xn[Trainer Mia]Da hast gar kein Dragoran.
+ @>Text: \xn[Trainer Mia]Schade.
+ @>Text: \xn[Trainer Mia]Bitte geb mir Bescheid, wenn du 
+  :    : ein Dragoran gefangen hast und es tauschen 
+  :    : möchtest!
+ @>
+: Branch End
+@>
+
+Page #3
+Conditions
+Self Switch B is ON
+
+Graphic: NPC_Frau 13
+
+Autonomous Movement
+Type: Fixed
+Speed: 3: Slow
+Freq: 3: Low
+Options Enabled
+Move Animation
+Trigger: Action Button
+
+List of Event Commands:
+@>Text: \xn[Trainer Mia]Danke, dass du mit mir getauscht 
+ :    : hast.
+@>Text: \xn[Trainer Mia]Ich bin so glücklich mit Dragoran.
+@>Show Animation: This event, [Happy bubble]
+@>Wait: 24 frame(s)
+@>
+
+#------------------------------------------------------------------------------
+Event ID: 023
+Event Name: EV023
+(X,Y): (007,052)
+
+Page #1
+Conditions
+None
+
+Graphic: Quest Symbol
+
+Autonomous Movement
+Type: Fixed
+Speed: 2: Slower
+Freq: 6: Highest
+Options Enabled
+Move Animation
+Stop Animation
+Direction Fix
+Through
+Always on Top
+Trigger: Action Button
+
+List of Event Commands:
+@>
+
+Page #2
+Conditions
+Self Switch A is ON
+
+Graphic: Quest Symbol Solved
+
+Autonomous Movement
+Type: Fixed
+Speed: 2: Slower
+Freq: 6: Highest
+Options Enabled
+Move Animation
+Stop Animation
+Direction Fix
+Through
+Always on Top
+Trigger: Action Button
+
+List of Event Commands:
+@>
+
+Page #3
+Conditions
+Self Switch B is ON
+
+Graphic: DRAGONITE
+
+Autonomous Movement
+Type: Fixed
+Speed: 3: Slow
+Freq: 3: Low
+Options Enabled
+Move Animation
+Stop Animation
+Trigger: Action Button
+
+List of Event Commands:
+@>
+
+#------------------------------------------------------------------------------
+Event ID: 024
+Event Name: Item
+(X,Y): (059,044)
+
+Page #1
+Conditions
+None
+
+Graphic: Item017
+
+Autonomous Movement
+Type: Fixed
+Speed: 3: Slow
+Freq: 3: Low
+Options Enabled
+Move Animation
+Direction Fix
+Trigger: Action Button
+
+List of Event Commands:
+@>Conditional Branch: Script: pbItemBall(:TM59)
+ @>Control Self Switch: A =ON
+ @>
+: Branch End
+@>
+
+Page #2
+Conditions
+Self Switch A is ON
+
+Autonomous Movement
+Type: Fixed
+Speed: 3: Slow
+Freq: 3: Low
+Options Enabled
+Move Animation
+Trigger: Action Button
+
+List of Event Commands:
 @>
 
 #------------------------------------------------------------------------------
