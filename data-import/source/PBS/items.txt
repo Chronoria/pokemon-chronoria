@@ -7610,8 +7610,8 @@ Flags = KeyItem
 Description = Tauscht das Wesen eines Pokémon.
 #-------------------------------------------------------------------------------Einzigartig
 [CAMOUFLAGEITEM]
-Name = Tarnumhang
-NamePlural = Tarnumhänge
+Name = Camouflage-Umhang
+NamePlural = Camouflage-Umhänge
 Pocket = 8
 FieldUse = Direct
 Flags = KeyItem
