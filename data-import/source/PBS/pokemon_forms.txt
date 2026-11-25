@@ -1448,7 +1448,7 @@ RaidRanks = 4,5
 #-------------------------------
 [GYARADOS,2]
 FormName = Mega Garados
-MegaStone = GYARADOSITE
+MegaStone = GYARADOSITEX
 Types = WATER,DARK
 BaseStats = 95,155,109,81,70,130
 BaseExp = 224

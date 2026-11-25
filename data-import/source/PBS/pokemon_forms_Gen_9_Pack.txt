@@ -1785,7 +1785,7 @@ UnmegaForm = 1
 #-------------------------------
 [GYARADOS,3]
 FormName = Mega Garados
-MegaStone = GYARADOSITE
+MegaStone = GYARADOSITEY
 Types = WATER,DRAGON
 BaseStats = 100,165,125,70,60,125
 BaseExp = 224

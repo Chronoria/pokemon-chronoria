@@ -5353,9 +5353,18 @@ BPPrice = 50
 Flags = MegaStone,Fling_80
 Description = Dieser Stein ermöglicht Pinsir eine Mega-Entwicklung.
 #-------------------------------Einzigartig
-[GYARADOSITE]
-Name = Garadosnit
-NamePlural = Garadosnite
+[GYARADOSITEX]
+Name = Garadosnit X
+NamePlural = Garadosnite X
+Pocket = 6
+Price = 10000
+BPPrice = 50
+Flags = MegaStone,Fling_80
+Description = Dieser Stein ermöglicht Garados eine Mega-Entwicklung.
+#-------------------------------Einzigartig
+[GYARADOSITEY]
+Name = Garadosnit Y
+NamePlural = Garadosnite Y
 Pocket = 6
 Price = 10000
 BPPrice = 50
