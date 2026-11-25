@@ -5380,6 +5380,15 @@ BPPrice = 50
 Flags = MegaStone,Fling_80
 Description = Dieser Stein ermöglicht Tornupto eine Mega-Entwicklung.
 #-------------------------------Einzigartig
+[TORNUPTONITY]
+Name = Tornuptonit Y
+NamePlural = Tornuptonite Y
+Pocket = 6
+Price = 10000
+BPPrice = 50
+Flags = MegaStone,Fling_80
+Description = Dieser Stein ermöglicht Tornupto eine Mega-Entwicklung.
+#-------------------------------Einzigartig
 [AERODACTYLITE]
 Name = Aerodactylonit
 NamePlural = Aerodactylonite

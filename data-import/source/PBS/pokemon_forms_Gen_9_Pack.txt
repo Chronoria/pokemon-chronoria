@@ -1798,7 +1798,7 @@ UnmegaForm = 1
 #-------------------------------
 [TYPHLOSION,3]
 FormName = Mega Tornupto
-MegaStone = TORNUPTONITX
+MegaStone = TORNUPTONITY
 Types = FIRE,GHOST
 BaseStats = 80,80,98,105,160,110
 BaseExp = 350

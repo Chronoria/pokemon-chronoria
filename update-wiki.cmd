@@ -21,16 +21,29 @@ echo.
 echo === Pruefe Aenderungen ===
 git add -A
 git diff --cached --quiet
-if not errorlevel 1 (
+if errorlevel 1 goto :commit
+
+rem Keine neuen Aenderungen - aber vielleicht ist ein frueherer Push
+rem gescheitert (z.B. GitHub-Fehler) und ein Commit wartet noch.
+set "AHEAD=0"
+for /f %%n in ('git rev-list --count @{u}..HEAD 2^>nul') do set "AHEAD=%%n"
+if "%AHEAD%"=="0" (
     echo Keine Aenderungen an den Quelldaten - nichts zu committen/pushen.
     echo Item-Uebersicht.xlsx und Pokemon-Uebersicht.xlsx wurden trotzdem gerade neu gebaut.
     goto :end
 )
+echo Keine neuen Aenderungen, aber %AHEAD% Commit noch nicht hochgeladen - pushe ihn jetzt.
+goto :push
 
+:commit
 echo.
-echo === Committe und pushe ===
+echo === Committe ===
 git commit -m "Daten aktualisiert"
 if errorlevel 1 goto :error
+
+:push
+echo.
+echo === Pushe ===
 git push
 if errorlevel 1 goto :error
 
