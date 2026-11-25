@@ -5704,9 +5704,18 @@ BPPrice = 50
 Flags = MegaStone,Fling_80
 Description = Dieser Stein ermöglicht Lucario eine Mega-Entwicklung.
 #-------------------------------Einzigartig
-[ABOMASITE]
-Name = Rexblisarnit
-NamePlural = Rexblisarnite
+[ABOMASITEX]
+Name = Rexblisarnit X
+NamePlural = Rexblisarnite X
+Pocket = 6
+Price = 10000
+BPPrice = 50
+Flags = MegaStone,Fling_80
+Description = Dieser Stein ermöglicht Rexblisar eine Mega-Entwicklung.
+#-------------------------------Einzigartig
+[ABOMASITEY]
+Name = Rexblisarnit Y
+NamePlural = Rexblisarnite Y
 Pocket = 6
 Price = 10000
 BPPrice = 50

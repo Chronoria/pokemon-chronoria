@@ -164728,7 +164728,6 @@ List of Event Commands:
   :              : $>Change Speed: 2
   :              : $>Through ON
   :              : $>Move Upper Right
-  :              : $>Move Right
   :              : $>Through OFF
   :              : $>Change Speed: 3
  @>Script: follower_move_route
@@ -164736,7 +164735,6 @@ List of Event Commands:
   :              : $>Change Speed: 2
   :              : $>Through ON
   :              : $>Move Upper Right
-  :              : $>Move Right
   :              : $>Through OFF
   :              : $>Change Speed: 3
  @>
@@ -164765,7 +164763,6 @@ List of Event Commands:
  @>Set Move Route: Player
   :              : $>Change Speed: 2
   :              : $>Through ON
-  :              : $>Move Left
   :              : $>Move Lower Left
   :              : $>Through OFF
   :              : $>Change Speed: 3
@@ -164773,7 +164770,6 @@ List of Event Commands:
  @>Set Move Route: This event
   :              : $>Change Speed: 2
   :              : $>Through ON
-  :              : $>Move Left
   :              : $>Move Lower Left
   :              : $>Through OFF
   :              : $>Change Speed: 3
@@ -164783,7 +164779,6 @@ List of Event Commands:
   :              : $>Change Speed: 2
   :              : $>Through ON
   :              : $>Move Upper Right
-  :              : $>Move Right
   :              : $>Through OFF
   :              : $>Change Speed: 3
  @>Script: follower_move_route
@@ -164791,7 +164786,6 @@ List of Event Commands:
   :              : $>Change Speed: 2
   :              : $>Through ON
   :              : $>Move Upper Right
-  :              : $>Move Right
   :              : $>Through OFF
   :              : $>Change Speed: 3
  @>
@@ -164820,7 +164814,6 @@ List of Event Commands:
  @>Set Move Route: Player
   :              : $>Change Speed: 2
   :              : $>Through ON
-  :              : $>Move Left
   :              : $>Move Lower Left
   :              : $>Through OFF
   :              : $>Change Speed: 3
@@ -164828,7 +164821,6 @@ List of Event Commands:
  @>Set Move Route: This event
   :              : $>Change Speed: 2
   :              : $>Through ON
-  :              : $>Move Left
   :              : $>Move Lower Left
   :              : $>Through OFF
   :              : $>Change Speed: 3
@@ -238331,6 +238323,7 @@ List of Event Commands:
 @>Conditional Branch: Switch [0086: Fossilreste] == ON
  @>Text: Du hast einen \c[1]Seltsamen Stein
   :    :  \c[0]aufgesammelt.
+ @>Control Switches: [0087: Fossilreste eingesammelt] = ON
  @>Control Self Switch: A =ON
  @>
 : Else
@@ -239653,7 +239646,7 @@ List of Event Commands:
 
 #==============================================================================
 Map ID: 295
-Map Name: MAP295
+Map Name: Uvidusgrotte
 Tileset: 084: Terrakium
 Width: 50, Height: 50
 
@@ -239678,7 +239671,7 @@ List of Event Commands:
 @>Play SE: 'Door exit', 100, 100
 @>Change Screen Color Tone: (-255,-255,-255,0), @6
 @>Wait: 8 frame(s)
-@>Transfer Player:[731: MAP731], (015,007), Down, No Fade
+@>Transfer Player:[731: Uvidusgrotte], (015,007), Down, No Fade
 @>Change Screen Color Tone: (0,0,0,0), @6
 @>Wait: 8 frame(s)
 @>
@@ -239704,7 +239697,7 @@ List of Event Commands:
 @>Play SE: 'Door exit', 100, 100
 @>Change Screen Color Tone: (-255,-255,-255,0), @6
 @>Wait: 8 frame(s)
-@>Transfer Player:[296: MAP296], (023,025), Up, No Fade
+@>Transfer Player:[296: Uvidusgrotte], (023,025), Up, No Fade
 @>Change Screen Color Tone: (0,0,0,0), @6
 @>Set Move Route: Player
  :              : $>Change Speed: 2
@@ -239736,7 +239729,7 @@ List of Event Commands:
 @>Play SE: 'Door exit', 100, 100
 @>Change Screen Color Tone: (-255,-255,-255,0), @6
 @>Wait: 8 frame(s)
-@>Transfer Player:[296: MAP296], (010,010), Up, No Fade
+@>Transfer Player:[296: Uvidusgrotte], (010,010), Up, No Fade
 @>Change Screen Color Tone: (0,0,0,0), @6
 @>Set Move Route: Player
  :              : $>Change Speed: 2
@@ -239833,10 +239826,82 @@ List of Event Commands:
 @>
 
 #------------------------------------------------------------------------------
+Event ID: 006
+Event Name: StrengthBoulder
+(X,Y): (018,028)
+
+Page #1
+Conditions
+None
+
+Graphic: Object boulder
+
+Autonomous Movement
+Type: Fixed
+Speed: 2: Slower
+Freq: 3: Low
+Options Enabled
+Move Animation
+Trigger: Player Touch
+
+List of Event Commands:
+@>Script: pbPushThisBoulder
+@>
+
+Page #2
+Conditions
+Switch 0058: Boulder down hole ice cave is ON
+
+Autonomous Movement
+Type: Fixed
+Speed: 3: Slow
+Freq: 3: Low
+Options Enabled
+Move Animation
+Trigger: Action Button
+
+List of Event Commands:
+@>
+
+#------------------------------------------------------------------------------
+Event ID: 007
+Event Name: smashrock
+(X,Y): (033,018)
+
+Page #1
+Conditions
+None
+
+Graphic: [RD]Obstacles3
+
+Autonomous Movement
+Type: Fixed
+Speed: 3: Slow
+Freq: 3: Low
+Options Enabled
+Move Animation
+Trigger: Action Button
+
+List of Event Commands:
+@>Set Move Route: This event
+ :              : $>Turn Down
+@>Conditional Branch: Script: pbRockSmash
+ @>Set Move Route: Player
+  :              : $>Stop Animation ON
+  :              : $>Wait: 6 frame(s)
+  :              : $>Stop Animation OFF
+ @>Script: pbSmashThisEvent
+ @>Script: pbRockSmashRandomEncounter
+ @>Script: pbRockSmashBonusItem
+ @>
+: Branch End
+@>
+
+#------------------------------------------------------------------------------
 
 #==============================================================================
 Map ID: 296
-Map Name: MAP296
+Map Name: Uvidusgrotte
 Tileset: 084: Terrakium
 Width: 40, Height: 40
 
@@ -239861,7 +239926,7 @@ List of Event Commands:
 @>Play SE: 'Door exit', 100, 100
 @>Change Screen Color Tone: (-255,-255,-255,0), @6
 @>Wait: 8 frame(s)
-@>Transfer Player:[297: MAP297], (006,011), Up, No Fade
+@>Transfer Player:[297: Uvidusgrotte], (006,011), Up, No Fade
 @>Change Screen Color Tone: (0,0,0,0), @6
 @>Set Move Route: Player
  :              : $>Change Speed: 2
@@ -239893,7 +239958,7 @@ List of Event Commands:
 @>Play SE: 'Door exit', 100, 100
 @>Change Screen Color Tone: (-255,-255,-255,0), @6
 @>Wait: 8 frame(s)
-@>Transfer Player:[295: MAP295], (007,014), Up, No Fade
+@>Transfer Player:[295: Uvidusgrotte], (007,014), Up, No Fade
 @>Change Screen Color Tone: (0,0,0,0), @6
 @>Wait: 6 frame(s)
 @>Script: Followers.hide_followers
@@ -239931,7 +239996,7 @@ List of Event Commands:
 @>Play SE: 'Door exit', 100, 100
 @>Change Screen Color Tone: (-255,-255,-255,0), @6
 @>Wait: 8 frame(s)
-@>Transfer Player:[295: MAP295], (020,024), Up, No Fade
+@>Transfer Player:[295: Uvidusgrotte], (020,024), Up, No Fade
 @>Change Screen Color Tone: (0,0,0,0), @6
 @>Wait: 6 frame(s)
 @>Script: Followers.hide_followers
@@ -240033,10 +240098,48 @@ List of Event Commands:
 @>
 
 #------------------------------------------------------------------------------
+Event ID: 006
+Event Name: StrengthBoulder
+(X,Y): (025,028)
+
+Page #1
+Conditions
+None
+
+Graphic: Object boulder
+
+Autonomous Movement
+Type: Fixed
+Speed: 2: Slower
+Freq: 3: Low
+Options Enabled
+Move Animation
+Trigger: Player Touch
+
+List of Event Commands:
+@>Script: pbPushThisBoulder
+@>
+
+Page #2
+Conditions
+Switch 0058: Boulder down hole ice cave is ON
+
+Autonomous Movement
+Type: Fixed
+Speed: 3: Slow
+Freq: 3: Low
+Options Enabled
+Move Animation
+Trigger: Action Button
+
+List of Event Commands:
+@>
+
+#------------------------------------------------------------------------------
 
 #==============================================================================
 Map ID: 297
-Map Name: MAP297
+Map Name: Uvidusgrotte
 Tileset: 084: Terrakium
 Width: 30, Height: 20
 
@@ -240087,7 +240190,7 @@ List of Event Commands:
 @>Play SE: 'Door exit', 100, 100
 @>Change Screen Color Tone: (-255,-255,-255,0), @6
 @>Wait: 8 frame(s)
-@>Transfer Player:[296: MAP296], (028,011), Up, No Fade
+@>Transfer Player:[296: Uvidusgrotte], (028,011), Up, No Fade
 @>Change Screen Color Tone: (0,0,0,0), @6
 @>Wait: 6 frame(s)
 @>Script: Followers.hide_followers
@@ -240148,6 +240251,24 @@ List of Event Commands:
 @>
 
 #------------------------------------------------------------------------------
+
+#==============================================================================
+Map ID: 298
+Map Name: Kapu-Toro
+Tileset: 141: 
+Width: 20, Height: 15
+
+#==============================================================================
+Map ID: 299
+Map Name: Kapu-Riki
+Tileset: 151: Dracheninsel3
+Width: 20, Height: 15
+
+#==============================================================================
+Map ID: 300
+Map Name: Kapu-Fala
+Tileset: 145: Route 22
+Width: 20, Height: 15
 
 #==============================================================================
 Map ID: 305
@@ -380188,6 +380309,44 @@ List of Event Commands:
 @>
 
 #------------------------------------------------------------------------------
+Event ID: 050
+Event Name: StrengthBoulder
+(X,Y): (019,010)
+
+Page #1
+Conditions
+None
+
+Graphic: Object boulder
+
+Autonomous Movement
+Type: Fixed
+Speed: 2: Slower
+Freq: 3: Low
+Options Enabled
+Move Animation
+Trigger: Player Touch
+
+List of Event Commands:
+@>Script: pbPushThisBoulder
+@>
+
+Page #2
+Conditions
+Switch 0058: Boulder down hole ice cave is ON
+
+Autonomous Movement
+Type: Fixed
+Speed: 3: Slow
+Freq: 3: Low
+Options Enabled
+Move Animation
+Trigger: Action Button
+
+List of Event Commands:
+@>
+
+#------------------------------------------------------------------------------
 
 #==============================================================================
 Map ID: 452
@@ -391522,6 +391681,895 @@ Trigger: Action Button
 
 List of Event Commands:
 @>Play SE: 'FLAMIGO', 100, 100
+@>
+
+#------------------------------------------------------------------------------
+Event ID: 013
+Event Name: Quest 1
+(X,Y): (034,025)
+
+Page #1
+Conditions
+None
+
+Graphic: trainer_BIRDKEEPER_M
+
+Autonomous Movement
+Type: Fixed
+Speed: 3: Slow
+Freq: 3: Low
+Options Enabled
+Move Animation
+Trigger: Action Button
+
+List of Event Commands:
+@>Text: \xn[Vogelfänger Anan]Ich habe soviele coole 
+ :    : Dinge erlebt seitdem ich Mitglied des 
+ :    : Vogelfänger-Clubs bin.
+@>Text: \xn[Vogelfänger Anan]Wenn du Lust auf Abenteuer 
+ :    : hast solltest du uns unbedingt beitreten.
+@>Wait: 8 frame(s)
+@>Set Move Route: This event
+ :              : $>Turn Left
+@>
+
+Page #2
+Conditions
+Switch 0393: Vogelfänger Aufnahme is ON
+
+Graphic: trainer_BIRDKEEPER_M
+
+Autonomous Movement
+Type: Fixed
+Speed: 3: Slow
+Freq: 3: Low
+Options Enabled
+Move Animation
+Trigger: Action Button
+
+List of Event Commands:
+@>Text: \xn[Vogelfänger Anan]Du bist jetzt also auch ein 
+ :    : Mitglied des Vogelfänger-Clubs.
+@>Show Animation: This event, [Happy bubble]
+@>Wait: 24 frame(s)
+@>Text: \xn[Vogelfänger Anan]Könntest du mir dann bitte 
+ :    : einen Gefallen tun.
+@>Text: \xn[Vogelfänger Anan]Auf Route 9 befindet sich ein 
+ :    : Washakwil-Horst.
+@>Text: \xn[Vogelfänger Anan]Aber jedes Mal, wenn ich da 
+ :    : bin, ist es leer.
+@>Text: \xn[Vogelfänger Anan]Würdest du für mich 
+ :    : nachschauen, ob dort mittlerweile ein Ei liegt?
+@>Text: \xn[Vogelfänger Anan]Und falls ja, würdest du mir 
+ :    : dieses bitte mitbringen?
+@>Text: \xn[Vogelfänger Anan]Ich würde dir auch eine 
+ :    : Belohnung geben.
+@>Script: activateQuest(:Quest63)
+@>Script: pbSetSelfSwitch(9,"A",true)
+@>Wait: 8 frame(s)
+@>Set Move Route: This event
+ :              : $>Turn Left
+@>Control Self Switch: A =ON
+@>
+
+Page #3
+Conditions
+Self Switch A is ON
+
+Graphic: trainer_BIRDKEEPER_M
+
+Autonomous Movement
+Type: Fixed
+Speed: 4: Fast
+Freq: 3: Low
+Options Enabled
+Move Animation
+Trigger: Action Button
+
+List of Event Commands:
+@>Text: \xn[Vogelfänger Anan]Wusstest du, dass die 
+ :    : männlichen Washakwil auf die Eier aufpassen?
+@>Text: \xn[Vogelfänger Anan]Apropos, hast du schon im 
+ :    : Horst nachgeschaut?
+@>Text: \xn[Vogelfänger Anan]Es muss unbedigt das Ei 
+ :    : eines wilden Washakwil sein.
+@>Text: \xn[Vogelfänger Anan]Ich gehe da einer Theorie nach 
+ :    : und deswegen darf es kein Ei aus einer Pension 
+ :    : sein.
+@>Conditional Branch: Switch [0394: Washakwil Ei] == ON
+ @>Text: \xn[Vogelfänger Anan]Wow!
+ @>Show Animation: This event, [Exclaim bubble]
+ @>Wait: 12 frame(s)
+ @>Text: \xn[Vogelfänger Anan]Da war wirklich ein Ei?
+ @>Text: \xn[Vogelfänger Anan]Ach wäre ich doch selbst 
+  :    : nachschauen gewesen.
+ @>Text: \xn[Vogelfänger Anan]Trotzdem vielen Dank, dass du 
+  :    : mir das Ei besorgt hast.
+ @>Script: completeQuest(:Quest63)
+ @>Script: pbSetSelfSwitch(9,"B",true)
+ @>Text: \xn[Vogelfänger Anan]Jetzt kann ich endlich meiner 
+  :    : Theorie nachgehen.
+ @>Show Animation: This event, [Heart Emote]
+ @>Wait: 20 frame(s)
+ @>Text: \xn[Vogelfänger Anan]Ich habe dir eine Belohnung 
+  :    : versprochen und...
+ @>Text: \xn[Vogelfänger Anan]diese sollst du auch erhalten.
+ @>Script: pbReceiveItem(:UTILITYUMBRELLA)
+ @>Control Variables: [0130: Vogelfänger Mitglied] += 1
+ @>Wait: 8 frame(s)
+ @>Set Move Route: This event
+  :              : $>Turn Left
+ @>Control Self Switch: B =ON
+ @>
+: Else
+ @>Text: \xn[Vogelfänger Anan]Diese Vögel brüten nur sehr 
+  :    : selten.
+ @>Text: \xn[Vogelfänger Anan]Du musst den richtigen Moment 
+  :    : abpassen.
+ @>Wait: 8 frame(s)
+ @>Set Move Route: This event
+  :              : $>Turn Left
+ @>
+: Branch End
+@>
+
+Page #4
+Conditions
+Self Switch B is ON
+
+Graphic: trainer_BIRDKEEPER_M
+
+Autonomous Movement
+Type: Fixed
+Speed: 3: Slow
+Freq: 3: Low
+Options Enabled
+Move Animation
+Trigger: Action Button
+
+List of Event Commands:
+@>Text: \xn[Vogelfänger Anan]Meiner Theorie nach sind 
+ :    : Pokémon aus wilden Eiern stärker.
+@>Text: \xn[Vogelfänger Anan]Ich muss jetzt nur noch das Ei 
+ :    : zum Schlüpfen bringen.
+@>Text: \xn[Vogelfänger Anan]Am besten setze ich mich 
+ :    : drauf, um es schön warm zu halten.
+@>Wait: 8 frame(s)
+@>Set Move Route: This event
+ :              : $>Turn Left
+@>
+
+#------------------------------------------------------------------------------
+Event ID: 014
+Event Name: HB1
+(X,Y): (035,027)
+
+Page #1
+Conditions
+None
+
+Graphic: POKEFAN_M
+
+Autonomous Movement
+Type: Fixed
+Speed: 3: Slow
+Freq: 3: Low
+Options Enabled
+Move Animation
+Trigger: Action Button
+
+List of Event Commands:
+@>Text: \xn[Wolfgang]Hi, mein Name ist Wolfgang.
+@>Text: \xn[Wolfgang]Ich sammle ganze besondere Düfte.
+@>Text: \xn[Wolfgang]Wenn du möchtest, kannst du mir bei 
+ :    : meinem Vorhaben helfen.
+@>Script: activateQuest(:Quest18)
+@>Text: \xn[Wolfgang]Ich habe gehört, dass es in der Arena 
+ :    : von Lunafeld ein Sleima mit einem extravaganten
+ :    : Duft gibt.
+@>Text: \xn[Wolfgang]Wenn du mir dieses Sleima bringen 
+ :    : kannst, habe ich etwas für dich.
+@>Script: pbSetSelfSwitch(3,"A",true)
+@>Control Self Switch: A =ON
+@>
+
+Page #2
+Conditions
+Self Switch A is ON
+
+Graphic: POKEFAN_M
+
+Autonomous Movement
+Type: Fixed
+Speed: 3: Slow
+Freq: 3: Low
+Options Enabled
+Move Animation
+Trigger: Action Button
+
+List of Event Commands:
+@>Text: \xn[Wolfgang]Wenn du mir das Sleima aus der Arena 
+ :    : in Lunafeld bringen kannst, habe ich etwas für dich.
+@>Conditional Branch: Script: $player.party[0].species == :GRIMER
+ @>Text: \xn[Wolfgang]Oh, da ist ja genau das Sleima, das ich 
+  :    : brauche.
+ @>Text: \xn[Wolfgang]Würdest du mich einmal schnell den 
+  :    : Duft extrahieren lassen?
+ @>Show Choices: Ja, Nein
+ (When Cancel: Choice 2)
+ : When [Ja]
+  @>Set Move Route: This event
+   :              : $>Turn away from Player
+   :              : $>Wait: 20 frame(s)
+   :              : $>Turn toward Player
+  @>Wait for Move's Completion
+  @>Text: \xn[Wolfgang]Hammer, vielen Dank!
+  @>Text: \xn[Wolfgang]Das ist für dich.
+  @>Script: pbReceiveItem(:TM06)
+  @>Wait: 20 frame(s)
+  @>Text: \xn[Wolfgang]Toxin trifft immer, wenn der Anwender 
+   :    : ein Gift-Pokémon ist.
+  @>Text: \xn[Wolfgang]Wo du schonmal hier bist, ich könnte 
+   :    : wieder deine Hilfe gebrauchen.
+  @>Text: \xn[Wolfgang]Skunkapuh ist für seinen 
+   :    : markanten Duft bekannt.
+  @>Text: \xn[Wolfgang]Es soll auf Route 4 zu finden sein.
+  @>Text: \xn[Wolfgang]Wenn du mir das Skunkapuh bringen 
+   :    : kannst, habe ich wieder eine Belohnung für dich.
+  @>Script: advanceQuestToStage(:Quest18, 2)
+  @>Control Self Switch: B =ON
+  @>
+ : When [Nein]
+  @>Text: \xn[Wolfgang]Wenn du es dir anders überlegst, du 
+   :    : findest mich hier.
+  @>
+ : Branch End
+ @>
+: Else
+ @>Conditional Branch: Script: $player.party[1].species == :GRIMER
+  @>Text: \xn[Wolfgang]Oh, da ist ja genau das Sleima, das ich 
+   :    : brauche.
+  @>Text: \xn[Wolfgang]Würdest du mich einmal schnell den 
+   :    : Duft extrahieren lassen?
+  @>Show Choices: Ja, Nein
+  (When Cancel: Choice 2)
+  : When [Ja]
+   @>Set Move Route: This event
+    :              : $>Turn away from Player
+    :              : $>Wait: 20 frame(s)
+    :              : $>Turn toward Player
+   @>Wait for Move's Completion
+   @>Text: \xn[Wolfgang]Hammer, vielen Dank!
+   @>Text: \xn[Wolfgang]Das ist für dich.
+   @>Script: pbReceiveItem(:TM06)
+   @>Wait: 20 frame(s)
+   @>Text: \xn[Wolfgang]Wo du schonmal hier bist, ich könnte 
+    :    : wieder deine Hilfe gebrauchen.
+   @>Text: \xn[Wolfgang]Skunkapuh ist für seinen 
+    :    : markanten Duft bekannt.
+   @>Text: \xn[Wolfgang]Es soll auf Route 4 zu finden sein.
+   @>Text: \xn[Wolfgang]Wenn du mir das Skunkapuh bringen 
+    :    : kannst, habe ich wieder eine Belohnung für dich.
+   @>Script: advanceQuestToStage(:Quest18, 2)
+   @>Control Self Switch: B =ON
+   @>
+  : When [Nein]
+   @>Text: \xn[Wolfgang]Wenn du es dir anders überlegst, du 
+    :    : findest mich hier.
+   @>
+  : Branch End
+  @>
+ : Else
+  @>Conditional Branch: Script: $player.party[2].species == :GRIMER
+   @>Text: \xn[Wolfgang]Oh, da ist ja genau das Sleima, das ich 
+    :    : brauche.
+   @>Text: \xn[Wolfgang]Würdest du mich einmal schnell den 
+    :    : Duft extrahieren lassen?
+   @>Show Choices: Ja, Nein
+   (When Cancel: Choice 2)
+   : When [Ja]
+    @>Set Move Route: This event
+     :              : $>Turn away from Player
+     :              : $>Wait: 20 frame(s)
+     :              : $>Turn toward Player
+    @>Wait for Move's Completion
+    @>Text: \xn[Wolfgang]Hammer, vielen Dank!
+    @>Text: \xn[Wolfgang]Das ist für dich.
+    @>Script: pbReceiveItem(:TM06)
+    @>Wait: 20 frame(s)
+    @>Text: \xn[Wolfgang]Wo du schonmal hier bist, ich könnte 
+     :    : wieder deine Hilfe gebrauchen.
+    @>Text: \xn[Wolfgang]Skunkapuh ist für seinen 
+     :    : markanten Duft bekannt.
+    @>Text: \xn[Wolfgang]Es soll auf Route 4 zu finden sein.
+    @>Text: \xn[Wolfgang]Wenn du mir das Skunkapuh bringen 
+     :    : kannst, habe ich wieder eine Belohnung für dich.
+    @>Script: advanceQuestToStage(:Quest18, 2)
+    @>Control Self Switch: B =ON
+    @>
+   : When [Nein]
+    @>Text: \xn[Wolfgang]Wenn du es dir anders überlegst, du 
+     :    : findest mich hier.
+    @>
+   : Branch End
+   @>
+  : Else
+   @>Conditional Branch: Script: $player.party[3].species == :GRIMER
+    @>Text: \xn[Wolfgang]Oh, da ist ja genau das Sleima, das ich 
+     :    : brauche.
+    @>Text: \xn[Wolfgang]Würdest du mich einmal schnell den 
+     :    : Duft extrahieren lassen?
+    @>Show Choices: Ja, Nein
+    (When Cancel: Choice 2)
+    : When [Ja]
+     @>Set Move Route: This event
+      :              : $>Turn away from Player
+      :              : $>Wait: 20 frame(s)
+      :              : $>Turn toward Player
+     @>Wait for Move's Completion
+     @>Text: \xn[Wolfgang]Hammer, vielen Dank!
+     @>Text: \xn[Wolfgang]Das ist für dich.
+     @>Script: pbReceiveItem(:TM06)
+     @>Wait: 20 frame(s)
+     @>Text: \xn[Wolfgang]Wo du schonmal hier bist, ich könnte 
+      :    : wieder deine Hilfe gebrauchen.
+     @>Text: \xn[Wolfgang]Skunkapuh ist für seinen 
+      :    : markanten Duft bekannt.
+     @>Text: \xn[Wolfgang]Es soll auf Route 4 zu finden sein.
+     @>Text: \xn[Wolfgang]Wenn du mir das Skunkapuh bringen 
+      :    : kannst, habe ich wieder eine Belohnung für dich.
+     @>Script: advanceQuestToStage(:Quest18, 2)
+     @>Control Self Switch: B =ON
+     @>
+    : When [Nein]
+     @>Text: \xn[Wolfgang]Wenn du es dir anders überlegst, du 
+      :    : findest mich hier.
+     @>
+    : Branch End
+    @>
+   : Else
+    @>Conditional Branch: Script: $player.party[4].species == :GRIMER
+     @>Text: \xn[Wolfgang]Oh, da ist ja genau das Sleima, das ich 
+      :    : brauche.
+     @>Text: \xn[Wolfgang]Würdest du mich einmal schnell den 
+      :    : Duft extrahieren lassen?
+     @>Show Choices: Ja, Nein
+     (When Cancel: Choice 2)
+     : When [Ja]
+      @>Set Move Route: This event
+       :              : $>Turn away from Player
+       :              : $>Wait: 20 frame(s)
+       :              : $>Turn toward Player
+      @>Wait for Move's Completion
+      @>Text: \xn[Wolfgang]Hammer, vielen Dank!
+      @>Text: \xn[Wolfgang]Das ist für dich.
+      @>Script: pbReceiveItem(:TM06)
+      @>Wait: 20 frame(s)
+      @>Text: \xn[Wolfgang]Wo du schonmal hier bist, ich könnte 
+       :    : wieder deine Hilfe gebrauchen.
+      @>Text: \xn[Wolfgang]Skunkapuh ist für seinen 
+       :    : markanten Duft bekannt.
+      @>Text: \xn[Wolfgang]Es soll auf Route 4 zu finden sein.
+      @>Text: \xn[Wolfgang]Wenn du mir das Skunkapuh bringen 
+       :    : kannst, habe ich wieder eine Belohnung für dich.
+      @>Script: advanceQuestToStage(:Quest18, 2)
+      @>Control Self Switch: B =ON
+      @>
+     : When [Nein]
+      @>Text: \xn[Wolfgang]Wenn du es dir anders überlegst, du 
+       :    : findest mich hier.
+      @>
+     : Branch End
+     @>
+    : Else
+     @>Conditional Branch: Script: $player.party[5].species == :GRIMER
+      @>Text: \xn[Wolfgang]Oh, da ist ja genau das Sleima, das ich 
+       :    : brauche.
+      @>Text: \xn[Wolfgang]Würdest du mich einmal schnell den 
+       :    : Duft extrahieren lassen?
+      @>Show Choices: Ja, Nein
+      (When Cancel: Choice 2)
+      : When [Ja]
+       @>Set Move Route: This event
+        :              : $>Turn away from Player
+        :              : $>Wait: 20 frame(s)
+        :              : $>Turn toward Player
+       @>Wait for Move's Completion
+       @>Text: \xn[Wolfgang]Hammer, vielen Dank!
+       @>Text: \xn[Wolfgang]Das ist für dich.
+       @>Script: pbReceiveItem(:TM06)
+       @>Wait: 20 frame(s)
+       @>Text: \xn[Wolfgang]Wo du schonmal hier bist, ich könnte 
+        :    : wieder deine Hilfe gebrauchen.
+       @>Text: \xn[Wolfgang]Skunkapuh ist für seinen 
+        :    : markanten Duft bekannt.
+       @>Text: \xn[Wolfgang]Es soll auf Route 4 zu finden sein.
+       @>Text: \xn[Wolfgang]Wenn du mir das Skunkapuh bringen 
+        :    : kannst, habe ich wieder eine Belohnung für dich.
+       @>Script: advanceQuestToStage(:Quest18, 2)
+       @>Control Self Switch: B =ON
+       @>
+      : When [Nein]
+       @>Text: \xn[Wolfgang]Wenn du es dir anders überlegst, du 
+        :    : findest mich hier.
+       @>
+      : Branch End
+      @>
+     : Else
+      @>
+     : Branch End
+     @>
+    : Branch End
+    @>
+   : Branch End
+   @>
+  : Branch End
+  @>
+ : Branch End
+ @>
+: Branch End
+@>
+
+Page #3
+Conditions
+Self Switch B is ON
+
+Graphic: POKEFAN_M
+
+Autonomous Movement
+Type: Fixed
+Speed: 3: Slow
+Freq: 3: Low
+Options Enabled
+Move Animation
+Trigger: Action Button
+
+List of Event Commands:
+@>Text: \xn[Wolfgang]Wenn du mir das Skunkapuh bringen 
+ :    : kannst, habe ich wieder eine Belohnung für dich.
+@>Conditional Branch: Script: $player.party[0].species == :STUNKY
+ @>Text: \xn[Wolfgang]Da ist ja das Skunkapuh.
+ @>Text: \xn[Wolfgang]Würdest du mir das Pokémon kurz für 
+  :    : seinen Duft überlassen?
+ @>Show Choices: Ja, Nein
+ (When Cancel: Choice 2)
+ : When [Ja]
+  @>Set Move Route: This event
+   :              : $>Turn away from Player
+   :              : $>Wait: 20 frame(s)
+   :              : $>Turn toward Player
+  @>Wait for Move's Completion
+  @>Text: \xn[Wolfgang]Genial!
+  @>Text: \xn[Wolfgang]Das hast du dir verdient.
+  @>Script: pbReceiveItem(:ABILITYSHIELD)
+  @>Text: \xn[Wolfgang]Meine Sammlung ist fast vollständig.
+  @>Text: \xn[Wolfgang]Ein letztes Mal werde ich dich nun um 
+   :    : deine Unterstützung bitten.
+  @>Text: \xn[Wolfgang]Das ultimative Dufterlebnis soll man mit 
+   :    : Deponitox haben.
+  @>Text: \xn[Wolfgang]Würdest du mir eins zeigen?
+  @>Script: advanceQuestToStage(:Quest18, 3)
+  @>Control Self Switch: C =ON
+  @>
+ : When [Nein]
+  @>Text: \xn[Wolfgang]Wenn du es dir anders überlegst, du 
+   :    : findest mich hier.
+  @>
+ : Branch End
+ @>
+: Else
+ @>Conditional Branch: Script: $player.party[1].species == :STUNKY
+  @>Text: \xn[Wolfgang]Da ist ja das Skunkapuh.
+  @>Text: \xn[Wolfgang]Würdest du mir das Pokémon kurz für 
+   :    : seinen Duft überlassen?
+  @>Show Choices: Ja, Nein
+  (When Cancel: Choice 2)
+  : When [Ja]
+   @>Set Move Route: This event
+    :              : $>Turn away from Player
+    :              : $>Wait: 20 frame(s)
+    :              : $>Turn toward Player
+   @>Wait for Move's Completion
+   @>Text: \xn[Wolfgang]Genial!
+   @>Text: \xn[Wolfgang]Das hast du dir verdient.
+   @>Script: pbReceiveItem(:POISONBARB)
+   @>Text: \xn[Wolfgang]Meine Sammlung ist fast vollständig.
+   @>Text: \xn[Wolfgang]Ein letztes Mal werde ich dich nun um 
+    :    : deine Unterstützung bitten.
+   @>Text: \xn[Wolfgang]Das ultimative Dufterlebnis soll man mit 
+    :    : Deponitox haben.
+   @>Text: \xn[Wolfgang]Würdest du mir eins zeigen?
+   @>Script: advanceQuestToStage(:Quest18, 3)
+   @>Control Self Switch: C =ON
+   @>
+  : When [Nein]
+   @>Text: \xn[Wolfgang]Wenn du es dir anders überlegst, du 
+    :    : findest mich hier.
+   @>
+  : Branch End
+  @>
+ : Else
+  @>Conditional Branch: Script: $player.party[2].species == :STUNKY
+   @>Text: \xn[Wolfgang]Da ist ja das Skunkapuh.
+   @>Text: \xn[Wolfgang]Würdest du mir das Pokémon kurz für 
+    :    : seinen Duft überlassen?
+   @>Show Choices: Ja, Nein
+   (When Cancel: Choice 2)
+   : When [Ja]
+    @>Set Move Route: This event
+     :              : $>Turn away from Player
+     :              : $>Wait: 20 frame(s)
+     :              : $>Turn toward Player
+    @>Wait for Move's Completion
+    @>Text: \xn[Wolfgang]Genial!
+    @>Text: \xn[Wolfgang]Das hast du dir verdient.
+    @>Script: pbReceiveItem(:POISONBARB)
+    @>Text: \xn[Wolfgang]Meine Sammlung ist fast vollständig.
+    @>Text: \xn[Wolfgang]Ein letztes Mal werde ich dich nun um 
+     :    : deine Unterstützung bitten.
+    @>Text: \xn[Wolfgang]Das ultimative Dufterlebnis soll man mit 
+     :    : Deponitox haben.
+    @>Text: \xn[Wolfgang]Würdest du mir eins zeigen?
+    @>Script: advanceQuestToStage(:Quest18, 3)
+    @>Control Self Switch: C =ON
+    @>
+   : When [Nein]
+    @>Text: \xn[Wolfgang]Wenn du es dir anders überlegst, du 
+     :    : findest mich hier.
+    @>
+   : Branch End
+   @>
+  : Else
+   @>Conditional Branch: Script: $player.party[3].species == :STUNKY
+    @>Text: \xn[Wolfgang]Da ist ja das Skunkapuh.
+    @>Text: \xn[Wolfgang]Würdest du mir das Pokémon kurz für 
+     :    : seinen Duft überlassen?
+    @>Show Choices: Ja, Nein
+    (When Cancel: Choice 2)
+    : When [Ja]
+     @>Set Move Route: This event
+      :              : $>Turn away from Player
+      :              : $>Wait: 20 frame(s)
+      :              : $>Turn toward Player
+     @>Wait for Move's Completion
+     @>Text: \xn[Wolfgang]Genial!
+     @>Text: \xn[Wolfgang]Das hast du dir verdient.
+     @>Script: pbReceiveItem(:POISONBARB)
+     @>Text: \xn[Wolfgang]Meine Sammlung ist fast vollständig.
+     @>Text: \xn[Wolfgang]Ein letztes Mal werde ich dich nun um 
+      :    : deine Unterstützung bitten.
+     @>Text: \xn[Wolfgang]Das ultimative Dufterlebnis soll man mit 
+      :    : Deponitox haben.
+     @>Text: \xn[Wolfgang]Würdest du mir eins zeigen?
+     @>Script: advanceQuestToStage(:Quest18, 3)
+     @>Control Self Switch: C =ON
+     @>
+    : When [Nein]
+     @>Text: \xn[Wolfgang]Wenn du es dir anders überlegst, du 
+      :    : findest mich hier.
+     @>
+    : Branch End
+    @>
+   : Else
+    @>Conditional Branch: Script: $player.party[4].species == :STUNKY
+     @>Text: \xn[Wolfgang]Da ist ja das Skunkapuh.
+     @>Text: \xn[Wolfgang]Würdest du mir das Pokémon kurz für 
+      :    : seinen Duft überlassen?
+     @>Show Choices: Ja, Nein
+     (When Cancel: Choice 2)
+     : When [Ja]
+      @>Set Move Route: This event
+       :              : $>Turn away from Player
+       :              : $>Wait: 20 frame(s)
+       :              : $>Turn toward Player
+      @>Wait for Move's Completion
+      @>Text: \xn[Wolfgang]Genial!
+      @>Text: \xn[Wolfgang]Das hast du dir verdient.
+      @>Script: pbReceiveItem(:POISONBARB)
+      @>Text: \xn[Wolfgang]Meine Sammlung ist fast vollständig.
+      @>Text: \xn[Wolfgang]Ein letztes Mal werde ich dich nun um 
+       :    : deine Unterstützung bitten.
+      @>Text: \xn[Wolfgang]Das ultimative Dufterlebnis soll man mit 
+       :    : Deponitox haben.
+      @>Text: \xn[Wolfgang]Würdest du mir eins zeigen?
+      @>Script: advanceQuestToStage(:Quest18, 3)
+      @>Control Self Switch: C =ON
+      @>
+     : When [Nein]
+      @>Text: \xn[Wolfgang]Wenn du es dir anders überlegst, du 
+       :    : findest mich hier.
+      @>
+     : Branch End
+     @>
+    : Else
+     @>Conditional Branch: Script: $player.party[5].species == :STUNKY
+      @>Text: \xn[Wolfgang]Da ist ja das Skunkapuh.
+      @>Text: \xn[Wolfgang]Würdest du mir das Pokémon kurz für 
+       :    : seinen Duft überlassen?
+      @>Show Choices: Ja, Nein
+      (When Cancel: Choice 2)
+      : When [Ja]
+       @>Set Move Route: This event
+        :              : $>Turn away from Player
+        :              : $>Wait: 20 frame(s)
+        :              : $>Turn toward Player
+       @>Wait for Move's Completion
+       @>Text: \xn[Wolfgang]Genial!
+       @>Text: \xn[Wolfgang]Das hast du dir verdient.
+       @>Script: pbReceiveItem(:POISONBARB)
+       @>Text: \xn[Wolfgang]Meine Sammlung ist fast vollständig.
+       @>Text: \xn[Wolfgang]Ein letztes Mal werde ich dich nun um 
+        :    : deine Unterstützung bitten.
+       @>Text: \xn[Wolfgang]Das ultimative Dufterlebnis soll man mit 
+        :    : Deponitox haben.
+       @>Text: \xn[Wolfgang]Würdest du mir eins zeigen?
+       @>Script: advanceQuestToStage(:Quest18, 3)
+       @>Control Self Switch: C =ON
+       @>
+      : When [Nein]
+       @>Text: \xn[Wolfgang]Wenn du es dir anders überlegst, du 
+        :    : findest mich hier.
+       @>
+      : Branch End
+      @>
+     : Else
+      @>
+     : Branch End
+     @>
+    : Branch End
+    @>
+   : Branch End
+   @>
+  : Branch End
+  @>
+ : Branch End
+ @>
+: Branch End
+@>
+
+Page #4
+Conditions
+Self Switch C is ON
+
+Graphic: POKEFAN_M
+
+Autonomous Movement
+Type: Fixed
+Speed: 3: Slow
+Freq: 3: Low
+Options Enabled
+Move Animation
+Trigger: Action Button
+
+List of Event Commands:
+@>Text: \xn[Wolfgang]Mit dem Duft eines Deponitox wäre ich 
+ :    : wunschlos glücklich.
+@>Conditional Branch: Script: $player.party[0].species == :GARBODOR
+ @>Text: \xn[Wolfgang]Das ist genau das Pokémon, das ich 
+  :    : gesucht habe.
+ @>Text: \xn[Wolfgang]Darf ich kurz?
+ @>Show Choices: Ja, Nein
+ (When Cancel: Choice 2)
+ : When [Ja]
+  @>Set Move Route: This event
+   :              : $>Turn away from Player
+   :              : $>Wait: 20 frame(s)
+   :              : $>Turn toward Player
+  @>Wait for Move's Completion
+  @>Text: \xn[Wolfgang]Ein Traum!
+  @>Text: \xn[Wolfgang]Dank dir konnte ich meine 
+   :    : Duftsammlung vervollständigen.
+  @>Text: \xn[Wolfgang]Was ich damit vorhabe?
+  @>Text: \xn[Wolfgang]Das wird wohl für immer mein 
+   :    : Geheimnis bleiben.
+  @>Text: \xn[Wolfgang]Aber für deine Mühe erhälst du das 
+   :    : hier.
+  @>Script: pbReceiveItem(:TOXICORB)
+  @>Script: completeQuest(:Quest18)
+  @>Script: pbSetSelfSwitch(3,"B",true)
+  @>Control Self Switch: D =ON
+  @>
+ : When [Nein]
+  @>Text: \xn[Wolfgang]Wenn du es dir anders überlegst, du 
+   :    : findest mich hier.
+  @>
+ : Branch End
+ @>
+: Else
+ @>Conditional Branch: Script: $player.party[1].species == :GARBODOR
+  @>Text: \xn[Wolfgang]Das ist genau das Pokémon, das ich 
+   :    : gesucht habe.
+  @>Text: \xn[Wolfgang]Darf ich kurz?
+  @>Show Choices: Ja, Nein
+  (When Cancel: Choice 2)
+  : When [Ja]
+   @>Set Move Route: This event
+    :              : $>Turn away from Player
+    :              : $>Wait: 20 frame(s)
+    :              : $>Turn toward Player
+   @>Wait for Move's Completion
+   @>Text: \xn[Wolfgang]Ein Traum!
+   @>Text: \xn[Wolfgang]Dank dir konnte ich meine 
+    :    : Duftsammlung vervollständigen.
+   @>Text: \xn[Wolfgang]Was ich damit vorhabe?
+   @>Text: \xn[Wolfgang]Das wird wohl für immer mein 
+    :    : Geheimnis bleiben.
+   @>Text: \xn[Wolfgang]Aber für deine Mühe erhälst du das 
+    :    : hier.
+   @>Script: pbReceiveItem(:TOXICORB)
+   @>Script: completeQuest(:Quest18)
+   @>Script: pbSetSelfSwitch(3,"B",true)
+   @>Control Self Switch: D =ON
+   @>
+  : When [Nein]
+   @>Text: \xn[Wolfgang]Wenn du es dir anders überlegst, du 
+    :    : findest mich hier.
+   @>
+  : Branch End
+  @>
+ : Else
+  @>Conditional Branch: Script: $player.party[2].species == :GARBODOR
+   @>Text: \xn[Wolfgang]Das ist genau das Pokémon, das ich 
+    :    : gesucht habe.
+   @>Text: \xn[Wolfgang]Darf ich kurz?
+   @>Show Choices: Ja, Nein
+   (When Cancel: Choice 2)
+   : When [Ja]
+    @>Set Move Route: This event
+     :              : $>Turn away from Player
+     :              : $>Wait: 20 frame(s)
+     :              : $>Turn toward Player
+    @>Wait for Move's Completion
+    @>Text: \xn[Wolfgang]Ein Traum!
+    @>Text: \xn[Wolfgang]Dank dir konnte ich meine 
+     :    : Duftsammlung vervollständigen.
+    @>Text: \xn[Wolfgang]Was ich damit vorhabe?
+    @>Text: \xn[Wolfgang]Das wird wohl für immer mein 
+     :    : Geheimnis bleiben.
+    @>Text: \xn[Wolfgang]Aber für deine Mühe erhälst du das 
+     :    : hier.
+    @>Script: pbReceiveItem(:TOXICORB)
+    @>Script: completeQuest(:Quest18)
+    @>Script: pbSetSelfSwitch(3,"B",true)
+    @>Control Self Switch: D =ON
+    @>
+   : When [Nein]
+    @>Text: \xn[Wolfgang]Wenn du es dir anders überlegst, du 
+     :    : findest mich hier.
+    @>
+   : Branch End
+   @>
+  : Else
+   @>Conditional Branch: Script: $player.party[3].species == :GARBODOR
+    @>Text: \xn[Wolfgang]Das ist genau das Pokémon, das ich 
+     :    : gesucht habe.
+    @>Text: \xn[Wolfgang]Darf ich kurz?
+    @>Show Choices: Ja, Nein
+    (When Cancel: Choice 2)
+    : When [Ja]
+     @>Set Move Route: This event
+      :              : $>Turn away from Player
+      :              : $>Wait: 20 frame(s)
+      :              : $>Turn toward Player
+     @>Wait for Move's Completion
+     @>Text: \xn[Wolfgang]Ein Traum!
+     @>Text: \xn[Wolfgang]Dank dir konnte ich meine 
+      :    : Duftsammlung vervollständigen.
+     @>Text: \xn[Wolfgang]Was ich damit vorhabe?
+     @>Text: \xn[Wolfgang]Das wird wohl für immer mein 
+      :    : Geheimnis bleiben.
+     @>Text: \xn[Wolfgang]Aber für deine Mühe erhälst du das 
+      :    : hier.
+     @>Script: pbReceiveItem(:TOXICORB)
+     @>Script: completeQuest(:Quest18)
+     @>Script: pbSetSelfSwitch(3,"B",true)
+     @>Control Self Switch: D =ON
+     @>
+    : When [Nein]
+     @>Text: \xn[Wolfgang]Wenn du es dir anders überlegst, du 
+      :    : findest mich hier.
+     @>
+    : Branch End
+    @>
+   : Else
+    @>Conditional Branch: Script: $player.party[4].species == :GARBODOR
+     @>Text: \xn[Wolfgang]Das ist genau das Pokémon, das ich 
+      :    : gesucht habe.
+     @>Text: \xn[Wolfgang]Darf ich kurz?
+     @>Show Choices: Ja, Nein
+     (When Cancel: Choice 2)
+     : When [Ja]
+      @>Set Move Route: This event
+       :              : $>Turn away from Player
+       :              : $>Wait: 20 frame(s)
+       :              : $>Turn toward Player
+      @>Wait for Move's Completion
+      @>Text: \xn[Wolfgang]Ein Traum!
+      @>Text: \xn[Wolfgang]Dank dir konnte ich meine 
+       :    : Duftsammlung vervollständigen.
+      @>Text: \xn[Wolfgang]Was ich damit vorhabe?
+      @>Text: \xn[Wolfgang]Das wird wohl für immer mein 
+       :    : Geheimnis bleiben.
+      @>Text: \xn[Wolfgang]Aber für deine Mühe erhälst du das 
+       :    : hier.
+      @>Script: pbReceiveItem(:TOXICORB)
+      @>Script: completeQuest(:Quest18)
+      @>Script: pbSetSelfSwitch(3,"B",true)
+      @>Control Self Switch: D =ON
+      @>
+     : When [Nein]
+      @>Text: \xn[Wolfgang]Wenn du es dir anders überlegst, du 
+       :    : findest mich hier.
+      @>
+     : Branch End
+     @>
+    : Else
+     @>Conditional Branch: Script: $player.party[5].species == :GARBODOR
+      @>Text: \xn[Wolfgang]Das ist genau das Pokémon, das ich 
+       :    : gesucht habe.
+      @>Text: \xn[Wolfgang]Darf ich kurz?
+      @>Show Choices: Ja, Nein
+      (When Cancel: Choice 2)
+      : When [Ja]
+       @>Set Move Route: This event
+        :              : $>Turn away from Player
+        :              : $>Wait: 20 frame(s)
+        :              : $>Turn toward Player
+       @>Wait for Move's Completion
+       @>Text: \xn[Wolfgang]Ein Traum!
+       @>Text: \xn[Wolfgang]Dank dir konnte ich meine 
+        :    : Duftsammlung vervollständigen.
+       @>Text: \xn[Wolfgang]Was ich damit vorhabe?
+       @>Text: \xn[Wolfgang]Das wird wohl für immer mein 
+        :    : Geheimnis bleiben.
+       @>Text: \xn[Wolfgang]Aber für deine Mühe erhälst du das 
+        :    : hier.
+       @>Script: pbReceiveItem(:TOXICORB)
+       @>Script: completeQuest(:Quest18)
+       @>Script: pbSetSelfSwitch(3,"B",true)
+       @>Control Self Switch: D =ON
+       @>
+      : When [Nein]
+       @>Text: \xn[Wolfgang]Wenn du es dir anders überlegst, du 
+        :    : findest mich hier.
+       @>
+      : Branch End
+      @>
+     : Else
+      @>
+     : Branch End
+     @>
+    : Branch End
+    @>
+   : Branch End
+   @>
+  : Branch End
+  @>
+ : Branch End
+ @>
+: Branch End
+@>
+
+Page #5
+Conditions
+Self Switch D is ON
+
+Graphic: POKEFAN_M
+
+Autonomous Movement
+Type: Random
+Speed: 3: Slow
+Freq: 3: Low
+Options Enabled
+Move Animation
+Trigger: Action Button
+
+List of Event Commands:
+@>Text: \xn[Wolfgang]Dank dir konnte ich meine 
+ :    : Duftsammlung vervollständigen.
+@>Text: \xn[Wolfgang]Was ich damit vorhabe?
+@>Text: \xn[Wolfgang]Das wird wohl für immer mein 
+ :    : Geheimnis bleiben.
 @>
 
 #------------------------------------------------------------------------------
@@ -503453,6 +504501,174 @@ List of Event Commands:
 @>
 
 #------------------------------------------------------------------------------
+Event ID: 021
+Event Name: EV021
+(X,Y): (029,036)
+
+Page #1
+Conditions
+None
+
+Autonomous Movement
+Type: Fixed
+Speed: 3: Slow
+Freq: 3: Low
+Options Enabled
+Move Animation
+Trigger: Event Touch
+
+List of Event Commands:
+@>Script: pbBridgeOn
+@>
+
+#------------------------------------------------------------------------------
+Event ID: 022
+Event Name: EV022
+(X,Y): (016,025)
+
+Page #1
+Conditions
+None
+
+Autonomous Movement
+Type: Fixed
+Speed: 3: Slow
+Freq: 3: Low
+Options Enabled
+Move Animation
+Trigger: Event Touch
+
+List of Event Commands:
+@>Script: pbBridgeOn
+@>
+
+#------------------------------------------------------------------------------
+Event ID: 023
+Event Name: EV023
+(X,Y): (016,026)
+
+Page #1
+Conditions
+None
+
+Autonomous Movement
+Type: Fixed
+Speed: 3: Slow
+Freq: 3: Low
+Options Enabled
+Move Animation
+Trigger: Event Touch
+
+List of Event Commands:
+@>Script: pbBridgeOn
+@>
+
+#------------------------------------------------------------------------------
+Event ID: 024
+Event Name: EV024
+(X,Y): (015,037)
+
+Page #1
+Conditions
+None
+
+Autonomous Movement
+Type: Fixed
+Speed: 3: Slow
+Freq: 3: Low
+Options Enabled
+Move Animation
+Trigger: Event Touch
+
+List of Event Commands:
+@>Script: pbBridgeOn
+@>
+
+#------------------------------------------------------------------------------
+Event ID: 025
+Event Name: EV025
+(X,Y): (015,038)
+
+Page #1
+Conditions
+None
+
+Autonomous Movement
+Type: Fixed
+Speed: 3: Slow
+Freq: 3: Low
+Options Enabled
+Move Animation
+Trigger: Event Touch
+
+List of Event Commands:
+@>Script: pbBridgeOn
+@>
+
+#------------------------------------------------------------------------------
+Event ID: 026
+Event Name: EV026
+(X,Y): (017,044)
+
+Page #1
+Conditions
+None
+
+Autonomous Movement
+Type: Fixed
+Speed: 3: Slow
+Freq: 3: Low
+Options Enabled
+Move Animation
+Trigger: Event Touch
+
+List of Event Commands:
+@>Script: pbBridgeOff
+@>
+
+#------------------------------------------------------------------------------
+Event ID: 027
+Event Name: EV027
+(X,Y): (018,044)
+
+Page #1
+Conditions
+None
+
+Autonomous Movement
+Type: Fixed
+Speed: 3: Slow
+Freq: 3: Low
+Options Enabled
+Move Animation
+Trigger: Event Touch
+
+List of Event Commands:
+@>Script: pbBridgeOff
+@>
+
+#------------------------------------------------------------------------------
+Event ID: 028
+Event Name: EV028
+(X,Y): (019,044)
+
+Page #1
+Conditions
+None
+
+Autonomous Movement
+Type: Fixed
+Speed: 3: Slow
+Freq: 3: Low
+Options Enabled
+Move Animation
+Trigger: Event Touch
+
+List of Event Commands:
+@>Script: pbBridgeOff
+@>
+
+#------------------------------------------------------------------------------
 
 #==============================================================================
 Map ID: 655
@@ -503689,14 +504905,30 @@ List of Event Commands:
 
 #------------------------------------------------------------------------------
 Event ID: 007
-Event Name: smashrock
-(X,Y): (032,029)
+Event Name: StrengthBoulder
+(X,Y): (030,026)
 
 Page #1
 Conditions
 None
 
-Graphic: [RD]Obstacles3
+Graphic: Object boulder 2
+
+Autonomous Movement
+Type: Fixed
+Speed: 2: Slower
+Freq: 3: Low
+Options Enabled
+Move Animation
+Trigger: Player Touch
+
+List of Event Commands:
+@>Script: pbPushThisBoulder
+@>
+
+Page #2
+Conditions
+Switch 0058: Boulder down hole ice cave is ON
 
 Autonomous Movement
 Type: Fixed
@@ -503707,18 +504939,6 @@ Move Animation
 Trigger: Action Button
 
 List of Event Commands:
-@>Set Move Route: This event
- :              : $>Turn Down
-@>Conditional Branch: Script: pbRockSmash
- @>Set Move Route: Player
-  :              : $>Stop Animation ON
-  :              : $>Wait: 6 frame(s)
-  :              : $>Stop Animation OFF
- @>Script: pbSmashThisEvent
- @>Script: pbRockSmashRandomEncounter
- @>Script: pbRockSmashBonusItem
- @>
-: Branch End
 @>
 
 #------------------------------------------------------------------------------
@@ -513875,7 +515095,7 @@ List of Event Commands:
 #==============================================================================
 Map ID: 674
 Map Name: Route 22
-Tileset: 145: Route 21
+Tileset: 145: Route 22
 Width: 65, Height: 65
 Auto-Change BGM: B2W2 326 Route 22 (Autumn & Winter)
 
@@ -525386,7 +526606,7 @@ List of Event Commands:
 @>Play SE: 'Door exit', 100, 100
 @>Change Screen Color Tone: (-255,-255,-255,0), @6
 @>Wait: 8 frame(s)
-@>Transfer Player:[731: MAP731], (017,027), Up, No Fade
+@>Transfer Player:[731: Uvidusgrotte], (017,027), Up, No Fade
 @>Change Screen Color Tone: (0,0,0,0), @6
 @>Wait: 6 frame(s)
 @>
@@ -525861,7 +527081,7 @@ List of Event Commands:
 @>Play SE: 'Door exit', 100, 100
 @>Change Screen Color Tone: (-255,-255,-255,0), @6
 @>Wait: 8 frame(s)
-@>Transfer Player:[729: MAP729], (017,027), Up, No Fade
+@>Transfer Player:[729: Uvidusgrotte], (017,027), Up, No Fade
 @>Change Screen Color Tone: (0,0,0,0), @6
 @>Wait: 6 frame(s)
 @>
@@ -525993,7 +527213,7 @@ List of Event Commands:
 Map ID: 728
 Map Name: Route 23
 Tileset: 151: Dracheninsel3
-Width: 60, Height: 80
+Width: 150, Height: 120
 
 #------------------------------------------------------------------------------
 Event ID: 001
@@ -526077,7 +527297,7 @@ List of Event Commands:
 
 #==============================================================================
 Map ID: 729
-Map Name: MAP729
+Map Name: Uvidusgrotte
 Tileset: 084: Terrakium
 Width: 38, Height: 34
 
@@ -526128,7 +527348,7 @@ List of Event Commands:
 @>Play SE: 'Door exit', 100, 100
 @>Change Screen Color Tone: (-255,-255,-255,0), @6
 @>Wait: 8 frame(s)
-@>Transfer Player:[730: MAP730], (047,043), Right, No Fade
+@>Transfer Player:[730: Uvidusgrotte], (047,043), Right, No Fade
 @>Change Screen Color Tone: (0,0,0,0), @6
 @>Wait: 8 frame(s)
 @>
@@ -526154,7 +527374,7 @@ List of Event Commands:
 @>Play SE: 'Door exit', 100, 100
 @>Change Screen Color Tone: (-255,-255,-255,0), @6
 @>Wait: 8 frame(s)
-@>Transfer Player:[730: MAP730], (033,032), Up, No Fade
+@>Transfer Player:[730: Uvidusgrotte], (033,032), Up, No Fade
 @>Change Screen Color Tone: (0,0,0,0), @6
 @>Wait: 6 frame(s)
 @>
@@ -526187,10 +527407,44 @@ List of Event Commands:
 @>
 
 #------------------------------------------------------------------------------
+Event ID: 004
+Event Name: smashrock
+(X,Y): (015,008)
+
+Page #1
+Conditions
+None
+
+Graphic: [RD]Obstacles3
+
+Autonomous Movement
+Type: Fixed
+Speed: 3: Slow
+Freq: 3: Low
+Options Enabled
+Move Animation
+Trigger: Action Button
+
+List of Event Commands:
+@>Set Move Route: This event
+ :              : $>Turn Down
+@>Conditional Branch: Script: pbRockSmash
+ @>Set Move Route: Player
+  :              : $>Stop Animation ON
+  :              : $>Wait: 6 frame(s)
+  :              : $>Stop Animation OFF
+ @>Script: pbSmashThisEvent
+ @>Script: pbRockSmashRandomEncounter
+ @>Script: pbRockSmashBonusItem
+ @>
+: Branch End
+@>
+
+#------------------------------------------------------------------------------
 
 #==============================================================================
 Map ID: 730
-Map Name: MAP730
+Map Name: Uvidusgrotte
 Tileset: 084: Terrakium
 Width: 70, Height: 60
 
@@ -526215,7 +527469,7 @@ List of Event Commands:
 @>Play SE: 'Door exit', 100, 100
 @>Change Screen Color Tone: (-255,-255,-255,0), @6
 @>Wait: 8 frame(s)
-@>Transfer Player:[729: MAP729], (015,007), Down, No Fade
+@>Transfer Player:[729: Uvidusgrotte], (015,007), Down, No Fade
 @>Change Screen Color Tone: (0,0,0,0), @6
 @>Wait: 8 frame(s)
 @>
@@ -526241,7 +527495,7 @@ List of Event Commands:
 @>Play SE: 'Door exit', 100, 100
 @>Change Screen Color Tone: (-255,-255,-255,0), @6
 @>Wait: 8 frame(s)
-@>Transfer Player:[729: MAP729], (029,018), Left, No Fade
+@>Transfer Player:[729: Uvidusgrotte], (029,018), Left, No Fade
 @>Change Screen Color Tone: (0,0,0,0), @6
 @>Wait: 8 frame(s)
 @>
@@ -526267,7 +527521,7 @@ List of Event Commands:
 @>Play SE: 'Door exit', 100, 100
 @>Change Screen Color Tone: (-255,-255,-255,0), @6
 @>Wait: 8 frame(s)
-@>Transfer Player:[731: MAP731], (032,018), Left, No Fade
+@>Transfer Player:[731: Uvidusgrotte], (032,018), Left, No Fade
 @>Change Screen Color Tone: (0,0,0,0), @6
 @>Wait: 8 frame(s)
 @>
@@ -526293,7 +527547,7 @@ List of Event Commands:
 @>Play SE: 'Door exit', 100, 100
 @>Change Screen Color Tone: (-255,-255,-255,0), @6
 @>Wait: 8 frame(s)
-@>Transfer Player:[731: MAP731], (032,019), Left, No Fade
+@>Transfer Player:[731: Uvidusgrotte], (032,019), Left, No Fade
 @>Change Screen Color Tone: (0,0,0,0), @6
 @>Wait: 8 frame(s)
 @>
@@ -526319,7 +527573,7 @@ List of Event Commands:
 @>Play SE: 'Door exit', 100, 100
 @>Change Screen Color Tone: (-255,-255,-255,0), @6
 @>Wait: 8 frame(s)
-@>Transfer Player:[731: MAP731], (032,020), Left, No Fade
+@>Transfer Player:[731: Uvidusgrotte], (032,020), Left, No Fade
 @>Change Screen Color Tone: (0,0,0,0), @6
 @>Wait: 8 frame(s)
 @>
@@ -526345,7 +527599,7 @@ List of Event Commands:
 @>Play SE: 'Door exit', 100, 100
 @>Change Screen Color Tone: (-255,-255,-255,0), @6
 @>Wait: 8 frame(s)
-@>Transfer Player:[731: MAP731], (032,021), Left, No Fade
+@>Transfer Player:[731: Uvidusgrotte], (032,021), Left, No Fade
 @>Change Screen Color Tone: (0,0,0,0), @6
 @>Wait: 8 frame(s)
 @>
@@ -526354,7 +527608,7 @@ List of Event Commands:
 
 #==============================================================================
 Map ID: 731
-Map Name: MAP731
+Map Name: Uvidusgrotte
 Tileset: 084: Terrakium
 Width: 34, Height: 34
 
@@ -526379,7 +527633,7 @@ List of Event Commands:
 @>Play SE: 'Door exit', 100, 100
 @>Change Screen Color Tone: (-255,-255,-255,0), @6
 @>Wait: 8 frame(s)
-@>Transfer Player:[730: MAP730], (001,037), Right, No Fade
+@>Transfer Player:[730: Uvidusgrotte], (001,037), Right, No Fade
 @>Change Screen Color Tone: (0,0,0,0), @6
 @>Wait: 8 frame(s)
 @>
@@ -526405,7 +527659,7 @@ List of Event Commands:
 @>Play SE: 'Door exit', 100, 100
 @>Change Screen Color Tone: (-255,-255,-255,0), @6
 @>Wait: 8 frame(s)
-@>Transfer Player:[730: MAP730], (001,038), Right, No Fade
+@>Transfer Player:[730: Uvidusgrotte], (001,038), Right, No Fade
 @>Change Screen Color Tone: (0,0,0,0), @6
 @>Wait: 8 frame(s)
 @>
@@ -526431,7 +527685,7 @@ List of Event Commands:
 @>Play SE: 'Door exit', 100, 100
 @>Change Screen Color Tone: (-255,-255,-255,0), @6
 @>Wait: 8 frame(s)
-@>Transfer Player:[730: MAP730], (001,039), Right, No Fade
+@>Transfer Player:[730: Uvidusgrotte], (001,039), Right, No Fade
 @>Change Screen Color Tone: (0,0,0,0), @6
 @>Wait: 8 frame(s)
 @>
@@ -526457,7 +527711,7 @@ List of Event Commands:
 @>Play SE: 'Door exit', 100, 100
 @>Change Screen Color Tone: (-255,-255,-255,0), @6
 @>Wait: 8 frame(s)
-@>Transfer Player:[730: MAP730], (001,040), Right, No Fade
+@>Transfer Player:[730: Uvidusgrotte], (001,040), Right, No Fade
 @>Change Screen Color Tone: (0,0,0,0), @6
 @>Wait: 8 frame(s)
 @>
@@ -526509,7 +527763,7 @@ List of Event Commands:
 @>Play SE: 'Door exit', 100, 100
 @>Change Screen Color Tone: (-255,-255,-255,0), @6
 @>Wait: 8 frame(s)
-@>Transfer Player:[295: MAP295], (040,041), Up, No Fade
+@>Transfer Player:[295: Uvidusgrotte], (040,041), Up, No Fade
 @>Change Screen Color Tone: (0,0,0,0), @6
 @>Wait: 6 frame(s)
 @>
@@ -526539,6 +527793,40 @@ List of Event Commands:
  @>
 : Branch End
 @>Script: setTempSwitchOn("A")
+@>
+
+#------------------------------------------------------------------------------
+Event ID: 007
+Event Name: smashrock
+(X,Y): (015,008)
+
+Page #1
+Conditions
+None
+
+Graphic: [RD]Obstacles3
+
+Autonomous Movement
+Type: Fixed
+Speed: 3: Slow
+Freq: 3: Low
+Options Enabled
+Move Animation
+Trigger: Action Button
+
+List of Event Commands:
+@>Set Move Route: This event
+ :              : $>Turn Down
+@>Conditional Branch: Script: pbRockSmash
+ @>Set Move Route: Player
+  :              : $>Stop Animation ON
+  :              : $>Wait: 6 frame(s)
+  :              : $>Stop Animation OFF
+ @>Script: pbSmashThisEvent
+ @>Script: pbRockSmashRandomEncounter
+ @>Script: pbRockSmashBonusItem
+ @>
+: Branch End
 @>
 
 #------------------------------------------------------------------------------
@@ -526872,7 +528160,7 @@ List of Event Commands:
 @>Play SE: 'Door exit', 100, 100
 @>Change Screen Color Tone: (-255,-255,-255,0), @6
 @>Wait: 8 frame(s)
-@>Transfer Player:[297: MAP297], (023,013), Up, No Fade
+@>Transfer Player:[297: Uvidusgrotte], (023,013), Up, No Fade
 @>Change Screen Color Tone: (0,0,0,0), @6
 @>Wait: 6 frame(s)
 @>
@@ -527151,6 +528439,40 @@ Trigger: Autorun
 List of Event Commands:
 @>Control Self Switch: A =OFF
 @>Script: setTempSwitchOn("A")
+@>
+
+#------------------------------------------------------------------------------
+Event ID: 007
+Event Name: smashrock
+(X,Y): (016,035)
+
+Page #1
+Conditions
+None
+
+Graphic: [RD]Obstacles3
+
+Autonomous Movement
+Type: Fixed
+Speed: 3: Slow
+Freq: 3: Low
+Options Enabled
+Move Animation
+Trigger: Action Button
+
+List of Event Commands:
+@>Set Move Route: This event
+ :              : $>Turn Down
+@>Conditional Branch: Script: pbRockSmash
+ @>Set Move Route: Player
+  :              : $>Stop Animation ON
+  :              : $>Wait: 6 frame(s)
+  :              : $>Stop Animation OFF
+ @>Script: pbSmashThisEvent
+ @>Script: pbRockSmashRandomEncounter
+ @>Script: pbRockSmashBonusItem
+ @>
+: Branch End
 @>
 
 #------------------------------------------------------------------------------

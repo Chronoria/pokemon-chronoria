@@ -42,3 +42,11 @@ module ChronoriaRegionalEvolutions
     })
   end
 end
+
+#===============================================================================
+# Quilava: form 1 is the Johto form here (Typhlosion form 1 = Jotho, there is no
+# Hisuian Typhlosion). The Gen 9 Pack rule reset every Quilava outside the Hisui
+# region to form 0, so a Johto Cyndaquil evolved into a Chrono Quilava. Without
+# a form rule, Quilava simply keeps its form.
+#===============================================================================
+MultipleForms.register(:QUILAVA, {})

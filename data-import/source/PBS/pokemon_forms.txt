@@ -25,6 +25,7 @@ Habitat = Grassland
 Category = Seed
 Pokedex = Bulbasaur can be seen napping in bright sunlight. There is a seed on its back. By soaking up the sun's rays, the seed grows progressively larger.
 Generation = 1
+Flags = InheritFormWithEverStone
 Evolutions = IVYSAUR,Level,16
 #-------------------------------
 [IVYSAUR,1]
@@ -51,6 +52,7 @@ Habitat = Grassland
 Category = Seed
 Pokedex = To support its bulb, Ivysaur's legs grow sturdy. If it spends more time lying in the sunlight, the bud will soon bloom into a large flower.
 Generation = 1
+Flags = InheritFormWithEverStone
 Evolutions = VENUSAUR,Level,32
 #-------------------------------
 [VENUSAUR,1]
@@ -77,6 +79,7 @@ Habitat = Grassland
 Category = Seed
 Pokedex = Venusaur's flower is said to take on vivid colors if it gets plenty of nutrition and sunlight. The flower's aroma soothes the emotions of people.
 Generation = 1
+Flags = InheritFormWithEverStone
 #-------------------------------
 [VENUSAUR,3]
 FormName = Mega Bisaflor X
@@ -130,6 +133,7 @@ Habitat = Mountain
 Category = Lizard
 Pokedex = The flame that burns at the tip of its tail is an indication of its emotions. The flame wavers when Charmander is happy, and blazes when it is enraged.
 Generation = 1
+Flags = InheritFormWithEverStone
 Evolutions = CHARMELEON,Level,16
 #-------------------------------
 [CHARMELEON,1]
@@ -156,6 +160,7 @@ Habitat = Mountain
 Category = Flame
 Pokedex = Without pity, its sharp claws destroy foes. If it encounters a strong enemy, it becomes agitated, and the flame on its tail flares with a bluish white color.
 Generation = 1
+Flags = InheritFormWithEverStone
 Evolutions = CHARIZARD,Level,36
 #-------------------------------
 [CHARIZARD,1]
@@ -182,6 +187,7 @@ Habitat = Mountain
 Category = Flame
 Pokedex = A Charizard flies about in search of strong opponents. It breathes intense flames that can melt any material. However, it will never torch a weaker foe.
 Generation = 1
+Flags = InheritFormWithEverStone
 #-------------------------------
 [CHARIZARD,2]
 FormName = Mega Glurak X
@@ -249,6 +255,7 @@ Habitat = WatersEdge
 Category = Tiny Turtle
 Pokedex = Its shell is not just for protection. Its rounded shape and the grooves on its surface minimize resistance in water, enabling Squirtle to swim at high speeds.
 Generation = 1
+Flags = InheritFormWithEverStone
 Evolutions = WARTORTLE,Level,16
 #-------------------------------
 [WARTORTLE,1]
@@ -275,6 +282,7 @@ Habitat = WatersEdge
 Category = Turtle
 Pokedex = Its large tail is covered with rich, thick fur that deepens in color with age. The scratches on its shell are evidence of this Pokémon's toughness in battle.
 Generation = 1
+Flags = InheritFormWithEverStone
 Evolutions = BLASTOISE,Level,36
 #-------------------------------
 [BLASTOISE,1]
@@ -301,6 +309,7 @@ Habitat = WatersEdge
 Category = Shellfish
 Pokedex = The waterspouts that protrude from its shell are highly accurate. Their bullets of water can precisely nail tin cans from a distance of over 160 feet.
 Generation = 1
+Flags = InheritFormWithEverStone
 #-------------------------------
 [BLASTOISE,2]
 FormName = Mega Turtok X
@@ -674,7 +683,7 @@ BaseExp = 49
 EVs = SPEED,1
 CatchRate = 255
 Happiness = 50
-Abilities = LEVITATE,INFILTRATOR
+Abilities = LEVITATE
 HiddenAbilities = MERCILESS,ECHOLOCATION
 Moves = 1,SUPERSONIC,1,ABSORB,5,ASTONISH,10,MEANLOOK,15,POISONFANG,20,QUICKGUARD,25,AIRCUTTER,30,BITE,32,POISONJAB,35,HAZE,40,VENOSHOCK,42,NIGHTSLASH,45,CONFUSERAY,50,AIRSLASH,52,KNOCKOFF,55,LEECHLIFE
 TutorMoves = ACROBATICS,AERIALACE,AGILITY,AIRCUTTER,AIRSLASH,ASSURANCE,ATTRACT,BRAVEBIRD,CAPTIVATE,CONFIDE,CRUNCH,DEFOG,DOUBLEEDGE,DOUBLETEAM,DUALWINGBEAT,ENDURE,FACADE,FLY,FRUSTRATION,GIGADRAIN,HEATWAVE,HIDDENPOWER,LEECHLIFE,MIMIC,NASTYPLOT,NATURALGIFT,OMINOUSWIND,PAYBACK,PLUCK,PROTECT,RAINDANCE,REST,RETURN,ROOST,ROUND,SECRETPOWER,SHADOWBALL,SLEEPTALK,SLUDGEBOMB,SNATCH,SNORE,STEELWING,SUBSTITUTE,SUNNYDAY,SUPERFANG,SWAGGER,SWIFT,TAILWIND,TAUNT,THIEF,TORMENT,TWISTER,UPROAR,UTURN,VENOMDRENCH,VENOSHOCK,ZENHEADBUTT
@@ -703,7 +712,7 @@ BaseExp = 159
 EVs = SPEED,2
 CatchRate = 90
 Happiness = 50
-Abilities = LEVITATE,INFILTRATOR
+Abilities = LEVITATE
 HiddenAbilities = MERCILESS,ECHOLOCATION
 Moves = 1,ABSORB,1,SUPERSONIC,1,ASTONISH,1,MEANLOOK,1,SCREECH,15,POISONFANG,20,QUICKGUARD,27,AIRCUTTER,34,BITE,38,POISONJAB,41,HAZE,44,NIGHTSLASH,48,VENOSHOCK,52,KNOCKOFF,55,CONFUSERAY,62,AIRSLASH,69,LEECHLIFE
 TutorMoves = ACROBATICS,AERIALACE,AGILITY,AIRCUTTER,AIRSLASH,ASSURANCE,ATTRACT,BRAVEBIRD,CAPTIVATE,CONFIDE,CRUNCH,DEFOG,DOUBLEEDGE,DOUBLETEAM,DUALWINGBEAT,ENDURE,FACADE,FLY,FRUSTRATION,GIGADRAIN,GIGAIMPACT,HEATWAVE,HIDDENPOWER,HYPERBEAM,LEECHLIFE,MIMIC,NASTYPLOT,NATURALGIFT,OMINOUSWIND,PAYBACK,PLUCK,PROTECT,RAINDANCE,REST,RETURN,ROOST,ROUND,SCREECH,SECRETPOWER,SHADOWBALL,SLEEPTALK,SLUDGEBOMB,SNATCH,SNORE,STEELWING,SUBSTITUTE,SUNNYDAY,SUPERFANG,SWAGGER,SWIFT,TAILWIND,TAUNT,THIEF,TORMENT,TWISTER,UPROAR,UTURN,VENOMDRENCH,VENOSHOCK,ZENHEADBUTT
@@ -732,7 +741,7 @@ BaseExp = 268
 EVs = SPEED,3
 CatchRate = 90
 Happiness = 50
-Abilities = LEVITATE,INFILTRATOR
+Abilities = LEVITATE
 HiddenAbilities = MERCILESS,ECHOLOCATION
 Moves = 0,CROSSPOISON,1,TOXIC,1,SCREECH,1,ABSORB,1,SUPERSONIC,1,ASTONISH,1,MEANLOOK,1,TAILWIND,15,POISONFANG,20,QUICKGUARD,27,AIRCUTTER,34,BITE,38,POISONJAB,41,HAZE,44,NIGHTSLASH,48,VENOSHOCK,52,KNOCKOFF,55,CONFUSERAY,62,AIRSLASH,69,LEECHLIFE
 TutorMoves = ACROBATICS,AERIALACE,AGILITY,AIRCUTTER,AIRSLASH,ASSURANCE,ATTRACT,BRAVEBIRD,CAPTIVATE,CONFIDE,CROSSPOISON,CRUNCH,DARKPULSE,DEFOG,DOUBLEEDGE,DOUBLETEAM,DUALWINGBEAT,ENDURE,FACADE,FLY,FRUSTRATION,GIGADRAIN,GIGAIMPACT,HEATWAVE,HEX,HIDDENPOWER,HURRICANE,HYPERBEAM,LEECHLIFE,MIMIC,NASTYPLOT,NATURALGIFT,OMINOUSWIND,PAYBACK,PLUCK,PROTECT,RAINDANCE,REST,RETURN,ROOST,ROUND,SCREECH,SECRETPOWER,SHADOWBALL,SKYATTACK,SLEEPTALK,SLUDGEBOMB,SNATCH,SNORE,STEELWING,SUBSTITUTE,SUNNYDAY,SUPERFANG,SWAGGER,SWIFT,TAILWIND,TAUNT,THIEF,TORMENT,TOXIC,TWISTER,UPROAR,UTURN,VENOMDRENCH,VENOSHOCK,XSCISSOR,ZENHEADBUTT
@@ -1158,7 +1167,7 @@ Generation = 1
 [GENGAR,2]
 FormName = Mega Gengar
 MegaStone = GENGARITE
-Types = GHOST,FIRE
+Types = GHOST,POISON
 BaseStats = 60,65,80,130,170,95
 BaseExp = 300
 Abilities = SHADOWTAG
@@ -1166,9 +1175,9 @@ HiddenAbilities = SHADOWTAG
 Height = 1.4
 Pokedex = The energy of Mega Evolution awakened it. It sinks into another dimension, where it keeps a patient watch for its chance to attack.
 Generation = 6
-Category = Hellfire
-Color = Red
-UnmegaForm = 1
+Category = Shadow
+Color = Purple
+UnmegaForm = 0
 #-------------------------------
 [EXEGGUTOR,1]
 FormName = Alola
@@ -1954,6 +1963,7 @@ Habitat = Grassland
 Category = Chick
 Pokedex = If attacked, it strikes back by spitting balls of fire it forms in its stomach. A Torchic dislikes darkness because it can't see its surroundings.
 Generation = 3
+Flags = InheritFormWithEverStone
 Evolutions = COMBUSKEN,Level,16
 RaidRanks = 1,2
 #-------------------------------
@@ -1981,6 +1991,7 @@ Habitat = Grassland
 Category = Young Fowl
 Pokedex = It lashes out with 10 kicks per second. Its strong fighting instinct compels it to keep up its offensive until the opponent gives up.
 Generation = 3
+Flags = InheritFormWithEverStone
 Evolutions = BLAZIKEN,Level,36
 RaidRanks = 2,3
 #-------------------------------
@@ -2008,6 +2019,7 @@ Habitat = Grassland
 Category = Blaze
 Pokedex = It learns martial arts that use punches and kicks. Every several years, its old feathers burn off, and new, supple feathers grow back in their place.
 Generation = 3
+Flags = InheritFormWithEverStone
 RaidRanks = 3,4,5
 #-------------------------------
 [BLAZIKEN,2]
@@ -2068,6 +2080,7 @@ Habitat = Forest
 Category = Tiny Leaf
 Pokedex = Made from soil, the shell on its back hardens when it drinks water. It lives along lakes.
 Generation = 4
+Flags = InheritFormWithEverStone
 Evolutions = GROTLE,Level,18
 #-------------------------------
 [GROTLE,1]
@@ -2094,6 +2107,7 @@ Habitat = Forest
 Category = Grove
 Pokedex = It lives along water in forests. In the daytime, it leaves the forest to sunbathe its treed shell.
 Generation = 4
+Flags = InheritFormWithEverStone
 Evolutions = TORTERRA,Level,32
 #-------------------------------
 [TORTERRA,1]
@@ -2120,6 +2134,7 @@ Habitat = Forest
 Category = Continent
 Pokedex = Small Pokémon occasionally gather on its unmoving back to begin building their nests.
 Generation = 4
+Flags = InheritFormWithEverStone
 #-------------------------------
 [TORTERRA,2]
 FormName = Mega Chelterrar
@@ -2547,11 +2562,22 @@ Pokedex = It readies itself to face its enemies by focusing its mental energies.
 Generation = 6
 #-------------------------------
 [ABOMASNOW,1]
-FormName = Mega Rexblisar
-MegaStone = ABOMASITE
+FormName = Mega Rexblisar X
+MegaStone = ABOMASITEX
 BaseStats = 90,132,105,30,132,105
 BaseExp = 208
 HiddenAbilities = SNOWWARNING
+Height = 2.7
+Weight = 185.0
+Generation = 6
+#-------------------------------
+[ABOMASNOW,3]
+FormName = Mega Rexblisar Y
+MegaStone = ABOMASITEY
+BaseStats = 95,120,100,90,145,80
+BaseExp = 208
+Abilities = FLASHFIRE
+HiddenAbilities = HEATPROOF
 Height = 2.7
 Weight = 185.0
 Generation = 6
@@ -3844,7 +3870,7 @@ Pokedex = Its intellect surpasses its previous level, resulting in battles so cr
 Generation = 6
 #-------------------------------
 [SNOVER,2]
-FormName = Tief-Form
+FormName = Tiefland-Form
 Types = GRASS
 BaseStats = 60,55,55,50,72,55
 GenderRatio = Female50Percent
@@ -3873,7 +3899,7 @@ Evolutions = ABOMASNOW,Level,40
 CallRateSOS = 9
 #-------------------------------
 [ABOMASNOW,2]
-FormName = Tief-Form
+FormName = Tiefland-Form
 Types = GRASS
 BaseStats = 95,80,80,70,115,80
 GenderRatio = Female50Percent
@@ -3901,7 +3927,7 @@ CallRateSOS = 6
 #-------------------------------
 [DUNSPARCE,2]
 Name = Dummisel
-FormName = Hoch-Form
+FormName = Himmel-Form
 Types = FAIRY
 BaseStats = 45,65,65,100,70,70
 GenderRatio = Female50Percent
@@ -3931,7 +3957,7 @@ RaidRanks = 2,3
 #-------------------------------
 [DUNSPARCE,3]
 Name = Dummisel
-FormName = Tief-Form
+FormName = Höllen-Form
 Types = DARK
 BaseStats = 45,70,70,100,65,65
 GenderRatio = Female50Percent

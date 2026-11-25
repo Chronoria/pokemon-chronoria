@@ -5338,7 +5338,7 @@ Pokemon = ABOMASNOW,67
     Moves = AURORAVEIL,GIGADRAIN,BLIZZARD,WOODHAMMER
     AbilityIndex = 0
     Nature = MODEST
-    Item = ABOMASITE
+    Item = ABOMASITEX
     Gender = female
     Ball = GREATBALL
 #-------------------------------

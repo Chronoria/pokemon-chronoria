@@ -1924,6 +1924,7 @@ Object ball_4
 Object Balls
 Object barrel
 Object boulder
+Object boulder 2
 Object cage
 Object crack
 Object cyclone

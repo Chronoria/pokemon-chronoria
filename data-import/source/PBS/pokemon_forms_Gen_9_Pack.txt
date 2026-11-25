@@ -106,7 +106,7 @@ Flags = InheritFormWithEverStone
 RaidRanks = 4,5
 #-------------------------------
 [CYNDAQUIL,1]
-FormName = Jotho
+FormName = Johto
 Types = FIRE
 BaseStats = 39,52,43,65,60,50
 GenderRatio = FemaleOneEighth
@@ -130,10 +130,11 @@ Habitat = Grassland
 Category = Fire Mouse
 Pokedex = It flares flames from its back to protect itself. The fire burns vigorously if the Pokémon is angry. When it is tired, it sputters with incomplete combustion.
 Generation = 2
+Flags = InheritFormWithEverStone
 Evolutions = QUILAVA,Level,14
 #-------------------------------
 [QUILAVA,1]
-FormName = Jotho
+FormName = Johto
 Types = FIRE
 BaseStats = 58,64,58,80,80,65
 GenderRatio = FemaleOneEighth
@@ -156,10 +157,11 @@ Habitat = Grassland
 Category = Volcano
 Pokedex = It intimidates foes with intense gusts of flames and superheated air. Its quick nimbleness lets it dodge attacks even while scorching an enemy.
 Generation = 2
+Flags = InheritFormWithEverStone
 Evolutions = TYPHLOSION,Level,36
 #-------------------------------
 [TYPHLOSION,1]
-FormName = Jotho
+FormName = Johto
 Types = FIRE
 BaseStats = 78,84,78,100,109,85
 GenderRatio = FemaleOneEighth
@@ -182,6 +184,7 @@ Habitat = Grassland
 Category = Volcano
 Pokedex = It can hide behind a shimmering heat haze that it creates using its intense flames. Typhlosion create blazing explosive blasts that burn everything to cinders.
 Generation = 2
+Flags = InheritFormWithEverStone
 RaidRanks = 3,4,5
 #-------------------------------
 [TYPHLOSION,2]
@@ -200,7 +203,7 @@ UnmegaForm = 1
 Generation = 9
 #-------------------------------
 [TOTODILE,1]
-FormName = Jotho
+FormName = Johto
 Types = WATER
 BaseStats = 50,65,64,43,44,48
 GenderRatio = FemaleOneEighth
@@ -224,10 +227,11 @@ Habitat = WatersEdge
 Category = Big Jaw
 Pokedex = Despite its small body, Totodile's jaws are very powerful. While it may think it is just playfully nipping, its bite has enough strength to cause serious injury.
 Generation = 2
+Flags = InheritFormWithEverStone
 Evolutions = CROCONAW,Level,18
 #-------------------------------
 [CROCONAW,1]
-FormName = Jotho
+FormName = Johto
 Types = WATER
 BaseStats = 65,80,80,58,59,63
 GenderRatio = FemaleOneEighth
@@ -250,10 +254,11 @@ Habitat = WatersEdge
 Category = Big Jaw
 Pokedex = Once its jaws clamp down on its foe, it will absolutely not let go. Because the tips of its fangs are forked back like fishhooks, they become irremovably embedded.
 Generation = 2
+Flags = InheritFormWithEverStone
 Evolutions = FERALIGATR,Level,30
 #-------------------------------
 [FERALIGATR,1]
-FormName = Jotho
+FormName = Johto
 Types = WATER
 BaseStats = 85,105,100,78,79,83
 GenderRatio = FemaleOneEighth
@@ -276,6 +281,7 @@ Habitat = WatersEdge
 Category = Big Jaw
 Pokedex = It opens its huge mouth to intimidate enemies. In battle, it runs using its thick and powerful hind legs to charge the foe with incredible speed.
 Generation = 2
+Flags = InheritFormWithEverStone
 #-------------------------------
 [FERALIGATR,2]
 FormName = Mega Impergator
@@ -528,7 +534,7 @@ Weight = 47.4
 #-------------------------------
 [DUDUNSPARCE,2]
 Name = Dummimisel
-FormName = Hoch-Form
+FormName = Himmel-Form
 Types = FAIRY
 BaseStats = 75,85,75,105,100,80
 GenderRatio = Female50Percent
@@ -555,7 +561,7 @@ RaidRanks = 4,5
 #-------------------------------
 [DUDUNSPARCE,3]
 Name = Dummimisel
-FormName = Tief-Form
+FormName = Höllen-Form
 Types = DARK
 BaseStats = 75,100,80,105,85,75
 GenderRatio = Female50Percent
@@ -1181,7 +1187,7 @@ Pokedex = It flies faster than the speed of sound. After whipping up shock waves
 Generation = 9
 #-------------------------------
 [CHIKORITA,1]
-FormName = Jotho
+FormName = Johto
 Types = GRASS
 BaseStats = 45,49,65,45,49,65
 GenderRatio = FemaleOneEighth
@@ -1205,10 +1211,11 @@ Habitat = Grassland
 Category = Leaf
 Pokedex = It waves its leaf around to keep foes at bay. However, a sweet fragrance also wafts from the leaf, creating a friendly atmosphere that becalms the battlers.
 Generation = 2
+Flags = InheritFormWithEverStone
 Evolutions = BAYLEEF,Level,16
 #-------------------------------
 [BAYLEEF,1]
-FormName = Jotho
+FormName = Johto
 Types = GRASS
 BaseStats = 60,62,80,60,63,80
 GenderRatio = FemaleOneEighth
@@ -1231,10 +1238,11 @@ Habitat = Grassland
 Category = Leaf
 Pokedex = A Bayleef's neck is ringed by curled-up leaves. Inside each leaf is a small tree shoot. The fragrance of this shoot makes people peppy.
 Generation = 2
+Flags = InheritFormWithEverStone
 Evolutions = MEGANIUM,Level,32
 #-------------------------------
 [MEGANIUM,1]
-FormName = Jotho
+FormName = Johto
 Types = GRASS
 BaseStats = 80,82,100,80,83,100
 GenderRatio = FemaleOneEighth
@@ -1257,7 +1265,7 @@ Habitat = Grassland
 Category = Herb
 Pokedex = The fragrance of a Meganium's flower soothes and calms emotions. In battle, it gives off more of its becalming scent to blunt the foe's fighting spirit.
 Generation = 2
-Flags = HasGenderedSprites
+Flags = HasGenderedSprites,InheritFormWithEverStone
 #-------------------------------
 [MEGANIUM,2]
 FormName = Mega Meganie X
@@ -1676,3 +1684,128 @@ Height = 0.9
 Weight = 60.0
 Pokedex = It lays tangled burrows 100 meters underground. It occasionally digs holes in subway shafts.
 Generation = 9
+#-------------------------------
+[PAWMI,1]
+Name = Pamo
+Types = FIRE
+BaseStats = 45,50,20,60,40,25
+GenderRatio = Female50Percent
+GrowthRate = Medium
+BaseExp = 48
+EVs = SPEED,1
+CatchRate = 190
+Happiness = 50
+Abilities = FLAMEBODY,NATURALCURE
+HiddenAbilities = IRONFIST
+Moves = 1,GROWL,1,SCRATCH,3,EMBER,6,QUICKATTACK,8,SMOKESCREEN,12,FIRESPIN,15,DIG,19,BITE,23,FIREFANG,27,WILLOWISP,31,ENTRAINMENT,35,SLAM,38,FLAMETHROWER,40,AGILITY,44,INFERNO
+TutorMoves = AGILITY,BATONPASS,BURNINGBULWARK,BURNINGJEALOUSY,CHARM,CRUNCH,DIG,EMBER,ENCORE,ENDURE,FACADE,FIREFANG,FIREPUNCH,FIRESPIN,FLAMECHARGE,FLAMETHROWER,FLAMEWHEEL,FLING,HELPINGHAND,HIDDENPOWER,INFERNO,METALCLAW,PLAYROUGH,PROTECT,RAINDANCE,REST,SLEEPTALK,SMOKESCREEN,SUBSTITUTE,SUNNYDAY,SUPERFANG,SWIFT,TAKEDOWN,THIEF,WILLOWISP
+EggMoves = FAKEOUT,MACHPUNCH,SWEETKISS,WISH
+EggGroups = Field
+HatchSteps = 3840
+Height = 0.3
+Weight = 2.5
+Color = Yellow
+Shape = BipedalTail
+Habitat = Grassland
+Category = Mouse
+Pokedex = It has underdeveloped electric sacs on its cheeks. These sacs can produce electricity only if Pawmi rubs them furiously with the pads on its forepaws.
+Generation = 9
+Evolutions = PAWMO,Level,18
+CallRateSOS = 9
+RaidRanks = 1,2
+#-------------------------------
+[PAWMO,1]
+Name = Pamamo
+Types = FIRE,FIGHTING
+BaseStats = 60,75,40,85,50,40
+GenderRatio = Female50Percent
+GrowthRate = Medium
+BaseExp = 123
+EVs = SPEED,2
+CatchRate = 80
+Happiness = 50
+Abilities = FLAMEBODY,NATURALCURE
+HiddenAbilities = IRONFIST
+Moves = 0,ARMTHRUST,1,GROWL,1,SCRATCH,3,EMBER,6,QUICKATTACK,8,SMOKESCREEN,12,FIRESPIN,15,DIG,19,BITE,23,FIREFANG,27,WILLOWISP,32,SLAM,38,ENTRAINMENT,42,FLAMETHROWER,46,AGILITY,52,INFERNO
+TutorMoves = AGILITY,BATONPASS,BURNINGBULWARK,BURNINGJEALOUSY,CHARM,COACHING,CRUNCH,DIG,EMBER,ENCORE,ENDURE,FACADE,FIREFANG,FIREPUNCH,FIRESPIN,FLAMECHARGE,FLAMETHROWER,FLAMEWHEEL,FLING,FOCUSPUNCH,HELPINGHAND,HIDDENPOWER,INFERNO,KNOCKOFF,LOWKICK,LOWSWEEP,METALCLAW,PLAYROUGH,PROTECT,RAINDANCE,REST,SLEEPTALK,SMOKESCREEN,SUBSTITUTE,SUNNYDAY,SUPERFANG,SWIFT,TAKEDOWN,THIEF,UPPERHAND,WILLOWISP
+EggGroups = Field
+HatchSteps = 3840
+Height = 0.4
+Weight = 6.5
+Color = Yellow
+Shape = BipedalTail
+Habitat = Grassland
+Category = Mouse
+Pokedex = When its group is attacked, Pawmo is the first to leap into battle, defeating enemies with a fighting technique that utilizes electric shocks.
+Generation = 9
+Evolutions = PAWMOT,LevelWalk,1000
+CallRateSOS = 6
+RaidRanks = 2,3
+#-------------------------------
+[PAWMOT,1]
+Name = Pamomamo
+Types = FIRE,FIGHTING
+BaseStats = 70,115,70,105,70,60
+GenderRatio = Female50Percent
+GrowthRate = Medium
+BaseExp = 245
+EVs = ATTACK,3
+CatchRate = 45
+Happiness = 50
+Abilities = FLAMEBODY,NATURALCURE
+HiddenAbilities = IRONFIST
+Moves = 0,REVIVALBLESSING,1,SCRATCH,1,GROWL,1,HEATWAVE,3,EMBER,6,QUICKATTACK,8,SMOKESCREEN,12,FIRESPIN,15,DIG,19,BITE,23,FIREFANG,25,ARMTHRUST,29,WILLOWISP,33,SLAM,39,ENTRAINMENT,44,CLOSECOMBAT,49,FLAMETHROWER,54,AGILITY,60,INFERNO,67,FLAREBLITZ,72,OVERHEAT
+TutorMoves = AGILITY,BATONPASS,BODYPRESS,BRICKBREAK,BULKUP,BURNINGBULWARK,BURNINGJEALOUSY,CHARM,CLOSECOMBAT,COACHING,CRUNCH,DIG,DOUBLEEDGE,DRAINPUNCH,EMBER,ENCORE,ENDURE,FACADE,FIREFANG,FIREPUNCH,FIRESPIN,FLAMECHARGE,FLAMETHROWER,FLAMEWHEEL,FLAREBLITZ,FLING,FOCUSBLAST,FOCUSPUNCH,GIGAIMPACT,GRASSKNOT,HELPINGHAND,HIDDENPOWER,HYPERBEAM,ICEPUNCH,INFERNO,KNOCKOFF,LOWKICK,LOWSWEEP,METALCLAW,METRONOME,OVERHEAT,PLAYROUGH,PROTECT,RAINDANCE,REST,ROCKTOMB,SEEDBOMB,SLEEPTALK,SMOKESCREEN,SUBSTITUTE,SUNNYDAY,SUPERCELLSLAM,SUPERFANG,SWIFT,TAKEDOWN,THIEF,THROATCHOP,THUNDERPUNCH,UPPERHAND,WILLOWISP
+EggGroups = Field
+HatchSteps = 3840
+Height = 0.9
+Weight = 41.0
+Color = Yellow
+Shape = BipedalTail
+Habitat = Grassland
+Category = Hands-On
+Pokedex = This Pokémon normally is slow to react, but once it enters battle, it will strike down its enemies with lightning-fast movements.
+Generation = 9
+RaidRanks = 3,4
+#-------------------------------
+[GENGAR,3]
+FormName = Mega Gengar
+MegaStone = GENGARITE
+Types = GHOST,FIRE
+BaseStats = 60,65,80,130,170,95
+BaseExp = 300
+Abilities = SHADOWTAG
+HiddenAbilities = SHADOWTAG
+Height = 1.4
+Color = Red
+Category = Hellfire
+Pokedex = Die Mega-Entwicklung entfacht seine Geisterflammen zu einem Höllenfeuer. Wer in seinen Schlund blickt, vergisst, wohin er gehen wollte.
+Generation = 6
+UnmegaForm = 1
+#-------------------------------
+[GYARADOS,3]
+FormName = Mega Garados
+MegaStone = GYARADOSITE
+Types = WATER,DRAGON
+BaseStats = 100,165,125,70,60,125
+BaseExp = 224
+Abilities = MOLDBREAKER
+HiddenAbilities = MOLDBREAKER
+Weight = 305.0
+Pokedex = Die Mega-Entwicklung lässt seinen Drachenzorn überkochen. Sein Atem bringt das Meer zum Sieden, ganze Küsten verschwinden in seinem Dampf.
+Generation = 6
+UnmegaForm = 1
+#-------------------------------
+[TYPHLOSION,3]
+FormName = Mega Tornupto
+MegaStone = TORNUPTONITX
+Types = FIRE,GHOST
+BaseStats = 80,80,98,105,160,110
+BaseExp = 350
+Abilities = INSOMNIA
+HiddenAbilities = FRISK
+Color = White
+Category = Ghost Flame
+Pokedex = Mega Tornupto hüllt sich in violette Geisterflammen. Sie verbrennen nicht den Körper, sondern die Erinnerungen derer, die es berühren.
+Generation = 9
+UnmegaForm = 0

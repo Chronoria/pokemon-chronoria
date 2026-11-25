@@ -3071,7 +3071,7 @@ RaidRanks = 2,3
 Name = Smogon
 Types = POISON
 BaseStats = 40,65,95,35,60,45
-GenderRatio = Female50Percent
+GenderRatio = FemaleOneEighth
 GrowthRate = Medium
 BaseExp = 68
 EVs = DEFENSE,1
@@ -3101,7 +3101,7 @@ RaidRanks = 1,2
 Name = Smogmog
 Types = POISON
 BaseStats = 65,90,120,60,85,70
-GenderRatio = Female50Percent
+GenderRatio = FemaleOneEighth
 GrowthRate = Medium
 BaseExp = 172
 EVs = DEFENSE,2
@@ -4747,7 +4747,7 @@ RaidRanks = 2,3
 #-------------------------------
 CallRateSOS = 6
 [CROBAT]
-Name = Crobat
+Name = Iksbat
 Types = POISON,FLYING
 BaseStats = 85,90,80,130,70,80
 GenderRatio = Female50Percent
@@ -5785,7 +5785,7 @@ CallRateSOS = 6
 RaidRanks = 3,4
 #-------------------------------
 [DUNSPARCE]
-Name = Dunsparce
+Name = Dummisel
 Types = NORMAL
 BaseStats = 100,70,70,45,65,65
 GenderRatio = Female50Percent
@@ -6296,6 +6296,7 @@ Habitat = Sea
 Category = Jet
 Pokedex = A Remoraid uses its abdominal muscles to forcefully expel swallowed water, then shoot down flying prey. When evolution approaches, it travels down rivers.
 Generation = 2
+Evolutions = OCTILLERY,Level,25
 SpeciesSOS = REMORAID,OCTILLERY
 CallRateSOS = 3
 RaidRanks = 1,2
@@ -12933,7 +12934,7 @@ RaidRanks = 1,2
 #-------------------------------
 [SNOVER]
 Name = Shnebedeck
-FormName = Hoch-Form
+FormName = Hochland-Form
 Types = GRASS,ICE
 BaseStats = 60,62,50,40,62,60
 GenderRatio = Female50Percent
@@ -12964,7 +12965,7 @@ RaidRanks = 1,2,3
 #-------------------------------
 [ABOMASNOW]
 Name = Rexblisar
-FormName = Hoch-Form
+FormName = Hochland-Form
 Types = GRASS,ICE
 BaseStats = 90,92,75,60,92,85
 GenderRatio = Female50Percent
